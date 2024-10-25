@@ -387,7 +387,7 @@ $(document).ready(() => {
     const baseUrl = [location.protocol, '//', location.host, location.pathname].join('');
     // These lines only work as expected in the production environment, can't test this locally.
     const fallbackUrl = baseUrl.replace('/latest/', '/stable/');
-    const homeUrl = 'https://docs.redotengine.org/en/stable';
+    const homeUrl = '/en/stable';
     const searchUrl = homeUrl + 'search.html?q=';
 
     const noticeLink = document.querySelector('.latest-notice-link');
