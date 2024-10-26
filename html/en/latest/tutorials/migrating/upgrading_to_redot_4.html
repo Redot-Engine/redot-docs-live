@@ -11318,9 +11318,10 @@ projects that used the default physics engine (which was Bullet) and didn't
 manually change it to RedotPhysics. There are no plans to re-add Bullet physics
 in core, but a third-party add-on could be created for it thanks to
 GDExtension.</p></li>
-<li><p>Rendering in 2D is no longer performed in HDR, which means &quot;overbright&quot;
-modulate values have no visible effect. This is planned to be restored at some
-point in the future.</p></li>
+<li><p>By default, rendering in 2D is no longer performed in HDR, which means
+&quot;overbright&quot; modulate values have no visible effect. Since Redot 4.2, you can
+enable the project setting <a class="reference internal" href="../../classes/class_projectsettings.html#class-projectsettings-property-rendering-viewport-hdr-2d"><span class="std std-ref">HDR 2D</span></a>
+to perform 2D rendering in HDR. See also <a class="reference internal" href="../3d/environment_and_post_processing.html#doc-environment-and-post-processing-using-glow-in-2d"><span class="std std-ref">Using glow in 2D</span></a>.</p></li>
 <li><p>While rendering still happens in HDR in 3D when using the Forward Plus or
 Forward Mobile backends, Viewports cannot return HDR data anymore. This is
 planned to be restored at some point in the future.</p></li>

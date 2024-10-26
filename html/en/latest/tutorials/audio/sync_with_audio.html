@@ -11265,7 +11265,9 @@
 </ul>
 <p>The most common way to reduce latency is to shrink the audio buffers (again, by editing the latency setting in the project settings). The problem is that when latency is too small, sound mixing will require considerably more CPU. This increases the risk of skipping (a crack in sound because a mix callback was lost).</p>
 <p>This is a common tradeoff, so Redot ships with sensible defaults that should not need to be altered.</p>
-<p>The problem, in the end, is not this slight delay but synchronizing graphics and audio for games that require it. Beginning with Redot 3.2, some helpers were added to obtain more precise playback timing.</p>
+<p>The problem, in the end, is not this slight delay but synchronizing graphics and
+audio for games that require it. Some helpers are available to obtain more
+precise playback timing.</p>
 </section>
 <section id="using-the-system-clock-to-sync">
 <h2>Using the system clock to sync<a class="headerlink" href="#using-the-system-clock-to-sync" title="Permalink to this headline">¶</a></h2>

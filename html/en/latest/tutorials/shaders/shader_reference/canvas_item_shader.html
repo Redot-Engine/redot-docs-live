@@ -11670,7 +11670,8 @@ If the light is a <a class="reference internal" href="../../../classes/class_poi
 <h2>SDF functions<a class="headerlink" href="#sdf-functions" title="Permalink to this headline">¶</a></h2>
 <p>There are a few additional functions implemented to sample an automatically
 generated Signed Distance Field texture. These functions available for the <code class="docutils literal notranslate"><span class="pre">fragment()</span></code>
-and <code class="docutils literal notranslate"><span class="pre">light()</span></code> functions of CanvasItem shaders.</p>
+and <code class="docutils literal notranslate"><span class="pre">light()</span></code> functions of CanvasItem shaders. Custom functions may also use them as long
+as they called from supported functions.</p>
 <p>The signed distance field is generated from <a class="reference internal" href="../../../classes/class_lightoccluder2d.html#class-lightoccluder2d"><span class="std std-ref">LightOccluder2D</span></a> nodes
 present in the scene with the <strong>SDF Collision</strong> property enabled (which is the
 default). See the <a class="reference internal" href="../../2d/2d_lights_and_shadows.html#doc-2d-lights-and-shadows-setting-up-shadows"><span class="std std-ref">2D lights and shadows</span></a>

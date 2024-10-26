@@ -11554,6 +11554,21 @@ where <code class="docutils literal notranslate"><span class="pre">#ifdef</span>
 <p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">#endif</span></code></p>
 <p>Used as terminator for the <code class="docutils literal notranslate"><span class="pre">#if</span></code>, <code class="docutils literal notranslate"><span class="pre">#ifdef</span></code>, <code class="docutils literal notranslate"><span class="pre">#ifndef</span></code> or subsequent <code class="docutils literal notranslate"><span class="pre">#else</span></code> directives.</p>
 </section>
+<section id="error">
+<h3>#error<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">#error</span> <span class="pre">&lt;message&gt;</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">#error</span></code> directive forces the preprocessor to emit an error with optional message.
+For example, it's useful when used within <code class="docutils literal notranslate"><span class="pre">#if</span></code> block to provide a strict limitation of the
+defined value.</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MAX_LOD 3</span>
+<span class="cp">#define LOD 4</span>
+
+<span class="cp">#if LOD &gt; MAX_LOD</span>
+<span class="cp">#error LOD exceeds MAX_LOD</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
 <section id="include">
 <h3>#include<a class="headerlink" href="#include" title="Permalink to this headline">¶</a></h3>
 <p><strong>Syntax:</strong> <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&quot;path&quot;</span></code></p>

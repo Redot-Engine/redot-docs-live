@@ -11436,8 +11436,8 @@ unsigned:</p>
 &quot;w&quot; members. Alternatively, using &quot;r&quot;, &quot;g&quot;, &quot;b&quot; and &quot;a&quot; also works and is
 equivalent. Use whatever fits best for your needs.</p>
 <p>For matrices, use the <code class="docutils literal notranslate"><span class="pre">m[column][row]</span></code> indexing syntax to access each scalar,
-or <code class="docutils literal notranslate"><span class="pre">m[idx]</span></code> to access a vector by row index. For example, for accessing the y
-position of an object in a mat4 you use <code class="docutils literal notranslate"><span class="pre">m[3][1]</span></code>.</p>
+or <code class="docutils literal notranslate"><span class="pre">m[column]</span></code> to access a vector by column index. For example, for accessing the
+y-component of the translation from a mat4 transform matrix (4th column, 2nd line) you use <code class="docutils literal notranslate"><span class="pre">m[3][1]</span></code> or <code class="docutils literal notranslate"><span class="pre">m[3].y</span></code>.</p>
 </section>
 <section id="constructing">
 <h3>Constructing<a class="headerlink" href="#constructing" title="Permalink to this headline">¶</a></h3>
@@ -11452,7 +11452,7 @@ position of an object in a mat4 you use <code class="docutils literal notranslat
 </pre></div>
 </div>
 <p>Construction of matrix types requires vectors of the same dimension as the
-matrix. You can also build a diagonal matrix using <code class="docutils literal notranslate"><span class="pre">matx(float)</span></code> syntax.
+matrix, interpreted as columns. You can also build a diagonal matrix using <code class="docutils literal notranslate"><span class="pre">matx(float)</span></code> syntax.
 Accordingly, <code class="docutils literal notranslate"><span class="pre">mat4(1.0)</span></code> is an identity matrix.</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="kt">mat2</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat2</span><span class="p">(</span><span class="kt">vec2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec2</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">));</span>
 <span class="kt">mat3</span><span class="w"> </span><span class="n">m3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat3</span><span class="p">(</span><span class="kt">vec3</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">));</span>
@@ -11843,8 +11843,8 @@ information.</p>
 </section>
 <section id="discarding">
 <h2>Discarding<a class="headerlink" href="#discarding" title="Permalink to this headline">¶</a></h2>
-<p>Fragment and light functions can use the <code class="docutils literal notranslate"><span class="pre">discard</span></code> keyword. If used, the
-fragment is discarded and nothing is written.</p>
+<p>Fragment, light, and custom functions (called from fragment or light) can use the
+<code class="docutils literal notranslate"><span class="pre">discard</span></code> keyword. If used, the fragment is discarded and nothing is written.</p>
 <p>Beware that <code class="docutils literal notranslate"><span class="pre">discard</span></code> has a performance cost when used, as it will prevent the
 depth prepass from being effective on any surfaces using the shader. Also, a
 discarded pixel still needs to be rendered in the vertex shader, which means a
