@@ -6,8 +6,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="classes/class_openxripbinding.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Inherits: Resource< RefCounted< Object Defines a binding between an OpenXRAction and an XR input or output. Description: This binding resource binds an OpenXRAction to inputs or outputs. As most co..." />
-<meta name="description" content="Inherits: Resource< RefCounted< Object Defines a binding between an OpenXRAction and an XR input or output. Description: This binding resource binds an OpenXRAction to inputs or outputs. As most co..." />
+<meta property="og:description" content="Inherits: Resource< RefCounted< Object Defines a binding between an OpenXRAction and an XR input or output. Description: This binding resource binds an OpenXRAction to an input or output. As most c..." />
+<meta name="description" content="Inherits: Resource< RefCounted< Object Defines a binding between an OpenXRAction and an XR input or output. Description: This binding resource binds an OpenXRAction to an input or output. As most c..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>OpenXRIPBinding &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11149,7 +11151,7 @@
 <p>Defines a binding between an <a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> and an XR input or output.</p>
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>This binding resource binds an <a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> to inputs or outputs. As most controllers have left hand and right versions that are handled by the same interaction profile we can specify multiple bindings. For instance an action &quot;Fire&quot; could be bound to both &quot;/user/hand/left/input/trigger&quot; and &quot;/user/hand/right/input/trigger&quot;.</p>
+<p>This binding resource binds an <a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> to an input or output. As most controllers have left hand and right versions that are handled by the same interaction profile we can specify multiple bindings. For instance an action &quot;Fire&quot; could be bound to both &quot;/user/hand/left/input/trigger&quot; and &quot;/user/hand/right/input/trigger&quot;. This would require two binding entries.</p>
 </section>
 <section class="classref-reftable-group" id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>
@@ -11159,9 +11161,13 @@
 <td><p><a class="reference internal" href="#class-openxripbinding-property-action"><span class="std std-ref">action</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<td><p><a class="reference internal" href="#class-openxripbinding-property-binding-path"><span class="std std-ref">binding_path</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
 <td><p><a class="reference internal" href="#class-openxripbinding-property-paths"><span class="std std-ref">paths</span></a></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">PackedStringArray()</span></code></p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -11193,13 +11199,22 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_action</strong>(value: <a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> <strong>get_action</strong>()</p></li>
 </ul>
-<p><a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> that is bound to these paths.</p>
+<p><a class="reference internal" href="class_openxraction.html#class-openxraction"><span class="std std-ref">OpenXRAction</span></a> that is bound to <a class="reference internal" href="#class-openxripbinding-property-binding-path"><span class="std std-ref">binding_path</span></a>.</p>
 <hr class="classref-item-separator docutils" />
-<p class="classref-property" id="class-openxripbinding-property-paths"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>paths</strong> = <code class="docutils literal notranslate"><span class="pre">PackedStringArray()</span></code> <a class="reference internal" href="#class-openxripbinding-property-paths"><span class="std std-ref">🔗</span></a></p>
+<p class="classref-property" id="class-openxripbinding-property-binding-path"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>binding_path</strong> = <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> <a class="reference internal" href="#class-openxripbinding-property-binding-path"><span class="std std-ref">🔗</span></a></p>
+<ul class="classref-property-setget simple">
+<li><p><abbr title="No return value.">void</abbr> <strong>set_binding_path</strong>(value: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></li>
+<li><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>get_binding_path</strong>()</p></li>
+</ul>
+<p>Binding path that defines the input or output bound to <a class="reference internal" href="#class-openxripbinding-property-action"><span class="std std-ref">action</span></a>.</p>
+<p><strong>Note:</strong> Binding paths are suggestions, an XR runtime may choose to bind the action to a different input or output emulating this input or output.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-property" id="class-openxripbinding-property-paths"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>paths</strong> <a class="reference internal" href="#class-openxripbinding-property-paths"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_paths</strong>(value: <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_paths</strong>()</p></li>
 </ul>
+<p><strong>Deprecated:</strong> Use <a class="reference internal" href="#class-openxripbinding-property-binding-path"><span class="std std-ref">binding_path</span></a> instead.</p>
 <p>Paths that define the inputs or outputs bound on the device.</p>
 <p><strong>Note:</strong> The returned array is <em>copied</em> and any changes to it will not update the original property value. See <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> for more details.</p>
 </section>
@@ -11207,15 +11222,19 @@
 <section class="classref-descriptions-group" id="method-descriptions">
 <h2>Method Descriptions<a class="headerlink" href="#method-descriptions" title="Permalink to this headline">¶</a></h2>
 <p class="classref-method" id="class-openxripbinding-method-add-path"><abbr title="No return value.">void</abbr> <strong>add_path</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-openxripbinding-method-add-path"><span class="std std-ref">🔗</span></a></p>
+<p><strong>Deprecated:</strong> Binding is for a single path.</p>
 <p>Add an input/output path to this binding.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-openxripbinding-method-get-path-count"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_path_count</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-openxripbinding-method-get-path-count"><span class="std std-ref">🔗</span></a></p>
+<p><strong>Deprecated:</strong> Binding is for a single path.</p>
 <p>Get the number of input/output paths in this binding.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-openxripbinding-method-has-path"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>has_path</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-openxripbinding-method-has-path"><span class="std std-ref">🔗</span></a></p>
+<p><strong>Deprecated:</strong> Binding is for a single path.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this input/output path is part of this binding.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-openxripbinding-method-remove-path"><abbr title="No return value.">void</abbr> <strong>remove_path</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-openxripbinding-method-remove-path"><span class="std std-ref">🔗</span></a></p>
+<p><strong>Deprecated:</strong> Binding is for a single path.</p>
 <p>Removes this input/output path from this binding.</p>
 </section>
 </section>

@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11325,7 +11327,7 @@
 <p>The identity <strong>Transform2D</strong>. A transform with no translation, no rotation, and its scale being <code class="docutils literal notranslate"><span class="pre">1</span></code>. When multiplied by another <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> such as <a class="reference internal" href="class_rect2.html#class-rect2"><span class="std std-ref">Rect2</span></a> or another <strong>Transform2D</strong>, no transformation occurs. This means that:</p>
 <ul class="simple">
 <li><p>The <a class="reference internal" href="#class-transform2d-property-x"><span class="std std-ref">x</span></a> points right (<a class="reference internal" href="class_vector2.html#class-vector2-constant-right"><span class="std std-ref">Vector2.RIGHT</span></a>);</p></li>
-<li><p>The <a class="reference internal" href="#class-transform2d-property-y"><span class="std std-ref">y</span></a> points up (<a class="reference internal" href="class_vector2.html#class-vector2-constant-up"><span class="std std-ref">Vector2.UP</span></a>).</p></li>
+<li><p>The <a class="reference internal" href="#class-transform2d-property-y"><span class="std std-ref">y</span></a> points down (<a class="reference internal" href="class_vector2.html#class-vector2-constant-down"><span class="std std-ref">Vector2.DOWN</span></a>).</p></li>
 </ul>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">Transform2D</span><span class="o">.</span><span class="n">IDENTITY</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;| X | Y | Origin&quot;</span><span class="p">)</span>
@@ -11357,7 +11359,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-transform2d-property-y"><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a> <strong>y</strong> = <code class="docutils literal notranslate"><span class="pre">Vector2(0,</span> <span class="pre">1)</span></code> <a class="reference internal" href="#class-transform2d-property-y"><span class="std std-ref">🔗</span></a></p>
 <p>The transform basis's Y axis, and the column <code class="docutils literal notranslate"><span class="pre">1</span></code> of the matrix. Combined with <a class="reference internal" href="#class-transform2d-property-x"><span class="std std-ref">x</span></a>, this represents the transform's rotation, scale, and skew.</p>
-<p>On the identity transform, this vector points up (<a class="reference internal" href="class_vector2.html#class-vector2-constant-up"><span class="std std-ref">Vector2.UP</span></a>).</p>
+<p>On the identity transform, this vector points down (<a class="reference internal" href="class_vector2.html#class-vector2-constant-down"><span class="std std-ref">Vector2.DOWN</span></a>).</p>
 </section>
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="constructor-descriptions">

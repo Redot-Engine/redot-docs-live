@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11387,7 +11389,7 @@
 <td><p><a class="reference internal" href="#class-canvasitem-method-is-visible-in-tree"><span class="std std-ref">is_visible_in_tree</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a></p></td>
-<td><p><a class="reference internal" href="#class-canvasitem-method-make-canvas-position-local"><span class="std std-ref">make_canvas_position_local</span></a>(screen_point: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
+<td><p><a class="reference internal" href="#class-canvasitem-method-make-canvas-position-local"><span class="std std-ref">make_canvas_position_local</span></a>(viewport_point: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="class_inputevent.html#class-inputevent"><span class="std std-ref">InputEvent</span></a></p></td>
 <td><p><a class="reference internal" href="#class-canvasitem-method-make-input-local"><span class="std std-ref">make_input_local</span></a>(event: <a class="reference internal" href="class_inputevent.html#class-inputevent"><span class="std std-ref">InputEvent</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
@@ -11817,8 +11819,12 @@
 <p>Visibility is checked only in parent nodes that inherit from <strong>CanvasItem</strong>, <a class="reference internal" href="class_canvaslayer.html#class-canvaslayer"><span class="std std-ref">CanvasLayer</span></a>, and <a class="reference internal" href="class_window.html#class-window"><span class="std std-ref">Window</span></a>. If the parent is of any other type (such as <a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a>, <a class="reference internal" href="class_animationplayer.html#class-animationplayer"><span class="std std-ref">AnimationPlayer</span></a>, or <a class="reference internal" href="class_node3d.html#class-node3d"><span class="std std-ref">Node3D</span></a>), it is assumed to be visible.</p>
 <p><strong>Note:</strong> This method does not take <a class="reference internal" href="#class-canvasitem-property-visibility-layer"><span class="std std-ref">visibility_layer</span></a> into account, so even if this method returns <code class="docutils literal notranslate"><span class="pre">true</span></code> the node might end up not being rendered.</p>
 <hr class="classref-item-separator docutils" />
-<p class="classref-method" id="class-canvasitem-method-make-canvas-position-local"><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a> <strong>make_canvas_position_local</strong>(screen_point: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-canvasitem-method-make-canvas-position-local"><span class="std std-ref">🔗</span></a></p>
-<p>Assigns <code class="docutils literal notranslate"><span class="pre">screen_point</span></code> as this node's new local transform.</p>
+<p class="classref-method" id="class-canvasitem-method-make-canvas-position-local"><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a> <strong>make_canvas_position_local</strong>(viewport_point: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-canvasitem-method-make-canvas-position-local"><span class="std std-ref">🔗</span></a></p>
+<p>Transforms <code class="docutils literal notranslate"><span class="pre">viewport_point</span></code> from the viewport's coordinates to this node's local coordinates.</p>
+<p>For the opposite operation, use <a class="reference internal" href="#class-canvasitem-method-get-global-transform-with-canvas"><span class="std std-ref">get_global_transform_with_canvas</span></a>.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">viewport_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_global_transform_with_canvas</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">local_point</span>
+</pre></div>
+</div>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-canvasitem-method-make-input-local"><a class="reference internal" href="class_inputevent.html#class-inputevent"><span class="std std-ref">InputEvent</span></a> <strong>make_input_local</strong>(event: <a class="reference internal" href="class_inputevent.html#class-inputevent"><span class="std std-ref">InputEvent</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-canvasitem-method-make-input-local"><span class="std std-ref">🔗</span></a></p>
 <p>Transformations issued by <code class="docutils literal notranslate"><span class="pre">event</span></code>'s inputs are applied in local space instead of global space.</p>

@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11183,12 +11185,20 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<td><p><a class="reference internal" href="#class-colorpicker-property-display-old-color"><span class="std std-ref">display_old_color</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-colorpicker-property-edit-alpha"><span class="std std-ref">edit_alpha</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-colorpicker-property-hex-visible"><span class="std std-ref">hex_visible</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a></p></td>
+<td><p><a class="reference internal" href="#class-colorpicker-property-old-color"><span class="std std-ref">old_color</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Color(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#enum-colorpicker-pickershapetype"><span class="std std-ref">PickerShapeType</span></a></p></td>
 <td><p><a class="reference internal" href="#class-colorpicker-property-picker-shape"><span class="std std-ref">picker_shape</span></a></p></td>
@@ -11318,6 +11328,10 @@
 <td><p><a class="reference internal" href="#class-colorpicker-theme-icon-shape-rect-wheel"><span class="std std-ref">shape_rect_wheel</span></a></p></td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a></p></td>
+<td><p><a class="reference internal" href="#class-colorpicker-theme-icon-wheel-picker-cursor"><span class="std std-ref">wheel_picker_cursor</span></a></p></td>
+<td></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -11398,6 +11412,13 @@
 </ul>
 <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the color will apply only after the user releases the mouse button, otherwise it will apply immediately even in mouse motion event (which can cause performance issues).</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-property" id="class-colorpicker-property-display-old-color"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>display_old_color</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-colorpicker-property-display-old-color"><span class="std std-ref">🔗</span></a></p>
+<ul class="classref-property-setget simple">
+<li><p><abbr title="No return value.">void</abbr> <strong>set_display_old_color</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
+<li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_displaying_old_color</strong>()</p></li>
+</ul>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, <a class="reference internal" href="#class-colorpicker-property-old-color"><span class="std std-ref">old_color</span></a> will be displayed instead of <a class="reference internal" href="#class-colorpicker-property-color"><span class="std std-ref">color</span></a>.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-colorpicker-property-edit-alpha"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>edit_alpha</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-colorpicker-property-edit-alpha"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_edit_alpha</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
@@ -11411,6 +11432,13 @@
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_hex_visible</strong>()</p></li>
 </ul>
 <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the hex color code input field is visible.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-property" id="class-colorpicker-property-old-color"><a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a> <strong>old_color</strong> = <code class="docutils literal notranslate"><span class="pre">Color(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">1)</span></code> <a class="reference internal" href="#class-colorpicker-property-old-color"><span class="std std-ref">🔗</span></a></p>
+<ul class="classref-property-setget simple">
+<li><p><abbr title="No return value.">void</abbr> <strong>set_old_color</strong>(value: <a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a>)</p></li>
+<li><p><a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a> <strong>get_old_color</strong>()</p></li>
+</ul>
+<p>The currently stored old color. See also <a class="reference internal" href="#class-colorpicker-property-display-old-color"><span class="std std-ref">display_old_color</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-colorpicker-property-picker-shape"><a class="reference internal" href="#enum-colorpicker-pickershapetype"><span class="std std-ref">PickerShapeType</span></a> <strong>picker_shape</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-colorpicker-property-picker-shape"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11525,6 +11553,9 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-colorpicker-theme-icon-shape-rect-wheel"><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> <strong>shape_rect_wheel</strong> <a class="reference internal" href="#class-colorpicker-theme-icon-shape-rect-wheel"><span class="std std-ref">🔗</span></a></p>
 <p>The icon for rectangular wheel picker shapes.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-themeproperty" id="class-colorpicker-theme-icon-wheel-picker-cursor"><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> <strong>wheel_picker_cursor</strong> <a class="reference internal" href="#class-colorpicker-theme-icon-wheel-picker-cursor"><span class="std std-ref">🔗</span></a></p>
+<p>The image displayed over the color wheel (depending on the <a class="reference internal" href="#class-colorpicker-property-picker-shape"><span class="std std-ref">picker_shape</span></a> being <a class="reference internal" href="#class-colorpicker-constant-shape-hsv-wheel"><span class="std std-ref">SHAPE_HSV_WHEEL</span></a>), marking the currently selected hue. This icon is rotated from the right side of the wheel.</p>
 </section>
 </section>
 

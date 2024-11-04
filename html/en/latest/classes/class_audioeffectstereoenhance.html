@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11184,25 +11186,21 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_pan_pullout</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_pan_pullout</strong>()</p></li>
 </ul>
-<p>Values greater than 1.0 increase intensity of any panning on audio passing through this effect, whereas values less than 1.0 will decrease the panning intensity. A value of 0.0 will downmix audio to mono.</p>
+<p>Amplifies the difference between stereo channels, increasing or decreasing existing panning. A value of 0.0 will downmix stereo to mono. Does not affect a mono signal.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-audioeffectstereoenhance-property-surround"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>surround</strong> = <code class="docutils literal notranslate"><span class="pre">0.0</span></code> <a class="reference internal" href="#class-audioeffectstereoenhance-property-surround"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_surround</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_surround</strong>()</p></li>
 </ul>
-<div class="contribute docutils container">
-<p>There is currently no description for this property. Please help us by <a class="reference internal" href="../contributing/documentation/updating_the_class_reference.html#doc-updating-the-class-reference"><span class="std std-ref">contributing one</span></a>!</p>
-</div>
+<p>Widens sound stage through phase shifting in conjunction with <a class="reference internal" href="#class-audioeffectstereoenhance-property-time-pullout-ms"><span class="std std-ref">time_pullout_ms</span></a>. Just pans sound to the left channel if <a class="reference internal" href="#class-audioeffectstereoenhance-property-time-pullout-ms"><span class="std std-ref">time_pullout_ms</span></a> is 0.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-audioeffectstereoenhance-property-time-pullout-ms"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>time_pullout_ms</strong> = <code class="docutils literal notranslate"><span class="pre">0.0</span></code> <a class="reference internal" href="#class-audioeffectstereoenhance-property-time-pullout-ms"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_time_pullout</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_time_pullout</strong>()</p></li>
 </ul>
-<div class="contribute docutils container">
-<p>There is currently no description for this property. Please help us by <a class="reference internal" href="../contributing/documentation/updating_the_class_reference.html#doc-updating-the-class-reference"><span class="std std-ref">contributing one</span></a>!</p>
-</div>
+<p>Widens sound stage through phase shifting in conjunction with <a class="reference internal" href="#class-audioeffectstereoenhance-property-surround"><span class="std std-ref">surround</span></a>. Just delays the right channel if <a class="reference internal" href="#class-audioeffectstereoenhance-property-surround"><span class="std std-ref">surround</span></a> is 0.</p>
 </section>
 </section>
 

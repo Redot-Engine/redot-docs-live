@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11184,6 +11186,9 @@
 <td><p><a class="reference internal" href="#class-shader-method-get-shader-uniform-list"><span class="std std-ref">get_shader_uniform_list</span></a>(get_groups: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
 </tr>
 <tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-shader-method-inspect-native-shader-code"><span class="std std-ref">inspect_native_shader_code</span></a>()</p></td>
+</tr>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-shader-method-set-default-texture-parameter"><span class="std std-ref">set_default_texture_parameter</span></a>(name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, texture: <a class="reference internal" href="class_texture.html#class-texture"><span class="std std-ref">Texture</span></a>, index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0)</p></td>
 </tr>
 </tbody>
@@ -11228,6 +11233,9 @@
 <p class="classref-method" id="class-shader-method-get-shader-uniform-list"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> <strong>get_shader_uniform_list</strong>(get_groups: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-shader-method-get-shader-uniform-list"><span class="std std-ref">🔗</span></a></p>
 <p>Get the list of shader uniforms that can be assigned to a <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial"><span class="std std-ref">ShaderMaterial</span></a>, for use with <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-set-shader-parameter"><span class="std std-ref">ShaderMaterial.set_shader_parameter</span></a> and <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-get-shader-parameter"><span class="std std-ref">ShaderMaterial.get_shader_parameter</span></a>. The parameters returned are contained in dictionaries in a similar format to the ones returned by <a class="reference internal" href="class_object.html#class-object-method-get-property-list"><span class="std std-ref">Object.get_property_list</span></a>.</p>
 <p>If argument <code class="docutils literal notranslate"><span class="pre">get_groups</span></code> is true, parameter grouping hints will be provided.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-shader-method-inspect-native-shader-code"><abbr title="No return value.">void</abbr> <strong>inspect_native_shader_code</strong>() <a class="reference internal" href="#class-shader-method-inspect-native-shader-code"><span class="std std-ref">🔗</span></a></p>
+<p>Only available when running in the editor. Opens a popup that visualizes the generated shader code, including all variants and internal shader code. See also <a class="reference internal" href="class_material.html#class-material-method-inspect-native-shader-code"><span class="std std-ref">Material.inspect_native_shader_code</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-shader-method-set-default-texture-parameter"><abbr title="No return value.">void</abbr> <strong>set_default_texture_parameter</strong>(name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, texture: <a class="reference internal" href="class_texture.html#class-texture"><span class="std std-ref">Texture</span></a>, index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-shader-method-set-default-texture-parameter"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the default texture to be used with a texture uniform. The default is used if a texture is not set in the <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial"><span class="std std-ref">ShaderMaterial</span></a>.</p>

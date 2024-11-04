@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -12772,8 +12774,8 @@
 <p>Returns an array of the word break boundaries. Elements in the returned array are the offsets of the start and end of words. Therefore the length of the array is always even.</p>
 <p>When <code class="docutils literal notranslate"><span class="pre">chars_per_line</span></code> is greater than zero, line break boundaries are returned instead.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TextServerManager</span><span class="o">.</span><span class="n">get_primary_interface</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">string_get_word_breaks</span><span class="p">(</span><span class="s2">&quot;The Redot Engine, 4&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints [0, 3, 4, 9, 10, 16, 18, 19], which corresponds to the following substrings: &quot;The&quot;, &quot;Godot&quot;, &quot;Engine&quot;, &quot;4&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">string_get_word_breaks</span><span class="p">(</span><span class="s2">&quot;The Redot Engine, 4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints [0, 3, 4, 9, 10, 15, 15, 19], which corresponds to the following substrings: &quot;The&quot;, &quot;Godot&quot;, &quot;Engin&quot;, &quot;e, 4&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">string_get_word_breaks</span><span class="p">(</span><span class="s2">&quot;The Redot Engine, 4&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints [0, 3, 4, 9, 10, 16, 18, 19], which corresponds to the following substrings: &quot;The&quot;, &quot;Redot&quot;, &quot;Engine&quot;, &quot;4&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">string_get_word_breaks</span><span class="p">(</span><span class="s2">&quot;The Redot Engine, 4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints [0, 3, 4, 9, 10, 15, 15, 19], which corresponds to the following substrings: &quot;The&quot;, &quot;Redot&quot;, &quot;Engin&quot;, &quot;e, 4&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ts</span><span class="o">.</span><span class="n">string_get_word_breaks</span><span class="p">(</span><span class="s2">&quot;The Redot Engine, 4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints [0, 9, 10, 19], which corresponds to the following substrings: &quot;The Redot&quot;, &quot;Engine, 4&quot;</span>
 </pre></div>
 </div>

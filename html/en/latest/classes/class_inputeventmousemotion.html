@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11150,7 +11152,7 @@
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Stores information about a mouse or a pen motion. This includes relative position, absolute position, and velocity. See <a class="reference internal" href="class_node.html#class-node-private-method-input"><span class="std std-ref">Node._input</span></a>.</p>
-<p><strong>Note:</strong> By default, this event is only emitted once per frame rendered at most. If you need more precise input reporting, set <a class="reference internal" href="class_input.html#class-input-property-use-accumulated-input"><span class="std std-ref">Input.use_accumulated_input</span></a> to <code class="docutils literal notranslate"><span class="pre">false</span></code> to make events emitted as often as possible. If you use InputEventMouseMotion to draw lines, consider implementing <a class="reference external" href="https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm">Bresenham's line algorithm</a> as well to avoid visible gaps in lines if the user is moving the mouse quickly.</p>
+<p><strong>Note:</strong> By default, this event is only emitted once per frame rendered at most. If you need more precise input reporting, set <a class="reference internal" href="class_input.html#class-input-property-use-accumulated-input"><span class="std std-ref">Input.use_accumulated_input</span></a> to <code class="docutils literal notranslate"><span class="pre">false</span></code> to make events emitted as often as possible. If you use InputEventMouseMotion to draw lines, consider using <a class="reference internal" href="class_geometry2d.html#class-geometry2d-method-bresenham-line"><span class="std std-ref">Geometry2D.bresenham_line</span></a> as well to avoid visible gaps in lines if the user is moving the mouse quickly.</p>
 <p><strong>Note:</strong> This event may be emitted even when the mouse hasn't moved, either by the operating system or by Redot itself. If you really need to know if the mouse has moved (e.g. to suppress displaying a tooltip), you should check that <code class="docutils literal notranslate"><span class="pre">relative.is_zero_approx()</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </section>
 <section class="classref-introduction-group" id="tutorials">

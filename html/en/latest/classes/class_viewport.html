@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11790,14 +11792,16 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_msaa_2d</strong>(value: <a class="reference internal" href="#enum-viewport-msaa"><span class="std std-ref">MSAA</span></a>)</p></li>
 <li><p><a class="reference internal" href="#enum-viewport-msaa"><span class="std std-ref">MSAA</span></a> <strong>get_msaa_2d</strong>()</p></li>
 </ul>
-<p>The multisample anti-aliasing mode for 2D/Canvas rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of 2 or 4 is best unless targeting very high-end systems. This has no effect on shader-induced aliasing or texture aliasing.</p>
+<p>The multisample antialiasing mode for 2D/Canvas rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of <a class="reference internal" href="#class-viewport-constant-msaa-2x"><span class="std std-ref">MSAA_2X</span></a> or <a class="reference internal" href="#class-viewport-constant-msaa-4x"><span class="std std-ref">MSAA_4X</span></a> is best unless targeting very high-end systems. This has no effect on shader-induced aliasing or texture aliasing.</p>
+<p>See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-msaa-2d"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/msaa_2d</span></a> and <a class="reference internal" href="class_renderingserver.html#class-renderingserver-method-viewport-set-msaa-2d"><span class="std std-ref">RenderingServer.viewport_set_msaa_2d</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-viewport-property-msaa-3d"><a class="reference internal" href="#enum-viewport-msaa"><span class="std std-ref">MSAA</span></a> <strong>msaa_3d</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-viewport-property-msaa-3d"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_msaa_3d</strong>(value: <a class="reference internal" href="#enum-viewport-msaa"><span class="std std-ref">MSAA</span></a>)</p></li>
 <li><p><a class="reference internal" href="#enum-viewport-msaa"><span class="std std-ref">MSAA</span></a> <strong>get_msaa_3d</strong>()</p></li>
 </ul>
-<p>The multisample anti-aliasing mode for 3D rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of 2 or 4 is best unless targeting very high-end systems. See also bilinear scaling 3d <a class="reference internal" href="#class-viewport-property-scaling-3d-mode"><span class="std std-ref">scaling_3d_mode</span></a> for supersampling, which provides higher quality but is much more expensive. This has no effect on shader-induced aliasing or texture aliasing.</p>
+<p>The multisample antialiasing mode for 3D rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of <a class="reference internal" href="#class-viewport-constant-msaa-2x"><span class="std std-ref">MSAA_2X</span></a> or <a class="reference internal" href="#class-viewport-constant-msaa-4x"><span class="std std-ref">MSAA_4X</span></a> is best unless targeting very high-end systems. See also bilinear scaling 3d <a class="reference internal" href="#class-viewport-property-scaling-3d-mode"><span class="std std-ref">scaling_3d_mode</span></a> for supersampling, which provides higher quality but is much more expensive. This has no effect on shader-induced aliasing or texture aliasing.</p>
+<p>See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-msaa-3d"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/msaa_3d</span></a> and <a class="reference internal" href="class_renderingserver.html#class-renderingserver-method-viewport-set-msaa-3d"><span class="std std-ref">RenderingServer.viewport_set_msaa_3d</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-viewport-property-own-world-3d"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>own_world_3d</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-viewport-property-own-world-3d"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11898,6 +11902,7 @@
 <li><p><a class="reference internal" href="#enum-viewport-screenspaceaa"><span class="std std-ref">ScreenSpaceAA</span></a> <strong>get_screen_space_aa</strong>()</p></li>
 </ul>
 <p>Sets the screen-space antialiasing method used. Screen-space antialiasing works by selectively blurring edges in a post-process shader. It differs from MSAA which takes multiple coverage samples while rendering objects. Screen-space AA methods are typically faster than MSAA and will smooth out specular aliasing, but tend to make scenes appear blurry.</p>
+<p>See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-screen-space-aa"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/screen_space_aa</span></a> and <a class="reference internal" href="class_renderingserver.html#class-renderingserver-method-viewport-set-screen-space-aa"><span class="std std-ref">RenderingServer.viewport_set_screen_space_aa</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-viewport-property-sdf-oversize"><a class="reference internal" href="#enum-viewport-sdfoversize"><span class="std std-ref">SDFOversize</span></a> <strong>sdf_oversize</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code> <a class="reference internal" href="#class-viewport-property-sdf-oversize"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11950,8 +11955,9 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_use_debanding</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_using_debanding</strong>()</p></li>
 </ul>
-<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, uses a fast post-processing filter to make banding significantly less visible in 3D. 2D rendering is <em>not</em> affected by debanding unless the <a class="reference internal" href="class_environment.html#class-environment-property-background-mode"><span class="std std-ref">Environment.background_mode</span></a> is <a class="reference internal" href="class_environment.html#class-environment-constant-bg-canvas"><span class="std std-ref">Environment.BG_CANVAS</span></a>. See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-use-debanding"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/use_debanding</span></a>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, uses a fast post-processing filter to make banding significantly less visible in 3D. 2D rendering is <em>not</em> affected by debanding unless the <a class="reference internal" href="class_environment.html#class-environment-property-background-mode"><span class="std std-ref">Environment.background_mode</span></a> is <a class="reference internal" href="class_environment.html#class-environment-constant-bg-canvas"><span class="std std-ref">Environment.BG_CANVAS</span></a>.</p>
 <p>In some cases, debanding may introduce a slightly noticeable dithering pattern. It's recommended to enable debanding only when actually needed since the dithering pattern will make lossless-compressed screenshots larger.</p>
+<p>See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-use-debanding"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/use_debanding</span></a> and <a class="reference internal" href="class_renderingserver.html#class-renderingserver-method-viewport-set-use-debanding"><span class="std std-ref">RenderingServer.viewport_set_use_debanding</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-viewport-property-use-hdr-2d"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>use_hdr_2d</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-viewport-property-use-hdr-2d"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11975,8 +11981,9 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_use_taa</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_using_taa</strong>()</p></li>
 </ul>
-<p>Enables Temporal Anti-Aliasing for this viewport. TAA works by jittering the camera and accumulating the images of the last rendered frames, motion vector rendering is used to account for camera and object motion.</p>
+<p>Enables temporal antialiasing for this viewport. TAA works by jittering the camera and accumulating the images of the last rendered frames, motion vector rendering is used to account for camera and object motion.</p>
 <p><strong>Note:</strong> The implementation is not complete yet, some visual instances such as particles and skinned meshes may show artifacts.</p>
+<p>See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-anti-aliasing-quality-use-taa"><span class="std std-ref">ProjectSettings.rendering/anti_aliasing/quality/use_taa</span></a> and <a class="reference internal" href="class_renderingserver.html#class-renderingserver-method-viewport-set-use-taa"><span class="std std-ref">RenderingServer.viewport_set_use_taa</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-viewport-property-use-xr"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>use_xr</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-viewport-property-use-xr"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11253,246 +11255,249 @@
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-draw"><span class="std std-ref">draw_list_draw</span></a>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, use_indices: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>, instances: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, procedural_vertex_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0)</p></td>
 </tr>
 <tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-draw-indirect"><span class="std std-ref">draw_list_draw_indirect</span></a>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, use_indices: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>, buffer: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, offset: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0, draw_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1, stride: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-enable-scissor"><span class="std std-ref">draw_list_enable_scissor</span></a>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, rect: <a class="reference internal" href="class_rect2.html#class-rect2"><span class="std std-ref">Rect2</span></a> = Rect2(0, 0, 0, 0))</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-end"><span class="std std-ref">draw_list_end</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-set-blend-constants"><span class="std std-ref">draw_list_set_blend_constants</span></a>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, color: <a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-set-push-constant"><span class="std std-ref">draw_list_set_push_constant</span></a>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, buffer: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>, size_bytes: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-switch-to-next-pass"><span class="std std-ref">draw_list_switch_to_next_pass</span></a>()</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_packedint64array.html#class-packedint64array"><span class="std std-ref">PackedInt64Array</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_packedint64array.html#class-packedint64array"><span class="std std-ref">PackedInt64Array</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-draw-list-switch-to-next-pass-split"><span class="std std-ref">draw_list_switch_to_next_pass_split</span></a>(splits: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-create"><span class="std std-ref">framebuffer_create</span></a>(textures: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>], validate_with_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1, view_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-create-empty"><span class="std std-ref">framebuffer_create_empty</span></a>(size: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, samples: <a class="reference internal" href="#enum-renderingdevice-texturesamples"><span class="std std-ref">TextureSamples</span></a> = 0, validate_with_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-create-multipass"><span class="std std-ref">framebuffer_create_multipass</span></a>(textures: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>], passes: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdframebufferpass.html#class-rdframebufferpass"><span class="std std-ref">RDFramebufferPass</span></a>], validate_with_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1, view_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-format-create"><span class="std std-ref">framebuffer_format_create</span></a>(attachments: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdattachmentformat.html#class-rdattachmentformat"><span class="std std-ref">RDAttachmentFormat</span></a>], view_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-format-create-empty"><span class="std std-ref">framebuffer_format_create_empty</span></a>(samples: <a class="reference internal" href="#enum-renderingdevice-texturesamples"><span class="std std-ref">TextureSamples</span></a> = 0)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-format-create-multipass"><span class="std std-ref">framebuffer_format_create_multipass</span></a>(attachments: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdattachmentformat.html#class-rdattachmentformat"><span class="std std-ref">RDAttachmentFormat</span></a>], passes: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdframebufferpass.html#class-rdframebufferpass"><span class="std std-ref">RDFramebufferPass</span></a>], view_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#enum-renderingdevice-texturesamples"><span class="std std-ref">TextureSamples</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#enum-renderingdevice-texturesamples"><span class="std std-ref">TextureSamples</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-format-get-texture-samples"><span class="std std-ref">framebuffer_format_get_texture_samples</span></a>(format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, render_pass: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-get-format"><span class="std std-ref">framebuffer_get_format</span></a>(framebuffer: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-framebuffer-is-valid"><span class="std std-ref">framebuffer_is_valid</span></a>(framebuffer: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-free-rid"><span class="std std-ref">free_rid</span></a>(rid: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-full-barrier"><span class="std std-ref">full_barrier</span></a>()</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-captured-timestamp-cpu-time"><span class="std std-ref">get_captured_timestamp_cpu_time</span></a>(index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-captured-timestamp-gpu-time"><span class="std std-ref">get_captured_timestamp_gpu_time</span></a>(index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-captured-timestamp-name"><span class="std std-ref">get_captured_timestamp_name</span></a>(index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-captured-timestamps-count"><span class="std std-ref">get_captured_timestamps_count</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-captured-timestamps-frame"><span class="std std-ref">get_captured_timestamps_frame</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-allocation-count"><span class="std std-ref">get_device_allocation_count</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-allocs-by-object-type"><span class="std std-ref">get_device_allocs_by_object_type</span></a>(type: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-memory-by-object-type"><span class="std std-ref">get_device_memory_by_object_type</span></a>(type: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-name"><span class="std std-ref">get_device_name</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-pipeline-cache-uuid"><span class="std std-ref">get_device_pipeline_cache_uuid</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-total-memory"><span class="std std-ref">get_device_total_memory</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-device-vendor-name"><span class="std std-ref">get_device_vendor_name</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-allocation-count"><span class="std std-ref">get_driver_allocation_count</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-allocs-by-object-type"><span class="std std-ref">get_driver_allocs_by_object_type</span></a>(type: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-and-device-memory-report"><span class="std std-ref">get_driver_and_device_memory_report</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-memory-by-object-type"><span class="std std-ref">get_driver_memory_by_object_type</span></a>(type: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-resource"><span class="std std-ref">get_driver_resource</span></a>(resource: <a class="reference internal" href="#enum-renderingdevice-driverresource"><span class="std std-ref">DriverResource</span></a>, rid: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-driver-total-memory"><span class="std std-ref">get_driver_total_memory</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-frame-delay"><span class="std std-ref">get_frame_delay</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-memory-usage"><span class="std std-ref">get_memory_usage</span></a>(type: <a class="reference internal" href="#enum-renderingdevice-memorytype"><span class="std std-ref">MemoryType</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-perf-report"><span class="std std-ref">get_perf_report</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-tracked-object-name"><span class="std std-ref">get_tracked_object_name</span></a>(type_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-get-tracked-object-type-count"><span class="std std-ref">get_tracked_object_type_count</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-index-array-create"><span class="std std-ref">index_array_create</span></a>(index_buffer: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, index_offset: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, index_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-index-buffer-create"><span class="std std-ref">index_buffer_create</span></a>(size_indices: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, format: <a class="reference internal" href="#enum-renderingdevice-indexbufferformat"><span class="std std-ref">IndexBufferFormat</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray(), use_restart_indices: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-limit-get"><span class="std std-ref">limit_get</span></a>(limit: <a class="reference internal" href="#enum-renderingdevice-limit"><span class="std std-ref">Limit</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-render-pipeline-create"><span class="std std-ref">render_pipeline_create</span></a>(shader: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, framebuffer_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, vertex_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, primitive: <a class="reference internal" href="#enum-renderingdevice-renderprimitive"><span class="std std-ref">RenderPrimitive</span></a>, rasterization_state: <a class="reference internal" href="class_rdpipelinerasterizationstate.html#class-rdpipelinerasterizationstate"><span class="std std-ref">RDPipelineRasterizationState</span></a>, multisample_state: <a class="reference internal" href="class_rdpipelinemultisamplestate.html#class-rdpipelinemultisamplestate"><span class="std std-ref">RDPipelineMultisampleState</span></a>, stencil_state: <a class="reference internal" href="class_rdpipelinedepthstencilstate.html#class-rdpipelinedepthstencilstate"><span class="std std-ref">RDPipelineDepthStencilState</span></a>, color_blend_state: <a class="reference internal" href="class_rdpipelinecolorblendstate.html#class-rdpipelinecolorblendstate"><span class="std std-ref">RDPipelineColorBlendState</span></a>, dynamic_state_flags: <abbr title="This value is an integer composed as a bitmask of the following flags.">BitField</abbr>[<a class="reference internal" href="#enum-renderingdevice-pipelinedynamicstateflags"><span class="std std-ref">PipelineDynamicStateFlags</span></a>] = 0, for_render_pass: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0, specialization_constants: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdpipelinespecializationconstant.html#class-rdpipelinespecializationconstant"><span class="std std-ref">RDPipelineSpecializationConstant</span></a>] = [])</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-render-pipeline-is-valid"><span class="std std-ref">render_pipeline_is_valid</span></a>(render_pipeline: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-sampler-create"><span class="std std-ref">sampler_create</span></a>(state: <a class="reference internal" href="class_rdsamplerstate.html#class-rdsamplerstate"><span class="std std-ref">RDSamplerState</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-sampler-is-format-supported-for-filter"><span class="std std-ref">sampler_is_format_supported_for_filter</span></a>(format: <a class="reference internal" href="#enum-renderingdevice-dataformat"><span class="std std-ref">DataFormat</span></a>, sampler_filter: <a class="reference internal" href="#enum-renderingdevice-samplerfilter"><span class="std std-ref">SamplerFilter</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-screen-get-framebuffer-format"><span class="std std-ref">screen_get_framebuffer_format</span></a>(screen: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-screen-get-height"><span class="std std-ref">screen_get_height</span></a>(screen: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-screen-get-width"><span class="std std-ref">screen_get_width</span></a>(screen: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-set-resource-name"><span class="std std-ref">set_resource_name</span></a>(id: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, name: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-compile-binary-from-spirv"><span class="std std-ref">shader_compile_binary_from_spirv</span></a>(spirv_data: <a class="reference internal" href="class_rdshaderspirv.html#class-rdshaderspirv"><span class="std std-ref">RDShaderSPIRV</span></a>, name: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rdshaderspirv.html#class-rdshaderspirv"><span class="std std-ref">RDShaderSPIRV</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rdshaderspirv.html#class-rdshaderspirv"><span class="std std-ref">RDShaderSPIRV</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-compile-spirv-from-source"><span class="std std-ref">shader_compile_spirv_from_source</span></a>(shader_source: <a class="reference internal" href="class_rdshadersource.html#class-rdshadersource"><span class="std std-ref">RDShaderSource</span></a>, allow_cache: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-create-from-bytecode"><span class="std std-ref">shader_create_from_bytecode</span></a>(binary_data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>, placeholder_rid: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> = RID())</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-create-from-spirv"><span class="std std-ref">shader_create_from_spirv</span></a>(spirv_data: <a class="reference internal" href="class_rdshaderspirv.html#class-rdshaderspirv"><span class="std std-ref">RDShaderSPIRV</span></a>, name: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-create-placeholder"><span class="std std-ref">shader_create_placeholder</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-shader-get-vertex-input-attribute-mask"><span class="std std-ref">shader_get_vertex_input_attribute_mask</span></a>(shader: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-storage-buffer-create"><span class="std std-ref">storage_buffer_create</span></a>(size_bytes: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray(), usage: <abbr title="This value is an integer composed as a bitmask of the following flags.">BitField</abbr>[<a class="reference internal" href="#enum-renderingdevice-storagebufferusage"><span class="std std-ref">StorageBufferUsage</span></a>] = 0)</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-submit"><span class="std std-ref">submit</span></a>()</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-sync"><span class="std std-ref">sync</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-buffer-create"><span class="std std-ref">texture_buffer_create</span></a>(size_bytes: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, format: <a class="reference internal" href="#enum-renderingdevice-dataformat"><span class="std std-ref">DataFormat</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray())</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-clear"><span class="std std-ref">texture_clear</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, color: <a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a>, base_mipmap: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, mipmap_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, base_layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, layer_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-copy"><span class="std std-ref">texture_copy</span></a>(from_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, to_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, from_pos: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>, to_pos: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>, size: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>, src_mipmap: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, dst_mipmap: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, src_layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, dst_layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-create"><span class="std std-ref">texture_create</span></a>(format: <a class="reference internal" href="class_rdtextureformat.html#class-rdtextureformat"><span class="std std-ref">RDTextureFormat</span></a>, view: <a class="reference internal" href="class_rdtextureview.html#class-rdtextureview"><span class="std std-ref">RDTextureView</span></a>, data: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>] = [])</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-create-from-extension"><span class="std std-ref">texture_create_from_extension</span></a>(type: <a class="reference internal" href="#enum-renderingdevice-texturetype"><span class="std std-ref">TextureType</span></a>, format: <a class="reference internal" href="#enum-renderingdevice-dataformat"><span class="std std-ref">DataFormat</span></a>, samples: <a class="reference internal" href="#enum-renderingdevice-texturesamples"><span class="std std-ref">TextureSamples</span></a>, usage_flags: <abbr title="This value is an integer composed as a bitmask of the following flags.">BitField</abbr>[<a class="reference internal" href="#enum-renderingdevice-textureusagebits"><span class="std std-ref">TextureUsageBits</span></a>], image: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, width: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, height: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, depth: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, layers: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-create-shared"><span class="std std-ref">texture_create_shared</span></a>(view: <a class="reference internal" href="class_rdtextureview.html#class-rdtextureview"><span class="std std-ref">RDTextureView</span></a>, with_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-create-shared-from-slice"><span class="std std-ref">texture_create_shared_from_slice</span></a>(view: <a class="reference internal" href="class_rdtextureview.html#class-rdtextureview"><span class="std std-ref">RDTextureView</span></a>, with_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, mipmap: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, mipmaps: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1, slice_type: <a class="reference internal" href="#enum-renderingdevice-textureslicetype"><span class="std std-ref">TextureSliceType</span></a> = 0)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-get-data"><span class="std std-ref">texture_get_data</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rdtextureformat.html#class-rdtextureformat"><span class="std std-ref">RDTextureFormat</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rdtextureformat.html#class-rdtextureformat"><span class="std std-ref">RDTextureFormat</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-get-format"><span class="std std-ref">texture_get_format</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-get-native-handle"><span class="std std-ref">texture_get_native_handle</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-is-format-supported-for-usage"><span class="std std-ref">texture_is_format_supported_for_usage</span></a>(format: <a class="reference internal" href="#enum-renderingdevice-dataformat"><span class="std std-ref">DataFormat</span></a>, usage_flags: <abbr title="This value is an integer composed as a bitmask of the following flags.">BitField</abbr>[<a class="reference internal" href="#enum-renderingdevice-textureusagebits"><span class="std std-ref">TextureUsageBits</span></a>]) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-is-shared"><span class="std std-ref">texture_is_shared</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-is-valid"><span class="std std-ref">texture_is_valid</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-resolve-multisample"><span class="std std-ref">texture_resolve_multisample</span></a>(from_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, to_texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-texture-update"><span class="std std-ref">texture_update</span></a>(texture: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-uniform-buffer-create"><span class="std std-ref">uniform_buffer_create</span></a>(size_bytes: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray())</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-uniform-set-create"><span class="std std-ref">uniform_set_create</span></a>(uniforms: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rduniform.html#class-rduniform"><span class="std std-ref">RDUniform</span></a>], shader: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, shader_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-uniform-set-is-valid"><span class="std std-ref">uniform_set_is_valid</span></a>(uniform_set: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-vertex-array-create"><span class="std std-ref">vertex_array_create</span></a>(vertex_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, vertex_format: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, src_buffers: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>], offsets: <a class="reference internal" href="class_packedint64array.html#class-packedint64array"><span class="std std-ref">PackedInt64Array</span></a> = PackedInt64Array())</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-vertex-buffer-create"><span class="std std-ref">vertex_buffer_create</span></a>(size_bytes: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray(), use_as_storage: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-renderingdevice-method-vertex-format-create"><span class="std std-ref">vertex_format_create</span></a>(vertex_descriptions: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_rdvertexattribute.html#class-rdvertexattribute"><span class="std std-ref">RDVertexAttribute</span></a>])</p></td>
 </tr>
 </tbody>
@@ -12485,7 +12490,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-enumeration" id="enum-renderingdevice-shaderlanguage">enum <strong>ShaderLanguage</strong>: <a class="reference internal" href="#enum-renderingdevice-shaderlanguage"><span class="std std-ref">🔗</span></a></p>
 <p class="classref-enumeration-constant" id="class-renderingdevice-constant-shader-language-glsl"><a class="reference internal" href="#enum-renderingdevice-shaderlanguage"><span class="std std-ref">ShaderLanguage</span></a> <strong>SHADER_LANGUAGE_GLSL</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
-<p>Khronos' GLSL shading language (used natively by OpenGL and Vulkan). This is the language used for core Redot shaders.</p>
+<p>Khronos' GLSL shading language (used natively by OpenGL and Vulkan). This is the language used for core Redot Shaders.</p>
 <p class="classref-enumeration-constant" id="class-renderingdevice-constant-shader-language-hlsl"><a class="reference internal" href="#enum-renderingdevice-shaderlanguage"><span class="std std-ref">ShaderLanguage</span></a> <strong>SHADER_LANGUAGE_HLSL</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 <p>Microsoft's High-Level Shading Language (used natively by Direct3D, but can also be used in Vulkan).</p>
 <hr class="classref-item-separator docutils" />
@@ -12799,6 +12804,9 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderingdevice-method-draw-list-draw"><abbr title="No return value.">void</abbr> <strong>draw_list_draw</strong>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, use_indices: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>, instances: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, procedural_vertex_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-renderingdevice-method-draw-list-draw"><span class="std std-ref">🔗</span></a></p>
 <p>Submits <code class="docutils literal notranslate"><span class="pre">draw_list</span></code> for rendering on the GPU. This is the raster equivalent to <a class="reference internal" href="#class-renderingdevice-method-compute-list-dispatch"><span class="std std-ref">compute_list_dispatch</span></a>.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-renderingdevice-method-draw-list-draw-indirect"><abbr title="No return value.">void</abbr> <strong>draw_list_draw_indirect</strong>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, use_indices: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>, buffer: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, offset: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0, draw_count: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 1, stride: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-renderingdevice-method-draw-list-draw-indirect"><span class="std std-ref">🔗</span></a></p>
+<p>Submits <code class="docutils literal notranslate"><span class="pre">draw_list</span></code> for rendering on the GPU with the given parameters stored in the <code class="docutils literal notranslate"><span class="pre">buffer</span></code> at <code class="docutils literal notranslate"><span class="pre">offset</span></code>. Parameters being integers: vertex count, instance count, first vertex, first instance. And when using indices: index count, instance count, first index, vertex offset, first instance. Buffer must have been created with <a class="reference internal" href="#class-renderingdevice-constant-storage-buffer-usage-dispatch-indirect"><span class="std std-ref">STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT</span></a> flag.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderingdevice-method-draw-list-enable-scissor"><abbr title="No return value.">void</abbr> <strong>draw_list_enable_scissor</strong>(draw_list: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, rect: <a class="reference internal" href="class_rect2.html#class-rect2"><span class="std std-ref">Rect2</span></a> = Rect2(0, 0, 0, 0)) <a class="reference internal" href="#class-renderingdevice-method-draw-list-enable-scissor"><span class="std std-ref">🔗</span></a></p>
 <p>Creates a scissor rectangle and enables it for the specified <code class="docutils literal notranslate"><span class="pre">draw_list</span></code>. Scissor rectangles are used for clipping by discarding fragments that fall outside a specified rectangular portion of the screen. See also <a class="reference internal" href="#class-renderingdevice-method-draw-list-disable-scissor"><span class="std std-ref">draw_list_disable_scissor</span></a>.</p>

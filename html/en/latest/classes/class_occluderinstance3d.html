@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11151,7 +11153,7 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Occlusion culling can improve rendering performance in closed/semi-open areas by hiding geometry that is occluded by other objects.</p>
 <p>The occlusion culling system is mostly static. <strong>OccluderInstance3D</strong>s can be moved or hidden at run-time, but doing so will trigger a background recomputation that can take several frames. It is recommended to only move <strong>OccluderInstance3D</strong>s sporadically (e.g. for procedural generation purposes), rather than doing so every frame.</p>
-<p>The occlusion culling system works by rendering the occluders on the CPU in parallel using <a class="reference external" href="https://www.embree.org/">Embree</a>, drawing the result to a low-resolution buffer then using this to cull 3D nodes individually. In the 3D editor, you can preview the occlusion culling buffer by choosing <strong>Perspective &gt; Debug Advanced... &gt; Occlusion Culling Buffer</strong> in the top-left corner of the 3D viewport. The occlusion culling buffer quality can be adjusted in the Project Settings.</p>
+<p>The occlusion culling system works by rendering the occluders on the CPU in parallel using <a class="reference external" href="https://www.embree.org/">Embree</a>, drawing the result to a low-resolution buffer then using this to cull 3D nodes individually. In the 3D editor, you can preview the occlusion culling buffer by choosing <strong>Perspective &gt; Display Advanced... &gt; Occlusion Culling Buffer</strong> in the top-left corner of the 3D viewport. The occlusion culling buffer quality can be adjusted in the Project Settings.</p>
 <p><strong>Baking:</strong> Select an <strong>OccluderInstance3D</strong> node, then use the <strong>Bake Occluders</strong> button at the top of the 3D editor. Only opaque materials will be taken into account; transparent materials (alpha-blended or alpha-tested) will be ignored by the occluder generation.</p>
 <p><strong>Note:</strong> Occlusion culling is only effective if <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-occlusion-culling-use-occlusion-culling"><span class="std std-ref">ProjectSettings.rendering/occlusion_culling/use_occlusion_culling</span></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling occlusion culling has a cost on the CPU. Only enable occlusion culling if you actually plan to use it. Large open scenes with few or no objects blocking the view will generally not benefit much from occlusion culling. Large open scenes generally benefit more from mesh LOD and visibility ranges (<a class="reference internal" href="class_geometryinstance3d.html#class-geometryinstance3d-property-visibility-range-begin"><span class="std std-ref">GeometryInstance3D.visibility_range_begin</span></a> and <a class="reference internal" href="class_geometryinstance3d.html#class-geometryinstance3d-property-visibility-range-end"><span class="std std-ref">GeometryInstance3D.visibility_range_end</span></a>) compared to occlusion culling.</p>
 <p><strong>Note:</strong> Due to memory constraints, occlusion culling is not supported by default in Web export templates. It can be enabled by compiling custom Web export templates with <code class="docutils literal notranslate"><span class="pre">module_raycast_enabled=yes</span></code>.</p>

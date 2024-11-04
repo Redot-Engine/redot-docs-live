@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11151,7 +11153,7 @@
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> resource that draws only part of its <a class="reference internal" href="#class-atlastexture-property-atlas"><span class="std std-ref">atlas</span></a> texture, as defined by the <a class="reference internal" href="#class-atlastexture-property-region"><span class="std std-ref">region</span></a>. An additional <a class="reference internal" href="#class-atlastexture-property-margin"><span class="std std-ref">margin</span></a> can also be set, which is useful for small adjustments.</p>
 <p>Multiple <strong>AtlasTexture</strong> resources can be cropped from the same <a class="reference internal" href="#class-atlastexture-property-atlas"><span class="std std-ref">atlas</span></a>. Packing many smaller textures into a singular large texture helps to optimize video memory costs and render calls.</p>
-<p><strong>Note:</strong> <strong>AtlasTexture</strong> cannot be used in an <a class="reference internal" href="class_animatedtexture.html#class-animatedtexture"><span class="std std-ref">AnimatedTexture</span></a>, and may not tile properly in nodes such as <a class="reference internal" href="class_texturerect.html#class-texturerect"><span class="std std-ref">TextureRect</span></a>, when inside other <strong>AtlasTexture</strong> resources.</p>
+<p><strong>Note:</strong> <strong>AtlasTexture</strong> cannot be used in an <a class="reference internal" href="class_animatedtexture.html#class-animatedtexture"><span class="std std-ref">AnimatedTexture</span></a>, and will not tile properly in nodes such as <a class="reference internal" href="class_texturerect.html#class-texturerect"><span class="std std-ref">TextureRect</span></a> or <a class="reference internal" href="class_sprite2d.html#class-sprite2d"><span class="std std-ref">Sprite2D</span></a>. To tile an <strong>AtlasTexture</strong>, modify its <a class="reference internal" href="#class-atlastexture-property-region"><span class="std std-ref">region</span></a> instead.</p>
 </section>
 <section class="classref-reftable-group" id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h2>

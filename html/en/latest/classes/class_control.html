@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11779,12 +11781,18 @@
 <p class="classref-enumeration" id="enum-control-layoutdirection">enum <strong>LayoutDirection</strong>: <a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">🔗</span></a></p>
 <p class="classref-enumeration-constant" id="class-control-constant-layout-direction-inherited"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_INHERITED</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 <p>Automatic layout direction, determined from the parent control layout direction.</p>
-<p class="classref-enumeration-constant" id="class-control-constant-layout-direction-locale"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_LOCALE</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<p class="classref-enumeration-constant" id="class-control-constant-layout-direction-application-locale"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_APPLICATION_LOCALE</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 <p>Automatic layout direction, determined from the current locale.</p>
 <p class="classref-enumeration-constant" id="class-control-constant-layout-direction-ltr"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_LTR</strong> = <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
 <p>Left-to-right layout direction.</p>
 <p class="classref-enumeration-constant" id="class-control-constant-layout-direction-rtl"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_RTL</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 <p>Right-to-left layout direction.</p>
+<p class="classref-enumeration-constant" id="class-control-constant-layout-direction-system-locale"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_SYSTEM_LOCALE</strong> = <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+<p>Automatic layout direction, determined from the system locale.</p>
+<p class="classref-enumeration-constant" id="class-control-constant-layout-direction-max"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_MAX</strong> = <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<p>Represents the size of the <a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> enum.</p>
+<p class="classref-enumeration-constant" id="class-control-constant-layout-direction-locale"><a class="reference internal" href="#enum-control-layoutdirection"><span class="std std-ref">LayoutDirection</span></a> <strong>LAYOUT_DIRECTION_LOCALE</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+<p><strong>Deprecated:</strong> Use <a class="reference internal" href="#class-control-constant-layout-direction-application-locale"><span class="std std-ref">LAYOUT_DIRECTION_APPLICATION_LOCALE</span></a> instead.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-enumeration" id="enum-control-textdirection">enum <strong>TextDirection</strong>: <a class="reference internal" href="#enum-control-textdirection"><span class="std std-ref">🔗</span></a></p>
 <p class="classref-enumeration-constant" id="class-control-constant-text-direction-inherited"><a class="reference internal" href="#enum-control-textdirection"><span class="std std-ref">TextDirection</span></a> <strong>TEXT_DIRECTION_INHERITED</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
@@ -12135,7 +12143,7 @@
 <li><p><a class="reference internal" href="class_node.html#enum-node-autotranslatemode"><span class="std std-ref">AutoTranslateMode</span></a> <strong>get_tooltip_auto_translate_mode</strong>()</p></li>
 </ul>
 <p>Defines if tooltip text should automatically change to its translated version depending on the current locale. Uses the same auto translate mode as this control when set to <a class="reference internal" href="class_node.html#class-node-constant-auto-translate-mode-inherit"><span class="std std-ref">Node.AUTO_TRANSLATE_MODE_INHERIT</span></a>.</p>
-<p><strong>Note:</strong> When the tooltip is customized using <a class="reference internal" href="#class-control-private-method-make-custom-tooltip"><span class="std std-ref">_make_custom_tooltip</span></a>, this auto translate mode is applied automatically to the returned control.</p>
+<p><strong>Note:</strong> Tooltips customized using <a class="reference internal" href="#class-control-private-method-make-custom-tooltip"><span class="std std-ref">_make_custom_tooltip</span></a> do not use this auto translate mode automatically.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-control-property-tooltip-text"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>tooltip_text</strong> = <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> <a class="reference internal" href="#class-control-property-tooltip-text"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -12198,7 +12206,7 @@
 </div>
 </div><div aria-labelledby="tab-2-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">_CanDropData</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">atPosition</span><span class="p">,</span><span class="w"> </span><span class="n">Variant</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">VariantType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Variant</span><span class="p">.</span><span class="n">Type</span><span class="p">.</span><span class="n">Dictionary</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">dict</span><span class="p">.</span><span class="n">AsGodotDictionary</span><span class="p">().</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s">&quot;color&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">VariantType</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Variant</span><span class="p">.</span><span class="n">Type</span><span class="p">.</span><span class="n">Dictionary</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">AsGodotDictionary</span><span class="p">().</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s">&quot;color&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_DropData</span><span class="p">(</span><span class="n">Vector2</span><span class="w"> </span><span class="n">atPosition</span><span class="p">,</span><span class="w"> </span><span class="n">Variant</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>

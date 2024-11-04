@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11289,6 +11291,7 @@
 <p class="classref-method" id="class-editorexportplugin-private-method-begin-customize-scenes"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>_begin_customize_scenes</strong>(platform: <a class="reference internal" href="class_editorexportplatform.html#class-editorexportplatform"><span class="std std-ref">EditorExportPlatform</span></a>, features: <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-editorexportplugin-private-method-begin-customize-scenes"><span class="std std-ref">🔗</span></a></p>
 <p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if this plugin will customize scenes based on the platform and features used.</p>
 <p>When enabled, <a class="reference internal" href="#class-editorexportplugin-private-method-get-customization-configuration-hash"><span class="std std-ref">_get_customization_configuration_hash</span></a> and <a class="reference internal" href="#class-editorexportplugin-private-method-customize-scene"><span class="std std-ref">_customize_scene</span></a> will be called and must be implemented.</p>
+<p><strong>Note:</strong> <a class="reference internal" href="#class-editorexportplugin-private-method-customize-scene"><span class="std std-ref">_customize_scene</span></a> will only be called for scenes that have been modified since the last export.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorexportplugin-private-method-customize-resource"><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a> <strong>_customize_resource</strong>(resource: <a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a>, path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editorexportplugin-private-method-customize-resource"><span class="std std-ref">🔗</span></a></p>
 <p>Customize a resource. If changes are made to it, return the same or a new resource. Otherwise, return <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>

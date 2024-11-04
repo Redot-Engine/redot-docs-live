@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11192,11 +11194,32 @@
 <tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-audiostreamplayback-private-method-tag-used-streams"><span class="std std-ref">_tag_used_streams</span></a>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-get-loop-count"><span class="std std-ref">get_loop_count</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-get-playback-position"><span class="std std-ref">get_playback_position</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a></p></td>
 <td><p><a class="reference internal" href="#class-audiostreamplayback-method-get-sample-playback"><span class="std std-ref">get_sample_playback</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-is-playing"><span class="std std-ref">is_playing</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_packedvector2array.html#class-packedvector2array"><span class="std std-ref">PackedVector2Array</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-mix-audio"><span class="std std-ref">mix_audio</span></a>(rate_scale: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>, frames: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
+</tr>
 <tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-seek"><span class="std std-ref">seek</span></a>(time: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-audiostreamplayback-method-set-sample-playback"><span class="std std-ref">set_sample_playback</span></a>(playback_sample: <a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-start"><span class="std std-ref">start</span></a>(from_pos: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-audiostreamplayback-method-stop"><span class="std std-ref">stop</span></a>()</p></td>
 </tr>
 </tbody>
 </table>
@@ -11235,13 +11258,36 @@
 <p class="classref-method" id="class-audiostreamplayback-private-method-tag-used-streams"><abbr title="No return value.">void</abbr> <strong>_tag_used_streams</strong>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-audiostreamplayback-private-method-tag-used-streams"><span class="std std-ref">🔗</span></a></p>
 <p>Overridable method. Called whenever the audio stream is mixed if the playback is active and <a class="reference internal" href="class_audioserver.html#class-audioserver-method-set-enable-tagging-used-audio-streams"><span class="std std-ref">AudioServer.set_enable_tagging_used_audio_streams</span></a> has been set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Editor plugins may use this method to &quot;tag&quot; the current position along the audio stream and display it in a preview.</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-get-loop-count"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_loop_count</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audiostreamplayback-method-get-loop-count"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the number of times the stream has looped.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-get-playback-position"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_playback_position</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audiostreamplayback-method-get-playback-position"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the current position in the stream, in seconds.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-audiostreamplayback-method-get-sample-playback"><a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a> <strong>get_sample_playback</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audiostreamplayback-method-get-sample-playback"><span class="std std-ref">🔗</span></a></p>
 <p><strong>Experimental:</strong> This method may be changed or removed in future versions.</p>
 <p>Returns the <a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a> associated with this <strong>AudioStreamPlayback</strong> for playing back the audio sample of this stream.</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-is-playing"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_playing</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audiostreamplayback-method-is-playing"><span class="std std-ref">🔗</span></a></p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the stream is playing.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-mix-audio"><a class="reference internal" href="class_packedvector2array.html#class-packedvector2array"><span class="std std-ref">PackedVector2Array</span></a> <strong>mix_audio</strong>(rate_scale: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>, frames: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-audiostreamplayback-method-mix-audio"><span class="std std-ref">🔗</span></a></p>
+<p>Mixes up to <code class="docutils literal notranslate"><span class="pre">frames</span></code> of audio from the stream from the current position, at a rate of <code class="docutils literal notranslate"><span class="pre">rate_scale</span></code>, advancing the stream.</p>
+<p>Returns a <a class="reference internal" href="class_packedvector2array.html#class-packedvector2array"><span class="std std-ref">PackedVector2Array</span></a> where each element holds the left and right channel volume levels of each frame.</p>
+<p><strong>Note:</strong> Can return fewer frames than requested, make sure to use the size of the return value.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-seek"><abbr title="No return value.">void</abbr> <strong>seek</strong>(time: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.0) <a class="reference internal" href="#class-audiostreamplayback-method-seek"><span class="std std-ref">🔗</span></a></p>
+<p>Seeks the stream at the given <code class="docutils literal notranslate"><span class="pre">time</span></code>, in seconds.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-audiostreamplayback-method-set-sample-playback"><abbr title="No return value.">void</abbr> <strong>set_sample_playback</strong>(playback_sample: <a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a>) <a class="reference internal" href="#class-audiostreamplayback-method-set-sample-playback"><span class="std std-ref">🔗</span></a></p>
 <p><strong>Experimental:</strong> This method may be changed or removed in future versions.</p>
 <p>Associates <a class="reference internal" href="class_audiosampleplayback.html#class-audiosampleplayback"><span class="std std-ref">AudioSamplePlayback</span></a> to this <strong>AudioStreamPlayback</strong> for playing back the audio sample of this stream.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-start"><abbr title="No return value.">void</abbr> <strong>start</strong>(from_pos: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.0) <a class="reference internal" href="#class-audiostreamplayback-method-start"><span class="std std-ref">🔗</span></a></p>
+<p>Starts the stream from the given <code class="docutils literal notranslate"><span class="pre">from_pos</span></code>, in seconds.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audiostreamplayback-method-stop"><abbr title="No return value.">void</abbr> <strong>stop</strong>() <a class="reference internal" href="#class-audiostreamplayback-method-stop"><span class="std std-ref">🔗</span></a></p>
+<p>Stops the stream.</p>
 </section>
 </section>
 

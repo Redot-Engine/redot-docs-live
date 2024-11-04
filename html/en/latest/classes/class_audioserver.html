@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11226,8 +11228,14 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a></p></td>
 <td><p><a class="reference internal" href="#class-audioserver-method-get-bus-volume-db"><span class="std std-ref">get_bus_volume_db</span></a>(bus_idx: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audioserver-method-get-driver-name"><span class="std std-ref">get_driver_name</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
 <td><p><a class="reference internal" href="#class-audioserver-method-get-input-device-list"><span class="std std-ref">get_input_device_list</span></a>()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a></p></td>
+<td><p><a class="reference internal" href="#class-audioserver-method-get-input-mix-rate"><span class="std std-ref">get_input_mix_rate</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a></p></td>
 <td><p><a class="reference internal" href="#class-audioserver-method-get-mix-rate"><span class="std std-ref">get_mix_rate</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
@@ -11425,9 +11433,15 @@
 <p class="classref-method" id="class-audioserver-method-get-bus-volume-db"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_bus_volume_db</strong>(bus_idx: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audioserver-method-get-bus-volume-db"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the volume of the bus at index <code class="docutils literal notranslate"><span class="pre">bus_idx</span></code> in dB.</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audioserver-method-get-driver-name"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>get_driver_name</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audioserver-method-get-driver-name"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the name of the current audio driver. The default usually depends on the operating system, but may be overridden via the <code class="docutils literal notranslate"><span class="pre">--audio-driver</span></code> <a class="reference internal" href="../tutorials/editor/command_line_tutorial.html"><span class="doc">command line argument</span></a>. <code class="docutils literal notranslate"><span class="pre">--headless</span></code> also automatically sets the audio driver to <code class="docutils literal notranslate"><span class="pre">Dummy</span></code>. See also <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-audio-driver-driver"><span class="std std-ref">ProjectSettings.audio/driver/driver</span></a>.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-audioserver-method-get-input-device-list"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_input_device_list</strong>() <a class="reference internal" href="#class-audioserver-method-get-input-device-list"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the names of all audio input devices detected on the system.</p>
 <p><strong>Note:</strong> <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-audio-driver-enable-input"><span class="std std-ref">ProjectSettings.audio/driver/enable_input</span></a> must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for audio input to work. See also that setting's description for caveats related to permissions and operating system privacy settings.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-audioserver-method-get-input-mix-rate"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_input_mix_rate</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audioserver-method-get-input-mix-rate"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the sample rate at the input of the <strong>AudioServer</strong>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-audioserver-method-get-mix-rate"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_mix_rate</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-audioserver-method-get-mix-rate"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the sample rate at the output of the <strong>AudioServer</strong>.</p>

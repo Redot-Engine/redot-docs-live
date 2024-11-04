@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11160,18 +11162,20 @@
 
 <span class="k">class</span><span class="w"> </span><span class="n">ExampleEditorDebugger</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">EditorDebuggerPlugin</span><span class="p">:</span>
 
-<span class="w">    </span><span class="k">func</span><span class="w"> </span><span class="n">_has_capture</span><span class="p">(</span><span class="n">prefix</span><span class="p">):</span>
-<span class="w">        </span><span class="c1"># Return true if you wish to handle message with this prefix.</span>
-<span class="w">        </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;my_plugin&quot;</span>
+<span class="w">    </span><span class="k">func</span><span class="w"> </span><span class="n">_has_capture</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span>
+<span class="w">        </span><span class="c1"># Return true if you wish to handle messages with the prefix &quot;my_plugin:&quot;.</span>
+<span class="w">        </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">capture</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;my_plugin&quot;</span>
 
 <span class="w">    </span><span class="k">func</span><span class="w"> </span><span class="n">_capture</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">session_id</span><span class="p">):</span>
 <span class="w">        </span><span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;my_plugin:ping&quot;</span><span class="p">:</span>
 <span class="w">            </span><span class="n">get_session</span><span class="p">(</span><span class="n">session_id</span><span class="p">)</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;my_plugin:echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="w">            </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">        </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="bp">false</span>
 
 <span class="w">    </span><span class="k">func</span><span class="w"> </span><span class="n">_setup_session</span><span class="p">(</span><span class="n">session_id</span><span class="p">):</span>
 <span class="w">        </span><span class="c1"># Add a new tab in the debugger session UI containing a label.</span>
 <span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Label</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="w">        </span><span class="n">label</span><span class="o">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Example plugin&quot;</span>
+<span class="w">        </span><span class="n">label</span><span class="o">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Example plugin&quot;</span><span class="w"> </span><span class="c1"># Will be used as the tab title.</span>
 <span class="w">        </span><span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Example plugin&quot;</span>
 <span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_session</span><span class="p">(</span><span class="n">session_id</span><span class="p">)</span>
 <span class="w">        </span><span class="c1"># Listens to the session started and stopped signals.</span>
@@ -11189,6 +11193,24 @@
 </pre></div>
 </div>
 </div></div>
+<p>To connect on the running game side, use the <a class="reference internal" href="class_enginedebugger.html#class-enginedebugger"><span class="std std-ref">EngineDebugger</span></a> singleton:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-1-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="n">EngineDebugger</span><span class="o">.</span><span class="n">register_message_capture</span><span class="p">(</span><span class="s2">&quot;my_plugin&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">_capture</span><span class="p">)</span>
+<span class="w">    </span><span class="n">EngineDebugger</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;my_plugin:ping&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;test&quot;</span><span class="p">])</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_capture</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">):</span>
+<span class="w">    </span><span class="c1"># Note that the &quot;my_plugin:&quot; prefix is not used here.</span>
+<span class="w">    </span><span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;echo&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">prints</span><span class="p">(</span><span class="s2">&quot;Echo received:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">)</span>
+<span class="w">        </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="bp">true</span>
+<span class="w">    </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="bp">false</span>
+</pre></div>
+</div>
+</div></div>
+<p><strong>Note:</strong> While the game is running, <a class="reference internal" href="class_%40globalscope.html#class-globalscope-method-print"><span class="std std-ref">&#64;GlobalScope.print</span></a> and similar functions <em>called in the editor</em> do not print anything, the Output Log prints only game messages.</p>
 </section>
 <section class="classref-reftable-group" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
@@ -11231,7 +11253,7 @@
 <p>Override this method to be notified when all breakpoints are cleared in the editor.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editordebuggerplugin-private-method-capture"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>_capture</strong>(message: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, data: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>, session_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editordebuggerplugin-private-method-capture"><span class="std std-ref">🔗</span></a></p>
-<p>Override this method to process incoming messages. The <code class="docutils literal notranslate"><span class="pre">session_id</span></code> is the ID of the <a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> that received the message (which you can retrieve via <a class="reference internal" href="#class-editordebuggerplugin-method-get-session"><span class="std std-ref">get_session</span></a>).</p>
+<p>Override this method to process incoming messages. The <code class="docutils literal notranslate"><span class="pre">session_id</span></code> is the ID of the <a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> that received the <code class="docutils literal notranslate"><span class="pre">message</span></code>. Use <a class="reference internal" href="#class-editordebuggerplugin-method-get-session"><span class="std std-ref">get_session</span></a> to retrieve the session. This method should return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the message is recognized.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editordebuggerplugin-private-method-goto-script-line"><abbr title="No return value.">void</abbr> <strong>_goto_script_line</strong>(script: <a class="reference internal" href="class_script.html#class-script"><span class="std std-ref">Script</span></a>, line: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editordebuggerplugin-private-method-goto-script-line"><span class="std std-ref">🔗</span></a></p>
 <p>Override this method to be notified when a breakpoint line has been clicked in the debugger breakpoint panel.</p>
@@ -11240,7 +11262,7 @@
 <p>Override this method to enable receiving messages from the debugger. If <code class="docutils literal notranslate"><span class="pre">capture</span></code> is &quot;my_message&quot; then messages starting with &quot;my_message:&quot; will be passes to the <a class="reference internal" href="#class-editordebuggerplugin-private-method-capture"><span class="std std-ref">_capture</span></a> method.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editordebuggerplugin-private-method-setup-session"><abbr title="No return value.">void</abbr> <strong>_setup_session</strong>(session_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editordebuggerplugin-private-method-setup-session"><span class="std std-ref">🔗</span></a></p>
-<p>Override this method to be notified whenever a new <a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> is created (the session may be inactive during this stage).</p>
+<p>Override this method to be notified whenever a new <a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> is created. Note that the session may be inactive during this stage.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editordebuggerplugin-method-get-session"><a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> <strong>get_session</strong>(id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-editordebuggerplugin-method-get-session"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the <a class="reference internal" href="class_editordebuggersession.html#class-editordebuggersession"><span class="std std-ref">EditorDebuggerSession</span></a> with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>

@@ -3688,6 +3688,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3790,6 +3791,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11277,7 +11279,7 @@
 <span class="k">var</span><span class="w"> </span><span class="n">roughness_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">render_scene_buffers</span><span class="o">.</span><span class="n">get_texture</span><span class="p">(</span><span class="s2">&quot;forward_clustered&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;normal_roughness&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The raw normal and roughness buffer is stored in an optimized format, different than the one available in Spatial shaders. When sampling the buffer, a conversion function must be applied. Use this function, copied from <a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/da5f39889f155658cef7f7ec3cc1abb94e17d815/servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered_inc.glsl#L334-L341">here</a>:</p>
+<p>The raw normal and roughness buffer is stored in an optimized format, different than the one available in Spatial shaders. When sampling the buffer, a conversion function must be applied. Use this function, copied from <a class="reference external" href="https://github.com/Redot-Engine/redot-engine/blob/da5f39889f155658cef7f7ec3cc1abb94e17d815/servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered_inc.glsl#L334-L341">here</a>:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">vec4</span><span class="w"> </span><span class="n">normal_roughness_compatibility</span><span class="p">(</span><span class="n">vec4</span><span class="w"> </span><span class="n">p_normal_roughness</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nb nb-Type">float</span><span class="w"> </span><span class="n">roughness</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_normal_roughness</span><span class="o">.</span><span class="n">w</span><span class="p">;</span>
 <span class="w">    </span><span class="k k-ControlFlow">if</span><span class="w"> </span><span class="p">(</span><span class="n">roughness</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

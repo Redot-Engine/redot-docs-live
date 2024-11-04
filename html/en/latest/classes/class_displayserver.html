@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11879,12 +11881,14 @@
 <p class="classref-enumeration-constant" id="class-displayserver-constant-window-mode-fullscreen"><a class="reference internal" href="#enum-displayserver-windowmode"><span class="std std-ref">WindowMode</span></a> <strong>WINDOW_MODE_FULLSCREEN</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 <p>Full screen mode with full multi-window support.</p>
 <p>Full screen window covers the entire display area of a screen and has no decorations. The display's video mode is not changed.</p>
+<p><strong>On Android:</strong> This enables immersive mode.</p>
 <p><strong>On Windows:</strong> Multi-window full-screen mode has a 1px border of the <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-rendering-environment-defaults-default-clear-color"><span class="std std-ref">ProjectSettings.rendering/environment/defaults/default_clear_color</span></a> color.</p>
 <p><strong>On macOS:</strong> A new desktop is used to display the running project.</p>
 <p><strong>Note:</strong> Regardless of the platform, enabling full screen will change the window size to match the monitor's size. Therefore, make sure your project supports <a class="reference internal" href="../tutorials/rendering/multiple_resolutions.html"><span class="doc">multiple resolutions</span></a> when enabling full screen mode.</p>
 <p class="classref-enumeration-constant" id="class-displayserver-constant-window-mode-exclusive-fullscreen"><a class="reference internal" href="#enum-displayserver-windowmode"><span class="std std-ref">WindowMode</span></a> <strong>WINDOW_MODE_EXCLUSIVE_FULLSCREEN</strong> = <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 <p>A single window full screen mode. This mode has less overhead, but only one window can be open on a given screen at a time (opening a child window or application switching will trigger a full screen transition).</p>
 <p>Full screen window covers the entire display area of a screen and has no border or decorations. The display's video mode is not changed.</p>
+<p><strong>On Android:</strong> This enables immersive mode.</p>
 <p><strong>On Windows:</strong> Depending on video driver, full screen transition might cause screens to go black for a moment.</p>
 <p><strong>On macOS:</strong> A new desktop is used to display the running project. Exclusive full screen mode prevents Dock and Menu from showing up when the mouse pointer is hovering the edge of the screen.</p>
 <p><strong>On Linux (X11):</strong> Exclusive full screen mode bypasses compositor.</p>
@@ -11912,7 +11916,10 @@
 <p><strong>Note:</strong> This flag is implemented only on macOS.</p>
 <p class="classref-enumeration-constant" id="class-displayserver-constant-window-flag-mouse-passthrough"><a class="reference internal" href="#enum-displayserver-windowflags"><span class="std std-ref">WindowFlags</span></a> <strong>WINDOW_FLAG_MOUSE_PASSTHROUGH</strong> = <code class="docutils literal notranslate"><span class="pre">7</span></code></p>
 <p>All mouse events are passed to the underlying window of the same application.</p>
-<p class="classref-enumeration-constant" id="class-displayserver-constant-window-flag-max"><a class="reference internal" href="#enum-displayserver-windowflags"><span class="std std-ref">WindowFlags</span></a> <strong>WINDOW_FLAG_MAX</strong> = <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<p class="classref-enumeration-constant" id="class-displayserver-constant-window-flag-sharp-corners"><a class="reference internal" href="#enum-displayserver-windowflags"><span class="std std-ref">WindowFlags</span></a> <strong>WINDOW_FLAG_SHARP_CORNERS</strong> = <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<p>Window style is overridden, forcing sharp corners.</p>
+<p><strong>Note:</strong> This flag is implemented only on Windows (11).</p>
+<p class="classref-enumeration-constant" id="class-displayserver-constant-window-flag-max"><a class="reference internal" href="#enum-displayserver-windowflags"><span class="std std-ref">WindowFlags</span></a> <strong>WINDOW_FLAG_MAX</strong> = <code class="docutils literal notranslate"><span class="pre">9</span></code></p>
 <p>Max value of the <a class="reference internal" href="#enum-displayserver-windowflags"><span class="std std-ref">WindowFlags</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-enumeration" id="enum-displayserver-windowevent">enum <strong>WindowEvent</strong>: <a class="reference internal" href="#enum-displayserver-windowevent"><span class="std std-ref">🔗</span></a></p>
@@ -11952,6 +11959,7 @@
 <p>Display handle:</p>
 <ul class="simple">
 <li><p>Linux (X11): <code class="docutils literal notranslate"><span class="pre">X11::Display*</span></code> for the display.</p></li>
+<li><p>Linux (Wayland): <code class="docutils literal notranslate"><span class="pre">wl_display</span></code> for the display.</p></li>
 <li><p>Android: <code class="docutils literal notranslate"><span class="pre">EGLDisplay</span></code> for the display.</p></li>
 </ul>
 <p class="classref-enumeration-constant" id="class-displayserver-constant-window-handle"><a class="reference internal" href="#enum-displayserver-handletype"><span class="std std-ref">HandleType</span></a> <strong>WINDOW_HANDLE</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
@@ -11959,6 +11967,7 @@
 <ul class="simple">
 <li><p>Windows: <code class="docutils literal notranslate"><span class="pre">HWND</span></code> for the window.</p></li>
 <li><p>Linux (X11): <code class="docutils literal notranslate"><span class="pre">X11::Window*</span></code> for the window.</p></li>
+<li><p>Linux (Wayland): <code class="docutils literal notranslate"><span class="pre">wl_surface</span></code> for the window.</p></li>
 <li><p>macOS: <code class="docutils literal notranslate"><span class="pre">NSWindow*</span></code> for the window.</p></li>
 <li><p>iOS: <code class="docutils literal notranslate"><span class="pre">UIViewController*</span></code> for the view controller.</p></li>
 <li><p>Android: <code class="docutils literal notranslate"><span class="pre">jObject</span></code> for the activity.</p></li>
@@ -11975,8 +11984,21 @@
 <ul class="simple">
 <li><p>Windows: <code class="docutils literal notranslate"><span class="pre">HGLRC</span></code> for the window (native GL), or <code class="docutils literal notranslate"><span class="pre">EGLContext</span></code> for the window (ANGLE).</p></li>
 <li><p>Linux (X11): <code class="docutils literal notranslate"><span class="pre">GLXContext*</span></code> for the window.</p></li>
+<li><p>Linux (Wayland): <code class="docutils literal notranslate"><span class="pre">EGLContext</span></code> for the window.</p></li>
 <li><p>macOS: <code class="docutils literal notranslate"><span class="pre">NSOpenGLContext*</span></code> for the window (native GL), or <code class="docutils literal notranslate"><span class="pre">EGLContext</span></code> for the window (ANGLE).</p></li>
 <li><p>Android: <code class="docutils literal notranslate"><span class="pre">EGLContext</span></code> for the window.</p></li>
+</ul>
+<p class="classref-enumeration-constant" id="class-displayserver-constant-egl-display"><a class="reference internal" href="#enum-displayserver-handletype"><span class="std std-ref">HandleType</span></a> <strong>EGL_DISPLAY</strong> = <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">EGLDisplay</span></code> for the window (ANGLE).</p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">EGLDisplay</span></code> for the window (ANGLE).</p></li>
+<li><p>Linux (Wayland): <code class="docutils literal notranslate"><span class="pre">EGLDisplay</span></code> for the window.</p></li>
+</ul>
+<p class="classref-enumeration-constant" id="class-displayserver-constant-egl-config"><a class="reference internal" href="#enum-displayserver-handletype"><span class="std std-ref">HandleType</span></a> <strong>EGL_CONFIG</strong> = <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">EGLConfig</span></code> for the window (ANGLE).</p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">EGLConfig</span></code> for the window (ANGLE).</p></li>
+<li><p>Linux (Wayland): <code class="docutils literal notranslate"><span class="pre">EGLConfig</span></code> for the window.</p></li>
 </ul>
 <hr class="classref-item-separator docutils" />
 <p class="classref-enumeration" id="enum-displayserver-ttsutteranceevent">enum <strong>TTSUtteranceEvent</strong>: <a class="reference internal" href="#enum-displayserver-ttsutteranceevent"><span class="std std-ref">🔗</span></a></p>
@@ -12057,7 +12079,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-displayserver-method-dialog-input-text"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>dialog_input_text</strong>(title: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, description: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, existing_text: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, callback: <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a>) <a class="reference internal" href="#class-displayserver-method-dialog-input-text"><span class="std std-ref">🔗</span></a></p>
 <p>Shows a text input dialog which uses the operating system's native look-and-feel. <code class="docutils literal notranslate"><span class="pre">callback</span></code> should accept a single <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> parameter which contains the text field's contents.</p>
-<p><strong>Note:</strong> This method is implemented if the display server has the <a class="reference internal" href="#class-displayserver-constant-feature-native-dialog-input"><span class="std std-ref">FEATURE_NATIVE_DIALOG_INPUT</span></a> feature. Supported platforms include macOS and Windows.</p>
+<p><strong>Note:</strong> This method is implemented if the display server has the <a class="reference internal" href="#class-displayserver-constant-feature-native-dialog-input"><span class="std std-ref">FEATURE_NATIVE_DIALOG_INPUT</span></a> feature. Supported platforms include macOS, Windows, and Android.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-displayserver-method-dialog-show"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>dialog_show</strong>(title: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, description: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, buttons: <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a>, callback: <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a>) <a class="reference internal" href="#class-displayserver-method-dialog-show"><span class="std std-ref">🔗</span></a></p>
 <p>Shows a text dialog which uses the operating system's native look-and-feel. <code class="docutils literal notranslate"><span class="pre">callback</span></code> should accept a single <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> parameter which corresponds to the index of the pressed button.</p>
@@ -12931,6 +12953,7 @@ xxxhdpi - 640 dpi
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-displayserver-method-window-set-mode"><abbr title="No return value.">void</abbr> <strong>window_set_mode</strong>(mode: <a class="reference internal" href="#enum-displayserver-windowmode"><span class="std std-ref">WindowMode</span></a>, window_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-displayserver-method-window-set-mode"><span class="std std-ref">🔗</span></a></p>
 <p>Sets window mode for the given window to <code class="docutils literal notranslate"><span class="pre">mode</span></code>. See <a class="reference internal" href="#enum-displayserver-windowmode"><span class="std std-ref">WindowMode</span></a> for possible values and how each mode behaves.</p>
+<p><strong>Note:</strong> On Android, setting it to <a class="reference internal" href="#class-displayserver-constant-window-mode-fullscreen"><span class="std std-ref">WINDOW_MODE_FULLSCREEN</span></a> or <a class="reference internal" href="#class-displayserver-constant-window-mode-exclusive-fullscreen"><span class="std std-ref">WINDOW_MODE_EXCLUSIVE_FULLSCREEN</span></a> will enable immersive mode.</p>
 <p><strong>Note:</strong> Setting the window to full screen forcibly sets the borderless flag to <code class="docutils literal notranslate"><span class="pre">true</span></code>, so make sure to set it back to <code class="docutils literal notranslate"><span class="pre">false</span></code> when not wanted.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-displayserver-method-window-set-mouse-passthrough"><abbr title="No return value.">void</abbr> <strong>window_set_mouse_passthrough</strong>(region: <a class="reference internal" href="class_packedvector2array.html#class-packedvector2array"><span class="std std-ref">PackedVector2Array</span></a>, window_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-displayserver-method-window-set-mouse-passthrough"><span class="std std-ref">🔗</span></a></p>

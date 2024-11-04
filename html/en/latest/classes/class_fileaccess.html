@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11677,7 +11679,7 @@ Alice,&quot;I thought you&#39;d reply with &quot;&quot;Hello, world&quot;&quot;.
 <p>Stores a floating-point number as 32 bits in the file.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-fileaccess-method-store-line"><abbr title="No return value.">void</abbr> <strong>store_line</strong>(line: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-fileaccess-method-store-line"><span class="std std-ref">🔗</span></a></p>
-<p>Appends <code class="docutils literal notranslate"><span class="pre">line</span></code> to the file followed by a line return character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>), encoding the text as UTF-8.</p>
+<p>Stores <code class="docutils literal notranslate"><span class="pre">line</span></code> in the file followed by a newline character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>), encoding the text as UTF-8.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-fileaccess-method-store-pascal-string"><abbr title="No return value.">void</abbr> <strong>store_pascal_string</strong>(string: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-fileaccess-method-store-pascal-string"><span class="std std-ref">🔗</span></a></p>
 <p>Stores the given <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> as a line in the file in Pascal format (i.e. also store the length of the string).</p>
@@ -11687,7 +11689,7 @@ Alice,&quot;I thought you&#39;d reply with &quot;&quot;Hello, world&quot;&quot;.
 <p>Stores a floating-point number in the file.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-fileaccess-method-store-string"><abbr title="No return value.">void</abbr> <strong>store_string</strong>(string: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-fileaccess-method-store-string"><span class="std std-ref">🔗</span></a></p>
-<p>Appends <code class="docutils literal notranslate"><span class="pre">string</span></code> to the file without a line return, encoding the text as UTF-8.</p>
+<p>Stores <code class="docutils literal notranslate"><span class="pre">string</span></code> in the file without a newline character (<code class="docutils literal notranslate"><span class="pre">\n</span></code>), encoding the text as UTF-8.</p>
 <p><strong>Note:</strong> This method is intended to be used to write text files. The string is stored as a UTF-8 encoded buffer without string length or terminating zero, which means that it can't be loaded back easily. If you want to store a retrievable string in a binary file, consider using <a class="reference internal" href="#class-fileaccess-method-store-pascal-string"><span class="std std-ref">store_pascal_string</span></a> instead. For retrieving strings from a text file, you can use <code class="docutils literal notranslate"><span class="pre">get_buffer(length).get_string_from_utf8()</span></code> (if you know the length) or <a class="reference internal" href="#class-fileaccess-method-get-as-text"><span class="std std-ref">get_as_text</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-fileaccess-method-store-var"><abbr title="No return value.">void</abbr> <strong>store_var</strong>(value: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>, full_objects: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-fileaccess-method-store-var"><span class="std std-ref">🔗</span></a></p>

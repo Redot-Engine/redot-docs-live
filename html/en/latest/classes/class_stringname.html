@@ -3689,6 +3689,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -3791,6 +3792,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_canvasmodulate.html">CanvasModulate</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_canvasmodulate.html#property-descriptions">Property Descriptions</a></li>
 </ul>
@@ -11668,16 +11670,16 @@
 <p><code class="docutils literal notranslate"><span class="pre">values</span></code> can be a <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> or an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>. Any underscores in <code class="docutils literal notranslate"><span class="pre">placeholder</span></code> will be replaced with the corresponding keys in advance. Array elements use their index as keys.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints &quot;Waiting for Redot is a play by Samuel Beckett, and Redot Engine is named after it.&quot;</span>
 <span class="k">var</span><span class="w"> </span><span class="n">use_array_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Waiting for {0} is a play by {1}, and {0} Engine is named after it.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">use_array_values</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;Godot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Samuel Beckett&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">use_array_values</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;Redot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Samuel Beckett&quot;</span><span class="p">]))</span>
 
 <span class="c1"># Prints &quot;User 42 is Redot.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {id} is {name}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Godot&quot;</span><span class="p">}))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {id} is {name}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Redot&quot;</span><span class="p">}))</span>
 </pre></div>
 </div>
 <p>Some additional handling is performed when <code class="docutils literal notranslate"><span class="pre">values</span></code> is an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>. If <code class="docutils literal notranslate"><span class="pre">placeholder</span></code> does not contain an underscore, the elements of the <code class="docutils literal notranslate"><span class="pre">values</span></code> array will be used to replace one occurrence of the placeholder in order; If an element of <code class="docutils literal notranslate"><span class="pre">values</span></code> is another 2-element array, it'll be interpreted as a key-value pair.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints &quot;User 42 is Redot.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {} is {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Godot&quot;</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;{}&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {id} is {name}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Godot&quot;</span><span class="p">]]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {} is {}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Redot&quot;</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;{}&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;User {id} is {name}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Redot&quot;</span><span class="p">]]))</span>
 </pre></div>
 </div>
 <p>See also the <a class="reference internal" href="../tutorials/scripting/gdscript/gdscript_format_string.html"><span class="doc">GDScript format string</span></a> tutorial.</p>
