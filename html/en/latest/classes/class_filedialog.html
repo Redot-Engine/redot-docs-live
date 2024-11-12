@@ -5339,6 +5339,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_springarm3d.html">SpringArm3D</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#methods">Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#property-descriptions">Property Descriptions</a></li>
@@ -8953,6 +8954,16 @@
 <li class="toctree-l3"><a class="reference internal" href="class_geometry3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_gltfobjectmodelproperty.html">GLTFObjectModelProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_hashingcontext.html">HashingContext</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#methods">Methods</a></li>
@@ -11502,6 +11513,7 @@
 <li><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_filters</strong>()</p></li>
 </ul>
 <p>The available file type filters. Each filter string in the array should be formatted like this: <code class="docutils literal notranslate"><span class="pre">*.txt,*.doc;Text</span> <span class="pre">Files</span></code>. The description text of the filter is optional and can be omitted.</p>
+<p><strong>Note:</strong> For android native dialog, MIME types are used like this: <code class="docutils literal notranslate"><span class="pre">image/*,</span> <span class="pre">application/pdf</span></code>.</p>
 <p><strong>Note:</strong> The returned array is <em>copied</em> and any changes to it will not update the original property value. See <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> for more details.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-filedialog-property-mode-overrides-title"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>mode_overrides_title</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-filedialog-property-mode-overrides-title"><span class="std std-ref">🔗</span></a></p>
@@ -11532,7 +11544,7 @@
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_showing_hidden_files</strong>()</p></li>
 </ul>
 <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the dialog will show hidden files.</p>
-<p><strong>Note:</strong> This property is ignored by native file dialogs on Linux.</p>
+<p><strong>Note:</strong> This property is ignored by native file dialogs on Android and Linux.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-filedialog-property-use-native-dialog"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>use_native_dialog</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-filedialog-property-use-native-dialog"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11540,6 +11552,7 @@
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>get_use_native_dialog</strong>()</p></li>
 </ul>
 <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, and if supported by the current <a class="reference internal" href="class_displayserver.html#class-displayserver"><span class="std std-ref">DisplayServer</span></a>, OS native dialog will be used instead of custom one.</p>
+<p><strong>Note:</strong> On Android, it is only supported when using <a class="reference internal" href="#class-filedialog-constant-access-filesystem"><span class="std std-ref">ACCESS_FILESYSTEM</span></a>. For access mode <a class="reference internal" href="#class-filedialog-constant-access-resources"><span class="std std-ref">ACCESS_RESOURCES</span></a> and <a class="reference internal" href="#class-filedialog-constant-access-userdata"><span class="std std-ref">ACCESS_USERDATA</span></a>, the system will fall back to custom FileDialog.</p>
 <p><strong>Note:</strong> On Linux and macOS, sandboxed apps always use native dialogs to access the host file system.</p>
 <p><strong>Note:</strong> On macOS, sandboxed apps will save security-scoped bookmarks to retain access to the opened folders across multiple sessions. Use <a class="reference internal" href="class_os.html#class-os-method-get-granted-permissions"><span class="std std-ref">OS.get_granted_permissions</span></a> to get a list of saved bookmarks.</p>
 <p><strong>Note:</strong> Native dialogs are isolated from the base process, file dialog properties can't be modified once the dialog is shown.</p>

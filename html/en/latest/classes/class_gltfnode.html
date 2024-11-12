@@ -5339,6 +5339,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_springarm3d.html">SpringArm3D</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#methods">Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#property-descriptions">Property Descriptions</a></li>
@@ -8953,6 +8954,16 @@
 <li class="toctree-l3"><a class="reference internal" href="class_geometry3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_gltfobjectmodelproperty.html">GLTFObjectModelProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_hashingcontext.html">HashingContext</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#methods">Methods</a></li>
@@ -11313,7 +11324,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a></p></td>
 <td><p><a class="reference internal" href="#class-gltfnode-method-get-additional-data"><span class="std std-ref">get_additional_data</span></a>(extension_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a></p></td>
+<td><p><a class="reference internal" href="#class-gltfnode-method-get-scene-node-path"><span class="std std-ref">get_scene_node_path</span></a>(gltf_state: <a class="reference internal" href="class_gltfstate.html#class-gltfstate"><span class="std std-ref">GLTFState</span></a>, handle_skeletons: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true)</p></td>
+</tr>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-gltfnode-method-set-additional-data"><span class="std std-ref">set_additional_data</span></a>(extension_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, additional_data: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>)</p></td>
 </tr>
 </tbody>
@@ -11423,6 +11437,10 @@
 <p class="classref-method" id="class-gltfnode-method-get-additional-data"><a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> <strong>get_additional_data</strong>(extension_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>) <a class="reference internal" href="#class-gltfnode-method-get-additional-data"><span class="std std-ref">🔗</span></a></p>
 <p>Gets additional arbitrary data in this <strong>GLTFNode</strong> instance. This can be used to keep per-node state data in <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> classes, which is important because they are stateless.</p>
 <p>The argument should be the <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> name (does not have to match the extension name in the glTF file), and the return value can be anything you set. If nothing was set, the return value is null.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-gltfnode-method-get-scene-node-path"><a class="reference internal" href="class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a> <strong>get_scene_node_path</strong>(gltf_state: <a class="reference internal" href="class_gltfstate.html#class-gltfstate"><span class="std std-ref">GLTFState</span></a>, handle_skeletons: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-gltfnode-method-get-scene-node-path"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the <a class="reference internal" href="class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a> that this GLTF node will have in the Redot scene tree after being imported. This is useful when importing glTF object model pointers with <a class="reference internal" href="class_gltfobjectmodelproperty.html#class-gltfobjectmodelproperty"><span class="std std-ref">GLTFObjectModelProperty</span></a>, for handling extensions such as <code class="docutils literal notranslate"><span class="pre">KHR_animation_pointer</span></code> or <code class="docutils literal notranslate"><span class="pre">KHR_interactivity</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">handle_skeletons</span></code> is true, paths to skeleton bone glTF nodes will be resolved properly. For example, a path that would be <code class="docutils literal notranslate"><span class="pre">^&quot;A/B/C/Bone1/Bone2/Bone3&quot;</span></code> if false will become <code class="docutils literal notranslate"><span class="pre">^&quot;A/B/C/Skeleton3D:Bone3&quot;</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfnode-method-set-additional-data"><abbr title="No return value.">void</abbr> <strong>set_additional_data</strong>(extension_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, additional_data: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>) <a class="reference internal" href="#class-gltfnode-method-set-additional-data"><span class="std std-ref">🔗</span></a></p>
 <p>Sets additional arbitrary data in this <strong>GLTFNode</strong> instance. This can be used to keep per-node state data in <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> classes, which is important because they are stateless.</p>

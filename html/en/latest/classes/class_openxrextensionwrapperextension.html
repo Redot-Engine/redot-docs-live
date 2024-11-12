@@ -5339,6 +5339,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_springarm3d.html">SpringArm3D</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#methods">Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#property-descriptions">Property Descriptions</a></li>
@@ -8953,6 +8954,16 @@
 <li class="toctree-l3"><a class="reference internal" href="class_geometry3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_gltfobjectmodelproperty.html">GLTFObjectModelProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_hashingcontext.html">HashingContext</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#methods">Methods</a></li>
@@ -11277,6 +11288,12 @@
 <td><p><a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-main-swapchains-created"><span class="std std-ref">_on_main_swapchains_created</span></a>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
 <tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-post-draw-viewport"><span class="std std-ref">_on_post_draw_viewport</span></a>(viewport: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
+</tr>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-pre-draw-viewport"><span class="std std-ref">_on_pre_draw_viewport</span></a>(viewport: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
+</tr>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-pre-render"><span class="std std-ref">_on_pre_render</span></a>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
 <tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
@@ -11393,6 +11410,13 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-openxrextensionwrapperextension-private-method-on-main-swapchains-created"><abbr title="No return value.">void</abbr> <strong>_on_main_swapchains_created</strong>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-main-swapchains-created"><span class="std std-ref">🔗</span></a></p>
 <p>Called right after the main swapchains are (re)created.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-openxrextensionwrapperextension-private-method-on-post-draw-viewport"><abbr title="No return value.">void</abbr> <strong>_on_post_draw_viewport</strong>(viewport: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-post-draw-viewport"><span class="std std-ref">🔗</span></a></p>
+<p>Called right after the given viewport is rendered.</p>
+<p><strong>Note:</strong> The draw commands might only be queued at this point, not executed.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-openxrextensionwrapperextension-private-method-on-pre-draw-viewport"><abbr title="No return value.">void</abbr> <strong>_on_pre_draw_viewport</strong>(viewport: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-pre-draw-viewport"><span class="std std-ref">🔗</span></a></p>
+<p>Called right before the given viewport is rendered.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-openxrextensionwrapperextension-private-method-on-pre-render"><abbr title="No return value.">void</abbr> <strong>_on_pre_render</strong>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-openxrextensionwrapperextension-private-method-on-pre-render"><span class="std std-ref">🔗</span></a></p>
 <p>Called right before the XR viewports begin their rendering step.</p>

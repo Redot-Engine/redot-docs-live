@@ -5339,6 +5339,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_springarm3d.html">SpringArm3D</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#methods">Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#property-descriptions">Property Descriptions</a></li>
@@ -8953,6 +8954,16 @@
 <li class="toctree-l3"><a class="reference internal" href="class_geometry3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_gltfobjectmodelproperty.html">GLTFObjectModelProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_hashingcontext.html">HashingContext</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#methods">Methods</a></li>
@@ -11333,7 +11344,8 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-importermesh-method-generate-lods"><abbr title="No return value.">void</abbr> <strong>generate_lods</strong>(normal_merge_angle: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>, normal_split_angle: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>, bone_transform_array: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>) <a class="reference internal" href="#class-importermesh-method-generate-lods"><span class="std std-ref">🔗</span></a></p>
 <p>Generates all lods for this ImporterMesh.</p>
-<p><code class="docutils literal notranslate"><span class="pre">normal_merge_angle</span></code> and <code class="docutils literal notranslate"><span class="pre">normal_split_angle</span></code> are in degrees and used in the same way as the importer settings in <code class="docutils literal notranslate"><span class="pre">lods</span></code>. As a good default, use 25 and 60 respectively.</p>
+<p><code class="docutils literal notranslate"><span class="pre">normal_merge_angle</span></code> is in degrees and used in the same way as the importer settings in <code class="docutils literal notranslate"><span class="pre">lods</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">normal_split_angle</span></code> is not used and only remains for compatibility with older versions of the API.</p>
 <p>The number of generated lods can be accessed using <a class="reference internal" href="#class-importermesh-method-get-surface-lod-count"><span class="std std-ref">get_surface_lod_count</span></a>, and each LOD is available in <a class="reference internal" href="#class-importermesh-method-get-surface-lod-size"><span class="std std-ref">get_surface_lod_size</span></a> and <a class="reference internal" href="#class-importermesh-method-get-surface-lod-indices"><span class="std std-ref">get_surface_lod_indices</span></a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">bone_transform_array</span></code> is an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> which can be either empty or contain <a class="reference internal" href="class_transform3d.html#class-transform3d"><span class="std std-ref">Transform3D</span></a>s which, for each of the mesh's bone IDs, will apply mesh skinning when generating the LOD mesh variations. This is usually used to account for discrepancies in scale between the mesh itself and its skinning data.</p>
 <hr class="classref-item-separator docutils" />

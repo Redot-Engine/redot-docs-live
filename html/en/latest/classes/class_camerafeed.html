@@ -5339,6 +5339,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_springarm3d.html">SpringArm3D</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#methods">Methods</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_springarm3d.html#property-descriptions">Property Descriptions</a></li>
@@ -8953,6 +8954,16 @@
 <li class="toctree-l3"><a class="reference internal" href="class_geometry3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_gltfobjectmodelproperty.html">GLTFObjectModelProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#tutorials">Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_gltfobjectmodelproperty.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_hashingcontext.html">HashingContext</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_hashingcontext.html#methods">Methods</a></li>
@@ -11272,6 +11283,12 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#enum-camerafeed-feedposition"><span class="std std-ref">FeedPosition</span></a></p></td>
 <td><p><a class="reference internal" href="#class-camerafeed-method-get-position"><span class="std std-ref">get_position</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<td><p><a class="reference internal" href="#class-camerafeed-method-get-texture-tex-id"><span class="std std-ref">get_texture_tex_id</span></a>(feed_image_type: <a class="reference internal" href="class_cameraserver.html#enum-cameraserver-feedimage"><span class="std std-ref">FeedImage</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-camerafeed-method-set-external"><span class="std std-ref">set_external</span></a>(width: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, height: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-camerafeed-method-set-format"><span class="std std-ref">set_format</span></a>(index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, parameters: <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>)</p></td>
 </tr>
@@ -11311,6 +11328,8 @@
 <p>Feed supplies YCbCr images that need to be converted to RGB.</p>
 <p class="classref-enumeration-constant" id="class-camerafeed-constant-feed-ycbcr-sep"><a class="reference internal" href="#enum-camerafeed-feeddatatype"><span class="std std-ref">FeedDataType</span></a> <strong>FEED_YCBCR_SEP</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 <p>Feed supplies separate Y and CbCr images that need to be combined and converted to RGB.</p>
+<p class="classref-enumeration-constant" id="class-camerafeed-constant-feed-external"><a class="reference internal" href="#enum-camerafeed-feeddatatype"><span class="std std-ref">FeedDataType</span></a> <strong>FEED_EXTERNAL</strong> = <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+<p>Feed supplies external image.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-enumeration" id="enum-camerafeed-feedposition">enum <strong>FeedPosition</strong>: <a class="reference internal" href="#enum-camerafeed-feedposition"><span class="std std-ref">🔗</span></a></p>
 <p class="classref-enumeration-constant" id="class-camerafeed-constant-feed-unspecified"><a class="reference internal" href="#enum-camerafeed-feedposition"><span class="std std-ref">FeedPosition</span></a> <strong>FEED_UNSPECIFIED</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
@@ -11357,6 +11376,12 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-camerafeed-method-get-position"><a class="reference internal" href="#enum-camerafeed-feedposition"><span class="std std-ref">FeedPosition</span></a> <strong>get_position</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-camerafeed-method-get-position"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the position of camera on the device.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-camerafeed-method-get-texture-tex-id"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_texture_tex_id</strong>(feed_image_type: <a class="reference internal" href="class_cameraserver.html#enum-cameraserver-feedimage"><span class="std std-ref">FeedImage</span></a>) <a class="reference internal" href="#class-camerafeed-method-get-texture-tex-id"><span class="std std-ref">🔗</span></a></p>
+<p>Returns the texture backend ID (usable by some external libraries that need a handle to a texture to write data).</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-camerafeed-method-set-external"><abbr title="No return value.">void</abbr> <strong>set_external</strong>(width: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, height: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-camerafeed-method-set-external"><span class="std std-ref">🔗</span></a></p>
+<p>Sets the feed as external feed provided by another library.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-camerafeed-method-set-format"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>set_format</strong>(index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, parameters: <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>) <a class="reference internal" href="#class-camerafeed-method-set-format"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the feed format parameters for the given index in the <a class="reference internal" href="#class-camerafeed-property-formats"><span class="std std-ref">formats</span></a> array. Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> on success. By default YUYV encoded stream is transformed to FEED_RGB. YUYV encoded stream output format can be changed with <code class="docutils literal notranslate"><span class="pre">parameters</span></code>.output value:</p>
