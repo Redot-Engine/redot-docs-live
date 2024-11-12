@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="BBCode in RichTextLabel" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/ui/bbcode_in_richtextlabel.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>BBCode in RichTextLabel &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/ui/bbcode_in_richtextlabel.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">User interface (UI)</a></li>
       <li class="breadcrumb-item active">BBCode in RichTextLabel</li>
 	</ul>
@@ -11173,9 +11256,9 @@
 
   
   <section id="bbcode-in-richtextlabel">
-<span id="doc-bbcode-in-richtextlabel"></span><h1>BBCode in RichTextLabel<a class="headerlink" href="#bbcode-in-richtextlabel" title="Permalink to this headline">¶</a></h1>
+<span id="doc-bbcode-in-richtextlabel"></span><h1>BBCode in RichTextLabel<a class="headerlink" href="#bbcode-in-richtextlabel" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p><a class="reference internal" href="../../classes/class_label.html#class-label"><span class="std std-ref">Label</span></a> nodes are great for displaying basic text, but they have limitations.
 If you want to change the color of the text, or its alignment, you can only do that to
 the entire label. You can't make a part of the text have another color, or have a part
@@ -11197,7 +11280,7 @@ the class reference. For more information, see <a class="reference internal" hre
 </div>
 </section>
 <section id="using-bbcode">
-<h2>Using BBCode<a class="headerlink" href="#using-bbcode" title="Permalink to this headline">¶</a></h2>
+<h2>Using BBCode<a class="headerlink" href="#using-bbcode" title="Link to this heading"></a></h2>
 <p>By default, <a class="reference internal" href="../../classes/class_richtextlabel.html#class-richtextlabel"><span class="std std-ref">RichTextLabel</span></a> functions like a normal <a class="reference internal" href="../../classes/class_label.html#class-label"><span class="std std-ref">Label</span></a>.
 It has the <a class="reference internal" href="../../classes/class_richtextlabel.html#class-richtextlabel-property-text"><span class="std std-ref">property_text</span></a> property, which you can
 edit to have uniformly formatted text. To be able to use BBCode for rich text formatting,
@@ -11241,7 +11324,7 @@ using:</p>
 </div>
 </section>
 <section id="handling-user-input-safely">
-<span id="doc-bbcode-in-richtextlabel-handling-user-input-safely"></span><h2>Handling user input safely<a class="headerlink" href="#handling-user-input-safely" title="Permalink to this headline">¶</a></h2>
+<span id="doc-bbcode-in-richtextlabel-handling-user-input-safely"></span><h2>Handling user input safely<a class="headerlink" href="#handling-user-input-safely" title="Link to this heading"></a></h2>
 <p>In a scenario where users may freely input text (such as chat in a multiplayer
 game), you should make sure users cannot use arbitrary BBCode tags that will be
 parsed by RichTextLabel. This is to avoid inappropriate use of formatting, which
@@ -11254,7 +11337,7 @@ BBCode will be displayed as text.</p>
 <figure class="align-center" id="id1">
 <img alt="Example of unescaped user input resulting in BBCode injection (2nd line) and escaped user input (3rd line)" src="../../_images/bbcode_in_richtextlabel_escaping_user_input.webp" />
 <figcaption>
-<p><span class="caption-text">Example of unescaped user input resulting in BBCode injection (2nd line) and escaped user input (3rd line)</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Example of unescaped user input resulting in BBCode injection (2nd line) and escaped user input (3rd line)</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The above image was created using the following script:</p>
@@ -11285,7 +11368,7 @@ BBCode will be displayed as text.</p>
 </div>
 </section>
 <section id="stripping-bbcode-tags">
-<h2>Stripping BBCode tags<a class="headerlink" href="#stripping-bbcode-tags" title="Permalink to this headline">¶</a></h2>
+<h2>Stripping BBCode tags<a class="headerlink" href="#stripping-bbcode-tags" title="Link to this heading"></a></h2>
 <p>For certain use cases, it can be desired to remove BBCode tags from the string.
 This is useful when displaying the RichTextLabel's text in another Control that
 does not support BBCode (such as a tooltip):</p>
@@ -11308,7 +11391,7 @@ should be preferred instead.</p>
 </div>
 </section>
 <section id="performance">
-<h2>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h2>
+<h2>Performance<a class="headerlink" href="#performance" title="Link to this heading"></a></h2>
 <p>In most cases, you can use BBCode directly as-is since text formatting is rarely
 a heavy task. However, with particularly large RichTextLabels (such as console
 logs spanning thousands of lines), you may encounter stuttering during gameplay
@@ -11327,7 +11410,7 @@ needed in your project, as threading has some overhead.</p></li>
 </ul>
 </section>
 <section id="using-push-tag-and-pop-functions-instead-of-bbcode">
-<span id="doc-bbcode-in-richtextlabel-use-functions"></span><h2>Using push_[tag]() and pop() functions instead of BBCode<a class="headerlink" href="#using-push-tag-and-pop-functions-instead-of-bbcode" title="Permalink to this headline">¶</a></h2>
+<span id="doc-bbcode-in-richtextlabel-use-functions"></span><h2>Using push_[tag]() and pop() functions instead of BBCode<a class="headerlink" href="#using-push-tag-and-pop-functions-instead-of-bbcode" title="Link to this heading"></a></h2>
 <p>If you don't want to use BBCode for performance reasons, you can use functions
 provided by RichTextLabel to create formatting tags without writing BBCode in
 the text.</p>
@@ -11362,17 +11445,17 @@ functions.</p>
 </div>
 </section>
 <section id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading"></a></h2>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><em>Some</em> of these BBCode tags can be used in tooltips for <code class="docutils literal notranslate"><span class="pre">&#64;export</span></code> script
 variables as well as in the XML source of the class reference. For more
 information, see <a class="reference internal" href="../../contributing/documentation/class_reference_primer.html#doc-class-reference-bbcode"><span class="std std-ref">Class reference BBCode</span></a>.</p>
 </div>
-<table class="colwidths-given wrap-normal docutils align-default" style="width: 100%">
+<table class="wrap-normal docutils align-default" style="width: 100%">
 <colgroup>
-<col style="width: 60%" />
-<col style="width: 40%" />
+<col style="width: 60.0%" />
+<col style="width: 40.0%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Tag</p></td>
@@ -11719,14 +11802,10 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 <p>Options can be skipped for all tags.</p>
 </div>
 <section id="paragraph-options">
-<span id="doc-bbcode-in-richtextlabel-paragraph-options"></span><h3>Paragraph options<a class="headerlink" href="#paragraph-options" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-paragraph-options"></span><h3>Paragraph options<a class="headerlink" href="#paragraph-options" title="Link to this heading"></a></h3>
 <ul>
 <li><p><strong>align</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">left</span></code> (or <code class="docutils literal notranslate"><span class="pre">l</span></code>), <code class="docutils literal notranslate"><span class="pre">center</span></code> (or <code class="docutils literal notranslate"><span class="pre">c</span></code>), <code class="docutils literal notranslate"><span class="pre">right</span></code> (or <code class="docutils literal notranslate"><span class="pre">r</span></code>), <code class="docutils literal notranslate"><span class="pre">fill</span></code> (or <code class="docutils literal notranslate"><span class="pre">f</span></code>)</p></td>
@@ -11740,10 +11819,6 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 </li>
 <li><p><strong>bidi_override</strong>, <strong>st</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 91%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (of <code class="docutils literal notranslate"><span class="pre">d</span></code>), <code class="docutils literal notranslate"><span class="pre">uri</span></code> (or <code class="docutils literal notranslate"><span class="pre">u</span></code>), <code class="docutils literal notranslate"><span class="pre">file</span></code> (or <code class="docutils literal notranslate"><span class="pre">f</span></code>), <code class="docutils literal notranslate"><span class="pre">email</span></code> (or <code class="docutils literal notranslate"><span class="pre">e</span></code>), <code class="docutils literal notranslate"><span class="pre">list</span></code> (or <code class="docutils literal notranslate"><span class="pre">l</span></code>),
@@ -11758,10 +11833,6 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 </li>
 <li><p><strong>justification_flags</strong>, <strong>jst</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Comma-separated list of the following values:
@@ -11777,10 +11848,6 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 </li>
 <li><p><strong>direction</strong>, <strong>dir</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">ltr</span></code> (or <code class="docutils literal notranslate"><span class="pre">l</span></code>), <code class="docutils literal notranslate"><span class="pre">rtl</span></code> (or <code class="docutils literal notranslate"><span class="pre">r</span></code>), <code class="docutils literal notranslate"><span class="pre">auto</span></code> (or <code class="docutils literal notranslate"><span class="pre">a</span></code>)</p></td>
@@ -11794,10 +11861,6 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 </li>
 <li><p><strong>language</strong>, <strong>lang</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>ISO language codes. See <a class="reference internal" href="../i18n/locales.html#doc-locales"><span class="std std-ref">Locale codes</span></a></p></td>
@@ -11811,10 +11874,6 @@ the RichTextLabel node's theme overrides. Otherwise, monospaced text will use th
 </li>
 <li><p><strong>tab_stops</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>List of floating-point numbers, e.g. <code class="docutils literal notranslate"><span class="pre">10.0,30.0</span></code></p></td>
@@ -11833,7 +11892,7 @@ second tab will be at <code class="docutils literal notranslate"><span class="pr
 </ul>
 </section>
 <section id="handling-url-tag-clicks">
-<span id="doc-bbcode-in-richtextlabel-handling-url-tag-clicks"></span><h3>Handling <code class="docutils literal notranslate"><span class="pre">[url]</span></code> tag clicks<a class="headerlink" href="#handling-url-tag-clicks" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-handling-url-tag-clicks"></span><h3>Handling <code class="docutils literal notranslate"><span class="pre">[url]</span></code> tag clicks<a class="headerlink" href="#handling-url-tag-clicks" title="Link to this heading"></a></h3>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">[url]</span></code> tags do nothing when clicked. This is to allow flexible use
 of <code class="docutils literal notranslate"><span class="pre">[url]</span></code> tags rather than limiting them to opening URLs in a web browser.</p>
 <p>To handle clicked <code class="docutils literal notranslate"><span class="pre">[url]</span></code> tags, connect the <code class="docutils literal notranslate"><span class="pre">RichTextLabel</span></code> node's
@@ -11844,7 +11903,7 @@ clicked URLs using the user's default web browser:</p>
 <span class="c1"># the function below using the signal connection dialog.</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_richtextlabel_on_meta_clicked</span><span class="p">(</span><span class="n">meta</span><span class="p">):</span>
 <span class="w">    </span><span class="c1"># `meta` is not guaranteed to be a String, so convert it to a String</span>
-<span class="w">    </span><span class="c1"># to avoid script errors at run-time.</span>
+<span class="w">    </span><span class="c1"># to avoid script errors at runtime.</span>
 <span class="w">    </span><span class="n">OS</span><span class="o">.</span><span class="n">shell_open</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">meta</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -11856,14 +11915,10 @@ For example:</p>
 </div>
 </section>
 <section id="image-options">
-<span id="doc-bbcode-in-richtextlabel-image-options"></span><h3>Image options<a class="headerlink" href="#image-options" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-image-options"></span><h3>Image options<a class="headerlink" href="#image-options" title="Link to this heading"></a></h3>
 <ul>
 <li><p><strong>color</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Color name or color in HEX format</p></td>
@@ -11877,10 +11932,6 @@ For example:</p>
 </li>
 <li><p><strong>height</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Integer number</p></td>
@@ -11894,10 +11945,6 @@ For example:</p>
 </li>
 <li><p><strong>width</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Integer number</p></td>
@@ -11911,10 +11958,6 @@ For example:</p>
 </li>
 <li><p><strong>region</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>x,y,width,height in pixels</p></td>
@@ -11928,10 +11971,6 @@ For example:</p>
 </li>
 <li><p><strong>pad</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
@@ -11945,10 +11984,6 @@ For example:</p>
 </li>
 <li><p><strong>tooltip</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>String</p></td>
@@ -11963,7 +11998,7 @@ For example:</p>
 </ul>
 </section>
 <section id="image-and-table-vertical-alignment">
-<span id="doc-bbcode-in-richtextlabel-image-and-table-alignment"></span><h3>Image and table vertical alignment<a class="headerlink" href="#image-and-table-vertical-alignment" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-image-and-table-alignment"></span><h3>Image and table vertical alignment<a class="headerlink" href="#image-and-table-vertical-alignment" title="Link to this heading"></a></h3>
 <p>When a vertical alignment value is provided with the <code class="docutils literal notranslate"><span class="pre">[img]</span></code> or <code class="docutils literal notranslate"><span class="pre">[table]</span></code> tag
 the image/table will try to align itself against the surrounding text. Alignment is
 performed using a vertical point of the image and a vertical point of the text.
@@ -11989,14 +12024,10 @@ respectively).</p>
 and <code class="docutils literal notranslate"><span class="pre">b</span></code> (<code class="docutils literal notranslate"><span class="pre">bottom</span></code>).</p>
 </section>
 <section id="font-options">
-<span id="doc-bbcode-in-richtextlabel-font-options"></span><h3>Font options<a class="headerlink" href="#font-options" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-font-options"></span><h3>Font options<a class="headerlink" href="#font-options" title="Link to this heading"></a></h3>
 <ul>
 <li><p><strong>name</strong>, <strong>n</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>A valid Font resource path.</p></td>
@@ -12010,10 +12041,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>size</strong>, <strong>s</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Number in pixels.</p></td>
@@ -12027,10 +12054,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>glyph_spacing</strong>, <strong>gl</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Number in pixels.</p></td>
@@ -12044,10 +12067,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>space_spacing</strong>, <strong>sp</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Number in pixels.</p></td>
@@ -12061,10 +12080,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>top_spacing</strong>, <strong>top</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Number in pixels.</p></td>
@@ -12078,10 +12093,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>bottom_spacing</strong>, <strong>bt</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Number in pixels.</p></td>
@@ -12095,10 +12106,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>embolden</strong>, <strong>emb</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Floating-point number.</p></td>
@@ -12112,10 +12119,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>face_index</strong>, <strong>fi</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Integer number.</p></td>
@@ -12129,10 +12132,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>slant</strong>, <strong>sln</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Floating-point number.</p></td>
@@ -12146,10 +12145,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </li>
 <li><p><strong>opentype_variation</strong>, <strong>otv</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Comma-separated list of the OpenType variation tags.</p></td>
@@ -12169,10 +12164,6 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 <ul>
 <li><p><strong>opentype_features</strong>, <strong>otf</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Comma-separated list of the OpenType feature tags.</p></td>
@@ -12191,14 +12182,14 @@ and <code class="docutils literal notranslate"><span class="pre">b</span></code>
 </div>
 </section>
 <section id="named-colors">
-<span id="doc-bbcode-in-richtextlabel-named-colors"></span><h3>Named colors<a class="headerlink" href="#named-colors" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-named-colors"></span><h3>Named colors<a class="headerlink" href="#named-colors" title="Link to this heading"></a></h3>
 <p>For tags that allow specifying a color by name you can use names of the constants from
 the built-in <a class="reference internal" href="../../classes/class_color.html#class-color"><span class="std std-ref">Color</span></a> class. Named classes can be specified in a number of
 styles using different casings: <code class="docutils literal notranslate"><span class="pre">DARK_RED</span></code>, <code class="docutils literal notranslate"><span class="pre">DarkRed</span></code>, and <code class="docutils literal notranslate"><span class="pre">darkred</span></code> will give
 the same exact result.</p>
 </section>
 <section id="hexadecimal-color-codes">
-<span id="doc-bbcode-in-richtextlabel-hex-colors"></span><h3>Hexadecimal color codes<a class="headerlink" href="#hexadecimal-color-codes" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-hex-colors"></span><h3>Hexadecimal color codes<a class="headerlink" href="#hexadecimal-color-codes" title="Link to this heading"></a></h3>
 <p>For opaque RGB colors, any valid 6-digit hexadecimal code is supported, e.g.
 <code class="docutils literal notranslate"><span class="pre">[color=#ffffff]white[/color]</span></code>. Shorthand RGB color codes such as <code class="docutils literal notranslate"><span class="pre">#6f2</span></code>
 (equivalent to <code class="docutils literal notranslate"><span class="pre">#66ff22</span></code>) are also supported.</p>
@@ -12208,14 +12199,10 @@ is the <strong>last</strong> component of the color code, not the first one. Sho
 color codes such as <code class="docutils literal notranslate"><span class="pre">#6f28</span></code> (equivalent to <code class="docutils literal notranslate"><span class="pre">#66ff2288</span></code>) are supported as well.</p>
 </section>
 <section id="cell-options">
-<span id="doc-bbcode-in-richtextlabel-cell-options"></span><h3>Cell options<a class="headerlink" href="#cell-options" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-cell-options"></span><h3>Cell options<a class="headerlink" href="#cell-options" title="Link to this heading"></a></h3>
 <ul>
 <li><p><strong>expand</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Integer number</p></td>
@@ -12230,10 +12217,6 @@ proportionally to other cells and their expansion ratios.</p>
 </li>
 <li><p><strong>border</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Color name or color in HEX format</p></td>
@@ -12247,10 +12230,6 @@ proportionally to other cells and their expansion ratios.</p>
 </li>
 <li><p><strong>bg</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>Color name or color in HEX format</p></td>
@@ -12265,10 +12244,6 @@ you can use <code class="docutils literal notranslate"><span class="pre">bg=odd_
 </li>
 <li><p><strong>padding</strong></p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>Values</cite></p></td>
 <td><p>4 comma-separated floating-point numbers</p></td>
@@ -12283,7 +12258,7 @@ you can use <code class="docutils literal notranslate"><span class="pre">bg=odd_
 </ul>
 </section>
 <section id="unordered-list-bullet">
-<span id="doc-bbcode-in-richtextlabel-unordered-list-bullet"></span><h3>Unordered list bullet<a class="headerlink" href="#unordered-list-bullet" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-unordered-list-bullet"></span><h3>Unordered list bullet<a class="headerlink" href="#unordered-list-bullet" title="Link to this heading"></a></h3>
 <p>By default, the <code class="docutils literal notranslate"><span class="pre">[ul]</span></code> tag uses the <code class="docutils literal notranslate"><span class="pre">U+2022</span></code> &quot;Bullet&quot; Unicode glyph as the
 bullet character. This behavior is similar to web browsers. The bullet character
 can be customized using <code class="docutils literal notranslate"><span class="pre">[ul</span> <span class="pre">bullet={bullet}]</span></code>. If provided, this <code class="docutils literal notranslate"><span class="pre">{bullet}</span></code>
@@ -12294,7 +12269,7 @@ width does not affect the list's formatting.</p>
 for a list of common bullet characters that you can paste directly in the <code class="docutils literal notranslate"><span class="pre">bullet</span></code> parameter.</p>
 </section>
 <section id="ordered-list-types">
-<span id="doc-bbcode-in-richtextlabel-list-types"></span><h3>Ordered list types<a class="headerlink" href="#ordered-list-types" title="Permalink to this headline">¶</a></h3>
+<span id="doc-bbcode-in-richtextlabel-list-types"></span><h3>Ordered list types<a class="headerlink" href="#ordered-list-types" title="Link to this heading"></a></h3>
 <p>Ordered lists can be used to automatically mark items with numbers
 or letters in ascending order. This tag supports the following
 type options:</p>
@@ -12306,7 +12281,7 @@ type options:</p>
 </section>
 </section>
 <section id="text-effects">
-<h2>Text effects<a class="headerlink" href="#text-effects" title="Permalink to this headline">¶</a></h2>
+<h2>Text effects<a class="headerlink" href="#text-effects" title="Link to this heading"></a></h2>
 <p>BBCode can also be used to create different text effects that can optionally be
 animated. Five customizable effects are provided out of the box, and you can
 easily create your own. By default, animated effects will pause
@@ -12323,7 +12298,7 @@ enough margin added around the text by using line breaks above and below the
 line using the effect.</p>
 </div>
 <section id="pulse">
-<h3>Pulse<a class="headerlink" href="#pulse" title="Permalink to this headline">¶</a></h3>
+<h3>Pulse<a class="headerlink" href="#pulse" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_pulse.webp" src="../../_images/bbcode_in_richtextlabel_effect_pulse.webp" />
 <p>Pulse creates an animated pulsing effect that multiplies each character's
 opacity and color. It can be used to bring attention to specific text. Its tag
@@ -12335,7 +12310,7 @@ entirely. <code class="docutils literal notranslate"><span class="pre">ease</spa
 provide in-out easing, which is why the default is <code class="docutils literal notranslate"><span class="pre">-2.0</span></code>.</p>
 </section>
 <section id="wave">
-<h3>Wave<a class="headerlink" href="#wave" title="Permalink to this headline">¶</a></h3>
+<h3>Wave<a class="headerlink" href="#wave" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_wave.webp" src="../../_images/bbcode_in_richtextlabel_effect_wave.webp" />
 <p>Wave makes the text go up and down. Its tag format is
 <code class="docutils literal notranslate"><span class="pre">[wave</span> <span class="pre">amp=50.0</span> <span class="pre">freq=5.0</span> <span class="pre">connected=1]{text}[/wave]</span></code>.</p>
@@ -12348,7 +12323,7 @@ joined by ligatures. This can work around certain rendering issues with font
 ligatures.</p>
 </section>
 <section id="tornado">
-<h3>Tornado<a class="headerlink" href="#tornado" title="Permalink to this headline">¶</a></h3>
+<h3>Tornado<a class="headerlink" href="#tornado" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_tornado.webp" src="../../_images/bbcode_in_richtextlabel_effect_tornado.webp" />
 <p>Tornado makes the text move around in a circle. Its tag format is
 <code class="docutils literal notranslate"><span class="pre">[tornado</span> <span class="pre">radius=10.0</span> <span class="pre">freq=1.0</span> <span class="pre">connected=1]{text}[/tornado]</span></code>.</p>
@@ -12361,7 +12336,7 @@ joined by ligatures. This can work around certain rendering issues with font
 ligatures.</p>
 </section>
 <section id="shake">
-<h3>Shake<a class="headerlink" href="#shake" title="Permalink to this headline">¶</a></h3>
+<h3>Shake<a class="headerlink" href="#shake" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_shake.webp" src="../../_images/bbcode_in_richtextlabel_effect_shake.webp" />
 <p>Shake makes the text shake. Its tag format is
 <code class="docutils literal notranslate"><span class="pre">[shake</span> <span class="pre">rate=20.0</span> <span class="pre">level=5</span> <span class="pre">connected=1]{text}[/shake]</span></code>.</p>
@@ -12372,7 +12347,7 @@ individually even if they are joined by ligatures. This can work around certain
 rendering issues with font ligatures.</p>
 </section>
 <section id="fade">
-<h3>Fade<a class="headerlink" href="#fade" title="Permalink to this headline">¶</a></h3>
+<h3>Fade<a class="headerlink" href="#fade" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_fade.webp" src="../../_images/bbcode_in_richtextlabel_effect_fade.webp" />
 <p>Fade creates a static fade effect that multiplies each character's opacity.
 Its tag format is <code class="docutils literal notranslate"><span class="pre">[fade</span> <span class="pre">start=4</span> <span class="pre">length=14]{text}[/fade]</span></code>.</p>
@@ -12381,7 +12356,7 @@ command is inserted, <code class="docutils literal notranslate"><span class="pre
 out take place.</p>
 </section>
 <section id="rainbow">
-<h3>Rainbow<a class="headerlink" href="#rainbow" title="Permalink to this headline">¶</a></h3>
+<h3>Rainbow<a class="headerlink" href="#rainbow" title="Link to this heading"></a></h3>
 <img alt="../../_images/bbcode_in_richtextlabel_effect_rainbow.webp" src="../../_images/bbcode_in_richtextlabel_effect_rainbow.webp" />
 <p>Rainbow gives the text a rainbow color that changes over time. Its tag format is
 <code class="docutils literal notranslate"><span class="pre">[rainbow</span> <span class="pre">freq=1.0</span> <span class="pre">sat=0.8</span> <span class="pre">val=0.8]{text}[/rainbow]</span></code>.</p>
@@ -12396,7 +12371,7 @@ looks, as modulation multiplies its final colors.</p>
 </section>
 </section>
 <section id="custom-bbcode-tags-and-text-effects">
-<h2>Custom BBCode tags and text effects<a class="headerlink" href="#custom-bbcode-tags-and-text-effects" title="Permalink to this headline">¶</a></h2>
+<h2>Custom BBCode tags and text effects<a class="headerlink" href="#custom-bbcode-tags-and-text-effects" title="Link to this heading"></a></h2>
 <p>You can extend the <a class="reference internal" href="../../classes/class_richtexteffect.html#class-richtexteffect"><span class="std std-ref">RichTextEffect</span></a> resource type to create your own custom
 BBCode tags. Create a new script file that extends the <a class="reference internal" href="../../classes/class_richtexteffect.html#class-richtexteffect"><span class="std std-ref">RichTextEffect</span></a> resource type
 and give the script a <code class="docutils literal notranslate"><span class="pre">class_name</span></code> so that the effect can be selected in the inspector.
@@ -12408,7 +12383,7 @@ the Inspector by adding it to the <strong>Markup &gt; Custom Effects</strong> ar
 <figure class="align-center" id="id2">
 <img alt="Selecting a custom RichTextEffect after saving a script that extends RichTextEffect with a ``class_name``" src="../../_images/bbcode_in_richtextlabel_selecting_custom_richtexteffect.webp" />
 <figcaption>
-<p><span class="caption-text">Selecting a custom RichTextEffect after saving a script that extends RichTextEffect with a <code class="docutils literal notranslate"><span class="pre">class_name</span></code></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Selecting a custom RichTextEffect after saving a script that extends RichTextEffect with a <code class="docutils literal notranslate"><span class="pre">class_name</span></code></span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition warning">
@@ -12422,7 +12397,7 @@ Optionally, you can also provide a custom BBCode identifier simply by adding a m
 name <code class="docutils literal notranslate"><span class="pre">bbcode</span></code>. The code will check the <code class="docutils literal notranslate"><span class="pre">bbcode</span></code> property automatically or will
 use the name of the file to determine what the BBCode tag should be.</p>
 <section id="process-custom-fx">
-<h3><code class="docutils literal notranslate"><span class="pre">_process_custom_fx</span></code><a class="headerlink" href="#process-custom-fx" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">_process_custom_fx</span></code><a class="headerlink" href="#process-custom-fx" title="Link to this heading"></a></h3>
 <p>This is where the logic of each effect takes place and is called once per glyph
 during the draw phase of text rendering. This passes in a <a class="reference internal" href="../../classes/class_charfxtransform.html#class-charfxtransform"><span class="std std-ref">CharFXTransform</span></a>
 object, which holds a few variables to control how the associated glyph is rendered:</p>
@@ -12452,7 +12427,7 @@ the user fixes whatever error cropped up in their custom effect logic.</p>
 <p>Here are some examples of custom effects:</p>
 </section>
 <section id="ghost">
-<h3>Ghost<a class="headerlink" href="#ghost" title="Permalink to this headline">¶</a></h3>
+<h3>Ghost<a class="headerlink" href="#ghost" title="Link to this heading"></a></h3>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@tool</span>
 <span class="k">extends</span><span class="w"> </span><span class="n">RichTextEffect</span>
 <span class="k">class_name</span><span class="w"> </span><span class="n">RichTextGhost</span>
@@ -12474,7 +12449,7 @@ the user fixes whatever error cropped up in their custom effect logic.</p>
 </div>
 </section>
 <section id="matrix">
-<h3>Matrix<a class="headerlink" href="#matrix" title="Permalink to this headline">¶</a></h3>
+<h3>Matrix<a class="headerlink" href="#matrix" title="Link to this heading"></a></h3>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@tool</span>
 <span class="k">extends</span><span class="w"> </span><span class="n">RichTextEffect</span>
 <span class="k">class_name</span><span class="w"> </span><span class="n">RichTextMatrix</span>

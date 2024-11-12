@@ -37,7 +37,7 @@ is a great starting point.
 
 In case you have trouble with one of the tutorials or your project,
 you can find help on the various `Community channels <https://redotengine.org/community/>`_,
-especially the Redot `Discord <https://discord.gg/redot>`_ community.
+especially the Redot `Discord <https://discord.gg/godotengine>`_ community.
 
 About Redot Engine
 ------------------

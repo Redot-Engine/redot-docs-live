@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="3D lights and shadows" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/3d/lights_and_shadows.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>3D lights and shadows &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/3d/lights_and_shadows.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/3d/lights_and_shadows.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/3d/lights_and_shadows.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">3D</a></li>
       <li class="breadcrumb-item active">3D lights and shadows</li>
 	</ul>
@@ -11173,9 +11256,9 @@
 
   
   <section id="d-lights-and-shadows">
-<span id="doc-lights-and-shadows"></span><h1>3D lights and shadows<a class="headerlink" href="#d-lights-and-shadows" title="Permalink to this headline">¶</a></h1>
+<span id="doc-lights-and-shadows"></span><h1>3D lights and shadows<a class="headerlink" href="#d-lights-and-shadows" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>Light sources emit light that mixes with the materials and produces a visible
 result. Light can come from several types of sources in a scene:</p>
 <ul class="simple">
@@ -11196,7 +11279,7 @@ in the <a class="reference internal" href="standard_material_3d.html#doc-standar
 </div>
 </section>
 <section id="light-nodes">
-<h2>Light nodes<a class="headerlink" href="#light-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>Light nodes<a class="headerlink" href="#light-nodes" title="Link to this heading"></a></h2>
 <p>There are three types of light nodes: <a class="reference internal" href="../../classes/class_directionallight3d.html#class-directionallight3d"><span class="std std-ref">DirectionalLight3D</span></a>,
 <a class="reference internal" href="../../classes/class_omnilight3d.html#class-omnilight3d"><span class="std std-ref">OmniLight3D</span></a> and <a class="reference internal" href="../../classes/class_spotlight3d.html#class-spotlight3d"><span class="std std-ref">SpotLight3D</span></a>. Let's take a look at the common
 parameters for lights:</p>
@@ -11222,25 +11305,27 @@ units to configure your lights' intensity and color temperature.</p>
 </div>
 </section>
 <section id="light-number-limits">
-<h2>Light number limits<a class="headerlink" href="#light-number-limits" title="Permalink to this headline">¶</a></h2>
+<h2>Light number limits<a class="headerlink" href="#light-number-limits" title="Link to this heading"></a></h2>
 <p>When using the Forward+ renderer, Redot uses a <em>clustering</em> approach for
 real-time lighting. As many lights as desired can be added (as long as
 performance allows). However, there's still a default limit of 512 <em>clustered
 elements</em> that can be present in the current camera view. A clustered element is
 an omni light, a spot light, a <a class="reference internal" href="using_decals.html#doc-using-decals"><span class="std std-ref">decal</span></a> or a
-<a class="reference internal" href="global_illumination/reflection_probes.html#doc-reflection-probes"><span class="std std-ref">reflection probe</span></a>. This limit can be increased by
-adjusting the <strong>Rendering &gt; Limits &gt; Cluster Builder &gt; Max Clustered Elements</strong>
-advanced project setting.</p>
+<a class="reference internal" href="global_illumination/reflection_probes.html#doc-reflection-probes"><span class="std std-ref">reflection probe</span></a>. This limit can be increased by adjusting
+<a class="reference internal" href="../../classes/class_projectsettings.html#class-projectsettings-property-rendering-limits-cluster-builder-max-clustered-elements"><span class="std std-ref">Max Clustered Elements</span></a>
+in <strong>Project Settings &gt; Rendering &gt; Limits &gt; Cluster Builder</strong>.</p>
 <p>When using the Forward Mobile renderer, there is a limitation of 8 OmniLights +
 8 SpotLights per mesh resource. There is also a limit of 256 OmniLights + 256
 SpotLights that can be rendered in the current camera view. These limits
 currently cannot be changed.</p>
 <p>When using the Compatibility renderer, up to 8 OmniLights + 8 SpotLights can be
 rendered per mesh resource. This limit can be increased in the advanced Project
-Settings by adjusting <strong>Rendering &gt; Limits &gt; OpenGL &gt; Max Renderable Lights</strong>
-and/or <strong>Rendering &gt; Limits &gt; OpenGL &gt; Max Lights Per Object</strong> at the cost of
-performance and longer shader compilation times. The limit can also be decreased
-to reduce shader compilation times and improve performance slightly.</p>
+Settings by adjusting
+<a class="reference internal" href="../../classes/class_projectsettings.html#class-projectsettings-property-rendering-limits-opengl-max-renderable-elements"><span class="std std-ref">Max Renderable Elements</span></a>
+and/or <a class="reference internal" href="../../classes/class_projectsettings.html#class-projectsettings-property-rendering-limits-opengl-max-lights-per-object"><span class="std std-ref">Max Lights per Object</span></a>
+in <strong>Rendering &gt; Limits &gt; OpenGL</strong>, at the cost of performance and longer shader
+compilation times. The limit can also be decreased to reduce shader compilation
+times and improve performance slightly.</p>
 <p>With all rendering methods, up to 8 DirectionalLights can be visible at a time.
 However, each additional DirectionalLight with shadows enabled will reduce the
 effective shadow resolution of each DirectionalLight. This is because
@@ -11258,7 +11343,7 @@ them much faster to render. You can also use emissive materials with any
 as a replacement for light nodes that emit light over a large area.</p>
 </section>
 <section id="shadow-mapping">
-<h2>Shadow mapping<a class="headerlink" href="#shadow-mapping" title="Permalink to this headline">¶</a></h2>
+<h2>Shadow mapping<a class="headerlink" href="#shadow-mapping" title="Link to this heading"></a></h2>
 <p>Lights can optionally cast shadows. This gives them greater realism (light does
 not reach occluded areas), but it can incur a bigger performance cost.
 There is a list of generic shadow parameters, each also has a specific function:</p>
@@ -11287,7 +11372,7 @@ See also <a class="reference internal" href="#doc-lights-and-shadows-shadow-filt
 </ul>
 <img alt="../../_images/lights_and_shadows_blur.webp" src="../../_images/lights_and_shadows_blur.webp" />
 <section id="tweaking-shadow-bias">
-<h3>Tweaking shadow bias<a class="headerlink" href="#tweaking-shadow-bias" title="Permalink to this headline">¶</a></h3>
+<h3>Tweaking shadow bias<a class="headerlink" href="#tweaking-shadow-bias" title="Link to this heading"></a></h3>
 <p>Below is an image of what tweaking bias looks like. Default values work for most
 cases, but in general, it depends on the size and complexity of geometry.</p>
 <p>If the <strong>Shadow Bias</strong> or <strong>Shadow Normal Bias</strong> is set too low for a given light,
@@ -11321,7 +11406,7 @@ appearance to an unshadowed light, you may need to adjust the light's energy set
 </section>
 </section>
 <section id="directional-light">
-<h2>Directional light<a class="headerlink" href="#directional-light" title="Permalink to this headline">¶</a></h2>
+<h2>Directional light<a class="headerlink" href="#directional-light" title="Link to this heading"></a></h2>
 <p>This is the most common type of light and represents a light source very far
 away (such as the sun). It is also the cheapest light to compute and should be
 used whenever possible (although it's not the cheapest shadow-map to compute,
@@ -11344,7 +11429,7 @@ approximately <code class="docutils literal notranslate"><span class="pre">0.5</
 recommendations in <a class="reference internal" href="#doc-lights-and-shadows-pcss-recommendations"><span class="std std-ref">PCSS recommendations</span></a> if setting
 this value above <code class="docutils literal notranslate"><span class="pre">0.0</span></code> on lights with shadows enabled.</p>
 <section id="directional-shadow-mapping">
-<h3>Directional shadow mapping<a class="headerlink" href="#directional-shadow-mapping" title="Permalink to this headline">¶</a></h3>
+<h3>Directional shadow mapping<a class="headerlink" href="#directional-shadow-mapping" title="Link to this heading"></a></h3>
 <p>To compute shadow maps, the scene is rendered (only depth) from an orthogonal
 point of view that covers the whole scene (or up to the max distance). There is,
 however, a problem with this approach because objects closer to the camera
@@ -11392,7 +11477,7 @@ issues.</p>
 </section>
 </section>
 <section id="omni-light">
-<h2>Omni light<a class="headerlink" href="#omni-light" title="Permalink to this headline">¶</a></h2>
+<h2>Omni light<a class="headerlink" href="#omni-light" title="Link to this heading"></a></h2>
 <p>Omni light is a point source that emits light spherically in all directions up to a given
 radius.</p>
 <img alt="../../_images/light_omni.png" src="../../_images/light_omni.png" />
@@ -11411,7 +11496,7 @@ expensive, so check the recommendations in
 <code class="docutils literal notranslate"><span class="pre">0.0</span></code> on lights with shadows enabled.</p>
 <img alt="../../_images/lights_and_shadows_pcss.webp" src="../../_images/lights_and_shadows_pcss.webp" />
 <section id="omni-shadow-mapping">
-<h3>Omni shadow mapping<a class="headerlink" href="#omni-shadow-mapping" title="Permalink to this headline">¶</a></h3>
+<h3>Omni shadow mapping<a class="headerlink" href="#omni-shadow-mapping" title="Link to this heading"></a></h3>
 <p>Omni light shadow mapping is relatively straightforward. The main issue that
 needs to be considered is the algorithm used to render it.</p>
 <p>Omni Shadows can be rendered as either <strong>Dual Paraboloid</strong> or <strong>Cube</strong> mapped.
@@ -11442,7 +11527,7 @@ to convert them to a single panorama image.</p>
 </section>
 </section>
 <section id="spot-light">
-<h2>Spot light<a class="headerlink" href="#spot-light" title="Permalink to this headline">¶</a></h2>
+<h2>Spot light<a class="headerlink" href="#spot-light" title="Link to this heading"></a></h2>
 <p>Spot lights are similar to omni lights, except they emit light only into a cone
 (or &quot;cutoff&quot;). They are useful to simulate flashlights,
 car lights, reflectors, spots, etc. This type of light is also attenuated towards the
@@ -11454,7 +11539,7 @@ and add two extra parameters:</p>
 <li><p><strong>Angle Attenuation:</strong> The cone attenuation, which helps soften the cone borders.</p></li>
 </ul>
 <section id="spot-shadow-mapping">
-<h3>Spot shadow mapping<a class="headerlink" href="#spot-shadow-mapping" title="Permalink to this headline">¶</a></h3>
+<h3>Spot shadow mapping<a class="headerlink" href="#spot-shadow-mapping" title="Link to this heading"></a></h3>
 <p>Spots feature the same parameters as omni lights for shadow mapping. Rendering
 spot shadow maps is significantly faster compared to omni lights, as only one
 shadow texture needs to be rendered (instead of rendering 6 faces, or 2 in dual
@@ -11480,7 +11565,7 @@ instead.</p>
 </section>
 </section>
 <section id="shadow-atlas">
-<span id="doc-lights-and-shadows-shadow-atlas"></span><h2>Shadow atlas<a class="headerlink" href="#shadow-atlas" title="Permalink to this headline">¶</a></h2>
+<span id="doc-lights-and-shadows-shadow-atlas"></span><h2>Shadow atlas<a class="headerlink" href="#shadow-atlas" title="Link to this heading"></a></h2>
 <p>Unlike Directional lights, which have their own shadow texture, omni and spot
 lights are assigned to slots of a shadow atlas. This atlas can be configured in
 the advanced Project Settings (<strong>Rendering &gt; Lights And Shadows &gt; Positional Shadow</strong>).</p>
@@ -11521,15 +11606,15 @@ set all quadrants to have the same subdivision so that all lights have shadows
 of similar quality level.</p>
 </section>
 <section id="balancing-performance-and-quality">
-<span id="doc-lights-and-shadows-balancing-performance-and-quality"></span><h2>Balancing performance and quality<a class="headerlink" href="#balancing-performance-and-quality" title="Permalink to this headline">¶</a></h2>
+<span id="doc-lights-and-shadows-balancing-performance-and-quality"></span><h2>Balancing performance and quality<a class="headerlink" href="#balancing-performance-and-quality" title="Link to this heading"></a></h2>
 <p>Shadow rendering is a critical topic in 3D rendering performance. It's important
 to make the right choices here to avoid creating bottlenecks.</p>
-<p>Directional shadow quality settings can be changed at run-time by calling the
+<p>Directional shadow quality settings can be changed at runtime by calling the
 appropriate <a class="reference internal" href="../../classes/class_renderingserver.html#class-renderingserver"><span class="std std-ref">RenderingServer</span></a> methods.</p>
-<p>Positional (omni/spot) shadow quality settings can be changed at run-time on the
+<p>Positional (omni/spot) shadow quality settings can be changed at runtime on the
 root <a class="reference internal" href="../../classes/class_viewport.html#class-viewport"><span class="std std-ref">Viewport</span></a>.</p>
 <section id="shadow-map-size">
-<h3>Shadow map size<a class="headerlink" href="#shadow-map-size" title="Permalink to this headline">¶</a></h3>
+<h3>Shadow map size<a class="headerlink" href="#shadow-map-size" title="Link to this heading"></a></h3>
 <p>High shadow resolutions result in sharper shadows, but at a significant
 performance cost. It should also be noted that <em>sharper shadows are not always
 more realistic</em>. In most cases, this should be kept at its default value of
@@ -11540,7 +11625,7 @@ you can counteract this by adjusting the
 fewer shadows. This will allow each shadow to be rendered at a higher resolution.</p>
 </section>
 <section id="shadow-filter-mode">
-<span id="doc-lights-and-shadows-shadow-filter-mode"></span><h3>Shadow filter mode<a class="headerlink" href="#shadow-filter-mode" title="Permalink to this headline">¶</a></h3>
+<span id="doc-lights-and-shadows-shadow-filter-mode"></span><h3>Shadow filter mode<a class="headerlink" href="#shadow-filter-mode" title="Link to this heading"></a></h3>
 <p>Several shadow map quality settings can be chosen here. The default <strong>Soft Low</strong>
 is a good balance between performance and quality for scenes with detailed
 textures, as the texture detail will help make the dithering pattern less noticeable.</p>
@@ -11556,7 +11641,7 @@ make use of the increased sample count.</p>
 <img alt="../../_images/lights_and_shadows_filter_quality.webp" src="../../_images/lights_and_shadows_filter_quality.webp" />
 </section>
 <section id="bits-versus-32-bit">
-<h3>16-bits versus 32-bit<a class="headerlink" href="#bits-versus-32-bit" title="Permalink to this headline">¶</a></h3>
+<h3>16-bits versus 32-bit<a class="headerlink" href="#bits-versus-32-bit" title="Link to this heading"></a></h3>
 <p>By default, Redot uses 16-bit depth textures for shadow map rendering. This is
 recommended in most cases as it performs better without a noticeable difference
 in quality.</p>
@@ -11566,7 +11651,7 @@ enabled. However, the difference is often barely visible, yet this can have a
 significant performance cost.</p>
 </section>
 <section id="light-shadow-distance-fade">
-<h3>Light/shadow distance fade<a class="headerlink" href="#light-shadow-distance-fade" title="Permalink to this headline">¶</a></h3>
+<h3>Light/shadow distance fade<a class="headerlink" href="#light-shadow-distance-fade" title="Link to this heading"></a></h3>
 <p>OmniLight3D and SpotLight3D offer several properties to hide distant lights.
 This can improve performance significantly in large scenes with dozens of lights
 or more.</p>
@@ -11587,7 +11672,7 @@ which is more suited when the camera moves fast.</p></li>
 </ul>
 </section>
 <section id="pcss-recommendations">
-<span id="doc-lights-and-shadows-pcss-recommendations"></span><h3>PCSS recommendations<a class="headerlink" href="#pcss-recommendations" title="Permalink to this headline">¶</a></h3>
+<span id="doc-lights-and-shadows-pcss-recommendations"></span><h3>PCSS recommendations<a class="headerlink" href="#pcss-recommendations" title="Link to this heading"></a></h3>
 <p>Percentage-closer soft shadows (PCSS) provide a more realistic shadow mapping
 appearance, with the penumbra size varying depending on the distance between the
 caster and the surface receiving the shadow. This comes at a high performance
@@ -11606,7 +11691,7 @@ lights, this can be done by setting the OmniLight3D or SpotLight3D's
 </ul>
 </section>
 <section id="projector-filter-mode">
-<h3>Projector filter mode<a class="headerlink" href="#projector-filter-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Projector filter mode<a class="headerlink" href="#projector-filter-mode" title="Link to this heading"></a></h3>
 <p>The way projectors are rendered also has an impact on performance. The
 <strong>Rendering &gt; Textures &gt; Light Projectors &gt; Filter</strong> advanced project setting
 lets you control how projector textures should be filtered. <strong>Nearest/Linear</strong> do

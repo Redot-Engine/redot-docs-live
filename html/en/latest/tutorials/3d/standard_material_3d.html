@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Standard Material 3D and ORM Material 3D" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/3d/standard_material_3d.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Standard Material 3D and ORM Material 3D &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/3d/standard_material_3d.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/3d/standard_material_3d.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/3d/standard_material_3d.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">3D</a></li>
       <li class="breadcrumb-item active">Standard Material 3D and ORM Material 3D</li>
 	</ul>
@@ -11173,9 +11256,9 @@
 
   
   <section id="standard-material-3d-and-orm-material-3d">
-<span id="doc-standard-material-3d"></span><h1>Standard Material 3D and ORM Material 3D<a class="headerlink" href="#standard-material-3d-and-orm-material-3d" title="Permalink to this headline">¶</a></h1>
+<span id="doc-standard-material-3d"></span><h1>Standard Material 3D and ORM Material 3D<a class="headerlink" href="#standard-material-3d-and-orm-material-3d" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">StandardMaterial3D</span></code> and <code class="docutils literal notranslate"><span class="pre">ORMMaterial3D</span></code> (Occlusion, Roughness, Metallic)
 are default 3D materials that aim to provide most of the features artists look
 for in a material, without the need for writing shader code. However, they can
@@ -11196,7 +11279,7 @@ the mesh.</p>
 the mesh. As an example, this can be used to put a transparent shield effect on a mesh.</p>
 </section>
 <section id="basematerial-3d-settings">
-<h2>BaseMaterial 3D settings<a class="headerlink" href="#basematerial-3d-settings" title="Permalink to this headline">¶</a></h2>
+<h2>BaseMaterial 3D settings<a class="headerlink" href="#basematerial-3d-settings" title="Link to this heading"></a></h2>
 <p>StandardMaterial3D has many settings that determine the look of a material. All of these are
 under the BaseMaterial3D category</p>
 <img alt="../../_images/spatial_material1.png" src="../../_images/spatial_material1.png" />
@@ -11207,7 +11290,7 @@ and Armor Paint will give you the option to export in this format, for these two
 with the export preset for unreal engine, which also uses ORM textures.</p>
 </section>
 <section id="transparency">
-<h2>Transparency<a class="headerlink" href="#transparency" title="Permalink to this headline">¶</a></h2>
+<h2>Transparency<a class="headerlink" href="#transparency" title="Link to this heading"></a></h2>
 <p>By default, materials in Redot are opaque. This is fast to render, but it means
 the material can't be seen through even if you use a transparent texture in the
 <strong>Albedo &gt; Texture</strong> property (or set <strong>Albedo &gt; Color</strong> to a transparent color).</p>
@@ -11284,7 +11367,7 @@ as a fallback regardless of material roughness.</p></li>
 another transparency mode is more suited for your needs.</p>
 </div>
 <section id="alpha-antialiasing">
-<span id="doc-standard-material-3d-alpha-antialiasing"></span><h3>Alpha Antialiasing<a class="headerlink" href="#alpha-antialiasing" title="Permalink to this headline">¶</a></h3>
+<span id="doc-standard-material-3d-alpha-antialiasing"></span><h3>Alpha Antialiasing<a class="headerlink" href="#alpha-antialiasing" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This property is only visible when the transparency mode is
@@ -11332,7 +11415,7 @@ help a little).</p>
 </div>
 </section>
 <section id="blend-mode">
-<h3>Blend Mode<a class="headerlink" href="#blend-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Blend Mode<a class="headerlink" href="#blend-mode" title="Link to this heading"></a></h3>
 <p>Controls the blend mode for the material. Keep in mind that any mode
 other than <em>Mix</em> forces the object to go through the transparent pipeline.</p>
 <ul class="simple">
@@ -11347,7 +11430,7 @@ screen.</p></li>
 <img alt="../../_images/spatial_material8.png" src="../../_images/spatial_material8.png" />
 </section>
 <section id="cull-mode">
-<h3>Cull Mode<a class="headerlink" href="#cull-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Cull Mode<a class="headerlink" href="#cull-mode" title="Link to this heading"></a></h3>
 <p>Determines which side of the object is not drawn when backfaces are rendered:</p>
 <ul class="simple">
 <li><p><strong>Back:</strong> The back of the object is culled when not visible (default).</p></li>
@@ -11365,7 +11448,7 @@ Blender's Materials tab, then export the scene to glTF again.</p>
 </div>
 </section>
 <section id="depth-draw-mode">
-<h3>Depth Draw Mode<a class="headerlink" href="#depth-draw-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Depth Draw Mode<a class="headerlink" href="#depth-draw-mode" title="Link to this heading"></a></h3>
 <p>Specifies when depth rendering must take place.</p>
 <ul class="simple">
 <li><p><strong>Opaque Only (default):</strong> Depth is only drawn for opaque objects.</p></li>
@@ -11379,7 +11462,7 @@ Use this option with transparent grass or tree foliage.</p></li>
 <img alt="../../_images/material_depth_draw.png" src="../../_images/material_depth_draw.png" />
 </section>
 <section id="no-depth-test">
-<h3>No Depth Test<a class="headerlink" href="#no-depth-test" title="Permalink to this headline">¶</a></h3>
+<h3>No Depth Test<a class="headerlink" href="#no-depth-test" title="Link to this heading"></a></h3>
 <p>In order for close objects to appear over far away objects, depth testing
 is performed. Disabling it has the result of objects appearing over
 (or under) everything else.</p>
@@ -11390,9 +11473,9 @@ and works very well with the <em>Render Priority</em> property of Material
 </section>
 </section>
 <section id="shading">
-<h2>Shading<a class="headerlink" href="#shading" title="Permalink to this headline">¶</a></h2>
+<h2>Shading<a class="headerlink" href="#shading" title="Link to this heading"></a></h2>
 <section id="shading-mode">
-<h3>Shading mode<a class="headerlink" href="#shading-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Shading mode<a class="headerlink" href="#shading-mode" title="Link to this heading"></a></h3>
 <p>Redot has a more or less uniform cost per pixel thanks to the depth pre-pass.
 All lighting calculations are made by running the lighting shader on every
 pixel.</p>
@@ -11415,7 +11498,7 @@ Redot release.</p>
 </div>
 </section>
 <section id="diffuse-mode">
-<h3>Diffuse Mode<a class="headerlink" href="#diffuse-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Diffuse Mode<a class="headerlink" href="#diffuse-mode" title="Link to this heading"></a></h3>
 <p>Specifies the algorithm used by diffuse scattering of light when hitting
 the object. The default is <strong>Burley</strong>. Other modes are also available:</p>
 <ul class="simple">
@@ -11432,7 +11515,7 @@ to achieve a better effect.</p></li>
 <img alt="../../_images/spatial_material6.webp" src="../../_images/spatial_material6.webp" />
 </section>
 <section id="specular-mode">
-<h3>Specular Mode<a class="headerlink" href="#specular-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Specular Mode<a class="headerlink" href="#specular-mode" title="Link to this heading"></a></h3>
 <p>Specifies how the specular blob will be rendered. The specular blob
 represents the shape of a light source reflected in the object.</p>
 <ul class="simple">
@@ -11443,32 +11526,32 @@ represents the shape of a light source reflected in the object.</p>
 <img alt="../../_images/spatial_material7.webp" src="../../_images/spatial_material7.webp" />
 </section>
 <section id="disable-ambient-light">
-<h3>Disable Ambient Light<a class="headerlink" href="#disable-ambient-light" title="Permalink to this headline">¶</a></h3>
+<h3>Disable Ambient Light<a class="headerlink" href="#disable-ambient-light" title="Link to this heading"></a></h3>
 <p>Makes the object not receive any kind of ambient lighting that would
 otherwise light it.</p>
 </section>
 <section id="disable-fog">
-<h3>Disable Fog<a class="headerlink" href="#disable-fog" title="Permalink to this headline">¶</a></h3>
+<h3>Disable Fog<a class="headerlink" href="#disable-fog" title="Link to this heading"></a></h3>
 <p>Makes the object unaffected by depth-based or volumetric fog. This is useful for particles or other additively blended materials that would otherwise show the shape of the mesh (even in places where it would be invisible without the fog).</p>
 </section>
 </section>
 <section id="vertex-color">
-<h2>Vertex Color<a class="headerlink" href="#vertex-color" title="Permalink to this headline">¶</a></h2>
+<h2>Vertex Color<a class="headerlink" href="#vertex-color" title="Link to this heading"></a></h2>
 <p>This setting allows choosing what is done by default to vertex colors that come
 from your 3D modeling application. By default, they are ignored.</p>
 <img alt="../../_images/spatial_material4.png" src="../../_images/spatial_material4.png" />
 <section id="use-as-albedo">
-<h3>Use as Albedo<a class="headerlink" href="#use-as-albedo" title="Permalink to this headline">¶</a></h3>
+<h3>Use as Albedo<a class="headerlink" href="#use-as-albedo" title="Link to this heading"></a></h3>
 <p>Choosing this option means vertex color is used as albedo color.</p>
 </section>
 <section id="is-srgb">
-<h3>Is sRGB<a class="headerlink" href="#is-srgb" title="Permalink to this headline">¶</a></h3>
+<h3>Is sRGB<a class="headerlink" href="#is-srgb" title="Link to this heading"></a></h3>
 <p>Most 3D modeling software will likely export vertex colors as sRGB, so toggling
 this option on will help them look correct.</p>
 </section>
 </section>
 <section id="albedo">
-<h2>Albedo<a class="headerlink" href="#albedo" title="Permalink to this headline">¶</a></h2>
+<h2>Albedo<a class="headerlink" href="#albedo" title="Link to this heading"></a></h2>
 <p><em>Albedo</em> is the base color for the material, on which all the other settings
 operate. When set to <em>Unshaded</em>, this is the only color that is visible. In
 previous versions of Redot, this channel was named <em>Diffuse</em>. The change
@@ -11480,7 +11563,7 @@ object transparency. If you use a color or texture with <em>alpha channel</em>,
 make sure to either enable transparency or <em>alpha scissoring</em> for it to work.</p>
 </section>
 <section id="metallic">
-<h2>Metallic<a class="headerlink" href="#metallic" title="Permalink to this headline">¶</a></h2>
+<h2>Metallic<a class="headerlink" href="#metallic" title="Link to this heading"></a></h2>
 <p>Redot uses a metallic model over competing models due to its simplicity.
 This parameter defines how reflective the material is. The more reflective, the
 less diffuse/ambient light affects the material and the more light is reflected.
@@ -11493,7 +11576,7 @@ material completely unreflective, just like in real life.</p>
 <img alt="../../_images/spatial_material13.png" src="../../_images/spatial_material13.png" />
 </section>
 <section id="roughness">
-<h2>Roughness<a class="headerlink" href="#roughness" title="Permalink to this headline">¶</a></h2>
+<h2>Roughness<a class="headerlink" href="#roughness" title="Link to this heading"></a></h2>
 <p><em>Roughness</em> affects the way reflection happens. A value of <code class="docutils literal notranslate"><span class="pre">0</span></code> makes it a
 perfect mirror while a value of <code class="docutils literal notranslate"><span class="pre">1</span></code> completely blurs the reflection (simulating
 natural microsurfacing). Most common types of materials can be achieved with
@@ -11501,7 +11584,7 @@ the right combination of <em>Metallic</em> and <em>Roughness</em>.</p>
 <img alt="../../_images/spatial_material14.png" src="../../_images/spatial_material14.png" />
 </section>
 <section id="emission">
-<h2>Emission<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h2>
+<h2>Emission<a class="headerlink" href="#emission" title="Link to this heading"></a></h2>
 <p><em>Emission</em> specifies how much light is emitted by the material (keep in mind this
 does not include light surrounding geometry unless <a class="reference internal" href="global_illumination/using_voxel_gi.html#doc-using-voxel-gi"><span class="std std-ref">VoxelGI</span></a>
 or <a class="reference internal" href="global_illumination/using_sdfgi.html#doc-using-sdfgi"><span class="std std-ref">SDFGI</span></a> are used). This value is added to the resulting
@@ -11509,7 +11592,7 @@ final image and is not affected by other lighting in the scene.</p>
 <img alt="../../_images/spatial_material15.png" src="../../_images/spatial_material15.png" />
 </section>
 <section id="normal-map">
-<h2>Normal map<a class="headerlink" href="#normal-map" title="Permalink to this headline">¶</a></h2>
+<h2>Normal map<a class="headerlink" href="#normal-map" title="Link to this heading"></a></h2>
 <p>Normal mapping allows you to set a texture that represents finer shape detail.
 This does not modify geometry, only the incident angle for light. In Redot,
 only the red and green channels of normal maps are used for better compression
@@ -11527,7 +11610,7 @@ popular engines) can be found
 </div>
 </section>
 <section id="rim">
-<h2>Rim<a class="headerlink" href="#rim" title="Permalink to this headline">¶</a></h2>
+<h2>Rim<a class="headerlink" href="#rim" title="Link to this heading"></a></h2>
 <p>Some fabrics have small micro-fur that causes light to scatter around it. Redot
 emulates this with the <em>Rim</em> parameter. Unlike other rim lighting implementations,
 which just use the emission channel, this one actually takes light into account
@@ -11539,21 +11622,21 @@ rim. If <em>Tint</em> is <code class="docutils literal notranslate"><span class=
 intermediate values generally works best.</p>
 </section>
 <section id="clearcoat">
-<h2>Clearcoat<a class="headerlink" href="#clearcoat" title="Permalink to this headline">¶</a></h2>
+<h2>Clearcoat<a class="headerlink" href="#clearcoat" title="Link to this heading"></a></h2>
 <p>The <em>Clearcoat</em> parameter is used to add a secondary pass of transparent coat
 to the material. This is common in car paint and toys. In practice, it's a
 smaller specular blob added on top of the existing material.</p>
 <img alt="../../_images/clearcoat_comparison.png" src="../../_images/clearcoat_comparison.png" />
 </section>
 <section id="anisotropy">
-<h2>Anisotropy<a class="headerlink" href="#anisotropy" title="Permalink to this headline">¶</a></h2>
+<h2>Anisotropy<a class="headerlink" href="#anisotropy" title="Link to this heading"></a></h2>
 <p>This changes the shape of the specular blob and aligns it to tangent space.
 Anisotropy is commonly used with hair, or to make materials such as brushed
 aluminum more realistic. It works especially well when combined with flowmaps.</p>
 <img alt="../../_images/spatial_material18.png" src="../../_images/spatial_material18.png" />
 </section>
 <section id="ambient-occlusion">
-<h2>Ambient Occlusion<a class="headerlink" href="#ambient-occlusion" title="Permalink to this headline">¶</a></h2>
+<h2>Ambient Occlusion<a class="headerlink" href="#ambient-occlusion" title="Link to this heading"></a></h2>
 <p>It is possible to specify a baked ambient occlusion map. This map affects how
 much ambient light reaches each surface of the object (it does not affect direct
 light by default). While it is possible to use Screen-Space Ambient Occlusion
@@ -11562,7 +11645,7 @@ AO map. It is recommended to bake ambient occlusion whenever possible.</p>
 <img alt="../../_images/spatial_material19.png" src="../../_images/spatial_material19.png" />
 </section>
 <section id="height">
-<h2>Height<a class="headerlink" href="#height" title="Permalink to this headline">¶</a></h2>
+<h2>Height<a class="headerlink" href="#height" title="Link to this heading"></a></h2>
 <p>Setting a height map on a material produces a ray-marched search to emulate the
 proper displacement of cavities along the view direction. This only creates an
 illusion of depth, and does not add real geometry — for a height map shape used
@@ -11573,20 +11656,22 @@ mapping.</p>
 <img alt="../../_images/spatial_material20.png" src="../../_images/spatial_material20.png" />
 </section>
 <section id="subsurface-scattering">
-<h2>Subsurface Scattering<a class="headerlink" href="#subsurface-scattering" title="Permalink to this headline">¶</a></h2>
+<h2>Subsurface Scattering<a class="headerlink" href="#subsurface-scattering" title="Link to this heading"></a></h2>
+<p><em>This is only available in the Forward+ renderer, not the Mobile or Compatibility
+renderers.</em></p>
 <p>This effect emulates light that penetrates an object's surface, is scattered,
 and then comes out. It is useful to create realistic skin, marble, colored
 liquids, etc.</p>
 <img alt="../../_images/spatial_material21.png" src="../../_images/spatial_material21.png" />
 </section>
 <section id="back-lighting">
-<h2>Back Lighting<a class="headerlink" href="#back-lighting" title="Permalink to this headline">¶</a></h2>
+<h2>Back Lighting<a class="headerlink" href="#back-lighting" title="Link to this heading"></a></h2>
 <p>This controls how much light from the lit side (visible to light) is transferred
 to the dark side (opposite from the light). This works well for thin objects
 such as plant leaves, grass, human ears, etc.</p>
 </section>
 <section id="refraction">
-<h2>Refraction<a class="headerlink" href="#refraction" title="Permalink to this headline">¶</a></h2>
+<h2>Refraction<a class="headerlink" href="#refraction" title="Link to this heading"></a></h2>
 <p>When refraction is enabled, Redot attempts to fetch information from behind the
 object being rendered. This allows distorting the transparency in a way similar
 to refraction in real life.</p>
@@ -11620,7 +11705,7 @@ noticeable with high refraction strength values.</p></li>
 </div>
 </section>
 <section id="detail">
-<h2>Detail<a class="headerlink" href="#detail" title="Permalink to this headline">¶</a></h2>
+<h2>Detail<a class="headerlink" href="#detail" title="Link to this heading"></a></h2>
 <p>Redot allows using secondary albedo and normal maps to generate a detail
 texture, which can be blended in many ways. By combining this with secondary
 UV or triplanar modes, many interesting textures can be achieved.</p>
@@ -11652,12 +11737,12 @@ in this slot it will be interpreted as a flat normal map. This can still be used
 even if the material does not have normal map enabled.</p>
 </section>
 <section id="uv1-and-uv2">
-<h2>UV1 and UV2<a class="headerlink" href="#uv1-and-uv2" title="Permalink to this headline">¶</a></h2>
+<h2>UV1 and UV2<a class="headerlink" href="#uv1-and-uv2" title="Link to this heading"></a></h2>
 <p>Redot supports two UV channels per material. Secondary UV is often useful for
 ambient occlusion or emission (baked light). UVs can be scaled and offset,
 which is useful when using repeating textures.</p>
 <section id="triplanar-mapping">
-<span id="doc-standard-material-3d-triplanar-mapping"></span><h3>Triplanar Mapping<a class="headerlink" href="#triplanar-mapping" title="Permalink to this headline">¶</a></h3>
+<span id="doc-standard-material-3d-triplanar-mapping"></span><h3>Triplanar Mapping<a class="headerlink" href="#triplanar-mapping" title="Link to this heading"></a></h3>
 <p>Triplanar mapping is supported for both UV1 and UV2. This is an alternative way
 to obtain texture coordinates, sometimes called &quot;Autotexture&quot;. Textures are
 sampled in X, Y and Z and blended by the normal. Triplanar mapping can be
@@ -11667,41 +11752,41 @@ world triplanar, so the brick texture continues smoothly between them.</p>
 <img alt="../../_images/spatial_material25.png" src="../../_images/spatial_material25.png" />
 </section>
 <section id="world-triplanar">
-<h3>World Triplanar<a class="headerlink" href="#world-triplanar" title="Permalink to this headline">¶</a></h3>
+<h3>World Triplanar<a class="headerlink" href="#world-triplanar" title="Link to this heading"></a></h3>
 <p>When using triplanar mapping, it is computed in object local space. This
 option makes it use world space instead.</p>
 </section>
 </section>
 <section id="sampling">
-<span id="doc-standard-material-3d-sampling"></span><h2>Sampling<a class="headerlink" href="#sampling" title="Permalink to this headline">¶</a></h2>
+<span id="doc-standard-material-3d-sampling"></span><h2>Sampling<a class="headerlink" href="#sampling" title="Link to this heading"></a></h2>
 <section id="filter">
-<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
+<h3>Filter<a class="headerlink" href="#filter" title="Link to this heading"></a></h3>
 <p>The filtering method for the textures used by the material. See <a class="reference internal" href="../../classes/class_basematerial3d.html#class-basematerial3d-property-texture-filter"><span class="std std-ref">this page</span></a>
 for a full list of options and their description.</p>
 </section>
 <section id="repeat">
-<h3>Repeat<a class="headerlink" href="#repeat" title="Permalink to this headline">¶</a></h3>
+<h3>Repeat<a class="headerlink" href="#repeat" title="Link to this heading"></a></h3>
 <p>if the textures used by the material repeat, and how they repeat. See <a class="reference internal" href="../../classes/class_basematerial3d.html#class-basematerial3d-property-texture-repeat"><span class="std std-ref">this page</span></a>
 for a full list of options and their description.</p>
 </section>
 </section>
 <section id="shadows">
-<h2>Shadows<a class="headerlink" href="#shadows" title="Permalink to this headline">¶</a></h2>
+<h2>Shadows<a class="headerlink" href="#shadows" title="Link to this heading"></a></h2>
 <section id="do-not-receive-shadows">
-<h3>Do Not Receive Shadows<a class="headerlink" href="#do-not-receive-shadows" title="Permalink to this headline">¶</a></h3>
+<h3>Do Not Receive Shadows<a class="headerlink" href="#do-not-receive-shadows" title="Link to this heading"></a></h3>
 <p>Makes the object not receive any kind of shadow that would otherwise
 be cast onto it.</p>
 </section>
 <section id="use-shadow-to-opacity">
-<h3>Use Shadow to Opacity<a class="headerlink" href="#use-shadow-to-opacity" title="Permalink to this headline">¶</a></h3>
+<h3>Use Shadow to Opacity<a class="headerlink" href="#use-shadow-to-opacity" title="Link to this heading"></a></h3>
 <p>Lighting modifies the alpha so shadowed areas are opaque and non-shadowed
 areas are transparent. Useful for overlaying shadows onto a camera feed in AR.</p>
 </section>
 </section>
 <section id="billboard">
-<h2>Billboard<a class="headerlink" href="#billboard" title="Permalink to this headline">¶</a></h2>
+<h2>Billboard<a class="headerlink" href="#billboard" title="Link to this heading"></a></h2>
 <section id="billboard-mode">
-<h3>Billboard Mode<a class="headerlink" href="#billboard-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Billboard Mode<a class="headerlink" href="#billboard-mode" title="Link to this heading"></a></h3>
 <p>Enables billboard mode for drawing materials. This controls how the object
 faces the camera:</p>
 <ul class="simple">
@@ -11716,12 +11801,12 @@ specifying <a class="reference internal" href="particles/process_material_proper
 <p>The <strong>Particles Anim</strong> section is only visible when the billboard mode is <strong>Particle Billboard</strong>.</p>
 </section>
 <section id="billboard-keep-scale">
-<h3>Billboard Keep Scale<a class="headerlink" href="#billboard-keep-scale" title="Permalink to this headline">¶</a></h3>
+<h3>Billboard Keep Scale<a class="headerlink" href="#billboard-keep-scale" title="Link to this heading"></a></h3>
 <p>Enables scaling a mesh in billboard mode.</p>
 </section>
 </section>
 <section id="grow">
-<h2>Grow<a class="headerlink" href="#grow" title="Permalink to this headline">¶</a></h2>
+<h2>Grow<a class="headerlink" href="#grow" title="Link to this heading"></a></h2>
 <p>Grows the object vertices in the direction pointed by their normals:</p>
 <img alt="../../_images/spatial_material10.png" src="../../_images/spatial_material10.png" />
 <p>This is commonly used to create cheap outlines. Add a second material pass,
@@ -11735,25 +11820,25 @@ vertices, or &quot;flat shading&quot;, the mesh will appear to have gaps when us
 </div>
 </section>
 <section id="transform">
-<h2>Transform<a class="headerlink" href="#transform" title="Permalink to this headline">¶</a></h2>
+<h2>Transform<a class="headerlink" href="#transform" title="Link to this heading"></a></h2>
 <section id="fixed-size">
-<h3>Fixed Size<a class="headerlink" href="#fixed-size" title="Permalink to this headline">¶</a></h3>
+<h3>Fixed Size<a class="headerlink" href="#fixed-size" title="Link to this heading"></a></h3>
 <p>This causes the object to be rendered at the same size no matter the distance.
 This is useful mostly for indicators (no depth test and high render priority)
 and some types of billboards.</p>
 </section>
 <section id="use-point-size">
-<h3>Use Point Size<a class="headerlink" href="#use-point-size" title="Permalink to this headline">¶</a></h3>
+<h3>Use Point Size<a class="headerlink" href="#use-point-size" title="Link to this heading"></a></h3>
 <p>This option is only effective when the geometry rendered is made of points
 (generally it's made of triangles when imported from 3D modeling software). If
 so, then those points can be resized (see below).</p>
 </section>
 <section id="point-size">
-<h3>Point Size<a class="headerlink" href="#point-size" title="Permalink to this headline">¶</a></h3>
+<h3>Point Size<a class="headerlink" href="#point-size" title="Link to this heading"></a></h3>
 <p>When drawing points, specify the point size in pixels.</p>
 </section>
 <section id="transmission">
-<h3>Transmission<a class="headerlink" href="#transmission" title="Permalink to this headline">¶</a></h3>
+<h3>Transmission<a class="headerlink" href="#transmission" title="Link to this heading"></a></h3>
 <p>This controls how much light from the lit side (visible to light) is transferred
 to the dark side (opposite from the light). This works well for thin objects
 such as plant leaves, grass, human ears, etc.</p>
@@ -11761,7 +11846,7 @@ such as plant leaves, grass, human ears, etc.</p>
 </section>
 </section>
 <section id="proximity-and-distance-fade">
-<h2>Proximity and Distance Fade<a class="headerlink" href="#proximity-and-distance-fade" title="Permalink to this headline">¶</a></h2>
+<h2>Proximity and Distance Fade<a class="headerlink" href="#proximity-and-distance-fade" title="Link to this heading"></a></h2>
 <p>Redot allows materials to fade by proximity to each other as well as depending
 on the distance from the viewer. Proximity fade is useful for effects such as
 soft particles or a mass of water with a smooth blending to the shores.</p>
@@ -11790,10 +11875,10 @@ is the same across the entire object's surface.</p>
 <img alt="../../_images/standart_material_distance_fade_object_dither_mode.webp" src="../../_images/standart_material_distance_fade_object_dither_mode.webp" />
 </section>
 <section id="material-settings">
-<h2>Material Settings<a class="headerlink" href="#material-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Material Settings<a class="headerlink" href="#material-settings" title="Link to this heading"></a></h2>
 </section>
 <section id="render-priority">
-<h2>Render priority<a class="headerlink" href="#render-priority" title="Permalink to this headline">¶</a></h2>
+<h2>Render priority<a class="headerlink" href="#render-priority" title="Link to this heading"></a></h2>
 <p>The rendering order of objects can be changed, although this is mostly
 useful for transparent objects (or opaque objects that perform depth draw
 but no color draw, such as cracks on the floor).</p>
@@ -11802,7 +11887,7 @@ with higher priority being drawn later. Transparent objects are also sorted by d
 <p>Depth testing overrules priority. Priority alone cannot force opaque objects to be drawn over each other.</p>
 </section>
 <section id="next-pass">
-<h2>Next Pass<a class="headerlink" href="#next-pass" title="Permalink to this headline">¶</a></h2>
+<h2>Next Pass<a class="headerlink" href="#next-pass" title="Link to this heading"></a></h2>
 <p>Setting <a class="reference internal" href="../../classes/class_material.html#class-material-property-next-pass"><span class="std std-ref">next_pass</span></a> on a material
 will cause an object to be rendered again with that next material.</p>
 <p>Materials are sorted by an opaque/transparent queue, then <a class="reference internal" href="../../classes/class_material.html#class-material-property-render-priority"><span class="std std-ref">render_priority</span></a>,

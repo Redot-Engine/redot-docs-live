@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Localization using gettext" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/i18n/localization_using_gettext.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Localization using gettext &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/i18n/localization_using_gettext.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/i18n/localization_using_gettext.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/i18n/localization_using_gettext.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Internationalization</a></li>
       <li class="breadcrumb-item active">Localization using gettext</li>
 	</ul>
@@ -11173,7 +11256,7 @@
 
   
   <section id="localization-using-gettext">
-<span id="doc-localization-using-gettext"></span><h1>Localization using gettext<a class="headerlink" href="#localization-using-gettext" title="Permalink to this headline">¶</a></h1>
+<span id="doc-localization-using-gettext"></span><h1>Localization using gettext<a class="headerlink" href="#localization-using-gettext" title="Link to this heading"></a></h1>
 <p>In addition to <a class="reference internal" href="../assets_pipeline/importing_translations.html#doc-importing-translations"><span class="std std-ref">Importing translations</span></a> in CSV format, Redot
 also supports loading translation files written in the GNU gettext
 format (text-based <code class="docutils literal notranslate"><span class="pre">.po</span></code> and compiled <code class="docutils literal notranslate"><span class="pre">.mo</span></code> since Redot 4.0).</p>
@@ -11185,7 +11268,7 @@ It's written with C projects in mind, but much of the advice
 also applies to Redot (with the exception of <code class="docutils literal notranslate"><span class="pre">xgettext</span></code>).</p>
 </div>
 <section id="advantages">
-<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
+<h2>Advantages<a class="headerlink" href="#advantages" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>gettext is a standard format, which can be edited using any text editor
 or GUI editors such as <a class="reference external" href="https://poedit.net/">Poedit</a>.</p></li>
@@ -11199,7 +11282,7 @@ to CSV files.</p></li>
 </ul>
 </section>
 <section id="disadvantages">
-<h2>Disadvantages<a class="headerlink" href="#disadvantages" title="Permalink to this headline">¶</a></h2>
+<h2>Disadvantages<a class="headerlink" href="#disadvantages" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>gettext is a more complex format than CSV and can be harder to grasp for
 people new to software localization.</p></li>
@@ -11209,7 +11292,7 @@ on their system. However, as Redot supports using text-based message files
 </ul>
 </section>
 <section id="installing-gettext-tools">
-<h2>Installing gettext tools<a class="headerlink" href="#installing-gettext-tools" title="Permalink to this headline">¶</a></h2>
+<h2>Installing gettext tools<a class="headerlink" href="#installing-gettext-tools" title="Link to this heading"></a></h2>
 <p>The command line gettext tools are required to perform maintenance operations,
 such as updating message files. Therefore, it's strongly recommended to
 install them.</p>
@@ -11227,9 +11310,9 @@ your distribution's package manager.</p></li>
 </ul>
 </section>
 <section id="creating-the-po-template">
-<h2>Creating the PO template<a class="headerlink" href="#creating-the-po-template" title="Permalink to this headline">¶</a></h2>
+<h2>Creating the PO template<a class="headerlink" href="#creating-the-po-template" title="Link to this heading"></a></h2>
 <section id="automatic-generation-using-the-editor">
-<h3>Automatic generation using the editor<a class="headerlink" href="#automatic-generation-using-the-editor" title="Permalink to this headline">¶</a></h3>
+<h3>Automatic generation using the editor<a class="headerlink" href="#automatic-generation-using-the-editor" title="Link to this heading"></a></h3>
 <p>Since Redot 4.0, the editor can generate a PO template automatically from
 specified scene and GDScript files. This POT generation also supports translation
 contexts and pluralization if used in a script, with the optional second
@@ -11240,7 +11323,7 @@ contain localizable strings:</p>
 <figure class="align-center" id="id1">
 <img alt="Creating a PO template in the Localization &gt; POT Generation tab of the Project Settings" src="../../_images/localization_using_gettext_pot_generation.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a PO template in the <strong>Localization &gt; POT Generation</strong> tab of the Project Settings</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a PO template in the <strong>Localization &gt; POT Generation</strong> tab of the Project Settings</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After adding at least one scene or script, click <strong>Generate POT</strong> in the
@@ -11258,7 +11341,7 @@ update translations for outdated strings.</p>
 </div>
 </section>
 <section id="manual-creation">
-<h3>Manual creation<a class="headerlink" href="#manual-creation" title="Permalink to this headline">¶</a></h3>
+<h3>Manual creation<a class="headerlink" href="#manual-creation" title="Link to this heading"></a></h3>
 <p>If the automatic generation approach doesn't work out for your needs, you can
 create a PO template by hand in a text editor. This file can be placed anywhere
 in the project directory, but it's recommended to keep it in a subdirectory, as
@@ -11296,7 +11379,7 @@ empty. Localization will be done in the generated <code class="docutils literal 
 </section>
 </section>
 <section id="creating-a-messages-file-from-a-po-template">
-<span id="doc-localization-using-gettext-messages-file"></span><h2>Creating a messages file from a PO template<a class="headerlink" href="#creating-a-messages-file-from-a-po-template" title="Permalink to this headline">¶</a></h2>
+<span id="doc-localization-using-gettext-messages-file"></span><h2>Creating a messages file from a PO template<a class="headerlink" href="#creating-a-messages-file-from-a-po-template" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">msginit</span></code> command is used to turn a PO template into a messages file.
 For instance, to create a French localization file, use the following command
 while in the <code class="docutils literal notranslate"><span class="pre">locale</span></code> directory:</p>
@@ -11309,7 +11392,7 @@ as the PO template.</p>
 POT file to your web platform of choice.</p>
 </section>
 <section id="loading-a-messages-file-in-redot">
-<h2>Loading a messages file in Redot<a class="headerlink" href="#loading-a-messages-file-in-redot" title="Permalink to this headline">¶</a></h2>
+<h2>Loading a messages file in Redot<a class="headerlink" href="#loading-a-messages-file-in-redot" title="Link to this heading"></a></h2>
 <p>To register a messages file as a translation in a project, open the
 <strong>Project Settings</strong>, then go to the <strong>Localization</strong> tab.
 In <strong>Translations</strong>, click <strong>Add…</strong> then choose the <code class="docutils literal notranslate"><span class="pre">.po</span></code> or <code class="docutils literal notranslate"><span class="pre">.mo</span></code> file
@@ -11322,7 +11405,7 @@ importing and testing translations in Redot.</p>
 </div>
 </section>
 <section id="updating-message-files-to-follow-the-po-template">
-<h2>Updating message files to follow the PO template<a class="headerlink" href="#updating-message-files-to-follow-the-po-template" title="Permalink to this headline">¶</a></h2>
+<h2>Updating message files to follow the PO template<a class="headerlink" href="#updating-message-files-to-follow-the-po-template" title="Link to this heading"></a></h2>
 <p>After updating the PO template, you will have to update message files so
 that they contain new strings, while removing strings that are no longer
 present in the PO template. This can be done automatically using the
@@ -11344,7 +11427,7 @@ translation is updated and the &quot;fuzzy&quot; comment is removed.</p>
 </div>
 </section>
 <section id="checking-the-validity-of-a-po-file-or-template">
-<h2>Checking the validity of a PO file or template<a class="headerlink" href="#checking-the-validity-of-a-po-file-or-template" title="Permalink to this headline">¶</a></h2>
+<h2>Checking the validity of a PO file or template<a class="headerlink" href="#checking-the-validity-of-a-po-file-or-template" title="Link to this heading"></a></h2>
 <p>It is possible to check whether a gettext file's syntax is valid by running
 the command below:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>msgfmt<span class="w"> </span>fr.po<span class="w"> </span>--check
@@ -11354,7 +11437,7 @@ the command below:</p>
 Otherwise, <code class="docutils literal notranslate"><span class="pre">msgfmt</span></code> won't output anything.</p>
 </section>
 <section id="using-binary-mo-files-useful-for-large-projects-only">
-<h2>Using binary MO files (useful for large projects only)<a class="headerlink" href="#using-binary-mo-files-useful-for-large-projects-only" title="Permalink to this headline">¶</a></h2>
+<h2>Using binary MO files (useful for large projects only)<a class="headerlink" href="#using-binary-mo-files-useful-for-large-projects-only" title="Link to this heading"></a></h2>
 <p>For large projects with several thousands of strings to translate or more,
 it can be worth it to use binary (compiled) MO message files instead of text-based
 PO files. Binary MO files are smaller and faster to read than the equivalent

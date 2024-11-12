@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Spatial shaders" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/shaders/shader_reference/spatial_shader.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Spatial shaders &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/shaders/shader_reference/spatial_shader.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Shaders</a></li>
           <li class="breadcrumb-item"><a href="index.html">Shading reference</a></li>
       <li class="breadcrumb-item active">Spatial shaders</li>
@@ -11174,19 +11257,15 @@
 
   
   <section id="spatial-shaders">
-<span id="doc-spatial-shader"></span><h1>Spatial shaders<a class="headerlink" href="#spatial-shaders" title="Permalink to this headline">¶</a></h1>
+<span id="doc-spatial-shader"></span><h1>Spatial shaders<a class="headerlink" href="#spatial-shaders" title="Link to this heading"></a></h1>
 <p>Spatial shaders are used for shading 3D objects. They are the most complex type of shader Redot offers.
 Spatial shaders are highly configurable with different render modes and different rendering options
 (e.g. Subsurface Scattering, Transmission, Ambient Occlusion, Rim lighting etc). Users can optionally
 write vertex, fragment, and light processor functions to affect how objects are drawn.</p>
 <section id="render-modes">
-<h2>Render modes<a class="headerlink" href="#render-modes" title="Permalink to this headline">¶</a></h2>
+<h2>Render modes<a class="headerlink" href="#render-modes" title="Link to this heading"></a></h2>
 <p>For visual examples of these render modes, see <a class="reference internal" href="../../3d/standard_material_3d.html#doc-standard-material-3d"><span class="std std-ref">Standard Material 3D and ORM Material 3D</span></a>.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 77%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Render mode</p></th>
 <th class="head"><p>Description</p></th>
@@ -11298,19 +11377,15 @@ a camera feed in AR.</p></td>
 </table>
 </section>
 <section id="built-ins">
-<h2>Built-ins<a class="headerlink" href="#built-ins" title="Permalink to this headline">¶</a></h2>
+<h2>Built-ins<a class="headerlink" href="#built-ins" title="Link to this heading"></a></h2>
 <p>Values marked as <code class="docutils literal notranslate"><span class="pre">in</span></code> are read-only. Values marked as <code class="docutils literal notranslate"><span class="pre">out</span></code> can optionally be written to and will
 not necessarily contain sensible values. Values marked as <code class="docutils literal notranslate"><span class="pre">inout</span></code> provide a sensible default
 value, and can optionally be written to. Samplers cannot be written to so they are not marked.</p>
 </section>
 <section id="global-built-ins">
-<h2>Global built-ins<a class="headerlink" href="#global-built-ins" title="Permalink to this headline">¶</a></h2>
+<h2>Global built-ins<a class="headerlink" href="#global-built-ins" title="Link to this heading"></a></h2>
 <p>Global built-ins are available everywhere, including custom functions.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Built-in</p></th>
 <th class="head"><p>Description</p></th>
@@ -11337,11 +11412,20 @@ An equivalent of <code class="docutils literal notranslate"><span class="pre">PI
 <tr class="row-odd"><td><p>in float <strong>E</strong></p></td>
 <td><p>An <code class="docutils literal notranslate"><span class="pre">E</span></code> constant (<code class="docutils literal notranslate"><span class="pre">2.718281</span></code>). Euler's number and a base of the natural logarithm.</p></td>
 </tr>
+<tr class="row-even"><td><p>in bool <strong>OUTPUT_IS_SRGB</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> when output is in sRGB color space (this is <code class="docutils literal notranslate"><span class="pre">true</span></code> in the Compatibility
+renderer, <code class="docutils literal notranslate"><span class="pre">false</span></code> in Forward+ and Forward Mobile).</p></td>
+</tr>
+<tr class="row-odd"><td><p>in float <strong>CLIP_SPACE_FAR</strong></p></td>
+<td><p>Clip space far <code class="docutils literal notranslate"><span class="pre">z</span></code> value.
+In the Forward+ or Mobile renderers, it's <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.
+In the Compatibility renderer, it's <code class="docutils literal notranslate"><span class="pre">-1.0</span></code>.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="vertex-built-ins">
-<h2>Vertex built-ins<a class="headerlink" href="#vertex-built-ins" title="Permalink to this headline">¶</a></h2>
+<h2>Vertex built-ins<a class="headerlink" href="#vertex-built-ins" title="Link to this heading"></a></h2>
 <p>Vertex data (<code class="docutils literal notranslate"><span class="pre">VERTEX</span></code>, <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>, <code class="docutils literal notranslate"><span class="pre">TANGENT</span></code>, <code class="docutils literal notranslate"><span class="pre">BITANGENT</span></code>) are presented in model space
 (also called local space). If not written to, these values will not be modified and be
 passed through as they came.</p>
@@ -11374,10 +11458,6 @@ is usually:</p>
 <p>This allows you to easily adjust the shader to a particle system using default particles material. When writing a custom particle
 shader, this value can be used as desired.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Built-in</p></th>
 <th class="head"><p>Description</p></th>
@@ -11415,100 +11495,95 @@ draw the current viewport.</p></td>
 <tr class="row-odd"><td><p>in uint <strong>CAMERA_VISIBLE_LAYERS</strong></p></td>
 <td><p>Cull layers of the camera rendering the current pass.</p></td>
 </tr>
-<tr class="row-even"><td><p>in bool <strong>OUTPUT_IS_SRGB</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> when output is in sRGB color space
-(this is <code class="docutils literal notranslate"><span class="pre">true</span></code> in the Compatibility renderer,
-<code class="docutils literal notranslate"><span class="pre">false</span></code> in Forward+ and Forward Mobile).</p></td>
-</tr>
-<tr class="row-odd"><td><p>in int <strong>INSTANCE_ID</strong></p></td>
+<tr class="row-even"><td><p>in int <strong>INSTANCE_ID</strong></p></td>
 <td><p>Instance ID for instancing.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec4 <strong>INSTANCE_CUSTOM</strong></p></td>
+<tr class="row-odd"><td><p>in vec4 <strong>INSTANCE_CUSTOM</strong></p></td>
 <td><p>Instance custom data (for particles, mostly).</p></td>
 </tr>
-<tr class="row-odd"><td><p>in int <strong>VIEW_INDEX</strong></p></td>
+<tr class="row-even"><td><p>in int <strong>VIEW_INDEX</strong></p></td>
 <td><p>The view that we are rendering.
 <code class="docutils literal notranslate"><span class="pre">VIEW_MONO_LEFT</span></code> (<code class="docutils literal notranslate"><span class="pre">0</span></code>) for Mono (not multiview) or
 left eye, <code class="docutils literal notranslate"><span class="pre">VIEW_RIGHT</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code>) for right eye.</p></td>
 </tr>
-<tr class="row-even"><td><p>in int <strong>VIEW_MONO_LEFT</strong></p></td>
+<tr class="row-odd"><td><p>in int <strong>VIEW_MONO_LEFT</strong></p></td>
 <td><p>Constant for Mono or left eye, always <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in int <strong>VIEW_RIGHT</strong></p></td>
+<tr class="row-even"><td><p>in int <strong>VIEW_RIGHT</strong></p></td>
 <td><p>Constant for right eye, always <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec3 <strong>EYE_OFFSET</strong></p></td>
+<tr class="row-odd"><td><p>in vec3 <strong>EYE_OFFSET</strong></p></td>
 <td><p>Position offset for the eye being rendered.
 Only applicable for multiview rendering.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec3 <strong>VERTEX</strong></p></td>
+<tr class="row-even"><td><p>inout vec3 <strong>VERTEX</strong></p></td>
 <td><p>Vertex position in model space.</p></td>
 </tr>
-<tr class="row-even"><td><p>in int <strong>VERTEX_ID</strong></p></td>
+<tr class="row-odd"><td><p>in int <strong>VERTEX_ID</strong></p></td>
 <td><p>The index of the current vertex in the vertex buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec3 <strong>NORMAL</strong></p></td>
+<tr class="row-even"><td><p>inout vec3 <strong>NORMAL</strong></p></td>
 <td><p>Normal in model space.</p></td>
 </tr>
-<tr class="row-even"><td><p>inout vec3 <strong>TANGENT</strong></p></td>
+<tr class="row-odd"><td><p>inout vec3 <strong>TANGENT</strong></p></td>
 <td><p>Tangent in model space.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec3 <strong>BINORMAL</strong></p></td>
+<tr class="row-even"><td><p>inout vec3 <strong>BINORMAL</strong></p></td>
 <td><p>Binormal in model space.</p></td>
 </tr>
-<tr class="row-even"><td><p>out vec4 <strong>POSITION</strong></p></td>
+<tr class="row-odd"><td><p>out vec4 <strong>POSITION</strong></p></td>
 <td><p>If written to, overrides final vertex position.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec2 <strong>UV</strong></p></td>
+<tr class="row-even"><td><p>inout vec2 <strong>UV</strong></p></td>
 <td><p>UV main channel.</p></td>
 </tr>
-<tr class="row-even"><td><p>inout vec2 <strong>UV2</strong></p></td>
+<tr class="row-odd"><td><p>inout vec2 <strong>UV2</strong></p></td>
 <td><p>UV secondary channel.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec4 <strong>COLOR</strong></p></td>
+<tr class="row-even"><td><p>inout vec4 <strong>COLOR</strong></p></td>
 <td><p>Color from vertices.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>ROUGHNESS</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>ROUGHNESS</strong></p></td>
 <td><p>Roughness for vertex lighting.</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout float <strong>POINT_SIZE</strong></p></td>
+<tr class="row-even"><td><p>inout float <strong>POINT_SIZE</strong></p></td>
 <td><p>Point size for point rendering.</p></td>
 </tr>
-<tr class="row-even"><td><p>inout mat4 <strong>MODELVIEW_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>inout mat4 <strong>MODELVIEW_MATRIX</strong></p></td>
 <td><p>Model/local space to view space transform
 (use if possible).</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout mat3 <strong>MODELVIEW_NORMAL_MATRIX</strong></p></td>
+<tr class="row-even"><td><p>inout mat3 <strong>MODELVIEW_NORMAL_MATRIX</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>in mat4 <strong>MODEL_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>in mat4 <strong>MODEL_MATRIX</strong></p></td>
 <td><p>Model/local space to world space transform.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in mat3 <strong>MODEL_NORMAL_MATRIX</strong></p></td>
+<tr class="row-even"><td><p>in mat3 <strong>MODEL_NORMAL_MATRIX</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>inout mat4 <strong>PROJECTION_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>inout mat4 <strong>PROJECTION_MATRIX</strong></p></td>
 <td><p>View space to clip space transform.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in uvec4 <strong>BONE_INDICES</strong></p></td>
+<tr class="row-even"><td><p>in uvec4 <strong>BONE_INDICES</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>in vec4 <strong>BONE_WEIGHTS</strong></p></td>
+<tr class="row-odd"><td><p>in vec4 <strong>BONE_WEIGHTS</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>in vec4 <strong>CUSTOM0</strong></p></td>
+<tr class="row-even"><td><p>in vec4 <strong>CUSTOM0</strong></p></td>
 <td><p>Custom value from vertex primitive. When using extra
 UVs, <code class="docutils literal notranslate"><span class="pre">xy</span></code> is UV3 and <code class="docutils literal notranslate"><span class="pre">zw</span></code> is UV4.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec4 <strong>CUSTOM1</strong></p></td>
+<tr class="row-odd"><td><p>in vec4 <strong>CUSTOM1</strong></p></td>
 <td><p>Custom value from vertex primitive. When using extra
 UVs, <code class="docutils literal notranslate"><span class="pre">xy</span></code> is UV5 and <code class="docutils literal notranslate"><span class="pre">zw</span></code> is UV6.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in vec4 <strong>CUSTOM2</strong></p></td>
+<tr class="row-even"><td><p>in vec4 <strong>CUSTOM2</strong></p></td>
 <td><p>Custom value from vertex primitive. When using extra
 UVs, <code class="docutils literal notranslate"><span class="pre">xy</span></code> is UV7 and <code class="docutils literal notranslate"><span class="pre">zw</span></code> is UV8.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec4 <strong>CUSTOM3</strong></p></td>
+<tr class="row-odd"><td><p>in vec4 <strong>CUSTOM3</strong></p></td>
 <td><p>Custom value from vertex primitive.</p></td>
 </tr>
 </tbody>
@@ -11523,15 +11598,11 @@ UVs, <code class="docutils literal notranslate"><span class="pre">xy</span></cod
 </div>
 </section>
 <section id="fragment-built-ins">
-<h2>Fragment built-ins<a class="headerlink" href="#fragment-built-ins" title="Permalink to this headline">¶</a></h2>
+<h2>Fragment built-ins<a class="headerlink" href="#fragment-built-ins" title="Link to this heading"></a></h2>
 <p>The default use of a Redot fragment processor function is to set up the material properties of your object
 and to let the built-in renderer handle the final shading. However, you are not required to use all
 these properties, and if you don't write to them, Redot will optimize away the corresponding functionality.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Built-in</p></th>
 <th class="head"><p>Description</p></th>
@@ -11542,8 +11613,9 @@ these properties, and if you don't write to them, Redot will optimize away the c
 <td><p>Size of viewport (in pixels).</p></td>
 </tr>
 <tr class="row-odd"><td><p>in vec4 <strong>FRAGCOORD</strong></p></td>
-<td><p>Coordinate of pixel center in screen space. <code class="docutils literal notranslate"><span class="pre">xy</span></code> specifies position in window, <code class="docutils literal notranslate"><span class="pre">z</span></code>
-specifies fragment depth if <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> is not used. Origin is lower-left.</p></td>
+<td><p>Coordinate of pixel center in screen space. <code class="docutils literal notranslate"><span class="pre">xy</span></code> specifies position in window. Origin is lower
+left. <code class="docutils literal notranslate"><span class="pre">z</span></code> specifies fragment depth. It is also used as the output value for the fragment depth
+unless <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> is written to.</p></td>
 </tr>
 <tr class="row-even"><td><p>in bool <strong>FRONT_FACING</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if current face is front facing.</p></td>
@@ -11564,170 +11636,166 @@ perspective and orthogonal cameras.</p></td>
 <tr class="row-odd"><td><p>in vec2 <strong>POINT_COORD</strong></p></td>
 <td><p>Point coordinate for drawing points with <code class="docutils literal notranslate"><span class="pre">POINT_SIZE</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>in bool <strong>OUTPUT_IS_SRGB</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> when output is in sRGB color space (this is <code class="docutils literal notranslate"><span class="pre">true</span></code> in the Compatibility renderer,
-<code class="docutils literal notranslate"><span class="pre">false</span></code> in Forward+ and Forward Mobile).</p></td>
-</tr>
-<tr class="row-odd"><td><p>in mat4 <strong>MODEL_MATRIX</strong></p></td>
+<tr class="row-even"><td><p>in mat4 <strong>MODEL_MATRIX</strong></p></td>
 <td><p>Model/local space to world space transform.</p></td>
 </tr>
-<tr class="row-even"><td><p>in mat3 <strong>MODEL_NORMAL_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>in mat3 <strong>MODEL_NORMAL_MATRIX</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>in mat4 <strong>VIEW_MATRIX</strong></p></td>
+<tr class="row-even"><td><p>in mat4 <strong>VIEW_MATRIX</strong></p></td>
 <td><p>World space to view space transform.</p></td>
 </tr>
-<tr class="row-even"><td><p>in mat4 <strong>INV_VIEW_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>in mat4 <strong>INV_VIEW_MATRIX</strong></p></td>
 <td><p>View space to world space transform.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in mat4 <strong>PROJECTION_MATRIX</strong></p></td>
+<tr class="row-even"><td><p>in mat4 <strong>PROJECTION_MATRIX</strong></p></td>
 <td><p>View space to clip space transform.</p></td>
 </tr>
-<tr class="row-even"><td><p>in mat4 <strong>INV_PROJECTION_MATRIX</strong></p></td>
+<tr class="row-odd"><td><p>in mat4 <strong>INV_PROJECTION_MATRIX</strong></p></td>
 <td><p>Clip space to view space transform.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in vec3 <strong>NODE_POSITION_WORLD</strong></p></td>
+<tr class="row-even"><td><p>in vec3 <strong>NODE_POSITION_WORLD</strong></p></td>
 <td><p>Node position, in world space.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec3 <strong>NODE_POSITION_VIEW</strong></p></td>
+<tr class="row-odd"><td><p>in vec3 <strong>NODE_POSITION_VIEW</strong></p></td>
 <td><p>Node position, in view space.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in vec3 <strong>CAMERA_POSITION_WORLD</strong></p></td>
+<tr class="row-even"><td><p>in vec3 <strong>CAMERA_POSITION_WORLD</strong></p></td>
 <td><p>Camera position, in world space.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec3 <strong>CAMERA_DIRECTION_WORLD</strong></p></td>
+<tr class="row-odd"><td><p>in vec3 <strong>CAMERA_DIRECTION_WORLD</strong></p></td>
 <td><p>Camera direction, in world space.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in uint <strong>CAMERA_VISIBLE_LAYERS</strong></p></td>
+<tr class="row-even"><td><p>in uint <strong>CAMERA_VISIBLE_LAYERS</strong></p></td>
 <td><p>Cull layers of the camera rendering the current pass.</p></td>
 </tr>
-<tr class="row-even"><td><p>in vec3 <strong>VERTEX</strong></p></td>
+<tr class="row-odd"><td><p>in vec3 <strong>VERTEX</strong></p></td>
 <td><p>Vertex position that comes from the <code class="docutils literal notranslate"><span class="pre">vertex()</span></code> function (default, in view space).</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec3 <strong>LIGHT_VERTEX</strong></p></td>
+<tr class="row-even"><td><p>inout vec3 <strong>LIGHT_VERTEX</strong></p></td>
 <td><p>A writable version of <code class="docutils literal notranslate"><span class="pre">VERTEX</span></code> that can be used to alter light and shadows. Writing to this
 will not change the position of the fragment.</p></td>
 </tr>
-<tr class="row-even"><td><p>in int <strong>VIEW_INDEX</strong></p></td>
+<tr class="row-odd"><td><p>in int <strong>VIEW_INDEX</strong></p></td>
 <td><p>The view that we are rendering.
 <code class="docutils literal notranslate"><span class="pre">VIEW_MONO_LEFT</span></code> (<code class="docutils literal notranslate"><span class="pre">0</span></code>) for Mono (not multiview) or
 left eye, <code class="docutils literal notranslate"><span class="pre">VIEW_RIGHT</span></code> (<code class="docutils literal notranslate"><span class="pre">1</span></code>) for right eye.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in int <strong>VIEW_MONO_LEFT</strong></p></td>
+<tr class="row-even"><td><p>in int <strong>VIEW_MONO_LEFT</strong></p></td>
 <td><p>Constant for Mono or left eye, always <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>in int <strong>VIEW_RIGHT</strong></p></td>
+<tr class="row-odd"><td><p>in int <strong>VIEW_RIGHT</strong></p></td>
 <td><p>Constant for right eye, always <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in vec3 <strong>EYE_OFFSET</strong></p></td>
+<tr class="row-even"><td><p>in vec3 <strong>EYE_OFFSET</strong></p></td>
 <td><p>Position offset for the eye being rendered. Only applicable for multiview rendering.</p></td>
 </tr>
-<tr class="row-even"><td><p>sampler2D <strong>SCREEN_TEXTURE</strong></p></td>
+<tr class="row-odd"><td><p>sampler2D <strong>SCREEN_TEXTURE</strong></p></td>
 <td><p>Removed in Redot 4. Use a <code class="docutils literal notranslate"><span class="pre">sampler2D</span></code> with <code class="docutils literal notranslate"><span class="pre">hint_screen_texture</span></code> instead.</p></td>
 </tr>
-<tr class="row-odd"><td><p>in vec2 <strong>SCREEN_UV</strong></p></td>
+<tr class="row-even"><td><p>in vec2 <strong>SCREEN_UV</strong></p></td>
 <td><p>Screen UV coordinate for current pixel.</p></td>
 </tr>
-<tr class="row-even"><td><p>sampler2D <strong>DEPTH_TEXTURE</strong></p></td>
+<tr class="row-odd"><td><p>sampler2D <strong>DEPTH_TEXTURE</strong></p></td>
 <td><p>Removed in Redot 4. Use a <code class="docutils literal notranslate"><span class="pre">sampler2D</span></code> with <code class="docutils literal notranslate"><span class="pre">hint_depth_texture</span></code> instead.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>DEPTH</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>DEPTH</strong></p></td>
 <td><p>Custom depth value (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>). If <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> is being written to in any shader
 branch, then you are responsible for setting the <code class="docutils literal notranslate"><span class="pre">DEPTH</span></code> for <strong>all</strong> other branches.
 Otherwise, the graphics API will leave them uninitialized.</p></td>
 </tr>
-<tr class="row-even"><td><p>inout vec3 <strong>NORMAL</strong></p></td>
+<tr class="row-odd"><td><p>inout vec3 <strong>NORMAL</strong></p></td>
 <td><p>Normal that comes from the <code class="docutils literal notranslate"><span class="pre">vertex()</span></code> function (default, in view space).</p></td>
 </tr>
-<tr class="row-odd"><td><p>inout vec3 <strong>TANGENT</strong></p></td>
+<tr class="row-even"><td><p>inout vec3 <strong>TANGENT</strong></p></td>
 <td><p>Tangent that comes from the <code class="docutils literal notranslate"><span class="pre">vertex()</span></code> function (default, in view space).</p></td>
 </tr>
-<tr class="row-even"><td><p>inout vec3 <strong>BINORMAL</strong></p></td>
+<tr class="row-odd"><td><p>inout vec3 <strong>BINORMAL</strong></p></td>
 <td><p>Binormal that comes from the <code class="docutils literal notranslate"><span class="pre">vertex()</span></code> function (default, in view space).</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec3 <strong>NORMAL_MAP</strong></p></td>
+<tr class="row-even"><td><p>out vec3 <strong>NORMAL_MAP</strong></p></td>
 <td><p>Set normal here if reading normal from a texture instead of <code class="docutils literal notranslate"><span class="pre">NORMAL</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>NORMAL_MAP_DEPTH</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>NORMAL_MAP_DEPTH</strong></p></td>
 <td><p>Depth from <code class="docutils literal notranslate"><span class="pre">NORMAL_MAP</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec3 <strong>ALBEDO</strong></p></td>
+<tr class="row-even"><td><p>out vec3 <strong>ALBEDO</strong></p></td>
 <td><p>Albedo (default white). Base color.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>ALPHA</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>ALPHA</strong></p></td>
 <td><p>Alpha (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>). If read from or written to, the material will go to the
 transparent pipeline.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>ALPHA_SCISSOR_THRESHOLD</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>ALPHA_SCISSOR_THRESHOLD</strong></p></td>
 <td><p>If written to, values below a certain amount of alpha are discarded.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>ALPHA_HASH_SCALE</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>ALPHA_HASH_SCALE</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>ALPHA_ANTIALIASING_EDGE</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>ALPHA_ANTIALIASING_EDGE</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>out vec2 <strong>ALPHA_TEXTURE_COORDINATE</strong></p></td>
+<tr class="row-odd"><td><p>out vec2 <strong>ALPHA_TEXTURE_COORDINATE</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>METALLIC</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>METALLIC</strong></p></td>
 <td><p>Metallic (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>).</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>SPECULAR</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>SPECULAR</strong></p></td>
 <td><p>Specular. Defaults to <code class="docutils literal notranslate"><span class="pre">0.5</span></code>, best not to modify unless you want to change IOR.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>ROUGHNESS</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>ROUGHNESS</strong></p></td>
 <td><p>Roughness (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>).</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>RIM</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>RIM</strong></p></td>
 <td><p>Rim (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>). If used, Redot calculates rim lighting.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>RIM_TINT</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>RIM_TINT</strong></p></td>
 <td><p>Rim Tint, range of <code class="docutils literal notranslate"><span class="pre">0.0</span></code> (white) to <code class="docutils literal notranslate"><span class="pre">1.0</span></code> (albedo). If used, Redot calculates rim lighting.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>CLEARCOAT</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>CLEARCOAT</strong></p></td>
 <td><p>Small added specular blob. If used, Redot calculates Clearcoat.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>CLEARCOAT_GLOSS</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>CLEARCOAT_GLOSS</strong></p></td>
 <td><p>Gloss of Clearcoat. If used, Redot calculates Clearcoat.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>ANISOTROPY</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>ANISOTROPY</strong></p></td>
 <td><p>For distorting the specular blob according to tangent space.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec2 <strong>ANISOTROPY_FLOW</strong></p></td>
+<tr class="row-even"><td><p>out vec2 <strong>ANISOTROPY_FLOW</strong></p></td>
 <td><p>Distortion direction, use with flowmaps.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>SSS_STRENGTH</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>SSS_STRENGTH</strong></p></td>
 <td><p>Strength of Subsurface Scattering. If used, Subsurface Scattering will be applied to object.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec4 <strong>SSS_TRANSMITTANCE_COLOR</strong></p></td>
+<tr class="row-even"><td><p>out vec4 <strong>SSS_TRANSMITTANCE_COLOR</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>SSS_TRANSMITTANCE_DEPTH</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>SSS_TRANSMITTANCE_DEPTH</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>SSS_TRANSMITTANCE_BOOST</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>SSS_TRANSMITTANCE_BOOST</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>inout vec3 <strong>BACKLIGHT</strong></p></td>
+<tr class="row-odd"><td><p>inout vec3 <strong>BACKLIGHT</strong></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>AO</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>AO</strong></p></td>
 <td><p>Strength of Ambient Occlusion. For use with pre-baked AO.</p></td>
 </tr>
-<tr class="row-even"><td><p>out float <strong>AO_LIGHT_AFFECT</strong></p></td>
+<tr class="row-odd"><td><p>out float <strong>AO_LIGHT_AFFECT</strong></p></td>
 <td><p>How much AO affects lights (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>, default <code class="docutils literal notranslate"><span class="pre">0.0</span></code>).</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec3 <strong>EMISSION</strong></p></td>
+<tr class="row-even"><td><p>out vec3 <strong>EMISSION</strong></p></td>
 <td><p>Emission color (can go over <code class="docutils literal notranslate"><span class="pre">(1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0)</span></code> for HDR).</p></td>
 </tr>
-<tr class="row-even"><td><p>out vec4 <strong>FOG</strong></p></td>
+<tr class="row-odd"><td><p>out vec4 <strong>FOG</strong></p></td>
 <td><p>If written to, blends final pixel color with <code class="docutils literal notranslate"><span class="pre">FOG.rgb</span></code> based on <code class="docutils literal notranslate"><span class="pre">FOG.a</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out vec4 <strong>RADIANCE</strong></p></td>
+<tr class="row-even"><td><p>out vec4 <strong>RADIANCE</strong></p></td>
 <td><p>If written to, blends environment map radiance with <code class="docutils literal notranslate"><span class="pre">RADIANCE.rgb</span></code> based on <code class="docutils literal notranslate"><span class="pre">RADIANCE.a</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p>out vec4 <strong>IRRADIANCE</strong></p></td>
+<tr class="row-odd"><td><p>out vec4 <strong>IRRADIANCE</strong></p></td>
 <td><p>If written to, blends environment map irradiance with <code class="docutils literal notranslate"><span class="pre">IRRADIANCE.rgb</span></code> based on
 <code class="docutils literal notranslate"><span class="pre">IRRADIANCE.a</span></code>.</p></td>
 </tr>
@@ -11742,7 +11810,7 @@ for more information and ways to avoid issues.</p>
 </div>
 </section>
 <section id="light-built-ins">
-<h2>Light built-ins<a class="headerlink" href="#light-built-ins" title="Permalink to this headline">¶</a></h2>
+<h2>Light built-ins<a class="headerlink" href="#light-built-ins" title="Link to this heading"></a></h2>
 <p>Writing light processor functions is completely optional. You can skip the <code class="docutils literal notranslate"><span class="pre">light()</span></code> function by using
 the <code class="docutils literal notranslate"><span class="pre">unshaded</span></code> render mode. If no light function is written, Redot will use the material properties
 written to in the <code class="docutils literal notranslate"><span class="pre">fragment()</span></code> function to calculate the lighting for you (subject to the render mode).</p>
@@ -11761,10 +11829,6 @@ written to in the <code class="docutils literal notranslate"><span class="pre">f
 is enabled in the Project Settings. (It's enabled by default on mobile platforms.)</p>
 </div>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Built-in</p></th>
 <th class="head"><p>Description</p></th>
@@ -11840,18 +11904,13 @@ For <a class="reference internal" href="../../../classes/class_directionallight3
 <tr class="row-odd"><td><p>in float <strong>ROUGHNESS</strong></p></td>
 <td><p>Roughness.</p></td>
 </tr>
-<tr class="row-even"><td><p>in bool <strong>OUTPUT_IS_SRGB</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> when output is in sRGB color space.
-This is <code class="docutils literal notranslate"><span class="pre">true</span></code> in the Compatibility renderer,
-<code class="docutils literal notranslate"><span class="pre">false</span></code> in Forward+ and Forward Mobile.</p></td>
-</tr>
-<tr class="row-odd"><td><p>out vec3 <strong>DIFFUSE_LIGHT</strong></p></td>
+<tr class="row-even"><td><p>out vec3 <strong>DIFFUSE_LIGHT</strong></p></td>
 <td><p>Diffuse light result.</p></td>
 </tr>
-<tr class="row-even"><td><p>out vec3 <strong>SPECULAR_LIGHT</strong></p></td>
+<tr class="row-odd"><td><p>out vec3 <strong>SPECULAR_LIGHT</strong></p></td>
 <td><p>Specular light result.</p></td>
 </tr>
-<tr class="row-odd"><td><p>out float <strong>ALPHA</strong></p></td>
+<tr class="row-even"><td><p>out float <strong>ALPHA</strong></p></td>
 <td><p>Alpha (range of <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code>). If written to, the material will go
 to the transparent pipeline.</p></td>
 </tr>

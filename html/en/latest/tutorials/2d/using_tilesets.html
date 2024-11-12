@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Using TileSets" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/2d/using_tilesets.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Using TileSets &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/2d/using_tilesets.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/2d/using_tilesets.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/2d/using_tilesets.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scripting/index.html">Scripting</a><ul>
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">2D</a></li>
       <li class="breadcrumb-item active">Using TileSets</li>
 	</ul>
@@ -11173,9 +11256,9 @@
 
   
   <section id="using-tilesets">
-<span id="doc-using-tilesets"></span><h1>Using TileSets<a class="headerlink" href="#using-tilesets" title="Permalink to this headline">¶</a></h1>
+<span id="doc-using-tilesets"></span><h1>Using TileSets<a class="headerlink" href="#using-tilesets" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>A tilemap is a grid of tiles used to create a game's layout. There are several
 benefits to using <a class="reference internal" href="../../classes/class_tilemaplayer.html#class-tilemaplayer"><span class="std std-ref">TileMapLayer</span></a> nodes to design your
 levels. First, they let you draw a layout by &quot;painting&quot; tiles onto a grid,
@@ -11192,23 +11275,23 @@ image is called a <em>tilesheet</em>. Tiles do not have to be square: they can b
 rectangular, hexagonal, or isometric (pseudo-3D perspective).</p>
 </section>
 <section id="creating-a-new-tileset">
-<h2>Creating a new TileSet<a class="headerlink" href="#creating-a-new-tileset" title="Permalink to this headline">¶</a></h2>
+<h2>Creating a new TileSet<a class="headerlink" href="#creating-a-new-tileset" title="Link to this heading"></a></h2>
 <section id="using-a-tilesheet">
-<span id="doc-creating-tilesets-using-tilesheet"></span><h3>Using a tilesheet<a class="headerlink" href="#using-a-tilesheet" title="Permalink to this headline">¶</a></h3>
+<span id="doc-creating-tilesets-using-tilesheet"></span><h3>Using a tilesheet<a class="headerlink" href="#using-a-tilesheet" title="Link to this heading"></a></h3>
 <p>This demonstration will use the following tiles taken from
 <a class="reference external" href="https://kenney.nl/assets/abstract-platformer">Kenney's &quot;Abstract Platformer&quot; pack</a>.
 We'll use this particular <em>tilesheet</em> from the set:</p>
 <figure class="align-center" id="id1">
 <img alt="Tilesheet example with 64×64 tiles" src="../../_images/using_tilesets_kenney_abstract_platformer_tile_sheet.webp" />
 <figcaption>
-<p><span class="caption-text">Tilesheet with 64×64 tiles. Credit: <a class="reference external" href="https://kenney.nl/assets/abstract-platformer">Kenney</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Tilesheet with 64×64 tiles. Credit: <a class="reference external" href="https://kenney.nl/assets/abstract-platformer">Kenney</a></span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Create a new <strong>TileMapLayer</strong> node, then select it and create a new TileSet resource in the inspector:</p>
 <figure class="align-center" id="id2">
 <img alt="Creating a new TileSet resource within the TileMapLayer node" src="../../_images/using_tilesets_create_new_tileset.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a new TileSet resource within the TileMapLayer node</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a new TileSet resource within the TileMapLayer node</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After creating the TileSet resource, click the value to unfold it in the
@@ -11223,7 +11306,7 @@ area on the tilesheet.</p>
 <figure class="align-center" id="id3">
 <img alt="Setting the tile size to 64×64 to match the example tilesheet" src="../../_images/using_tilesets_specify_size_then_edit.webp" />
 <figcaption>
-<p><span class="caption-text">Setting the tile size to 64×64 to match the example tilesheet</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Setting the tile size to 64×64 to match the example tilesheet</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>If relying on automatic tiles creation (like we're about to do here), you must
@@ -11236,7 +11319,7 @@ automatically. Answer <strong>Yes</strong>:</p>
 <figure class="align-center" id="id4">
 <img alt="Automatically creating tiles based on tilesheet image content" src="../../_images/using_tilesets_create_tiles_automatically.webp" />
 <figcaption>
-<p><span class="caption-text">Automatically creating tiles based on tilesheet image content</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Automatically creating tiles based on tilesheet image content</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>This will automatically create tiles according to the tile size you specified
@@ -11252,7 +11335,7 @@ you wish to remove:</p>
 <figure class="align-center" id="id5">
 <img alt="Using the Eraser tool to remove unwanted tiles from the TileSet atlas" src="../../_images/using_tilesets_eraser_tool.webp" />
 <figcaption>
-<p><span class="caption-text">Using the Eraser tool to remove unwanted tiles from the TileSet atlas</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Using the Eraser tool to remove unwanted tiles from the TileSet atlas</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can also right-click a tile and choose <strong>Delete</strong>, as an alternative to the
@@ -11271,7 +11354,7 @@ tilesheets is recommended for better usability).</p>
 <figure class="align-center" id="id6">
 <img alt="Adjusting TileSet atlas properties in the dedicated inspector (part of the TileSet panel)" src="../../_images/using_tilesets_properties.webp" />
 <figcaption>
-<p><span class="caption-text">Adjusting TileSet atlas properties in the dedicated inspector (part of the TileSet panel)</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Adjusting TileSet atlas properties in the dedicated inspector (part of the TileSet panel)</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The following properties can be adjusted on the atlas:</p>
@@ -11301,12 +11384,12 @@ three vertical dots menu button at the top of the TileSet editor and choose
 <figure class="align-center" id="id7">
 <img alt="Recreating tiles automatically after changing atlas properties" src="../../_images/using_tilesets_recreate_tiles_automatically.webp" />
 <figcaption>
-<p><span class="caption-text">Recreating tiles automatically after changing atlas properties</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Recreating tiles automatically after changing atlas properties</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="using-a-collection-of-scenes">
-<h3>Using a collection of scenes<a class="headerlink" href="#using-a-collection-of-scenes" title="Permalink to this headline">¶</a></h3>
+<h3>Using a collection of scenes<a class="headerlink" href="#using-a-collection-of-scenes" title="Link to this heading"></a></h3>
 <p>Since Redot 4.0, you can place actual <em>scenes</em> as tiles. This allows you to use
 any collection of nodes as a tile. For example, you could use scene tiles to
 place gameplay elements, such as shops the player may be able to interact with.
@@ -11327,7 +11410,7 @@ editor, and create a new <strong>Scenes Collection</strong> in the left column:<
 <figure class="align-center" id="id8">
 <img alt="Creating a scenes collection in the TileSet editor" src="../../_images/using_tilesets_creating_scene_collection.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a scenes collection in the TileSet editor</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a scenes collection in the TileSet editor</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After creating a scenes collection, you can enter a descriptive name for the
@@ -11336,7 +11419,7 @@ collection then create a new scene slot:</p>
 <figure class="align-center" id="id9">
 <img alt="Creating a scene tile after selecting the scenes collection in the TileSet editor" src="../../_images/using_tilesets_scene_collection_create_scene_tile.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a scene tile after selecting the scenes collection in the TileSet editor</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a scene tile after selecting the scenes collection in the TileSet editor</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Select this scene slot in the right column, then use <strong>Quick Load</strong> (or
@@ -11344,7 +11427,7 @@ collection then create a new scene slot:</p>
 <figure class="align-center" id="id10">
 <img alt="Creating a scene slot, then loading a scene file into it in the TileSet editor" src="../../_images/using_tilesets_adding_scene_tile.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a scene slot, then loading a scene file into it in the TileSet editor</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a scene slot, then loading a scene file into it in the TileSet editor</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You now have a scene tile in your TileSet. Once you switch to the TileMap
@@ -11353,7 +11436,7 @@ any other tile.</p>
 </section>
 </section>
 <section id="merging-several-atlases-into-a-single-atlas">
-<h2>Merging several atlases into a single atlas<a class="headerlink" href="#merging-several-atlases-into-a-single-atlas" title="Permalink to this headline">¶</a></h2>
+<h2>Merging several atlases into a single atlas<a class="headerlink" href="#merging-several-atlases-into-a-single-atlas" title="Link to this heading"></a></h2>
 <p>Using multiple atlases within a single TileSet resource can sometimes be useful,
 but it can also be cumbersome in certain situations (especially if you're using
 one image per tile). Redot allows you to merge several atlases into a single
@@ -11364,7 +11447,7 @@ atlases, then choose <strong>Open Atlas Merging Tool</strong>:</p>
 <figure class="align-center" id="id11">
 <img alt="Opening the atlas merging tool after creating multiple atlases" src="../../_images/using_tilesets_open_atlas_merging_tool.webp" />
 <figcaption>
-<p><span class="caption-text">Opening the atlas merging tool after creating multiple atlases</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Opening the atlas merging tool after creating multiple atlases</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>This will open a dialog, in which you can select several atlases by holding
@@ -11372,7 +11455,7 @@ atlases, then choose <strong>Open Atlas Merging Tool</strong>:</p>
 <figure class="align-center" id="id12">
 <img alt="Using the atlas merging tool dialog" src="../../_images/using_tilesets_atlas_merging_tool_dialog.webp" />
 <figcaption>
-<p><span class="caption-text">Using the atlas merging tool dialog</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Using the atlas merging tool dialog</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Choose <strong>Merge</strong> to merge the selected atlases into a single atlas image (which
@@ -11395,7 +11478,7 @@ corresponding mapped value.</p>
 </div>
 </section>
 <section id="adding-collision-navigation-and-occlusion-to-the-tileset">
-<h2>Adding collision, navigation and occlusion to the TileSet<a class="headerlink" href="#adding-collision-navigation-and-occlusion-to-the-tileset" title="Permalink to this headline">¶</a></h2>
+<h2>Adding collision, navigation and occlusion to the TileSet<a class="headerlink" href="#adding-collision-navigation-and-occlusion-to-the-tileset" title="Link to this heading"></a></h2>
 <p>We've now successfully created a basic TileSet. We could start using in the
 TileMapLayer node now, but it currently lacks any form of collision detection.
 This means the player and other objects could walk straight through the floor or
@@ -11414,21 +11497,21 @@ value in the inspector to edit it then unfold <strong>Physics Layers</strong> an
 <figure class="align-center" id="id13">
 <img alt="Creating a physics layer in the TileSet resource inspector (within the TileMapLayer node)" src="../../_images/using_tilesets_create_physics_layer.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a physics layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a physics layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you also need navigation support, now is a good time to create a navigation layer:</p>
 <figure class="align-center" id="id14">
 <img alt="Creating a navigation layer in the TileSet resource inspector (within the TileMapLayer node)" src="../../_images/using_tilesets_create_navigation_layer.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a navigation layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a navigation layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you need support for light polygon occluders, now is a good time to create an occlusion layer:</p>
 <figure class="align-center" id="id15">
 <img alt="Creating an occlusion layer in the TileSet resource inspector (within the TileMapLayer node)" src="../../_images/using_tilesets_create_occlusion_layer.webp" />
 <figcaption>
-<p><span class="caption-text">Creating an occlusion layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating an occlusion layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -11446,7 +11529,7 @@ in the TileSet atlas inspector:</p>
 <figure class="align-center" id="id16">
 <img alt="Opening the collision editor while in Select mode" src="../../_images/using_tilesets_selecting_collision_editor.webp" />
 <figcaption>
-<p><span class="caption-text">Opening the collision editor while in Select mode</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Opening the collision editor while in Select mode</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can quickly create a rectangle collision shape by pressing <kbd class="kbd docutils literal notranslate">F</kbd> while
@@ -11455,7 +11538,7 @@ clicking in the empty area around the polygon editor to focus it:</p>
 <figure class="align-center" id="id17">
 <img alt="Using default rectangle collision shape by pressing :kbd:`F`" src="../../_images/using_tilesets_using_default_rectangle_collision.webp" />
 <figcaption>
-<p><span class="caption-text">Using default rectangle collision shape by pressing <kbd class="kbd docutils literal notranslate">F</kbd></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Using default rectangle collision shape by pressing <kbd class="kbd docutils literal notranslate">F</kbd></span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In this tile collision editor, you have access to all the 2D polygon editing tools:</p>
@@ -11474,14 +11557,14 @@ collision shape by removing one of the points:</p>
 <figure class="align-center" id="id18">
 <img alt="Creating a triangle collision shape by right-clicking one of the corners to remove it" src="../../_images/using_tilesets_creating_triangle_collision.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a triangle collision shape by right-clicking one of the corners to remove it</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a triangle collision shape by right-clicking one of the corners to remove it</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can also use the rectangle as a base for more complex shapes by adding more points:</p>
 <figure class="align-center" id="id19">
 <img alt="Drawing a custom collision for a complex tile shape" src="../../_images/using_tilesets_drawing_custom_collision.webp" />
 <figcaption>
-<p><span class="caption-text">Drawing a custom collision for a complex tile shape</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Drawing a custom collision for a complex tile shape</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -11495,7 +11578,7 @@ quickly, use functionality to
 </div>
 </section>
 <section id="assigning-custom-metadata-to-the-tileset-s-tiles">
-<h2>Assigning custom metadata to the TileSet's tiles<a class="headerlink" href="#assigning-custom-metadata-to-the-tileset-s-tiles" title="Permalink to this headline">¶</a></h2>
+<h2>Assigning custom metadata to the TileSet's tiles<a class="headerlink" href="#assigning-custom-metadata-to-the-tileset-s-tiles" title="Link to this heading"></a></h2>
 <p>You can assign custom data on a per-tile basis using <em>custom data layers</em>.
 This can be useful to store information specific to your game, such as the damage
 that a tile should deal when the player touches it, or whether a tile can be
@@ -11508,13 +11591,13 @@ the custom data for the alternative tile only.</p>
 <figure class="align-center" id="id20">
 <img alt="Creating a custom data layer in the TileSet resource inspector (within the TileMapLayer node)" src="../../_images/using_tilesets_create_custom_data_layer.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a custom data layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a custom data layer in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id21">
 <img alt="Example of configured custom data layers with game-specific properties" src="../../_images/using_tilesets_custom_data_layers_example.webp" />
 <figcaption>
-<p><span class="caption-text">Example of configured custom data layers with game-specific properties</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Example of configured custom data layers with game-specific properties</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can reorder custom data without breaking existing metadata: the TileSet
@@ -11525,7 +11608,7 @@ to <code class="docutils literal notranslate"><span class="pre">false</span></co
 <figure class="align-center" id="id22">
 <img alt="Editing custom data in the TileSet editor while in Select mode" src="../../_images/using_tilesets_edit_custom_data.webp" />
 <figcaption>
-<p><span class="caption-text">Editing custom data in the TileSet editor while in Select mode</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Editing custom data in the TileSet editor while in Select mode</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><a class="reference internal" href="#doc-using-tilemaps-using-tile-property-painting"><span class="std std-ref">Tile property painting</span></a>
@@ -11533,12 +11616,12 @@ can also be used for custom data:</p>
 <figure class="align-center" id="id23">
 <img alt="Assigning custom data in the TileSet editor using tile property painting" src="../../_images/using_tilesets_paint_custom_data.webp" />
 <figcaption>
-<p><span class="caption-text">Assigning custom data in the TileSet editor using tile property painting</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Assigning custom data in the TileSet editor using tile property painting</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="creating-terrain-sets-autotiling">
-<span id="doc-using-tilesets-creating-terrain-sets"></span><h2>Creating terrain sets (autotiling)<a class="headerlink" href="#creating-terrain-sets-autotiling" title="Permalink to this headline">¶</a></h2>
+<span id="doc-using-tilesets-creating-terrain-sets"></span><h2>Creating terrain sets (autotiling)<a class="headerlink" href="#creating-terrain-sets-autotiling" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This functionality was implemented in a different form as <em>autotiling</em> in Redot 3.x.
@@ -11570,14 +11653,14 @@ the <a class="reference external" href="https://www.mapeditor.org/">Tiled</a> ed
 <figure class="align-center" id="id24">
 <img alt="Creating a terrain set in the TileSet resource inspector (within the TileMapLayer node)" src="../../_images/using_tilesets_create_terrain_set.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a terrain set in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a terrain set in the TileSet resource inspector (within the TileMapLayer node)</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After creating a terrain set, you <strong>must</strong> create one or more terrains <em>within</em> the terrain set:</p>
 <figure class="align-center" id="id25">
 <img alt="Creating a terrain within the terrain set" src="../../_images/using_tilesets_create_terrain.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a terrain within the terrain set</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a terrain within the terrain set</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In the TileSet editor, switch to Select mode and click a tile. In the middle
@@ -11593,7 +11676,7 @@ start from <code class="docutils literal notranslate"><span class="pre">0</span>
 <figure class="align-center" id="id26">
 <img alt="Configuring terrain on a single tile in the TileSet editor's Select mode" src="../../_images/using_tilesets_configure_terrain_on_tile.webp" />
 <figcaption>
-<p><span class="caption-text">Configuring terrain on a single tile in the TileSet editor's Select mode</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Configuring terrain on a single tile in the TileSet editor's Select mode</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After doing so, you can now configure the <strong>Terrain Peering Bits</strong> section which
@@ -11608,29 +11691,29 @@ if there is empty space on top of it (including diagonally).</p>
 <figure class="align-center" id="id27">
 <img alt="Configuring terrain peering bits on a single tile in the TileSet editor's Select mode" src="../../_images/using_tilesets_configure_terrain_peering_bits.webp" />
 <figcaption>
-<p><span class="caption-text">Configuring terrain peering bits on a single tile in the TileSet editor's Select mode</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Configuring terrain peering bits on a single tile in the TileSet editor's Select mode</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>An example configuration for a full tilesheet may look as follows:</p>
 <figure class="align-center" id="id28">
 <img alt="Example full tilesheet for a sidescrolling game" src="../../_images/using_tilesets_terrain_example_tilesheet.webp" />
 <figcaption>
-<p><span class="caption-text">Example full tilesheet for a sidescrolling game</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Example full tilesheet for a sidescrolling game</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id29">
 <img alt="Example full tilesheet for a sidescrolling game with terrain peering bits visible" src="../../_images/using_tilesets_terrain_example_tilesheet_configuration.webp" />
 <figcaption>
-<p><span class="caption-text">Example full tilesheet for a sidescrolling game with terrain peering bits visible</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Example full tilesheet for a sidescrolling game with terrain peering bits visible</span><a class="headerlink" href="#id29" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="assigning-properties-to-multiple-tiles-at-once">
-<span id="doc-using-tilemaps-assigning-properties-to-multiple-tiles"></span><h2>Assigning properties to multiple tiles at once<a class="headerlink" href="#assigning-properties-to-multiple-tiles-at-once" title="Permalink to this headline">¶</a></h2>
+<span id="doc-using-tilemaps-assigning-properties-to-multiple-tiles"></span><h2>Assigning properties to multiple tiles at once<a class="headerlink" href="#assigning-properties-to-multiple-tiles-at-once" title="Link to this heading"></a></h2>
 <p>There are two ways to assign properties to multiple tiles at once.
 Depending on your use cases, one method may be faster than the other:</p>
 <section id="using-multiple-tile-selection">
-<h3>Using multiple tile selection<a class="headerlink" href="#using-multiple-tile-selection" title="Permalink to this headline">¶</a></h3>
+<h3>Using multiple tile selection<a class="headerlink" href="#using-multiple-tile-selection" title="Link to this heading"></a></h3>
 <p>If you wish to configure various properties on several tiles at once,
 choose the <strong>Select</strong> mode at the top of the TileSet editor:</p>
 <p>After doing this, you can select multiple tiles on the right column by holding
@@ -11647,12 +11730,12 @@ property's value on all tiles in the atlas after editing a property:</p>
 <figure class="align-center" id="id30">
 <img alt="Selecting multiple tiles using the Select mode, then applying properties" src="../../_images/using_tilesets_select_and_set_tile_properties.webp" />
 <figcaption>
-<p><span class="caption-text">Selecting multiple tiles using the Select mode, then applying properties</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Selecting multiple tiles using the Select mode, then applying properties</span><a class="headerlink" href="#id30" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="using-tile-property-painting">
-<span id="doc-using-tilemaps-using-tile-property-painting"></span><h3>Using tile property painting<a class="headerlink" href="#using-tile-property-painting" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-tilemaps-using-tile-property-painting"></span><h3>Using tile property painting<a class="headerlink" href="#using-tile-property-painting" title="Link to this heading"></a></h3>
 <p>If you wish to apply a single property to several tiles at once,
 you can use the <em>property painting</em> mode for this purpose.</p>
 <p>Configure a property to be painted in the middle column, then
@@ -11661,7 +11744,7 @@ to &quot;paint&quot; properties onto tiles.</p>
 <figure class="align-center" id="id31">
 <img alt="Painting tile properties using the TileSet editor" src="../../_images/using_tilesets_paint_tile_properties.webp" />
 <figcaption>
-<p><span class="caption-text">Painting tile properties using the TileSet editor</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Painting tile properties using the TileSet editor</span><a class="headerlink" href="#id31" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Tile property painting is especially useful with properties that are
@@ -11669,13 +11752,13 @@ time-consuming to set manually, such as collision shapes:</p>
 <figure class="align-center" id="id32">
 <img alt="Painting a collision polygon, then left-clicking tiles to apply it" src="../../_images/using_tilesets_paint_tile_properties_collision.webp" />
 <figcaption>
-<p><span class="caption-text">Painting a collision polygon, then left-clicking tiles to apply it</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Painting a collision polygon, then left-clicking tiles to apply it</span><a class="headerlink" href="#id32" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 </section>
 <section id="creating-alternative-tiles">
-<span id="doc-using-tilesets-creating-alternative-tiles"></span><h2>Creating alternative tiles<a class="headerlink" href="#creating-alternative-tiles" title="Permalink to this headline">¶</a></h2>
+<span id="doc-using-tilesets-creating-alternative-tiles"></span><h2>Creating alternative tiles<a class="headerlink" href="#creating-alternative-tiles" title="Link to this heading"></a></h2>
 <p>Sometimes, you want to use a single tile image (found only once within the
 atlas), but configured in different ways. For example, you may want to use the
 same tile image, but rotated, flipped, or modulated with a different color. This
@@ -11692,7 +11775,7 @@ the TileSet editor, then choose <strong>Create an Alternative Tile</strong>:</p>
 <figure class="align-center" id="id33">
 <img alt="Creating an alternative tile by right-clicking a base tile in the TileSet editor" src="../../_images/using_tilesets_create_alternative_tile.webp" />
 <figcaption>
-<p><span class="caption-text">Creating an alternative tile by right-clicking a base tile in the TileSet editor</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating an alternative tile by right-clicking a base tile in the TileSet editor</span><a class="headerlink" href="#id33" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>If currently in Select mode, the alternative tile will already be selected
@@ -11705,7 +11788,7 @@ in the TileSet editor:</p>
 <figure class="align-center" id="id34">
 <img alt="Configuring an alternative tile after clicking it in the TileSet editor" src="../../_images/using_tilesets_configure_alternative_tile.webp" />
 <figcaption>
-<p><span class="caption-text">Configuring an alternative tile after clicking it in the TileSet editor</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Configuring an alternative tile after clicking it in the TileSet editor</span><a class="headerlink" href="#id34" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After selecting an alternative tile, you can change any properties using the

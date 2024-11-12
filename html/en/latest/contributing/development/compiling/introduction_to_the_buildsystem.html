@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Introduction to the buildsystem" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="contributing/development/compiling/introduction_to_the_buildsystem.html" />
@@ -11,44 +13,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Introduction to the buildsystem &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/tabs.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/contributing/development/compiling/introduction_to_the_buildsystem.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/tabs.js?v=3030b3cb"></script>
+      <script src="../../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -65,12 +47,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -151,6 +137,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -190,17 +177,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -919,7 +923,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -982,9 +985,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1100,6 +1115,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1562,6 +1584,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1740,7 +1763,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2321,7 +2344,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2479,6 +2502,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/scripting/index.html">Scripting</a><ul>
@@ -2486,9 +2531,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2504,9 +2566,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2515,6 +2578,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2546,12 +2610,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2588,7 +2653,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2789,6 +2871,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2995,7 +3078,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ui/gui_containers.html">Using Containers</a><ul>
@@ -3404,6 +3487,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11112,7 +11196,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Engine development</a></li>
           <li class="breadcrumb-item"><a href="index.html">Building from source</a></li>
       <li class="breadcrumb-item active">Introduction to the buildsystem</li>
@@ -11175,7 +11259,7 @@
 
   
   <section id="introduction-to-the-buildsystem">
-<span id="doc-introduction-to-the-buildsystem"></span><h1>Introduction to the buildsystem<a class="headerlink" href="#introduction-to-the-buildsystem" title="Permalink to this headline">¶</a></h1>
+<span id="doc-introduction-to-the-buildsystem"></span><h1>Introduction to the buildsystem<a class="headerlink" href="#introduction-to-the-buildsystem" title="Link to this heading"></a></h1>
 <p>Redot is a primarily C++ project and it <a class="reference internal" href="../../../about/faq.html#doc-faq-why-scons"><span class="std std-ref">uses the SCons build system.</span></a>
 We love SCons for how maintainable and easy to set up it makes our buildsystem. And thanks to
 that compiling Redot from source can be as simple as running:</p>
@@ -11208,7 +11292,7 @@ documentation to learn more:</p>
 platform, and how to compile for that platform. Please feel free to go back and forth between them and
 this article to reference platform-specific and universal configuration options.</p>
 <section id="using-multi-threading">
-<h2>Using multi-threading<a class="headerlink" href="#using-multi-threading" title="Permalink to this headline">¶</a></h2>
+<h2>Using multi-threading<a class="headerlink" href="#using-multi-threading" title="Link to this heading"></a></h2>
 <p>The build process may take a while, depending on how powerful your system is. By default, Redot's
 SCons setup is configured to use all CPU threads but one (to keep the system responsive during
 compilation). If you want to adjust how many CPU threads SCons will use, use the <code class="docutils literal notranslate"><span class="pre">-j</span> <span class="pre">&lt;threads&gt;</span></code>
@@ -11219,7 +11303,7 @@ parameter to specify how many threads will be used for the build.</p>
 </div>
 </section>
 <section id="platform-selection">
-<h2>Platform selection<a class="headerlink" href="#platform-selection" title="Permalink to this headline">¶</a></h2>
+<h2>Platform selection<a class="headerlink" href="#platform-selection" title="Link to this heading"></a></h2>
 <p>Redot's build system will begin by detecting the platforms it can build
 for. If not detected, the platform will simply not appear on the list of
 available platforms. The build requirements for each platform are
@@ -11248,7 +11332,7 @@ Please<span class="w"> </span>run<span class="w"> </span>SCons<span class="w"> <
 </div>
 </section>
 <section id="resulting-binary">
-<span id="doc-introduction-to-the-buildsystem-resulting-binary"></span><h2>Resulting binary<a class="headerlink" href="#resulting-binary" title="Permalink to this headline">¶</a></h2>
+<span id="doc-introduction-to-the-buildsystem-resulting-binary"></span><h2>Resulting binary<a class="headerlink" href="#resulting-binary" title="Link to this heading"></a></h2>
 <p>The resulting binaries will be placed in the <code class="docutils literal notranslate"><span class="pre">bin/</span></code> subdirectory,
 generally with this naming convention:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>godot.&lt;platform&gt;.&lt;target&gt;<span class="o">[</span>.dev<span class="o">][</span>.double<span class="o">]</span>.&lt;arch&gt;<span class="o">[</span>.&lt;extra_suffix&gt;<span class="o">][</span>.&lt;ext&gt;<span class="o">]</span>
@@ -11275,7 +11359,7 @@ you can build them yourself).</p>
 build targets, and which will be explained below.</p>
 </section>
 <section id="target">
-<span id="doc-introduction-to-the-buildsystem-target"></span><h2>Target<a class="headerlink" href="#target" title="Permalink to this headline">¶</a></h2>
+<span id="doc-introduction-to-the-buildsystem-target"></span><h2>Target<a class="headerlink" href="#target" title="Link to this heading"></a></h2>
 <p>Target controls if the editor is contained and debug flags are used.
 All builds are optimized. Each mode means:</p>
 <ul class="simple">
@@ -11291,7 +11375,7 @@ run projects but does not include the editor or the Project Manager.</p>
 </div>
 </section>
 <section id="development-and-production-aliases">
-<h2>Development and production aliases<a class="headerlink" href="#development-and-production-aliases" title="Permalink to this headline">¶</a></h2>
+<h2>Development and production aliases<a class="headerlink" href="#development-and-production-aliases" title="Link to this heading"></a></h2>
 <p>When creating builds for development (running debugging/<a class="reference internal" href="../debugging/using_cpp_profilers.html#doc-using-cpp-profilers"><span class="std std-ref">profiling</span></a>
 tools), you often have different goals compared to production builds
 (making binaries as fast and small as possible).</p>
@@ -11313,7 +11397,7 @@ same command line with different values. For example, you can use <code class="d
 debugging symbols included.</p>
 </section>
 <section id="dev-build">
-<h2>Dev build<a class="headerlink" href="#dev-build" title="Permalink to this headline">¶</a></h2>
+<h2>Dev build<a class="headerlink" href="#dev-build" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">dev_build</span></code> should <strong>not</strong> be confused with <code class="docutils literal notranslate"><span class="pre">dev_mode</span></code>, which is an
@@ -11336,7 +11420,7 @@ See <a class="reference internal" href="../debugging/using_sanitizers.html#doc-u
 </div>
 </section>
 <section id="debugging-symbols">
-<h2>Debugging symbols<a class="headerlink" href="#debugging-symbols" title="Permalink to this headline">¶</a></h2>
+<h2>Debugging symbols<a class="headerlink" href="#debugging-symbols" title="Link to this heading"></a></h2>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">debug_symbols=no</span></code> is used, which means <strong>no</strong> debugging symbols
 are included in compiled binaries. Use <code class="docutils literal notranslate"><span class="pre">debug_symbols=yes</span></code> to include debug
 symbols within compiled binaries, which allows debuggers and profilers to work
@@ -11358,7 +11442,7 @@ a binary you've already compiled.</p>
 </div>
 </section>
 <section id="optimization-level">
-<h2>Optimization level<a class="headerlink" href="#optimization-level" title="Permalink to this headline">¶</a></h2>
+<h2>Optimization level<a class="headerlink" href="#optimization-level" title="Link to this heading"></a></h2>
 <p>Several compiler optimization levels can be chosen from:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">optimize=speed_trace</span></code> <em>(default when targeting non-Web platforms)</em>: Favors
@@ -11382,7 +11466,7 @@ using the <code class="docutils literal notranslate"><span class="pre">cflags</s
 </ul>
 </section>
 <section id="architecture">
-<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
+<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">arch</span></code> option is meant to control the CPU or OS version intended to run the
 binaries. It is focused mostly on desktop platforms and ignored everywhere
 else.</p>
@@ -11396,7 +11480,7 @@ relevant.  The default value <code class="docutils literal notranslate"><span cl
 that matches the host platform.</p>
 </section>
 <section id="custom-modules">
-<span id="doc-buildsystem-custom-modules"></span><h2>Custom modules<a class="headerlink" href="#custom-modules" title="Permalink to this headline">¶</a></h2>
+<span id="doc-buildsystem-custom-modules"></span><h2>Custom modules<a class="headerlink" href="#custom-modules" title="Link to this heading"></a></h2>
 <p>It's possible to compile modules residing outside of Redot's directory
 tree, along with the built-in modules.</p>
 <p>A <code class="docutils literal notranslate"><span class="pre">custom_modules</span></code> build option can be passed to the command line before
@@ -11420,7 +11504,7 @@ to override built-in module implementations.</p>
 </div>
 </section>
 <section id="cleaning-generated-files">
-<h2>Cleaning generated files<a class="headerlink" href="#cleaning-generated-files" title="Permalink to this headline">¶</a></h2>
+<h2>Cleaning generated files<a class="headerlink" href="#cleaning-generated-files" title="Link to this heading"></a></h2>
 <p>Sometimes, you may encounter an error due to generated files being present. You
 can remove them by using <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--clean</span> <span class="pre">&lt;options&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;options&gt;</span></code> is the
 list of build options you've used to build Redot previously.</p>
@@ -11430,25 +11514,26 @@ and ignored files in the repository. Don't run this command if you have
 uncommitted work!</p>
 </section>
 <section id="other-build-options">
-<h2>Other build options<a class="headerlink" href="#other-build-options" title="Permalink to this headline">¶</a></h2>
+<h2>Other build options<a class="headerlink" href="#other-build-options" title="Link to this heading"></a></h2>
 <p>There are several other build options that you can use to configure the
 way Redot should be built (compiler, debug options, etc.) as well as the
 features to include/disable.</p>
 <p>Check the output of <code class="docutils literal notranslate"><span class="pre">scons</span> <span class="pre">--help</span></code> for details about each option for
 the version you are willing to compile.</p>
 <section id="overriding-the-build-options">
-<span id="doc-overriding-build-options"></span><h3>Overriding the build options<a class="headerlink" href="#overriding-the-build-options" title="Permalink to this headline">¶</a></h3>
+<span id="doc-overriding-build-options"></span><h3>Overriding the build options<a class="headerlink" href="#overriding-the-build-options" title="Link to this heading"></a></h3>
 <section id="using-a-file">
-<h4>Using a file<a class="headerlink" href="#using-a-file" title="Permalink to this headline">¶</a></h4>
+<h4>Using a file<a class="headerlink" href="#using-a-file" title="Link to this heading"></a></h4>
 <p>The default <code class="docutils literal notranslate"><span class="pre">custom.py</span></code> file can be created at the root of the Redot Engine
 source to initialize any SCons build options passed via the command line:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># custom.py</span>
-
-<span class="n">optimize</span> <span class="o">=</span> <span class="s2">&quot;size&quot;</span>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">custom.py</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">optimize</span> <span class="o">=</span> <span class="s2">&quot;size&quot;</span>
 <span class="n">module_mono_enabled</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
 <span class="n">use_llvm</span> <span class="o">=</span> <span class="s2">&quot;yes&quot;</span>
 <span class="n">extra_suffix</span> <span class="o">=</span> <span class="s2">&quot;game_title&quot;</span>
 </pre></div>
+</div>
 </div>
 <p>You can also disable some of the builtin modules before compiling, saving some
 time it takes to build the engine. See <a class="reference internal" href="optimizing_for_size.html#doc-optimizing-for-size"><span class="std std-ref">Optimizing a build for size</span></a> page for more details.</p>
@@ -11470,9 +11555,9 @@ line option, both overriding the default build configuration:</p>
 options.</p>
 </div>
 <p>It's also possible to override the options conditionally:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># custom.py</span>
-
-<span class="kn">import</span> <span class="nn">version</span>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">custom.py</span><a class="headerlink" href="#id2" title="Link to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">version</span>
 
 <span class="c1"># Override options specific for Redot 3.x and 4.x versions.</span>
 <span class="k">if</span> <span class="n">version</span><span class="o">.</span><span class="n">major</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
@@ -11481,9 +11566,10 @@ options.</p>
     <span class="k">pass</span>
 </pre></div>
 </div>
+</div>
 </section>
 <section id="using-the-sconsflags">
-<h4>Using the SCONSFLAGS<a class="headerlink" href="#using-the-sconsflags" title="Permalink to this headline">¶</a></h4>
+<h4>Using the SCONSFLAGS<a class="headerlink" href="#using-the-sconsflags" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">SCONSFLAGS</span></code> is an environment variable which is used by the SCons to set the
 options automatically without having to supply them via the command line.</p>
 <p>For instance, you may want to force a number of CPU threads with the
@@ -11501,7 +11587,7 @@ aforementioned <code class="docutils literal notranslate"><span class="pre">-j</
 </div></div>
 </section>
 <section id="scu-single-compilation-unit-build">
-<h4>SCU (single compilation unit) build<a class="headerlink" href="#scu-single-compilation-unit-build" title="Permalink to this headline">¶</a></h4>
+<h4>SCU (single compilation unit) build<a class="headerlink" href="#scu-single-compilation-unit-build" title="Link to this heading"></a></h4>
 <p>Regular builds tend to be bottlenecked by including large numbers of headers
 in each compilation translation unit. Primarily to speed up development (rather
 than for production builds), Redot offers a &quot;single compilation unit&quot; build
@@ -11523,7 +11609,7 @@ usually be faster to catch them on a local build on your machine.</p>
 </section>
 </section>
 <section id="export-templates">
-<h2>Export templates<a class="headerlink" href="#export-templates" title="Permalink to this headline">¶</a></h2>
+<h2>Export templates<a class="headerlink" href="#export-templates" title="Link to this heading"></a></h2>
 <p>Official export templates are downloaded from the Redot Engine site:
 <a class="reference external" href="https://redotengine.org/">redotengine.org</a>. However, you might want
 to build them yourself (in case you want newer ones, you are using custom

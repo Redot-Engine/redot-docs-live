@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="GDScript reference" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/scripting/gdscript/gdscript_basics.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>GDScript reference &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/scripting/gdscript/gdscript_basics.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=c6e86fd7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=80067981"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -150,6 +135,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#when-is-the-next-release-of-redot-out">When is the next release of Redot out?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-redot-version-should-i-use-for-a-new-project">Which Redot version should I use for a new project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-upgrade-my-project-to-use-new-redot-versions">Should I upgrade my project to use new Redot versions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#should-i-use-the-forward-mobile-or-compatibility-renderer">Should I use the Forward+, Mobile, or Compatibility renderer?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-would-like-to-contribute-how-can-i-get-started">I would like to contribute! How can I get started?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#i-have-a-great-idea-for-redot-how-can-i-share-it">I have a great idea for Redot. How can I share it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#is-it-possible-to-use-redot-to-create-non-game-applications">Is it possible to use Redot to create non-game applications?</a></li>
@@ -189,17 +175,34 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id4">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id5">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -918,7 +921,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#color-banding">Color banding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#depth-buffer-precision">Depth buffer precision</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#transparency-sorting">Transparency sorting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/3d_rendering_limitations.html#multi-sample-antialiasing">Multi-sample antialiasing</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/standard_material_3d.html">Standard Material 3D and ORM Material 3D</a><ul>
@@ -981,9 +983,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1099,6 +1113,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1561,6 +1582,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
@@ -1739,7 +1761,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2320,7 +2342,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,6 +2500,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../../rendering/compositor.html#compositor-effects">Compositor effects</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../rendering/renderers.html">Renderers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#introduction">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#renderers-rendering-drivers-and-renderingdevice">Renderers, rendering drivers, and RenderingDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#choosing-a-renderer">Choosing a renderer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#switching-between-renderers">Switching between renderers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../rendering/renderers.html#feature-comparison">Feature comparison</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#overall-comparison">Overall comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#lights-and-shadows">Lights and shadows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#global-illumination">Global Illumination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#environment-and-post-processing">Environment and post-processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#antialiasing">Antialiasing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#standardmaterial-features">StandardMaterial features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#shader-features">Shader features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rendering/renderers.html#other-features">Other features</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Scripting</a><ul class="current">
@@ -2485,9 +2529,26 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2503,9 +2564,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#nodes">Nodes</a></li>
@@ -2514,6 +2576,7 @@
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2545,12 +2608,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2587,7 +2651,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2788,6 +2869,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../shaders/shader_reference/shader_preprocessor.html">Shader preprocessor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../shaders/shader_reference/shader_preprocessor.html#why-use-a-shader-preprocessor">Why use a shader preprocessor?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../shaders/shader_reference/shader_preprocessor.html#directives">Directives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../shaders/shader_reference/shader_preprocessor.html#built-in-defines">Built-in defines</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../shaders/shader_reference/spatial_shader.html">Spatial shaders</a><ul>
@@ -2994,7 +3076,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -3403,6 +3485,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/documentation/docs_image_guidelines.html">Creating documentation images and videos</a><ul>
@@ -11111,7 +11194,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Scripting</a></li>
           <li class="breadcrumb-item"><a href="index.html">GDScript</a></li>
       <li class="breadcrumb-item active">GDScript reference</li>
@@ -11174,7 +11257,7 @@
 
   
   <section id="gdscript-reference">
-<span id="doc-gdscript"></span><h1>GDScript reference<a class="headerlink" href="#gdscript-reference" title="Permalink to this headline">¶</a></h1>
+<span id="doc-gdscript"></span><h1>GDScript reference<a class="headerlink" href="#gdscript-reference" title="Link to this heading"></a></h1>
 <p><a class="reference internal" href="#doc-gdscript"><span class="std std-ref">GDScript</span></a> is a high-level, <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Gradual_typing">gradually typed</a> programming language built for Redot.
 It uses an indentation-based syntax similar to languages like
 <a class="reference external" href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python</a>.
@@ -11182,7 +11265,7 @@ Its goal is to be optimized for and tightly integrated with Redot Engine,
 allowing great flexibility for content creation and integration.</p>
 <p>GDScript is entirely independent from Python and is not based on it.</p>
 <section id="history">
-<h2>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h2>
+<h2>History<a class="headerlink" href="#history" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Documentation about GDScript's history has been moved to the
@@ -11190,7 +11273,7 @@ allowing great flexibility for content creation and integration.</p>
 </div>
 </section>
 <section id="example-of-gdscript">
-<h2>Example of GDScript<a class="headerlink" href="#example-of-gdscript" title="Permalink to this headline">¶</a></h2>
+<h2>Example of GDScript<a class="headerlink" href="#example-of-gdscript" title="Link to this heading"></a></h2>
 <p>Some people can learn better by taking a look at the syntax, so
 here's an example of how GDScript looks.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Everything after &quot;#&quot; is a comment.</span>
@@ -11282,13 +11365,8 @@ here's an example of how GDScript looks.</p>
 C, C++, or C# but never used a dynamically typed one before, it is advised you
 read this tutorial: <a class="reference internal" href="gdscript_advanced.html#doc-gdscript-more-efficiently"><span class="std std-ref">GDScript: An introduction to dynamic languages</span></a>.</p>
 </section>
-<section id="language">
-<h2>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h2>
-<p>In the following, an overview is given to GDScript. Details, such as which
-methods are available to arrays or other objects, should be looked up in
-the linked class descriptions.</p>
 <section id="identifiers">
-<h3>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h3>
+<h2>Identifiers<a class="headerlink" href="#identifiers" title="Link to this heading"></a></h2>
 <p>Any string that restricts itself to alphabetic characters (<code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">z</span></code> and
 <code class="docutils literal notranslate"><span class="pre">A</span></code> to <code class="docutils literal notranslate"><span class="pre">Z</span></code>), digits (<code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">9</span></code>) and <code class="docutils literal notranslate"><span class="pre">_</span></code> qualifies as an identifier.
 Additionally, identifiers must not begin with a digit. Identifiers are
@@ -11300,7 +11378,7 @@ that are considered &quot;confusable&quot; for ASCII characters and emoji are no
 in identifiers.</p>
 </section>
 <section id="keywords">
-<h3>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h3>
+<h2>Keywords<a class="headerlink" href="#keywords" title="Link to this heading"></a></h2>
 <p>The following is the list of keywords supported by the language. Since
 keywords are reserved words (tokens), they can't be used as identifiers.
 Operators (like <code class="docutils literal notranslate"><span class="pre">in</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>, <code class="docutils literal notranslate"><span class="pre">and</span></code> or <code class="docutils literal notranslate"><span class="pre">or</span></code>) and names of built-in types
@@ -11308,10 +11386,6 @@ as listed in the following sections are also reserved.</p>
 <p>Keywords are defined in the <a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/master/modules/gdscript/gdscript_tokenizer.cpp">GDScript tokenizer</a>
 in case you want to take a look under the hood.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 92%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Keyword</p></th>
 <th class="head"><p>Description</p></th>
@@ -11428,15 +11502,11 @@ This makes it persistent across different machines when using version control.</
 </table>
 </section>
 <section id="operators">
-<h3>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h3>
+<h2>Operators<a class="headerlink" href="#operators" title="Link to this heading"></a></h2>
 <p>The following is the list of supported operators and their precedence. All binary operators are <a class="reference external" href="https://en.wikipedia.org/wiki/Operator_associativity">left-associative</a>,
 including the <code class="docutils literal notranslate"><span class="pre">**</span></code> operator. This means that <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">2</span> <span class="pre">**</span> <span class="pre">3</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">**</span> <span class="pre">2)</span> <span class="pre">**</span> <span class="pre">3</span></code>. Use parentheses to explicitly specify precedence you need, for
 example <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">**</span> <span class="pre">(2</span> <span class="pre">**</span> <span class="pre">3)</span></code>. The ternary <code class="docutils literal notranslate"><span class="pre">if/else</span></code> operator is right-associative.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Operator</strong></p></th>
 <th class="head"><p><strong>Description</strong></p></th>
@@ -11612,12 +11682,8 @@ and <a class="reference internal" href="../../../classes/class_%40globalscope.ht
 </div>
 </section>
 <section id="literals">
-<h3>Literals<a class="headerlink" href="#literals" title="Permalink to this headline">¶</a></h3>
+<h2>Literals<a class="headerlink" href="#literals" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Example(s)</strong></p></td>
 <td><p><strong>Description</strong></p></td>
@@ -11662,10 +11728,6 @@ and <a class="reference internal" href="../../../classes/class_%40globalscope.ht
 </table>
 <p>There are also two constructs that look like literals, but actually are not:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Example</strong></p></td>
 <td><p><strong>Description</strong></p></td>
@@ -11688,10 +11750,6 @@ The following ways to write numbers are all valid:</p>
 </div>
 <p><strong>Regular string literals</strong> can contain the following escape sequences:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 61%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Escape sequence</strong></p></td>
 <td><p><strong>Expands to</strong></p></td>
@@ -11766,7 +11824,7 @@ or use concatenation with a regular string literal.</p>
 <p>GDScript also supports <a class="reference internal" href="gdscript_format_string.html#doc-gdscript-printf"><span class="std std-ref">format strings</span></a>.</p>
 </section>
 <section id="annotations">
-<h3>Annotations<a class="headerlink" href="#annotations" title="Permalink to this headline">¶</a></h3>
+<h2>Annotations<a class="headerlink" href="#annotations" title="Link to this heading"></a></h2>
 <p>Annotations are special tokens in GDScript that act as modifiers to a script or
 its code and may affect how the script is treated by the Redot engine or
 editor.</p>
@@ -11798,9 +11856,8 @@ between parentheses and separated by commas.</p>
 <span class="n">@annotation_a</span><span class="w"> </span><span class="n">@annotation_b</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">variable</span>
 </pre></div>
 </div>
-</section>
 <section id="onready-annotation">
-<span id="doc-gdscript-onready-annotation"></span><h3><code class="docutils literal notranslate"><span class="pre">&#64;onready</span></code> annotation<a class="headerlink" href="#onready-annotation" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-onready-annotation"></span><h3><code class="docutils literal notranslate"><span class="pre">&#64;onready</span></code> annotation<a class="headerlink" href="#onready-annotation" title="Link to this heading"></a></h3>
 <p>When using nodes, it's common to desire to keep references to parts
 of the scene in a variable. As scenes are only warranted to be
 configured when entering the active scene tree, the sub-nodes can only
@@ -11843,8 +11900,9 @@ override it:</p>
 as an error by default. We do not recommend disabling or ignoring it.</p>
 </div>
 </section>
+</section>
 <section id="comments">
-<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
 <p>Anything from a <code class="docutils literal notranslate"><span class="pre">#</span></code> to the end of the line is ignored and is
 considered a comment.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a comment.</span>
@@ -11888,7 +11946,7 @@ var value</p>
 </dl>
 </section>
 <section id="code-regions">
-<h3>Code regions<a class="headerlink" href="#code-regions" title="Permalink to this headline">¶</a></h3>
+<h2>Code regions<a class="headerlink" href="#code-regions" title="Link to this heading"></a></h2>
 <p>Code regions are special types of comments that the script editor understands as
 <em>foldable regions</em>. This means that after writing code region comments, you can
 collapse and expand the region by clicking the arrow that appears at the left of
@@ -11949,7 +12007,7 @@ group multiple elements together.</p>
 </div>
 </section>
 <section id="line-continuation">
-<h3>Line continuation<a class="headerlink" href="#line-continuation" title="Permalink to this headline">¶</a></h3>
+<h2>Line continuation<a class="headerlink" href="#line-continuation" title="Link to this heading"></a></h2>
 <p>A line of code in GDScript can be continued on the next line by using a backslash
 (<code class="docutils literal notranslate"><span class="pre">\</span></code>). Add one at the end of a line and the code on the next line will act like
 it's where the backslash is. Here is an example:</p>
@@ -11965,9 +12023,8 @@ it's where the backslash is. Here is an example:</p>
 </pre></div>
 </div>
 </section>
-</section>
 <section id="built-in-types">
-<span id="doc-gdscript-builtin-types"></span><h2>Built-in types<a class="headerlink" href="#built-in-types" title="Permalink to this headline">¶</a></h2>
+<span id="doc-gdscript-builtin-types"></span><h2>Built-in types<a class="headerlink" href="#built-in-types" title="Link to this heading"></a></h2>
 <p>Built-in types are stack-allocated. They are passed as values. This means a copy
 is created on each assignment or when passing them as arguments to functions.
 The exceptions are <code class="docutils literal notranslate"><span class="pre">Object</span></code>, <code class="docutils literal notranslate"><span class="pre">Array</span></code>, <code class="docutils literal notranslate"><span class="pre">Dictionary</span></code>, and packed arrays
@@ -11975,10 +12032,10 @@ The exceptions are <code class="docutils literal notranslate"><span class="pre">
 All arrays, <code class="docutils literal notranslate"><span class="pre">Dictionary</span></code>, and some objects (<code class="docutils literal notranslate"><span class="pre">Node</span></code>, <code class="docutils literal notranslate"><span class="pre">Resource</span></code>)
 have a <code class="docutils literal notranslate"><span class="pre">duplicate()</span></code> method that allows you to make a copy.</p>
 <section id="basic-built-in-types">
-<h3>Basic built-in types<a class="headerlink" href="#basic-built-in-types" title="Permalink to this headline">¶</a></h3>
+<h3>Basic built-in types<a class="headerlink" href="#basic-built-in-types" title="Link to this heading"></a></h3>
 <p>A variable in GDScript can be assigned to several built-in types.</p>
 <section id="null">
-<h4>null<a class="headerlink" href="#null" title="Permalink to this headline">¶</a></h4>
+<h4>null<a class="headerlink" href="#null" title="Link to this heading"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">null</span></code> is an empty data type that contains no information and can not
 be assigned any other value.</p>
 <p>Only types that inherit from Object can have a <code class="docutils literal notranslate"><span class="pre">null</span></code> value
@@ -11987,117 +12044,117 @@ be assigned any other value.</p>
 and therefore cannot have a <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 </section>
 <section id="bool">
-<h4><a class="reference internal" href="../../../classes/class_bool.html#class-bool"><span class="std std-ref">bool</span></a><a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_bool.html#class-bool"><span class="std std-ref">bool</span></a><a class="headerlink" href="#bool" title="Link to this heading"></a></h4>
 <p>Short for &quot;boolean&quot;, it can only contain <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </section>
 <section id="int">
-<h4><a class="reference internal" href="../../../classes/class_int.html#class-int"><span class="std std-ref">int</span></a><a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_int.html#class-int"><span class="std std-ref">int</span></a><a class="headerlink" href="#int" title="Link to this heading"></a></h4>
 <p>Short for &quot;integer&quot;, it stores whole numbers (positive and negative).
 It is stored as a 64-bit value, equivalent to <code class="docutils literal notranslate"><span class="pre">int64_t</span></code> in C++.</p>
 </section>
 <section id="float">
-<h4><a class="reference internal" href="../../../classes/class_float.html#class-float"><span class="std std-ref">float</span></a><a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_float.html#class-float"><span class="std std-ref">float</span></a><a class="headerlink" href="#float" title="Link to this heading"></a></h4>
 <p>Stores real numbers, including decimals, using floating-point values.
 It is stored as a 64-bit value, equivalent to <code class="docutils literal notranslate"><span class="pre">double</span></code> in C++.
 Note: Currently, data structures such as <code class="docutils literal notranslate"><span class="pre">Vector2</span></code>, <code class="docutils literal notranslate"><span class="pre">Vector3</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">PackedFloat32Array</span></code> store 32-bit single-precision <code class="docutils literal notranslate"><span class="pre">float</span></code> values.</p>
 </section>
 <section id="string">
-<h4><a class="reference internal" href="../../../classes/class_string.html#class-string"><span class="std std-ref">String</span></a><a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_string.html#class-string"><span class="std std-ref">String</span></a><a class="headerlink" href="#string" title="Link to this heading"></a></h4>
 <p>A sequence of characters in <a class="reference external" href="https://en.wikipedia.org/wiki/Unicode">Unicode format</a>.</p>
 </section>
 <section id="stringname">
-<h4><a class="reference internal" href="../../../classes/class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a><a class="headerlink" href="#stringname" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a><a class="headerlink" href="#stringname" title="Link to this heading"></a></h4>
 <p>An immutable string that allows only one instance of each name. They are slower to
 create and may result in waiting for locks when multithreading. In exchange, they're
 very fast to compare, which makes them good candidates for dictionary keys.</p>
 </section>
 <section id="nodepath">
-<h4><a class="reference internal" href="../../../classes/class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a><a class="headerlink" href="#nodepath" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a><a class="headerlink" href="#nodepath" title="Link to this heading"></a></h4>
 <p>A pre-parsed path to a node or a node property.  It can be
 easily assigned to, and from, a String. They are useful to interact with
 the tree to get a node, or affecting properties like with <a class="reference internal" href="../../../classes/class_tween.html#class-tween"><span class="std std-ref">Tweens</span></a>.</p>
 </section>
 </section>
 <section id="vector-built-in-types">
-<h3>Vector built-in types<a class="headerlink" href="#vector-built-in-types" title="Permalink to this headline">¶</a></h3>
+<h3>Vector built-in types<a class="headerlink" href="#vector-built-in-types" title="Link to this heading"></a></h3>
 <section id="vector2">
-<h4><a class="reference internal" href="../../../classes/class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a><a class="headerlink" href="#vector2" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a><a class="headerlink" href="#vector2" title="Link to this heading"></a></h4>
 <p>2D vector type containing <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> fields. Can also be
 accessed as an array.</p>
 </section>
 <section id="vector2i">
-<h4><a class="reference internal" href="../../../classes/class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a><a class="headerlink" href="#vector2i" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a><a class="headerlink" href="#vector2i" title="Link to this heading"></a></h4>
 <p>Same as a Vector2 but the components are integers. Useful for representing
 items in a 2D grid.</p>
 </section>
 <section id="rect2">
-<h4><a class="reference internal" href="../../../classes/class_rect2.html#class-rect2"><span class="std std-ref">Rect2</span></a><a class="headerlink" href="#rect2" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_rect2.html#class-rect2"><span class="std std-ref">Rect2</span></a><a class="headerlink" href="#rect2" title="Link to this heading"></a></h4>
 <p>2D Rectangle type containing two vectors fields: <code class="docutils literal notranslate"><span class="pre">position</span></code> and <code class="docutils literal notranslate"><span class="pre">size</span></code>.
 Also contains an <code class="docutils literal notranslate"><span class="pre">end</span></code> field which is <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">+</span> <span class="pre">size</span></code>.</p>
 </section>
 <section id="vector3">
-<h4><a class="reference internal" href="../../../classes/class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a><a class="headerlink" href="#vector3" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a><a class="headerlink" href="#vector3" title="Link to this heading"></a></h4>
 <p>3D vector type containing <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> fields. This can also
 be accessed as an array.</p>
 </section>
 <section id="vector3i">
-<h4><a class="reference internal" href="../../../classes/class_vector3i.html#class-vector3i"><span class="std std-ref">Vector3i</span></a><a class="headerlink" href="#vector3i" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_vector3i.html#class-vector3i"><span class="std std-ref">Vector3i</span></a><a class="headerlink" href="#vector3i" title="Link to this heading"></a></h4>
 <p>Same as Vector3 but the components are integers. Can be use for indexing items
 in a 3D grid.</p>
 </section>
 <section id="transform2d">
-<h4><a class="reference internal" href="../../../classes/class_transform2d.html#class-transform2d"><span class="std std-ref">Transform2D</span></a><a class="headerlink" href="#transform2d" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_transform2d.html#class-transform2d"><span class="std std-ref">Transform2D</span></a><a class="headerlink" href="#transform2d" title="Link to this heading"></a></h4>
 <p>3×2 matrix used for 2D transforms.</p>
 </section>
 <section id="plane">
-<h4><a class="reference internal" href="../../../classes/class_plane.html#class-plane"><span class="std std-ref">Plane</span></a><a class="headerlink" href="#plane" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_plane.html#class-plane"><span class="std std-ref">Plane</span></a><a class="headerlink" href="#plane" title="Link to this heading"></a></h4>
 <p>3D Plane type in normalized form that contains a <code class="docutils literal notranslate"><span class="pre">normal</span></code> vector field
 and a <code class="docutils literal notranslate"><span class="pre">d</span></code> scalar distance.</p>
 </section>
 <section id="quaternion">
-<h4><a class="reference internal" href="../../../classes/class_quaternion.html#class-quaternion"><span class="std std-ref">Quaternion</span></a><a class="headerlink" href="#quaternion" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_quaternion.html#class-quaternion"><span class="std std-ref">Quaternion</span></a><a class="headerlink" href="#quaternion" title="Link to this heading"></a></h4>
 <p>Quaternion is a datatype used for representing a 3D rotation. It's
 useful for interpolating rotations.</p>
 </section>
 <section id="aabb">
-<h4><a class="reference internal" href="../../../classes/class_aabb.html#class-aabb"><span class="std std-ref">AABB</span></a><a class="headerlink" href="#aabb" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_aabb.html#class-aabb"><span class="std std-ref">AABB</span></a><a class="headerlink" href="#aabb" title="Link to this heading"></a></h4>
 <p>Axis-aligned bounding box (or 3D box) contains 2 vectors fields: <code class="docutils literal notranslate"><span class="pre">position</span></code>
 and <code class="docutils literal notranslate"><span class="pre">size</span></code>. Also contains an <code class="docutils literal notranslate"><span class="pre">end</span></code> field which is
 <code class="docutils literal notranslate"><span class="pre">position</span> <span class="pre">+</span> <span class="pre">size</span></code>.</p>
 </section>
 <section id="basis">
-<h4><a class="reference internal" href="../../../classes/class_basis.html#class-basis"><span class="std std-ref">Basis</span></a><a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_basis.html#class-basis"><span class="std std-ref">Basis</span></a><a class="headerlink" href="#basis" title="Link to this heading"></a></h4>
 <p>3x3 matrix used for 3D rotation and scale. It contains 3 vector fields
 (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code>) and can also be accessed as an array of 3D
 vectors.</p>
 </section>
 <section id="transform3d">
-<h4><a class="reference internal" href="../../../classes/class_transform3d.html#class-transform3d"><span class="std std-ref">Transform3D</span></a><a class="headerlink" href="#transform3d" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_transform3d.html#class-transform3d"><span class="std std-ref">Transform3D</span></a><a class="headerlink" href="#transform3d" title="Link to this heading"></a></h4>
 <p>3D Transform contains a Basis field <code class="docutils literal notranslate"><span class="pre">basis</span></code> and a Vector3 field
 <code class="docutils literal notranslate"><span class="pre">origin</span></code>.</p>
 </section>
 </section>
 <section id="engine-built-in-types">
-<h3>Engine built-in types<a class="headerlink" href="#engine-built-in-types" title="Permalink to this headline">¶</a></h3>
+<h3>Engine built-in types<a class="headerlink" href="#engine-built-in-types" title="Link to this heading"></a></h3>
 <section id="color">
-<h4><a class="reference internal" href="../../../classes/class_color.html#class-color"><span class="std std-ref">Color</span></a><a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_color.html#class-color"><span class="std std-ref">Color</span></a><a class="headerlink" href="#color" title="Link to this heading"></a></h4>
 <p>Color data type contains <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">a</span></code> fields. It can
 also be accessed as <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, and <code class="docutils literal notranslate"><span class="pre">v</span></code> for hue/saturation/value.</p>
 </section>
 <section id="rid">
-<h4><a class="reference internal" href="../../../classes/class_rid.html#class-rid"><span class="std std-ref">RID</span></a><a class="headerlink" href="#rid" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_rid.html#class-rid"><span class="std std-ref">RID</span></a><a class="headerlink" href="#rid" title="Link to this heading"></a></h4>
 <p>Resource ID (RID). Servers use generic RIDs to reference opaque data.</p>
 </section>
 <section id="object">
-<h4><a class="reference internal" href="../../../classes/class_object.html#class-object"><span class="std std-ref">Object</span></a><a class="headerlink" href="#object" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_object.html#class-object"><span class="std std-ref">Object</span></a><a class="headerlink" href="#object" title="Link to this heading"></a></h4>
 <p>Base class for anything that is not a built-in type.</p>
 </section>
 </section>
 <section id="container-built-in-types">
-<h3>Container built-in types<a class="headerlink" href="#container-built-in-types" title="Permalink to this headline">¶</a></h3>
+<h3>Container built-in types<a class="headerlink" href="#container-built-in-types" title="Link to this heading"></a></h3>
 <section id="array">
-<h4><a class="reference internal" href="../../../classes/class_array.html#class-array"><span class="std std-ref">Array</span></a><a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_array.html#class-array"><span class="std std-ref">Array</span></a><a class="headerlink" href="#array" title="Link to this heading"></a></h4>
 <p>Generic sequence of arbitrary object types, including other arrays or dictionaries (see below).
 The array can resize dynamically. Arrays are indexed starting from index <code class="docutils literal notranslate"><span class="pre">0</span></code>.
 Negative indices count from the end.</p>
@@ -12112,7 +12169,7 @@ Negative indices count from the end.</p>
 </div>
 </section>
 <section id="typed-arrays">
-<h4>Typed arrays<a class="headerlink" href="#typed-arrays" title="Permalink to this headline">¶</a></h4>
+<h4>Typed arrays<a class="headerlink" href="#typed-arrays" title="Link to this heading"></a></h4>
 <p>Redot 4.0 added support for typed arrays. On write operations, Redot checks that
 element values match the specified type, so the array cannot contain invalid values.
 The GDScript static analyzer takes typed arrays into account, however array methods like
@@ -12123,7 +12180,7 @@ native or user class, or enum. Nested array types (like <code class="docutils li
 <span class="k">var</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">Node</span><span class="p">]</span>
 <span class="k">var</span><span class="w"> </span><span class="n">c</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">MyClass</span><span class="p">]</span>
 <span class="k">var</span><span class="w"> </span><span class="n">d</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">MyEnum</span><span class="p">]</span>
-<span class="k">var</span><span class="w"> </span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="n">Variant</span><span class="p">]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">Variant</span><span class="p">]</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Array</span></code> and <code class="docutils literal notranslate"><span class="pre">Array[Variant]</span></code> are the same thing.</p>
@@ -12153,7 +12210,7 @@ and compatibility with old code. However, operations on untyped arrays are consi
 </div>
 </section>
 <section id="packed-arrays">
-<h4>Packed arrays<a class="headerlink" href="#packed-arrays" title="Permalink to this headline">¶</a></h4>
+<h4>Packed arrays<a class="headerlink" href="#packed-arrays" title="Link to this heading"></a></h4>
 <p>GDScript arrays are allocated linearly in memory for speed.
 Large arrays (more than tens of thousands of elements) may however cause
 memory fragmentation. If this is a concern, special types of
@@ -12174,7 +12231,7 @@ arrays. They are therefore only recommended to use for large data sets:</p>
 </ul>
 </section>
 <section id="dictionary">
-<h4><a class="reference internal" href="../../../classes/class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a><a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a><a class="headerlink" href="#dictionary" title="Link to this heading"></a></h4>
 <p>Associative container which contains values referenced by unique keys.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;A key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A value&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]}</span>
 <span class="n">d</span><span class="p">[</span><span class="s2">&quot;Hi!&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
@@ -12222,13 +12279,13 @@ this, use the <a class="reference internal" href="../../../classes/class_object.
 </div>
 </section>
 <section id="signal">
-<h4><a class="reference internal" href="../../../classes/class_signal.html#class-signal"><span class="std std-ref">Signal</span></a><a class="headerlink" href="#signal" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_signal.html#class-signal"><span class="std std-ref">Signal</span></a><a class="headerlink" href="#signal" title="Link to this heading"></a></h4>
 <p>A signal is a message that can be emitted by an object to those who want to
 listen to it. The Signal type can be used for passing the emitter around.</p>
 <p>Signals are better used by getting them from actual objects, e.g. <code class="docutils literal notranslate"><span class="pre">$Button.button_up</span></code>.</p>
 </section>
 <section id="callable">
-<h4><a class="reference internal" href="../../../classes/class_callable.html#class-callable"><span class="std std-ref">Callable</span></a><a class="headerlink" href="#callable" title="Permalink to this headline">¶</a></h4>
+<h4><a class="reference internal" href="../../../classes/class_callable.html#class-callable"><span class="std std-ref">Callable</span></a><a class="headerlink" href="#callable" title="Link to this heading"></a></h4>
 <p>Contains an object and a function, which is useful for passing functions as
 values (e.g. when connecting to signals).</p>
 <p>Getting a method as a member returns a callable. <code class="docutils literal notranslate"><span class="pre">var</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">$Sprite2D.rotate</span></code>
@@ -12238,10 +12295,8 @@ will set the value of <code class="docutils literal notranslate"><span class="pr
 </section>
 </section>
 </section>
-<section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
 <section id="variables">
-<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h2>
 <p>Variables can exist as class members or local to functions. They are
 created with the <code class="docutils literal notranslate"><span class="pre">var</span></code> keyword and may, optionally, be assigned a
 value upon initialization.</p>
@@ -12287,7 +12342,7 @@ since it's likely a mistake.</p>
 the project settings. See <a class="reference internal" href="warning_system.html#doc-gdscript-warning-system"><span class="std std-ref">GDScript warning system</span></a> for details.</p>
 </div>
 <section id="initialization-order">
-<h4>Initialization order<a class="headerlink" href="#initialization-order" title="Permalink to this headline">¶</a></h4>
+<h3>Initialization order<a class="headerlink" href="#initialization-order" title="Link to this heading"></a></h3>
 <p>Member variables are initialized in the following order:</p>
 <ol class="arabic simple">
 <li><p>Depending on the variable's static type, the variable is either <code class="docutils literal notranslate"><span class="pre">null</span></code>
@@ -12334,7 +12389,7 @@ or remove the empty dictionary assignment (<code class="docutils literal notrans
 </div>
 </section>
 <section id="static-variables">
-<h4>Static variables<a class="headerlink" href="#static-variables" title="Permalink to this headline">¶</a></h4>
+<h3>Static variables<a class="headerlink" href="#static-variables" title="Link to this heading"></a></h3>
 <p>A class member variable can be declared static:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">a</span>
 </pre></div>
@@ -12409,9 +12464,8 @@ and every instance have the same <code class="docutils literal notranslate"><spa
 </pre></div>
 </div>
 </section>
-</section>
 <section id="static-unload-annotation">
-<h3><code class="docutils literal notranslate"><span class="pre">&#64;static_unload</span></code> annotation<a class="headerlink" href="#static-unload-annotation" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">&#64;static_unload</span></code> annotation<a class="headerlink" href="#static-unload-annotation" title="Link to this heading"></a></h3>
 <p>Since GDScript classes are resources, having static variables in a script prevents it from being unloaded
 even if there are no more instances of that class and no other references left. This can be important
 if static variables store large amounts of data or hold references to other project resources, such as scenes.
@@ -12423,48 +12477,49 @@ annotation if static variables don't store important data and can be reset.</p>
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">&#64;static_unload</span></code> applies to the entire script (including inner classes)
 and must be placed at the top of the script, before <code class="docutils literal notranslate"><span class="pre">class_name</span></code> and <code class="docutils literal notranslate"><span class="pre">extends</span></code>:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">@static_unload</span>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@static_unload</span>
 <span class="k">class_name</span><span class="w"> </span><span class="n">MyNode</span>
 <span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
 </pre></div>
 </div>
 <p>See also <a class="reference internal" href="#static-functions">Static functions</a> and <a class="reference internal" href="#static-constructor">Static constructor</a>.</p>
+</section>
 <section id="casting">
-<h4>Casting<a class="headerlink" href="#casting" title="Permalink to this headline">¶</a></h4>
+<h3>Casting<a class="headerlink" href="#casting" title="Link to this heading"></a></h3>
 <p>Values assigned to typed variables must have a compatible type. If it's needed to
 coerce a value to be of a certain type, in particular for object types, you can
 use the casting operator <code class="docutils literal notranslate"><span class="pre">as</span></code>.</p>
 <p>Casting between object types results in the same object if the value is of the
 same type or a subtype of the cast type.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">my_node2D</span><span class="p">:</span><span class="w"> </span><span class="n">Node2D</span>
-<span class="n">my_node2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Sprite2D</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Node2D</span><span class="w"> </span><span class="c1"># Works since Sprite2D is a subtype of Node2D.</span>
+<span class="n">my_node2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Sprite2D</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Node2D</span><span class="w"> </span><span class="c1"># Works since Sprite2D is a subtype of Node2D.</span>
 </pre></div>
 </div>
 <p>If the value is not a subtype, the casting operation will result in a <code class="docutils literal notranslate"><span class="pre">null</span></code> value.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">my_node2D</span><span class="p">:</span><span class="w"> </span><span class="n">Node2D</span>
-<span class="n">my_node2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Button</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Node2D</span><span class="w"> </span><span class="c1"># Results in &#39;null&#39; since a Button is not a subtype of Node2D.</span>
+<span class="n">my_node2D</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Button</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Node2D</span><span class="w"> </span><span class="c1"># Results in &#39;null&#39; since a Button is not a subtype of Node2D.</span>
 </pre></div>
 </div>
 <p>For built-in types, they will be forcibly converted if possible, otherwise the
 engine will raise an error.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">my_int</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
-<span class="n">my_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="c1"># The string can be converted to int.</span>
-<span class="n">my_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="c1"># A Vector2 can&#39;t be converted to int, this will cause an error.</span>
+<span class="n">my_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="c1"># The string can be converted to int.</span>
+<span class="n">my_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">()</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="c1"># A Vector2 can&#39;t be converted to int, this will cause an error.</span>
 </pre></div>
 </div>
 <p>Casting is also useful to have better type-safe variables when interacting with
 the scene tree:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Will infer the variable to be of type Sprite2D.</span>
-<span class="k">var</span><span class="w"> </span><span class="n">my_sprite</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Character</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Sprite2D</span>
+<span class="k">var</span><span class="w"> </span><span class="n">my_sprite</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Character</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Sprite2D</span>
 
 <span class="c1"># Will fail if $AnimPlayer is not an AnimationPlayer, even if it has the method &#39;play()&#39;.</span>
-<span class="p">(</span><span class="o">$</span><span class="n">AnimPlayer</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">AnimationPlayer</span><span class="p">)</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">&quot;walk&quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="o">$</span><span class="n">AnimPlayer</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">AnimationPlayer</span><span class="p">)</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="s2">&quot;walk&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="constants">
-<h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading"></a></h2>
 <p>Constants are values you cannot change when the game is running.
 Their value must be known at compile-time. Using the
 <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword allows you to give a constant value a name. Trying to assign a
@@ -12490,7 +12545,7 @@ possible to add explicit type specification:</p>
 <p>You can also create constants inside a function, which is useful to name local
 magic values.</p>
 <section id="enums">
-<h4>Enums<a class="headerlink" href="#enums" title="Permalink to this headline">¶</a></h4>
+<h3>Enums<a class="headerlink" href="#enums" title="Link to this heading"></a></h3>
 <p>Enums are basically a shorthand for constants, and are pretty useful if you
 want to assign consecutive integers to some constant.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">TILE_BRICK</span><span class="p">,</span><span class="w"> </span><span class="n">TILE_FLOOR</span><span class="p">,</span><span class="w"> </span><span class="n">TILE_SPIKE</span><span class="p">,</span><span class="w"> </span><span class="n">TILE_TELEPORT</span><span class="p">}</span>
@@ -12534,7 +12589,7 @@ or <code class="docutils literal notranslate"><span class="pre">0</span></code> 
 </section>
 </section>
 <section id="functions">
-<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <p>Functions always belong to a <a class="reference internal" href="#classes">class</a>. The scope priority for
 variable look-up is: local → class member → global. The <code class="docutils literal notranslate"><span class="pre">self</span></code> variable is
 always available and is provided as an option for accessing class members, but
@@ -12589,11 +12644,11 @@ error because if the block is not executed, the function won't have a
 valid value to return.</p>
 </div>
 <section id="referencing-functions">
-<h4>Referencing functions<a class="headerlink" href="#referencing-functions" title="Permalink to this headline">¶</a></h4>
+<h3>Referencing functions<a class="headerlink" href="#referencing-functions" title="Link to this heading"></a></h3>
 <p>Functions are first-class values in terms of the <a class="reference internal" href="../../../classes/class_callable.html#class-callable"><span class="std std-ref">Callable</span></a> object.
 Referencing a function by name without calling it will automatically generate the proper
 callable. This can be used to pass functions as arguments.</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="p">:</span><span class="w"> </span><span class="n">Callable</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">:</span>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">arr</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">,</span><span class="w"> </span><span class="n">function</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Callable</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">:</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
 <span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">arr</span><span class="p">:</span>
 <span class="w">        </span><span class="n">result</span><span class="o">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">function</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
@@ -12616,7 +12671,7 @@ performance issues on direct function calls.</p>
 </div>
 </section>
 <section id="lambda-functions">
-<h4>Lambda functions<a class="headerlink" href="#lambda-functions" title="Permalink to this headline">¶</a></h4>
+<h3>Lambda functions<a class="headerlink" href="#lambda-functions" title="Link to this heading"></a></h3>
 <p>Lambda functions allow you to declare functions that do not belong to a class. Instead, a
 <a class="reference internal" href="../../../classes/class_callable.html#class-callable"><span class="std std-ref">Callable</span></a> object is created and assigned to a variable directly.
 This can be useful to create callables to pass around without polluting the class scope.</p>
@@ -12688,7 +12743,7 @@ then the content changes are shared until you reassign the variable:</p>
 </div>
 </section>
 <section id="static-functions">
-<h4>Static functions<a class="headerlink" href="#static-functions" title="Permalink to this headline">¶</a></h4>
+<h3>Static functions<a class="headerlink" href="#static-functions" title="Link to this heading"></a></h3>
 <p>A function can be declared static. When a function is static, it has no access to the instance member variables or <code class="docutils literal notranslate"><span class="pre">self</span></code>.
 A static function has access to static variables. Also static functions are useful to make libraries of helper functions:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">func</span><span class="w"> </span><span class="n">sum2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">):</span>
@@ -12700,12 +12755,12 @@ A static function has access to static variables. Also static functions are usef
 </section>
 </section>
 <section id="statements-and-control-flow">
-<h3>Statements and control flow<a class="headerlink" href="#statements-and-control-flow" title="Permalink to this headline">¶</a></h3>
+<h2>Statements and control flow<a class="headerlink" href="#statements-and-control-flow" title="Link to this heading"></a></h2>
 <p>Statements are standard and can be assignments, function calls, control
 flow structures, etc (see below). <code class="docutils literal notranslate"><span class="pre">;</span></code> as a statement separator is
 entirely optional.</p>
 <section id="expressions">
-<h4>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">¶</a></h4>
+<h3>Expressions<a class="headerlink" href="#expressions" title="Link to this heading"></a></h3>
 <p>Expressions are sequences of operators and their operands in orderly fashion. An expression by itself can be a
 statement too, though only calls are reasonable to use as statements since other expressions don't have side effects.</p>
 <p>Expressions return values that can be assigned to valid targets. Operands to some operator can be another
@@ -12723,14 +12778,14 @@ expression. An assignment is not an expression and thus does not return any valu
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="c1"># Array definition.</span>
 <span class="p">{</span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"> </span><span class="c1"># Dictionary definition.</span>
 <span class="nb">preload</span><span class="p">(</span><span class="s2">&quot;res://icon.png&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># Preload builtin function.</span>
-<span class="bp">self</span><span class="w"> </span><span class="c1"># Reference to current instance.</span>
+<span class="k">self</span><span class="w"> </span><span class="c1"># Reference to current instance.</span>
 </pre></div>
 </div>
 <p>Identifiers, attributes, and subscripts are valid assignment targets. Other expressions cannot be on the left side of
 an assignment.</p>
 </section>
 <section id="if-else-elif">
-<h4>if/else/elif<a class="headerlink" href="#if-else-elif" title="Permalink to this headline">¶</a></h4>
+<h3>if/else/elif<a class="headerlink" href="#if-else-elif" title="Link to this heading"></a></h3>
 <p>Simple conditions are created by using the <code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code> syntax.
 Parenthesis around conditions are allowed, but not required. Given the
 nature of the tab-based indentation, <code class="docutils literal notranslate"><span class="pre">elif</span></code> can be used instead of
@@ -12791,7 +12846,7 @@ use an <code class="docutils literal notranslate"><span class="pre">if</span></c
 </div>
 </section>
 <section id="while">
-<h4>while<a class="headerlink" href="#while" title="Permalink to this headline">¶</a></h4>
+<h3>while<a class="headerlink" href="#while" title="Link to this heading"></a></h3>
 <p>Simple loops are created by using <code class="docutils literal notranslate"><span class="pre">while</span></code> syntax. Loops can be broken
 using <code class="docutils literal notranslate"><span class="pre">break</span></code> or continued using <code class="docutils literal notranslate"><span class="pre">continue</span></code> (which skips to the next
 iteration of the loop without executing any further code in the current iteration):</p>
@@ -12801,7 +12856,7 @@ iteration of the loop without executing any further code in the current iteratio
 </div>
 </section>
 <section id="for">
-<h4>for<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h4>
+<h3>for<a class="headerlink" href="#for" title="Link to this heading"></a></h3>
 <p>To iterate through a range, such as an array or table, a <em>for</em> loop is
 used. When iterating over an array, the current array element is stored in
 the loop variable. When iterating over a dictionary, the <em>key</em> is stored
@@ -12857,7 +12912,7 @@ be manipulated by calling methods on the loop variable.</p>
 </div>
 </section>
 <section id="match">
-<h4>match<a class="headerlink" href="#match" title="Permalink to this headline">¶</a></h4>
+<h3>match<a class="headerlink" href="#match" title="Link to this heading"></a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">match</span></code> statement is used to branch execution of a program.
 It's the equivalent of the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statement found in many other languages, but offers some additional features.</p>
 <div class="admonition warning">
@@ -12866,7 +12921,7 @@ It's the equivalent of the <code class="docutils literal notranslate"><span clas
 for example, the String <code class="docutils literal notranslate"><span class="pre">&quot;hello&quot;</span></code> is considered equal to the StringName <code class="docutils literal notranslate"><span class="pre">&amp;&quot;hello&quot;</span></code>.</p>
 </div>
 <section id="basic-syntax">
-<h5>Basic syntax<a class="headerlink" href="#basic-syntax" title="Permalink to this headline">¶</a></h5>
+<h4>Basic syntax<a class="headerlink" href="#basic-syntax" title="Link to this heading"></a></h4>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k k-ControlFlow">match</span><span class="w"> </span><span class="o">&lt;</span><span class="n">test</span><span class="w"> </span><span class="n">value</span><span class="o">&gt;</span><span class="p">:</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="n">pattern</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">&gt;</span><span class="p">:</span>
 <span class="w">        </span><span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span>
@@ -12877,7 +12932,7 @@ for example, the String <code class="docutils literal notranslate"><span class="
 </div>
 </section>
 <section id="crash-course-for-people-who-are-familiar-with-switch-statements">
-<h5>Crash-course for people who are familiar with switch statements<a class="headerlink" href="#crash-course-for-people-who-are-familiar-with-switch-statements" title="Permalink to this headline">¶</a></h5>
+<h4>Crash-course for people who are familiar with switch statements<a class="headerlink" href="#crash-course-for-people-who-are-familiar-with-switch-statements" title="Link to this heading"></a></h4>
 <ol class="arabic simple">
 <li><p>Replace <code class="docutils literal notranslate"><span class="pre">switch</span></code> with <code class="docutils literal notranslate"><span class="pre">match</span></code>.</p></li>
 <li><p>Remove <code class="docutils literal notranslate"><span class="pre">case</span></code>.</p></li>
@@ -12886,7 +12941,7 @@ for example, the String <code class="docutils literal notranslate"><span class="
 </ol>
 </section>
 <section id="control-flow">
-<h5>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h5>
+<h4>Control flow<a class="headerlink" href="#control-flow" title="Link to this heading"></a></h4>
 <p>The patterns are matched from top to bottom.
 If a pattern matches, the first corresponding block will be executed. After that, the execution continues below the <code class="docutils literal notranslate"><span class="pre">match</span></code> statement.</p>
 <div class="admonition note">
@@ -12961,7 +13016,7 @@ It's especially useful in array and dictionary patterns:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k k-ControlFlow">match</span><span class="w"> </span><span class="n">x</span><span class="p">:</span>
 <span class="w">    </span><span class="p">[]:</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Empty array&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">null</span><span class="p">]:</span>
+<span class="w">    </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="bp">null</span><span class="p">]:</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Very specific array&quot;</span><span class="p">)</span>
 <span class="w">    </span><span class="p">[</span><span class="k">var</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;test&quot;</span><span class="p">]:</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First element is &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;, and the last is </span><span class="se">\&quot;</span><span class="s2">test</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13010,7 +13065,7 @@ It's especially useful in array and dictionary patterns:</p>
 </ul>
 </section>
 <section id="pattern-guards">
-<h5>Pattern guards<a class="headerlink" href="#pattern-guards" title="Permalink to this headline">¶</a></h5>
+<h4>Pattern guards<a class="headerlink" href="#pattern-guards" title="Link to this heading"></a></h4>
 <p>A <em>pattern guard</em> is an optional condition that follows the pattern list
 and allows you to make additional checks before choosing a <code class="docutils literal notranslate"><span class="pre">match</span></code> branch.
 Unlike a pattern, a pattern guard can be an arbitrary expression.</p>
@@ -13046,7 +13101,7 @@ is <strong>not</strong> evaluated and the patterns of the next branch are checke
 </section>
 </section>
 <section id="classes">
-<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
 <p>By default, all script files are unnamed classes. In this case, you can only
 reference them using the file's path, using either a relative or an absolute
 path. For example, if you name a script file <code class="docutils literal notranslate"><span class="pre">character.gd</span></code>:</p>
@@ -13060,9 +13115,8 @@ path. For example, if you name a script file <code class="docutils literal notra
 <span class="k">var</span><span class="w"> </span><span class="n">character_node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 </pre></div>
 </div>
-</section>
 <section id="registering-named-classes">
-<span id="doc-gdscript-basics-class-name"></span><h3>Registering named classes<a class="headerlink" href="#registering-named-classes" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-basics-class-name"></span><h3>Registering named classes<a class="headerlink" href="#registering-named-classes" title="Link to this heading"></a></h3>
 <p>You can give your class a name to register it as a new type in Redot's
 editor. For that, you use the <code class="docutils literal notranslate"><span class="pre">class_name</span></code> keyword. You can optionally use
 the <code class="docutils literal notranslate"><span class="pre">&#64;icon</span></code> annotation with a path to an image, to use it as an icon. Your
@@ -13120,8 +13174,9 @@ are available for instantiation at runtime via their class names, but are
 automatically hidden by the editor windows along with the built-in editor nodes used
 by the Redot editor.</p>
 </div>
+</section>
 <section id="inheritance">
-<h4>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h4>
+<h3>Inheritance<a class="headerlink" href="#inheritance" title="Link to this heading"></a></h3>
 <p>A class (stored as a file) can inherit from:</p>
 <ul class="simple">
 <li><p>A global class.</p></li>
@@ -13153,7 +13208,7 @@ the <code class="docutils literal notranslate"><span class="pre">is</span></code
 <span class="c1"># [...]</span>
 
 <span class="c1"># Use &#39;is&#39; to check inheritance.</span>
-<span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Enemy</span><span class="p">:</span>
+<span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="n">Enemy</span><span class="p">:</span>
 <span class="w">    </span><span class="n">entity</span><span class="o">.</span><span class="n">apply_damage</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -13194,7 +13249,7 @@ Signals and notifications can also be useful for these purposes.</p>
 </div>
 </section>
 <section id="class-constructor">
-<h4>Class constructor<a class="headerlink" href="#class-constructor" title="Permalink to this headline">¶</a></h4>
+<h3>Class constructor<a class="headerlink" href="#class-constructor" title="Link to this heading"></a></h3>
 <p>The class constructor, called on class instantiation, is named <code class="docutils literal notranslate"><span class="pre">_init</span></code>. If you
 want to call the base class constructor, you can also use the <code class="docutils literal notranslate"><span class="pre">super</span></code> syntax.
 Note that every class has an implicit constructor that is always called
@@ -13206,11 +13261,11 @@ explicit constructor:</p>
 </div>
 <p>This is better explained through examples. Consider this scenario:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># state.gd (inherited class).</span>
-<span class="k">var</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">null</span>
-<span class="k">var</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">null</span>
+<span class="k">var</span><span class="w"> </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">null</span>
+<span class="k">var</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">null</span>
 
 
-<span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">(</span><span class="n">e</span><span class="o">=</span><span class="nb nb-Type">null</span><span class="p">):</span>
+<span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">(</span><span class="n">e</span><span class="o">=</span><span class="bp">null</span><span class="p">):</span>
 <span class="w">    </span><span class="n">entity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span>
 
 
@@ -13222,7 +13277,7 @@ explicit constructor:</p>
 <span class="k">extends</span><span class="w"> </span><span class="s2">&quot;state.gd&quot;</span>
 
 
-<span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">(</span><span class="n">e</span><span class="o">=</span><span class="nb nb-Type">null</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="o">=</span><span class="nb nb-Type">null</span><span class="p">):</span>
+<span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">(</span><span class="n">e</span><span class="o">=</span><span class="bp">null</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="o">=</span><span class="bp">null</span><span class="p">):</span>
 <span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 <span class="w">    </span><span class="c1"># Do something with &#39;e&#39;.</span>
 <span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span>
@@ -13249,7 +13304,7 @@ can pass expressions to the base constructor as well, not just variables, e.g.:<
 </ol>
 </section>
 <section id="static-constructor">
-<h4>Static constructor<a class="headerlink" href="#static-constructor" title="Permalink to this headline">¶</a></h4>
+<h3>Static constructor<a class="headerlink" href="#static-constructor" title="Link to this heading"></a></h3>
 <p>A static constructor is a static function <code class="docutils literal notranslate"><span class="pre">_static_init</span></code> that is called automatically
 when the class is loaded, after the static variables have been initialized:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">my_static_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
@@ -13261,7 +13316,7 @@ when the class is loaded, after the static variables have been initialized:</p>
 <p>A static constructor cannot take arguments and must not return any value.</p>
 </section>
 <section id="inner-classes">
-<span id="doc-gdscript-basics-inner-classes"></span><h4>Inner classes<a class="headerlink" href="#inner-classes" title="Permalink to this headline">¶</a></h4>
+<span id="doc-gdscript-basics-inner-classes"></span><h3>Inner classes<a class="headerlink" href="#inner-classes" title="Link to this heading"></a></h3>
 <p>A class file can contain inner classes. Inner classes are defined using the
 <code class="docutils literal notranslate"><span class="pre">class</span></code> keyword. They are instanced using the <code class="docutils literal notranslate"><span class="pre">ClassName.new()</span></code>
 function.</p>
@@ -13284,7 +13339,7 @@ function.</p>
 </div>
 </section>
 <section id="classes-as-resources">
-<span id="doc-gdscript-classes-as-resources"></span><h4>Classes as resources<a class="headerlink" href="#classes-as-resources" title="Permalink to this headline">¶</a></h4>
+<span id="doc-gdscript-classes-as-resources"></span><h3>Classes as resources<a class="headerlink" href="#classes-as-resources" title="Link to this heading"></a></h3>
 <p>Classes stored as files are treated as <a class="reference internal" href="../../../classes/class_gdscript.html#class-gdscript"><span class="std std-ref">GDScripts</span></a>. They
 must be loaded from disk to access them in other classes. This is done using
 either the <code class="docutils literal notranslate"><span class="pre">load</span></code> or <code class="docutils literal notranslate"><span class="pre">preload</span></code> functions (see below). Instancing of a loaded
@@ -13304,14 +13359,14 @@ class resource is done by calling the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="exports">
-<h3>Exports<a class="headerlink" href="#exports" title="Permalink to this headline">¶</a></h3>
+<h2>Exports<a class="headerlink" href="#exports" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Documentation about exports has been moved to <a class="reference internal" href="gdscript_exports.html#doc-gdscript-exports"><span class="std std-ref">GDScript exported properties</span></a>.</p>
 </div>
 </section>
 <section id="properties-setters-and-getters">
-<span id="doc-gdscript-basics-setters-getters"></span><h3>Properties (setters and getters)<a class="headerlink" href="#properties-setters-and-getters" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-basics-setters-getters"></span><h2>Properties (setters and getters)<a class="headerlink" href="#properties-setters-and-getters" title="Link to this heading"></a></h2>
 <p>Sometimes, you want a class' member variable to do more than just hold data and actually perform
 some validation or computation whenever its value changes. It may also be desired to
 encapsulate its access in some way.</p>
@@ -13335,7 +13390,7 @@ consistent. If you need direct access to the value, use another variable for dir
 code use that name.</p>
 </div>
 <section id="alternative-syntax">
-<h4>Alternative syntax<a class="headerlink" href="#alternative-syntax" title="Permalink to this headline">¶</a></h4>
+<h3>Alternative syntax<a class="headerlink" href="#alternative-syntax" title="Link to this heading"></a></h3>
 <p>Also there is another notation to use existing class functions if you want to split the code from the variable declaration
 or you need to reuse the code across multiple properties (but you can't distinguish which property the setter/getter is being called for):</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">my_prop</span><span class="p">:</span>
@@ -13355,7 +13410,7 @@ Separated setter/getter functions can have type hints, and the type must match t
 </div>
 </section>
 <section id="when-setter-getter-is-not-called">
-<h4>When setter/getter is not called<a class="headerlink" href="#when-setter-getter-is-not-called" title="Permalink to this headline">¶</a></h4>
+<h3>When setter/getter is not called<a class="headerlink" href="#when-setter-getter-is-not-called" title="Link to this heading"></a></h3>
 <p>When a variable is initialized, the value of the initializer will be written directly to the variable.
 Including if the <code class="docutils literal notranslate"><span class="pre">&#64;onready</span></code> annotation is applied to the variable.</p>
 <p>Using the variable's name to set it inside its own setter or to get it inside its own getter will directly access the underlying member,
@@ -13392,7 +13447,7 @@ For example, the following code <strong>will</strong> cause an infinite recursio
 </section>
 </section>
 <section id="tool-mode">
-<span id="doc-gdscript-tool-mode"></span><h3>Tool mode<a class="headerlink" href="#tool-mode" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-tool-mode"></span><h2>Tool mode<a class="headerlink" href="#tool-mode" title="Link to this heading"></a></h2>
 <p>By default, scripts don't run inside the editor and only the exported
 properties can be changed. In some cases, it is desired that they do run
 inside the editor (as long as they don't execute game code or manually
@@ -13415,7 +13470,7 @@ crashing the editor.</p>
 </div>
 </section>
 <section id="memory-management">
-<span id="doc-gdscript-basics-memory-management"></span><h3>Memory management<a class="headerlink" href="#memory-management" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-basics-memory-management"></span><h2>Memory management<a class="headerlink" href="#memory-management" title="Link to this heading"></a></h2>
 <p>Redot implements reference counting to free certain instances that are no longer
 used, instead of a garbage collector, or requiring purely manual management.
 Any instance of the <a class="reference internal" href="../../../classes/class_refcounted.html#class-refcounted"><span class="std std-ref">RefCounted</span></a> class (or any class that inherits
@@ -13456,7 +13511,7 @@ Here is an example:</p>
 freed.</p>
 </section>
 <section id="signals">
-<span id="doc-gdscript-signals"></span><h3>Signals<a class="headerlink" href="#signals" title="Permalink to this headline">¶</a></h3>
+<span id="doc-gdscript-signals"></span><h2>Signals<a class="headerlink" href="#signals" title="Link to this heading"></a></h2>
 <p>Signals are a tool to emit messages from an object that other objects can react
 to. To create custom signals for a class, use the <code class="docutils literal notranslate"><span class="pre">signal</span></code> keyword.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
@@ -13587,9 +13642,8 @@ character's name in the binds array argument:</p>
 <span class="w">    </span><span class="n">label</span><span class="o">.</span><span class="n">text</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">character_name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; took &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">str</span><span class="p">(</span><span class="n">damage</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; damage.&quot;</span>
 </pre></div>
 </div>
-</section>
 <section id="awaiting-signals-or-coroutines">
-<h3>Awaiting signals or coroutines<a class="headerlink" href="#awaiting-signals-or-coroutines" title="Permalink to this headline">¶</a></h3>
+<h3>Awaiting signals or coroutines<a class="headerlink" href="#awaiting-signals-or-coroutines" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword can be used to create <a class="reference external" href="https://en.wikipedia.org/wiki/Coroutine">coroutines</a>
 which wait until a signal is emitted before continuing execution. Using the <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword with a signal or a
 call to a function that is also a coroutine will immediately return the control to the caller. When the signal is
@@ -13651,8 +13705,9 @@ With this type safety in place, a function cannot say that it returns an <code c
 during runtime.</p>
 </div>
 </section>
+</section>
 <section id="assert-keyword">
-<h3>Assert keyword<a class="headerlink" href="#assert-keyword" title="Permalink to this headline">¶</a></h3>
+<h2>Assert keyword<a class="headerlink" href="#assert-keyword" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">assert</span></code> keyword can be used to check conditions in debug builds. These
 assertions are ignored in non-debug builds. This means that the expression
 passed as argument won't be evaluated in a project exported in release mode.
@@ -13670,7 +13725,6 @@ fails:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nb">assert</span><span class="p">(</span><span class="n">enemy_power</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Enemy is too powerful!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
