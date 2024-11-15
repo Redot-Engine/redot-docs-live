@@ -16,7 +16,7 @@ following:
 
   1. A contributor opens a PR that fixes a specific problem (optimally closing
      a GitHub `issue <https://github.com/redot-engine/redot-engine>`_ or implementing
-     a `proposal <https://github.com/redot-engine/redot-engine-proposals>`_).
+     a `proposal <https://github.com/redot-engine/redot-proposals>`_).
 
   2. Other contributors provide feedback on the PR (including reviewing and/or
      approving the PR, as appropriate).

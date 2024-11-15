@@ -69,7 +69,7 @@ currently defined in the Redot repository:
 -  *Feature proposal*: describes a wish for a new feature to be
    implemented. Note that the main Redot repository no longer accepts
    feature requests. Please use
-   `godot-proposals <https://github.com/redot-engine/redot-engine-proposals>`__ instead.
+   `godot-proposals <https://github.com/redot-engine/redot-proposals>`__ instead.
    PRs which add new features but do not have a corresponding proposal use this
    label.
 -  *For PR meeting*: the issue needs to be discussed in a pull request meeting.

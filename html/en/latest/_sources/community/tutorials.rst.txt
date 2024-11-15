@@ -41,6 +41,6 @@ Devlogs
 Resources
 ---------
 
-- `awesome-godot: A curated list of free/libre plugins, scripts and add-ons <https://github.com/redot-engine/awesome-godot>`_
+- `awesome-redot: A curated list of free/libre plugins, scripts and add-ons <https://github.com/redot-engine/awesome-redot>`_
 - `Redot Asset Library <https://redotengine.org/asset-library/asset>`_
 - `Redot Shaders: A community-driven shader library <https://godotshaders.com/>`_

@@ -54,7 +54,7 @@ way more contributions than people validating them.
 
 To make sure that your time and efforts aren't wasted, it is recommended to vet the idea
 first before implementing it and putting it for a review as a PR. To that end, Redot
-has a `proposal system <https://github.com/redot-engine/redot-engine-proposals>`_. Its
+has a `proposal system <https://github.com/redot-engine/redot-proposals>`_. Its
 usage is encouraged to plan changes and discuss them with the community. Implementation
 details can also be discussed with other contributors on the `Redot Contributors Chat <https://www.redotengine.org/>`_.
 

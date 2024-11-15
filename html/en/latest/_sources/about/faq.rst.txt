@@ -433,17 +433,17 @@ could suggest. And you can learn if other users experience the same issue, and f
 a good solution together.
 
 If you come up with a well-defined idea for the engine, feel free to open a
-`proposal issue <https://github.com/redot-engine/redot-engine-proposals/issues>`_.
+`proposal issue <https://github.com/redot-engine/redot-proposals/issues>`_.
 Try to be specific and concrete while describing your problem and your proposed
 solution — only actionable proposals can be considered. It is not required, but
 if you want to implement it yourself, that's always appreciated!
 
 If you only have a general idea without specific details, you can open a
-`proposal discussion <https://github.com/redot-engine/redot-engine-proposals/discussions>`_.
+`proposal discussion <https://github.com/redot-engine/redot-proposals/discussions>`_.
 These can be anything you want, and allow for a free-form discussion in search of
 a solution. Once you find one, a proposal issue can be opened.
 
-Please, read the `readme <https://github.com/redot-engine/redot-engine-proposals/blob/master/README.md>`_
+Please, read the `readme <https://github.com/redot-engine/redot-proposals/blob/master/README.md>`_
 document before creating a proposal to learn more about the process.
 
 .. _doc_faq_non_game_applications:

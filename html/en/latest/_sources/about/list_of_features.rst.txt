@@ -779,6 +779,6 @@ Miscellaneous
 
 .. seealso::
 
-    The `Redot proposals repository <https://github.com/redot-engine/redot-engine-proposals>`__
+    The `Redot proposals repository <https://github.com/redot-engine/redot-proposals>`__
     lists features that have been requested by the community and may be implemented
     in future Redot releases.
