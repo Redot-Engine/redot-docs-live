@@ -23,7 +23,7 @@ Examples of this are:
 -  Create custom particle code.
 -  And much more!
 
-Redot provides built in functionality to make frequent operations
+Redot provides built-in functionality to make frequent operations
 easier. Additionally, Redot's shader editor will detect errors as you
 type, so you can see your edited shaders in real-time. It is also
 possible to edit shaders using a visual, node-based graph editor.

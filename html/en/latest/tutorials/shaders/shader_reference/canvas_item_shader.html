@@ -1584,7 +1584,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../performance/using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../performance/pipeline_compilations.html">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../performance/pipeline_compilations.html">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../performance/pipeline_compilations.html#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11584,7 +11589,7 @@ words, Redot no longer draws the object again for each light.</p>
 run. Use the <code class="docutils literal notranslate"><span class="pre">light_only</span></code> render mode if you only want to see the impact of
 lighting on an object; this can be useful when you only want the object visible
 where it is covered by light.</p>
-<p>If you define a <code class="docutils literal notranslate"><span class="pre">light()</span></code> function it will replace the built in light function,
+<p>If you define a <code class="docutils literal notranslate"><span class="pre">light()</span></code> function it will replace the built-in light function,
 even if your light function is empty.</p>
 <p>Below is an example of a light shader that takes a CanvasItem's normal map into account:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="n">light</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>

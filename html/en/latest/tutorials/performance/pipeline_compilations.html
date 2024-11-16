@@ -4,14 +4,14 @@
 <html class="writer-html5" lang="en" data-content_root="../../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Reducing Stutter from Shader (Pipeline) Compilations" />
+<meta property="og:title" content="Reducing stutter from shader (pipeline) compilations" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/performance/pipeline_compilations.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Pipeline compilation, also commonly known as shader compilation, is an expensive operation required by the engine to be able to draw any kind of content with the GPU. In more precise terms, Shader ..." />
-<meta name="description" content="Pipeline compilation, also commonly known as shader compilation, is an expensive operation required by the engine to be able to draw any kind of content with the GPU. In more precise terms, Shader ..." />
+<meta property="og:description" content="Pipeline compilation, also commonly known as shader compilation, is an expensive operation required by the engine to be able to draw any kind of content with the GPU. In more precise terms, shader ..." />
+<meta name="description" content="Pipeline compilation, also commonly known as shader compilation, is an expensive operation required by the engine to be able to draw any kind of content with the GPU. In more precise terms, shader ..." />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Reducing Stutter from Shader (Pipeline) Compilations &mdash; Redot Engine (latest) documentation in English</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Reducing stutter from shader (pipeline) compilations &mdash; Redot Engine (latest) documentation in English</title>
 
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
@@ -1584,7 +1584,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11207,7 +11212,7 @@
 		
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Performance</a></li>
-      <li class="breadcrumb-item active">Reducing Stutter from Shader (Pipeline) Compilations</li>
+      <li class="breadcrumb-item active">Reducing stutter from shader (pipeline) compilations</li>
 	</ul>
 </li>
 
@@ -11267,22 +11272,74 @@
 
   
   <section id="reducing-stutter-from-shader-pipeline-compilations">
-<span id="doc-pipeline-compilations"></span><h1>Reducing Stutter from Shader (Pipeline) Compilations<a class="headerlink" href="#reducing-stutter-from-shader-pipeline-compilations" title="Link to this heading"></a></h1>
-<p>Pipeline compilation, also commonly known as shader compilation, is an expensive operation required by the engine to be able to draw any kind of content with the GPU.</p>
-<p>In more precise terms, <em>Shader Compilation</em> involves the translation of the GLSL code that Redot generates into an intermediate format that can be shared across systems (such as SPIR-V when using Vulkan). However, this format can't be used by the GPU directly. <em>Pipeline Compilation</em> is the step the GPU driver performs where it'll convert the intermediate shader format (the result from shader compilation) to something the GPU can actually use for rendering. Drivers usually keep a cache of pipelines stored somewhere in the system to avoid repeating the process every time a game is run. This cache is usually deleted when the driver is updated.</p>
-<p>Pipelines contain more information than just the shader code, which means that for each shader, there can be dozens of pipelines or more! This makes it difficult for an engine to compile them ahead of time, both because it would be very slow, and because it would take up a lot of memory. On top of that, this step can only be performed on the user's system and it is very tough to share the result between users unless they have the exact same hardware and driver version.</p>
-<p>Before <strong>Redot 4.4</strong>, there was no solution to pipeline compilation other than generating them when an object shows up inside the camera's view, leading to the infamous <em>shader stutter</em> or hitches that only occur during the first playthrough. With <strong>Redot 4.4</strong>, new mechanisms have been introduced to mitigate stutters from pipeline compilation.</p>
+<span id="doc-pipeline-compilations"></span><h1>Reducing stutter from shader (pipeline) compilations<a class="headerlink" href="#reducing-stutter-from-shader-pipeline-compilations" title="Link to this heading"></a></h1>
+<p>Pipeline compilation, also commonly known as shader compilation, is an expensive
+operation required by the engine to be able to draw any kind of content with the
+GPU.</p>
+<p>In more precise terms, <em>shader compilation</em> involves the translation of the GLSL
+code that Redot generates into an intermediate format that can be shared across
+systems (such as SPIR-V when using Vulkan). However, this format can't be used
+by the GPU directly.</p>
+<p><em>Pipeline compilation</em> is the step where the GPU driver converts
+the intermediate shader format (the result from shader compilation) to something
+the GPU can actually use for rendering. Drivers usually keep a cache of
+pipelines stored somewhere in the system to avoid repeating the process every
+time a game is run. This cache is usually deleted when the driver is updated.</p>
+<p>Pipelines contain more information than just the shader code, which means that
+for each shader, there can be dozens of pipelines or more! This makes it
+difficult for an engine to compile them ahead of time, both because it would be
+very slow, and because it would take up a lot of memory. On top of that, this
+step can only be performed on the user's system and it is very tough to share
+the result between users unless they have the exact same hardware and driver
+version.</p>
+<p>Before Redot 4.4, there was no solution to pipeline compilation other than
+generating them when an object shows up inside the camera's view, leading to the
+infamous <em>shader stutter</em> or hitches that only occur during the first
+playthrough. <strong>With Redot 4.4, new mechanisms have been introduced to mitigate
+stutters from pipeline compilation.</strong></p>
 <ul class="simple">
-<li><p><strong>Ubershaders</strong>: Redot makes use of specialization constants, a feature that allows the driver to optimize a pipeline's code around a set of parameters such as lighting, shadow quality, etc. Specialization constants are used to optimize a shader by limiting unnecessary features. Changing a specialization constant requires recompiling the pipeline. Ubershaders are a special version of the shader that are able to change these constants while rendering, which means Redot can pre-compile just one pipeline ahead of time and compile the more optimized versions on the background during gameplay. This reduces the amount of pipelines that need to be created significantly.</p></li>
-<li><p><strong>Pipeline Pre-Compilation</strong>: By using ubershaders, the engine can pre-compile pipelines ahead of time in multiple places such as when meshes are loaded or when nodes are added to the scene. By being part of the resource loading process, pipelines can even be pre-compiled in multiple background threads if possible during loading screens or even gameplay.</p></li>
+<li><p><strong>Ubershaders</strong>: Redot makes use of specialization constants, a feature that
+allows the driver to optimize a pipeline's code around a set of parameters
+such as lighting, shadow quality, etc. Specialization constants are used to
+optimize a shader by limiting unnecessary features. Changing a specialization
+constant requires recompiling the pipeline. Ubershaders are a special version
+of the shader that are able to change these constants while rendering, which
+means Redot can precompile just one pipeline ahead of time and compile the
+more optimized versions on the background during gameplay. This reduces the
+amount of pipelines that need to be created significantly.</p></li>
+<li><p><strong>Pipeline precompilation</strong>: By using ubershaders, the engine can precompile
+pipelines ahead of time in multiple places such as when meshes are loaded or
+when nodes are added to the scene. By being part of the resource loading
+process, pipelines can even be precompiled in multiple background threads if
+possible during loading screens or even gameplay.</p></li>
 </ul>
-<p>Starting in Redot 4.4, Redot will detect which pipelines are needed and pre-compile them at load time. This detection system is mostly automatic, but it relies on the RenderingServer seeing evidence of all shaders, meshes, or rendering features at load time. For example, if you load a mesh and shader while the game is running, the pipeline for that mesh/shader combination won't be compiled until the mesh/shader is loaded. Similarly, things like enabling MSAA, or instancing a VoxelGI node while the game is running will trigger pipeline recompilations. Read on for more details.</p>
-<section id="pipeline-pre-compilation-monitors">
-<h2>Pipeline Pre-Compilation Monitors<a class="headerlink" href="#pipeline-pre-compilation-monitors" title="Link to this heading"></a></h2>
-<p>Compiling pipelines ahead of time is the main mechanism Redot uses to mitigate shader stutters, but it's not a perfect solution. Being aware of the situations that can lead to pipeline stutters can be very helpful, and the workarounds are pretty straightforward compared to previous versions. These workarounds may be less necessary over time with future versions of Redot as more detection techniques are implemented.</p>
-<p>The Redot debugger offers monitors for tracking the amount of pipelines created by the game and the step that triggered their compilation. You can keep an eye on these monitors as the game runs to identify potential sources of shader stutters without having to wipe your driver cache every time you wish to test. Sudden increases of these values outside of loading screens can show up as hitches during gameplay the first time someone plays the game on their system. <strong>It is recommended you take a look at these monitors to identify possible sources of stutter for your players</strong>, as you might be unable to experience them yourself without deleting your driver cache or testing on a weaker system.</p>
+<p>Starting in Redot 4.4, Redot will detect which pipelines are needed and
+precompile them at load-time. This detection system is mostly automatic, but it
+relies on the RenderingServer seeing evidence of all shaders, meshes, or
+rendering features at load-time. For example, if you load a mesh and shader
+while the game is running, the pipeline for that mesh/shader combination won't
+be compiled until the mesh/shader is loaded. Similarly, things like enabling
+MSAA, or instancing a VoxelGI node while the game is running will trigger
+pipeline recompilations.</p>
+<section id="pipeline-precompilation-monitors">
+<h2>Pipeline precompilation monitors<a class="headerlink" href="#pipeline-precompilation-monitors" title="Link to this heading"></a></h2>
+<p>Compiling pipelines ahead of time is the main mechanism Redot uses to mitigate
+shader stutters, but it's not a perfect solution. Being aware of the situations
+that can lead to pipeline stutters can be very helpful, and the workarounds are
+pretty straightforward compared to previous versions. These workarounds may be
+less necessary over time with future versions of Redot as more detection
+techniques are implemented.</p>
+<p>The Redot debugger offers monitors for tracking the amount of pipelines created
+by the game and the step that triggered their compilation. You can keep an eye
+on these monitors as the game runs to identify potential sources of shader
+stutters without having to wipe your driver cache every time you wish to test.
+Sudden increases of these values outside of loading screens can show up as
+hitches during gameplay the first time someone plays the game on their system.
+<strong>It is recommended you take a look at these monitors to identify possible
+sources of stutter for your players</strong>, as you might be unable to experience them
+yourself without deleting your driver cache or testing on a weaker system.</p>
 <figure class="align-center" id="id1">
-<img alt="Screenshot of the Redot Pipeline Compilations monitors" src="../../_images/pipeline_compilations_monitors.webp" />
+<img alt="Screenshot of the Redot pipeline compilations monitor" src="../../_images/pipeline_compilations_monitors.webp" />
 <figcaption>
 <p><span class="caption-text">Pipeline compilations of one of the demo projects.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
@@ -11296,49 +11353,111 @@ as deleted pipelines are not tracked by these monitors
 and pipelines may be erased and recreated during gameplay.</p>
 </div>
 <ul class="simple">
-<li><p><strong>Canvas</strong>: Compiled when drawing a 2D node. The engine does not currently feature pre-compilation for 2D elements and the stutters will show up when the node is drawn for the first time.</p></li>
-<li><p><strong>Mesh</strong>: Compiled as part of loading a 3D mesh and identifying what pipelines can be pre-compiled from its properties. These can lead to stutters if a mesh is loaded during gameplay, but they can be mitigated if the mesh is loaded by using a background thread. <strong>Modifiers that are part of nodes such as material overrides can't be compiled on this step</strong>.</p></li>
-<li><p><strong>Surface</strong>: Compiled when a frame is about to be drawn and 3D objects were instanced on the scene tree for the first time. This can also include compilation for nodes that aren't even visible on the scene tree. The stutter will occur only on the first frame the node is added to the scene, which won't result in an obvious stutter if it happens right after a loading screen.</p></li>
-<li><p><strong>Draw</strong>: Compiled on demand when a 3D object needs to be drawn and an ubershader was not pre-compiled ahead of time. The engine is unable to pre-compile this pipeline due to triggering a case that hasn't been covered yet or a modification that was done to the engine's code. Leads to stutters during gameplay. This is identical to Redot versions before <strong>4.4</strong>. If you see compilations here, please let the devs know as this should never happen with the Ubershader system.</p></li>
-<li><p><strong>Specialization</strong>: Compiled in the background during gameplay to optimize the framerate. Unable to cause stutters, but may result in reduced framerates if there are many happening per frame.</p></li>
+<li><p><strong>Canvas</strong>: Compiled when drawing a 2D node. The engine does not currently
+feature precompilation for 2D elements and stutters will show up when the
+2D node is drawn for the first time.</p></li>
+<li><p><strong>Mesh</strong>: Compiled as part of loading a 3D mesh and identifying what pipelines
+can be precompiled from its properties. These can lead to stutters if a mesh
+is loaded during gameplay, but they can be mitigated if the mesh is loaded by
+using a background thread. <strong>Modifiers that are part of nodes such as material
+overrides can't be compiled on this step</strong>.</p></li>
+<li><p><strong>Surface</strong>: Compiled when a frame is about to be drawn and 3D objects were
+instanced on the scene tree for the first time. This can also include
+compilation for nodes that aren't even visible on the scene tree. The stutter
+will occur only on the first frame the node is added to the scene, which won't
+result in an obvious stutter if it happens right after a loading screen.</p></li>
+<li><p><strong>Draw</strong>: Compiled on demand when a 3D object needs to be drawn and an
+ubershader was not precompiled ahead of time. The engine is unable to
+precompile this pipeline due to triggering a case that hasn't been covered
+yet or a modification that was done to the engine's code. Leads to stutters
+during gameplay. This is identical to Redot versions before 4.4. If you
+see compilations here, please
+<cite>let the developers know &lt;https://github.com/redot-engine/redot-engine/issues&gt;</cite>
+as this should never happen with the Ubershader system.
+Make sure to attach a minimal reproduction project when doing so.</p></li>
+<li><p><strong>Specialization</strong>: Compiled in the background during gameplay to optimize the
+framerate. Unable to cause stutters, but may result in reduced framerates if
+there are many happening per frame.</p></li>
 </ul>
 </section>
-<section id="pipeline-pre-compilation-features">
-<h2>Pipeline Pre-Compilation Features<a class="headerlink" href="#pipeline-pre-compilation-features" title="Link to this heading"></a></h2>
-<p>Redot offers a lot of rendering features that are not necessarily used by every game. Unfortunately, pipeline pre-compilation can't know ahead of time if a particular feature is used by a project. Some of these features can only be detected when a user adds a node to the scene or toggles a particular setting in the project or the environment. The pipeline pre-compilation system will keep track of these features as they're encountered for the first time and enable pre-compilation of them for any meshes or surfaces that are created afterwards.</p>
-<p>If your game makes use of these features, <strong>make sure to have an scene that uses them as early as possible</strong> before loading the majority of the assets. This scene can be very simple and will do the job as long as it uses the features the game plans to use. It can even be rendered off-screen for at least one frame if necessary. You should also keep in mind that changing any of these features during gameplay will result in immediate stutters. Make sure to only change these features from configuration screens if necessary and insert loading screens and messages when the changes are applied.</p>
+<section id="pipeline-precompilation-features">
+<h2>Pipeline precompilation features<a class="headerlink" href="#pipeline-precompilation-features" title="Link to this heading"></a></h2>
+<p>Redot offers a lot of rendering features that are not necessarily used by every
+game. Unfortunately, pipeline precompilation can't know ahead of time if a
+particular feature is used by a project. Some of these features can only be
+detected when a user adds a node to the scene or toggles a particular setting in
+the project or the environment. The pipeline precompilation system will keep
+track of these features as they're encountered for the first time and enable
+precompilation of them for any meshes or surfaces that are created afterwards.</p>
+<p>If your game makes use of these features, <strong>make sure to have an scene that uses
+them as early as possible</strong> before loading the majority of the assets. This
+scene can be very simple and will do the job as long as it uses the features the
+game plans to use. It can even be rendered off-screen for at least one frame if
+necessary, e.g. by covering it with a <a class="reference internal" href="../../classes/class_colorrect.html#class-colorrect"><span class="std std-ref">ColorRect</span></a> node or
+using a <a class="reference internal" href="../../classes/class_subviewport.html#class-subviewport"><span class="std std-ref">SubViewport</span></a> located outside the window bounds.</p>
+<p>You should also keep in mind that changing any of these features during gameplay
+will result in immediate stutters. Make sure to only change these features from
+configuration screens if necessary and insert loading screens and messages when
+the changes are applied.</p>
 <ul class="simple">
-<li><p><strong>MSAA Level</strong>: Enabled when the level of 3D MSAA is changed on the project settings. Unfortunately, different MSAA levels being used on different viewports will lead to stutters as the engine only keeps track of one level at a time to perform pre-compilation.</p></li>
-<li><p><strong>Reflection Probes</strong>: Enabled when a ReflectionProbe node is placed on the scene.</p></li>
-<li><p><strong>Separate Specular</strong>: Enabled when using effects like sub-surface scattering or a compositor effect that relies on sampling the specularity directly off the screen.</p></li>
-<li><p><strong>Motion Vectors</strong>: Enabled when using effects such as TAA, FSR2 or a compositor effect that requires motion vectors (such as motion blur).</p></li>
-<li><p><strong>Normal and Roughness</strong>: Enabled when using SDFGI, VoxelGI, Screen Space Reflections, SSAO, SSIL, or using the normal_roughness_buffer in a custom shader or CompositorEffect.</p></li>
-<li><p><strong>Lightmaps</strong>: Enabled when a LightmapGI node is placed on the scene and a node uses a baked lightmap.</p></li>
+<li><p><strong>MSAA Level</strong>: Enabled when the level of 3D MSAA is changed on the project
+settings. Unfortunately, different MSAA levels being used on different
+viewports will lead to stutters as the engine only keeps track of one level at
+a time to perform precompilation.</p></li>
+<li><p><strong>Reflection Probes</strong>: Enabled when a ReflectionProbe node is placed on the
+scene.</p></li>
+<li><p><strong>Separate Specular</strong>: Enabled when using effects like sub-surface scattering
+or a compositor effect that relies on sampling the specularity directly off
+the screen.</p></li>
+<li><p><strong>Motion Vectors</strong>: Enabled when using effects such as TAA, FSR2 or a
+compositor effect that requires motion vectors (such as motion blur).</p></li>
+<li><p><strong>Normal and Roughness</strong>: Enabled when using SDFGI, VoxelGI, screen-space
+reflections, SSAO, SSIL, or using the <code class="docutils literal notranslate"><span class="pre">normal_roughness_buffer</span></code> in a custom
+shader or <a class="reference internal" href="../../classes/class_compositoreffect.html#class-compositoreffect"><span class="std std-ref">CompositorEffect</span></a>.</p></li>
+<li><p><strong>Lightmaps</strong>: Enabled when a LightmapGI node is placed on the scene and a
+node uses a baked lightmap.</p></li>
 <li><p><strong>VoxelGI</strong>: Enabled when a VoxelGI node is placed on the scene.</p></li>
 <li><p><strong>SDFGI</strong>: Enabled when the WorldEnvironment enables SDFGI.</p></li>
 <li><p><strong>Multiview</strong>: Enabled for XR projects.</p></li>
-<li><p><strong>16/32-bit Shadows</strong>: Enabled when the configuration of the depth precision of shadowmaps is changed on the project settings.</p></li>
-<li><p><strong>Omni Shadow Dual Paraboloid</strong>: Enabled when an omni light casts shadows and uses the dual paraboloid mode.</p></li>
-<li><p><strong>Omni Shadow Cubemap</strong>: Enabled when an omni light casts shadows and uses the cubemap mode.</p></li>
+<li><p><strong>16/32-bit Shadows</strong>: Enabled when the configuration of the depth precision
+of shadowmaps is changed on the project settings.</p></li>
+<li><p><strong>Omni Shadow Dual Paraboloid</strong>: Enabled when an omni light casts shadows and
+uses the dual paraboloid mode.</p></li>
+<li><p><strong>Omni Shadow Cubemap</strong>: Enabled when an omni light casts shadows and uses the
+cubemap mode (which is the default).</p></li>
 </ul>
-<p>If you witness stutters during gameplay and the monitors report a sudden increase in compilations during the <strong>Surface</strong> step, it is very likely a feature was not enabled ahead of time. Ensuring that this effect is enabled while loading your game will likely mitigate the issue.</p>
+<p>If you witness stutters during gameplay and the monitors report a sudden
+increase in compilations during the <strong>Surface</strong> step, it is very likely a
+feature was not enabled ahead of time. Ensuring that this effect is enabled
+while loading your game will likely mitigate the issue.</p>
 </section>
-<section id="pipeline-pre-compilation-instancing">
-<h2>Pipeline Pre-Compilation Instancing<a class="headerlink" href="#pipeline-pre-compilation-instancing" title="Link to this heading"></a></h2>
-<p>One common source of stutters in games is the fact that some effects are only instanced on the scene because of interactions that only happen during gameplay. For example, if you have a particle effect that is only added to the scene through a script when a player does an action. Even if the scene is preloaded, the engine might be unable to pre-compile the pipelines until the effect is added to the scene at least once. Luckily, it's possible for <strong>Redot 4.4</strong> to pre-compile these pipelines as long as the scene is instantiated at least once on the scene, even if it's completely invisible or outside of the camera's view.</p>
+<section id="pipeline-precompilation-instancing">
+<h2>Pipeline precompilation instancing<a class="headerlink" href="#pipeline-precompilation-instancing" title="Link to this heading"></a></h2>
+<p>One common source of stutters in games is the fact that some effects are only
+instanced on the scene because of interactions that only happen during gameplay.
+For example, if you have a particle effect that is only added to the scene
+through a script when a player does an action. Even if the scene is preloaded,
+the engine might be unable to precompile the pipelines until the effect is added
+to the scene at least once.</p>
+<p>Luckily, it's possible for Redot 4.4 and later to
+precompile these pipelines as long as the scene is instantiated at least once on
+the scene, even if it's completely invisible or outside of the camera's view.</p>
 <figure class="align-center" id="id2">
-<img alt="Screenshot of an example of a Hidden Node for an effect" src="../../_images/pipeline_compilations_hidden_node.webp" />
+<img alt="Screenshot of an example of a hidden Node for an effect" src="../../_images/pipeline_compilations_hidden_node.webp" />
 <figcaption>
-<p><span class="caption-text">Hidden bullet node attached to the player in one of the demo
-projects.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+<p><span class="caption-text">Hidden bullet node attached to the player in one of the demo projects. This
+helps the engine precompile the effect's pipelines ahead of time.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>An example of a hidden node attached to the player to
-help the engine pre-compile the effect's pipelines ahead of time.</p>
-</div>
-<p>If you're aware of any effects that are added to the scene dynamically during gameplay and are seeing sudden increases on the compilations monitor when these effects show up, a very easy workaround is to attach a hidden version of the effect somewhere that is guaranteed to show up. For example, if the player character is able to cause some sort of explosion, you can attach the effect as a child of the player as an invisible node. Make sure to disable the script attached to the hidden node or to hide any other nodes that could cause issues, which can be easily done by enabling 'Editable Children' on the node.</p>
+<p>If you're aware of any effects that are added to the scene dynamically during
+gameplay and are seeing sudden increases on the compilations monitor when these
+effects show up, a workaround is to attach a hidden version of the effect
+somewhere that is guaranteed to show up.</p>
+<p>For example, if the player character is able to cause some sort of explosion,
+you can attach the effect as a child of the player as an invisible node. Make
+sure to disable the script attached to the hidden node or to hide any other
+nodes that could cause issues, which can be done by enabling <strong>Editable
+Children</strong> on the node.</p>
 </section>
 </section>
 

@@ -1584,7 +1584,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../performance/using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11275,7 +11280,7 @@ and disadvantages that upgrading would bring to your project.</p>
 <section id="advantages-of-upgrading">
 <h3>Advantages of upgrading<a class="headerlink" href="#advantages-of-upgrading" title="Link to this heading"></a></h3>
 <p>Along with the
-<a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/master/CHANGELOG.md">new features present in 4.0</a>,
+<a class="reference external" href="https://redotengine.org/article/redot-4-0-sets-sail">new features present in 4.0</a>,
 upgrading gives the following advantages:</p>
 <ul class="simple">
 <li><p>Many bugs are fixed in 4.0, but cannot be resolved in 3.x for various reasons
@@ -11284,7 +11289,8 @@ upgrading gives the following advantages:</p>
 will continue to be supported for some time after 4.0 is released, but it will
 eventually stop receiving support.</p></li>
 </ul>
-<p>See <a class="reference internal" href="../../about/docs_changelog.html#doc-docs-changelog"><span class="std std-ref">Documentation changelog</span></a> for a list of pages documenting new features in Redot 4.0.</p>
+<p>See <a class="reference internal" href="../../about/docs_changelog.html#doc-docs-changelog"><span class="std std-ref">Documentation changelog</span></a> for a list of pages documenting new features in
+Redot 4.0, and <a class="reference internal" href="../../about/list_of_features.html#doc-list-of-features"><span class="std std-ref">List of features</span></a> for a list of all features in Redot.</p>
 </section>
 <section id="disadvantages-of-upgrading">
 <h3>Disadvantages of upgrading<a class="headerlink" href="#disadvantages-of-upgrading" title="Link to this heading"></a></h3>
@@ -11366,8 +11372,8 @@ only <code class="docutils literal notranslate"><span class="pre">.gdshader</spa
 </section>
 <section id="running-the-project-upgrade-tool">
 <h2>Running the project upgrade tool<a class="headerlink" href="#running-the-project-upgrade-tool" title="Link to this heading"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
 <p><strong>Make a full backup of your project</strong> before upgrading! The project upgrade
 tool will <em>not</em> perform any backups of the project that is being upgraded.</p>
 <p>You can backup a project by using version control, or by copying the project

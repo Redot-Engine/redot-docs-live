@@ -1584,7 +1584,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../performance/using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11327,7 +11332,7 @@ which platforms you are developing for. As a starting point:</p>
 <p>Choose <strong>Mobile</strong> if:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>You are developing for newer mobile devices, XR, or desktop.</p></li>
+<li><p>You are developing for newer mobile devices, desktop XR, or desktop.</p></li>
 <li><p>You have relatively new hardware which supports Vulkan, Direct3D 12, or Metal.</p></li>
 <li><p>You are developing a 3D game.</p></li>
 <li><p>You want to use advanced rendering features, subject to the limitations
@@ -11337,8 +11342,8 @@ of mobile hardware.</p></li>
 <p>Choose <strong>Compatibility</strong> if:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>You are developing for older mobile devices, or older desktop devices. The
-Compatibility renderer supports the widest range of hardware.</p></li>
+<li><p>You are developing for older mobile devices, older desktop devices, or
+standalone XR. The Compatibility renderer supports the widest range of hardware.</p></li>
 <li><p>You are developing for web. In this case, Compatibility is the only choice.</p></li>
 <li><p>You have older hardware which does not support Vulkan. In this case,
 Compatibility is the only choice.</p></li>
@@ -11437,9 +11442,16 @@ optimized. Use Mobile or
 Compatibility instead.</p></td>
 </tr>
 <tr class="row-odd"><td><p>XR</p></td>
-<td><p>✔️ Yes.</p></td>
-<td><p>✔️ Yes.</p></td>
-<td><p>✔️ Yes.</p></td>
+<td><p>✔️ Yes. Recommended for
+standalone headsets.</p></td>
+<td><dl class="simple">
+<dt>✔️ Yes. Recommended for</dt><dd><p>desktop headsets.</p>
+</dd>
+</dl>
+</td>
+<td><p>⚠️ Supported, but poorly
+optimized. Use Mobile or
+Compatibility instead.</p></td>
 </tr>
 <tr class="row-even"><td><p>Web</p></td>
 <td><p>✔️ Yes.</p></td>

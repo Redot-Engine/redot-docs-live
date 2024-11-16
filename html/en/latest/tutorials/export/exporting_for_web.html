@@ -8,8 +8,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/export/exporting_for_web.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="HTML5 export allows publishing games made in Redot Engine to the browser. This requires support for WebAssembly, WebGL and SharedArrayBuffer in the user's browser. Export file name: We do suggest u..." />
-<meta name="description" content="HTML5 export allows publishing games made in Redot Engine to the browser. This requires support for WebAssembly, WebGL and SharedArrayBuffer in the user's browser. Export file name: We do suggest u..." />
+<meta property="og:description" content="HTML5 export allows publishing games made in Redot Engine to the browser. This requires support for WebAssembly and WebGL 2.0 in the user's browser. Export file name: We suggest users to export the..." />
+<meta name="description" content="HTML5 export allows publishing games made in Redot Engine to the browser. This requires support for WebAssembly and WebGL 2.0 in the user's browser. Export file name: We suggest users to export the..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Exporting for the Web &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -1584,7 +1584,12 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../performance/using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../performance/pipeline_compilations.html">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../performance/pipeline_compilations.html#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11275,8 +11280,7 @@ If you're looking to compile editor or export template binaries from source inst
 read <a class="reference internal" href="../../contributing/development/compiling/compiling_for_web.html#doc-compiling-for-web"><span class="std std-ref">Compiling for the Web</span></a>.</p>
 </div>
 <p>HTML5 export allows publishing games made in Redot Engine to the browser.
-This requires support for <a class="reference external" href="https://webassembly.org/">WebAssembly</a>, <a class="reference external" href="https://www.khronos.org/webgl/">WebGL</a> and
-<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a>
+This requires support for <a class="reference external" href="https://webassembly.org/">WebAssembly</a> and <a class="reference external" href="https://www.khronos.org/webgl/">WebGL 2.0</a>
 in the user's browser.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -11289,19 +11293,15 @@ web. To use C# on web platforms, use Redot 3 instead.</p>
 with <kbd class="kbd docutils literal notranslate">F12</kbd> (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">Option</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">I</kbd></kbd> on macOS), to view
 <strong>debug information</strong> like JavaScript, engine, and WebGL errors.</p>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Redot 4's HTML5 exports currently cannot run on macOS and iOS due to upstream bugs
-with SharedArrayBuffer and WebGL 2.0. We recommend using
-<a class="reference internal" href="exporting_for_macos.html#doc-exporting-for-macos"><span class="std std-ref">macOS</span></a> and <a class="reference internal" href="exporting_for_ios.html#doc-exporting-for-ios"><span class="std std-ref">iOS</span></a>
-native export functionality instead, as it will also result in better performance.</p>
-<p>Redot 3's HTML5 exports are more compatible with various browsers in
-general, especially when using the GLES2 rendering backend (which only
-requires WebGL 1.0).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>See the
+<a class="reference external" href="https://github.com/redot-engine/redot-engine/issues?q=is%3Aopen+is%3Aissue+label%3Aplatform%3Aweb">list of open issues on GitHub related to the web export</a>
+for a list of known bugs.</p>
 </div>
 <section id="export-file-name">
 <h2>Export file name<a class="headerlink" href="#export-file-name" title="Link to this heading"></a></h2>
-<p>We do suggest users to export their Web projects with <code class="docutils literal notranslate"><span class="pre">index.html</span></code> as the file name.
+<p>We suggest users to export their Web projects with <code class="docutils literal notranslate"><span class="pre">index.html</span></code> as the file name.
 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> is usually the default file loaded by web servers when accessing the
 parent directory, usually hiding the name of that file.</p>
 <div class="admonition attention">
@@ -11314,11 +11314,33 @@ main HTML file.</p>
 <section id="webgl-version">
 <h2>WebGL version<a class="headerlink" href="#webgl-version" title="Link to this heading"></a></h2>
 <p>Redot 4.0 and later can only target WebGL 2.0 (using the Compatibility rendering
-method). There is no stable way to run Vulkan applications on the web yet.</p>
+method). Forward+/Mobile are not supported on the web platform, as these
+rendering methods are designed around modern low-level graphics APIs. Redot
+currently does not support WebGPU, which is a prerequisite for allowing
+Forward+/Mobile to run on the web platform.</p>
 <p>See <a class="reference external" href="https://caniuse.com/webgl2">Can I use WebGL 2.0</a> for a list of browser
 versions supporting WebGL 2.0. Note that Safari has several issues with WebGL
 2.0 support that other browsers don't have, so we recommend using a
 Chromium-based browser or Firefox if possible.</p>
+</section>
+<section id="audio-playback">
+<span id="doc-exporting-for-web-audio-playback"></span><h2>Audio playback<a class="headerlink" href="#audio-playback" title="Link to this heading"></a></h2>
+<p>Since Redot 4.3, audio playback is done using the Web Audio API on the web
+platform. This <strong>Sample</strong> playback mode allows for low latency even when the
+project is exported without thread support, but it has several limitations:</p>
+<ul class="simple">
+<li><p>AudioEffects are not supported.</p></li>
+<li><p><a class="reference internal" href="../audio/audio_streams.html#doc-audio-streams-reverb-buses"><span class="std std-ref">Reverberation and doppler</span></a> effects are not supported.</p></li>
+<li><p>Procedural audio generation is not supported.</p></li>
+<li><p>Positional audio may not always work correctly depending on the node's properties.</p></li>
+</ul>
+<p>To use Redot's own audio playback system on the web platform, you can change the
+default playback mode using the <strong>Audio &gt; General &gt; Default Playback Type.web</strong>
+project setting, or change the <strong>Playback Type</strong> property to <strong>Stream</strong> on an
+<a class="reference internal" href="../../classes/class_audiostreamplayer.html#class-audiostreamplayer"><span class="std std-ref">AudioStreamPlayer</span></a>, <a class="reference internal" href="../../classes/class_audiostreamplayer2d.html#class-audiostreamplayer2d"><span class="std std-ref">AudioStreamPlayer2D</span></a> or
+<a class="reference internal" href="../../classes/class_audiostreamplayer3d.html#class-audiostreamplayer3d"><span class="std std-ref">AudioStreamPlayer3D</span></a> node. This leads to increased latency
+(especially when thread support is disabled), but it allows the full suite
+of Redot's audio features to work.</p>
 </section>
 <section id="export-options">
 <span id="doc-javascript-export-options"></span><h2>Export options<a class="headerlink" href="#export-options" title="Link to this heading"></a></h2>
@@ -11327,7 +11349,7 @@ Chromium-based browser or Firefox if possible.</p>
 game in the default browser for testing.</p>
 <p>If your project uses GDExtension <strong>Extension Support</strong> needs to be enabled.</p>
 <p>If you plan to use <a class="reference internal" href="../assets_pipeline/importing_images.html#doc-importing-images"><span class="std std-ref">VRAM compression</span></a> make sure that
-<strong>Vram Texture Compression</strong> is enabled for the targeted platforms (enabling
+<strong>VRAM Texture Compression</strong> is enabled for the targeted platforms (enabling
 both <strong>For Desktop</strong> and <strong>For Mobile</strong> will result in a bigger, but more
 compatible export).</p>
 <p>If a path to a <strong>Custom HTML shell</strong> file is given, it will be used instead of
@@ -11344,6 +11366,56 @@ modifications to that HTML file will be lost in future exports.
 To customize the generated file, use the <strong>Custom HTML shell</strong>
 option.</p>
 </div>
+<section id="thread-and-extension-support">
+<span id="doc-exporting-for-web-thread-extension-support"></span><h3>Thread and extension support<a class="headerlink" href="#thread-and-extension-support" title="Link to this heading"></a></h3>
+<p>If <strong>Thread Support</strong> is enabled, the exported project will be able to
+<a class="reference internal" href="../performance/using_multiple_threads.html#doc-using-multiple-threads"><span class="std std-ref">make use of multithreading</span></a> to improve
+performance. This also allows for low-latency audio playback
+when the playback type is set to <strong>Stream</strong> (instead of the default <strong>Sample</strong>
+that is used in web exports). Enabling this feature requires the use of
+cross-origin isolation headers, which are described in the
+<a class="reference internal" href="#doc-exporting-for-web-serving-the-files"><span class="std std-ref">Serving the files</span></a> section below.</p>
+<p>If <strong>Extensions Support</strong> is enabled, <a class="reference internal" href="../scripting/gdextension/what_is_gdextension.html#doc-what-is-gdextension"><span class="std std-ref">GDExtensions</span></a>
+will be able to be loaded. Note that GDExtensions still need to be specifically
+compiled for the web platform to work. Like thread support, enabling this feature
+requires the use of cross-origin isolation headers.</p>
+</section>
+<section id="exporting-as-a-progressive-web-app-pwa">
+<h3>Exporting as a Progressive Web App (PWA)<a class="headerlink" href="#exporting-as-a-progressive-web-app-pwa" title="Link to this heading"></a></h3>
+<p>If <strong>Progressive Web App &gt; Enable</strong> is enabled, it will have several effects:</p>
+<ul class="simple">
+<li><p>Configure high-resolution icons, a display mode and screen orientation. These
+are configured at the end of the Progressive Web App section in the export
+options. These options are used if the user adds the project to their device's
+homescreen, which is common on mobile platforms. This is also supported on
+desktop platforms, albeit in a more limited capacity.</p></li>
+<li><p>Allow the project to be loaded without an Internet connection if it has been
+loaded at least once beforehand. This works thanks to the <em>service worker</em>
+that is installed when the project is first loaded in the user's browser. This
+service worker provides a local fallback when no Internet connection is
+available.</p>
+<ul>
+<li><p>Note that web browsers can choose to evict the cached data if the user runs
+low on disk space, or if the user hasn't opened the project for a while.
+To ensure data is cached for a longer duration, the user can bookmark the page,
+or ideally add it to their device's home screen.</p></li>
+<li><p>If the offline data is not available because it was evicted from the cache,
+you can configure an <strong>Offline Page</strong> that will be displayed in this case.
+The page must be in HTML format and will be saved on the client's machine
+the first time the project is loaded.</p></li>
+</ul>
+</li>
+<li><p>Ensure cross-origin isolation headers are always present, even if the web
+server hasn't been configured to send them. This allows exports with threads
+enabled to work when hosted on any website, even if there is no way for you to
+control the headers it sends.</p>
+<ul>
+<li><p>This behavior can be disabled by unchecking <strong>Enable Cross Origin Isolation Headers</strong>
+in the Progressive Web App section.</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 <section id="limitations">
 <h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
@@ -11463,8 +11535,8 @@ including a default HTML page for presentation. A custom HTML file can be
 used, see <a class="reference internal" href="../platform/web/customizing_html5_shell.html#doc-customizing-html5-shell"><span class="std std-ref">Custom HTML page for Web export</span></a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>To ensure low audio latency and the ability to use <a class="reference internal" href="../../classes/class_thread.html#class-thread"><span class="std std-ref">Thread</span></a> in web exports,
-Redot 4 web exports always use
+<p>If either <a class="reference internal" href="#doc-exporting-for-web-thread-extension-support"><span class="std std-ref">thread support or extension support</span></a>
+are enabled, the exported project will require
 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer">SharedArrayBuffer</a>.
 This requires a <a class="reference internal" href="#doc-javascript-secure-contexts"><span class="std std-ref">secure context</span></a>,
 while also requiring the following CORS headers to be set when serving the files:</p>
@@ -11473,10 +11545,12 @@ while also requiring the following CORS headers to be set when serving the files
 </pre></div>
 </div>
 <p>If you don't control the web server or are unable to add response headers,
-use <a class="reference external" href="https://github.com/gzuidhof/coi-serviceworker">coi-serviceworker</a>
-as a workaround.</p>
-<p>If the client doesn't receive the required response headers,
-<strong>the project will not run</strong>.</p>
+check <strong>Progressive Web App &gt; Enable</strong> in the export options. This applies
+a service worker-based workaround that allows the project to run by
+simulating the presence of these response headers. A secure context
+is still required in this case.</p>
+<p>If the client doesn't receive the required response headers or the service
+worker-based workaround is not applied, <strong>the project will not run</strong>.</p>
 </div>
 <p>The generated <code class="docutils literal notranslate"><span class="pre">.html</span></code> file can be used as <code class="docutils literal notranslate"><span class="pre">DirectoryIndex</span></code> in Apache
 servers and can be renamed to e.g. <code class="docutils literal notranslate"><span class="pre">index.html</span></code> at any time. Its name is
@@ -11532,7 +11606,8 @@ nginx.</p>
 </section>
 <section id="interacting-with-the-browser-and-javascript">
 <h2>Interacting with the browser and JavaScript<a class="headerlink" href="#interacting-with-the-browser-and-javascript" title="Link to this heading"></a></h2>
-<p>See the <a class="reference internal" href="../platform/web/javascript_bridge.html#doc-web-javascript-bridge"><span class="std std-ref">dedicated page</span></a> on how to interact with JavaScript and access some unique Web browser features.</p>
+<p>See the <a class="reference internal" href="../platform/web/javascript_bridge.html#doc-web-javascript-bridge"><span class="std std-ref">dedicated page</span></a> on how to interact
+with JavaScript and access some unique Web browser features.</p>
 </section>
 <section id="environment-variables">
 <h2>Environment variables<a class="headerlink" href="#environment-variables" title="Link to this heading"></a></h2>

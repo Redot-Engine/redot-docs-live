@@ -8,8 +8,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="contributing/development/compiling/compiling_for_ios.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Requirements: Python 3.6+., SCons 3.1.2+ build system.,- Xcode.,- Launch Xcode once and install iOS support. If you have already launched Xcode and need to install iOS support, go to Xcode -> Setti..." />
-<meta name="description" content="Requirements: Python 3.6+., SCons 3.1.2+ build system.,- Xcode.,- Launch Xcode once and install iOS support. If you have already launched Xcode and need to install iOS support, go to Xcode -> Setti..." />
+<meta property="og:description" content="Requirements: Python 3.8+., SCons 4.0+ build system.,- Xcode.,- Launch Xcode once and install iOS support. If you have already launched Xcode and need to install iOS support, go to Xcode -> Setting..." />
+<meta name="description" content="Requirements: Python 3.8+., SCons 4.0+ build system.,- Xcode.,- Launch Xcode once and install iOS support. If you have already launched Xcode and need to install iOS support, go to Xcode -> Setting..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Compiling for iOS &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -1584,7 +1584,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html">Exporting for the Web</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -2120,10 +2125,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/using_multimesh.html#multimesh-example">Multimesh example</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html">Reducing Stutter from Shader (Pipeline) Compilations</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-pre-compilation-monitors">Pipeline Pre-Compilation Monitors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-pre-compilation-features">Pipeline Pre-Compilation Features</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-pre-compilation-instancing">Pipeline Pre-Compilation Instancing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html">Reducing stutter from shader (pipeline) compilations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-precompilation-monitors">Pipeline precompilation monitors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-precompilation-features">Pipeline precompilation features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/performance/pipeline_compilations.html#pipeline-precompilation-instancing">Pipeline precompilation instancing</a></li>
 </ul>
 </li>
 </ul>
@@ -11277,8 +11282,8 @@ If you're looking to export your project to iOS instead, read <a class="referenc
 <section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.python.org/downloads/macos/">Python 3.6+</a>.</p></li>
-<li><p><a class="reference external" href="https://scons.org/pages/download.html">SCons 3.1.2+</a> build system.</p></li>
+<li><p><a class="reference external" href="https://www.python.org/downloads/macos/">Python 3.8+</a>.</p></li>
+<li><p><a class="reference external" href="https://scons.org/pages/download.html">SCons 4.0+</a> build system.</p></li>
 <li><dl class="simple">
 <dt><a class="reference external" href="https://apps.apple.com/us/app/xcode/id497799835">Xcode</a>.</dt><dd><ul>
 <li><p>Launch Xcode once and install iOS support. If you have already launched
