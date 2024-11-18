@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11345,7 +11368,8 @@
 <p>Override this method to customize how this primitive mesh should be generated. Should return an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> where each element is another Array of values required for the mesh (see the <a class="reference internal" href="class_mesh.html#enum-mesh-arraytype"><span class="std std-ref">ArrayType</span></a> constants).</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-primitivemesh-method-get-mesh-arrays"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> <strong>get_mesh_arrays</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-primitivemesh-method-get-mesh-arrays"><span class="std std-ref">🔗</span></a></p>
-<p>Returns mesh arrays used to constitute surface of <a class="reference internal" href="class_mesh.html#class-mesh"><span class="std std-ref">Mesh</span></a>. The result can be passed to <a class="reference internal" href="class_arraymesh.html#class-arraymesh-method-add-surface-from-arrays"><span class="std std-ref">ArrayMesh.add_surface_from_arrays</span></a> to create a new surface. For example:</p>
+<p>Returns the mesh arrays used to make up the surface of this primitive mesh.</p>
+<p><strong>Example:</strong> Pass the result to <a class="reference internal" href="class_arraymesh.html#class-arraymesh-method-add-surface-from-arrays"><span class="std std-ref">ArrayMesh.add_surface_from_arrays</span></a> to create a new surface:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-0-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CylinderMesh</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 <span class="k">var</span><span class="w"> </span><span class="n">arr_mesh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ArrayMesh</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>

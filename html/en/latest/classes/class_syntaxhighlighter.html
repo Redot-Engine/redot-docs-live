@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11300,10 +11323,10 @@
 <p>Then calls overridable method <a class="reference internal" href="#class-syntaxhighlighter-private-method-clear-highlighting-cache"><span class="std std-ref">_clear_highlighting_cache</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-syntaxhighlighter-method-get-line-syntax-highlighting"><a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> <strong>get_line_syntax_highlighting</strong>(line: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-syntaxhighlighter-method-get-line-syntax-highlighting"><span class="std std-ref">🔗</span></a></p>
-<p>Returns syntax highlighting data for a single line. If the line is not cached, calls <a class="reference internal" href="#class-syntaxhighlighter-private-method-get-line-syntax-highlighting"><span class="std std-ref">_get_line_syntax_highlighting</span></a> to calculate the data.</p>
-<p>The return <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> is column number to <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>. The column number notes the start of a region, the region will end if another region is found, or at the end of the line. The nested <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> contains the data for that region, currently only the key &quot;color&quot; is supported.</p>
-<p><strong>Example return:</strong></p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">color_map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<p>Returns the syntax highlighting data for the line at index <code class="docutils literal notranslate"><span class="pre">line</span></code>. If the line is not cached, calls <a class="reference internal" href="#class-syntaxhighlighter-private-method-get-line-syntax-highlighting"><span class="std std-ref">_get_line_syntax_highlighting</span></a> first to calculate the data.</p>
+<p>Each entry is a column number containing a nested <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>. The column number denotes the start of a region, the region will end if another region is found, or at the end of the line. The nested <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> contains the data for that region. Currently only the key <code class="docutils literal notranslate"><span class="pre">&quot;color&quot;</span></code> is supported.</p>
+<p><strong>Example:</strong> Possible return value. This means columns <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">4</span></code> should be red, and columns <code class="docutils literal notranslate"><span class="pre">5</span></code> to the end of the line should be green:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="s2">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">    </span><span class="p">},</span>
@@ -11313,7 +11336,6 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This will color columns 0-4 red, and columns 5-eol in green.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-syntaxhighlighter-method-get-text-edit"><a class="reference internal" href="class_textedit.html#class-textedit"><span class="std std-ref">TextEdit</span></a> <strong>get_text_edit</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-syntaxhighlighter-method-get-text-edit"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the associated <a class="reference internal" href="class_textedit.html#class-textedit"><span class="std std-ref">TextEdit</span></a> node.</p>

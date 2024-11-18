@@ -4258,6 +4258,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4641,6 +4648,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10692,6 +10708,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -12529,7 +12552,6 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-textedit-method-begin-multicaret-edit"><abbr title="No return value.">void</abbr> <strong>begin_multicaret_edit</strong>() <a class="reference internal" href="#class-textedit-method-begin-multicaret-edit"><span class="std std-ref">🔗</span></a></p>
 <p>Starts an edit for multiple carets. The edit must be ended with <a class="reference internal" href="#class-textedit-method-end-multicaret-edit"><span class="std std-ref">end_multicaret_edit</span></a>. Multicaret edits can be used to edit text at multiple carets and delay merging the carets until the end, so the caret indexes aren't affected immediately. <a class="reference internal" href="#class-textedit-method-begin-multicaret-edit"><span class="std std-ref">begin_multicaret_edit</span></a> and <a class="reference internal" href="#class-textedit-method-end-multicaret-edit"><span class="std std-ref">end_multicaret_edit</span></a> can be nested, and the merge will happen at the last <a class="reference internal" href="#class-textedit-method-end-multicaret-edit"><span class="std std-ref">end_multicaret_edit</span></a>.</p>
-<p>Example usage:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">begin_complex_operation</span><span class="p">()</span>
 <span class="n">begin_multicaret_edit</span><span class="p">()</span>
 <span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="n">get_caret_count</span><span class="p">()):</span>
@@ -12842,7 +12864,8 @@
 <p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the caret of the selection is after the selection origin. This can be used to determine the direction of the selection.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-textedit-method-is-caret-visible"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_caret_visible</strong>(caret_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-textedit-method-is-caret-visible"><span class="std std-ref">🔗</span></a></p>
-<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the caret is visible on the screen.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the caret is visible, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise. A caret will be considered hidden if it is outside the scrollable area when scrolling is enabled.</p>
+<p><strong>Note:</strong> <a class="reference internal" href="#class-textedit-method-is-caret-visible"><span class="std std-ref">is_caret_visible</span></a> does not account for a caret being off-screen if it is still within the scrollable area. It will return <code class="docutils literal notranslate"><span class="pre">true</span></code> even if the caret is off-screen as long as it meets <strong>TextEdit</strong>'s own conditions for being visible. This includes uses of <a class="reference internal" href="#class-textedit-property-scroll-fit-content-width"><span class="std std-ref">scroll_fit_content_width</span></a> and <a class="reference internal" href="#class-textedit-property-scroll-fit-content-height"><span class="std std-ref">scroll_fit_content_height</span></a> that cause the <strong>TextEdit</strong> to expand beyond the viewport's bounds.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-textedit-method-is-dragging-cursor"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_dragging_cursor</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-textedit-method-is-dragging-cursor"><span class="std std-ref">🔗</span></a></p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the user is dragging their mouse for scrolling, selecting, or text dragging.</p>
@@ -13101,7 +13124,7 @@
 <p>The caret's width in pixels. Greater values can be used to improve accessibility by ensuring the caret is easily visible, or to ensure consistency with a large font size. If set to <code class="docutils literal notranslate"><span class="pre">0</span></code> or lower, the caret width is automatically set to 1 pixel and multiplied by the display scaling factor.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-textedit-theme-constant-line-spacing"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>line_spacing</strong> = <code class="docutils literal notranslate"><span class="pre">4</span></code> <a class="reference internal" href="#class-textedit-theme-constant-line-spacing"><span class="std std-ref">🔗</span></a></p>
-<p>Sets the spacing between the lines.</p>
+<p>Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-textedit-theme-constant-outline-size"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>outline_size</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-textedit-theme-constant-outline-size"><span class="std std-ref">🔗</span></a></p>
 <p>The size of the text outline.</p>

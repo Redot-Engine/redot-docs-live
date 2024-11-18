@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11810,7 +11833,7 @@
 <p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the specified <code class="docutils literal notranslate"><span class="pre">agent</span></code> has an avoidance callback.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-agent-is-map-changed"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>agent_is_map_changed</strong>(agent: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-navigationserver3d-method-agent-is-map-changed"><span class="std std-ref">🔗</span></a></p>
-<p>Returns true if the map got changed the previous frame.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the map got changed the previous frame.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-agent-set-avoidance-callback"><abbr title="No return value.">void</abbr> <strong>agent_set_avoidance_callback</strong>(agent: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, callback: <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-agent-set-avoidance-callback"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the callback <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a> that gets called after each avoidance processing step for the <code class="docutils literal notranslate"><span class="pre">agent</span></code>. The calculated <code class="docutils literal notranslate"><span class="pre">safe_velocity</span></code> will be dispatched with a signal to the object just before the physics calculations.</p>
@@ -11845,7 +11868,7 @@
 <p>Sets the maximum distance to other agents this agent takes into account in the navigation. The larger this number, the longer the running time of the simulation. If the number is too low, the simulation will not be safe.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-agent-set-paused"><abbr title="No return value.">void</abbr> <strong>agent_set_paused</strong>(agent: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, paused: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-agent-set-paused"><span class="std std-ref">🔗</span></a></p>
-<p>If <code class="docutils literal notranslate"><span class="pre">paused</span></code> is true the specified <code class="docutils literal notranslate"><span class="pre">agent</span></code> will not be processed, e.g. calculate avoidance velocities or receive avoidance callbacks.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">paused</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> the specified <code class="docutils literal notranslate"><span class="pre">agent</span></code> will not be processed, e.g. calculate avoidance velocities or receive avoidance callbacks.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-agent-set-position"><abbr title="No return value.">void</abbr> <strong>agent_set_position</strong>(agent: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, position: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-agent-set-position"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the position of the agent in world space.</p>
@@ -12013,10 +12036,10 @@
 <p>Returns the map's up direction.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-map-get-use-edge-connections"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>map_get_use_edge_connections</strong>(map: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-navigationserver3d-method-map-get-use-edge-connections"><span class="std std-ref">🔗</span></a></p>
-<p>Returns true if the navigation <code class="docutils literal notranslate"><span class="pre">map</span></code> allows navigation regions to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the navigation <code class="docutils literal notranslate"><span class="pre">map</span></code> allows navigation regions to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-map-is-active"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>map_is_active</strong>(map: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-navigationserver3d-method-map-is-active"><span class="std std-ref">🔗</span></a></p>
-<p>Returns true if the map is active.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the map is active.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-map-set-active"><abbr title="No return value.">void</abbr> <strong>map_set_active</strong>(map: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, active: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-map-set-active"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the map active.</p>
@@ -12088,7 +12111,7 @@
 <p>Assigns the <code class="docutils literal notranslate"><span class="pre">obstacle</span></code> to a navigation map.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-obstacle-set-paused"><abbr title="No return value.">void</abbr> <strong>obstacle_set_paused</strong>(obstacle: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, paused: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-obstacle-set-paused"><span class="std std-ref">🔗</span></a></p>
-<p>If <code class="docutils literal notranslate"><span class="pre">paused</span></code> is true the specified <code class="docutils literal notranslate"><span class="pre">obstacle</span></code> will not be processed, e.g. affect avoidance velocities.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">paused</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> the specified <code class="docutils literal notranslate"><span class="pre">obstacle</span></code> will not be processed, e.g. affect avoidance velocities.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-obstacle-set-position"><abbr title="No return value.">void</abbr> <strong>obstacle_set_position</strong>(obstacle: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, position: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>) <a class="reference internal" href="#class-navigationserver3d-method-obstacle-set-position"><span class="std std-ref">🔗</span></a></p>
 <p>Updates the <code class="docutils literal notranslate"><span class="pre">position</span></code> in world space for the <code class="docutils literal notranslate"><span class="pre">obstacle</span></code>.</p>
@@ -12166,7 +12189,7 @@
 <p>Returns the travel cost of this <code class="docutils literal notranslate"><span class="pre">region</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-region-get-use-edge-connections"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>region_get_use_edge_connections</strong>(region: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-navigationserver3d-method-region-get-use-edge-connections"><span class="std std-ref">🔗</span></a></p>
-<p>Returns true if the navigation <code class="docutils literal notranslate"><span class="pre">region</span></code> is set to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the navigation <code class="docutils literal notranslate"><span class="pre">region</span></code> is set to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-navigationserver3d-method-region-owns-point"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>region_owns_point</strong>(region: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, point: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-navigationserver3d-method-region-owns-point"><span class="std std-ref">🔗</span></a></p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the provided <code class="docutils literal notranslate"><span class="pre">point</span></code> in world space is currently owned by the provided navigation <code class="docutils literal notranslate"><span class="pre">region</span></code>. Owned in this context means that one of the region's navigation mesh polygon faces has a possible position at the closest distance to this point compared to all other navigation meshes from other navigation regions that are also registered on the navigation map of the provided region.</p>

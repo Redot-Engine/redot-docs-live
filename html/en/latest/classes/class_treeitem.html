@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11761,7 +11784,7 @@
 <p>Returns the metadata value that was set for the given column using <a class="reference internal" href="#class-treeitem-method-set-metadata"><span class="std std-ref">set_metadata</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-treeitem-method-get-next"><a class="reference internal" href="#class-treeitem"><span class="std std-ref">TreeItem</span></a> <strong>get_next</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-treeitem-method-get-next"><span class="std std-ref">🔗</span></a></p>
-<p>Returns the next sibling TreeItem in the tree or a null object if there is none.</p>
+<p>Returns the next sibling TreeItem in the tree or a <code class="docutils literal notranslate"><span class="pre">null</span></code> object if there is none.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-treeitem-method-get-next-in-tree"><a class="reference internal" href="#class-treeitem"><span class="std std-ref">TreeItem</span></a> <strong>get_next_in_tree</strong>(wrap: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-treeitem-method-get-next-in-tree"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the next TreeItem in the tree (in the context of a depth-first search) or a <code class="docutils literal notranslate"><span class="pre">null</span></code> object if there is none.</p>
@@ -11772,10 +11795,10 @@
 <p>If <code class="docutils literal notranslate"><span class="pre">wrap</span></code> is enabled, the method will wrap around to the first visible element in the tree when called on the last visible element, otherwise it returns <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-treeitem-method-get-parent"><a class="reference internal" href="#class-treeitem"><span class="std std-ref">TreeItem</span></a> <strong>get_parent</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-treeitem-method-get-parent"><span class="std std-ref">🔗</span></a></p>
-<p>Returns the parent TreeItem or a null object if there is none.</p>
+<p>Returns the parent TreeItem or a <code class="docutils literal notranslate"><span class="pre">null</span></code> object if there is none.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-treeitem-method-get-prev"><a class="reference internal" href="#class-treeitem"><span class="std std-ref">TreeItem</span></a> <strong>get_prev</strong>() <a class="reference internal" href="#class-treeitem-method-get-prev"><span class="std std-ref">🔗</span></a></p>
-<p>Returns the previous sibling TreeItem in the tree or a null object if there is none.</p>
+<p>Returns the previous sibling TreeItem in the tree or a <code class="docutils literal notranslate"><span class="pre">null</span></code> object if there is none.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-treeitem-method-get-prev-in-tree"><a class="reference internal" href="#class-treeitem"><span class="std std-ref">TreeItem</span></a> <strong>get_prev_in_tree</strong>(wrap: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-treeitem-method-get-prev-in-tree"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the previous TreeItem in the tree (in the context of a depth-first search) or a <code class="docutils literal notranslate"><span class="pre">null</span></code> object if there is none.</p>

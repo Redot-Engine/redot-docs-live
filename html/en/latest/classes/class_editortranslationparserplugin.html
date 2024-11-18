@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a></li>
@@ -11317,8 +11340,7 @@
 </pre></div>
 </div>
 </div></div>
-<p><strong>Note:</strong> If you override parsing logic for standard script types (GDScript, C#, etc.), it would be better to load the <code class="docutils literal notranslate"><span class="pre">path</span></code> argument using <a class="reference internal" href="class_resourceloader.html#class-resourceloader-method-load"><span class="std std-ref">ResourceLoader.load</span></a>. This is because built-in scripts are loaded as <a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a> type, not <a class="reference internal" href="class_fileaccess.html#class-fileaccess"><span class="std std-ref">FileAccess</span></a> type.</p>
-<p>For example:</p>
+<p><strong>Note:</strong> If you override parsing logic for standard script types (GDScript, C#, etc.), it would be better to load the <code class="docutils literal notranslate"><span class="pre">path</span></code> argument using <a class="reference internal" href="class_resourceloader.html#class-resourceloader-method-load"><span class="std std-ref">ResourceLoader.load</span></a>. This is because built-in scripts are loaded as <a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a> type, not <a class="reference internal" href="class_fileaccess.html#class-fileaccess"><span class="std std-ref">FileAccess</span></a> type. For example:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-2-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-2-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-2-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-2-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-2-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">_parse_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">msgids</span><span class="p">,</span><span class="w"> </span><span class="n">msgids_context_plural</span><span class="p">):</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResourceLoader</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Script&quot;</span><span class="p">)</span>
@@ -11349,10 +11371,13 @@
 <h2>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-editortranslationparserplugin-private-method-get-comments"><span class="std std-ref">_get_comments</span></a>(msgids_comment: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>], msgids_context_plural_comment: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>]) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
 <td><p><a class="reference internal" href="#class-editortranslationparserplugin-private-method-get-recognized-extensions"><span class="std std-ref">_get_recognized_extensions</span></a>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-editortranslationparserplugin-private-method-parse-file"><span class="std std-ref">_parse_file</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, msgids: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>], msgids_context_plural: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>]) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
 </tbody>
@@ -11361,6 +11386,9 @@
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="method-descriptions">
 <h2>Method Descriptions<a class="headerlink" href="#method-descriptions" title="Link to this heading"></a></h2>
+<p class="classref-method" id="class-editortranslationparserplugin-private-method-get-comments"><abbr title="No return value.">void</abbr> <strong>_get_comments</strong>(msgids_comment: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>], msgids_context_plural_comment: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>]) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editortranslationparserplugin-private-method-get-comments"><span class="std std-ref">🔗</span></a></p>
+<p>If overridden, called after <a class="reference internal" href="#class-editortranslationparserplugin-private-method-parse-file"><span class="std std-ref">_parse_file</span></a> to get comments for the parsed entries. This method should fill the arrays with the same number of elements and in the same order as <a class="reference internal" href="#class-editortranslationparserplugin-private-method-parse-file"><span class="std std-ref">_parse_file</span></a>.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editortranslationparserplugin-private-method-get-recognized-extensions"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>_get_recognized_extensions</strong>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-editortranslationparserplugin-private-method-get-recognized-extensions"><span class="std std-ref">🔗</span></a></p>
 <p>Gets the list of file extensions to associate with this parser, e.g. <code class="docutils literal notranslate"><span class="pre">[&quot;csv&quot;]</span></code>.</p>
 <hr class="classref-item-separator docutils" />

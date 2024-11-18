@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11528,7 +11551,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_import_as_skeleton_bones</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>get_import_as_skeleton_bones</strong>()</p></li>
 </ul>
-<p>True to force all GLTFNodes in the document to be bones of a single Skeleton3D redot node.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, forces all GLTFNodes in the document to be bones of a single <a class="reference internal" href="class_skeleton3d.html#class-skeleton3d"><span class="std std-ref">Skeleton3D</span></a> Redot node.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-gltfstate-property-json"><a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a> <strong>json</strong> = <code class="docutils literal notranslate"><span class="pre">{}</span></code> <a class="reference internal" href="#class-gltfstate-property-json"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11583,14 +11606,14 @@
 <section class="classref-descriptions-group" id="method-descriptions">
 <h2>Method Descriptions<a class="headerlink" href="#method-descriptions" title="Link to this heading"></a></h2>
 <p class="classref-method" id="class-gltfstate-method-add-used-extension"><abbr title="No return value.">void</abbr> <strong>add_used_extension</strong>(extension_name: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, required: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-gltfstate-method-add-used-extension"><span class="std std-ref">🔗</span></a></p>
-<p>Appends an extension to the list of extensions used by this glTF file during serialization. If <code class="docutils literal notranslate"><span class="pre">required</span></code> is true, the extension will also be added to the list of required extensions. Do not run this in <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension-private-method-export-post"><span class="std std-ref">GLTFDocumentExtension._export_post</span></a>, as that stage is too late to add extensions. The final list is sorted alphabetically.</p>
+<p>Appends an extension to the list of extensions used by this glTF file during serialization. If <code class="docutils literal notranslate"><span class="pre">required</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the extension will also be added to the list of required extensions. Do not run this in <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension-private-method-export-post"><span class="std std-ref">GLTFDocumentExtension._export_post</span></a>, as that stage is too late to add extensions. The final list is sorted alphabetically.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfstate-method-append-data-to-buffers"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>append_data_to_buffers</strong>(data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>, deduplication: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-gltfstate-method-append-data-to-buffers"><span class="std std-ref">🔗</span></a></p>
-<p>Appends the given byte array data to the buffers and creates a <a class="reference internal" href="class_gltfbufferview.html#class-gltfbufferview"><span class="std std-ref">GLTFBufferView</span></a> for it. The index of the destination <a class="reference internal" href="class_gltfbufferview.html#class-gltfbufferview"><span class="std std-ref">GLTFBufferView</span></a> is returned. If <code class="docutils literal notranslate"><span class="pre">deduplication</span></code> is true, the buffers will first be searched for duplicate data, otherwise new bytes will always be appended.</p>
+<p>Appends the given byte array data to the buffers and creates a <a class="reference internal" href="class_gltfbufferview.html#class-gltfbufferview"><span class="std std-ref">GLTFBufferView</span></a> for it. The index of the destination <a class="reference internal" href="class_gltfbufferview.html#class-gltfbufferview"><span class="std std-ref">GLTFBufferView</span></a> is returned. If <code class="docutils literal notranslate"><span class="pre">deduplication</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the buffers will first be searched for duplicate data, otherwise new bytes will always be appended.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfstate-method-append-gltf-node"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>append_gltf_node</strong>(gltf_node: <a class="reference internal" href="class_gltfnode.html#class-gltfnode"><span class="std std-ref">GLTFNode</span></a>, redot_scene_node: <a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a>, parent_node_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-gltfstate-method-append-gltf-node"><span class="std std-ref">🔗</span></a></p>
 <p>Append the given <a class="reference internal" href="class_gltfnode.html#class-gltfnode"><span class="std std-ref">GLTFNode</span></a> to the state, and return its new index. This can be used to export one Redot node as multiple glTF nodes, or inject new glTF nodes at import time. On import, this must be called before <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension-private-method-generate-scene-node"><span class="std std-ref">GLTFDocumentExtension._generate_scene_node</span></a> finishes for the parent node. On export, this must be called before <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension-private-method-export-node"><span class="std std-ref">GLTFDocumentExtension._export_node</span></a> runs for the parent node.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">godot_scene_node</span></code> parameter is the Redot scene node that corresponds to this glTF node. This is highly recommended to be set to a valid node, but may be null if there is no corresponding Redot scene node. One Redot scene node may be used for multiple glTF nodes, so if exporting multiple glTF nodes for one Redot scene node, use the same Redot scene node for each.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">godot_scene_node</span></code> parameter is the Redot scene node that corresponds to this glTF node. This is highly recommended to be set to a valid node, but may be <code class="docutils literal notranslate"><span class="pre">null</span></code> if there is no corresponding Redot scene node. One Redot scene node may be used for multiple glTF nodes, so if exporting multiple glTF nodes for one Redot scene node, use the same Redot scene node for each.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">parent_node_index</span></code> parameter is the index of the parent <a class="reference internal" href="class_gltfnode.html#class-gltfnode"><span class="std std-ref">GLTFNode</span></a> in the state. If <code class="docutils literal notranslate"><span class="pre">-1</span></code>, the node will be a root node, otherwise the new node will be added to the parent's list of children. The index will also be written to the <a class="reference internal" href="class_gltfnode.html#class-gltfnode-property-parent"><span class="std std-ref">GLTFNode.parent</span></a> property of the new node.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfstate-method-get-accessors"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_gltfaccessor.html#class-gltfaccessor"><span class="std std-ref">GLTFAccessor</span></a>] <strong>get_accessors</strong>() <a class="reference internal" href="#class-gltfstate-method-get-accessors"><span class="std std-ref">🔗</span></a></p>
@@ -11600,7 +11623,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfstate-method-get-additional-data"><a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> <strong>get_additional_data</strong>(extension_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>) <a class="reference internal" href="#class-gltfstate-method-get-additional-data"><span class="std std-ref">🔗</span></a></p>
 <p>Gets additional arbitrary data in this <strong>GLTFState</strong> instance. This can be used to keep per-file state data in <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> classes, which is important because they are stateless.</p>
-<p>The argument should be the <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> name (does not have to match the extension name in the glTF file), and the return value can be anything you set. If nothing was set, the return value is null.</p>
+<p>The argument should be the <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> name (does not have to match the extension name in the glTF file), and the return value can be anything you set. If nothing was set, the return value is <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfstate-method-get-animation-player"><a class="reference internal" href="class_animationplayer.html#class-animationplayer"><span class="std std-ref">AnimationPlayer</span></a> <strong>get_animation_player</strong>(idx: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-gltfstate-method-get-animation-player"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the <a class="reference internal" href="class_animationplayer.html#class-animationplayer"><span class="std std-ref">AnimationPlayer</span></a> node with the given index. These nodes are only used during the export process when converting Redot <a class="reference internal" href="class_animationplayer.html#class-animationplayer"><span class="std std-ref">AnimationPlayer</span></a> nodes to glTF animations.</p>

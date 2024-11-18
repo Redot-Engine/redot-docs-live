@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11278,8 +11301,8 @@
 <li><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_cull_mask</strong>()</p></li>
 </ul>
 <p>The particle rendering layers (<a class="reference internal" href="class_visualinstance3d.html#class-visualinstance3d-property-layers"><span class="std std-ref">VisualInstance3D.layers</span></a>) that will be affected by the collision shape. By default, all particles that have <a class="reference internal" href="class_particleprocessmaterial.html#class-particleprocessmaterial-property-collision-mode"><span class="std std-ref">ParticleProcessMaterial.collision_mode</span></a> set to <a class="reference internal" href="class_particleprocessmaterial.html#class-particleprocessmaterial-constant-collision-rigid"><span class="std std-ref">ParticleProcessMaterial.COLLISION_RIGID</span></a> or <a class="reference internal" href="class_particleprocessmaterial.html#class-particleprocessmaterial-constant-collision-hide-on-contact"><span class="std std-ref">ParticleProcessMaterial.COLLISION_HIDE_ON_CONTACT</span></a> will be affected by a collision shape.</p>
-<p>After configuring particle nodes accordingly, specific layers can be unchecked to prevent certain particles from being affected by attractors. For example, this can be used if you're using an attractor as part of a spell effect but don't want the attractor to affect unrelated weather particles at the same position.</p>
-<p>Particle attraction can also be disabled on a per-process material basis by setting <a class="reference internal" href="class_particleprocessmaterial.html#class-particleprocessmaterial-property-attractor-interaction-enabled"><span class="std std-ref">ParticleProcessMaterial.attractor_interaction_enabled</span></a> on the <a class="reference internal" href="class_gpuparticles3d.html#class-gpuparticles3d"><span class="std std-ref">GPUParticles3D</span></a> node.</p>
+<p>After configuring particle nodes accordingly, specific layers can be unchecked to prevent certain particles from being affected by colliders. For example, this can be used if you're using a collider as part of a spell effect but don't want the collider to affect unrelated weather particles at the same position.</p>
+<p>Particle collision can also be disabled on a per-process material basis by setting <a class="reference internal" href="class_particleprocessmaterial.html#class-particleprocessmaterial-property-collision-mode"><span class="std std-ref">ParticleProcessMaterial.collision_mode</span></a> on the <a class="reference internal" href="class_gpuparticles3d.html#class-gpuparticles3d"><span class="std std-ref">GPUParticles3D</span></a> node.</p>
 </section>
 </section>
 

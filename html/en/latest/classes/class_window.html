@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11693,8 +11716,6 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-signal" id="class-window-signal-files-dropped"><strong>files_dropped</strong>(files: <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a>) <a class="reference internal" href="#class-window-signal-files-dropped"><span class="std std-ref">🔗</span></a></p>
 <p>Emitted when files are dragged from the OS file manager and dropped in the game window. The argument is a list of file paths.</p>
-<p>Note that this method only works with native windows, i.e. the main window and <strong>Window</strong>-derived nodes when <a class="reference internal" href="class_viewport.html#class-viewport-property-gui-embed-subwindows"><span class="std std-ref">Viewport.gui_embed_subwindows</span></a> is disabled in the main viewport.</p>
-<p>Example usage:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
 <span class="w">    </span><span class="n">get_viewport</span><span class="p">()</span><span class="o">.</span><span class="n">files_dropped</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">on_files_dropped</span><span class="p">)</span>
 
@@ -11702,6 +11723,7 @@
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><strong>Note:</strong> This signal only works with native windows, i.e. the main window and <strong>Window</strong>-derived nodes when <a class="reference internal" href="class_viewport.html#class-viewport-property-gui-embed-subwindows"><span class="std std-ref">Viewport.gui_embed_subwindows</span></a> is disabled in the main viewport.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-signal" id="class-window-signal-focus-entered"><strong>focus_entered</strong>() <a class="reference internal" href="#class-window-signal-focus-entered"><span class="std std-ref">🔗</span></a></p>
 <p>Emitted when the <strong>Window</strong> gains focus.</p>

@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11254,12 +11277,12 @@
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p><strong>Button</strong> is the standard themed button. It can contain text and an icon, and it will display them according to the current <a class="reference internal" href="class_theme.html#class-theme"><span class="std std-ref">Theme</span></a>.</p>
-<p><strong>Example of creating a button and assigning an action when pressed by code:</strong></p>
+<p><strong>Example:</strong> Create a button and connect a method that will be called when the button is pressed:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-0-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Button</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 <span class="w">    </span><span class="n">button</span><span class="o">.</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Click me&quot;</span>
-<span class="w">    </span><span class="n">button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">_button_pressed</span><span class="p">)</span>
+<span class="w">    </span><span class="n">button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">_button_pressed</span><span class="p">)</span>
 <span class="w">    </span><span class="n">add_child</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_button_pressed</span><span class="p">():</span>
@@ -11282,7 +11305,7 @@
 </div>
 </div></div>
 <p>See also <a class="reference internal" href="class_basebutton.html#class-basebutton"><span class="std std-ref">BaseButton</span></a> which contains common properties and methods associated with this node.</p>
-<p><strong>Note:</strong> Buttons do not interpret touch input and therefore don't support multitouch, since mouse emulation can only press one button at a given time. Use <a class="reference internal" href="class_touchscreenbutton.html#class-touchscreenbutton"><span class="std std-ref">TouchScreenButton</span></a> for buttons that trigger gameplay movement or actions.</p>
+<p><strong>Note:</strong> Buttons do not detect touch input and therefore don't support multitouch, since mouse emulation can only press one button at a given time. Use <a class="reference internal" href="class_touchscreenbutton.html#class-touchscreenbutton"><span class="std std-ref">TouchScreenButton</span></a> for buttons that trigger gameplay movement or actions.</p>
 </section>
 <section class="classref-introduction-group" id="tutorials">
 <h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading"></a></h2>
@@ -11415,62 +11438,66 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<td><p><a class="reference internal" href="#class-button-theme-constant-line-spacing"><span class="std std-ref">line_spacing</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-constant-outline-size"><span class="std std-ref">outline_size</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_font.html#class-font"><span class="std std-ref">Font</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_font.html#class-font"><span class="std std-ref">Font</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-font-font"><span class="std std-ref">font</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-font-size-font-size"><span class="std std-ref">font_size</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-icon-icon"><span class="std std-ref">icon</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-disabled"><span class="std std-ref">disabled</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-disabled-mirrored"><span class="std std-ref">disabled_mirrored</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-focus"><span class="std std-ref">focus</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-hover"><span class="std std-ref">hover</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-hover-mirrored"><span class="std std-ref">hover_mirrored</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-hover-pressed"><span class="std std-ref">hover_pressed</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-hover-pressed-mirrored"><span class="std std-ref">hover_pressed_mirrored</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-normal"><span class="std std-ref">normal</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-normal-mirrored"><span class="std std-ref">normal_mirrored</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-pressed"><span class="std std-ref">pressed</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBox</span></a></p></td>
 <td><p><a class="reference internal" href="#class-button-theme-style-pressed-mirrored"><span class="std std-ref">pressed_mirrored</span></a></p></td>
 <td></td>
 </tr>
@@ -11615,6 +11642,9 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-button-theme-constant-icon-max-width"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>icon_max_width</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-button-theme-constant-icon-max-width"><span class="std std-ref">🔗</span></a></p>
 <p>The maximum allowed width of the <strong>Button</strong>'s icon. This limit is applied on top of the default size of the icon, or its expanded size if <a class="reference internal" href="#class-button-property-expand-icon"><span class="std std-ref">expand_icon</span></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. The height is adjusted according to the icon's ratio. If the button has additional icons (e.g. <a class="reference internal" href="class_checkbox.html#class-checkbox"><span class="std std-ref">CheckBox</span></a>), they will also be limited.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-themeproperty" id="class-button-theme-constant-line-spacing"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>line_spacing</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-button-theme-constant-line-spacing"><span class="std std-ref">🔗</span></a></p>
+<p>Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-button-theme-constant-outline-size"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>outline_size</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-button-theme-constant-outline-size"><span class="std std-ref">🔗</span></a></p>
 <p>The size of the text outline.</p>

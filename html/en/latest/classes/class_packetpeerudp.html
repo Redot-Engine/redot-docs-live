@@ -8,8 +8,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="classes/class_packetpeerudp.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Inherits: PacketPeer< RefCounted< Object UDP packet peer. Description: UDP packet peer. Can be used to send raw UDP packets as well as Variant s. Note: When exporting to Android, make sure to enabl..." />
-<meta name="description" content="Inherits: PacketPeer< RefCounted< Object UDP packet peer. Description: UDP packet peer. Can be used to send raw UDP packets as well as Variant s. Note: When exporting to Android, make sure to enabl..." />
+<meta property="og:description" content="Inherits: PacketPeer< RefCounted< Object UDP packet peer. Description: UDP packet peer. Can be used to send and receive raw UDP packets as well as Variant s. Example: Send a packet: Example: Listen..." />
+<meta name="description" content="Inherits: PacketPeer< RefCounted< Object UDP packet peer. Description: UDP packet peer. Can be used to send and receive raw UDP packets as well as Variant s. Example: Send a packet: Example: Listen..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>PacketPeerUDP &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11252,7 +11275,32 @@
 <p>UDP packet peer.</p>
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
-<p>UDP packet peer. Can be used to send raw UDP packets as well as <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>s.</p>
+<p>UDP packet peer. Can be used to send and receive raw UDP packets as well as <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>s.</p>
+<p><strong>Example:</strong> Send a packet:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">peer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PacketPeerUDP</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+
+<span class="c1"># Optionally, you can select the local port used to send the packet.</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="mi">4444</span><span class="p">)</span>
+
+<span class="n">peer</span><span class="o">.</span><span class="n">set_dest_address</span><span class="p">(</span><span class="s2">&quot;1.1.1.1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4433</span><span class="p">)</span>
+<span class="n">peer</span><span class="o">.</span><span class="n">put_packet</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="o">.</span><span class="n">to_utf8_buffer</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong> Listen for packets:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">peer</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="n">peer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PacketPeerUDP</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="w">    </span><span class="n">peer</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="mi">4433</span><span class="p">)</span>
+
+
+<span class="k">func</span><span class="w"> </span><span class="n">_process</span><span class="p">(</span><span class="n">_delta</span><span class="p">):</span>
+<span class="w">    </span><span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">peer</span><span class="o">.</span><span class="n">get_available_packet_count</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">array_bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">peer</span><span class="o">.</span><span class="n">get_packet</span><span class="p">()</span>
+<span class="w">        </span><span class="k">var</span><span class="w"> </span><span class="n">packet_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array_bytes</span><span class="o">.</span><span class="n">get_string_from_ascii</span><span class="p">()</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Received message: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">packet_string</span><span class="p">)</span>
+</pre></div>
+</div>
 <p><strong>Note:</strong> When exporting to Android, make sure to enable the <code class="docutils literal notranslate"><span class="pre">INTERNET</span></code> permission in the Android export preset before exporting the project or using one-click deploy. Otherwise, network communication of any kind will be blocked by Android.</p>
 </section>
 <section class="classref-reftable-group" id="methods">

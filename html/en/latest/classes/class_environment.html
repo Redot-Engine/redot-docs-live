@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -12080,7 +12103,8 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_glow_map_strength</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_glow_map_strength</strong>()</p></li>
 </ul>
-<p>How strong of an impact the <a class="reference internal" href="#class-environment-property-glow-map"><span class="std std-ref">glow_map</span></a> should have on the overall glow effect. A strength of <code class="docutils literal notranslate"><span class="pre">0.0</span></code> means the glow map has no effect on the overall glow effect. A strength of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> means the glow has a full effect on the overall glow effect (and can turn off glow entirely in specific areas of the screen if the glow map has black areas).</p>
+<p>How strong of an influence the <a class="reference internal" href="#class-environment-property-glow-map"><span class="std std-ref">glow_map</span></a> should have on the overall glow effect. A strength of <code class="docutils literal notranslate"><span class="pre">0.0</span></code> means the glow map has no influence, while a strength of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> means the glow map has full influence.</p>
+<p><strong>Note:</strong> If the glow map has black areas, a value of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> can also turn off the glow effect entirely in specific areas of the screen.</p>
 <p><strong>Note:</strong> <a class="reference internal" href="#class-environment-property-glow-map-strength"><span class="std std-ref">glow_map_strength</span></a> has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-environment-property-glow-mix"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>glow_mix</strong> = <code class="docutils literal notranslate"><span class="pre">0.05</span></code> <a class="reference internal" href="#class-environment-property-glow-mix"><span class="std std-ref">🔗</span></a></p>

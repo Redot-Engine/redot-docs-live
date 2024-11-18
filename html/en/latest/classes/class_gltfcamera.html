@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11328,21 +11351,21 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_fov</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_fov</strong>()</p></li>
 </ul>
-<p>The FOV of the camera. This class and glTF define the camera FOV in radians, while Redot uses degrees. This maps to glTF's <code class="docutils literal notranslate"><span class="pre">yfov</span></code> property. This value is only used for perspective cameras, when <a class="reference internal" href="#class-gltfcamera-property-perspective"><span class="std std-ref">perspective</span></a> is true.</p>
+<p>The FOV of the camera. This class and glTF define the camera FOV in radians, while Redot uses degrees. This maps to glTF's <code class="docutils literal notranslate"><span class="pre">yfov</span></code> property. This value is only used for perspective cameras, when <a class="reference internal" href="#class-gltfcamera-property-perspective"><span class="std std-ref">perspective</span></a> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-gltfcamera-property-perspective"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>perspective</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-gltfcamera-property-perspective"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_perspective</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>get_perspective</strong>()</p></li>
 </ul>
-<p>Whether or not the camera is in perspective mode. If false, the camera is in orthographic/orthogonal mode. This maps to glTF's camera <code class="docutils literal notranslate"><span class="pre">type</span></code> property. See <a class="reference internal" href="class_camera3d.html#class-camera3d-property-projection"><span class="std std-ref">Camera3D.projection</span></a> and the glTF spec for more information.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the camera is in perspective mode. Otherwise, the camera is in orthographic/orthogonal mode. This maps to glTF's camera <code class="docutils literal notranslate"><span class="pre">type</span></code> property. See <a class="reference internal" href="class_camera3d.html#class-camera3d-property-projection"><span class="std std-ref">Camera3D.projection</span></a> and the glTF spec for more information.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-gltfcamera-property-size-mag"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>size_mag</strong> = <code class="docutils literal notranslate"><span class="pre">0.5</span></code> <a class="reference internal" href="#class-gltfcamera-property-size-mag"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
 <li><p><abbr title="No return value.">void</abbr> <strong>set_size_mag</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_size_mag</strong>()</p></li>
 </ul>
-<p>The size of the camera. This class and glTF define the camera size magnitude as a radius in meters, while Redot defines it as a diameter in meters. This maps to glTF's <code class="docutils literal notranslate"><span class="pre">ymag</span></code> property. This value is only used for orthographic/orthogonal cameras, when <a class="reference internal" href="#class-gltfcamera-property-perspective"><span class="std std-ref">perspective</span></a> is false.</p>
+<p>The size of the camera. This class and glTF define the camera size magnitude as a radius in meters, while Redot defines it as a diameter in meters. This maps to glTF's <code class="docutils literal notranslate"><span class="pre">ymag</span></code> property. This value is only used for orthographic/orthogonal cameras, when <a class="reference internal" href="#class-gltfcamera-property-perspective"><span class="std std-ref">perspective</span></a> is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </section>
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="method-descriptions">

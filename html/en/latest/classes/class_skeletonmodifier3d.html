@@ -8,8 +8,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="classes/class_skeletonmodifier3d.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Inherits: Node3D< Node< Object Inherited By: PhysicalBoneSimulator3D, SkeletonIK3D, XRBodyModifier3D, XRHandModifier3D A Node that may modify Skeleton3D's bone. Description: SkeletonModifier3D retr..." />
-<meta name="description" content="Inherits: Node3D< Node< Object Inherited By: PhysicalBoneSimulator3D, SkeletonIK3D, XRBodyModifier3D, XRHandModifier3D A Node that may modify Skeleton3D's bone. Description: SkeletonModifier3D retr..." />
+<meta property="og:description" content="Inherits: Node3D< Node< Object Inherited By: LookAtModifier3D, PhysicalBoneSimulator3D, SkeletonIK3D, XRBodyModifier3D, XRHandModifier3D A Node that may modify Skeleton3D's bone. Description: Skele..." />
+<meta name="description" content="Inherits: Node3D< Node< Object Inherited By: LookAtModifier3D, PhysicalBoneSimulator3D, SkeletonIK3D, XRBodyModifier3D, XRHandModifier3D A Node that may modify Skeleton3D's bone. Description: Skele..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>SkeletonModifier3D &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11247,7 +11270,7 @@
   <section id="skeletonmodifier3d">
 <span id="class-skeletonmodifier3d"></span><h1>SkeletonModifier3D<a class="headerlink" href="#skeletonmodifier3d" title="Link to this heading"></a></h1>
 <p><strong>Inherits:</strong> <a class="reference internal" href="class_node3d.html#class-node3d"><span class="std std-ref">Node3D</span></a> <strong>&lt;</strong> <a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a> <strong>&lt;</strong> <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a></p>
-<p><strong>Inherited By:</strong> <a class="reference internal" href="class_physicalbonesimulator3d.html#class-physicalbonesimulator3d"><span class="std std-ref">PhysicalBoneSimulator3D</span></a>, <a class="reference internal" href="class_skeletonik3d.html#class-skeletonik3d"><span class="std std-ref">SkeletonIK3D</span></a>, <a class="reference internal" href="class_xrbodymodifier3d.html#class-xrbodymodifier3d"><span class="std std-ref">XRBodyModifier3D</span></a>, <a class="reference internal" href="class_xrhandmodifier3d.html#class-xrhandmodifier3d"><span class="std std-ref">XRHandModifier3D</span></a></p>
+<p><strong>Inherited By:</strong> <a class="reference internal" href="class_lookatmodifier3d.html#class-lookatmodifier3d"><span class="std std-ref">LookAtModifier3D</span></a>, <a class="reference internal" href="class_physicalbonesimulator3d.html#class-physicalbonesimulator3d"><span class="std std-ref">PhysicalBoneSimulator3D</span></a>, <a class="reference internal" href="class_skeletonik3d.html#class-skeletonik3d"><span class="std std-ref">SkeletonIK3D</span></a>, <a class="reference internal" href="class_xrbodymodifier3d.html#class-xrbodymodifier3d"><span class="std std-ref">XRBodyModifier3D</span></a>, <a class="reference internal" href="class_xrhandmodifier3d.html#class-xrhandmodifier3d"><span class="std std-ref">XRHandModifier3D</span></a></p>
 <p>A Node that may modify Skeleton3D's bone.</p>
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>

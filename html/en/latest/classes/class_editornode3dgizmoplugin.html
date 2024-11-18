@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11357,7 +11380,7 @@
 <p>If the <code class="docutils literal notranslate"><span class="pre">cancel</span></code> argument is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the <code class="docutils literal notranslate"><span class="pre">restores</span></code> transforms should be directly set, without any <a class="reference internal" href="class_undoredo.html#class-undoredo"><span class="std std-ref">UndoRedo</span></a> action. As with all subgizmo methods, transforms are given in local space respect to the gizmo's Node3D. Called for this plugin's active gizmos.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editornode3dgizmoplugin-private-method-create-gizmo"><a class="reference internal" href="class_editornode3dgizmo.html#class-editornode3dgizmo"><span class="std std-ref">EditorNode3DGizmo</span></a> <strong>_create_gizmo</strong>(for_node_3d: <a class="reference internal" href="class_node3d.html#class-node3d"><span class="std std-ref">Node3D</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-editornode3dgizmoplugin-private-method-create-gizmo"><span class="std std-ref">🔗</span></a></p>
-<p>Override this method to return a custom <a class="reference internal" href="class_editornode3dgizmo.html#class-editornode3dgizmo"><span class="std std-ref">EditorNode3DGizmo</span></a> for the spatial nodes of your choice, return <code class="docutils literal notranslate"><span class="pre">null</span></code> for the rest of nodes. See also <a class="reference internal" href="#class-editornode3dgizmoplugin-private-method-has-gizmo"><span class="std std-ref">_has_gizmo</span></a>.</p>
+<p>Override this method to return a custom <a class="reference internal" href="class_editornode3dgizmo.html#class-editornode3dgizmo"><span class="std std-ref">EditorNode3DGizmo</span></a> for the 3D nodes of your choice, return <code class="docutils literal notranslate"><span class="pre">null</span></code> for the rest of nodes. See also <a class="reference internal" href="#class-editornode3dgizmoplugin-private-method-has-gizmo"><span class="std std-ref">_has_gizmo</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editornode3dgizmoplugin-private-method-get-gizmo-name"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>_get_gizmo_name</strong>() <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-editornode3dgizmoplugin-private-method-get-gizmo-name"><span class="std std-ref">🔗</span></a></p>
 <p>Override this method to provide the name that will appear in the gizmo visibility menu.</p>

@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11916,8 +11939,8 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_owner</strong>(value: <a class="reference internal" href="#class-node"><span class="std std-ref">Node</span></a>)</p></li>
 <li><p><a class="reference internal" href="#class-node"><span class="std std-ref">Node</span></a> <strong>get_owner</strong>()</p></li>
 </ul>
-<p>The owner of this node. The owner must be an ancestor of this node. When packing the owner node in a <a class="reference internal" href="class_packedscene.html#class-packedscene"><span class="std std-ref">PackedScene</span></a>, all the nodes it owns are also saved with it.</p>
-<p><strong>Note:</strong> In the editor, nodes not owned by the scene root are usually not displayed in the Scene dock, and will <strong>not</strong> be saved. To prevent this, remember to set the owner after calling <a class="reference internal" href="#class-node-method-add-child"><span class="std std-ref">add_child</span></a>. See also (see <a class="reference internal" href="#class-node-property-unique-name-in-owner"><span class="std std-ref">unique_name_in_owner</span></a>)</p>
+<p>The owner of this node. The owner must be an ancestor of this node. When packing the owner node in a <a class="reference internal" href="class_packedscene.html#class-packedscene"><span class="std std-ref">PackedScene</span></a>, all the nodes it owns are also saved with it. See also <a class="reference internal" href="#class-node-property-unique-name-in-owner"><span class="std std-ref">unique_name_in_owner</span></a>.</p>
+<p><strong>Note:</strong> In the editor, nodes not owned by the scene root are usually not displayed in the Scene dock, and will <strong>not</strong> be saved. To prevent this, remember to set the owner after calling <a class="reference internal" href="#class-node-method-add-child"><span class="std std-ref">add_child</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-node-property-physics-interpolation-mode"><a class="reference internal" href="#enum-node-physicsinterpolationmode"><span class="std std-ref">PhysicsInterpolationMode</span></a> <strong>physics_interpolation_mode</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-node-property-physics-interpolation-mode"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

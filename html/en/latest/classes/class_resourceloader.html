@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11253,6 +11276,7 @@
 <p>A singleton used to load resource files from the filesystem.</p>
 <p>It uses the many <a class="reference internal" href="class_resourceformatloader.html#class-resourceformatloader"><span class="std std-ref">ResourceFormatLoader</span></a> classes registered in the engine (either built-in or from a plugin) to load files into memory and convert them to a format that can be used by the engine.</p>
 <p><strong>Note:</strong> You have to import the files into the engine first to load them using <a class="reference internal" href="#class-resourceloader-method-load"><span class="std std-ref">load</span></a>. If you want to load <a class="reference internal" href="class_image.html#class-image"><span class="std std-ref">Image</span></a>s at run-time, you may use <a class="reference internal" href="class_image.html#class-image-method-load"><span class="std std-ref">Image.load</span></a>. If you want to import audio files, you can use the snippet described in <a class="reference internal" href="class_audiostreammp3.html#class-audiostreammp3-property-data"><span class="std std-ref">AudioStreamMP3.data</span></a>.</p>
+<p><strong>Note:</strong> Non-resource files such as plain text files cannot be read using <strong>ResourceLoader</strong>. Use <a class="reference internal" href="class_fileaccess.html#class-fileaccess"><span class="std std-ref">FileAccess</span></a> for those files instead, and be aware that non-resource files are not exported by default (see notes in the <a class="reference internal" href="class_fileaccess.html#class-fileaccess"><span class="std std-ref">FileAccess</span></a> class description for instructions on exporting them).</p>
 </section>
 <section class="classref-introduction-group" id="tutorials">
 <h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading"></a></h2>
@@ -11285,22 +11309,25 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-has-cached"><span class="std std-ref">has_cached</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a></p></td>
-<td><p><a class="reference internal" href="#class-resourceloader-method-load"><span class="std std-ref">load</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, type_hint: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;, cache_mode: <a class="reference internal" href="#enum-resourceloader-cachemode"><span class="std std-ref">CacheMode</span></a> = 1)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a></p></td>
+<td><p><a class="reference internal" href="#class-resourceloader-method-list-directory"><span class="std std-ref">list_directory</span></a>(directory_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a></p></td>
+<td><p><a class="reference internal" href="#class-resourceloader-method-load"><span class="std std-ref">load</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, type_hint: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;, cache_mode: <a class="reference internal" href="#enum-resourceloader-cachemode"><span class="std std-ref">CacheMode</span></a> = 1)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-load-threaded-get"><span class="std std-ref">load_threaded_get</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#enum-resourceloader-threadloadstatus"><span class="std std-ref">ThreadLoadStatus</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#enum-resourceloader-threadloadstatus"><span class="std std-ref">ThreadLoadStatus</span></a></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-load-threaded-get-status"><span class="std std-ref">load_threaded_get_status</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, progress: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> = [])</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-load-threaded-request"><span class="std std-ref">load_threaded_request</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, type_hint: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;, use_sub_threads: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false, cache_mode: <a class="reference internal" href="#enum-resourceloader-cachemode"><span class="std std-ref">CacheMode</span></a> = 1)</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-remove-resource-format-loader"><span class="std std-ref">remove_resource_format_loader</span></a>(format_loader: <a class="reference internal" href="class_resourceformatloader.html#class-resourceformatloader"><span class="std std-ref">ResourceFormatLoader</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-resourceloader-method-set-abort-on-missing-resources"><span class="std std-ref">set_abort_on_missing_resources</span></a>(abort: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></td>
 </tr>
 </tbody>
@@ -11366,6 +11393,9 @@
 <p>Returns whether a cached resource is available for the given <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p>
 <p>Once a resource has been loaded by the engine, it is cached in memory for faster access, and future calls to the <a class="reference internal" href="#class-resourceloader-method-load"><span class="std std-ref">load</span></a> method will use the cached version. The cached resource can be overridden by using <a class="reference internal" href="class_resource.html#class-resource-method-take-over-path"><span class="std std-ref">Resource.take_over_path</span></a> on a new resource for that same path.</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-resourceloader-method-list-directory"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>list_directory</strong>(directory_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-resourceloader-method-list-directory"><span class="std std-ref">🔗</span></a></p>
+<p>Lists a directory (as example: &quot;<a class="reference external" href="res://assets/enemies">res://assets/enemies</a>&quot;), returning all resources contained within. The resource files are the original file names as visible in the editor before exporting.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-resourceloader-method-load"><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a> <strong>load</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, type_hint: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;, cache_mode: <a class="reference internal" href="#enum-resourceloader-cachemode"><span class="std std-ref">CacheMode</span></a> = 1) <a class="reference internal" href="#class-resourceloader-method-load"><span class="std std-ref">🔗</span></a></p>
 <p>Loads a resource at the given <code class="docutils literal notranslate"><span class="pre">path</span></code>, caching the result for further access.</p>
 <p>The registered <a class="reference internal" href="class_resourceformatloader.html#class-resourceformatloader"><span class="std std-ref">ResourceFormatLoader</span></a>s are queried sequentially to find the first one which can handle the file's extension, and then attempt loading. If loading fails, the remaining ResourceFormatLoaders are also attempted.</p>
@@ -11382,7 +11412,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-resourceloader-method-load-threaded-get-status"><a class="reference internal" href="#enum-resourceloader-threadloadstatus"><span class="std std-ref">ThreadLoadStatus</span></a> <strong>load_threaded_get_status</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, progress: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> = []) <a class="reference internal" href="#class-resourceloader-method-load-threaded-get-status"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the status of a threaded loading operation started with <a class="reference internal" href="#class-resourceloader-method-load-threaded-request"><span class="std std-ref">load_threaded_request</span></a> for the resource at <code class="docutils literal notranslate"><span class="pre">path</span></code>. See <a class="reference internal" href="#enum-resourceloader-threadloadstatus"><span class="std std-ref">ThreadLoadStatus</span></a> for possible return values.</p>
-<p>An array variable can optionally be passed via <code class="docutils literal notranslate"><span class="pre">progress</span></code>, and will return a one-element array containing the percentage of completion of the threaded loading.</p>
+<p>An array variable can optionally be passed via <code class="docutils literal notranslate"><span class="pre">progress</span></code>, and will return a one-element array containing the ratio of completion of the threaded loading (between <code class="docutils literal notranslate"><span class="pre">0.0</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0</span></code>).</p>
 <p><strong>Note:</strong> The recommended way of using this method is to call it during different frames (e.g., in <a class="reference internal" href="class_node.html#class-node-private-method-process"><span class="std std-ref">Node._process</span></a>, instead of a loop).</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-resourceloader-method-load-threaded-request"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>load_threaded_request</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, type_hint: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;, use_sub_threads: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false, cache_mode: <a class="reference internal" href="#enum-resourceloader-cachemode"><span class="std std-ref">CacheMode</span></a> = 1) <a class="reference internal" href="#class-resourceloader-method-load-threaded-request"><span class="std std-ref">🔗</span></a></p>

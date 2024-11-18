@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11292,11 +11315,11 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorresourcepreview-method-queue-edited-resource-preview"><abbr title="No return value.">void</abbr> <strong>queue_edited_resource_preview</strong>(resource: <a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a>, receiver: <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>, receiver_func: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, userdata: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>) <a class="reference internal" href="#class-editorresourcepreview-method-queue-edited-resource-preview"><span class="std std-ref">🔗</span></a></p>
 <p>Queue the <code class="docutils literal notranslate"><span class="pre">resource</span></code> being edited for preview. Once the preview is ready, the <code class="docutils literal notranslate"><span class="pre">receiver</span></code>'s <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will be called. The <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> must take the following four arguments: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> path, <a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> preview, <a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> thumbnail_preview, <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> userdata. <code class="docutils literal notranslate"><span class="pre">userdata</span></code> can be anything, and will be returned when <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> is called.</p>
-<p><strong>Note:</strong> If it was not possible to create the preview the <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will still be called, but the preview will be null.</p>
+<p><strong>Note:</strong> If it was not possible to create the preview the <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will still be called, but the preview will be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorresourcepreview-method-queue-resource-preview"><abbr title="No return value.">void</abbr> <strong>queue_resource_preview</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, receiver: <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>, receiver_func: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, userdata: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>) <a class="reference internal" href="#class-editorresourcepreview-method-queue-resource-preview"><span class="std std-ref">🔗</span></a></p>
 <p>Queue a resource file located at <code class="docutils literal notranslate"><span class="pre">path</span></code> for preview. Once the preview is ready, the <code class="docutils literal notranslate"><span class="pre">receiver</span></code>'s <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will be called. The <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> must take the following four arguments: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> path, <a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> preview, <a class="reference internal" href="class_texture2d.html#class-texture2d"><span class="std std-ref">Texture2D</span></a> thumbnail_preview, <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> userdata. <code class="docutils literal notranslate"><span class="pre">userdata</span></code> can be anything, and will be returned when <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> is called.</p>
-<p><strong>Note:</strong> If it was not possible to create the preview the <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will still be called, but the preview will be null.</p>
+<p><strong>Note:</strong> If it was not possible to create the preview the <code class="docutils literal notranslate"><span class="pre">receiver_func</span></code> will still be called, but the preview will be <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorresourcepreview-method-remove-preview-generator"><abbr title="No return value.">void</abbr> <strong>remove_preview_generator</strong>(generator: <a class="reference internal" href="class_editorresourcepreviewgenerator.html#class-editorresourcepreviewgenerator"><span class="std std-ref">EditorResourcePreviewGenerator</span></a>) <a class="reference internal" href="#class-editorresourcepreview-method-remove-preview-generator"><span class="std std-ref">🔗</span></a></p>
 <p>Removes a custom preview generator.</p>

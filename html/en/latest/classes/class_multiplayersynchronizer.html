@@ -4256,6 +4256,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4639,6 +4646,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10690,6 +10706,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11341,7 +11364,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_delta_interval</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_delta_interval</strong>()</p></li>
 </ul>
-<p>Time interval between delta synchronizations. When set to <code class="docutils literal notranslate"><span class="pre">0.0</span></code> (the default), delta synchronizations happen every network process frame.</p>
+<p>Time interval between delta synchronizations. Used when the replication is set to <a class="reference internal" href="class_scenereplicationconfig.html#class-scenereplicationconfig-constant-replication-mode-on-change"><span class="std std-ref">SceneReplicationConfig.REPLICATION_MODE_ON_CHANGE</span></a>. If set to <code class="docutils literal notranslate"><span class="pre">0.0</span></code> (the default), delta synchronizations happen every network process frame.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-multiplayersynchronizer-property-public-visibility"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>public_visibility</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-multiplayersynchronizer-property-public-visibility"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11362,7 +11385,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_replication_interval</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_replication_interval</strong>()</p></li>
 </ul>
-<p>Time interval between synchronizations. When set to <code class="docutils literal notranslate"><span class="pre">0.0</span></code> (the default), synchronizations happen every network process frame.</p>
+<p>Time interval between synchronizations. Used when the replication is set to <a class="reference internal" href="class_scenereplicationconfig.html#class-scenereplicationconfig-constant-replication-mode-always"><span class="std std-ref">SceneReplicationConfig.REPLICATION_MODE_ALWAYS</span></a>. If set to <code class="docutils literal notranslate"><span class="pre">0.0</span></code> (the default), synchronizations happen every network process frame.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-multiplayersynchronizer-property-root-path"><a class="reference internal" href="class_nodepath.html#class-nodepath"><span class="std std-ref">NodePath</span></a> <strong>root_path</strong> = <code class="docutils literal notranslate"><span class="pre">NodePath(&quot;..&quot;)</span></code> <a class="reference internal" href="#class-multiplayersynchronizer-property-root-path"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

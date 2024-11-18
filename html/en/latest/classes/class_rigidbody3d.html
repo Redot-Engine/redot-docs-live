@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11473,7 +11496,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_angular_damp</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_angular_damp</strong>()</p></li>
 </ul>
-<p>Damps the body's rotation. By default, the body will use the <strong>Default Angular Damp</strong> in <strong>Project &gt; Project Settings &gt; Physics &gt; 3d</strong> or any value override set by an <a class="reference internal" href="class_area3d.html#class-area3d"><span class="std std-ref">Area3D</span></a> the body is in. Depending on <a class="reference internal" href="#class-rigidbody3d-property-angular-damp-mode"><span class="std std-ref">angular_damp_mode</span></a>, you can set <a class="reference internal" href="#class-rigidbody3d-property-angular-damp"><span class="std std-ref">angular_damp</span></a> to be added to or to replace the body's damping value.</p>
+<p>Damps the body's rotation. By default, the body will use the <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-physics-3d-default-angular-damp"><span class="std std-ref">ProjectSettings.physics/3d/default_angular_damp</span></a> project setting or any value override set by an <a class="reference internal" href="class_area3d.html#class-area3d"><span class="std std-ref">Area3D</span></a> the body is in. Depending on <a class="reference internal" href="#class-rigidbody3d-property-angular-damp-mode"><span class="std std-ref">angular_damp_mode</span></a>, you can set <a class="reference internal" href="#class-rigidbody3d-property-angular-damp"><span class="std std-ref">angular_damp</span></a> to be added to or to replace the body's damping value.</p>
 <p>See <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-physics-3d-default-angular-damp"><span class="std std-ref">ProjectSettings.physics/3d/default_angular_damp</span></a> for more details about damping.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-rigidbody3d-property-angular-damp-mode"><a class="reference internal" href="#enum-rigidbody3d-dampmode"><span class="std std-ref">DampMode</span></a> <strong>angular_damp_mode</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-rigidbody3d-property-angular-damp-mode"><span class="std std-ref">🔗</span></a></p>
@@ -11574,7 +11597,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_gravity_scale</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_gravity_scale</strong>()</p></li>
 </ul>
-<p>This is multiplied by the global 3D gravity setting found in <strong>Project &gt; Project Settings &gt; Physics &gt; 3d</strong> to produce RigidBody3D's gravity. For example, a value of 1 will be normal gravity, 2 will apply double gravity, and 0.5 will apply half gravity to this object.</p>
+<p>This is multiplied by <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-physics-3d-default-gravity"><span class="std std-ref">ProjectSettings.physics/3d/default_gravity</span></a> to produce this body's gravity. For example, a value of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> will apply normal gravity, <code class="docutils literal notranslate"><span class="pre">2.0</span></code> will apply double the gravity, and <code class="docutils literal notranslate"><span class="pre">0.5</span></code> will apply half the gravity to this body.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-rigidbody3d-property-inertia"><a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a> <strong>inertia</strong> = <code class="docutils literal notranslate"><span class="pre">Vector3(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> <a class="reference internal" href="#class-rigidbody3d-property-inertia"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11611,7 +11634,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_linear_damp</strong>(value: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_linear_damp</strong>()</p></li>
 </ul>
-<p>Damps the body's movement. By default, the body will use the <strong>Default Linear Damp</strong> in <strong>Project &gt; Project Settings &gt; Physics &gt; 3d</strong> or any value override set by an <a class="reference internal" href="class_area3d.html#class-area3d"><span class="std std-ref">Area3D</span></a> the body is in. Depending on <a class="reference internal" href="#class-rigidbody3d-property-linear-damp-mode"><span class="std std-ref">linear_damp_mode</span></a>, you can set <a class="reference internal" href="#class-rigidbody3d-property-linear-damp"><span class="std std-ref">linear_damp</span></a> to be added to or to replace the body's damping value.</p>
+<p>Damps the body's movement. By default, the body will use the <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-physics-3d-default-linear-damp"><span class="std std-ref">ProjectSettings.physics/3d/default_linear_damp</span></a> project setting or any value override set by an <a class="reference internal" href="class_area3d.html#class-area3d"><span class="std std-ref">Area3D</span></a> the body is in. Depending on <a class="reference internal" href="#class-rigidbody3d-property-linear-damp-mode"><span class="std std-ref">linear_damp_mode</span></a>, you can set <a class="reference internal" href="#class-rigidbody3d-property-linear-damp"><span class="std std-ref">linear_damp</span></a> to be added to or to replace the body's damping value.</p>
 <p>See <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-physics-3d-default-linear-damp"><span class="std std-ref">ProjectSettings.physics/3d/default_linear_damp</span></a> for more details about damping.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-rigidbody3d-property-linear-damp-mode"><a class="reference internal" href="#enum-rigidbody3d-dampmode"><span class="std std-ref">DampMode</span></a> <strong>linear_damp_mode</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-rigidbody3d-property-linear-damp-mode"><span class="std std-ref">🔗</span></a></p>

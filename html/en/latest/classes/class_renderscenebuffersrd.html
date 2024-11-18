@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11356,23 +11379,23 @@
 <p>Create a new texture using the given format and view and cache this under the given name. Will return the existing texture if it already exists.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-create-texture-view"><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> <strong>create_texture_view</strong>(context: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, view_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, view: <a class="reference internal" href="class_rdtextureview.html#class-rdtextureview"><span class="std std-ref">RDTextureView</span></a>) <a class="reference internal" href="#class-renderscenebuffersrd-method-create-texture-view"><span class="std std-ref">🔗</span></a></p>
-<p>Create a new texture view for an existing texture and cache this under the given view_name. Will return the existing teture view if it already exists. Will error if the source texture doesn't exist.</p>
+<p>Create a new texture view for an existing texture and cache this under the given <code class="docutils literal notranslate"><span class="pre">view_name</span></code>. Will return the existing texture view if it already exists. Will error if the source texture doesn't exist.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-get-color-layer"><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> <strong>get_color_layer</strong>(layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, msaa: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-renderscenebuffersrd-method-get-color-layer"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the specified layer from the color texture we are rendering 3D content to.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <strong>true</strong> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-get-color-texture"><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> <strong>get_color_texture</strong>(msaa: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-renderscenebuffersrd-method-get-color-texture"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the color texture we are rendering 3D content to. If multiview is used this will be a texture array with all views.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <strong>true</strong> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-get-depth-layer"><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> <strong>get_depth_layer</strong>(layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, msaa: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-renderscenebuffersrd-method-get-depth-layer"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the specified layer from the depth texture we are rendering 3D content to.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <strong>true</strong> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-get-depth-texture"><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> <strong>get_depth_texture</strong>(msaa: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-renderscenebuffersrd-method-get-depth-texture"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the depth texture we are rendering 3D content to. If multiview is used this will be a texture array with all views.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <strong>true</strong> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">msaa</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> and MSAA is enabled, this returns the MSAA variant of the buffer.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-renderscenebuffersrd-method-get-fsr-sharpness"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_fsr_sharpness</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-renderscenebuffersrd-method-get-fsr-sharpness"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the FSR sharpness value used while rendering the 3D content (if <a class="reference internal" href="#class-renderscenebuffersrd-method-get-scaling-3d-mode"><span class="std std-ref">get_scaling_3d_mode</span></a> is an FSR mode).</p>

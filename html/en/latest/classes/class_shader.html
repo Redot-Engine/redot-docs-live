@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11330,8 +11353,8 @@
 <p>Returns the shader mode for the shader.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-shader-method-get-shader-uniform-list"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> <strong>get_shader_uniform_list</strong>(get_groups: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-shader-method-get-shader-uniform-list"><span class="std std-ref">🔗</span></a></p>
-<p>Get the list of shader uniforms that can be assigned to a <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial"><span class="std std-ref">ShaderMaterial</span></a>, for use with <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-set-shader-parameter"><span class="std std-ref">ShaderMaterial.set_shader_parameter</span></a> and <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-get-shader-parameter"><span class="std std-ref">ShaderMaterial.get_shader_parameter</span></a>. The parameters returned are contained in dictionaries in a similar format to the ones returned by <a class="reference internal" href="class_object.html#class-object-method-get-property-list"><span class="std std-ref">Object.get_property_list</span></a>.</p>
-<p>If argument <code class="docutils literal notranslate"><span class="pre">get_groups</span></code> is true, parameter grouping hints will be provided.</p>
+<p>Returns the list of shader uniforms that can be assigned to a <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial"><span class="std std-ref">ShaderMaterial</span></a>, for use with <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-set-shader-parameter"><span class="std std-ref">ShaderMaterial.set_shader_parameter</span></a> and <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial-method-get-shader-parameter"><span class="std std-ref">ShaderMaterial.get_shader_parameter</span></a>. The parameters returned are contained in dictionaries in a similar format to the ones returned by <a class="reference internal" href="class_object.html#class-object-method-get-property-list"><span class="std std-ref">Object.get_property_list</span></a>.</p>
+<p>If argument <code class="docutils literal notranslate"><span class="pre">get_groups</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, parameter grouping hints are also included in the list.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-shader-method-inspect-native-shader-code"><abbr title="No return value.">void</abbr> <strong>inspect_native_shader_code</strong>() <a class="reference internal" href="#class-shader-method-inspect-native-shader-code"><span class="std std-ref">🔗</span></a></p>
 <p>Only available when running in the editor. Opens a popup that visualizes the generated shader code, including all variants and internal shader code. See also <a class="reference internal" href="class_material.html#class-material-method-inspect-native-shader-code"><span class="std std-ref">Material.inspect_native_shader_code</span></a>.</p>

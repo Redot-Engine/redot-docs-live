@@ -4256,6 +4256,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4639,6 +4646,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10690,6 +10706,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11388,7 +11411,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-multiplayerapi-method-rpc"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>rpc</strong>(peer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, object: <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>, method: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>, arguments: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> = []) <a class="reference internal" href="#class-multiplayerapi-method-rpc"><span class="std std-ref">🔗</span></a></p>
 <p>Sends an RPC to the target <code class="docutils literal notranslate"><span class="pre">peer</span></code>. The given <code class="docutils literal notranslate"><span class="pre">method</span></code> will be called on the remote <code class="docutils literal notranslate"><span class="pre">object</span></code> with the provided <code class="docutils literal notranslate"><span class="pre">arguments</span></code>. The RPC may also be called locally depending on the implementation and RPC configuration. See <a class="reference internal" href="class_node.html#class-node-method-rpc"><span class="std std-ref">Node.rpc</span></a> and <a class="reference internal" href="class_node.html#class-node-method-rpc-config"><span class="std std-ref">Node.rpc_config</span></a>.</p>
-<p><strong>Note:</strong> Prefer using <a class="reference internal" href="class_node.html#class-node-method-rpc"><span class="std std-ref">Node.rpc</span></a>, <a class="reference internal" href="class_node.html#class-node-method-rpc-id"><span class="std std-ref">Node.rpc_id</span></a>, or <code class="docutils literal notranslate"><span class="pre">my_method.rpc(peer,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...)</span></code> (in GDScript), since they are faster. This method is mostly useful in conjunction with <a class="reference internal" href="class_multiplayerapiextension.html#class-multiplayerapiextension"><span class="std std-ref">MultiplayerAPIExtension</span></a> when augmenting or replacing the multiplayer capabilities.</p>
+<p><strong>Note:</strong> Prefer using <a class="reference internal" href="class_node.html#class-node-method-rpc"><span class="std std-ref">Node.rpc</span></a>, <a class="reference internal" href="class_node.html#class-node-method-rpc-id"><span class="std std-ref">Node.rpc_id</span></a>, or <code class="docutils literal notranslate"><span class="pre">my_method.rpc(peer,</span> <span class="pre">arg1,</span> <span class="pre">arg2,</span> <span class="pre">...)</span></code> (in GDScript), since they are faster. This method is mostly useful in conjunction with <a class="reference internal" href="class_multiplayerapiextension.html#class-multiplayerapiextension"><span class="std std-ref">MultiplayerAPIExtension</span></a> when extending or replacing the multiplayer capabilities.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-multiplayerapi-method-set-default-interface"><abbr title="No return value.">void</abbr> <strong>set_default_interface</strong>(interface_name: <a class="reference internal" href="class_stringname.html#class-stringname"><span class="std std-ref">StringName</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-multiplayerapi-method-set-default-interface"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the default MultiplayerAPI implementation class. This method can be used by modules and extensions to configure which implementation will be used by <a class="reference internal" href="class_scenetree.html#class-scenetree"><span class="std std-ref">SceneTree</span></a> when the engine starts.</p>

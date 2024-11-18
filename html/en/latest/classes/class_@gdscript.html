@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11619,7 +11642,19 @@
 <span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">car_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
 </pre></div>
 </div>
-<p><strong>Note:</strong> Subgroups cannot be nested, they only provide one extra level of depth. Just like the next group ends the previous group, so do the subsequent subgroups.</p>
+<p><strong>Note:</strong> Subgroups cannot be nested, but you can use the slash separator (<code class="docutils literal notranslate"><span class="pre">/</span></code>) to achieve the desired effect:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_group</span><span class="p">(</span><span class="s2">&quot;Car Properties&quot;</span><span class="p">)</span>
+<span class="nd">@export_subgroup</span><span class="p">(</span><span class="s2">&quot;Wheels&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;wheel_&quot;</span><span class="p">)</span>
+<span class="nd">@export_subgroup</span><span class="p">(</span><span class="s2">&quot;Wheels/Front&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;front_wheel_&quot;</span><span class="p">)</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">front_wheel_strength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">front_wheel_mobility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<span class="nd">@export_subgroup</span><span class="p">(</span><span class="s2">&quot;Wheels/Rear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rear_wheel_&quot;</span><span class="p">)</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">rear_wheel_strength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">rear_wheel_mobility</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span>
+<span class="nd">@export_subgroup</span><span class="p">(</span><span class="s2">&quot;Wheels&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;wheel_&quot;</span><span class="p">)</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">wheel_material</span><span class="p">:</span><span class="w"> </span><span class="n">PhysicsMaterial</span>
+</pre></div>
+</div>
 <hr class="classref-item-separator docutils" />
 <p class="classref-annotation" id="class-gdscript-annotation-export-tool-button"><strong>&#64;export_tool_button</strong>(text: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, icon: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;&quot;) <a class="reference internal" href="#class-gdscript-annotation-export-tool-button"><span class="std std-ref">🔗</span></a></p>
 <p>Export a <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a> property as a clickable button with the label <code class="docutils literal notranslate"><span class="pre">text</span></code>. When the button is pressed, the callable is called.</p>

@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11391,7 +11414,7 @@
 <p>Determines a mapping between the given glTF Object Model <code class="docutils literal notranslate"><span class="pre">json_pointer</span></code> and the corresponding Redot node path(s) in the generated Redot scene. The details of this mapping are returned in a <a class="reference internal" href="class_gltfobjectmodelproperty.html#class-gltfobjectmodelproperty"><span class="std std-ref">GLTFObjectModelProperty</span></a> object. Additional mappings can be supplied via the <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension-private-method-export-object-model-property"><span class="std std-ref">GLTFDocumentExtension._export_object_model_property</span></a> callback method.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfdocument-method-register-gltf-document-extension"><abbr title="No return value.">void</abbr> <strong>register_gltf_document_extension</strong>(extension: <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a>, first_priority: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-gltfdocument-method-register-gltf-document-extension"><span class="std std-ref">🔗</span></a></p>
-<p>Registers the given <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> instance with GLTFDocument. If <code class="docutils literal notranslate"><span class="pre">first_priority</span></code> is true, this extension will be run first. Otherwise, it will be run last.</p>
+<p>Registers the given <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a> instance with GLTFDocument. If <code class="docutils literal notranslate"><span class="pre">first_priority</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, this extension will be run first. Otherwise, it will be run last.</p>
 <p><strong>Note:</strong> Like GLTFDocument itself, all GLTFDocumentExtension classes must be stateless in order to function properly. If you need to store data, use the <code class="docutils literal notranslate"><span class="pre">set_additional_data</span></code> and <code class="docutils literal notranslate"><span class="pre">get_additional_data</span></code> methods in <a class="reference internal" href="class_gltfstate.html#class-gltfstate"><span class="std std-ref">GLTFState</span></a> or <a class="reference internal" href="class_gltfnode.html#class-gltfnode"><span class="std std-ref">GLTFNode</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-gltfdocument-method-unregister-gltf-document-extension"><abbr title="No return value.">void</abbr> <strong>unregister_gltf_document_extension</strong>(extension: <a class="reference internal" href="class_gltfdocumentextension.html#class-gltfdocumentextension"><span class="std std-ref">GLTFDocumentExtension</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-gltfdocument-method-unregister-gltf-document-extension"><span class="std std-ref">🔗</span></a></p>

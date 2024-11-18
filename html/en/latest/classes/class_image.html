@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11685,6 +11708,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-image-method-blit-rect"><abbr title="No return value.">void</abbr> <strong>blit_rect</strong>(src: <a class="reference internal" href="#class-image"><span class="std std-ref">Image</span></a>, src_rect: <a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a>, dst: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <a class="reference internal" href="#class-image-method-blit-rect"><span class="std std-ref">🔗</span></a></p>
 <p>Copies <code class="docutils literal notranslate"><span class="pre">src_rect</span></code> from <code class="docutils literal notranslate"><span class="pre">src</span></code> image to this image at coordinates <code class="docutils literal notranslate"><span class="pre">dst</span></code>, clipped accordingly to both image bounds. This image and <code class="docutils literal notranslate"><span class="pre">src</span></code> image <strong>must</strong> have the same format. <code class="docutils literal notranslate"><span class="pre">src_rect</span></code> with non-positive size is treated as empty.</p>
+<p><strong>Note:</strong> The alpha channel data in <code class="docutils literal notranslate"><span class="pre">src</span></code> will overwrite the corresponding data in this image at the target position. To blend alpha channels, use <a class="reference internal" href="#class-image-method-blend-rect"><span class="std std-ref">blend_rect</span></a> instead.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-image-method-blit-rect-mask"><abbr title="No return value.">void</abbr> <strong>blit_rect_mask</strong>(src: <a class="reference internal" href="#class-image"><span class="std std-ref">Image</span></a>, mask: <a class="reference internal" href="#class-image"><span class="std std-ref">Image</span></a>, src_rect: <a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a>, dst: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <a class="reference internal" href="#class-image-method-blit-rect-mask"><span class="std std-ref">🔗</span></a></p>
 <p>Blits <code class="docutils literal notranslate"><span class="pre">src_rect</span></code> area from <code class="docutils literal notranslate"><span class="pre">src</span></code> image to this image at the coordinates given by <code class="docutils literal notranslate"><span class="pre">dst</span></code>, clipped accordingly to both image bounds. <code class="docutils literal notranslate"><span class="pre">src</span></code> pixel is copied onto <code class="docutils literal notranslate"><span class="pre">dst</span></code> if the corresponding <code class="docutils literal notranslate"><span class="pre">mask</span></code> pixel's alpha value is not 0. This image and <code class="docutils literal notranslate"><span class="pre">src</span></code> image <strong>must</strong> have the same format. <code class="docutils literal notranslate"><span class="pre">src</span></code> image and <code class="docutils literal notranslate"><span class="pre">mask</span></code> image <strong>must</strong> have the same size (width and height) but they can have different formats. <code class="docutils literal notranslate"><span class="pre">src_rect</span></code> with non-positive size is treated as empty.</p>
@@ -11894,11 +11918,11 @@
 <p>Saves the image as a PNG file to a byte array.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-image-method-save-webp"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>save_webp</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, lossy: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false, quality: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.75) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-image-method-save-webp"><span class="std std-ref">🔗</span></a></p>
-<p>Saves the image as a WebP (Web Picture) file to the file at <code class="docutils literal notranslate"><span class="pre">path</span></code>. By default it will save lossless. If <code class="docutils literal notranslate"><span class="pre">lossy</span></code> is true, the image will be saved lossy, using the <code class="docutils literal notranslate"><span class="pre">quality</span></code> setting between 0.0 and 1.0 (inclusive). Lossless WebP offers more efficient compression than PNG.</p>
+<p>Saves the image as a WebP (Web Picture) file to the file at <code class="docutils literal notranslate"><span class="pre">path</span></code>. By default it will save lossless. If <code class="docutils literal notranslate"><span class="pre">lossy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the image will be saved lossy, using the <code class="docutils literal notranslate"><span class="pre">quality</span></code> setting between <code class="docutils literal notranslate"><span class="pre">0.0</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0</span></code> (inclusive). Lossless WebP offers more efficient compression than PNG.</p>
 <p><strong>Note:</strong> The WebP format is limited to a size of 16383×16383 pixels, while PNG can save larger images.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-image-method-save-webp-to-buffer"><a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> <strong>save_webp_to_buffer</strong>(lossy: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false, quality: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = 0.75) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-image-method-save-webp-to-buffer"><span class="std std-ref">🔗</span></a></p>
-<p>Saves the image as a WebP (Web Picture) file to a byte array. By default it will save lossless. If <code class="docutils literal notranslate"><span class="pre">lossy</span></code> is true, the image will be saved lossy, using the <code class="docutils literal notranslate"><span class="pre">quality</span></code> setting between 0.0 and 1.0 (inclusive). Lossless WebP offers more efficient compression than PNG.</p>
+<p>Saves the image as a WebP (Web Picture) file to a byte array. By default it will save lossless. If <code class="docutils literal notranslate"><span class="pre">lossy</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the image will be saved lossy, using the <code class="docutils literal notranslate"><span class="pre">quality</span></code> setting between <code class="docutils literal notranslate"><span class="pre">0.0</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0</span></code> (inclusive). Lossless WebP offers more efficient compression than PNG.</p>
 <p><strong>Note:</strong> The WebP format is limited to a size of 16383×16383 pixels, while PNG can save larger images.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-image-method-set-data"><abbr title="No return value.">void</abbr> <strong>set_data</strong>(width: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, height: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, use_mipmaps: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>, format: <a class="reference internal" href="#enum-image-format"><span class="std std-ref">Format</span></a>, data: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>) <a class="reference internal" href="#class-image-method-set-data"><span class="std std-ref">🔗</span></a></p>

@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11464,7 +11487,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-surfacetool-method-generate-normals"><abbr title="No return value.">void</abbr> <strong>generate_normals</strong>(flip: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-surfacetool-method-generate-normals"><span class="std std-ref">🔗</span></a></p>
 <p>Generates normals from vertices so you do not have to do it manually. If <code class="docutils literal notranslate"><span class="pre">flip</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, the resulting normals will be inverted. <a class="reference internal" href="#class-surfacetool-method-generate-normals"><span class="std std-ref">generate_normals</span></a> should be called <em>after</em> generating geometry and <em>before</em> committing the mesh using <a class="reference internal" href="#class-surfacetool-method-commit"><span class="std std-ref">commit</span></a> or <a class="reference internal" href="#class-surfacetool-method-commit-to-arrays"><span class="std std-ref">commit_to_arrays</span></a>. For correct display of normal-mapped surfaces, you will also have to generate tangents using <a class="reference internal" href="#class-surfacetool-method-generate-tangents"><span class="std std-ref">generate_tangents</span></a>.</p>
-<p><strong>Note:</strong> <a class="reference internal" href="#class-surfacetool-method-generate-normals"><span class="std std-ref">generate_normals</span></a> only works if the primitive type to be set to <a class="reference internal" href="class_mesh.html#class-mesh-constant-primitive-triangles"><span class="std std-ref">Mesh.PRIMITIVE_TRIANGLES</span></a>.</p>
+<p><strong>Note:</strong> <a class="reference internal" href="#class-surfacetool-method-generate-normals"><span class="std std-ref">generate_normals</span></a> only works if the primitive type is set to <a class="reference internal" href="class_mesh.html#class-mesh-constant-primitive-triangles"><span class="std std-ref">Mesh.PRIMITIVE_TRIANGLES</span></a>.</p>
 <p><strong>Note:</strong> <a class="reference internal" href="#class-surfacetool-method-generate-normals"><span class="std std-ref">generate_normals</span></a> takes smooth groups into account. To generate smooth normals, set the smooth group to a value greater than or equal to <code class="docutils literal notranslate"><span class="pre">0</span></code> using <a class="reference internal" href="#class-surfacetool-method-set-smooth-group"><span class="std std-ref">set_smooth_group</span></a> or leave the smooth group at the default of <code class="docutils literal notranslate"><span class="pre">0</span></code>. To generate flat normals, set the smooth group to <code class="docutils literal notranslate"><span class="pre">-1</span></code> using <a class="reference internal" href="#class-surfacetool-method-set-smooth-group"><span class="std std-ref">set_smooth_group</span></a> prior to adding vertices.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-surfacetool-method-generate-tangents"><abbr title="No return value.">void</abbr> <strong>generate_tangents</strong>() <a class="reference internal" href="#class-surfacetool-method-generate-tangents"><span class="std std-ref">🔗</span></a></p>

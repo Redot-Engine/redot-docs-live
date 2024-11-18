@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11526,7 +11549,7 @@
 <li><p><a class="reference internal" href="#enum-lightmapgi-bakequality"><span class="std std-ref">BakeQuality</span></a> <strong>get_bake_quality</strong>()</p></li>
 </ul>
 <p>The quality preset to use when baking lightmaps. This affects bake times, but output file sizes remain mostly identical across quality levels.</p>
-<p>To further speed up bake times, decrease <a class="reference internal" href="#class-lightmapgi-property-bounces"><span class="std std-ref">bounces</span></a>, disable <a class="reference internal" href="#class-lightmapgi-property-use-denoiser"><span class="std std-ref">use_denoiser</span></a> and increase the lightmap texel size on 3D scenes in the Import doc.</p>
+<p>To further speed up bake times, decrease <a class="reference internal" href="#class-lightmapgi-property-bounces"><span class="std std-ref">bounces</span></a>, disable <a class="reference internal" href="#class-lightmapgi-property-use-denoiser"><span class="std std-ref">use_denoiser</span></a> and increase the lightmap texel size on 3D scenes in the Import dock.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-lightmapgi-property-texel-scale"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>texel_scale</strong> = <code class="docutils literal notranslate"><span class="pre">1.0</span></code> <a class="reference internal" href="#class-lightmapgi-property-texel-scale"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11534,6 +11557,7 @@
 <li><p><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>get_texel_scale</strong>()</p></li>
 </ul>
 <p>Scales the lightmap texel density of all meshes for the current bake. This is a multiplier that builds upon the existing lightmap texel size defined in each imported 3D scene, along with the per-mesh density multiplier (which is designed to be used when the same mesh is used at different scales). Lower values will result in faster bake times.</p>
+<p>For example, doubling <a class="reference internal" href="#class-lightmapgi-property-texel-scale"><span class="std std-ref">texel_scale</span></a> doubles the lightmap texture resolution for all objects <em>on each axis</em>, so it will <em>quadruple</em> the texel count.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-lightmapgi-property-use-denoiser"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>use_denoiser</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-lightmapgi-property-use-denoiser"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

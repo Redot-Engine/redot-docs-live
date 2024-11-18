@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11432,9 +11455,15 @@
 <p class="classref-property" id="class-resourceimportertexture-property-process-size-limit"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>process/size_limit</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-resourceimportertexture-property-process-size-limit"><span class="std std-ref">🔗</span></a></p>
 <p>If set to a value greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>, the size of the texture is limited on import to a value smaller than or equal to the value specified here. For non-square textures, the size limit affects the longer dimension, with the shorter dimension scaled to preserve aspect ratio. Resizing is performed using cubic interpolation.</p>
 <p>This can be used to reduce memory usage without affecting the source images, or avoid issues with textures not displaying on mobile/web platforms (as these usually can't display textures larger than 4096×4096).</p>
+<p><strong>Note:</strong> Even if this is set to <code class="docutils literal notranslate"><span class="pre">0</span></code>, import size is limited to the following dimensions for technical reasons. Depending on <a class="reference internal" href="#class-resourceimportertexture-property-compress-mode"><span class="std std-ref">compress/mode</span></a>, textures will be downsampled on import if necessary:</p>
+<ul class="simple">
+<li><p><strong>Lossy:</strong> 16383 pixels width or height, whichever is larger;</p></li>
+<li><p><strong>Basis Universal:</strong> 16384 pixels width or height, whichever is larger;</p></li>
+<li><p><strong>All other modes:</strong> 32768 pixels width or height, whichever is larger.</p></li>
+</ul>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-resourceimportertexture-property-roughness-mode"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>roughness/mode</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-resourceimportertexture-property-roughness-mode"><span class="std std-ref">🔗</span></a></p>
-<p>The color channel to consider as a roughness map in this texture. Only effective if Roughness &gt; Src Normal is not empty.</p>
+<p>The color channel to consider as a roughness map in this texture. Only effective if <a class="reference internal" href="#class-resourceimportertexture-property-roughness-src-normal"><span class="std std-ref">roughness/src_normal</span></a> is not empty.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-resourceimportertexture-property-roughness-src-normal"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>roughness/src_normal</strong> = <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> <a class="reference internal" href="#class-resourceimportertexture-property-roughness-src-normal"><span class="std std-ref">🔗</span></a></p>
 <p>The path to the texture to consider as a normal map for roughness filtering on import. Specifying this can help decrease specular aliasing slightly in 3D.</p>

@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11282,7 +11305,7 @@
 </div></div>
 <p>In the example above, the file will be saved in the user data folder as specified in the <a class="reference internal" href="../tutorials/io/data_paths.html"><span class="doc">Data paths</span></a> documentation.</p>
 <p><strong>FileAccess</strong> will close when it's freed, which happens when it goes out of scope or when it gets assigned with <code class="docutils literal notranslate"><span class="pre">null</span></code>. <a class="reference internal" href="#class-fileaccess-method-close"><span class="std std-ref">close</span></a> can be used to close it before then explicitly. In C# the reference must be disposed manually, which can be done with the <code class="docutils literal notranslate"><span class="pre">using</span></code> statement or by calling the <code class="docutils literal notranslate"><span class="pre">Dispose</span></code> method directly.</p>
-<p><strong>Note:</strong> To access project resources once exported, it is recommended to use <a class="reference internal" href="class_resourceloader.html#class-resourceloader"><span class="std std-ref">ResourceLoader</span></a> instead of <strong>FileAccess</strong>, as some files are converted to engine-specific formats and their original source files might not be present in the exported PCK package.</p>
+<p><strong>Note:</strong> To access project resources once exported, it is recommended to use <a class="reference internal" href="class_resourceloader.html#class-resourceloader"><span class="std std-ref">ResourceLoader</span></a> instead of <strong>FileAccess</strong>, as some files are converted to engine-specific formats and their original source files might not be present in the exported PCK package. If using <strong>FileAccess</strong>, make sure the file is included in the export by changing its import mode to <strong>Keep File (exported as is)</strong> in the Import dock, or, for files where this option is not available, change the non-resource export filter in the Export dialog to include the file's extension (e.g. <code class="docutils literal notranslate"><span class="pre">*.txt</span></code>).</p>
 <p><strong>Note:</strong> Files are automatically closed only if the process exits &quot;normally&quot; (such as by clicking the window manager's close button or pressing <strong>Alt + F4</strong>). If you stop the project execution by pressing <strong>F8</strong> while the project is running, the file won't be closed as the game process will be killed. You can work around this by calling <a class="reference internal" href="#class-fileaccess-method-flush"><span class="std std-ref">flush</span></a> at regular intervals.</p>
 </section>
 <section class="classref-introduction-group" id="tutorials">
@@ -11410,7 +11433,7 @@
 <td><p><a class="reference internal" href="#class-fileaccess-method-open-compressed"><span class="std std-ref">open_compressed</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, compression_mode: <a class="reference internal" href="#enum-fileaccess-compressionmode"><span class="std std-ref">CompressionMode</span></a> = 0) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#class-fileaccess"><span class="std std-ref">FileAccess</span></a></p></td>
-<td><p><a class="reference internal" href="#class-fileaccess-method-open-encrypted"><span class="std std-ref">open_encrypted</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, key: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr></p></td>
+<td><p><a class="reference internal" href="#class-fileaccess-method-open-encrypted"><span class="std std-ref">open_encrypted</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, key: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>, iv: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray()) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#class-fileaccess"><span class="std std-ref">FileAccess</span></a></p></td>
 <td><p><a class="reference internal" href="#class-fileaccess-method-open-encrypted-with-pass"><span class="std std-ref">open_encrypted_with_pass</span></a>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, pass: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr></p></td>
@@ -11683,7 +11706,7 @@ Alice,&quot;I thought you&#39;d reply with &quot;&quot;Hello, world&quot;&quot;.
 <p><strong>Note:</strong> <a class="reference internal" href="#class-fileaccess-method-open-compressed"><span class="std std-ref">open_compressed</span></a> can only read files that were saved by Redot, not third-party compression formats. See <a class="reference external" href="https://github.com/redot-engine/redot-engine/issues/28999">GitHub issue #28999</a> for a workaround.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">null</span></code> if opening the file failed. You can use <a class="reference internal" href="#class-fileaccess-method-get-open-error"><span class="std std-ref">get_open_error</span></a> to check the error that occurred.</p>
 <hr class="classref-item-separator docutils" />
-<p class="classref-method" id="class-fileaccess-method-open-encrypted"><a class="reference internal" href="#class-fileaccess"><span class="std std-ref">FileAccess</span></a> <strong>open_encrypted</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, key: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-fileaccess-method-open-encrypted"><span class="std std-ref">🔗</span></a></p>
+<p class="classref-method" id="class-fileaccess-method-open-encrypted"><a class="reference internal" href="#class-fileaccess"><span class="std std-ref">FileAccess</span></a> <strong>open_encrypted</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, mode_flags: <a class="reference internal" href="#enum-fileaccess-modeflags"><span class="std std-ref">ModeFlags</span></a>, key: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a>, iv: <a class="reference internal" href="class_packedbytearray.html#class-packedbytearray"><span class="std std-ref">PackedByteArray</span></a> = PackedByteArray()) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-fileaccess-method-open-encrypted"><span class="std std-ref">🔗</span></a></p>
 <p>Creates a new <strong>FileAccess</strong> object and opens an encrypted file in write or read mode. You need to pass a binary key to encrypt/decrypt it.</p>
 <p><strong>Note:</strong> The provided key must be 32 bytes long.</p>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">null</span></code> if opening the file failed. You can use <a class="reference internal" href="#class-fileaccess-method-get-open-error"><span class="std std-ref">get_open_error</span></a> to check the error that occurred.</p>

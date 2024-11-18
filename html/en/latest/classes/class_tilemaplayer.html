@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11316,94 +11339,97 @@
 <tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-private-method-tile-data-runtime-update"><span class="std std-ref">_tile_data_runtime_update</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, tile_data: <a class="reference internal" href="class_tiledata.html#class-tiledata"><span class="std std-ref">TileData</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<td><p><a class="reference internal" href="#class-tilemaplayer-private-method-update-cells"><span class="std std-ref">_update_cells</span></a>(coords: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], forced_cleanup: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-private-method-use-tile-data-runtime-update"><span class="std std-ref">_use_tile_data_runtime_update</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-clear"><span class="std std-ref">clear</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-erase-cell"><span class="std std-ref">erase_cell</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-fix-invalid-tiles"><span class="std std-ref">fix_invalid_tiles</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-cell-alternative-tile"><span class="std std-ref">get_cell_alternative_tile</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-cell-atlas-coords"><span class="std std-ref">get_cell_atlas_coords</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-cell-source-id"><span class="std std-ref">get_cell_source_id</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_tiledata.html#class-tiledata"><span class="std std-ref">TileData</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_tiledata.html#class-tiledata"><span class="std std-ref">TileData</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-cell-tile-data"><span class="std std-ref">get_cell_tile_data</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-coords-for-body-rid"><span class="std std-ref">get_coords_for_body_rid</span></a>(body: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-navigation-map"><span class="std std-ref">get_navigation_map</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-neighbor-cell"><span class="std std-ref">get_neighbor_cell</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, neighbor: <a class="reference internal" href="class_tileset.html#enum-tileset-cellneighbor"><span class="std std-ref">CellNeighbor</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_tilemappattern.html#class-tilemappattern"><span class="std std-ref">TileMapPattern</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_tilemappattern.html#class-tilemappattern"><span class="std std-ref">TileMapPattern</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-pattern"><span class="std std-ref">get_pattern</span></a>(coords_array: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>])</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-surrounding-cells"><span class="std std-ref">get_surrounding_cells</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-used-cells"><span class="std std-ref">get_used_cells</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>]</p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-used-cells-by-id"><span class="std std-ref">get_used_cells_by_id</span></a>(source_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1, atlas_coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a> = Vector2i(-1, -1), alternative_tile: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-get-used-rect"><span class="std std-ref">get_used_rect</span></a>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-has-body-rid"><span class="std std-ref">has_body_rid</span></a>(body: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-is-cell-flipped-h"><span class="std std-ref">is_cell_flipped_h</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-is-cell-flipped-v"><span class="std std-ref">is_cell_flipped_v</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-is-cell-transposed"><span class="std std-ref">is_cell_transposed</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-local-to-map"><span class="std std-ref">local_to_map</span></a>(local_position: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-map-pattern"><span class="std std-ref">map_pattern</span></a>(position_in_tilemap: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, coords_in_pattern: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, pattern: <a class="reference internal" href="class_tilemappattern.html#class-tilemappattern"><span class="std std-ref">TileMapPattern</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-map-to-local"><span class="std std-ref">map_to_local</span></a>(map_position: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr></p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-notify-runtime-tile-data-update"><span class="std std-ref">notify_runtime_tile_data_update</span></a>()</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-set-cell"><span class="std std-ref">set_cell</span></a>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, source_id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1, atlas_coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a> = Vector2i(-1, -1), alternative_tile: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-set-cells-terrain-connect"><span class="std std-ref">set_cells_terrain_connect</span></a>(cells: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true)</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-set-cells-terrain-path"><span class="std std-ref">set_cells_terrain_path</span></a>(path: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-set-navigation-map"><span class="std std-ref">set_navigation_map</span></a>(map: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-set-pattern"><span class="std std-ref">set_pattern</span></a>(position: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>, pattern: <a class="reference internal" href="class_tilemappattern.html#class-tilemappattern"><span class="std std-ref">TileMapPattern</span></a>)</p></td>
 </tr>
-<tr class="row-odd"><td><p><abbr title="No return value.">void</abbr></p></td>
+<tr class="row-even"><td><p><abbr title="No return value.">void</abbr></p></td>
 <td><p><a class="reference internal" href="#class-tilemaplayer-method-update-internals"><span class="std std-ref">update_internals</span></a>()</p></td>
 </tr>
 </tbody>
@@ -11526,6 +11552,18 @@
 <p><strong>Warning:</strong> The <code class="docutils literal notranslate"><span class="pre">tile_data</span></code> object's sub-resources are the same as the one in the TileSet. Modifying them might impact the whole TileSet. Instead, make sure to duplicate those resources.</p>
 <p><strong>Note:</strong> If the properties of <code class="docutils literal notranslate"><span class="pre">tile_data</span></code> object should change over time, use <a class="reference internal" href="#class-tilemaplayer-method-notify-runtime-tile-data-update"><span class="std std-ref">notify_runtime_tile_data_update</span></a> to notify the <strong>TileMapLayer</strong> it needs an update.</p>
 <hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-tilemaplayer-private-method-update-cells"><abbr title="No return value.">void</abbr> <strong>_update_cells</strong>(coords: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], forced_cleanup: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-tilemaplayer-private-method-update-cells"><span class="std std-ref">🔗</span></a></p>
+<p>Called when this <strong>TileMapLayer</strong>'s cells need an internal update. This update may be caused from individual cells being modified or by a change in the <a class="reference internal" href="#class-tilemaplayer-property-tile-set"><span class="std std-ref">tile_set</span></a> (causing all cells to be queued for an update). The first call to this function is always for initializing all the <strong>TileMapLayer</strong>'s cells. <code class="docutils literal notranslate"><span class="pre">coords</span></code> contains the coordinates of all modified cells, roughly in the order they were modified. <code class="docutils literal notranslate"><span class="pre">forced_cleanup</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> when the <strong>TileMapLayer</strong>'s internals should be fully cleaned up. This is the case when:</p>
+<ul class="simple">
+<li><p>The layer is disabled;</p></li>
+<li><p>The layer is not visible;</p></li>
+<li><p><a class="reference internal" href="#class-tilemaplayer-property-tile-set"><span class="std std-ref">tile_set</span></a> is set to <code class="docutils literal notranslate"><span class="pre">null</span></code>;</p></li>
+<li><p>The node is removed from the tree;</p></li>
+<li><p>The node is freed.</p></li>
+</ul>
+<p>Note that any internal update happening while one of these conditions is verified is considered to be a &quot;cleanup&quot;. See also <a class="reference internal" href="#class-tilemaplayer-method-update-internals"><span class="std std-ref">update_internals</span></a>.</p>
+<p><strong>Warning:</strong> Implementing this method may degrade the <strong>TileMapLayer</strong>'s performance.</p>
+<hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-private-method-use-tile-data-runtime-update"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>_use_tile_data_runtime_update</strong>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-tilemaplayer-private-method-use-tile-data-runtime-update"><span class="std std-ref">🔗</span></a></p>
 <p>Should return <code class="docutils literal notranslate"><span class="pre">true</span></code> if the tile at coordinates <code class="docutils literal notranslate"><span class="pre">coords</span></code> requires a runtime update.</p>
 <p><strong>Warning:</strong> Make sure this function only returns <code class="docutils literal notranslate"><span class="pre">true</span></code> when needed. Any tile processed at runtime without a need for it will imply a significant performance penalty.</p>
@@ -11575,7 +11613,7 @@
 <p>Creates and returns a new <a class="reference internal" href="class_tilemappattern.html#class-tilemappattern"><span class="std std-ref">TileMapPattern</span></a> from the given array of cells. See also <a class="reference internal" href="#class-tilemaplayer-method-set-pattern"><span class="std std-ref">set_pattern</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-method-get-surrounding-cells"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>] <strong>get_surrounding_cells</strong>(coords: <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>) <a class="reference internal" href="#class-tilemaplayer-method-get-surrounding-cells"><span class="std std-ref">🔗</span></a></p>
-<p>Returns the list of all neighboring cells to the one at <code class="docutils literal notranslate"><span class="pre">coords</span></code>.</p>
+<p>Returns the list of all neighboring cells to the one at <code class="docutils literal notranslate"><span class="pre">coords</span></code>. Any neighboring cell is one that is touching edges, so for a square cell 4 cells would be returned, for a hexagon 6 cells are returned.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-method-get-used-cells"><a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>] <strong>get_used_cells</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-tilemaplayer-method-get-used-cells"><span class="std std-ref">🔗</span></a></p>
 <p>Returns a <a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a> array with the positions of all cells containing a tile. A cell is considered empty if its source identifier equals <code class="docutils literal notranslate"><span class="pre">-1</span></code>, its atlas coordinate identifier is <code class="docutils literal notranslate"><span class="pre">Vector2(-1,</span> <span class="pre">-1)</span></code> and its alternative identifier is <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
@@ -11626,12 +11664,12 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-method-set-cells-terrain-connect"><abbr title="No return value.">void</abbr> <strong>set_cells_terrain_connect</strong>(cells: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-tilemaplayer-method-set-cells-terrain-connect"><span class="std std-ref">🔗</span></a></p>
 <p>Update all the cells in the <code class="docutils literal notranslate"><span class="pre">cells</span></code> coordinates array so that they use the given <code class="docutils literal notranslate"><span class="pre">terrain</span></code> for the given <code class="docutils literal notranslate"><span class="pre">terrain_set</span></code>. If an updated cell has the same terrain as one of its neighboring cells, this function tries to join the two. This function might update neighboring tiles if needed to create correct terrain transitions.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is true, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
 <p><strong>Note:</strong> To work correctly, this method requires the <strong>TileMapLayer</strong>'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-method-set-cells-terrain-path"><abbr title="No return value.">void</abbr> <strong>set_cells_terrain_path</strong>(path: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-tilemaplayer-method-set-cells-terrain-path"><span class="std std-ref">🔗</span></a></p>
 <p>Update all the cells in the <code class="docutils literal notranslate"><span class="pre">path</span></code> coordinates array so that they use the given <code class="docutils literal notranslate"><span class="pre">terrain</span></code> for the given <code class="docutils literal notranslate"><span class="pre">terrain_set</span></code>. The function will also connect two successive cell in the path with the same terrain. This function might update neighboring tiles if needed to create correct terrain transitions.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is true, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
 <p><strong>Note:</strong> To work correctly, this method requires the <strong>TileMapLayer</strong>'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemaplayer-method-set-navigation-map"><abbr title="No return value.">void</abbr> <strong>set_navigation_map</strong>(map: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>) <a class="reference internal" href="#class-tilemaplayer-method-set-navigation-map"><span class="std std-ref">🔗</span></a></p>

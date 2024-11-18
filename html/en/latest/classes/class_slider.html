@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11331,10 +11354,10 @@
 <section class="classref-descriptions-group" id="signals">
 <h2>Signals<a class="headerlink" href="#signals" title="Link to this heading"></a></h2>
 <p class="classref-signal" id="class-slider-signal-drag-ended"><strong>drag_ended</strong>(value_changed: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>) <a class="reference internal" href="#class-slider-signal-drag-ended"><span class="std std-ref">🔗</span></a></p>
-<p>Emitted when dragging stops. If <code class="docutils literal notranslate"><span class="pre">value_changed</span></code> is true, <a class="reference internal" href="class_range.html#class-range-property-value"><span class="std std-ref">Range.value</span></a> is different from the value when you started the dragging.</p>
+<p>Emitted when the grabber stops being dragged. If <code class="docutils literal notranslate"><span class="pre">value_changed</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, <a class="reference internal" href="class_range.html#class-range-property-value"><span class="std std-ref">Range.value</span></a> is different from the value when the dragging was started.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-signal" id="class-slider-signal-drag-started"><strong>drag_started</strong>() <a class="reference internal" href="#class-slider-signal-drag-started"><span class="std std-ref">🔗</span></a></p>
-<p>Emitted when dragging is started. This is emitted before the corresponding <a class="reference internal" href="class_range.html#class-range-signal-value-changed"><span class="std std-ref">Range.value_changed</span></a> signal.</p>
+<p>Emitted when the grabber starts being dragged. This is emitted before the corresponding <a class="reference internal" href="class_range.html#class-range-signal-value-changed"><span class="std std-ref">Range.value_changed</span></a> signal.</p>
 </section>
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="property-descriptions">

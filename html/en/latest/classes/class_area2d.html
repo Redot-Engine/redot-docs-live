@@ -4258,6 +4258,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4641,6 +4648,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10692,6 +10708,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11370,7 +11393,7 @@
 <p class="classref-signal" id="class-area2d-signal-area-shape-entered"><strong>area_shape_entered</strong>(area_rid: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, area: <a class="reference internal" href="#class-area2d"><span class="std std-ref">Area2D</span></a>, area_shape_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, local_shape_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-area2d-signal-area-shape-entered"><span class="std std-ref">🔗</span></a></p>
 <p>Emitted when a <a class="reference internal" href="class_shape2d.html#class-shape2d"><span class="std std-ref">Shape2D</span></a> of the received <code class="docutils literal notranslate"><span class="pre">area</span></code> enters a shape of this area. Requires <a class="reference internal" href="#class-area2d-property-monitoring"><span class="std std-ref">monitoring</span></a> to be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">local_shape_index</span></code> and <code class="docutils literal notranslate"><span class="pre">area_shape_index</span></code> contain indices of the interacting shapes from this area and the other area, respectively. <code class="docutils literal notranslate"><span class="pre">area_rid</span></code> contains the <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> of the other area. These values can be used with the <a class="reference internal" href="class_physicsserver2d.html#class-physicsserver2d"><span class="std std-ref">PhysicsServer2D</span></a>.</p>
-<p><strong>Example of getting the</strong> <a class="reference internal" href="class_collisionshape2d.html#class-collisionshape2d"><span class="std std-ref">CollisionShape2D</span></a> <strong>node from the shape index:</strong></p>
+<p><strong>Example:</strong> Get the <a class="reference internal" href="class_collisionshape2d.html#class-collisionshape2d"><span class="std std-ref">CollisionShape2D</span></a> node from the shape index:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">other_shape_owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="o">.</span><span class="n">shape_find_owner</span><span class="p">(</span><span class="n">area_shape_index</span><span class="p">)</span>
 <span class="k">var</span><span class="w"> </span><span class="n">other_shape_node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area</span><span class="o">.</span><span class="n">shape_owner_get_owner</span><span class="p">(</span><span class="n">other_shape_owner</span><span class="p">)</span>
@@ -11394,7 +11417,7 @@
 <p class="classref-signal" id="class-area2d-signal-body-shape-entered"><strong>body_shape_entered</strong>(body_rid: <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a>, body: <a class="reference internal" href="class_node2d.html#class-node2d"><span class="std std-ref">Node2D</span></a>, body_shape_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, local_shape_index: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>) <a class="reference internal" href="#class-area2d-signal-body-shape-entered"><span class="std std-ref">🔗</span></a></p>
 <p>Emitted when a <a class="reference internal" href="class_shape2d.html#class-shape2d"><span class="std std-ref">Shape2D</span></a> of the received <code class="docutils literal notranslate"><span class="pre">body</span></code> enters a shape of this area. <code class="docutils literal notranslate"><span class="pre">body</span></code> can be a <a class="reference internal" href="class_physicsbody2d.html#class-physicsbody2d"><span class="std std-ref">PhysicsBody2D</span></a> or a <a class="reference internal" href="class_tilemap.html#class-tilemap"><span class="std std-ref">TileMap</span></a>. <a class="reference internal" href="class_tilemap.html#class-tilemap"><span class="std std-ref">TileMap</span></a>s are detected if their <a class="reference internal" href="class_tileset.html#class-tileset"><span class="std std-ref">TileSet</span></a> has collision shapes configured. Requires <a class="reference internal" href="#class-area2d-property-monitoring"><span class="std std-ref">monitoring</span></a> to be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">local_shape_index</span></code> and <code class="docutils literal notranslate"><span class="pre">body_shape_index</span></code> contain indices of the interacting shapes from this area and the interacting body, respectively. <code class="docutils literal notranslate"><span class="pre">body_rid</span></code> contains the <a class="reference internal" href="class_rid.html#class-rid"><span class="std std-ref">RID</span></a> of the body. These values can be used with the <a class="reference internal" href="class_physicsserver2d.html#class-physicsserver2d"><span class="std std-ref">PhysicsServer2D</span></a>.</p>
-<p><strong>Example of getting the</strong> <a class="reference internal" href="class_collisionshape2d.html#class-collisionshape2d"><span class="std std-ref">CollisionShape2D</span></a> <strong>node from the shape index:</strong></p>
+<p><strong>Example:</strong> Get the <a class="reference internal" href="class_collisionshape2d.html#class-collisionshape2d"><span class="std std-ref">CollisionShape2D</span></a> node from the shape index:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-1-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">body_shape_owner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">body</span><span class="o">.</span><span class="n">shape_find_owner</span><span class="p">(</span><span class="n">body_shape_index</span><span class="p">)</span>
 <span class="k">var</span><span class="w"> </span><span class="n">body_shape_node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">body</span><span class="o">.</span><span class="n">shape_owner_get_owner</span><span class="p">(</span><span class="n">body_shape_owner</span><span class="p">)</span>

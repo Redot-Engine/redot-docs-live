@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11418,6 +11441,7 @@
 <h2>Constructor Descriptions<a class="headerlink" href="#constructor-descriptions" title="Link to this heading"></a></h2>
 <p class="classref-constructor" id="class-transform3d-constructor-transform3d"><a class="reference internal" href="#class-transform3d"><span class="std std-ref">Transform3D</span></a> <strong>Transform3D</strong>() <a class="reference internal" href="#class-transform3d-constructor-transform3d"><span class="std std-ref">🔗</span></a></p>
 <p>Constructs a <strong>Transform3D</strong> identical to the <a class="reference internal" href="#class-transform3d-constant-identity"><span class="std std-ref">IDENTITY</span></a>.</p>
+<p><strong>Note:</strong> In C#, this constructs a <strong>Transform3D</strong> with its <a class="reference internal" href="#class-transform3d-property-origin"><span class="std std-ref">origin</span></a> and the components of its <a class="reference internal" href="#class-transform3d-property-basis"><span class="std std-ref">basis</span></a> set to <a class="reference internal" href="class_vector3.html#class-vector3-constant-zero"><span class="std std-ref">Vector3.ZERO</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-constructor"><a class="reference internal" href="#class-transform3d"><span class="std std-ref">Transform3D</span></a> <strong>Transform3D</strong>(from: <a class="reference internal" href="#class-transform3d"><span class="std std-ref">Transform3D</span></a>)</p>
 <p>Constructs a <strong>Transform3D</strong> as a copy of the given <strong>Transform3D</strong>.</p>
@@ -11469,7 +11493,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-transform3d-method-rotated-local"><a class="reference internal" href="#class-transform3d"><span class="std std-ref">Transform3D</span></a> <strong>rotated_local</strong>(axis: <a class="reference internal" href="class_vector3.html#class-vector3"><span class="std std-ref">Vector3</span></a>, angle: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-transform3d-method-rotated-local"><span class="std std-ref">🔗</span></a></p>
 <p>Returns a copy of this transform rotated around the given <code class="docutils literal notranslate"><span class="pre">axis</span></code> by the given <code class="docutils literal notranslate"><span class="pre">angle</span></code> (in radians).</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be a normalized vector.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">axis</span></code> must be a normalized vector in the transform's local coordinate system. For example, to rotate around the local X-axis, use <a class="reference internal" href="class_vector3.html#class-vector3-constant-right"><span class="std std-ref">Vector3.RIGHT</span></a>.</p>
 <p>This method is an optimized version of multiplying the given transform <code class="docutils literal notranslate"><span class="pre">X</span></code> with a corresponding rotation transform <code class="docutils literal notranslate"><span class="pre">R</span></code> from the right, i.e., <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">*</span> <span class="pre">R</span></code>.</p>
 <p>This can be seen as transforming with respect to the local frame.</p>
 <hr class="classref-item-separator docutils" />

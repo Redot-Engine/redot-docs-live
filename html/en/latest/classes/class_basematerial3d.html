@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11844,7 +11867,7 @@
 <p class="classref-enumeration-constant" id="class-basematerial3d-constant-shading-mode-per-pixel"><a class="reference internal" href="#enum-basematerial3d-shadingmode"><span class="std std-ref">ShadingMode</span></a> <strong>SHADING_MODE_PER_PIXEL</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 <p>The object will be shaded per pixel. Useful for realistic shading effects.</p>
 <p class="classref-enumeration-constant" id="class-basematerial3d-constant-shading-mode-per-vertex"><a class="reference internal" href="#enum-basematerial3d-shadingmode"><span class="std std-ref">ShadingMode</span></a> <strong>SHADING_MODE_PER_VERTEX</strong> = <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
-<p>The object will be shaded per vertex. Useful when you want cheaper shaders and do not care about visual quality. Not implemented yet (this mode will act like <a class="reference internal" href="#class-basematerial3d-constant-shading-mode-per-pixel"><span class="std std-ref">SHADING_MODE_PER_PIXEL</span></a>).</p>
+<p>The object will be shaded per vertex. Useful when you want cheaper shaders and do not care about visual quality.</p>
 <p class="classref-enumeration-constant" id="class-basematerial3d-constant-shading-mode-max"><a class="reference internal" href="#enum-basematerial3d-shadingmode"><span class="std std-ref">ShadingMode</span></a> <strong>SHADING_MODE_MAX</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 <p>Represents the size of the <a class="reference internal" href="#enum-basematerial3d-shadingmode"><span class="std std-ref">ShadingMode</span></a> enum.</p>
 <hr class="classref-item-separator docutils" />
@@ -12671,7 +12694,6 @@
 <li><p><a class="reference internal" href="#enum-basematerial3d-shadingmode"><span class="std std-ref">ShadingMode</span></a> <strong>get_shading_mode</strong>()</p></li>
 </ul>
 <p>Sets whether the shading takes place, per-pixel, per-vertex or unshaded. Per-vertex lighting is faster, making it the best choice for mobile applications, however it looks considerably worse than per-pixel. Unshaded rendering is the fastest, but disables all interactions with lights.</p>
-<p><strong>Note:</strong> Setting the shading mode vertex shading currently has no effect, as vertex shading is not implemented yet.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-basematerial3d-property-shadow-to-opacity"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>shadow_to_opacity</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-basematerial3d-property-shadow-to-opacity"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

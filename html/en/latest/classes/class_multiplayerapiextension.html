@@ -9,8 +9,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="classes/class_multiplayerapiextension.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Inherits: MultiplayerAPI< RefCounted< Object Base class used for extending the MultiplayerAPI. Description: This class can be used to augment or replace the default MultiplayerAPI implementation vi..." />
-<meta name="description" content="Inherits: MultiplayerAPI< RefCounted< Object Base class used for extending the MultiplayerAPI. Description: This class can be used to augment or replace the default MultiplayerAPI implementation vi..." />
+<meta property="og:description" content="Inherits: MultiplayerAPI< RefCounted< Object Base class used for extending the MultiplayerAPI. Description: This class can be used to extend or replace the default MultiplayerAPI implementation via..." />
+<meta name="description" content="Inherits: MultiplayerAPI< RefCounted< Object Base class used for extending the MultiplayerAPI. Description: This class can be used to extend or replace the default MultiplayerAPI implementation via..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>MultiplayerAPIExtension &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -4258,6 +4258,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4641,6 +4648,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10692,6 +10708,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11253,13 +11276,13 @@
 <p>Base class used for extending the <a class="reference internal" href="class_multiplayerapi.html#class-multiplayerapi"><span class="std std-ref">MultiplayerAPI</span></a>.</p>
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
-<p>This class can be used to augment or replace the default <a class="reference internal" href="class_multiplayerapi.html#class-multiplayerapi"><span class="std std-ref">MultiplayerAPI</span></a> implementation via script or extensions.</p>
-<p>The following example augment the default implementation (<a class="reference internal" href="class_scenemultiplayer.html#class-scenemultiplayer"><span class="std std-ref">SceneMultiplayer</span></a>) by logging every RPC being made, and every object being configured for replication.</p>
+<p>This class can be used to extend or replace the default <a class="reference internal" href="class_multiplayerapi.html#class-multiplayerapi"><span class="std std-ref">MultiplayerAPI</span></a> implementation via script or extensions.</p>
+<p>The following example extend the default implementation (<a class="reference internal" href="class_scenemultiplayer.html#class-scenemultiplayer"><span class="std std-ref">SceneMultiplayer</span></a>) by logging every RPC being made, and every object being configured for replication.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">extends</span><span class="w"> </span><span class="n">MultiplayerAPIExtension</span>
 <span class="k">class_name</span><span class="w"> </span><span class="n">LogMultiplayer</span>
 
-<span class="c1"># We want to augment the default SceneMultiplayer.</span>
+<span class="c1"># We want to extend the default SceneMultiplayer.</span>
 <span class="k">var</span><span class="w"> </span><span class="n">base_multiplayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SceneMultiplayer</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_init</span><span class="p">():</span>
@@ -11297,7 +11320,7 @@
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removing node </span><span class="si">%s</span><span class="s2"> from the spawn list. Spawner: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">[</span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">])</span>
 <span class="w">    </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">base_multiplayer</span><span class="o">.</span><span class="n">object_configuration_remove</span><span class="p">(</span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">config</span><span class="p">)</span>
 
-<span class="c1"># These can be optional, but in our case we want to augment SceneMultiplayer, so forward everything.</span>
+<span class="c1"># These can be optional, but in our case we want to extend SceneMultiplayer, so forward everything.</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_set_multiplayer_peer</span><span class="p">(</span><span class="n">p_peer</span><span class="p">:</span><span class="w"> </span><span class="n">MultiplayerPeer</span><span class="p">):</span>
 <span class="w">    </span><span class="n">base_multiplayer</span><span class="o">.</span><span class="n">multiplayer_peer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_peer</span>
 
@@ -11317,7 +11340,7 @@
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-1-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># autoload.gd</span>
 <span class="k">func</span><span class="w"> </span><span class="n">_enter_tree</span><span class="p">():</span>
 <span class="w">    </span><span class="c1"># Sets our custom multiplayer as the main one in SceneTree.</span>
-<span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_multiplayer</span><span class="p">(</span><span class="n">LogMultiplayer</span><span class="o">.</span><span class="n">new</span><span class="p">())</span>
+<span class="w">    </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">set_multiplayer</span><span class="p">(</span><span class="n">LogMultiplayer</span><span class="o">.</span><span class="n">new</span><span class="p">())</span>
 </pre></div>
 </div>
 </div></div>

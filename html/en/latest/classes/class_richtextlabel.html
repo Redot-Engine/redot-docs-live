@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -12123,8 +12146,8 @@
 <p><strong>Note:</strong> If <a class="reference internal" href="#class-richtextlabel-property-threaded"><span class="std std-ref">threaded</span></a> is enabled, this method returns a value for the loaded part of the document. Use <a class="reference internal" href="#class-richtextlabel-method-is-finished"><span class="std std-ref">is_finished</span></a> or <a class="reference internal" href="#class-richtextlabel-signal-finished"><span class="std std-ref">finished</span></a> to determine whether document is fully loaded.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-richtextlabel-method-install-effect"><abbr title="No return value.">void</abbr> <strong>install_effect</strong>(effect: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>) <a class="reference internal" href="#class-richtextlabel-method-install-effect"><span class="std std-ref">🔗</span></a></p>
-<p>Installs a custom effect. This can also be done in the RichTextLabel inspector using the <a class="reference internal" href="#class-richtextlabel-property-custom-effects"><span class="std std-ref">custom_effects</span></a> property. <code class="docutils literal notranslate"><span class="pre">effect</span></code> should be a valid <a class="reference internal" href="class_richtexteffect.html#class-richtexteffect"><span class="std std-ref">RichTextEffect</span></a>.</p>
-<p>Example RichTextEffect:</p>
+<p>Installs a custom effect. This can also be done in the Inspector through the <a class="reference internal" href="#class-richtextlabel-property-custom-effects"><span class="std std-ref">custom_effects</span></a> property. <code class="docutils literal notranslate"><span class="pre">effect</span></code> should be a valid <a class="reference internal" href="class_richtexteffect.html#class-richtexteffect"><span class="std std-ref">RichTextEffect</span></a>.</p>
+<p><strong>Example:</strong> With the following script extending from <a class="reference internal" href="class_richtexteffect.html#class-richtexteffect"><span class="std std-ref">RichTextEffect</span></a>:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># effect.gd</span>
 <span class="k">class_name</span><span class="w"> </span><span class="n">MyCustomEffect</span>
 <span class="k">extends</span><span class="w"> </span><span class="n">RichTextEffect</span>
@@ -12134,7 +12157,7 @@
 <span class="c1"># ...</span>
 </pre></div>
 </div>
-<p>Registering the above effect in RichTextLabel from script:</p>
+<p>The above effect can be installed in <strong>RichTextLabel</strong> from a script:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># rich_text_label.gd</span>
 <span class="k">extends</span><span class="w"> </span><span class="n">RichTextLabel</span>
 
@@ -12324,7 +12347,7 @@
 <p>The default background color for odd rows.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-richtextlabel-theme-constant-line-separation"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>line_separation</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-richtextlabel-theme-constant-line-separation"><span class="std std-ref">🔗</span></a></p>
-<p>The vertical space between lines.</p>
+<p>Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-themeproperty" id="class-richtextlabel-theme-constant-outline-size"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>outline_size</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-richtextlabel-theme-constant-outline-size"><span class="std std-ref">🔗</span></a></p>
 <p>The size of the text outline.</p>

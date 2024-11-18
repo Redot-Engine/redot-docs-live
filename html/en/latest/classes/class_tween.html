@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11563,8 +11586,14 @@
 <p>Resumes a paused or stopped <strong>Tween</strong>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tween-method-set-ease"><a class="reference internal" href="#class-tween"><span class="std std-ref">Tween</span></a> <strong>set_ease</strong>(ease: <a class="reference internal" href="#enum-tween-easetype"><span class="std std-ref">EaseType</span></a>) <a class="reference internal" href="#class-tween-method-set-ease"><span class="std std-ref">🔗</span></a></p>
-<p>Sets the default ease type for <a class="reference internal" href="class_propertytweener.html#class-propertytweener"><span class="std std-ref">PropertyTweener</span></a>s and <a class="reference internal" href="class_methodtweener.html#class-methodtweener"><span class="std std-ref">MethodTweener</span></a>s animated by this <strong>Tween</strong>.</p>
-<p>If not specified, the default value is <a class="reference internal" href="#class-tween-constant-ease-in-out"><span class="std std-ref">EASE_IN_OUT</span></a>.</p>
+<p>Sets the default ease type for <a class="reference internal" href="class_propertytweener.html#class-propertytweener"><span class="std std-ref">PropertyTweener</span></a>s and <a class="reference internal" href="class_methodtweener.html#class-methodtweener"><span class="std std-ref">MethodTweener</span></a>s appended after this method.</p>
+<p>Before this method is called, the default ease type is <a class="reference internal" href="#class-tween-constant-ease-in-out"><span class="std std-ref">EASE_IN_OUT</span></a>.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">tween</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_tween</span><span class="p">()</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">tween_property</span><span class="p">(</span><span class="k">self</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;position&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="c1"># Uses EASE_IN_OUT.</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">set_ease</span><span class="p">(</span><span class="n">Tween</span><span class="o">.</span><span class="n">EASE_IN</span><span class="p">)</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">tween_property</span><span class="p">(</span><span class="k">self</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rotation_degrees&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">45.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="c1"># Uses EASE_IN.</span>
+</pre></div>
+</div>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tween-method-set-loops"><a class="reference internal" href="#class-tween"><span class="std std-ref">Tween</span></a> <strong>set_loops</strong>(loops: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 0) <a class="reference internal" href="#class-tween-method-set-loops"><span class="std std-ref">🔗</span></a></p>
 <p>Sets the number of times the tweening sequence will be repeated, i.e. <code class="docutils literal notranslate"><span class="pre">set_loops(2)</span></code> will run the animation twice.</p>
@@ -11592,11 +11621,33 @@
 <p>Scales the speed of tweening. This affects all <a class="reference internal" href="class_tweener.html#class-tweener"><span class="std std-ref">Tweener</span></a>s and their delays.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tween-method-set-trans"><a class="reference internal" href="#class-tween"><span class="std std-ref">Tween</span></a> <strong>set_trans</strong>(trans: <a class="reference internal" href="#enum-tween-transitiontype"><span class="std std-ref">TransitionType</span></a>) <a class="reference internal" href="#class-tween-method-set-trans"><span class="std std-ref">🔗</span></a></p>
-<p>Sets the default transition type for <a class="reference internal" href="class_propertytweener.html#class-propertytweener"><span class="std std-ref">PropertyTweener</span></a>s and <a class="reference internal" href="class_methodtweener.html#class-methodtweener"><span class="std std-ref">MethodTweener</span></a>s animated by this <strong>Tween</strong>.</p>
-<p>If not specified, the default value is <a class="reference internal" href="#class-tween-constant-trans-linear"><span class="std std-ref">TRANS_LINEAR</span></a>.</p>
+<p>Sets the default transition type for <a class="reference internal" href="class_propertytweener.html#class-propertytweener"><span class="std std-ref">PropertyTweener</span></a>s and <a class="reference internal" href="class_methodtweener.html#class-methodtweener"><span class="std std-ref">MethodTweener</span></a>s appended after this method.</p>
+<p>Before this method is called, the default transition type is <a class="reference internal" href="#class-tween-constant-trans-linear"><span class="std std-ref">TRANS_LINEAR</span></a>.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">tween</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_tween</span><span class="p">()</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">tween_property</span><span class="p">(</span><span class="k">self</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;position&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Vector2</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="c1"># Uses TRANS_LINEAR.</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">set_trans</span><span class="p">(</span><span class="n">Tween</span><span class="o">.</span><span class="n">TRANS_SINE</span><span class="p">)</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">tween_property</span><span class="p">(</span><span class="k">self</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rotation_degrees&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">45.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="c1"># Uses TRANS_SINE.</span>
+</pre></div>
+</div>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tween-method-stop"><abbr title="No return value.">void</abbr> <strong>stop</strong>() <a class="reference internal" href="#class-tween-method-stop"><span class="std std-ref">🔗</span></a></p>
 <p>Stops the tweening and resets the <strong>Tween</strong> to its initial state. This will not remove any appended <a class="reference internal" href="class_tweener.html#class-tweener"><span class="std std-ref">Tweener</span></a>s.</p>
+<p><strong>Note:</strong> This does <em>not</em> reset targets of <a class="reference internal" href="class_propertytweener.html#class-propertytweener"><span class="std std-ref">PropertyTweener</span></a>s to their values when the <strong>Tween</strong> first started.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">tween</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_tween</span><span class="p">()</span>
+
+<span class="c1"># Will move from 0 to 500 over 1 second.</span>
+<span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">tween_property</span><span class="p">(</span><span class="k">self</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;position:x&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># Will be at (about) 250 when the timer finishes.</span>
+<span class="k">await</span><span class="w"> </span><span class="n">get_tree</span><span class="p">()</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">timeout</span>
+
+<span class="c1"># Will now move from (about) 250 to 500 over 1 second,</span>
+<span class="c1"># thus at half the speed as before.</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+<span class="n">tween</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+</pre></div>
+</div>
 <p><strong>Note:</strong> If a Tween is stopped and not bound to any node, it will exist indefinitely until manually started or invalidated. If you lose a reference to such Tween, you can retrieve it using <a class="reference internal" href="class_scenetree.html#class-scenetree-method-get-processed-tweens"><span class="std std-ref">SceneTree.get_processed_tweens</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tween-method-tween-callback"><a class="reference internal" href="class_callbacktweener.html#class-callbacktweener"><span class="std std-ref">CallbackTweener</span></a> <strong>tween_callback</strong>(callback: <a class="reference internal" href="class_callable.html#class-callable"><span class="std std-ref">Callable</span></a>) <a class="reference internal" href="#class-tween-method-tween-callback"><span class="std std-ref">🔗</span></a></p>

@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11274,12 +11297,15 @@
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
-<td><p><a class="reference internal" href="#class-pckpacker-method-add-file"><span class="std std-ref">add_file</span></a>(pck_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, source_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, encrypt: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
+<td><p><a class="reference internal" href="#class-pckpacker-method-add-file"><span class="std std-ref">add_file</span></a>(target_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, source_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, encrypt: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
-<td><p><a class="reference internal" href="#class-pckpacker-method-flush"><span class="std std-ref">flush</span></a>(verbose: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
+<td><p><a class="reference internal" href="#class-pckpacker-method-add-file-removal"><span class="std std-ref">add_file_removal</span></a>(target_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
+<td><p><a class="reference internal" href="#class-pckpacker-method-flush"><span class="std std-ref">flush</span></a>(verbose: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a></p></td>
 <td><p><a class="reference internal" href="#class-pckpacker-method-pck-start"><span class="std std-ref">pck_start</span></a>(pck_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, alignment: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 32, key: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> = &quot;0000000000000000000000000000000000000000000000000000000000000000&quot;, encrypt_directory: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false)</p></td>
 </tr>
 </tbody>
@@ -11288,8 +11314,11 @@
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="method-descriptions">
 <h2>Method Descriptions<a class="headerlink" href="#method-descriptions" title="Link to this heading"></a></h2>
-<p class="classref-method" id="class-pckpacker-method-add-file"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>add_file</strong>(pck_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, source_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, encrypt: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-pckpacker-method-add-file"><span class="std std-ref">🔗</span></a></p>
-<p>Adds the <code class="docutils literal notranslate"><span class="pre">source_path</span></code> file to the current PCK package at the <code class="docutils literal notranslate"><span class="pre">pck_path</span></code> internal path (should start with <code class="docutils literal notranslate"><span class="pre">res://</span></code>).</p>
+<p class="classref-method" id="class-pckpacker-method-add-file"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>add_file</strong>(target_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, source_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, encrypt: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-pckpacker-method-add-file"><span class="std std-ref">🔗</span></a></p>
+<p>Adds the <code class="docutils literal notranslate"><span class="pre">source_path</span></code> file to the current PCK package at the <code class="docutils literal notranslate"><span class="pre">target_path</span></code> internal path. The <code class="docutils literal notranslate"><span class="pre">res://</span></code> prefix for <code class="docutils literal notranslate"><span class="pre">target_path</span></code> is optional and stripped internally.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-method" id="class-pckpacker-method-add-file-removal"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>add_file_removal</strong>(target_path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-pckpacker-method-add-file-removal"><span class="std std-ref">🔗</span></a></p>
+<p>Registers a file removal of the <code class="docutils literal notranslate"><span class="pre">target_path</span></code> internal path to the PCK. This is mainly used for patches. If the file at this path has been loaded from a previous PCK, it will be removed. The <code class="docutils literal notranslate"><span class="pre">res://</span></code> prefix for <code class="docutils literal notranslate"><span class="pre">target_path</span></code> is optional and stripped internally.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-pckpacker-method-flush"><a class="reference internal" href="class_%40globalscope.html#enum-globalscope-error"><span class="std std-ref">Error</span></a> <strong>flush</strong>(verbose: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-pckpacker-method-flush"><span class="std std-ref">🔗</span></a></p>
 <p>Writes the files specified using all <a class="reference internal" href="#class-pckpacker-method-add-file"><span class="std std-ref">add_file</span></a> calls since the last flush. If <code class="docutils literal notranslate"><span class="pre">verbose</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, a list of files added will be printed to the console for easier debugging.</p>

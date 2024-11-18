@@ -4256,6 +4256,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4639,6 +4646,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10690,6 +10706,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11695,13 +11718,13 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemap-method-set-cells-terrain-connect"><abbr title="No return value.">void</abbr> <strong>set_cells_terrain_connect</strong>(layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, cells: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-tilemap-method-set-cells-terrain-connect"><span class="std std-ref">🔗</span></a></p>
 <p>Update all the cells in the <code class="docutils literal notranslate"><span class="pre">cells</span></code> coordinates array so that they use the given <code class="docutils literal notranslate"><span class="pre">terrain</span></code> for the given <code class="docutils literal notranslate"><span class="pre">terrain_set</span></code>. If an updated cell has the same terrain as one of its neighboring cells, this function tries to join the two. This function might update neighboring tiles if needed to create correct terrain transitions.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is true, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">layer</span></code> is negative, the layers are accessed from the last one.</p>
 <p><strong>Note:</strong> To work correctly, this method requires the TileMap's TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-tilemap-method-set-cells-terrain-path"><abbr title="No return value.">void</abbr> <strong>set_cells_terrain_path</strong>(layer: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, path: <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>[<a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a>], terrain_set: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, terrain: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>, ignore_empty_terrains: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-tilemap-method-set-cells-terrain-path"><span class="std std-ref">🔗</span></a></p>
 <p>Update all the cells in the <code class="docutils literal notranslate"><span class="pre">path</span></code> coordinates array so that they use the given <code class="docutils literal notranslate"><span class="pre">terrain</span></code> for the given <code class="docutils literal notranslate"><span class="pre">terrain_set</span></code>. The function will also connect two successive cell in the path with the same terrain. This function might update neighboring tiles if needed to create correct terrain transitions.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is true, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ignore_empty_terrains</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">layer</span></code> is negative, the layers are accessed from the last one.</p>
 <p><strong>Note:</strong> To work correctly, this method requires the TileMap's TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results.</p>
 <hr class="classref-item-separator docutils" />

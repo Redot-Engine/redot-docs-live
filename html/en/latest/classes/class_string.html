@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11805,7 +11828,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-string-method-format"><a class="reference internal" href="#class-string"><span class="std std-ref">String</span></a> <strong>format</strong>(values: <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>, placeholder: <a class="reference internal" href="#class-string"><span class="std std-ref">String</span></a> = &quot;{_}&quot;) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-string-method-format"><span class="std std-ref">🔗</span></a></p>
 <p>Formats the string by replacing all occurrences of <code class="docutils literal notranslate"><span class="pre">placeholder</span></code> with the elements of <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">values</span></code> can be a <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>, an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a> or an <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>. Any underscores in <code class="docutils literal notranslate"><span class="pre">placeholder</span></code> will be replaced with the corresponding keys in advance. Array elements use their index as keys.</p>
+<p><code class="docutils literal notranslate"><span class="pre">values</span></code> can be a <a class="reference internal" href="class_dictionary.html#class-dictionary"><span class="std std-ref">Dictionary</span></a>, an <a class="reference internal" href="class_array.html#class-array"><span class="std std-ref">Array</span></a>, or an <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>. Any underscores in <code class="docutils literal notranslate"><span class="pre">placeholder</span></code> will be replaced with the corresponding keys in advance. Array elements use their index as keys.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints &quot;Waiting for Redot is a play by Samuel Beckett, and Redot Engine is named after it.&quot;</span>
 <span class="k">var</span><span class="w"> </span><span class="n">use_array_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Waiting for {0} is a play by {1}, and {0} Engine is named after it.&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">use_array_values</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;Redot&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Samuel Beckett&quot;</span><span class="p">]))</span>
@@ -11821,17 +11844,17 @@
 </pre></div>
 </div>
 <p>When passing an <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a>, the property names from <a class="reference internal" href="class_object.html#class-object-method-get-property-list"><span class="std std-ref">Object.get_property_list</span></a> are used as keys.</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints: Visible true, position (0, 0).</span>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints &quot;Visible true, position (0, 0)&quot;</span>
 <span class="k">var</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Node2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Visible {visible}, position {position}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">node</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>See also the <a class="reference internal" href="../tutorials/scripting/gdscript/gdscript_format_string.html"><span class="doc">GDScript format string</span></a> tutorial.</p>
-<p><strong>Note:</strong> The replacement of placeholders is not done all at once, instead each placeholder is replaced in the order they are passed, this means that if one of the replacement strings contains a key it will also be replaced. This can be very powerful, but can also cause unexpected results if you are not careful. If you do not need to perform replacement in the replacement strings, make sure your replacements do not contain placeholders to ensure reliable results.</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{0} {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;{1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;x&quot;</span><span class="p">]))</span><span class="w">                       </span><span class="c1"># Prints &quot;x x&quot;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{0} {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;{0}&quot;</span><span class="p">]))</span><span class="w">                       </span><span class="c1"># Prints &quot;x {0}&quot;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{foo} {bar}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{bar}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">}))</span><span class="w"> </span><span class="c1"># Prints &quot;baz baz&quot;.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{foo} {bar}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;baz&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{bar}&quot;</span><span class="p">}))</span><span class="w"> </span><span class="c1"># Prints &quot;{bar} baz&quot;.</span>
+<p><strong>Note:</strong> Each replacement is done sequentially for each element of <code class="docutils literal notranslate"><span class="pre">values</span></code>, <strong>not</strong> all at once. This means that if any element is inserted and it contains another placeholder, it may be changed by the next replacement. While this can be very useful, it often causes unexpected results. If not necessary, make sure <code class="docutils literal notranslate"><span class="pre">values</span></code>'s elements do not contain placeholders.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{0} {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;{1}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;x&quot;</span><span class="p">]))</span><span class="w">           </span><span class="c1"># Prints &quot;x x&quot;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{0} {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">([</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;{0}&quot;</span><span class="p">]))</span><span class="w">           </span><span class="c1"># Prints &quot;x {0}&quot;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{a} {b}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{b}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">}))</span><span class="w"> </span><span class="c1"># Prints &quot;c c&quot;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{a} {b}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;b&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{b}&quot;</span><span class="p">}))</span><span class="w"> </span><span class="c1"># Prints &quot;{b} c&quot;.</span>
 </pre></div>
 </div>
 <p><strong>Note:</strong> In C#, it's recommended to <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated">interpolate strings with &quot;$&quot;</a>, instead.</p>
@@ -12208,7 +12231,7 @@
 <p>Returns the <a class="reference external" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> hash of the string as another <strong>String</strong>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-string-method-similarity"><a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> <strong>similarity</strong>(text: <a class="reference internal" href="#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-string-method-similarity"><span class="std std-ref">🔗</span></a></p>
-<p>Returns the similarity index (<a class="reference external" href="https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient">Sorensen-Dice coefficient</a>) of this string compared to another. A result of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> means totally similar, while <code class="docutils literal notranslate"><span class="pre">0.0</span></code> means totally dissimilar.</p>
+<p>Returns the similarity index (<a class="reference external" href="https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient">Sørensen-Dice coefficient</a>) of this string compared to another. A result of <code class="docutils literal notranslate"><span class="pre">1.0</span></code> means totally similar, while <code class="docutils literal notranslate"><span class="pre">0.0</span></code> means totally dissimilar.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ABC123&quot;</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s2">&quot;ABC123&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints 1.0</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ABC123&quot;</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s2">&quot;XYZ456&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints 0.0</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ABC123&quot;</span><span class="o">.</span><span class="n">similarity</span><span class="p">(</span><span class="s2">&quot;123ABC&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Prints 0.8</span>

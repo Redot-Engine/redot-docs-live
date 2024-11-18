@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11605,6 +11628,7 @@
 <li><p><a class="reference internal" href="#enum-canvasitem-clipchildrenmode"><span class="std std-ref">ClipChildrenMode</span></a> <strong>get_clip_children_mode</strong>()</p></li>
 </ul>
 <p>Allows the current node to clip child nodes, essentially acting as a mask.</p>
+<p><strong>Note:</strong> Clipping nodes cannot be nested or placed within <a class="reference internal" href="class_canvasgroup.html#class-canvasgroup"><span class="std std-ref">CanvasGroup</span></a>s. If an ancestor of this node clips its children or is a <a class="reference internal" href="class_canvasgroup.html#class-canvasgroup"><span class="std std-ref">CanvasGroup</span></a>, then this node's clip mode should be set to <a class="reference internal" href="#class-canvasitem-constant-clip-children-disabled"><span class="std std-ref">CLIP_CHILDREN_DISABLED</span></a> to avoid unexpected behavior.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-canvasitem-property-light-mask"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>light_mask</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code> <a class="reference internal" href="#class-canvasitem-property-light-mask"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
@@ -11691,7 +11715,7 @@
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_y_sort_enabled</strong>()</p></li>
 </ul>
 <p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this and child <strong>CanvasItem</strong> nodes with a higher Y position are rendered in front of nodes with a lower Y position. If <code class="docutils literal notranslate"><span class="pre">false</span></code>, this and child <strong>CanvasItem</strong> nodes are rendered normally in scene tree order.</p>
-<p>With Y-sorting enabled on a parent node ('A') but disabled on a child node ('B'), the child node ('B') is sorted but its children ('C1', 'C2', etc) render together on the same Y position as the child node ('B'). This allows you to organize the render order of a scene without changing the scene tree.</p>
+<p>With Y-sorting enabled on a parent node ('A') but disabled on a child node ('B'), the child node ('B') is sorted but its children ('C1', 'C2', etc.) render together on the same Y position as the child node ('B'). This allows you to organize the render order of a scene without changing the scene tree.</p>
 <p>Nodes sort relative to each other only if they are on the same <a class="reference internal" href="#class-canvasitem-property-z-index"><span class="std std-ref">z_index</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-canvasitem-property-z-as-relative"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>z_as_relative</strong> = <code class="docutils literal notranslate"><span class="pre">true</span></code> <a class="reference internal" href="#class-canvasitem-property-z-as-relative"><span class="std std-ref">🔗</span></a></p>
@@ -11822,7 +11846,7 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-canvasitem-method-draw-string"><abbr title="No return value.">void</abbr> <strong>draw_string</strong>(font: <a class="reference internal" href="class_font.html#class-font"><span class="std std-ref">Font</span></a>, pos: <a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a>, text: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, alignment: <a class="reference internal" href="class_%40globalscope.html#enum-globalscope-horizontalalignment"><span class="std std-ref">HorizontalAlignment</span></a> = 0, width: <a class="reference internal" href="class_float.html#class-float"><span class="std std-ref">float</span></a> = -1, font_size: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = 16, modulate: <a class="reference internal" href="class_color.html#class-color"><span class="std std-ref">Color</span></a> = Color(1, 1, 1, 1), justification_flags: <abbr title="This value is an integer composed as a bitmask of the following flags.">BitField</abbr>[<a class="reference internal" href="class_textserver.html#enum-textserver-justificationflag"><span class="std std-ref">JustificationFlag</span></a>] = 3, direction: <a class="reference internal" href="class_textserver.html#enum-textserver-direction"><span class="std std-ref">Direction</span></a> = 0, orientation: <a class="reference internal" href="class_textserver.html#enum-textserver-orientation"><span class="std std-ref">Orientation</span></a> = 0) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-canvasitem-method-draw-string"><span class="std std-ref">🔗</span></a></p>
 <p>Draws <code class="docutils literal notranslate"><span class="pre">text</span></code> using the specified <code class="docutils literal notranslate"><span class="pre">font</span></code> at the <code class="docutils literal notranslate"><span class="pre">pos</span></code> (bottom-left corner using the baseline of the font). The text will have its color multiplied by <code class="docutils literal notranslate"><span class="pre">modulate</span></code>. If <code class="docutils literal notranslate"><span class="pre">width</span></code> is greater than or equal to 0, the text will be clipped if it exceeds the specified width.</p>
-<p><strong>Example using the default project font:</strong></p>
+<p><strong>Example:</strong> Draw &quot;Hello world&quot;, using the project's default font:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-0-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># If using this method in a script that redraws constantly, move the</span>
 <span class="c1"># `default_font` declaration to a member variable assigned in `_ready()`</span>

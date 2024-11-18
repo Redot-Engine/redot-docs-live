@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11255,7 +11278,7 @@
 <p>A simplified interface to a scene file. Provides access to operations and checks that can be performed on the scene resource itself.</p>
 <p>Can be used to save a node to a file. When saving, the node as well as all the nodes it owns get saved (see <a class="reference internal" href="class_node.html#class-node-property-owner"><span class="std std-ref">Node.owner</span></a> property).</p>
 <p><strong>Note:</strong> The node doesn't need to own itself.</p>
-<p><strong>Example of loading a saved scene:</strong></p>
+<p><strong>Example:</strong> Load a saved scene:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-0-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use load() instead of preload() if the path isn&#39;t known at compile-time.</span>
 <span class="k">var</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">preload</span><span class="p">(</span><span class="s2">&quot;res://scene.tscn&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">instantiate</span><span class="p">()</span>
@@ -11270,7 +11293,7 @@
 </pre></div>
 </div>
 </div></div>
-<p><strong>Example of saving a node with different owners:</strong> The following example creates 3 objects: <a class="reference internal" href="class_node2d.html#class-node2d"><span class="std std-ref">Node2D</span></a> (<code class="docutils literal notranslate"><span class="pre">node</span></code>), <a class="reference internal" href="class_rigidbody2d.html#class-rigidbody2d"><span class="std std-ref">RigidBody2D</span></a> (<code class="docutils literal notranslate"><span class="pre">body</span></code>) and <a class="reference internal" href="class_collisionobject2d.html#class-collisionobject2d"><span class="std std-ref">CollisionObject2D</span></a> (<code class="docutils literal notranslate"><span class="pre">collision</span></code>). <code class="docutils literal notranslate"><span class="pre">collision</span></code> is a child of <code class="docutils literal notranslate"><span class="pre">body</span></code> which is a child of <code class="docutils literal notranslate"><span class="pre">node</span></code>. Only <code class="docutils literal notranslate"><span class="pre">body</span></code> is owned by <code class="docutils literal notranslate"><span class="pre">node</span></code> and <a class="reference internal" href="#class-packedscene-method-pack"><span class="std std-ref">pack</span></a> will therefore only save those two nodes, but not <code class="docutils literal notranslate"><span class="pre">collision</span></code>.</p>
+<p><strong>Example:</strong> Save a node with different owners. The following example creates 3 objects: <a class="reference internal" href="class_node2d.html#class-node2d"><span class="std std-ref">Node2D</span></a> (<code class="docutils literal notranslate"><span class="pre">node</span></code>), <a class="reference internal" href="class_rigidbody2d.html#class-rigidbody2d"><span class="std std-ref">RigidBody2D</span></a> (<code class="docutils literal notranslate"><span class="pre">body</span></code>) and <a class="reference internal" href="class_collisionobject2d.html#class-collisionobject2d"><span class="std std-ref">CollisionObject2D</span></a> (<code class="docutils literal notranslate"><span class="pre">collision</span></code>). <code class="docutils literal notranslate"><span class="pre">collision</span></code> is a child of <code class="docutils literal notranslate"><span class="pre">body</span></code> which is a child of <code class="docutils literal notranslate"><span class="pre">node</span></code>. Only <code class="docutils literal notranslate"><span class="pre">body</span></code> is owned by <code class="docutils literal notranslate"><span class="pre">node</span></code> and <a class="reference internal" href="#class-packedscene-method-pack"><span class="std std-ref">pack</span></a> will therefore only save those two nodes, but not <code class="docutils literal notranslate"><span class="pre">collision</span></code>.</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-1-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-1-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the objects.</span>
 <span class="k">var</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Node2D</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>

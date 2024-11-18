@@ -4258,6 +4258,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4641,6 +4648,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10692,6 +10708,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11263,7 +11286,7 @@
 <span class="n">DirAccess</span><span class="o">.</span><span class="n">make_dir_absolute</span><span class="p">(</span><span class="s2">&quot;user://levels/world1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Note:</strong> Many resources types are imported (e.g. textures or sound files), and their source asset will not be included in the exported game, as only the imported version is used. Use <a class="reference internal" href="class_resourceloader.html#class-resourceloader"><span class="std std-ref">ResourceLoader</span></a> to access imported resources.</p>
+<p><strong>Note:</strong> Accessing project (&quot;<a class="reference external" href="res://">res://</a>&quot;) directories once exported may behave unexpectedly as some files are converted to engine-specific formats and their original source files may not be present in the expected PCK package. Because of this, to access resources in an exported project, it is recommended to use <a class="reference internal" href="class_resourceloader.html#class-resourceloader"><span class="std std-ref">ResourceLoader</span></a> instead of <a class="reference internal" href="class_fileaccess.html#class-fileaccess"><span class="std std-ref">FileAccess</span></a>.</p>
 <p>Here is an example on how to iterate through the files of a directory:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-0-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-0-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">dir_contents</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
@@ -11309,6 +11332,7 @@
 </pre></div>
 </div>
 </div></div>
+<p>Keep in mind that file names may change or be remapped after export. If you want to see the actual resource file list as it appears in the editor, use <a class="reference internal" href="class_resourceloader.html#class-resourceloader-method-list-directory"><span class="std std-ref">ResourceLoader.list_directory</span></a> instead.</p>
 </section>
 <section class="classref-introduction-group" id="tutorials">
 <h2>Tutorials<a class="headerlink" href="#tutorials" title="Link to this heading"></a></h2>
@@ -11480,13 +11504,16 @@
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-dir-exists"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>dir_exists</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-diraccess-method-dir-exists"><span class="std std-ref">🔗</span></a></p>
 <p>Returns whether the target directory exists. The argument can be relative to the current directory, or an absolute path.</p>
+<p><strong>Note:</strong> The returned <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> in the editor and after exporting when used on a path in the <code class="docutils literal notranslate"><span class="pre">res://</span></code> directory may be different. Some files are converted to engine-specific formats when exported, potentially changing the directory structure.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-dir-exists-absolute"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>dir_exists_absolute</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-diraccess-method-dir-exists-absolute"><span class="std std-ref">🔗</span></a></p>
 <p>Static version of <a class="reference internal" href="#class-diraccess-method-dir-exists"><span class="std std-ref">dir_exists</span></a>. Supports only absolute paths.</p>
+<p><strong>Note:</strong> The returned <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> in the editor and after exporting when used on a path in the <code class="docutils literal notranslate"><span class="pre">res://</span></code> directory may be different. Some files are converted to engine-specific formats when exported, potentially changing the directory structure.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-file-exists"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>file_exists</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <a class="reference internal" href="#class-diraccess-method-file-exists"><span class="std std-ref">🔗</span></a></p>
 <p>Returns whether the target file exists. The argument can be relative to the current directory, or an absolute path.</p>
 <p>For a static equivalent, use <a class="reference internal" href="class_fileaccess.html#class-fileaccess-method-file-exists"><span class="std std-ref">FileAccess.file_exists</span></a>.</p>
+<p><strong>Note:</strong> Many resources types are imported (e.g. textures or sound files), and their source asset will not be included in the exported game, as only the imported version is used. See <a class="reference internal" href="class_resourceloader.html#class-resourceloader-method-exists"><span class="std std-ref">ResourceLoader.exists</span></a> for an alternative approach that takes resource remapping into account.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-get-current-dir"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>get_current_dir</strong>(include_drive: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-diraccess-method-get-current-dir"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the absolute path to the currently opened directory (e.g. <code class="docutils literal notranslate"><span class="pre">res://folder</span></code> or <code class="docutils literal notranslate"><span class="pre">C:\tmp\folder</span></code>).</p>
@@ -11497,10 +11524,12 @@
 <p class="classref-method" id="class-diraccess-method-get-directories"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_directories</strong>() <a class="reference internal" href="#class-diraccess-method-get-directories"><span class="std std-ref">🔗</span></a></p>
 <p>Returns a <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> containing filenames of the directory contents, excluding files. The array is sorted alphabetically.</p>
 <p>Affected by <a class="reference internal" href="#class-diraccess-property-include-hidden"><span class="std std-ref">include_hidden</span></a> and <a class="reference internal" href="#class-diraccess-property-include-navigational"><span class="std std-ref">include_navigational</span></a>.</p>
+<p><strong>Note:</strong> The returned directories in the editor and after exporting in the <code class="docutils literal notranslate"><span class="pre">res://</span></code> directory may differ as some files are converted to engine-specific formats when exported.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-get-directories-at"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_directories_at</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-diraccess-method-get-directories-at"><span class="std std-ref">🔗</span></a></p>
 <p>Returns a <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> containing filenames of the directory contents, excluding files, at the given <code class="docutils literal notranslate"><span class="pre">path</span></code>. The array is sorted alphabetically.</p>
 <p>Use <a class="reference internal" href="#class-diraccess-method-get-directories"><span class="std std-ref">get_directories</span></a> if you want more control of what gets included.</p>
+<p><strong>Note:</strong> The returned directories in the editor and after exporting in the <code class="docutils literal notranslate"><span class="pre">res://</span></code> directory may differ as some files are converted to engine-specific formats when exported.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-get-drive-count"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_drive_count</strong>() <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-diraccess-method-get-drive-count"><span class="std std-ref">🔗</span></a></p>
 <p>On Windows, returns the number of drives (partitions) mounted on the current filesystem.</p>
@@ -11522,6 +11551,7 @@
 <p class="classref-method" id="class-diraccess-method-get-files-at"><a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> <strong>get_files_at</strong>(path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method doesn't need an instance to be called, so it can be called directly using the class name.">static</abbr> <a class="reference internal" href="#class-diraccess-method-get-files-at"><span class="std std-ref">🔗</span></a></p>
 <p>Returns a <a class="reference internal" href="class_packedstringarray.html#class-packedstringarray"><span class="std std-ref">PackedStringArray</span></a> containing filenames of the directory contents, excluding directories, at the given <code class="docutils literal notranslate"><span class="pre">path</span></code>. The array is sorted alphabetically.</p>
 <p>Use <a class="reference internal" href="#class-diraccess-method-get-files"><span class="std std-ref">get_files</span></a> if you want more control of what gets included.</p>
+<p><strong>Note:</strong> When used on a <code class="docutils literal notranslate"><span class="pre">res://</span></code> path in an exported project, only the files included in the PCK at the given folder level are returned. In practice, this means that since imported resources are stored in a top-level <code class="docutils literal notranslate"><span class="pre">.godot/</span></code> folder, only paths to <code class="docutils literal notranslate"><span class="pre">.gd</span></code> and <code class="docutils literal notranslate"><span class="pre">.import</span></code> files are returned (plus a few other files, such as <code class="docutils literal notranslate"><span class="pre">project.godot</span></code> or <code class="docutils literal notranslate"><span class="pre">project.binary</span></code> and the project icon). In an exported project, the list of returned files will also vary depending on <a class="reference internal" href="class_projectsettings.html#class-projectsettings-property-editor-export-convert-text-resources-to-binary"><span class="std std-ref">ProjectSettings.editor/export/convert_text_resources_to_binary</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-diraccess-method-get-next"><a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a> <strong>get_next</strong>() <a class="reference internal" href="#class-diraccess-method-get-next"><span class="std std-ref">🔗</span></a></p>
 <p>Returns the next element (file or directory) in the current directory.</p>

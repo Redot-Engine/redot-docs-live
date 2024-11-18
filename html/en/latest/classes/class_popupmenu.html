@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11786,8 +11809,6 @@
 <p>Adds a new multistate item with text <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p>
 <p>Contrarily to normal binary items, multistate items can have more than two states, as defined by <code class="docutils literal notranslate"><span class="pre">max_states</span></code>. The default value is defined by <code class="docutils literal notranslate"><span class="pre">default_state</span></code>.</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">id</span></code> can optionally be provided, as well as an accelerator (<code class="docutils literal notranslate"><span class="pre">accel</span></code>). If no <code class="docutils literal notranslate"><span class="pre">id</span></code> is provided, one will be created from the index. If no <code class="docutils literal notranslate"><span class="pre">accel</span></code> is provided, then the default value of 0 (corresponding to <a class="reference internal" href="class_%40globalscope.html#class-globalscope-constant-key-none"><span class="std std-ref">&#64;GlobalScope.KEY_NONE</span></a>) will be assigned to the item (which means it won't have any accelerator). See <a class="reference internal" href="#class-popupmenu-method-get-item-accelerator"><span class="std std-ref">get_item_accelerator</span></a> for more info on accelerators.</p>
-<p><strong>Note:</strong> Multistate items don't update their state automatically and must be done manually. See <a class="reference internal" href="#class-popupmenu-method-toggle-item-multistate"><span class="std std-ref">toggle_item_multistate</span></a>, <a class="reference internal" href="#class-popupmenu-method-set-item-multistate"><span class="std std-ref">set_item_multistate</span></a> and <a class="reference internal" href="#class-popupmenu-method-get-item-multistate"><span class="std std-ref">get_item_multistate</span></a> for more info on how to control it.</p>
-<p>Example usage:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
 <span class="w">    </span><span class="n">add_multistate_item</span><span class="p">(</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 
@@ -11803,6 +11824,7 @@
 <span class="w">        </span><span class="p">)</span>
 </pre></div>
 </div>
+<p><strong>Note:</strong> Multistate items don't update their state automatically and must be done manually. See <a class="reference internal" href="#class-popupmenu-method-toggle-item-multistate"><span class="std std-ref">toggle_item_multistate</span></a>, <a class="reference internal" href="#class-popupmenu-method-set-item-multistate"><span class="std std-ref">set_item_multistate</span></a> and <a class="reference internal" href="#class-popupmenu-method-get-item-multistate"><span class="std std-ref">get_item_multistate</span></a> for more info on how to control it.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-popupmenu-method-add-radio-check-item"><abbr title="No return value.">void</abbr> <strong>add_radio_check_item</strong>(label: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, id: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> = -1, accel: <a class="reference internal" href="class_%40globalscope.html#enum-globalscope-key"><span class="std std-ref">Key</span></a> = 0) <a class="reference internal" href="#class-popupmenu-method-add-radio-check-item"><span class="std std-ref">🔗</span></a></p>
 <p>Adds a new radio check button with text <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p>

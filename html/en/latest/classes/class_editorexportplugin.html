@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11393,9 +11416,18 @@
 <p><strong>Note:</strong> <a class="reference internal" href="#class-editorexportplugin-private-method-customize-scene"><span class="std std-ref">_customize_scene</span></a> will only be called for scenes that have been modified since the last export.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorexportplugin-private-method-customize-resource"><a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a> <strong>_customize_resource</strong>(resource: <a class="reference internal" href="class_resource.html#class-resource"><span class="std std-ref">Resource</span></a>, path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editorexportplugin-private-method-customize-resource"><span class="std std-ref">🔗</span></a></p>
-<p>Customize a resource. If changes are made to it, return the same or a new resource. Otherwise, return <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
-<p>The <em>path</em> argument is only used when customizing an actual file, otherwise this means that this resource is part of another one and it will be empty.</p>
+<p>Customize a resource. If changes are made to it, return the same or a new resource. Otherwise, return <code class="docutils literal notranslate"><span class="pre">null</span></code>. When a new resource is returned, <code class="docutils literal notranslate"><span class="pre">resource</span></code> will be replaced by a copy of the new resource.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">path</span></code> argument is only used when customizing an actual file, otherwise this means that this resource is part of another one and it will be empty.</p>
 <p>Implementing this method is required if <a class="reference internal" href="#class-editorexportplugin-private-method-begin-customize-resources"><span class="std std-ref">_begin_customize_resources</span></a> returns <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p><strong>Note:</strong> When customizing any of the following types and returning another resource, the other resource should not be skipped using <a class="reference internal" href="#class-editorexportplugin-method-skip"><span class="std std-ref">skip</span></a> in <a class="reference internal" href="#class-editorexportplugin-private-method-export-file"><span class="std std-ref">_export_file</span></a>:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="class_atlastexture.html#class-atlastexture"><span class="std std-ref">AtlasTexture</span></a></p></li>
+<li><p><a class="reference internal" href="class_compressedcubemap.html#class-compressedcubemap"><span class="std std-ref">CompressedCubemap</span></a></p></li>
+<li><p><a class="reference internal" href="class_compressedcubemaparray.html#class-compressedcubemaparray"><span class="std std-ref">CompressedCubemapArray</span></a></p></li>
+<li><p><a class="reference internal" href="class_compressedtexture2d.html#class-compressedtexture2d"><span class="std std-ref">CompressedTexture2D</span></a></p></li>
+<li><p><a class="reference internal" href="class_compressedtexture2darray.html#class-compressedtexture2darray"><span class="std std-ref">CompressedTexture2DArray</span></a></p></li>
+<li><p><a class="reference internal" href="class_compressedtexture3d.html#class-compressedtexture3d"><span class="std std-ref">CompressedTexture3D</span></a></p></li>
+</ul>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorexportplugin-private-method-customize-scene"><a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a> <strong>_customize_scene</strong>(scene: <a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a>, path: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>) <abbr title="This method should typically be overridden by the user to have any effect.">virtual</abbr> <a class="reference internal" href="#class-editorexportplugin-private-method-customize-scene"><span class="std std-ref">🔗</span></a></p>
 <p>Customize a scene. If changes are made to it, return the same or a new scene. Otherwise, return <code class="docutils literal notranslate"><span class="pre">null</span></code>. If a new scene is returned, it is up to you to dispose of the old one.</p>

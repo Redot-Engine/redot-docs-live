@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11363,7 +11386,7 @@
 <p><strong>Note:</strong> If you want to mark an edited scene as unsaved without clearing its history, use <a class="reference internal" href="class_editorinterface.html#class-editorinterface-method-mark-scene-as-unsaved"><span class="std std-ref">EditorInterface.mark_scene_as_unsaved</span></a> instead.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorundoredomanager-method-commit-action"><abbr title="No return value.">void</abbr> <strong>commit_action</strong>(execute: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = true) <a class="reference internal" href="#class-editorundoredomanager-method-commit-action"><span class="std std-ref">🔗</span></a></p>
-<p>Commit the action. If <code class="docutils literal notranslate"><span class="pre">execute</span></code> is true (default), all &quot;do&quot; methods/properties are called/set when this function is called.</p>
+<p>Commits the action. If <code class="docutils literal notranslate"><span class="pre">execute</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> (default), all &quot;do&quot; methods/properties are called/set when this function is called.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorundoredomanager-method-create-action"><abbr title="No return value.">void</abbr> <strong>create_action</strong>(name: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, merge_mode: <a class="reference internal" href="class_undoredo.html#enum-undoredo-mergemode"><span class="std std-ref">MergeMode</span></a> = 0, custom_context: <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a> = null, backward_undo_ops: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> = false) <a class="reference internal" href="#class-editorundoredomanager-method-create-action"><span class="std std-ref">🔗</span></a></p>
 <p>Create a new action. After this is called, do all your calls to <a class="reference internal" href="#class-editorundoredomanager-method-add-do-method"><span class="std std-ref">add_do_method</span></a>, <a class="reference internal" href="#class-editorundoredomanager-method-add-undo-method"><span class="std std-ref">add_undo_method</span></a>, <a class="reference internal" href="#class-editorundoredomanager-method-add-do-property"><span class="std std-ref">add_do_property</span></a>, and <a class="reference internal" href="#class-editorundoredomanager-method-add-undo-property"><span class="std std-ref">add_undo_property</span></a>, then commit the action with <a class="reference internal" href="#class-editorundoredomanager-method-commit-action"><span class="std std-ref">commit_action</span></a>.</p>

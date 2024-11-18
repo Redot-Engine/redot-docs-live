@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11873,7 +11896,7 @@
 <p>See <a class="reference internal" href="class_editorcontextmenuplugin.html#enum-editorcontextmenuplugin-contextmenuslot"><span class="std std-ref">ContextMenuSlot</span></a> for available context menus. A plugin instance can belong only to a single context menu slot.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorplugin-method-add-control-to-bottom-panel"><a class="reference internal" href="class_button.html#class-button"><span class="std std-ref">Button</span></a> <strong>add_control_to_bottom_panel</strong>(control: <a class="reference internal" href="class_control.html#class-control"><span class="std std-ref">Control</span></a>, title: <a class="reference internal" href="class_string.html#class-string"><span class="std std-ref">String</span></a>, shortcut: <a class="reference internal" href="class_shortcut.html#class-shortcut"><span class="std std-ref">Shortcut</span></a> = null) <a class="reference internal" href="#class-editorplugin-method-add-control-to-bottom-panel"><span class="std std-ref">🔗</span></a></p>
-<p>Adds a control to the bottom panel (together with Output, Debug, Animation, etc). Returns a reference to the button added. It's up to you to hide/show the button when needed. When your plugin is deactivated, make sure to remove your custom control with <a class="reference internal" href="#class-editorplugin-method-remove-control-from-bottom-panel"><span class="std std-ref">remove_control_from_bottom_panel</span></a> and free it with <a class="reference internal" href="class_node.html#class-node-method-queue-free"><span class="std std-ref">Node.queue_free</span></a>.</p>
+<p>Adds a control to the bottom panel (together with Output, Debug, Animation, etc.). Returns a reference to the button added. It's up to you to hide/show the button when needed. When your plugin is deactivated, make sure to remove your custom control with <a class="reference internal" href="#class-editorplugin-method-remove-control-from-bottom-panel"><span class="std std-ref">remove_control_from_bottom_panel</span></a> and free it with <a class="reference internal" href="class_node.html#class-node-method-queue-free"><span class="std std-ref">Node.queue_free</span></a>.</p>
 <p>Optionally, you can specify a shortcut parameter. When pressed, this shortcut will toggle the bottom panel's visibility. See the default editor bottom panel shortcuts in the Editor Settings for inspiration. Per convention, they all use <kbd class="kbd docutils literal notranslate">Alt</kbd> modifier.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-editorplugin-method-add-control-to-container"><abbr title="No return value.">void</abbr> <strong>add_control_to_container</strong>(container: <a class="reference internal" href="#enum-editorplugin-customcontrolcontainer"><span class="std std-ref">CustomControlContainer</span></a>, control: <a class="reference internal" href="class_control.html#class-control"><span class="std std-ref">Control</span></a>) <a class="reference internal" href="#class-editorplugin-method-add-control-to-container"><span class="std std-ref">🔗</span></a></p>

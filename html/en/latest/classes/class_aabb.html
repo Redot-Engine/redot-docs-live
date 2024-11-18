@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11635,10 +11658,10 @@
 <p>The segment begins at <code class="docutils literal notranslate"><span class="pre">from</span></code> and ends at <code class="docutils literal notranslate"><span class="pre">to</span></code>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-aabb-method-is-equal-approx"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_equal_approx</strong>(aabb: <a class="reference internal" href="#class-aabb"><span class="std std-ref">AABB</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-aabb-method-is-equal-approx"><span class="std std-ref">🔗</span></a></p>
-<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this bounding box and <code class="docutils literal notranslate"><span class="pre">aabb</span></code> are approximately equal, by calling <a class="reference internal" href="class_vector2.html#class-vector2-method-is-equal-approx"><span class="std std-ref">Vector2.is_equal_approx</span></a> on the <a class="reference internal" href="#class-aabb-property-position"><span class="std std-ref">position</span></a> and the <a class="reference internal" href="#class-aabb-property-size"><span class="std std-ref">size</span></a>.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this bounding box and <code class="docutils literal notranslate"><span class="pre">aabb</span></code> are approximately equal, by calling <a class="reference internal" href="class_vector3.html#class-vector3-method-is-equal-approx"><span class="std std-ref">Vector3.is_equal_approx</span></a> on the <a class="reference internal" href="#class-aabb-property-position"><span class="std std-ref">position</span></a> and the <a class="reference internal" href="#class-aabb-property-size"><span class="std std-ref">size</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-aabb-method-is-finite"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>is_finite</strong>() <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-aabb-method-is-finite"><span class="std std-ref">🔗</span></a></p>
-<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this bounding box's values are finite, by calling <a class="reference internal" href="class_vector2.html#class-vector2-method-is-finite"><span class="std std-ref">Vector2.is_finite</span></a> on the <a class="reference internal" href="#class-aabb-property-position"><span class="std std-ref">position</span></a> and the <a class="reference internal" href="#class-aabb-property-size"><span class="std std-ref">size</span></a>.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this bounding box's values are finite, by calling <a class="reference internal" href="class_vector3.html#class-vector3-method-is-finite"><span class="std std-ref">Vector3.is_finite</span></a> on the <a class="reference internal" href="#class-aabb-property-position"><span class="std std-ref">position</span></a> and the <a class="reference internal" href="#class-aabb-property-size"><span class="std std-ref">size</span></a>.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-method" id="class-aabb-method-merge"><a class="reference internal" href="#class-aabb"><span class="std std-ref">AABB</span></a> <strong>merge</strong>(with: <a class="reference internal" href="#class-aabb"><span class="std std-ref">AABB</span></a>) <abbr title="This method has no side effects. It doesn't modify any of the instance's member variables.">const</abbr> <a class="reference internal" href="#class-aabb-method-merge"><span class="std std-ref">🔗</span></a></p>
 <p>Returns an <strong>AABB</strong> that encloses both this bounding box and <code class="docutils literal notranslate"><span class="pre">with</span></code> around the edges. See also <a class="reference internal" href="#class-aabb-method-encloses"><span class="std std-ref">encloses</span></a>.</p>

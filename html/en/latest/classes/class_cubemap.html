@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11252,8 +11275,29 @@
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p>A cubemap is made of 6 textures organized in layers. They are typically used for faking reflections in 3D rendering (see <a class="reference internal" href="class_reflectionprobe.html#class-reflectionprobe"><span class="std std-ref">ReflectionProbe</span></a>). It can be used to make an object look as if it's reflecting its surroundings. This usually delivers much better performance than other reflection methods.</p>
 <p>This resource is typically used as a uniform in custom shaders. Few core Redot methods make use of <strong>Cubemap</strong> resources.</p>
-<p>To create such a texture file yourself, reimport your image files using the Redot Editor import presets.</p>
-<p><strong>Note:</strong> Redot doesn't support using cubemaps in a <a class="reference internal" href="class_panoramaskymaterial.html#class-panoramaskymaterial"><span class="std std-ref">PanoramaSkyMaterial</span></a>. You can use <a class="reference external" href="https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html">this tool</a> to convert a cubemap to an equirectangular sky map.</p>
+<p>To create such a texture file yourself, reimport your image files using the Redot Editor import presets. The expected image order is X+, X-, Y+, Y-, Z+, Z- (in Redot's coordinate system, so Y+ is &quot;up&quot; and Z- is &quot;forward&quot;). You can use one of the following templates as a base:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/Redot-Engine/redot-docs/master/img/cubemap_template_2x3.webp">2×3 cubemap template (default layout option)</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/Redot-Engine/redot-docs/master/img/cubemap_template_3x2.webp">3×2 cubemap template</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/Redot-Engine/redot-docs/master/img/cubemap_template_1x6.webp">1×6 cubemap template</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/Redot-Engine/redot-docs/master/img/cubemap_template_6x1.webp">6×1 cubemap template</a></p></li>
+</ul>
+<p><strong>Note:</strong> Redot doesn't support using cubemaps in a <a class="reference internal" href="class_panoramaskymaterial.html#class-panoramaskymaterial"><span class="std std-ref">PanoramaSkyMaterial</span></a>. To use a cubemap as a skybox, convert the default <a class="reference internal" href="class_panoramaskymaterial.html#class-panoramaskymaterial"><span class="std std-ref">PanoramaSkyMaterial</span></a> to a <a class="reference internal" href="class_shadermaterial.html#class-shadermaterial"><span class="std std-ref">ShaderMaterial</span></a> using the <strong>Convert to ShaderMaterial</strong> resource dropdown option, then replace its code with the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>shader_type sky;
+
+uniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;
+uniform float exposure : hint_range(0, 128) = 1.0;
+
+void sky() {
+    // If importing a cubemap from another engine, you may need to flip one of the `EYEDIR` components below
+    // by replacing it with `-EYEDIR`.
+    vec3 eyedir = vec3(EYEDIR.x, EYEDIR.y, EYEDIR.z);
+    COLOR = texture(source_panorama, eyedir).rgb * exposure;
+}
+</pre></div>
+</div>
+<p>After replacing the shader code and saving, specify the imported Cubemap resource in the Shader Parameters section of the ShaderMaterial in the inspector.</p>
+<p>Alternatively, you can use <a class="reference external" href="https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html">this tool</a> to convert a cubemap to an equirectangular sky map and use <a class="reference internal" href="class_panoramaskymaterial.html#class-panoramaskymaterial"><span class="std std-ref">PanoramaSkyMaterial</span></a> as usual.</p>
 </section>
 <section class="classref-reftable-group" id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Link to this heading"></a></h2>

@@ -8,8 +8,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="classes/class_xrnode3d.html" />
 <meta property="og:site_name" content="Redot Engine documentation" />
-<meta property="og:description" content="Inherits: Node3D< Node< Object Inherited By: XRAnchor3D, XRController3D A spatial node that has its position automatically updated by the XRServer. Description: This node can be bound to a specific..." />
-<meta name="description" content="Inherits: Node3D< Node< Object Inherited By: XRAnchor3D, XRController3D A spatial node that has its position automatically updated by the XRServer. Description: This node can be bound to a specific..." />
+<meta property="og:description" content="Inherits: Node3D< Node< Object Inherited By: XRAnchor3D, XRController3D A 3D node that has its position automatically updated by the XRServer. Description: This node can be bound to a specific pose..." />
+<meta name="description" content="Inherits: Node3D< Node< Object Inherited By: XRAnchor3D, XRController3D A 3D node that has its position automatically updated by the XRServer. Description: This node can be bound to a specific pose..." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>XRNode3D &mdash; Redot Engine (latest) documentation in English</title>
 
@@ -4255,6 +4255,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4638,6 +4645,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10689,6 +10705,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11248,7 +11271,7 @@
 <span id="class-xrnode3d"></span><h1>XRNode3D<a class="headerlink" href="#xrnode3d" title="Link to this heading"></a></h1>
 <p><strong>Inherits:</strong> <a class="reference internal" href="class_node3d.html#class-node3d"><span class="std std-ref">Node3D</span></a> <strong>&lt;</strong> <a class="reference internal" href="class_node.html#class-node"><span class="std std-ref">Node</span></a> <strong>&lt;</strong> <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a></p>
 <p><strong>Inherited By:</strong> <a class="reference internal" href="class_xranchor3d.html#class-xranchor3d"><span class="std std-ref">XRAnchor3D</span></a>, <a class="reference internal" href="class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a></p>
-<p>A spatial node that has its position automatically updated by the <a class="reference internal" href="class_xrserver.html#class-xrserver"><span class="std std-ref">XRServer</span></a>.</p>
+<p>A 3D node that has its position automatically updated by the <a class="reference internal" href="class_xrserver.html#class-xrserver"><span class="std std-ref">XRServer</span></a>.</p>
 <section class="classref-introduction-group" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
 <p>This node can be bound to a specific pose of a <a class="reference internal" href="class_xrpositionaltracker.html#class-xrpositionaltracker"><span class="std std-ref">XRPositionalTracker</span></a> and will automatically have its <a class="reference internal" href="class_node3d.html#class-node3d-property-transform"><span class="std std-ref">Node3D.transform</span></a> updated by the <a class="reference internal" href="class_xrserver.html#class-xrserver"><span class="std std-ref">XRServer</span></a>. Nodes of this type must be added as children of the <a class="reference internal" href="class_xrorigin3d.html#class-xrorigin3d"><span class="std std-ref">XROrigin3D</span></a> node.</p>

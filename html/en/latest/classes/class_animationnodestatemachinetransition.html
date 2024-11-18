@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -11327,7 +11350,7 @@
 <p class="classref-enumeration-constant" id="class-animationnodestatemachinetransition-constant-advance-mode-enabled"><a class="reference internal" href="#enum-animationnodestatemachinetransition-advancemode"><span class="std std-ref">AdvanceMode</span></a> <strong>ADVANCE_MODE_ENABLED</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 <p>Only use this transition during <a class="reference internal" href="class_animationnodestatemachineplayback.html#class-animationnodestatemachineplayback-method-travel"><span class="std std-ref">AnimationNodeStateMachinePlayback.travel</span></a>.</p>
 <p class="classref-enumeration-constant" id="class-animationnodestatemachinetransition-constant-advance-mode-auto"><a class="reference internal" href="#enum-animationnodestatemachinetransition-advancemode"><span class="std std-ref">AdvanceMode</span></a> <strong>ADVANCE_MODE_AUTO</strong> = <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
-<p>Automatically use this transition if the <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-condition"><span class="std std-ref">advance_condition</span></a> and <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-expression"><span class="std std-ref">advance_expression</span></a> checks are true (if assigned).</p>
+<p>Automatically use this transition if the <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-condition"><span class="std std-ref">advance_condition</span></a> and <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-expression"><span class="std std-ref">advance_expression</span></a> checks are <code class="docutils literal notranslate"><span class="pre">true</span></code> (if assigned).</p>
 </section>
 <hr class="classref-section-separator docutils" />
 <section class="classref-descriptions-group" id="property-descriptions">
@@ -11359,7 +11382,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_advance_mode</strong>(value: <a class="reference internal" href="#enum-animationnodestatemachinetransition-advancemode"><span class="std std-ref">AdvanceMode</span></a>)</p></li>
 <li><p><a class="reference internal" href="#enum-animationnodestatemachinetransition-advancemode"><span class="std std-ref">AdvanceMode</span></a> <strong>get_advance_mode</strong>()</p></li>
 </ul>
-<p>Determines whether the transition should disabled, enabled when using <a class="reference internal" href="class_animationnodestatemachineplayback.html#class-animationnodestatemachineplayback-method-travel"><span class="std std-ref">AnimationNodeStateMachinePlayback.travel</span></a>, or traversed automatically if the <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-condition"><span class="std std-ref">advance_condition</span></a> and <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-expression"><span class="std std-ref">advance_expression</span></a> checks are true (if assigned).</p>
+<p>Determines whether the transition should be disabled, enabled when using <a class="reference internal" href="class_animationnodestatemachineplayback.html#class-animationnodestatemachineplayback-method-travel"><span class="std std-ref">AnimationNodeStateMachinePlayback.travel</span></a>, or traversed automatically if the <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-condition"><span class="std std-ref">advance_condition</span></a> and <a class="reference internal" href="#class-animationnodestatemachinetransition-property-advance-expression"><span class="std std-ref">advance_expression</span></a> checks are <code class="docutils literal notranslate"><span class="pre">true</span></code> (if assigned).</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-animationnodestatemachinetransition-property-break-loop-at-end"><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>break_loop_at_end</strong> = <code class="docutils literal notranslate"><span class="pre">false</span></code> <a class="reference internal" href="#class-animationnodestatemachinetransition-property-break-loop-at-end"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">

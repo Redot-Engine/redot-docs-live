@@ -4257,6 +4257,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorspinslider.html#theme-property-descriptions">Theme Property Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_filedialog.html">FileDialog</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_filedialog.html#properties">Properties</a></li>
@@ -4640,6 +4647,15 @@
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#property-descriptions">Property Descriptions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_linkbutton.html#theme-property-descriptions">Theme Property Descriptions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="class_lookatmodifier3d.html">LookAtModifier3D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#properties">Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#property-descriptions">Property Descriptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_lookatmodifier3d.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_margincontainer.html">MarginContainer</a><ul>
@@ -10691,6 +10707,13 @@
 <li class="toctree-l3"><a class="reference internal" href="class_editorsyntaxhighlighter.html#method-descriptions">Method Descriptions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="class_editortoaster.html">EditorToaster</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#methods">Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#enumerations">Enumerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_editortoaster.html#method-descriptions">Method Descriptions</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="class_editortranslationparserplugin.html">EditorTranslationParserPlugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#description">Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_editortranslationparserplugin.html#methods">Methods</a></li>
@@ -12694,7 +12717,7 @@
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-restart-if-changed"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_RESTART_IF_CHANGED</strong> = <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
 <p>Editing the property prompts the user for restarting the editor.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-script-variable"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_SCRIPT_VARIABLE</strong> = <code class="docutils literal notranslate"><span class="pre">4096</span></code></p>
-<p>The property is a script variable which should be serialized and saved in the scene file.</p>
+<p>The property is a script variable. <a class="reference internal" href="#class-globalscope-constant-property-usage-script-variable"><span class="std std-ref">PROPERTY_USAGE_SCRIPT_VARIABLE</span></a> can be used to distinguish between exported script variables from built-in variables (which don't have this usage flag). By default, <a class="reference internal" href="#class-globalscope-constant-property-usage-script-variable"><span class="std std-ref">PROPERTY_USAGE_SCRIPT_VARIABLE</span></a> is <strong>not</strong> applied to variables that are created by overriding <a class="reference internal" href="class_object.html#class-object-private-method-get-property-list"><span class="std std-ref">Object._get_property_list</span></a> in a script.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-store-if-null"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_STORE_IF_NULL</strong> = <code class="docutils literal notranslate"><span class="pre">8192</span></code></p>
 <p>The property value of type <a class="reference internal" href="class_object.html#class-object"><span class="std std-ref">Object</span></a> will be stored even if its value is <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-update-all-if-modified"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED</strong> = <code class="docutils literal notranslate"><span class="pre">16384</span></code></p>
@@ -12702,7 +12725,7 @@
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-script-default-value"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_SCRIPT_DEFAULT_VALUE</strong> = <code class="docutils literal notranslate"><span class="pre">32768</span></code></p>
 <p><strong>Deprecated:</strong> This flag is not used by the engine.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-class-is-enum"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_CLASS_IS_ENUM</strong> = <code class="docutils literal notranslate"><span class="pre">65536</span></code></p>
-<p>The property is an enum, i.e. it only takes named integer constants from its associated enumeration.</p>
+<p>The property is a variable of enum type, i.e. it only takes named integer constants from its associated enumeration.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-nil-is-variant"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_NIL_IS_VARIANT</strong> = <code class="docutils literal notranslate"><span class="pre">131072</span></code></p>
 <p>If property has <code class="docutils literal notranslate"><span class="pre">nil</span></code> as default value, its type will be <a class="reference internal" href="class_variant.html#class-variant"><span class="std std-ref">Variant</span></a>.</p>
 <p class="classref-enumeration-constant" id="class-globalscope-constant-property-usage-array"><a class="reference internal" href="#enum-globalscope-propertyusageflags"><span class="std std-ref">PropertyUsageFlags</span></a> <strong>PROPERTY_USAGE_ARRAY</strong> = <code class="docutils literal notranslate"><span class="pre">262144</span></code></p>
