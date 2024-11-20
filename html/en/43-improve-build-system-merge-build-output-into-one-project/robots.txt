@@ -1,3 +1,0 @@
-user-agent: *
-
-sitemap: /sitemap.xml
