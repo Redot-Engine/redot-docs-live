@@ -3681,6 +3681,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -11130,7 +11131,7 @@
 <p><strong>Note:</strong> Setting this property produces a side effect of changing the internal <a class="reference internal" href="#class-randomnumbergenerator-property-state"><span class="std std-ref">state</span></a>, so make sure to initialize the seed <em>before</em> modifying the <a class="reference internal" href="#class-randomnumbergenerator-property-state"><span class="std std-ref">state</span></a>:</p>
 <p><strong>Note:</strong> The default value of this property is pseudo-random, and changes when calling <a class="reference internal" href="#class-randomnumbergenerator-method-randomize"><span class="std std-ref">randomize</span></a>. The <code class="docutils literal notranslate"><span class="pre">0</span></code> value documented here is a placeholder, and not the actual default seed.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">rng</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="n">rng</span><span class="o">.</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">hash</span><span class="p">(</span><span class="s2">&quot;Godot&quot;</span><span class="p">)</span>
+<span class="n">rng</span><span class="o">.</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">hash</span><span class="p">(</span><span class="s2">&quot;Redot&quot;</span><span class="p">)</span>
 <span class="n">rng</span><span class="o">.</span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="c1"># Restore to some previously saved state.</span>
 </pre></div>
 </div>

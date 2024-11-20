@@ -3681,6 +3681,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -11079,7 +11080,7 @@
 <span class="w">    </span><span class="c1"># Perform a POST request. The URL below returns JSON as of writing.</span>
 <span class="w">    </span><span class="c1"># Note: Don&#39;t make simultaneous requests using a single HTTPRequest node.</span>
 <span class="w">    </span><span class="c1"># The snippet below is provided for reference only.</span>
-<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span><span class="o">.</span><span class="n">stringify</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Godette&quot;</span><span class="p">})</span>
+<span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="o">.</span><span class="n">new</span><span class="p">()</span><span class="o">.</span><span class="n">stringify</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Redot-chan&quot;</span><span class="p">})</span>
 <span class="w">    </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">http_request</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="n">HTTPClient</span><span class="o">.</span><span class="n">METHOD_POST</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">)</span>
 <span class="w">    </span><span class="k k-ControlFlow">if</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">OK</span><span class="p">:</span>
 <span class="w">        </span><span class="nb">push_error</span><span class="p">(</span><span class="s2">&quot;An error occurred in the HTTP request.&quot;</span><span class="p">)</span>
@@ -11113,7 +11114,7 @@
 <span class="w">    </span><span class="c1">// The snippet below is provided for reference only.</span>
 <span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Json</span><span class="p">().</span><span class="n">Stringify</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Godette&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Redot-chan&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">});</span>
 <span class="w">    </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">httpRequest</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&quot;https://httpbin.org/post&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">null</span><span class="p">,</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">.</span><span class="n">Method</span><span class="p">.</span><span class="n">Post</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">);</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Error</span><span class="p">.</span><span class="n">Ok</span><span class="p">)</span>
@@ -11296,9 +11297,7 @@
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-success"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_SUCCESS</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 <p>Request successful.</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-chunked-body-size-mismatch"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_CHUNKED_BODY_SIZE_MISMATCH</strong> = <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
-<div class="contribute docutils container">
-<p>There is currently no description for this enum. Please help us by <a class="reference internal" href="../contributing/documentation/updating_the_class_reference.html#doc-updating-the-class-reference"><span class="std std-ref">contributing one</span></a>!</p>
-</div>
+<p>Request failed due to a mismatch between the expected and actual chunked body size during transfer. Possible causes include network errors, server misconfiguration, or issues with chunked encoding.</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-cant-connect"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_CANT_CONNECT</strong> = <code class="docutils literal notranslate"><span class="pre">2</span></code></p>
 <p>Request failed while connecting.</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-cant-resolve"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_CANT_RESOLVE</strong> = <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
@@ -11312,9 +11311,7 @@
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-body-size-limit-exceeded"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_BODY_SIZE_LIMIT_EXCEEDED</strong> = <code class="docutils literal notranslate"><span class="pre">7</span></code></p>
 <p>Request exceeded its maximum size limit, see <a class="reference internal" href="#class-httprequest-property-body-size-limit"><span class="std std-ref">body_size_limit</span></a>.</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-body-decompress-failed"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_BODY_DECOMPRESS_FAILED</strong> = <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
-<div class="contribute docutils container">
-<p>There is currently no description for this enum. Please help us by <a class="reference internal" href="../contributing/documentation/updating_the_class_reference.html#doc-updating-the-class-reference"><span class="std std-ref">contributing one</span></a>!</p>
-</div>
+<p>Request failed due to an error while decompressing the response body. Possible causes include unsupported or incorrect compression format, corrupted data, or incomplete transfer.</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-request-failed"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_REQUEST_FAILED</strong> = <code class="docutils literal notranslate"><span class="pre">9</span></code></p>
 <p>Request failed (currently unused).</p>
 <p class="classref-enumeration-constant" id="class-httprequest-constant-result-download-file-cant-open"><a class="reference internal" href="#enum-httprequest-result"><span class="std std-ref">Result</span></a> <strong>RESULT_DOWNLOAD_FILE_CANT_OPEN</strong> = <code class="docutils literal notranslate"><span class="pre">10</span></code></p>

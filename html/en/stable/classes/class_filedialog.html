@@ -3680,6 +3680,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -11337,7 +11338,7 @@
 <li><p><abbr title="No return value.">void</abbr> <strong>set_use_native_dialog</strong>(value: <a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a>)</p></li>
 <li><p><a class="reference internal" href="class_bool.html#class-bool"><span class="std std-ref">bool</span></a> <strong>get_use_native_dialog</strong>()</p></li>
 </ul>
-<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, <a class="reference internal" href="#class-filedialog-property-access"><span class="std std-ref">access</span></a> is set to <a class="reference internal" href="#class-filedialog-constant-access-filesystem"><span class="std std-ref">ACCESS_FILESYSTEM</span></a>, and it is supported by the current <a class="reference internal" href="class_displayserver.html#class-displayserver"><span class="std std-ref">DisplayServer</span></a>, OS native dialog will be used instead of custom one.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, and if supported by the current <a class="reference internal" href="class_displayserver.html#class-displayserver"><span class="std std-ref">DisplayServer</span></a>, OS native dialog will be used instead of custom one.</p>
 <p><strong>Note:</strong> On Linux and macOS, sandboxed apps always use native dialogs to access the host file system.</p>
 <p><strong>Note:</strong> On macOS, sandboxed apps will save security-scoped bookmarks to retain access to the opened folders across multiple sessions. Use <a class="reference internal" href="class_os.html#class-os-method-get-granted-permissions"><span class="std std-ref">OS.get_granted_permissions</span></a> to get a list of saved bookmarks.</p>
 <p><strong>Note:</strong> Native dialogs are isolated from the base process, file dialog properties can't be modified once the dialog is shown.</p>

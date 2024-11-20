@@ -3681,6 +3681,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="class_backbuffercopy.html">BackBufferCopy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#description">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#tutorials">Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#properties">Properties</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#enumerations">Enumerations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_backbuffercopy.html#property-descriptions">Property Descriptions</a></li>
@@ -11109,15 +11110,19 @@
 <td><p><a class="reference internal" href="#class-astargrid2d-property-jumping-enabled"><span class="std std-ref">jumping_enabled</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a></p></td>
+<td><p><a class="reference internal" href="#class-astargrid2d-property-max-traversals"><span class="std std-ref">max_traversals</span></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a></p></td>
 <td><p><a class="reference internal" href="#class-astargrid2d-property-offset"><span class="std std-ref">offset</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Vector2(0,</span> <span class="pre">0)</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="class_rect2i.html#class-rect2i"><span class="std std-ref">Rect2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-astargrid2d-property-region"><span class="std std-ref">region</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Rect2i(0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="class_vector2i.html#class-vector2i"><span class="std std-ref">Vector2i</span></a></p></td>
 <td><p><a class="reference internal" href="#class-astargrid2d-property-size"><span class="std std-ref">size</span></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">Vector2i(0,</span> <span class="pre">0)</span></code></p></td>
 </tr>
@@ -11284,6 +11289,13 @@
 </ul>
 <p>Enables or disables jumping to skip up the intermediate points and speeds up the searching algorithm.</p>
 <p><strong>Note:</strong> Currently, toggling it on disables the consideration of weight scaling in pathfinding.</p>
+<hr class="classref-item-separator docutils" />
+<p class="classref-property" id="class-astargrid2d-property-max-traversals"><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>max_traversals</strong> = <code class="docutils literal notranslate"><span class="pre">0</span></code> <a class="reference internal" href="#class-astargrid2d-property-max-traversals"><span class="std std-ref">🔗</span></a></p>
+<ul class="classref-property-setget simple">
+<li><p><abbr title="No return value.">void</abbr> <strong>set_max_traversals</strong>(value: <a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a>)</p></li>
+<li><p><a class="reference internal" href="class_int.html#class-int"><span class="std std-ref">int</span></a> <strong>get_max_traversals</strong>()</p></li>
+</ul>
+<p>The maximum number of points to traverse before giving up. If set to <code class="docutils literal notranslate"><span class="pre">0</span></code>, the search will continue until the end point is reached or the whole grid is traversed.</p>
 <hr class="classref-item-separator docutils" />
 <p class="classref-property" id="class-astargrid2d-property-offset"><a class="reference internal" href="class_vector2.html#class-vector2"><span class="std std-ref">Vector2</span></a> <strong>offset</strong> = <code class="docutils literal notranslate"><span class="pre">Vector2(0,</span> <span class="pre">0)</span></code> <a class="reference internal" href="#class-astargrid2d-property-offset"><span class="std std-ref">🔗</span></a></p>
 <ul class="classref-property-setget simple">
