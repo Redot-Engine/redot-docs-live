@@ -1581,18 +1581,6 @@ If ``true``, create a Bezier track instead of a standard track when pressing the
 
 ----
 
-.. _class_EditorSettings_property_editors/animation/default_create_reset_tracks:
-
-.. rst-class:: classref-property
-
-:ref:`bool<class_bool>` **editors/animation/default_create_reset_tracks** :ref:`🔗<class_EditorSettings_property_editors/animation/default_create_reset_tracks>`
-
-If ``true``, create a ``RESET`` track when creating a new animation track. This track can be used to restore the animation to a "default" state.
-
-.. rst-class:: classref-item-separator
-
-----
-
 .. _class_EditorSettings_property_editors/animation/autorename_animation_tracks:
 
 .. rst-class:: classref-property
