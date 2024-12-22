@@ -44,7 +44,7 @@ Accessing the settings can be done using the following methods, such as:
     settings.SetSetting("some/property", Value);
     // `settings.get("some/property", value)` also works as this class overrides `_get()` internally.
     settings.GetSetting("some/property");
-    Redot.Collections.Array<Godot.Collections.Dictionary> listOfSettings = settings.GetPropertyList();
+    Godot.Collections.Array<Godot.Collections.Dictionary> listOfSettings = settings.GetPropertyList();
 
 
 
@@ -4163,7 +4163,7 @@ The icon and font color scheme to use in the editor.
 
 The saturation to use for editor icons. Higher values result in more vibrant colors.
 
-\ **Note:** The default editor icon saturation was increased by 30% in Redot 4.0 and later. To get Redot 3.x's icon saturation back, set :ref:`interface/theme/icon_saturation<class_EditorSettings_property_interface/theme/icon_saturation>` to ``0.77``.
+\ **Note:** The default editor icon saturation was increased by 30% in Godot 4.0 and later. To get Godot 3.x's icon saturation back, set :ref:`interface/theme/icon_saturation<class_EditorSettings_property_interface/theme/icon_saturation>` to ``0.77``.
 
 .. rst-class:: classref-item-separator
 
@@ -5457,7 +5457,7 @@ The syntax theme to use in the script editor.
 
 You can save your own syntax theme from your current settings by using **File > Theme > Save As...** at the top of the script editor. The syntax theme will then be available locally in the list of color themes.
 
-You can find additional syntax themes to install in the `godot-syntax-themes <https://github.com/redot-engine/redot-engine-syntax-themes>`__ repository.
+You can find additional syntax themes to install in the `godot-syntax-themes <https://github.com/godotengine/godot-syntax-themes>`__ repository.
 
 .. rst-class:: classref-item-separator
 
@@ -6018,7 +6018,7 @@ Adds a custom property info to a property. The dictionary must contain:
     var settings = GetEditorInterface().GetEditorSettings();
     settings.Set("category/property_name", 0);
     
-    var propertyInfo = new Redot.Collections.Dictionary
+    var propertyInfo = new Godot.Collections.Dictionary
     {
         {"name", "category/propertyName"},
         {"type", Variant.Type.Int},

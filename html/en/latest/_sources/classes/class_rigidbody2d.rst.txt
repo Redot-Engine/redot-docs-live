@@ -36,9 +36,9 @@ If you need to override the default physics behavior, you can write a custom for
 Tutorials
 ---------
 
-- `2D Physics Platformer Demo <https://redotengine.org/asset-library/asset/2725>`__
+- `2D Physics Platformer Demo <https://godotengine.org/asset-library/asset/2725>`__
 
-- `Instancing Demo <https://redotengine.org/asset-library/asset/2716>`__
+- `Instancing Demo <https://godotengine.org/asset-library/asset/2716>`__
 
 .. rst-class:: classref-reftable-group
 

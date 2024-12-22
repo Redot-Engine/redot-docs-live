@@ -1018,7 +1018,7 @@ Generates a GET/POST application/x-www-form-urlencoded style query string from a
 
  .. code-tab:: csharp
 
-    var fields = new Redot.Collections.Dictionary { { "username", "user" }, { "password", "pass" } };
+    var fields = new Godot.Collections.Dictionary { { "username", "user" }, { "password", "pass" } };
     string queryString = httpClient.QueryStringFromDict(fields);
     // Returns "username=user&password=pass"
 
@@ -1037,11 +1037,11 @@ Furthermore, if a key has a ``null`` value, only the key itself is added, withou
 
  .. code-tab:: csharp
 
-    var fields = new Redot.Collections.Dictionary
+    var fields = new Godot.Collections.Dictionary
     {
         { "single", 123 },
         { "notValued", default },
-        { "multiple", new Redot.Collections.Array { 22, 33, 44 } },
+        { "multiple", new Godot.Collections.Array { 22, 33, 44 } },
     };
     string queryString = httpClient.QueryStringFromDict(fields);
     // Returns "single=123&not_valued&multiple=22&multiple=33&multiple=44"
@@ -1090,7 +1090,7 @@ To create a POST request with query strings to push to the server, do:
 
  .. code-tab:: csharp
 
-    var fields = new Redot.Collections.Dictionary { { "username", "user" }, { "password", "pass" } };
+    var fields = new Godot.Collections.Dictionary { { "username", "user" }, { "password", "pass" } };
     string queryString = new HttpClient().QueryStringFromDict(fields);
     string[] headers = { "Content-Type: application/x-www-form-urlencoded", $"Content-Length: {queryString.Length}" };
     var result = new HttpClient().Request(HttpClient.Method.Post, "index.php", headers, queryString);

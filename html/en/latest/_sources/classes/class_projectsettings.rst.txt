@@ -34,11 +34,11 @@ Tutorials
 
 - :doc:`Project Settings <../tutorials/editor/project_settings>`
 
-- `3D Physics Tests Demo <https://redotengine.org/asset-library/asset/2747>`__
+- `3D Physics Tests Demo <https://godotengine.org/asset-library/asset/2747>`__
 
-- `3D Platformer Demo <https://redotengine.org/asset-library/asset/2748>`__
+- `3D Platformer Demo <https://godotengine.org/asset-library/asset/2748>`__
 
-- `Operating System Testing Demo <https://redotengine.org/asset-library/asset/2789>`__
+- `Operating System Testing Demo <https://godotengine.org/asset-library/asset/2789>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -229,7 +229,7 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`debug/gdscript/warnings/redundant_static_unload<class_ProjectSettings_property_debug/gdscript/warnings/redundant_static_unload>`                                                                     | ``1``                                                                                                    |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`debug/gdscript/warnings/renamed_in_redot_4_hint<class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_redot_4_hint>`                                                                     | ``1``                                                                                                    |
+   | :ref:`bool<class_bool>`                           | :ref:`debug/gdscript/warnings/renamed_in_godot_4_hint<class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_godot_4_hint>`                                                                     | ``1``                                                                                                    |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`debug/gdscript/warnings/return_value_discarded<class_ProjectSettings_property_debug/gdscript/warnings/return_value_discarded>`                                                                       | ``0``                                                                                                    |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+
@@ -2058,7 +2058,7 @@ See also `File paths in Redot projects <../tutorials/io/data_paths.html#accessin
 
 If ``true``, the project will use a hidden directory (``.godot``) for storing project-specific data (metadata, shader cache, etc.).
 
-If ``false``, a non-hidden directory (``redot``) will be used instead.
+If ``false``, a non-hidden directory (``godot``) will be used instead.
 
 \ **Note:** Restart the application after changing this setting.
 
@@ -3002,13 +3002,13 @@ When set to ``warn`` or ``error``, produces a warning or an error respectively w
 
 ----
 
-.. _class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_redot_4_hint:
+.. _class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_godot_4_hint:
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **debug/gdscript/warnings/renamed_in_redot_4_hint** = ``1`` :ref:`🔗<class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_redot_4_hint>`
+:ref:`bool<class_bool>` **debug/gdscript/warnings/renamed_in_godot_4_hint** = ``1`` :ref:`🔗<class_ProjectSettings_property_debug/gdscript/warnings/renamed_in_godot_4_hint>`
 
-When enabled, using a property, enum, or function that was renamed since Redot 3 will produce a hint if an error occurs.
+When enabled, using a property, enum, or function that was renamed since Godot 3 will produce a hint if an error occurs.
 
 .. rst-class:: classref-item-separator
 
@@ -3444,7 +3444,7 @@ When set to ``true``, produces a warning upon encountering certain formatting er
 
 :ref:`bool<class_bool>` **debug/shader_language/warnings/magic_position_write** = ``true`` :ref:`🔗<class_ProjectSettings_property_debug/shader_language/warnings/magic_position_write>`
 
-When set to ``true``, produces a warning when the shader contains ``POSITION = vec4(vertex,`` as this was very common code written in Redot 4.2 and earlier that was paired with a QuadMesh to produce a full screen post processes pass. With the switch to reversed z in 4.3, this trick no longer works, as it implicitly relied on the ``VERTEX.z`` being 0.
+When set to ``true``, produces a warning when the shader contains ``POSITION = vec4(vertex,`` as this was very common code written in Godot 4.2 and earlier that was paired with a QuadMesh to produce a full screen post processes pass. With the switch to reversed z in 4.3, this trick no longer works, as it implicitly relied on the ``VERTEX.z`` being 0.
 
 .. rst-class:: classref-item-separator
 
@@ -9286,7 +9286,7 @@ Maximum size (in kiB) for the :ref:`WebRTCDataChannel<class_WebRTCDataChannel>` 
 
 :ref:`String<class_String>` **network/tls/certificate_bundle_override** = ``""`` :ref:`🔗<class_ProjectSettings_property_network/tls/certificate_bundle_override>`
 
-The CA certificates bundle to use for TLS connections. If this is set to a non-empty value, this will *override* Redot's default `Mozilla certificate bundle <https://github.com/redot-engine/redot-engine/blob/master/thirdparty/certs/ca-certificates.crt>`__. If left empty, the default certificate bundle will be used.
+The CA certificates bundle to use for TLS connections. If this is set to a non-empty value, this will *override* Redot's default `Mozilla certificate bundle <https://github.com/redot-engine/godot-engine/blob/master/thirdparty/certs/ca-certificates.crt>`__. If left empty, the default certificate bundle will be used.
 
 If in doubt, leave this setting empty.
 
@@ -9880,7 +9880,7 @@ The amount of collision margin to use for certain convex collision shapes, such 
 
 Which of the two nodes bound by a joint should represent the world when one of the two is omitted, as either :ref:`Joint3D.node_a<class_Joint3D_property_node_a>` or :ref:`Joint3D.node_b<class_Joint3D_property_node_b>`. This can be thought of as having the omitted node be a :ref:`StaticBody3D<class_StaticBody3D>` at the joint's position. Joint limits are more easily expressed when :ref:`Joint3D.node_a<class_Joint3D_property_node_a>` represents the world.
 
-\ **Note:** In Redot Physics, only :ref:`Joint3D.node_b<class_Joint3D_property_node_b>` can represent the world.
+\ **Note:** In Godot Physics, only :ref:`Joint3D.node_b<class_Joint3D_property_node_b>` can represent the world.
 
 .. rst-class:: classref-item-separator
 
@@ -12894,7 +12894,7 @@ Adds a custom property info to a property. The dictionary must contain:
 
     ProjectSettings.Singleton.Set("category/property_name", 0);
     
-    var propertyInfo = new Redot.Collections.Dictionary
+    var propertyInfo = new Godot.Collections.Dictionary
     {
         {"name", "category/propertyName"},
         {"type", (int)Variant.Type.Int},

@@ -32,7 +32,7 @@ Properties
    :widths: auto
 
    +-------------------------------------------------+-----------------------------------------------------------------+------------------------+
-   | :ref:`Skin<class_Skin>`                         | :ref:`godot_skin<class_GLTFSkin_property_redot_skin>`           |                        |
+   | :ref:`Skin<class_Skin>`                         | :ref:`godot_skin<class_GLTFSkin_property_godot_skin>`           |                        |
    +-------------------------------------------------+-----------------------------------------------------------------+------------------------+
    | :ref:`PackedInt32Array<class_PackedInt32Array>` | :ref:`joints<class_GLTFSkin_property_joints>`                   | ``PackedInt32Array()`` |
    +-------------------------------------------------+-----------------------------------------------------------------+------------------------+
@@ -78,16 +78,16 @@ Methods
 Property Descriptions
 ---------------------
 
-.. _class_GLTFSkin_property_redot_skin:
+.. _class_GLTFSkin_property_godot_skin:
 
 .. rst-class:: classref-property
 
-:ref:`Skin<class_Skin>` **godot_skin** :ref:`🔗<class_GLTFSkin_property_redot_skin>`
+:ref:`Skin<class_Skin>` **godot_skin** :ref:`🔗<class_GLTFSkin_property_godot_skin>`
 
 .. rst-class:: classref-property-setget
 
-- |void| **set_redot_skin**\ (\ value\: :ref:`Skin<class_Skin>`\ )
-- :ref:`Skin<class_Skin>` **get_redot_skin**\ (\ )
+- |void| **set_godot_skin**\ (\ value\: :ref:`Skin<class_Skin>`\ )
+- :ref:`Skin<class_Skin>` **get_godot_skin**\ (\ )
 
 .. container:: contribute
 

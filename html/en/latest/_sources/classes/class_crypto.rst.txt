@@ -59,7 +59,7 @@ Currently, this includes asymmetric key encryption/decryption, signing/verificat
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     using System.Diagnostics;
     
     Crypto crypto = new Crypto();

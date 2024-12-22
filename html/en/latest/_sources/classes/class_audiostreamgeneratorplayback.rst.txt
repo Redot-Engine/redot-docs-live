@@ -26,9 +26,9 @@ This class is meant to be used with :ref:`AudioStreamGenerator<class_AudioStream
 Tutorials
 ---------
 
-- `Audio Generator Demo <https://redotengine.org/asset-library/asset/2759>`__
+- `Audio Generator Demo <https://godotengine.org/asset-library/asset/2759>`__
 
-- `Redot 3.2 will get new audio features <https://redotengine.org/article/redot-32-will-get-new-audio-features>`__
+- `Godot 3.2 will get new audio features <https://godotengine.org/article/godot-32-will-get-new-audio-features>`__
 
 .. rst-class:: classref-reftable-group
 

@@ -6351,7 +6351,7 @@ Creates a new texture. It can be accessed with the RID that is returned.
 
 Once finished with your RID, you will want to free the RID using the RenderingDevice's :ref:`free_rid<class_RenderingDevice_method_free_rid>` method.
 
-\ **Note:** Not to be confused with :ref:`RenderingServer.texture_2d_create<class_RenderingServer_method_texture_2d_create>`, which creates the Redot-specific :ref:`Texture2D<class_Texture2D>` resource as opposed to the graphics API's own texture type.
+\ **Note:** Not to be confused with :ref:`RenderingServer.texture_2d_create<class_RenderingServer_method_texture_2d_create>`, which creates the Godot-specific :ref:`Texture2D<class_Texture2D>` resource as opposed to the graphics API's own texture type.
 
 .. rst-class:: classref-item-separator
 

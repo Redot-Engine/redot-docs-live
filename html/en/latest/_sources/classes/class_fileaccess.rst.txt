@@ -71,7 +71,7 @@ Tutorials
 
 - :doc:`Runtime file loading and saving <../tutorials/io/runtime_file_loading_and_saving>`
 
-- `3D Voxel Demo <https://redotengine.org/asset-library/asset/2755>`__
+- `3D Voxel Demo <https://godotengine.org/asset-library/asset/2755>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -950,7 +950,7 @@ Returns ``null`` if opening the file failed. You can use :ref:`get_open_error<cl
 
 Creates a new **FileAccess** object and opens a compressed file for reading or writing.
 
-\ **Note:** :ref:`open_compressed<class_FileAccess_method_open_compressed>` can only read files that were saved by Redot, not third-party compression formats. See `GitHub issue #28999 <https://github.com/redot-engine/redot-engine/issues/28999>`__ for a workaround.
+\ **Note:** :ref:`open_compressed<class_FileAccess_method_open_compressed>` can only read files that were saved by Redot, not third-party compression formats. See `GitHub issue #28999 <https://github.com/godotengine/godot/issues/28999>`__ for a workaround.
 
 Returns ``null`` if opening the file failed. You can use :ref:`get_open_error<class_FileAccess_method_get_open_error>` to check the error that occurred.
 

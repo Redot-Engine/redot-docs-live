@@ -21,7 +21,7 @@ Description
 
 An advanced :ref:`Variant<class_Variant>` type. All classes in the engine inherit from Object. Each class may define new properties, methods or signals, which are available to all inheriting classes. For example, a :ref:`Sprite2D<class_Sprite2D>` instance is able to call :ref:`Node.add_child<class_Node_method_add_child>` because it inherits from :ref:`Node<class_Node>`.
 
-You can create new instances, using ``Object.new()`` in GDScript, or ``new RedotObject`` in C#.
+You can create new instances, using ``Object.new()`` in GDScript, or ``new GodotObject`` in C#.
 
 To delete an Object instance, call :ref:`free<class_Object_method_free>`. This is necessary for most classes inheriting Object, because they do not manage memory on their own, and will otherwise cause memory leaks when no longer in use. There are a few classes that perform memory management. For example, :ref:`RefCounted<class_RefCounted>` (and by extension :ref:`Resource<class_Resource>`) deletes itself when no longer referenced, and :ref:`Node<class_Node>` deletes its children when freed.
 
@@ -353,11 +353,11 @@ Combined with :ref:`_set<class_Object_private_method__set>` and :ref:`_get_prope
         return default;
     }
     
-    public override Redot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
+    public override Godot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
     {
-        return new Redot.Collections.Array<Godot.Collections.Dictionary>()
+        return new Godot.Collections.Array<Godot.Collections.Dictionary>()
         {
-            new Redot.Collections.Dictionary()
+            new Godot.Collections.Dictionary()
             {
                 { "name", "FakeProperty" },
                 { "type", (int)Variant.Type.Int }
@@ -445,15 +445,15 @@ The example below displays a list of numbers shown as words going from ``ZERO`` 
             }
         }
     
-        private Redot.Collections.Array<int> _numbers = new();
+        private Godot.Collections.Array<int> _numbers = new();
     
-        public override Redot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
+        public override Godot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
         {
-            var properties = new Redot.Collections.Array<Godot.Collections.Dictionary>();
+            var properties = new Godot.Collections.Array<Godot.Collections.Dictionary>();
     
             for (int i = 0; i < _numberCount; i++)
             {
-                properties.Add(new Redot.Collections.Dictionary()
+                properties.Add(new Godot.Collections.Dictionary()
                 {
                     { "name", $"number_{i}" },
                     { "type", (int)Variant.Type.Int },
@@ -505,7 +505,7 @@ The example below displays a list of numbers shown as words going from ``ZERO`` 
 
 |void| **_init**\ (\ ) |virtual| :ref:`🔗<class_Object_private_method__init>`
 
-Called when the object's script is instantiated, oftentimes after the object is initialized in memory (through ``Object.new()`` in GDScript, or ``new RedotObject`` in C#). It can be also defined to take in parameters. This method is similar to a constructor in most programming languages.
+Called when the object's script is instantiated, oftentimes after the object is initialized in memory (through ``Object.new()`` in GDScript, or ``new GodotObject`` in C#). It can be also defined to take in parameters. This method is similar to a constructor in most programming languages.
 
 \ **Note:** If :ref:`_init<class_Object_private_method__init>` is defined with *required* parameters, the Object with script may only be created directly. If any other means (such as :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>` or :ref:`Node.duplicate<class_Node_method_duplicate>`) are used, the script's initialization will fail.
 
@@ -674,7 +674,7 @@ Combined with :ref:`_get<class_Object_private_method__get>` and :ref:`_get_prope
 
  .. code-tab:: csharp
 
-    private Redot.Collections.Dictionary _internalData = new Redot.Collections.Dictionary();
+    private Godot.Collections.Dictionary _internalData = new Godot.Collections.Dictionary();
     
     public override bool _Set(StringName property, Variant value)
     {
@@ -688,11 +688,11 @@ Combined with :ref:`_get<class_Object_private_method__get>` and :ref:`_get_prope
         return false;
     }
     
-    public override Redot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
+    public override Godot.Collections.Array<Godot.Collections.Dictionary> _GetPropertyList()
     {
-        return new Redot.Collections.Array<Godot.Collections.Dictionary>()
+        return new Godot.Collections.Array<Godot.Collections.Dictionary>()
         {
-            new Redot.Collections.Dictionary()
+            new Godot.Collections.Dictionary()
             {
                 { "name", "FakeProperty" },
                 { "type", (int)Variant.Type.Int }
@@ -810,14 +810,14 @@ Adds a user-defined signal named ``signal``. Optional arguments for the signal c
 
  .. code-tab:: csharp
 
-    AddUserSignal("Hurt", new Redot.Collections.Array()
+    AddUserSignal("Hurt", new Godot.Collections.Array()
     {
-        new Redot.Collections.Dictionary()
+        new Godot.Collections.Dictionary()
         {
             { "name", "damage" },
             { "type", (int)Variant.Type.Int }
         },
-        new Redot.Collections.Dictionary()
+        new Godot.Collections.Dictionary()
         {
             { "name", "source" },
             { "type", (int)Variant.Type.Object }
@@ -924,7 +924,7 @@ Calls the ``method`` on the object and returns the result. Unlike :ref:`call<cla
  .. code-tab:: csharp
 
     var node = new Node3D();
-    node.Callv(Node3D.MethodName.Rotate, new Redot.Collections.Array { new Vector3(1f, 0f, 0f), 1.571f });
+    node.Callv(Node3D.MethodName.Rotate, new Godot.Collections.Array { new Vector3(1f, 0f, 0f), 1.571f });
 
 
 
@@ -1053,9 +1053,9 @@ As seen above, the recommended method to connect signals is not :ref:`connect<cl
         var button = new Button();
         // Option 1: In C#, we can use signals as events and connect with this idiomatic syntax:
         button.ButtonDown += OnButtonDown;
-        // Option 2: RedotObject.Connect() with a constructed Callable from a method group.
+        // Option 2: GodotObject.Connect() with a constructed Callable from a method group.
         button.Connect(Button.SignalName.ButtonDown, Callable.From(OnButtonDown));
-        // Option 3: RedotObject.Connect() with a constructed Callable using a target object and method name.
+        // Option 3: GodotObject.Connect() with a constructed Callable using a target object and method name.
         button.Connect(Button.SignalName.ButtonDown, new Callable(this, MethodName.OnButtonDown));
     }
     
@@ -1610,10 +1610,10 @@ If ``reversed`` is ``true``, the call order is reversed.
     player.SetScript(GD.Load("res://player.gd"));
     
     player.Notification(NotificationEnterTree);
-    // The call order is RedotObject -> Node -> Node2D -> player.gd.
+    // The call order is GodotObject -> Node -> Node2D -> player.gd.
     
     player.Notification(NotificationEnterTree, true);
-    // The call order is player.gd -> Node2D -> Node -> RedotObject.
+    // The call order is player.gd -> Node2D -> Node -> GodotObject.
 
 
 

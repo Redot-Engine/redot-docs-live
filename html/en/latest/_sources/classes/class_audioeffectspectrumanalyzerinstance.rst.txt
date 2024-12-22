@@ -28,7 +28,7 @@ An instance of this class can be obtained with :ref:`AudioServer.get_bus_effect_
 Tutorials
 ---------
 
-- `Audio Spectrum Visualizer Demo <https://redotengine.org/asset-library/asset/2762>`__
+- `Audio Spectrum Visualizer Demo <https://godotengine.org/asset-library/asset/2762>`__
 
 .. rst-class:: classref-reftable-group
 

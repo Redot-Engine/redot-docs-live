@@ -45,7 +45,7 @@ The HMACContext class is useful for advanced HMAC use cases, such as streaming t
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     using System.Diagnostics;
     
     public partial class MyNode : Node

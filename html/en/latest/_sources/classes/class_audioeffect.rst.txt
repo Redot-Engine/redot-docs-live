@@ -32,7 +32,7 @@ Tutorials
 
 - :doc:`Audio buses <../tutorials/audio/audio_buses>`
 
-- `Audio Microphone Record Demo <https://redotengine.org/asset-library/asset/2760>`__
+- `Audio Microphone Record Demo <https://godotengine.org/asset-library/asset/2760>`__
 
 .. rst-class:: classref-reftable-group
 

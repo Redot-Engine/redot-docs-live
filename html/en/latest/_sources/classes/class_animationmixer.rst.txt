@@ -30,7 +30,7 @@ After instantiating the playback information data within the extended class, the
 Tutorials
 ---------
 
-- `Migrating Animations from Redot 4.0 to 4.3 <https://redotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/>`__
+- `Migrating Animations from Redot 4.0 to 4.3 <https://godotengine.org/article/migrating-animations-from-godot-4-0-to-4-3/>`__
 
 .. rst-class:: classref-reftable-group
 

@@ -11387,7 +11387,7 @@
 <span class="c1">// Redot also provides a Variant type that works like a union of all the Variant-compatible types.</span>
 <span class="n">Variant</span><span class="w"> </span><span class="n">fooVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// fooVar is dynamically an integer (stored as a `long` in the Variant type).</span>
 <span class="n">fooVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Now fooVar is a string!&quot;</span><span class="p">;</span>
-<span class="n">fooVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RefCounted</span><span class="p">();</span><span class="w"> </span><span class="c1">// fooVar is a RedotObject.</span>
+<span class="n">fooVar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RefCounted</span><span class="p">();</span><span class="w"> </span><span class="c1">// fooVar is a GodotObject.</span>
 </pre></div>
 </div>
 </div></div>
@@ -11423,7 +11423,7 @@
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="n">Variant</span><span class="p">.</span><span class="n">Type</span><span class="p">.</span><span class="n">Object</span><span class="p">:</span>
 <span class="w">        </span><span class="c1">// Note that Objects are their own special category.</span>
-<span class="w">        </span><span class="c1">// You can convert a Variant to a RedotObject and use reflection to get its name.</span>
+<span class="w">        </span><span class="c1">// You can convert a Variant to a GodotObject and use reflection to get its name.</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="s">$&quot;foo is a(n) {foo.AsGodotObject().GetType().Name}&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>

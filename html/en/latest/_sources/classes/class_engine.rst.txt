@@ -66,11 +66,11 @@ Methods
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                        | :ref:`get_frames_per_second<class_Engine_method_get_frames_per_second>`\ (\ ) |const|                                                                       |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_redot_author_info<class_Engine_method_get_redot_author_info>`\ (\ ) |const|                                                                       |
+   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_godot_author_info<class_Engine_method_get_godot_author_info>`\ (\ ) |const|                                                                       |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_redot_compatible_version_info<class_Engine_method_get_redot_compatible_version_info>`\ (\ ) |const|                                               |
+   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_godot_compatible_version_info<class_Engine_method_get_godot_compatible_version_info>`\ (\ ) |const|                                               |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_redot_donor_info<class_Engine_method_get_redot_donor_info>`\ (\ ) |const|                                                                         |
+   | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_godot_donor_info<class_Engine_method_get_godot_donor_info>`\ (\ ) |const|                                                                         |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_license_info<class_Engine_method_get_license_info>`\ (\ ) |const|                                                                                 |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -304,7 +304,7 @@ To detect whether the current build is 64-bit, or the type of architecture, don'
 
 Returns the engine author information as a :ref:`Dictionary<class_Dictionary>`, where each entry is an :ref:`Array<class_Array>` of strings with the names of notable contributors to the Redot Engine: ``lead_developers``, ``founders``, ``project_managers``, and ``developers``.
 
-See also :ref:`get_redot_author_info<class_Engine_method_get_redot_author_info>` for Redot's author info.
+See also :ref:`get_godot_author_info<class_Engine_method_get_godot_author_info>` for Godot's author info.
 
 .. rst-class:: classref-item-separator
 
@@ -340,7 +340,7 @@ Returns a :ref:`Dictionary<class_Dictionary>` of categorized donor names. Each e
 
 {``platinum_sponsors``, ``gold_sponsors``, ``silver_sponsors``, ``bronze_sponsors``, ``mini_sponsors``, ``gold_donors``, ``silver_donors``, ``bronze_donors``}
 
-See also :ref:`get_redot_donor_info<class_Engine_method_get_redot_donor_info>` for Redot's donor info.
+See also :ref:`get_godot_donor_info<class_Engine_method_get_godot_donor_info>` for Godot's donor info.
 
 \ **Warning:** All donor names are empty. This currently maintained for compatibility with Redot.
 
@@ -374,11 +374,11 @@ Returns the average frames rendered every second (FPS), also known as the framer
 
 ----
 
-.. _class_Engine_method_get_redot_author_info:
+.. _class_Engine_method_get_godot_author_info:
 
 .. rst-class:: classref-method
 
-:ref:`Dictionary<class_Dictionary>` **get_redot_author_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_redot_author_info>`
+:ref:`Dictionary<class_Dictionary>` **get_godot_author_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_godot_author_info>`
 
 Returns the engine author information for Redot as a :ref:`Dictionary<class_Dictionary>`, where each entry is an :ref:`Array<class_Array>` of strings with the names of notable contributors to the Redot Engine: ``lead_developers``, ``founders``, ``project_managers``, and ``developers``.
 
@@ -388,13 +388,13 @@ See also :ref:`get_author_info<class_Engine_method_get_author_info>` for Redot's
 
 ----
 
-.. _class_Engine_method_get_redot_compatible_version_info:
+.. _class_Engine_method_get_godot_compatible_version_info:
 
 .. rst-class:: classref-method
 
-:ref:`Dictionary<class_Dictionary>` **get_redot_compatible_version_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_redot_compatible_version_info>`
+:ref:`Dictionary<class_Dictionary>` **get_godot_compatible_version_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_godot_compatible_version_info>`
 
-Returns the current engine minimal version compatibility info in relation to Redot as a :ref:`Dictionary<class_Dictionary>` containing the following entries:
+Returns the current engine minimal version compatibility info in relation to Godot as a :ref:`Dictionary<class_Dictionary>` containing the following entries:
 
 - ``major`` - Major version number as an int;
 
@@ -417,8 +417,8 @@ The ``hex`` value is encoded as follows, from left to right: one byte for the ma
 
  .. code-tab:: gdscript
 
-    if Engine.get_redot_compatible_version_info().hex >= 0x040100:
-        pass # Do things specifically based on Redot version 4.1 compatibility or later.
+    if Engine.get_godot_compatible_version_info().hex >= 0x040100:
+        pass # Do things specifically based on Godot version 4.1 compatibility or later.
     else:
         pass # Do things specific to versions before 4.1.
 
@@ -426,7 +426,7 @@ The ``hex`` value is encoded as follows, from left to right: one byte for the ma
 
     if ((int)Engine.GetGodotCompatibleVersionInfo()["hex"] >= 0x040100)
     {
-        // Do things specifically based on Redot version 4.1 compatibility or later.
+        // Do things specifically based on Godot version 4.1 compatibility or later.
     }
     else
     {
@@ -441,13 +441,13 @@ See also :ref:`get_version_info<class_Engine_method_get_version_info>` for Redot
 
 ----
 
-.. _class_Engine_method_get_redot_donor_info:
+.. _class_Engine_method_get_godot_donor_info:
 
 .. rst-class:: classref-method
 
-:ref:`Dictionary<class_Dictionary>` **get_redot_donor_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_redot_donor_info>`
+:ref:`Dictionary<class_Dictionary>` **get_godot_donor_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_godot_donor_info>`
 
-Returns a :ref:`Dictionary<class_Dictionary>` of categorized donor names for Redot. Each entry is an :ref:`Array<class_Array>` of strings:
+Returns a :ref:`Dictionary<class_Dictionary>` of categorized donor names for Godot. Each entry is an :ref:`Array<class_Array>` of strings:
 
 {``platinum_sponsors``, ``gold_sponsors``, ``silver_sponsors``, ``bronze_sponsors``, ``mini_sponsors``, ``gold_donors``, ``silver_donors``, ``bronze_donors``}
 
@@ -686,7 +686,7 @@ The ``hex`` value is encoded as follows, from left to right: one byte for the ma
 
 
 
-See also :ref:`get_redot_compatible_version_info<class_Engine_method_get_redot_compatible_version_info>` for Redot's minimal compatibility version info.
+See also :ref:`get_godot_compatible_version_info<class_Engine_method_get_godot_compatible_version_info>` for Redot's minimal compatibility version info.
 
 .. rst-class:: classref-item-separator
 

@@ -58,7 +58,7 @@ This class holds the context information required for encryption and decryption 
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     using System.Diagnostics;
     
     public partial class MyNode : Node

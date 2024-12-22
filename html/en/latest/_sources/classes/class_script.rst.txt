@@ -163,7 +163,7 @@ To give the script a global name, you can use the ``class_name`` keyword in GDSc
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     
     [GlobalClass]
     public partial class MyNode : Node

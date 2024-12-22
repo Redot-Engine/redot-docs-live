@@ -58,7 +58,7 @@ Below a small example of how it can be used:
  .. code-tab:: csharp
 
     // ServerNode.cs
-    using Redot;
+    using Godot;
     using System.Collections.Generic;
     
     public partial class ServerNode : Node
@@ -120,7 +120,7 @@ Below a small example of how it can be used:
  .. code-tab:: csharp
 
     // ClientNode.cs
-    using Redot;
+    using Godot;
     
     public partial class ClientNode : Node
     {

@@ -38,9 +38,9 @@ Tutorials
 
 - :doc:`High dynamic range lighting <../tutorials/3d/high_dynamic_range>`
 
-- `3D Material Testers Demo <https://redotengine.org/asset-library/asset/2742>`__
+- `3D Material Testers Demo <https://godotengine.org/asset-library/asset/2742>`__
 
-- `Third Person Shooter (TPS) Demo <https://redotengine.org/asset-library/asset/2710>`__
+- `Third Person Shooter (TPS) Demo <https://godotengine.org/asset-library/asset/2710>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -451,7 +451,7 @@ Filmic tonemapper operator. This avoids clipping bright highlights, with a resul
 
 Use the Academy Color Encoding System tonemapper. ACES is slightly more expensive than other options, but it handles bright lighting in a more realistic fashion by desaturating it as it becomes brighter. ACES typically has a more contrasted output compared to :ref:`TONE_MAPPER_REINHARDT<class_Environment_constant_TONE_MAPPER_REINHARDT>` and :ref:`TONE_MAPPER_FILMIC<class_Environment_constant_TONE_MAPPER_FILMIC>`.
 
-\ **Note:** This tonemapping operator is called "ACES Fitted" in Redot 3.x.
+\ **Note:** This tonemapping operator is called "ACES Fitted" in Godot 3.x.
 
 .. rst-class:: classref-item-separator
 

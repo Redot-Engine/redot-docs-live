@@ -28,7 +28,7 @@ The **OS** class wraps the most common functionalities for communicating with th
 Tutorials
 ---------
 
-- `Operating System Testing Demo <https://redotengine.org/asset-library/asset/2789>`__
+- `Operating System Testing Demo <https://godotengine.org/asset-library/asset/2789>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -601,7 +601,7 @@ For example, to retrieve a list of the working directory's contents:
 
  .. code-tab:: csharp
 
-    var output = new Redot.Collections.Array();
+    var output = new Godot.Collections.Array();
     int exitCode = OS.Execute("ls", new string[] {"-l", "/tmp"}, output);
 
 
@@ -618,7 +618,7 @@ If you wish to access a shell built-in or execute a composite command, a platfor
 
  .. code-tab:: csharp
 
-    var output = new Redot.Collections.Array();
+    var output = new Godot.Collections.Array();
     OS.Execute("CMD.exe", new string[] {"/C", "cd %TEMP% && dir"}, output);
 
 

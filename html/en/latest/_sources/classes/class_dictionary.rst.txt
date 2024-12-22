@@ -49,8 +49,8 @@ Creating a dictionary:
 
  .. code-tab:: csharp
 
-    var myDict = new Redot.Collections.Dictionary(); // Creates an empty dictionary.
-    var pointsDict = new Redot.Collections.Dictionary
+    var myDict = new Godot.Collections.Dictionary(); // Creates an empty dictionary.
+    var pointsDict = new Godot.Collections.Dictionary
     {
         {"White", 50},
         {"Yellow", 75},
@@ -76,7 +76,7 @@ You can access a dictionary's value by referencing its corresponding key. In the
 
     [Export(PropertyHint.Enum, "White,Yellow,Orange")]
     public string MyColor { get; set; }
-    private Redot.Collections.Dictionary _pointsDict = new Redot.Collections.Dictionary
+    private Godot.Collections.Dictionary _pointsDict = new Godot.Collections.Dictionary
     {
         {"White", 50},
         {"Yellow", 75},
@@ -105,9 +105,9 @@ Dictionaries can contain more complex data:
 
  .. code-tab:: csharp
 
-    var myDict = new Redot.Collections.Dictionary
+    var myDict = new Godot.Collections.Dictionary
     {
-        {"First Array", new Redot.Collections.Array{1, 2, 3, 4}}
+        {"First Array", new Godot.Collections.Array{1, 2, 3, 4}}
     };
 
 
@@ -124,7 +124,7 @@ To add a key to an existing dictionary, access it like an existing key and assig
 
  .. code-tab:: csharp
 
-    var pointsDict = new Redot.Collections.Dictionary
+    var pointsDict = new Godot.Collections.Dictionary
     {
         {"White", 50},
         {"Yellow", 75},
@@ -155,11 +155,11 @@ Finally, dictionaries can contain different types of keys and values in the same
 
     // This is a valid dictionary.
     // To access the string "Nested value" below, use `((Godot.Collections.Dictionary)myDict["sub_dict"])["sub_key"]`.
-    var myDict = new Redot.Collections.Dictionary {
+    var myDict = new Godot.Collections.Dictionary {
         {"String Key", 5},
-        {4, new Redot.Collections.Array{1,2,3}},
+        {4, new Godot.Collections.Array{1,2,3}},
         {7, "Hello"},
-        {"sub_dict", new Redot.Collections.Dictionary{{"sub_key", "Nested value"}}}
+        {"sub_dict", new Godot.Collections.Dictionary{{"sub_key", "Nested value"}}}
     };
 
 
@@ -177,7 +177,7 @@ The keys of a dictionary can be iterated with the ``for`` keyword:
 
  .. code-tab:: csharp
 
-    var groceries = new Redot.Collections.Dictionary{{"Orange", 20}, {"Apple", 2}, {"Banana", 4}};
+    var groceries = new Godot.Collections.Dictionary{{"Orange", 20}, {"Apple", 2}, {"Banana", 4}};
     foreach (var (fruit, amount) in groceries)
     {
         // `fruit` is the key, `amount` is the value.
@@ -200,9 +200,9 @@ Tutorials
 
 - `GDScript basics: Dictionary <../tutorials/scripting/gdscript/gdscript_basics.html#dictionary>`__
 
-- `3D Voxel Demo <https://redotengine.org/asset-library/asset/2755>`__
+- `3D Voxel Demo <https://godotengine.org/asset-library/asset/2755>`__
 
-- `Operating System Testing Demo <https://redotengine.org/asset-library/asset/2789>`__
+- `Operating System Testing Demo <https://godotengine.org/asset-library/asset/2789>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -542,7 +542,7 @@ Returns ``true`` if the dictionary contains an entry with the given ``key``.
 
  .. code-tab:: csharp
 
-    var myDict = new Redot.Collections.Dictionary
+    var myDict = new Godot.Collections.Dictionary
     {
         { "Redot", 4 },
         { 210, default },
@@ -604,10 +604,10 @@ Returns a hashed 32-bit integer value representing the dictionary contents.
 
  .. code-tab:: csharp
 
-    var dict1 = new Redot.Collections.Dictionary{{"A", 10}, {"B", 2}};
-    var dict2 = new Redot.Collections.Dictionary{{"A", 10}, {"B", 2}};
+    var dict1 = new Godot.Collections.Dictionary{{"A", 10}, {"B", 2}};
+    var dict2 = new Godot.Collections.Dictionary{{"A", 10}, {"B", 2}};
     
-    // Redot.Collections.Dictionary has no Hash() method. Use GD.Hash() instead.
+    // Godot.Collections.Dictionary has no Hash() method. Use GD.Hash() instead.
     GD.Print(GD.Hash(dict1) == GD.Hash(dict2)); // Prints True
 
 
@@ -766,13 +766,13 @@ Adds entries from ``dictionary`` to this dictionary. By default, duplicate keys 
 
  .. code-tab:: csharp
 
-    var dict = new Redot.Collections.Dictionary
+    var dict = new Godot.Collections.Dictionary
     {
         ["item"] = "sword",
         ["quantity"] = 2,
     };
     
-    var otherDict = new Redot.Collections.Dictionary
+    var otherDict = new Godot.Collections.Dictionary
     {
         ["quantity"] = 15,
         ["color"] = "silver",

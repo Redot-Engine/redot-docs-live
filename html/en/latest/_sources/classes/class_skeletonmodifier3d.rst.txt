@@ -32,7 +32,7 @@ This node should be used to implement custom IK solvers, constraints, or skeleto
 Tutorials
 ---------
 
-- `Design of the Skeleton Modifier 3D <https://redotengine.org/article/design-of-the-skeleton-modifier-3d/>`__
+- `Design of the Skeleton Modifier 3D <https://godotengine.org/article/design-of-the-skeleton-modifier-3d/>`__
 
 .. rst-class:: classref-reftable-group
 

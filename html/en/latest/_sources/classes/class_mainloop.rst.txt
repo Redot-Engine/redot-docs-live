@@ -52,7 +52,7 @@ Here is an example script implementing a simple **MainLoop**:
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     
     [GlobalClass]
     public partial class CustomMainLoop : MainLoop

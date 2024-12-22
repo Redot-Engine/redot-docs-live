@@ -30,13 +30,13 @@ Tutorials
 
 - :doc:`Kinematic character (2D) <../tutorials/physics/kinematic_character_2d>`
 
-- `3D Kinematic Character Demo <https://redotengine.org/asset-library/asset/2739>`__
+- `3D Kinematic Character Demo <https://godotengine.org/asset-library/asset/2739>`__
 
-- `3D Platformer Demo <https://redotengine.org/asset-library/asset/2748>`__
+- `3D Platformer Demo <https://godotengine.org/asset-library/asset/2748>`__
 
-- `3D Voxel Demo <https://redotengine.org/asset-library/asset/2755>`__
+- `3D Voxel Demo <https://godotengine.org/asset-library/asset/2755>`__
 
-- `Third Person Shooter (TPS) Demo <https://redotengine.org/asset-library/asset/2710>`__
+- `Third Person Shooter (TPS) Demo <https://godotengine.org/asset-library/asset/2710>`__
 
 .. rst-class:: classref-reftable-group
 

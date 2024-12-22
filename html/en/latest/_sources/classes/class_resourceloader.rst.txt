@@ -32,7 +32,7 @@ It uses the many :ref:`ResourceFormatLoader<class_ResourceFormatLoader>` classes
 Tutorials
 ---------
 
-- `Operating System Testing Demo <https://redotengine.org/asset-library/asset/2789>`__
+- `Operating System Testing Demo <https://godotengine.org/asset-library/asset/2789>`__
 
 .. rst-class:: classref-reftable-group
 

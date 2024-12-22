@@ -55,7 +55,7 @@ The most basic example is the creation of a single triangle:
     
     // Initialize the ArrayMesh.
     var arrMesh = new ArrayMesh();
-    var arrays = new Redot.Collections.Array();
+    var arrays = new Godot.Collections.Array();
     arrays.Resize((int)Mesh.ArrayType.Max);
     arrays[(int)Mesh.ArrayType.Vertex] = vertices;
     

@@ -69,7 +69,7 @@ Below is an example EditorImportPlugin that imports a :ref:`Mesh<class_Mesh>` fr
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     
     public partial class MySpecialPlugin : EditorImportPlugin
     {
@@ -108,11 +108,11 @@ Below is an example EditorImportPlugin that imports a :ref:`Mesh<class_Mesh>` fr
             return "Default";
         }
     
-        public override Redot.Collections.Array<Godot.Collections.Dictionary> _GetImportOptions(string path, int presetIndex)
+        public override Godot.Collections.Array<Godot.Collections.Dictionary> _GetImportOptions(string path, int presetIndex)
         {
-            return new Redot.Collections.Array<Godot.Collections.Dictionary>
+            return new Godot.Collections.Array<Godot.Collections.Dictionary>
             {
-                new Redot.Collections.Dictionary
+                new Godot.Collections.Dictionary
                 {
                     { "name", "myOption" },
                     { "default_value", false },
@@ -120,7 +120,7 @@ Below is an example EditorImportPlugin that imports a :ref:`Mesh<class_Mesh>` fr
             };
         }
     
-        public override Error _Import(string sourceFile, string savePath, Redot.Collections.Dictionary options, Redot.Collections.Array<string> platformVariants, Redot.Collections.Array<string> genFiles)
+        public override Error _Import(string sourceFile, string savePath, Godot.Collections.Dictionary options, Godot.Collections.Array<string> platformVariants, Godot.Collections.Array<string> genFiles)
         {
             using var file = FileAccess.Open(sourceFile, FileAccess.ModeFlags.Read);
             if (file.GetError() != Error.Ok)
@@ -281,7 +281,7 @@ This method can be overridden to hide specific import options if conditions are 
 
  .. code-tab:: csharp
 
-    public void _GetOptionVisibility(string option, Redot.Collections.Dictionary options)
+    public void _GetOptionVisibility(string option, Godot.Collections.Dictionary options)
     {
         // Only show the lossy quality setting if the compression mode is set to "Lossy".
         if (option == "compress/lossy_quality" && options.ContainsKey("compress/mode"))

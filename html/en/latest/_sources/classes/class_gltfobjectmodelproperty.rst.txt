@@ -43,9 +43,9 @@ Properties
    :widths: auto
 
    +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------+
-   | :ref:`Expression<class_Expression>`                                            | :ref:`gltf_to_redot_expression<class_GLTFObjectModelProperty_property_gltf_to_redot_expression>` |        |
+   | :ref:`Expression<class_Expression>`                                            | :ref:`gltf_to_godot_expression<class_GLTFObjectModelProperty_property_gltf_to_godot_expression>` |        |
    +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------+
-   | :ref:`Expression<class_Expression>`                                            | :ref:`godot_to_gltf_expression<class_GLTFObjectModelProperty_property_redot_to_gltf_expression>` |        |
+   | :ref:`Expression<class_Expression>`                                            | :ref:`godot_to_gltf_expression<class_GLTFObjectModelProperty_property_godot_to_gltf_expression>` |        |
    +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------+
    | :ref:`Array<class_Array>`\[:ref:`PackedStringArray<class_PackedStringArray>`\] | :ref:`json_pointers<class_GLTFObjectModelProperty_property_json_pointers>`                       | ``[]`` |
    +--------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+--------+
@@ -190,16 +190,16 @@ Object model type "int". Represented in the glTF JSON as a number, and encoded i
 Property Descriptions
 ---------------------
 
-.. _class_GLTFObjectModelProperty_property_gltf_to_redot_expression:
+.. _class_GLTFObjectModelProperty_property_gltf_to_godot_expression:
 
 .. rst-class:: classref-property
 
-:ref:`Expression<class_Expression>` **gltf_to_redot_expression** :ref:`🔗<class_GLTFObjectModelProperty_property_gltf_to_redot_expression>`
+:ref:`Expression<class_Expression>` **gltf_to_godot_expression** :ref:`🔗<class_GLTFObjectModelProperty_property_gltf_to_godot_expression>`
 
 .. rst-class:: classref-property-setget
 
-- |void| **set_gltf_to_redot_expression**\ (\ value\: :ref:`Expression<class_Expression>`\ )
-- :ref:`Expression<class_Expression>` **get_gltf_to_redot_expression**\ (\ )
+- |void| **set_gltf_to_godot_expression**\ (\ value\: :ref:`Expression<class_Expression>`\ )
+- :ref:`Expression<class_Expression>` **get_gltf_to_godot_expression**\ (\ )
 
 If set, this :ref:`Expression<class_Expression>` will be used to convert the property value from the glTF object model to the value expected by the Redot property. This is useful when the glTF object model uses a different unit system, or when the data needs to be transformed in some way. If ``null``, the value will be copied as-is.
 
@@ -207,16 +207,16 @@ If set, this :ref:`Expression<class_Expression>` will be used to convert the pro
 
 ----
 
-.. _class_GLTFObjectModelProperty_property_redot_to_gltf_expression:
+.. _class_GLTFObjectModelProperty_property_godot_to_gltf_expression:
 
 .. rst-class:: classref-property
 
-:ref:`Expression<class_Expression>` **godot_to_gltf_expression** :ref:`🔗<class_GLTFObjectModelProperty_property_redot_to_gltf_expression>`
+:ref:`Expression<class_Expression>` **godot_to_gltf_expression** :ref:`🔗<class_GLTFObjectModelProperty_property_godot_to_gltf_expression>`
 
 .. rst-class:: classref-property-setget
 
-- |void| **set_redot_to_gltf_expression**\ (\ value\: :ref:`Expression<class_Expression>`\ )
-- :ref:`Expression<class_Expression>` **get_redot_to_gltf_expression**\ (\ )
+- |void| **set_godot_to_gltf_expression**\ (\ value\: :ref:`Expression<class_Expression>`\ )
+- :ref:`Expression<class_Expression>` **get_godot_to_gltf_expression**\ (\ )
 
 If set, this :ref:`Expression<class_Expression>` will be used to convert the property value from the Redot property to the value expected by the glTF object model. This is useful when the glTF object model uses a different unit system, or when the data needs to be transformed in some way. If ``null``, the value will be copied as-is.
 

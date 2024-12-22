@@ -29,7 +29,7 @@ A control for displaying plain text. It gives you control over the horizontal an
 Tutorials
 ---------
 
-- `2D Dodge The Creeps Demo <https://redotengine.org/asset-library/asset/2712>`__
+- `2D Dodge The Creeps Demo <https://godotengine.org/asset-library/asset/2712>`__
 
 .. rst-class:: classref-reftable-group
 

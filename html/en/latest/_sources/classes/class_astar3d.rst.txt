@@ -47,7 +47,7 @@ It is also possible to use non-Euclidean distances. To do so, create a script th
 
  .. code-tab:: csharp
 
-    using Redot;
+    using Godot;
     
     [GlobalClass]
     public partial class MyAStar3D : AStar3D

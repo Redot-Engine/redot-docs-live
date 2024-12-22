@@ -78,7 +78,7 @@ Tutorials
 
 - :doc:`Using NavigationMeshes <../tutorials/navigation/navigation_using_navigationmeshes>`
 
-- `Navigation Polygon 2D Demo <https://redotengine.org/asset-library/asset/2722>`__
+- `Navigation Polygon 2D Demo <https://godotengine.org/asset-library/asset/2722>`__
 
 .. rst-class:: classref-reftable-group
 

@@ -6452,7 +6452,7 @@ Converts one or more arguments of any type to string in the best way possible an
 
  .. code-tab:: csharp
 
-    var a = new Redot.Collections.Array { 1, 2, 3 };
+    var a = new Godot.Collections.Array { 1, 2, 3 };
     GD.Print("a", "b", a); // Prints ab[1, 2, 3]
 
 
@@ -7419,7 +7419,7 @@ Converts a :ref:`Variant<class_Variant>` ``variable`` to a formatted :ref:`Strin
 
  .. code-tab:: csharp
 
-    var a = new Redot.Collections.Dictionary { ["a"] = 1, ["b"] = 2 };
+    var a = new Godot.Collections.Dictionary { ["a"] = 1, ["b"] = 2 };
     GD.Print(GD.VarToStr(a));
 
 

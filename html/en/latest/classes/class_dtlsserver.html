@@ -11404,13 +11404,13 @@
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-0-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ServerNode.cs</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Redot</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Godot</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ServerNode</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Node</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">DtlsServer</span><span class="w"> </span><span class="n">_dtls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DtlsServer</span><span class="p">();</span>
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">UdpServer</span><span class="w"> </span><span class="n">_server</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UdpServer</span><span class="p">();</span>
-<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">PacketPeerDtls</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_peers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">PacketPeerDtls</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">PacketPeerDtls</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_peers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="n">PacketPeerDtls</span><span class="o">&gt;</span><span class="p">();</span>
 
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
@@ -11475,7 +11475,7 @@
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-1-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// ClientNode.cs</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Redot</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Godot</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Text</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ClientNode</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Node</span>

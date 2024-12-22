@@ -40,7 +40,7 @@ If you want to join the strings in the array, use :ref:`String.join<class_String
 Tutorials
 ---------
 
-- `Operating System Testing Demo <https://redotengine.org/asset-library/asset/2789>`__
+- `Operating System Testing Demo <https://godotengine.org/asset-library/asset/2789>`__
 
 .. rst-class:: classref-reftable-group
 
