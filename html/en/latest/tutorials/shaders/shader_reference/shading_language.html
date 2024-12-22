@@ -16,7 +16,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=fd95135a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
   
@@ -32,7 +32,7 @@
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Shader preprocessor" href="shader_preprocessor.html" />
+    <link rel="next" title="Built-in functions" href="shader_functions.html" />
     <link rel="prev" title="Shading reference" href="index.html" />
 <meta name="doc_version" content="latest" />
 <meta name="doc_is_latest" content="True" />
@@ -119,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -176,34 +177,38 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-3">New pages since version 4.3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#debug">Debug</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#editor">Editor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#performance">Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#shaders">Shaders</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Rendering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id4">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id4">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id5">Migrating</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id5">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id6">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id7">Physics</a></li>
 </ul>
 </li>
 </ul>
@@ -519,6 +524,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#usage">Usage</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
@@ -592,6 +603,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/external_editor.html">Using an external text editor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/external_editor.html#automatically-reloading-your-changes">Automatically reloading your changes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/external_editor.html#using-external-editor-in-debugger">Using External Editor in Debugger</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/external_editor.html#official-editor-plugins">Official editor plugins</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/external_editor.html#lsp-dap-support">LSP/DAP support</a></li>
@@ -700,6 +712,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -1100,6 +1125,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/csg_tools.html#introduction-to-csg-nodes">Introduction to CSG nodes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/csg_tools.html#prototyping-a-level">Prototyping a level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/csg_tools.html#using-prototype-textures">Using prototype textures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/csg_tools.html#converting-to-meshinstance3d">Converting to MeshInstance3D</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/csg_tools.html#exporting-as-gltf">Exporting as glTF</a></li>
 </ul>
 </li>
@@ -1110,6 +1136,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#collisions">Collisions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#materials">Materials</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#navigationmeshes">NavigationMeshes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#meshlibrary-format">MeshLibrary format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
@@ -1572,7 +1599,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1744,6 +1771,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../i18n/localization_using_gettext.html#updating-message-files-to-follow-the-po-template">Updating message files to follow the PO template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../i18n/localization_using_gettext.html#checking-the-validity-of-a-po-file-or-template">Checking the validity of a PO file or template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../i18n/localization_using_gettext.html#using-binary-mo-files-useful-for-large-projects-only">Using binary MO files (useful for large projects only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../i18n/localization_using_gettext.html#extracting-localizable-strings-from-gdscript-files">Extracting localizable strings from GDScript files</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../i18n/locales.html">Locale codes</a><ul>
@@ -2292,6 +2320,35 @@
 <li class="toctree-l3"><a class="reference internal" href="../../physics/large_world_coordinates.html#limitations">Limitations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../physics/interpolation/index.html">Physics Interpolation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/interpolation/physics_interpolation_quick_start_guide.html">Quick start guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/interpolation/physics_interpolation_introduction.html">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/physics_interpolation_introduction.html#physics-ticks-and-rendered-frames">Physics ticks and rendered frames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/physics_interpolation_introduction.html#what-can-we-do-about-frames-and-ticks-being-out-of-sync">What can we do about frames and ticks being out of sync?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html">Using physics interpolation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#turn-on-the-physics-interpolation-setting">Turn on the physics interpolation setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#move-almost-all-game-logic-from-process-to-physics-process">Move (almost) all game logic from _process to _physics_process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#ensure-that-all-indirect-movement-happens-during-physics-ticks">Ensure that all indirect movement happens during physics ticks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#choose-a-physics-tick-rate">Choose a physics tick rate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#call-reset-physics-interpolation-when-teleporting-objects">Call <code class="docutils literal notranslate"><span class="pre">reset_physics_interpolation()</span></code> when teleporting objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/using_physics_interpolation.html#testing-and-debugging-tips">Testing and debugging tips</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/interpolation/advanced_physics_interpolation.html">Advanced physics interpolation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/advanced_physics_interpolation.html#exceptions-to-automatic-physics-interpolation">Exceptions to automatic physics interpolation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/interpolation/2d_and_3d_physics_interpolation.html">2D and 3D physics interpolation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/2d_and_3d_physics_interpolation.html#global-versus-local-interpolation">Global versus local interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/2d_and_3d_physics_interpolation.html#resetting-physics-interpolation">Resetting physics interpolation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/2d_and_3d_physics_interpolation.html#d-particles">2D Particles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../physics/interpolation/2d_and_3d_physics_interpolation.html#other">Other</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html">Troubleshooting physics issues</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#objects-are-passing-through-each-other-at-high-speeds">Objects are passing through each other at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#stacked-objects-are-unstable-and-wobbly">Stacked objects are unstable and wobbly</a></li>
@@ -2389,8 +2446,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#about-plugins">About plugins</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#creating-a-plugin">Creating a plugin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#a-custom-node">A custom node</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#going-beyond">Going beyond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#a-custom-dock">A custom dock</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#registering-autoloads-singletons-in-plugins">Registering autoloads/singletons in plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#using-sub-plugins">Using sub-plugins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugins/editor/making_plugins.html#going-beyond">Going beyond</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugins/editor/making_main_screen_plugins.html">Making main screen plugins</a><ul>
@@ -2582,6 +2641,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-tool-button"><code class="docutils literal notranslate"><span class="pre">&#64;export_tool_button</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2708,6 +2768,22 @@
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_cpp_example.html#next-steps">Next steps</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html">GDExtension C example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#setting-up-the-project">Setting up the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#file-structure">File structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#buildsystem">Buildsystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#initializing-the-extension">Initializing the extension</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#a-basic-class">A basic class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#a-wrapper-api">A wrapper API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#a-demo-project">A demo project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#custom-methods">Custom methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#custom-properties">Custom properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#binding-virtual-methods">Binding virtual methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#registering-and-emitting-a-signal">Registering and emitting a signal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_c_example.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdextension/gdextension_file.html">The .gdextension file</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_file.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_file.html#configuration-section">Configuration section</a></li>
@@ -2740,6 +2816,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/debug/index.html">Debug</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/debug/overview_of_debugging_tools.html">Overview of debugging tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/debug/output_panel.html">Output panel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/debug/debugger_panel.html">Debugger panel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/debug/the_profiler.html">The Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/debug/custom_performance_monitors.html">Custom performance monitors</a></li>
@@ -2869,6 +2946,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#uniforms">Uniforms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#built-in-variables">Built-in variables</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#built-in-functions">Built-in functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="shader_functions.html">Built-in functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#trigonometric-functions">Trigonometric functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#exponential-and-math-functions">Exponential and math functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#geometric-functions">Geometric functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#comparison-functions">Comparison functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#texture-functions">Texture functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#packing-and-unpacking-functions">Packing and unpacking functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shader_functions.html#bitwise-functions">Bitwise functions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="shader_preprocessor.html">Shader preprocessor</a><ul>
@@ -3490,6 +3577,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#how-to-write-methods-and-classes">How to write methods and classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#common-vocabulary-to-use-in-redot-s-documentation">Common vocabulary to use in Redot's documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#keyboard-shortcut-guidelines">Keyboard shortcut guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#manual-style-guidelines">Manual style guidelines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../contributing/documentation/docs_writing_guidelines.html#when-to-refer-to-a-specific-redot-version">When to refer to a specific Redot version</a></li>
 </ul>
 </li>
@@ -11505,6 +11593,10 @@ transition from regular GLSL to Redot's shading language.</p>
 <td><p>Sampler type for binding Cubemap arrays, which are read as float.
 Only supported in Forward+ and Mobile, not Compatibility.</p></td>
 </tr>
+<tr class="row-odd"><td><p><strong>samplerExternalOES</strong></p></td>
+<td><p>External sampler type.
+Only supported in Compatibility/Android platform.</p></td>
+</tr>
 </tbody>
 </table>
 <div class="admonition warning">
@@ -11839,7 +11931,7 @@ constant:</p>
 <h2>Operators<a class="headerlink" href="#operators" title="Link to this heading"></a></h2>
 <p>Redot shading language supports the same set of operators as GLSL ES 3.0. Below
 is the list of them in precedence order:</p>
-<table class="docutils align-default">
+<table class="nowrap-col3 docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p>Precedence</p></td>
 <td><p>Class</p></td>
@@ -11895,6 +11987,37 @@ is the list of them in precedence order:</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Most operators that accept vectors or matrices (multiplication, division, etc) operate component-wise, meaning the function
+is applied to the first value of each vector and then on the second value of each vector, etc. Some examples:</p>
+<table class="nowrap-col2 nowrap-col1 docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operation</p></th>
+<th class="head"><p>Equivalent Scalar Operation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vec3(4,</span> <span class="pre">5,</span> <span class="pre">6)</span> <span class="pre">+</span> <span class="pre">2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vec3(4</span> <span class="pre">+</span> <span class="pre">2,</span> <span class="pre">5</span> <span class="pre">+</span> <span class="pre">2,</span> <span class="pre">6</span> <span class="pre">+</span> <span class="pre">2)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vec2(3,</span> <span class="pre">4)</span> <span class="pre">*</span> <span class="pre">vec2(10,</span> <span class="pre">20)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">vec2(3</span> <span class="pre">*</span> <span class="pre">10,</span> <span class="pre">4</span> <span class="pre">*</span> <span class="pre">20)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mat2(vec2(1,</span> <span class="pre">2),</span> <span class="pre">vec2(3,</span> <span class="pre">4))</span> <span class="pre">+</span> <span class="pre">10</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mat2(vec2(1</span> <span class="pre">+</span> <span class="pre">10,</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">10),</span> <span class="pre">vec2(3</span> <span class="pre">+</span> <span class="pre">10,</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">10))</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The <a class="reference external" href="http://www.opengl.org/registry/doc/GLSLangSpec.4.30.6.pdf">GLSL Language Specification</a> says under section 5.10 Vector and Matrix Operations:</p>
+<blockquote>
+<div><p>With a few exceptions, operations are component-wise. Usually, when an operator operates on a
+vector or matrix, it is operating independently on each component of the vector or matrix,
+in a component-wise fashion. [...] The exceptions are matrix multiplied by vector,
+vector multiplied by matrix, and matrix multiplied by matrix. These do not operate component-wise,
+but rather perform the correct linear algebraic multiply.</p>
+</div></blockquote>
+</div>
 </section>
 <section id="flow-control">
 <h2>Flow control<a class="headerlink" href="#flow-control" title="Link to this heading"></a></h2>
@@ -12157,6 +12280,21 @@ GDScript:</p>
 <span class="n">material</span><span class="o">.</span><span class="n">set_shader_parameter</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)])</span>
 </pre></div>
 </div>
+<p>You can access <code class="docutils literal notranslate"><span class="pre">int</span></code> values as a readable dropdown widget using the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">uniform</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">noise_type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="err">&quot;</span><span class="n">OpenSimplex2</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Cellular</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Perlin</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Value</span><span class="err">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">&#64;export_enum</span></code> in GDScript, the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform does not support
+the use of <code class="docutils literal notranslate"><span class="pre">String</span></code>s, it only supports <code class="docutils literal notranslate"><span class="pre">int</span></code>s.</p>
+</div>
+<p>You can assign explicit values to the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform using colon syntax similar to GDScript:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">uniform</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">character_speed</span><span class="o">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="err">&quot;</span><span class="n">Slow</span><span class="o">:</span><span class="mi">30</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Average</span><span class="o">:</span><span class="mi">60</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Very</span><span class="w"> </span><span class="n">Fast</span><span class="o">:</span><span class="mi">200</span><span class="err">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The value will be stored as an integer, corresponding to the index of the selected option (i.e. 0, 1, or 2)
+or the value assigned by colon syntax (i.e. 30, 60, or 200).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The first argument to <code class="docutils literal notranslate"><span class="pre">set_shader_parameter</span></code> is the name of the uniform
@@ -12218,57 +12356,61 @@ if you change renderers or disable <code class="docutils literal notranslate"><s
 <td><p>source_color</p></td>
 <td><p>Used as color.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>int, float</strong></p></td>
+<tr class="row-odd"><td><p><strong>int</strong></p></td>
+<td><p>hint_enum(&quot;String1&quot;, &quot;String2&quot;)</p></td>
+<td><p>Displays int input as a dropdown widget in the editor.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>int, float</strong></p></td>
 <td><p>hint_range(min, max[, step])</p></td>
 <td><p>Restricted to values in a range (with min/max/step).</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>source_color</p></td>
 <td><p>Used as albedo color.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_normal</p></td>
 <td><p>Used as normalmap.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_default_white</p></td>
 <td><p>As value or albedo color, default to opaque white.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_default_black</p></td>
 <td><p>As value or albedo color, default to opaque black.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_default_transparent</p></td>
 <td><p>As value or albedo color, default to transparent black.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_anisotropy</p></td>
 <td><p>As flowmap, default to right.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_roughness[_r, _g, _b, _a, _normal, _gray]</p></td>
 <td><p>Used for roughness limiter on import (attempts reducing specular aliasing).
 <code class="docutils literal notranslate"><span class="pre">_normal</span></code> is a normal map that guides the roughness limiter,
 with roughness increasing in areas that have high-frequency detail.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>filter[_nearest, _linear][_mipmap][_anisotropic]</p></td>
 <td><p>Enabled specified texture filtering.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>repeat[_enable, _disable]</p></td>
 <td><p>Enabled texture repeating.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_screen_texture</p></td>
 <td><p>Texture is the screen texture.</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_depth_texture</p></td>
 <td><p>Texture is the depth texture.</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>sampler2D</strong></p></td>
+<tr class="row-even"><td><p><strong>sampler2D</strong></p></td>
 <td><p>hint_normal_roughness_texture</p></td>
 <td><p>Texture is the normal roughness texture (only supported in Forward+).</p></td>
 </tr>
@@ -12420,6 +12562,10 @@ instructions on importing cubemaps for use in Redot.</p></td>
 <tr class="row-odd"><td><p><strong>samplerCubeArray</strong></p></td>
 <td><p><strong>CubemapArray</strong></p></td>
 <td><p>Only supported in Forward+ and Mobile, not Compatibility.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>samplerExternalOES</strong></p></td>
+<td><p><strong>ExternalTexture</strong></p></td>
+<td><p>Only supported in Compatibility/Android platform.</p></td>
 </tr>
 </tbody>
 </table>
@@ -12585,8 +12731,12 @@ specifying the index (0-15) of the instance uniform by using the
 </section>
 <section id="built-in-variables">
 <h2>Built-in variables<a class="headerlink" href="#built-in-variables" title="Link to this heading"></a></h2>
-<p>A large number of built-in variables are available, like <code class="docutils literal notranslate"><span class="pre">UV</span></code>, <code class="docutils literal notranslate"><span class="pre">COLOR</span></code> and <code class="docutils literal notranslate"><span class="pre">VERTEX</span></code>. What variables are available depends on the type of shader (<code class="docutils literal notranslate"><span class="pre">spatial</span></code>, <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> or <code class="docutils literal notranslate"><span class="pre">particle</span></code>) and the function used (<code class="docutils literal notranslate"><span class="pre">vertex</span></code>, <code class="docutils literal notranslate"><span class="pre">fragment</span></code> or <code class="docutils literal notranslate"><span class="pre">light</span></code>).
-For a list of the built-in variables that are available, please see the corresponding pages:</p>
+<p>A large number of built-in variables are available, like <code class="docutils literal notranslate"><span class="pre">UV</span></code>, <code class="docutils literal notranslate"><span class="pre">COLOR</span></code> and
+<code class="docutils literal notranslate"><span class="pre">VERTEX</span></code>. What variables are available depends on the type of shader
+(<code class="docutils literal notranslate"><span class="pre">spatial</span></code>, <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code>, <code class="docutils literal notranslate"><span class="pre">particle</span></code>, etc) and the
+function used (<code class="docutils literal notranslate"><span class="pre">vertex</span></code>, <code class="docutils literal notranslate"><span class="pre">fragment</span></code>, <code class="docutils literal notranslate"><span class="pre">light</span></code>, <code class="docutils literal notranslate"><span class="pre">start</span></code>, <code class="docutils literal notranslate"><span class="pre">process,</span>
+<span class="pre">``sky</span></code>, or <code class="docutils literal notranslate"><span class="pre">fog</span></code>). For a list of the built-in variables that are available,
+please see the corresponding pages:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="spatial_shader.html#doc-spatial-shader"><span class="std std-ref">Spatial shaders</span></a></p></li>
 <li><p><a class="reference internal" href="canvas_item_shader.html#doc-canvas-item-shader"><span class="std std-ref">Canvas item shaders</span></a></p></li>
@@ -12598,487 +12748,7 @@ For a list of the built-in variables that are available, please see the correspo
 <section id="built-in-functions">
 <h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Link to this heading"></a></h2>
 <p>A large number of built-in functions are supported, conforming to GLSL ES 3.0.
-When vec_type (float), vec_int_type, vec_uint_type, vec_bool_type nomenclature
-is used, it can be scalar or vector.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Function</p></th>
-<th class="head"><p>Description / Return value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>vec_type <strong>radians</strong> (vec_type degrees)</p></td>
-<td><p>Convert degrees to radians.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>degrees</strong> (vec_type radians)</p></td>
-<td><p>Convert radians to degrees.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>sin</strong> (vec_type x)</p></td>
-<td><p>Sine.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>cos</strong> (vec_type x)</p></td>
-<td><p>Cosine.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>tan</strong> (vec_type x)</p></td>
-<td><p>Tangent.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>asin</strong> (vec_type x)</p></td>
-<td><p>Arcsine.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>acos</strong> (vec_type x)</p></td>
-<td><p>Arccosine.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>atan</strong> (vec_type y_over_x)</p></td>
-<td><p>Arctangent.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>atan</strong> (vec_type y, vec_type x)</p></td>
-<td><p>Arctangent.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>sinh</strong> (vec_type x)</p></td>
-<td><p>Hyperbolic sine.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>cosh</strong> (vec_type x)</p></td>
-<td><p>Hyperbolic cosine.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>tanh</strong> (vec_type x)</p></td>
-<td><p>Hyperbolic tangent.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>asinh</strong> (vec_type x)</p></td>
-<td><p>Inverse hyperbolic sine.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>acosh</strong> (vec_type x)</p></td>
-<td><p>Inverse hyperbolic cosine.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>atanh</strong> (vec_type x)</p></td>
-<td><p>Inverse hyperbolic tangent.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>pow</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Power (undefined if <code class="docutils literal notranslate"><span class="pre">x</span></code> &lt; 0 or if <code class="docutils literal notranslate"><span class="pre">x</span></code> == 0 and <code class="docutils literal notranslate"><span class="pre">y</span></code> &lt;= 0).</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>exp</strong> (vec_type x)</p></td>
-<td><p>Base-e exponential.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>exp2</strong> (vec_type x)</p></td>
-<td><p>Base-2 exponential.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>log</strong> (vec_type x)</p></td>
-<td><p>Natural logarithm.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>log2</strong> (vec_type x)</p></td>
-<td><p>Base-2 logarithm.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>sqrt</strong> (vec_type x)</p></td>
-<td><p>Square root.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>inversesqrt</strong> (vec_type x)</p></td>
-<td><p>Inverse square root.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>abs</strong> (vec_type x)</p>
-<p>ivec_type <strong>abs</strong> (ivec_type x)</p>
-</td>
-<td><p>Absolute value (returns positive value if negative).</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>sign</strong> (vec_type x)</p>
-<p>ivec_type <strong>sign</strong> (ivec_type x)</p>
-</td>
-<td><p>Sign (returns <code class="docutils literal notranslate"><span class="pre">1.0</span></code> if positive, <code class="docutils literal notranslate"><span class="pre">-1.0</span></code> if negative,
-<code class="docutils literal notranslate"><span class="pre">0.0</span></code> if zero).</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>floor</strong> (vec_type x)</p></td>
-<td><p>Round to the integer below.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>round</strong> (vec_type x)</p></td>
-<td><p>Round to the nearest integer.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>roundEven</strong> (vec_type x)</p></td>
-<td><p>Round to the nearest even integer.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>trunc</strong> (vec_type x)</p></td>
-<td><p>Truncation.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>ceil</strong> (vec_type x)</p></td>
-<td><p>Round to the integer above.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>fract</strong> (vec_type x)</p></td>
-<td><p>Fractional (returns <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">floor(x)</span></code>).</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>mod</strong> (vec_type x, vec_type y)</p>
-<p>vec_type <strong>mod</strong> (vec_type x, float y)</p>
-</td>
-<td><p>Modulo (division remainder).</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>modf</strong> (vec_type x, out vec_type i)</p></td>
-<td><p>Fractional of <code class="docutils literal notranslate"><span class="pre">x</span></code>, with <code class="docutils literal notranslate"><span class="pre">i</span></code> as integer part.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type  <strong>min</strong> (vec_type a, vec_type b)</p></td>
-<td><p>Lowest value between <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type  <strong>max</strong> (vec_type a, vec_type b)</p></td>
-<td><p>Highest value between <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>clamp</strong> (vec_type x, vec_type min, vec_type max)</p></td>
-<td><p>Clamp <code class="docutils literal notranslate"><span class="pre">x</span></code> between <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> (inclusive).</p></td>
-</tr>
-<tr class="row-odd"><td><p>float <strong>mix</strong> (float a, float b, float c)</p>
-<p>vec_type <strong>mix</strong> (vec_type a, vec_type b, float c)</p>
-<p>vec_type <strong>mix</strong> (vec_type a, vec_type b, bvec_type c)</p>
-</td>
-<td><p>Linear interpolate between <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> by <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>fma</strong> (vec_type a, vec_type b, vec_type c)</p></td>
-<td><p>Performs a fused multiply-add operation: <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">*</span> <span class="pre">b</span> <span class="pre">+</span> <span class="pre">c)</span></code>
-(faster than doing it manually).</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>step</strong> (vec_type a, vec_type b)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">b[i]</span> <span class="pre">&lt;</span> <span class="pre">a[i]</span> <span class="pre">?</span> <span class="pre">0.0</span> <span class="pre">:</span> <span class="pre">1.0</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>step</strong> (float a, vec_type b)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">b[i]</span> <span class="pre">&lt;</span> <span class="pre">a</span> <span class="pre">?</span> <span class="pre">0.0</span> <span class="pre">:</span> <span class="pre">1.0</span></code>.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>smoothstep</strong> (vec_type a, vec_type b, vec_type c)</p>
-<p>vec_type <strong>smoothstep</strong> (float a, float b, vec_type c)</p>
-</td>
-<td><p>Hermite interpolate between <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> by <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>bvec_type <strong>isnan</strong> (vec_type x)</p></td>
-<td><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if scalar or vector component is <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bvec_type <strong>isinf</strong> (vec_type x)</p></td>
-<td><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if scalar or vector component is <code class="docutils literal notranslate"><span class="pre">INF</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>ivec_type <strong>floatBitsToInt</strong> (vec_type x)</p></td>
-<td><p>Float-&gt;Int bit copying, no conversion.</p></td>
-</tr>
-<tr class="row-odd"><td><p>uvec_type <strong>floatBitsToUint</strong> (vec_type x)</p></td>
-<td><p>Float-&gt;UInt bit copying, no conversion.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>intBitsToFloat</strong> (ivec_type x)</p></td>
-<td><p>Int-&gt;Float bit copying, no conversion.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>uintBitsToFloat</strong> (uvec_type x)</p></td>
-<td><p>UInt-&gt;Float bit copying, no conversion.</p></td>
-</tr>
-<tr class="row-even"><td><p>float <strong>length</strong> (vec_type x)</p></td>
-<td><p>Vector length.</p></td>
-</tr>
-<tr class="row-odd"><td><p>float <strong>distance</strong> (vec_type a, vec_type b)</p></td>
-<td><p>Distance between vectors i.e <code class="docutils literal notranslate"><span class="pre">length(a</span> <span class="pre">-</span> <span class="pre">b)</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>float <strong>dot</strong> (vec_type a, vec_type b)</p></td>
-<td><p>Dot product.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec3 <strong>cross</strong> (vec3 a, vec3 b)</p></td>
-<td><p>Cross product.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>normalize</strong> (vec_type x)</p></td>
-<td><p>Normalize to unit length.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec3 <strong>reflect</strong> (vec3 I, vec3 N)</p></td>
-<td><p>Reflect.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec3 <strong>refract</strong> (vec3 I, vec3 N, float eta)</p></td>
-<td><p>Refract.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>faceforward</strong> (vec_type N, vec_type I, vec_type Nref)</p></td>
-<td><p>If <code class="docutils literal notranslate"><span class="pre">dot(Nref,</span> <span class="pre">I)</span></code> &lt; 0, return <code class="docutils literal notranslate"><span class="pre">N</span></code>, otherwise <code class="docutils literal notranslate"><span class="pre">-N</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>mat_type <strong>matrixCompMult</strong> (mat_type x, mat_type y)</p></td>
-<td><p>Matrix component multiplication.</p></td>
-</tr>
-<tr class="row-odd"><td><p>mat_type <strong>outerProduct</strong> (vec_type column, vec_type row)</p></td>
-<td><p>Matrix outer product.</p></td>
-</tr>
-<tr class="row-even"><td><p>mat_type <strong>transpose</strong> (mat_type m)</p></td>
-<td><p>Transpose matrix.</p></td>
-</tr>
-<tr class="row-odd"><td><p>float <strong>determinant</strong> (mat_type m)</p></td>
-<td><p>Matrix determinant.</p></td>
-</tr>
-<tr class="row-even"><td><p>mat_type <strong>inverse</strong> (mat_type m)</p></td>
-<td><p>Inverse matrix.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bvec_type <strong>lessThan</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on &lt; int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-even"><td><p>bvec_type <strong>greaterThan</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on &gt; int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bvec_type <strong>lessThanEqual</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on &lt;= int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-even"><td><p>bvec_type <strong>greaterThanEqual</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on &gt;= int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bvec_type <strong>equal</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on == int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-even"><td><p>bvec_type <strong>notEqual</strong> (vec_type x, vec_type y)</p></td>
-<td><p>Bool vector comparison on != int/uint/float vectors.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bool <strong>any</strong> (bvec_type x)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if any component is <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></td>
-</tr>
-<tr class="row-even"><td><p>bool <strong>all</strong> (bvec_type x)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if all components are <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></td>
-</tr>
-<tr class="row-odd"><td><p>bvec_type <strong>not</strong> (bvec_type x)</p></td>
-<td><p>Invert boolean vector.</p></td>
-</tr>
-<tr class="row-even"><td><p>ivec2 <strong>textureSize</strong> (gsampler2D s, int lod)</p>
-<p>ivec3 <strong>textureSize</strong> (gsampler2DArray s, int lod)</p>
-<p>ivec3 <strong>textureSize</strong> (gsampler3D s, int lod)</p>
-<p>ivec2 <strong>textureSize</strong> (samplerCube s, int lod)</p>
-<p>ivec2 <strong>textureSize</strong> (samplerCubeArray s, int lod)</p>
-</td>
-<td><p>Get the size of a texture.</p>
-<p>The LOD defines which mipmap level is used. An LOD value of <code class="docutils literal notranslate"><span class="pre">0</span></code>
-will use the full resolution texture.</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>vec2 <strong>textureQueryLod</strong> (gsampler2D s, vec2 p)</p>
-<p>vec3 <strong>textureQueryLod</strong> (gsampler2DArray s, vec2 p)</p>
-<p>vec2 <strong>textureQueryLod</strong> (gsampler3D s, vec3 p)</p>
-<p>vec2 <strong>textureQueryLod</strong> (samplerCube s, vec3 p)</p>
-</td>
-<td><p>Compute the level-of-detail that would be used to sample from a
-texture. The <code class="docutils literal notranslate"><span class="pre">x</span></code> component of the resulted value is the mipmap
-array that would be accessed. The <code class="docutils literal notranslate"><span class="pre">y</span></code> component is computed
-level-of-detail relative to the base level (regardless of the
-mipmap levels of the texture).</p></td>
-</tr>
-<tr class="row-even"><td><p>int <strong>textureQueryLevels</strong> (gsampler2D s)</p>
-<p>int <strong>textureQueryLevels</strong> (gsampler2DArray s)</p>
-<p>int <strong>textureQueryLevels</strong> (gsampler3D s)</p>
-<p>int <strong>textureQueryLevels</strong> (samplerCube s)</p>
-</td>
-<td><p>Get the number of accessible mipmap levels of a texture.</p>
-<p>If the texture is unassigned to a sampler, <code class="docutils literal notranslate"><span class="pre">1</span></code> is returned (Redot
-always internally assigns a texture even to an empty sampler).</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>gvec4_type <strong>texture</strong> (gsampler2D s, vec2 p [, float bias])</p>
-<p>gvec4_type <strong>texture</strong> (gsampler2DArray s, vec3 p [, float bias])</p>
-<p>gvec4_type <strong>texture</strong> (gsampler3D s, vec3 p [, float bias])</p>
-<p>vec4 <strong>texture</strong> (samplerCube s, vec3 p [, float bias])</p>
-<p>vec4 <strong>texture</strong> (samplerCubeArray s, vec4 p [, float bias])</p>
-</td>
-<td><p>Perform a texture read.</p></td>
-</tr>
-<tr class="row-even"><td><p>gvec4_type <strong>textureProj</strong> (gsampler2D s, vec3 p [, float bias])</p>
-<p>gvec4_type <strong>textureProj</strong> (gsampler2D s, vec4 p [, float bias])</p>
-<p>gvec4_type <strong>textureProj</strong> (gsampler3D s, vec4 p [, float bias])</p>
-</td>
-<td><p>Perform a texture read with projection.</p></td>
-</tr>
-<tr class="row-odd"><td><p>gvec4_type <strong>textureLod</strong> (gsampler2D s, vec2 p, float lod)</p>
-<p>gvec4_type <strong>textureLod</strong> (gsampler2DArray s, vec3 p, float lod)</p>
-<p>gvec4_type <strong>textureLod</strong> (gsampler3D s, vec3 p, float lod)</p>
-<p>vec4 <strong>textureLod</strong> (samplerCube s, vec3 p, float lod)</p>
-<p>vec4 <strong>textureLod</strong> (samplerCubeArray s, vec4 p, float lod)</p>
-</td>
-<td><p>Perform a texture read at custom mipmap.</p>
-<p>The LOD defines which mipmap level is used. An LOD value of <code class="docutils literal notranslate"><span class="pre">0.0</span></code>
-will use the full resolution texture. If the texture lacks mipmaps,
-all LOD values will act like <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p>gvec4_type <strong>textureProjLod</strong> (gsampler2D s, vec3 p, float lod)</p>
-<p>gvec4_type <strong>textureProjLod</strong> (gsampler2D s, vec4 p, float lod)</p>
-<p>gvec4_type <strong>textureProjLod</strong> (gsampler3D s, vec4 p, float lod)</p>
-</td>
-<td><p>Performs a texture read with projection/LOD.</p>
-<p>The LOD defines which mipmap level is used. An LOD value of <code class="docutils literal notranslate"><span class="pre">0.0</span></code>
-will use the full resolution texture. If the texture lacks mipmaps,
-all LOD values will act like <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>gvec4_type <strong>textureGrad</strong> (gsampler2D s, vec2 p, vec2 dPdx,
-vec2 dPdy)</p>
-<p>gvec4_type <strong>textureGrad</strong> (gsampler2DArray s, vec3 p, vec2 dPdx,
-vec2 dPdy)</p>
-<p>gvec4_type <strong>textureGrad</strong> (gsampler3D s, vec3 p, vec2 dPdx,
-vec2 dPdy)</p>
-<p>vec4 <strong>textureGrad</strong> (samplerCube s, vec3 p, vec3 dPdx, vec3 dPdy)</p>
-<p>vec4 <strong>textureGrad</strong> (samplerCubeArray s, vec3 p, vec3 dPdx,
-vec3 dPdy)</p>
-</td>
-<td><p>Performs a texture read with explicit gradients.</p></td>
-</tr>
-<tr class="row-even"><td><p>gvec4_type <strong>textureProjGrad</strong> (gsampler2D s, vec3 p, vec2 dPdx, vec2 dPdy)</p>
-<p>gvec4_type <strong>textureProjGrad</strong> (gsampler2D s, vec4 p, vec2 dPdx, vec2 dPdy)</p>
-<p>gvec4_type <strong>textureProjGrad</strong> (gsampler3D s, vec4 p, vec3 dPdx, vec3 dPdy)</p>
-</td>
-<td><p>Performs a texture read with projection/LOD and with explicit
-gradients.</p></td>
-</tr>
-<tr class="row-odd"><td><p>gvec4_type <strong>texelFetch</strong> (gsampler2D s, ivec2 p, int lod)</p>
-<p>gvec4_type <strong>texelFetch</strong> (gsampler2DArray s, ivec3 p, int lod)</p>
-<p>gvec4_type <strong>texelFetch</strong> (gsampler3D s, ivec3 p, int lod)</p>
-</td>
-<td><p>Fetches a single texel using integer coordinates.</p>
-<p>The LOD defines which mipmap level is used. An LOD value of <code class="docutils literal notranslate"><span class="pre">0</span></code>
-will use the full resolution texture.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p>gvec4_type <strong>textureGather</strong> (gsampler2D s, vec2 p [, int comps])</p>
-<p>gvec4_type <strong>textureGather</strong> (gsampler2DArray s, vec3 p [, int comps])</p>
-<p>vec4 <strong>textureGather</strong> (samplerCube s, vec3 p [, int comps])</p>
-</td>
-<td><p>Gathers four texels from a texture.
-Use <code class="docutils literal notranslate"><span class="pre">comps</span></code> within range of 0..3 to
-define which component (x, y, z, w) is returned.
-If <code class="docutils literal notranslate"><span class="pre">comps</span></code> is not provided: 0 (or x-component) is used.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>dFdx</strong> (vec_type p)</p></td>
-<td><p>Derivative in <code class="docutils literal notranslate"><span class="pre">x</span></code> using local differencing.
-Internally, can use either <code class="docutils literal notranslate"><span class="pre">dFdxCoarse</span></code> or <code class="docutils literal notranslate"><span class="pre">dFdxFine</span></code>, but the
-decision for which to use is made by the GPU driver.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>dFdxCoarse</strong> (vec_type p)</p></td>
-<td><p>Calculates derivative with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code> window coordinate using
-local differencing based on the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> for the current
-fragment neighbour(s), and will possibly, but not necessarily,
-include the value for the current fragment.
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>dFdxFine</strong> (vec_type p)</p></td>
-<td><p>Calculates derivative with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code> window coordinate using
-local differencing based on the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> for the current
-fragment and its immediate neighbour(s).
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>dFdy</strong> (vec_type p)</p></td>
-<td><p>Derivative in <code class="docutils literal notranslate"><span class="pre">y</span></code> using local differencing.
-Internally, can use either <code class="docutils literal notranslate"><span class="pre">dFdyCoarse</span></code> or <code class="docutils literal notranslate"><span class="pre">dFdyFine</span></code>, but the
-decision for which to use is made by the GPU driver.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>dFdyCoarse</strong> (vec_type p)</p></td>
-<td><p>Calculates derivative with respect to <code class="docutils literal notranslate"><span class="pre">y</span></code> window coordinate using
-local differencing based on the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> for the current
-fragment neighbour(s), and will possibly, but not necessarily,
-include the value for the current fragment.
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>dFdyFine</strong> (vec_type p)</p></td>
-<td><p>Calculates derivative with respect to <code class="docutils literal notranslate"><span class="pre">y</span></code> window coordinate using
-local differencing based on the value of <code class="docutils literal notranslate"><span class="pre">p</span></code> for the current
-fragment and its immediate neighbour(s).
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>fwidth</strong> (vec_type p)</p></td>
-<td><p>Sum of absolute derivative in <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.
-This is the equivalent of using <code class="docutils literal notranslate"><span class="pre">abs(dFdx(p))</span> <span class="pre">+</span> <span class="pre">abs(dFdy(p))</span></code>.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>fwidthCoarse</strong> (vec_type p)</p></td>
-<td><p>Sum of absolute derivative in <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.
-This is the equivalent of using
-<code class="docutils literal notranslate"><span class="pre">abs(dFdxCoarse(p))</span> <span class="pre">+</span> <span class="pre">abs(dFdyCoarse(p))</span></code>.
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>fwidthFine</strong> (vec_type p)</p></td>
-<td><p>Sum of absolute derivative in <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.
-This is the equivalent of using
-<code class="docutils literal notranslate"><span class="pre">abs(dFdxFine(p))</span> <span class="pre">+</span> <span class="pre">abs(dFdyFine(p))</span></code>.
-This function is not available on <code class="docutils literal notranslate"><span class="pre">gl_compatibility</span></code> profile.</p></td>
-</tr>
-<tr class="row-even"><td><p>uint <strong>packHalf2x16</strong> (vec2 v)</p>
-<p>vec2 <strong>unpackHalf2x16</strong> (uint v)</p>
-</td>
-<td><p>Convert two 32-bit floating-point numbers into 16-bit
-and pack them into a 32-bit unsigned integer and vice-versa.</p></td>
-</tr>
-<tr class="row-odd"><td><p>uint <strong>packUnorm2x16</strong> (vec2 v)</p>
-<p>vec2 <strong>unpackUnorm2x16</strong> (uint v)</p>
-</td>
-<td><p>Convert two 32-bit floating-point numbers (clamped
-within 0..1 range) into 16-bit and pack them
-into a 32-bit unsigned integer and vice-versa.</p></td>
-</tr>
-<tr class="row-even"><td><p>uint <strong>packSnorm2x16</strong> (vec2 v)</p>
-<p>vec2 <strong>unpackSnorm2x16</strong> (uint v)</p>
-</td>
-<td><p>Convert two 32-bit floating-point numbers (clamped
-within -1..1 range) into 16-bit and pack them
-into a 32-bit unsigned integer and vice-versa.</p></td>
-</tr>
-<tr class="row-odd"><td><p>uint <strong>packUnorm4x8</strong> (vec4 v)</p>
-<p>vec4 <strong>unpackUnorm4x8</strong> (uint v)</p>
-</td>
-<td><p>Convert four 32-bit floating-point numbers (clamped
-within 0..1 range) into 8-bit and pack them
-into a 32-bit unsigned integer and vice-versa.</p></td>
-</tr>
-<tr class="row-even"><td><p>uint <strong>packSnorm4x8</strong> (vec4 v)</p>
-<p>vec4 <strong>unpackSnorm4x8</strong> (uint v)</p>
-</td>
-<td><p>Convert four 32-bit floating-point numbers (clamped
-within -1..1 range) into 8-bit and pack them
-into a 32-bit unsigned integer and vice-versa.</p></td>
-</tr>
-<tr class="row-odd"><td><p>ivec_type <strong>bitfieldExtract</strong> (ivec_type value, int offset, int bits)</p>
-<p>uvec_type <strong>bitfieldExtract</strong> (uvec_type value, int offset, int bits)</p>
-</td>
-<td><p>Extracts a range of bits from an integer.</p></td>
-</tr>
-<tr class="row-even"><td><p>ivec_type <strong>bitfieldInsert</strong> (ivec_type base, ivec_type insert,
-int offset, int bits)</p>
-<p>uvec_type <strong>bitfieldInsert</strong> (uvec_type base, uvec_type insert,
-int offset, int bits)</p>
-</td>
-<td><p>Insert a range of bits into an integer.</p></td>
-</tr>
-<tr class="row-odd"><td><p>ivec_type <strong>bitfieldReverse</strong> (ivec_type value)</p>
-<p>uvec_type <strong>bitfieldReverse</strong> (uvec_type value)</p>
-</td>
-<td><p>Reverse the order of bits in an integer.</p></td>
-</tr>
-<tr class="row-even"><td><p>ivec_type <strong>bitCount</strong> (ivec_type value)</p>
-<p>uvec_type <strong>bitCount</strong> (uvec_type value)</p>
-</td>
-<td><p>Counts the number of 1 bits in an integer.</p></td>
-</tr>
-<tr class="row-odd"><td><p>ivec_type <strong>findLSB</strong> (ivec_type value)</p>
-<p>uvec_type <strong>findLSB</strong> (uvec_type value)</p>
-</td>
-<td><p>Find the index of the least significant bit set to 1 in an integer.</p></td>
-</tr>
-<tr class="row-even"><td><p>ivec_type <strong>findMSB</strong> (ivec_type value)</p>
-<p>uvec_type <strong>findMSB</strong> (uvec_type value)</p>
-</td>
-<td><p>Find the index of the most significant bit set to 1 in an integer.</p></td>
-</tr>
-<tr class="row-odd"><td><p>void <strong>imulExtended</strong> (ivec_type x, ivec_type y, out ivec_type msb,
-out ivec_type lsb)</p>
-<p>void <strong>umulExtended</strong> (uvec_type x, uvec_type y, out uvec_type msb,
-out uvec_type lsb)</p>
-</td>
-<td><p>Multiplies two 32-bit numbers and produce a 64-bit result.
-<code class="docutils literal notranslate"><span class="pre">x</span></code> - the first number.
-<code class="docutils literal notranslate"><span class="pre">y</span></code> - the second number.
-<code class="docutils literal notranslate"><span class="pre">msb</span></code> - will contain the most significant bits.
-<code class="docutils literal notranslate"><span class="pre">lsb</span></code> - will contain the least significant bits.</p></td>
-</tr>
-<tr class="row-even"><td><p>uvec_type <strong>uaddCarry</strong> (uvec_type x, uvec_type y, out uvec_type carry)</p></td>
-<td><p>Adds two unsigned integers and generates carry.</p></td>
-</tr>
-<tr class="row-odd"><td><p>uvec_type <strong>usubBorrow</strong> (uvec_type x, uvec_type y, out uvec_type borrow)</p></td>
-<td><p>Subtracts two unsigned integers and generates borrow.</p></td>
-</tr>
-<tr class="row-even"><td><p>vec_type <strong>ldexp</strong> (vec_type x, out ivec_type exp)</p></td>
-<td><p>Assemble a floating-point number from a value and exponent.</p>
-<p>If this product is too large to be represented in the
-floating-point type the result is undefined.</p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>vec_type <strong>frexp</strong> (vec_type x, out ivec_type exp)</p></td>
-<td><p>Splits a floating-point number(<code class="docutils literal notranslate"><span class="pre">x</span></code>) into significand
-(in the range of [0.5, 1.0]) and an integral exponent.</p>
-<p>For <code class="docutils literal notranslate"><span class="pre">x</span></code> equals zero the significand and exponent are both zero.
-For <code class="docutils literal notranslate"><span class="pre">x</span></code> of infinity or NaN, the results are undefined.</p>
-</td>
-</tr>
-</tbody>
-</table>
+See the <a class="reference internal" href="shader_functions.html#doc-shader-functions"><span class="std std-ref">Built-in functions</span></a> page for details.</p>
 </section>
 </section>
 
@@ -13088,7 +12758,7 @@ For <code class="docutils literal notranslate"><span class="pre">x</span></code>
 </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Shading reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="shader_preprocessor.html" class="btn btn-neutral float-right" title="Shader preprocessor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="shader_functions.html" class="btn btn-neutral float-right" title="Built-in functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
