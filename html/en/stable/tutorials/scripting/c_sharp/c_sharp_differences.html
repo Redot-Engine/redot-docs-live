@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="C# API differences to GDScript" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/scripting/c_sharp/c_sharp_differences.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>C# API differences to GDScript &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/scripting/c_sharp/c_sharp_differences.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#redot-api-for-c">Redot API for C#</a><ul class="current">
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Scripting</a></li>
           <li class="breadcrumb-item"><a href="index.html">C#/.NET</a></li>
       <li class="breadcrumb-item active">C# API differences to GDScript</li>
@@ -11082,10 +11157,10 @@
 
   
   <section id="c-api-differences-to-gdscript">
-<span id="doc-c-sharp-differences"></span><h1>C# API differences to GDScript<a class="headerlink" href="#c-api-differences-to-gdscript" title="Permalink to this headline">¶</a></h1>
+<span id="doc-c-sharp-differences"></span><h1>C# API differences to GDScript<a class="headerlink" href="#c-api-differences-to-gdscript" title="Link to this heading"></a></h1>
 <p>This is a (incomplete) list of API differences between C# and GDScript.</p>
 <section id="general-differences">
-<h2>General differences<a class="headerlink" href="#general-differences" title="Permalink to this headline">¶</a></h2>
+<h2>General differences<a class="headerlink" href="#general-differences" title="Link to this heading"></a></h2>
 <p>As explained in <a class="reference internal" href="c_sharp_basics.html#doc-c-sharp-general-differences"><span class="std std-ref">General differences between C# and GDScript</span></a>, <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> is used
 to access Redot APIs in C# instead of the <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> used by GDScript and
 C++. Where possible, fields and getters/setters have been converted to
@@ -11102,12 +11177,12 @@ intellisense, and it also doesn't provide many other C# development tools that
 are considered essential. See <a class="reference internal" href="c_sharp_basics.html#doc-c-sharp-setup-external-editor"><span class="std std-ref">Configuring an external editor</span></a>.</p>
 </section>
 <section id="global-scope">
-<h2>Global scope<a class="headerlink" href="#global-scope" title="Permalink to this headline">¶</a></h2>
+<h2>Global scope<a class="headerlink" href="#global-scope" title="Link to this heading"></a></h2>
 <p>Global functions and some constants had to be moved to classes, since C#
 does not allow declaring them in namespaces.
 Most global constants were moved to their own enums.</p>
 <section id="constants">
-<h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
+<h3>Constants<a class="headerlink" href="#constants" title="Link to this heading"></a></h3>
 <p>In C#, only primitive types can be constant. For example, the <code class="docutils literal notranslate"><span class="pre">TAU</span></code> constant
 is replaced by the <code class="docutils literal notranslate"><span class="pre">Mathf.Tau</span></code> constant, but the <code class="docutils literal notranslate"><span class="pre">Vector2.RIGHT</span></code> constant
 is replaced by the <code class="docutils literal notranslate"><span class="pre">Vector2.Right</span></code> read-only property. This behaves similarly
@@ -11116,10 +11191,6 @@ to a constant, but can't be used in some contexts like <code class="docutils lit
 For example, <code class="docutils literal notranslate"><span class="pre">ERR_*</span></code> constants were moved to the <code class="docutils literal notranslate"><span class="pre">Error</span></code> enum.</p>
 <p>Special cases:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -11136,7 +11207,7 @@ For example, <code class="docutils literal notranslate"><span class="pre">ERR_*<
 </table>
 </section>
 <section id="math-functions">
-<h3>Math functions<a class="headerlink" href="#math-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Math functions<a class="headerlink" href="#math-functions" title="Link to this heading"></a></h3>
 <p>Math global functions, like <code class="docutils literal notranslate"><span class="pre">abs</span></code>, <code class="docutils literal notranslate"><span class="pre">acos</span></code>, <code class="docutils literal notranslate"><span class="pre">asin</span></code>, <code class="docutils literal notranslate"><span class="pre">atan</span></code> and <code class="docutils literal notranslate"><span class="pre">atan2</span></code>, are
 located under <code class="docutils literal notranslate"><span class="pre">Mathf</span></code> as <code class="docutils literal notranslate"><span class="pre">Abs</span></code>, <code class="docutils literal notranslate"><span class="pre">Acos</span></code>, <code class="docutils literal notranslate"><span class="pre">Asin</span></code>, <code class="docutils literal notranslate"><span class="pre">Atan</span></code> and <code class="docutils literal notranslate"><span class="pre">Atan2</span></code>.
 The <code class="docutils literal notranslate"><span class="pre">PI</span></code> constant can be found as <code class="docutils literal notranslate"><span class="pre">Mathf.Pi</span></code>.</p>
@@ -11144,22 +11215,18 @@ The <code class="docutils literal notranslate"><span class="pre">PI</span></code
 contain other useful mathematical operations.</p>
 </section>
 <section id="random-functions">
-<h3>Random functions<a class="headerlink" href="#random-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Random functions<a class="headerlink" href="#random-functions" title="Link to this heading"></a></h3>
 <p>Random global functions, like <code class="docutils literal notranslate"><span class="pre">rand_range</span></code> and <code class="docutils literal notranslate"><span class="pre">rand_seed</span></code>, are located under <code class="docutils literal notranslate"><span class="pre">GD</span></code>.
 Example: <code class="docutils literal notranslate"><span class="pre">GD.RandRange</span></code> and <code class="docutils literal notranslate"><span class="pre">GD.RandSeed</span></code>.</p>
 <p>Consider using <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/api/system.random">System.Random</a> or, if you need cryptographically strong randomness,
 <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.randomnumbergenerator">System.Security.Cryptography.RandomNumberGenerator</a>.</p>
 </section>
 <section id="other-functions">
-<h3>Other functions<a class="headerlink" href="#other-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Other functions<a class="headerlink" href="#other-functions" title="Link to this heading"></a></h3>
 <p>Many other global functions like <code class="docutils literal notranslate"><span class="pre">print</span></code> and <code class="docutils literal notranslate"><span class="pre">var_to_str</span></code> are located under <code class="docutils literal notranslate"><span class="pre">GD</span></code>.
 Example: <code class="docutils literal notranslate"><span class="pre">GD.Print</span></code> and <code class="docutils literal notranslate"><span class="pre">GD.VarToStr</span></code>.</p>
 <p>Exceptions:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -11182,7 +11249,7 @@ Example: <code class="docutils literal notranslate"><span class="pre">GD.Print</
 </table>
 </section>
 <section id="tips">
-<h3>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h3>
+<h3>Tips<a class="headerlink" href="#tips" title="Link to this heading"></a></h3>
 <p>Sometimes it can be useful to use the <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">static</span></code> directive. This directive allows
 to access the members and nested types of a class without specifying the class name.</p>
 <p>Example:</p>
@@ -11199,13 +11266,9 @@ to access the members and nested types of a class without specifying the class n
 </div>
 </section>
 <section id="full-list-of-equivalences">
-<h3>Full list of equivalences<a class="headerlink" href="#full-list-of-equivalences" title="Permalink to this headline">¶</a></h3>
+<h3>Full list of equivalences<a class="headerlink" href="#full-list-of-equivalences" title="Link to this heading"></a></h3>
 <p>List of Redot's global scope functions and their equivalent in C#:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 67%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -11558,10 +11621,6 @@ to access the members and nested types of a class without specifying the class n
 </table>
 <p>List of GDScript utility functions and their equivalent in C#:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -11614,7 +11673,7 @@ Use <code class="docutils literal notranslate"><span class="pre">GD.Load</span><
 </section>
 </section>
 <section id="export-annotation">
-<h2><code class="docutils literal notranslate"><span class="pre">&#64;export</span></code> annotation<a class="headerlink" href="#export-annotation" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">&#64;export</span></code> annotation<a class="headerlink" href="#export-annotation" title="Link to this heading"></a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">[Export]</span></code> attribute instead of the GDScript <code class="docutils literal notranslate"><span class="pre">&#64;export</span></code> annotation.
 This attribute can also be provided with optional <a class="reference internal" href="../../../classes/class_%40globalscope.html#enum-globalscope-propertyhint"><span class="std std-ref">PropertyHint</span></a> and <code class="docutils literal notranslate"><span class="pre">hintString</span></code> parameters.
 Default values can be set by assigning a value.</p>
@@ -11640,7 +11699,7 @@ Default values can be set by assigning a value.</p>
 <p>See also: <a class="reference internal" href="c_sharp_exports.html#doc-c-sharp-exports"><span class="std std-ref">C# exported properties</span></a>.</p>
 </section>
 <section id="signal-keyword">
-<h2><code class="docutils literal notranslate"><span class="pre">signal</span></code> keyword<a class="headerlink" href="#signal-keyword" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">signal</span></code> keyword<a class="headerlink" href="#signal-keyword" title="Link to this heading"></a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">[Signal]</span></code> attribute to declare a signal instead of the GDScript <code class="docutils literal notranslate"><span class="pre">signal</span></code> keyword.
 This attribute should be used on a <cite>delegate</cite>, whose name signature will be used to define the signal.
 The <cite>delegate</cite> must have the <code class="docutils literal notranslate"><span class="pre">EventHandler</span></code> suffix, an <cite>event</cite> will be generated in the class with the same name but without the suffix, use that event's name with <code class="docutils literal notranslate"><span class="pre">EmitSignal</span></code>.</p>
@@ -11651,7 +11710,7 @@ The <cite>delegate</cite> must have the <code class="docutils literal notranslat
 <p>See also: <a class="reference internal" href="c_sharp_signals.html#doc-c-sharp-signals"><span class="std std-ref">C# signals</span></a>.</p>
 </section>
 <section id="onready-annotation">
-<h2><cite>&#64;onready</cite> annotation<a class="headerlink" href="#onready-annotation" title="Permalink to this headline">¶</a></h2>
+<h2><cite>&#64;onready</cite> annotation<a class="headerlink" href="#onready-annotation" title="Link to this heading"></a></h2>
 <p>GDScript has the ability to defer the initialization of a member variable until the ready function
 is called with <cite>&#64;onready</cite> (cf. <a class="reference internal" href="../gdscript/gdscript_basics.html#doc-gdscript-onready-annotation"><span class="std std-ref">&#64;onready annotation</span></a>).
 For example:</p>
@@ -11669,7 +11728,7 @@ For example:</p>
 </div>
 </section>
 <section id="singletons">
-<h2>Singletons<a class="headerlink" href="#singletons" title="Permalink to this headline">¶</a></h2>
+<h2>Singletons<a class="headerlink" href="#singletons" title="Link to this heading"></a></h2>
 <p>Singletons are available as static classes rather than using the singleton pattern.
 This is to make code less verbose than it would be with an <code class="docutils literal notranslate"><span class="pre">Instance</span></code> property.</p>
 <p>Example:</p>
@@ -11686,7 +11745,7 @@ the singleton instance. The type of this instance is <code class="docutils liter
 </div>
 </section>
 <section id="string">
-<h2>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
+<h2>String<a class="headerlink" href="#string" title="Link to this heading"></a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">System.String</span></code> (<code class="docutils literal notranslate"><span class="pre">string</span></code>). Most of Redot's String methods have an
 equivalent in <code class="docutils literal notranslate"><span class="pre">System.String</span></code> or are provided by the <code class="docutils literal notranslate"><span class="pre">StringExtensions</span></code>
 class as extension methods.</p>
@@ -11701,10 +11760,6 @@ modifications applied. To avoid creating multiple string allocations consider
 using a <a class="reference external" href="https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder">StringBuilder</a>.</p>
 <p>List of Redot's String methods and their equivalent in C#:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12021,10 +12076,6 @@ using a <a class="reference external" href="https://learn.microsoft.com/en-us/do
 </table>
 <p>List of Redot's PackedByteArray methods that create a String and their C# equivalent:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12058,13 +12109,9 @@ See <a class="reference internal" href="../../io/data_paths.html#doc-data-paths"
 </div>
 </section>
 <section id="nodepath">
-<h2>NodePath<a class="headerlink" href="#nodepath" title="Permalink to this headline">¶</a></h2>
+<h2>NodePath<a class="headerlink" href="#nodepath" title="Link to this heading"></a></h2>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12078,13 +12125,9 @@ See <a class="reference internal" href="../../io/data_paths.html#doc-data-paths"
 </table>
 </section>
 <section id="signal">
-<h2>Signal<a class="headerlink" href="#signal" title="Permalink to this headline">¶</a></h2>
+<h2>Signal<a class="headerlink" href="#signal" title="Link to this heading"></a></h2>
 <p>The following methods were converted to properties with their respective names changed:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12105,13 +12148,9 @@ the <code class="docutils literal notranslate"><span class="pre">await</span></c
 to use the generated C# events. See <a class="reference internal" href="c_sharp_signals.html#doc-c-sharp-signals"><span class="std std-ref">C# signals</span></a>.</p>
 </section>
 <section id="callable">
-<h2>Callable<a class="headerlink" href="#callable" title="Permalink to this headline">¶</a></h2>
+<h2>Callable<a class="headerlink" href="#callable" title="Link to this heading"></a></h2>
 <p>The following methods were converted to properties with their respective names changed:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12150,14 +12189,10 @@ are unsupported. A <code class="docutils literal notranslate"><span class="pre">
 <p>The lambda captures the <code class="docutils literal notranslate"><span class="pre">name</span></code> variable so it can be bound to the <code class="docutils literal notranslate"><span class="pre">SayHello</span></code> method.</p>
 </section>
 <section id="rid">
-<h2>RID<a class="headerlink" href="#rid" title="Permalink to this headline">¶</a></h2>
+<h2>RID<a class="headerlink" href="#rid" title="Link to this heading"></a></h2>
 <p>This type is named <code class="docutils literal notranslate"><span class="pre">Rid</span></code> in C# to follow the .NET naming convention.</p>
 <p>The following methods were converted to properties with their respective names changed:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12174,16 +12209,12 @@ are unsupported. A <code class="docutils literal notranslate"><span class="pre">
 </table>
 </section>
 <section id="basis">
-<h2>Basis<a class="headerlink" href="#basis" title="Permalink to this headline">¶</a></h2>
+<h2>Basis<a class="headerlink" href="#basis" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Basis()</span></code>
 initializes all primitive members to their default value. Use <code class="docutils literal notranslate"><span class="pre">Basis.Identity</span></code>
 for the equivalent of <code class="docutils literal notranslate"><span class="pre">Basis()</span></code> in GDScript and C++.</p>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12197,16 +12228,12 @@ for the equivalent of <code class="docutils literal notranslate"><span class="pr
 </table>
 </section>
 <section id="transform2d">
-<h2>Transform2D<a class="headerlink" href="#transform2d" title="Permalink to this headline">¶</a></h2>
+<h2>Transform2D<a class="headerlink" href="#transform2d" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Transform2D()</span></code>
 initializes all primitive members to their default value.
 Please use <code class="docutils literal notranslate"><span class="pre">Transform2D.Identity</span></code> for the equivalent of <code class="docutils literal notranslate"><span class="pre">Transform2D()</span></code> in GDScript and C++.</p>
 <p>The following methods were converted to properties with their respective names changed:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12226,16 +12253,12 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 </section>
 <section id="transform3d">
-<h2>Transform3D<a class="headerlink" href="#transform3d" title="Permalink to this headline">¶</a></h2>
+<h2>Transform3D<a class="headerlink" href="#transform3d" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Transform3D()</span></code>
 initializes all primitive members to their default value.
 Please use <code class="docutils literal notranslate"><span class="pre">Transform3D.Identity</span></code> for the equivalent of <code class="docutils literal notranslate"><span class="pre">Transform3D()</span></code> in GDScript and C++.</p>
 <p>The following methods were converted to properties with their respective names changed:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12252,13 +12275,9 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 </section>
 <section id="rect2">
-<h2>Rect2<a class="headerlink" href="#rect2" title="Permalink to this headline">¶</a></h2>
+<h2>Rect2<a class="headerlink" href="#rect2" title="Link to this heading"></a></h2>
 <p>The following field was converted to a property with a <em>slightly</em> different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12272,10 +12291,6 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12289,14 +12304,10 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 </section>
 <section id="rect2i">
-<h2>Rect2i<a class="headerlink" href="#rect2i" title="Permalink to this headline">¶</a></h2>
+<h2>Rect2i<a class="headerlink" href="#rect2i" title="Link to this heading"></a></h2>
 <p>This type is named <code class="docutils literal notranslate"><span class="pre">Rect2I</span></code> in C# to follow the .NET naming convention.</p>
 <p>The following field was converted to a property with a <em>slightly</em> different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12310,10 +12321,6 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12327,14 +12334,10 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 </section>
 <section id="aabb">
-<h2>AABB<a class="headerlink" href="#aabb" title="Permalink to this headline">¶</a></h2>
+<h2>AABB<a class="headerlink" href="#aabb" title="Link to this heading"></a></h2>
 <p>This type is named <code class="docutils literal notranslate"><span class="pre">Aabb</span></code> in C# to follow the .NET naming convention.</p>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12348,19 +12351,19 @@ Please use <code class="docutils literal notranslate"><span class="pre">Transfor
 </table>
 </section>
 <section id="quaternion">
-<h2>Quaternion<a class="headerlink" href="#quaternion" title="Permalink to this headline">¶</a></h2>
+<h2>Quaternion<a class="headerlink" href="#quaternion" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Quaternion()</span></code>
 initializes all primitive members to their default value.
 Please use <code class="docutils literal notranslate"><span class="pre">Quaternion.Identity</span></code> for the equivalent of <code class="docutils literal notranslate"><span class="pre">Quaternion()</span></code> in GDScript and C++.</p>
 </section>
 <section id="projection">
-<h2>Projection<a class="headerlink" href="#projection" title="Permalink to this headline">¶</a></h2>
+<h2>Projection<a class="headerlink" href="#projection" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Projection()</span></code>
 initializes all primitive members to their default value.
 Please use <code class="docutils literal notranslate"><span class="pre">Projection.Identity</span></code> for the equivalent of <code class="docutils literal notranslate"><span class="pre">Projection()</span></code> in GDScript and C++.</p>
 </section>
 <section id="color">
-<h2>Color<a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h2>
+<h2>Color<a class="headerlink" href="#color" title="Link to this heading"></a></h2>
 <p>Structs cannot have parameterless constructors in C#. Therefore, <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">Color()</span></code>
 initializes all primitive members to their default value (which represents the transparent black color).
 Please use <code class="docutils literal notranslate"><span class="pre">Colors.Black</span></code> for the equivalent of <code class="docutils literal notranslate"><span class="pre">Color()</span></code> in GDScript and C++.</p>
@@ -12369,10 +12372,6 @@ in the Color type.</p>
 <p>The Color constants are available in the <code class="docutils literal notranslate"><span class="pre">Colors</span></code> static class as readonly properties.</p>
 <p>The following method was converted to a property with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12386,10 +12385,6 @@ in the Color type.</p>
 </table>
 <p>The following method was converted to a method with a different name:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12403,10 +12398,6 @@ in the Color type.</p>
 </table>
 <p>The following methods are available as constructors:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GDScript</p></th>
 <th class="head"><p>C#</p></th>
@@ -12423,7 +12414,7 @@ in the Color type.</p>
 </table>
 </section>
 <section id="array">
-<h2>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>
+<h2>Array<a class="headerlink" href="#array" title="Link to this heading"></a></h2>
 <p>The equivalent of packed arrays are <code class="docutils literal notranslate"><span class="pre">System.Array</span></code>.</p>
 <p>See also <a class="reference internal" href="c_sharp_collections.html#doc-c-sharp-collections-packedarray"><span class="std std-ref">PackedArray in C#</span></a>.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">Godot.Collections.Array</span></code> for an untyped <code class="docutils literal notranslate"><span class="pre">Variant</span></code> array.
@@ -12431,23 +12422,23 @@ in the Color type.</p>
 <p>See also <a class="reference internal" href="c_sharp_collections.html#doc-c-sharp-collections-array"><span class="std std-ref">Array in C#</span></a>.</p>
 </section>
 <section id="dictionary">
-<h2>Dictionary<a class="headerlink" href="#dictionary" title="Permalink to this headline">¶</a></h2>
+<h2>Dictionary<a class="headerlink" href="#dictionary" title="Link to this heading"></a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">Godot.Collections.Dictionary</span></code> for an untyped <code class="docutils literal notranslate"><span class="pre">Variant</span></code> dictionary.
 <code class="docutils literal notranslate"><span class="pre">Godot.Collections.Dictionary&lt;TKey,</span> <span class="pre">TValue&gt;</span></code> is a type-safe wrapper around <code class="docutils literal notranslate"><span class="pre">Godot.Collections.Dictionary</span></code>.</p>
 <p>See also <a class="reference internal" href="c_sharp_collections.html#doc-c-sharp-collections-dictionary"><span class="std std-ref">Dictionary in C#</span></a>.</p>
 </section>
 <section id="variant">
-<h2>Variant<a class="headerlink" href="#variant" title="Permalink to this headline">¶</a></h2>
+<h2>Variant<a class="headerlink" href="#variant" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Godot.Variant</span></code> is used to represent Redot's native <a class="reference internal" href="../../../classes/class_variant.html#class-variant"><span class="std std-ref">Variant</span></a> type.
 Any <a class="reference internal" href="c_sharp_variant.html#c-sharp-variant-compatible-types"><span class="std std-ref">Variant-compatible type</span></a> can be converted from/to it.</p>
 <p>See also: <a class="reference internal" href="c_sharp_variant.html#doc-c-sharp-variant"><span class="std std-ref">C# Variant</span></a>.</p>
 </section>
 <section id="communicating-with-other-scripting-languages">
-<h2>Communicating with other scripting languages<a class="headerlink" href="#communicating-with-other-scripting-languages" title="Permalink to this headline">¶</a></h2>
+<h2>Communicating with other scripting languages<a class="headerlink" href="#communicating-with-other-scripting-languages" title="Link to this heading"></a></h2>
 <p>This is explained extensively in <a class="reference internal" href="../cross_language_scripting.html#doc-cross-language-scripting"><span class="std std-ref">Cross-language scripting</span></a>.</p>
 </section>
 <section id="await-keyword">
-<span id="doc-c-sharp-differences-await"></span><h2><code class="docutils literal notranslate"><span class="pre">await</span></code> keyword<a class="headerlink" href="#await-keyword" title="Permalink to this headline">¶</a></h2>
+<span id="doc-c-sharp-differences-await"></span><h2><code class="docutils literal notranslate"><span class="pre">await</span></code> keyword<a class="headerlink" href="#await-keyword" title="Link to this heading"></a></h2>
 <p>Something similar to GDScript's <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword can be achieved with C#'s
 <a class="reference external" href="https://docs.microsoft.com/en-US/dotnet/csharp/language-reference/keywords/await">await keyword</a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">await</span></code> keyword in C# can be used with any awaitable expression. It's commonly

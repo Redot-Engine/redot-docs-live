@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Using Fonts" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/ui/gui_using_fonts.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Using Fonts &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/ui/gui_using_fonts.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/ui/gui_using_fonts.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/ui/gui_using_fonts.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">User interface (UI)</a></li>
       <li class="breadcrumb-item active">Using Fonts</li>
 	</ul>
@@ -11081,7 +11156,7 @@
 
   
   <section id="using-fonts">
-<span id="doc-gui-using-fonts"></span><h1>Using Fonts<a class="headerlink" href="#using-fonts" title="Permalink to this headline">¶</a></h1>
+<span id="doc-gui-using-fonts"></span><h1>Using Fonts<a class="headerlink" href="#using-fonts" title="Link to this heading"></a></h1>
 <p>Redot allows you to set specific fonts for different UI nodes.</p>
 <p>There are three different places where you can setup font usage.
 The first is the theme editor. Choose the node you want to set the
@@ -11118,7 +11193,7 @@ using it, as not all fonts allow commercial use without purchasing a license.</p
 <a class="reference external" href="https://github.com/redot-engine/redot-demo-projects/tree/master/gui/bidi_and_font_features">BiDI and Font Features demo project</a>.</p>
 </div>
 <section id="dynamic-fonts">
-<h2>Dynamic fonts<a class="headerlink" href="#dynamic-fonts" title="Permalink to this headline">¶</a></h2>
+<h2>Dynamic fonts<a class="headerlink" href="#dynamic-fonts" title="Link to this heading"></a></h2>
 <p>Redot supports the following dynamic font formats:</p>
 <ul class="simple">
 <li><p>TrueType Font or Collection (<code class="docutils literal notranslate"><span class="pre">.ttf</span></code>, <code class="docutils literal notranslate"><span class="pre">.ttc</span></code>)</p></li>
@@ -11132,7 +11207,7 @@ recommended to use the font format that was shipped on the font developer's
 website.</p>
 </section>
 <section id="bitmap-fonts">
-<h2>Bitmap fonts<a class="headerlink" href="#bitmap-fonts" title="Permalink to this headline">¶</a></h2>
+<h2>Bitmap fonts<a class="headerlink" href="#bitmap-fonts" title="Link to this heading"></a></h2>
 <p>Redot supports the BMFont (<code class="docutils literal notranslate"><span class="pre">.fnt</span></code>) bitmap font format. This is a format created
 by the <a class="reference external" href="https://www.angelcode.com/products/bmfont/">BMFont</a> program. Many
 BMFont-compatible programs also exist, like <a class="reference external" href="https://www.bmglyph.com/">BMGlyph</a> or web-based <a class="reference external" href="https://github.com/fabienbk/fontcutter">fontcutter</a>.</p>
@@ -11144,7 +11219,7 @@ click <strong>Reimport</strong>:</p>
 <figure class="align-center" id="id1">
 <img alt="Changing import type to Font Data (Monospace Image Font)" src="../../_images/using_fonts_bitmap_font_from_image_import_options.webp" />
 <figcaption>
-<p><span class="caption-text">Changing import type to <strong>Font Data (Monospace Image Font)</strong></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Changing import type to <strong>Font Data (Monospace Image Font)</strong></span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The font's character set layout can be in any order, but orders that match
@@ -11155,7 +11230,7 @@ import. For example, the bitmap font below contains
 <img alt="Bitmap font example" src="../../_images/using_fonts_monospace_bitmap_font_example.webp" />
 <figcaption>
 <p><span class="caption-text">Credit: <a class="reference external" href="https://github.com/MissLav/LibreQuake/blob/master/lq1/gfx-wad/CONCHARS.png">LibreQuake</a>
-(scaled and cropped to exclude extended range)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+(scaled and cropped to exclude extended range)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The following import options can be used to import the above font image
@@ -11163,7 +11238,7 @@ successfully:</p>
 <figure class="align-center" id="id3">
 <img alt="Import options to use for the above example font" src="../../_images/using_fonts_bitmap_font_from_image_example_configuration.webp" />
 <figcaption>
-<p><span class="caption-text">Import options to use for the above example font</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Import options to use for the above example font</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The <strong>Character Ranges</strong> option is an array that maps each position on the image
@@ -11184,14 +11259,14 @@ if spacing between characters appears incorrect, try adjusting <strong>Character
 Margin</strong>. This margin is applied for every imported glyph.</p>
 </section>
 <section id="loading-a-font-file">
-<h2>Loading a font file<a class="headerlink" href="#loading-a-font-file" title="Permalink to this headline">¶</a></h2>
+<h2>Loading a font file<a class="headerlink" href="#loading-a-font-file" title="Link to this heading"></a></h2>
 <p>To load a font file (dynamic or bitmap), use the resource dropdown's
 <strong>Quick Load</strong> or <strong>Load</strong> option next to a font property, then navigate to the
 font file in question:</p>
 <figure class="align-center" id="id4">
 <img alt="../../_images/using_fonts_load_font.webp" src="../../_images/using_fonts_load_font.webp" />
 <figcaption>
-<p><span class="caption-text">Loading a font file</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Loading a font file</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can also drag-and-drop a font file from the FileSystem dock to the inspector
@@ -11214,7 +11289,7 @@ by setting <a class="reference internal" href="../../classes/class_canvasitem.ht
 </div>
 </section>
 <section id="font-outlines-and-shadows">
-<h2>Font outlines and shadows<a class="headerlink" href="#font-outlines-and-shadows" title="Permalink to this headline">¶</a></h2>
+<h2>Font outlines and shadows<a class="headerlink" href="#font-outlines-and-shadows" title="Link to this heading"></a></h2>
 <p>Font outlines and shadows can be used to improve readability when the background
 color isn't known in advance. For instance, this is the case for HUD elements
 that are drawn over a 2D/3D scene.</p>
@@ -11226,7 +11301,7 @@ look like this:</p>
 <figure class="align-center" id="id5">
 <img alt="Font outline example" src="../../_images/using_fonts_outline_example.webp" />
 <figcaption>
-<p><span class="caption-text">Font outline example</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Font outline example</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -11245,14 +11320,14 @@ or RichTextLabel node accordingly:</p>
 <figure class="align-center" id="id6">
 <img alt="Configuring font shadow in a Label node" src="../../_images/using_fonts_shadow.webp" />
 <figcaption>
-<p><span class="caption-text">Configuring font shadow in a Label node</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Configuring font shadow in a Label node</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The result should look like this:</p>
 <figure class="align-center" id="id7">
 <img alt="Font shadow example" src="../../_images/using_fonts_shadow_example.webp" />
 <figcaption>
-<p><span class="caption-text">Font shadow example</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Font shadow example</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -11263,9 +11338,9 @@ resource takes priority over <a class="reference internal" href="gui_skinning.ht
 </div>
 </section>
 <section id="advanced-font-features">
-<h2>Advanced font features<a class="headerlink" href="#advanced-font-features" title="Permalink to this headline">¶</a></h2>
+<h2>Advanced font features<a class="headerlink" href="#advanced-font-features" title="Link to this heading"></a></h2>
 <section id="antialiasing">
-<span id="doc-using-fonts-antialiasing"></span><h3>Antialiasing<a class="headerlink" href="#antialiasing" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-antialiasing"></span><h3>Antialiasing<a class="headerlink" href="#antialiasing" title="Link to this heading"></a></h3>
 <p>You can adjust how the font should be smoothed out when rendering by adjusting
 <em>antialiasing</em> and <em>hinting</em>. These are different properties, with different use
 cases.</p>
@@ -11284,7 +11359,7 @@ exploring.</p>
 <figure class="align-center" id="id8">
 <img alt="Font antialiasing comparison" src="../../_images/using_fonts_antialiasing_comparison.webp" />
 <figcaption>
-<p><span class="caption-text">From top to bottom: Disabled, Grayscale, LCD Subpixel (RGB)</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">From top to bottom: Disabled, Grayscale, LCD Subpixel (RGB)</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -11294,7 +11369,7 @@ exploring.</p>
 </div>
 </section>
 <section id="hinting">
-<span id="doc-using-fonts-hinting"></span><h3>Hinting<a class="headerlink" href="#hinting" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-hinting"></span><h3>Hinting<a class="headerlink" href="#hinting" title="Link to this heading"></a></h3>
 <p>Hinting controls how aggressively glyph edges should be snapped to pixels when
 rasterizing the font. <strong>None</strong> results in the smoothest appearance, which can
 make the font look blurry at small sizes. <strong>Light</strong> (default) is sharper by
@@ -11304,7 +11379,7 @@ preference, you may prefer using one hinting mode over the other.</p>
 <figure class="align-center" id="id9">
 <img alt="Font hinting comparison" src="../../_images/using_fonts_hinting_comparison.webp" />
 <figcaption>
-<p><span class="caption-text">From top to bottom: None, Light, Full hinting</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">From top to bottom: None, Light, Full hinting</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -11318,7 +11393,7 @@ to automatically add hinting instructions to the imported font.</p>
 </div>
 </section>
 <section id="subpixel-positioning">
-<span id="doc-using-fonts-subpixel-positioning"></span><h3>Subpixel positioning<a class="headerlink" href="#subpixel-positioning" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-subpixel-positioning"></span><h3>Subpixel positioning<a class="headerlink" href="#subpixel-positioning" title="Link to this heading"></a></h3>
 <p>Subpixel positioning can be adjusted. This is a <a class="reference external" href="https://freetype.org/">FreeType</a>
 feature that allows glyphs to be rendered more closely to their intended form.
 The default setting of <strong>Auto</strong> automatically enables subpixel positioning at
@@ -11339,7 +11414,7 @@ relevant for dynamic fonts (which are usually made of vector elements).</p>
 </div>
 </section>
 <section id="mipmaps">
-<span id="doc-using-fonts-mipmaps"></span><h3>Mipmaps<a class="headerlink" href="#mipmaps" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-mipmaps"></span><h3>Mipmaps<a class="headerlink" href="#mipmaps" title="Link to this heading"></a></h3>
 <p>By default, fonts do not have mipmaps generated to reduce memory usage and speed
 up rasterization. However, this can cause downscaled fonts to become grainy. This
 can be especially noticeable with <a class="reference internal" href="../3d/3d_text.html#doc-3d-text"><span class="std std-ref">3D text</span></a> that doesn't have <strong>Fixed
@@ -11353,7 +11428,7 @@ quality a little at smaller-than-default sizes, but MSDF fonts are already
 resistant to graininess out of the box.</p>
 </section>
 <section id="msdf-font-rendering">
-<span id="doc-using-fonts-msdf"></span><h3>MSDF font rendering<a class="headerlink" href="#msdf-font-rendering" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-msdf"></span><h3>MSDF font rendering<a class="headerlink" href="#msdf-font-rendering" title="Link to this heading"></a></h3>
 <p>Multi-channel signed distance field (MSDF) font rendering allows rendering fonts
 at any size, without having to re-rasterize them when their size changes.</p>
 <p>MSDF font rendering has 2 upsides over traditional font rasterization, which
@@ -11382,7 +11457,7 @@ font author's official website instead.</p></li>
 <img alt="Comparison of font rasterization methods" src="../../_images/using_fonts_rasterized_vs_msdf_comparison.webp" />
 <figcaption>
 <p><span class="caption-text">Comparison of font rasterization methods.
-From top to bottom: rasterized without oversampling, rasterized with oversampling, MSDF</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+From top to bottom: rasterized without oversampling, rasterized with oversampling, MSDF</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>To enable MSDF rendering for a given font, select it in the FileSystem dock, go
@@ -11391,12 +11466,12 @@ to the Import dock, enable <strong>Multichannel Signed Distance Field</strong>, 
 <figure class="align-center" id="id11">
 <img alt="Enabling MSDF in the font's import options" src="../../_images/using_fonts_msdf_import_options.webp" />
 <figcaption>
-<p><span class="caption-text">Enabling MSDF in the font's import options</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Enabling MSDF in the font's import options</span><a class="headerlink" href="#id11" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="using-emoji">
-<span id="doc-using-fonts-emoji"></span><h3>Using emoji<a class="headerlink" href="#using-emoji" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-emoji"></span><h3>Using emoji<a class="headerlink" href="#using-emoji" title="Link to this heading"></a></h3>
 <p>Redot has limited support for emoji fonts:</p>
 <ul class="simple">
 <li><p>CBDT/CBLC (embedded PNGs) and SVG emoji fonts are supported.</p></li>
@@ -11412,7 +11487,7 @@ appear instead:</p>
 <figure class="align-center" id="id12">
 <img alt="Default appearance when trying to use emoji in a label" src="../../_images/using_fonts_emoji_placeholder_characters.webp" />
 <figcaption>
-<p><span class="caption-text">Default appearance when trying to use emoji in a label</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Default appearance when trying to use emoji in a label</span><a class="headerlink" href="#id12" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After adding a font to display emoji such as
@@ -11421,7 +11496,7 @@ you get the expected result:</p>
 <figure class="align-center" id="id13">
 <img alt="Correct appearance after adding an emoji font to the label" src="../../_images/using_fonts_emoji_correct_characters.webp" />
 <figcaption>
-<p><span class="caption-text">Correct appearance after adding an emoji font to the label</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Correct appearance after adding an emoji font to the label</span><a class="headerlink" href="#id13" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>To use a regular font alongside emoji, it's recommended to specify a
@@ -11442,7 +11517,7 @@ system fonts is not supported on all platforms.</p>
 </div>
 </section>
 <section id="using-icon-fonts">
-<h3>Using icon fonts<a class="headerlink" href="#using-icon-fonts" title="Permalink to this headline">¶</a></h3>
+<h3>Using icon fonts<a class="headerlink" href="#using-icon-fonts" title="Link to this heading"></a></h3>
 <p>Tools like <a class="reference external" href="https://fontello.com/">Fontello</a> can be used to generate font
 files containing vectors imported from SVG files. This can be used to render
 custom vector elements as part of your text, or to create extruded 3D icons
@@ -11479,7 +11554,7 @@ font's characters will take priority over the fallback font's ligatures.</p>
 </div>
 </section>
 <section id="font-fallbacks">
-<span id="doc-using-fonts-font-fallbacks"></span><h3>Font fallbacks<a class="headerlink" href="#font-fallbacks" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-font-fallbacks"></span><h3>Font fallbacks<a class="headerlink" href="#font-fallbacks" title="Link to this heading"></a></h3>
 <p>Redot supports defining one or more fallbacks when the main font lacks a glyph
 to be displayed. There are 2 main use cases for defining font fallbacks:</p>
 <ul class="simple">
@@ -11493,7 +11568,7 @@ Import dock then choose <strong>Advanced…</strong> at the bottom:</p>
 <figure class="align-center" id="id14">
 <img alt="../../_images/using_fonts_advanced_import_settings.webp" src="../../_images/using_fonts_advanced_import_settings.webp" />
 <figcaption>
-<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In the dialog that appears, look for <strong>Fallbacks</strong> section
@@ -11502,7 +11577,7 @@ the property, then click <strong>Add Element</strong>:</p>
 <figure class="align-center" id="id15">
 <img alt="../../_images/using_fonts_font_fallbacks_add.webp" src="../../_images/using_fonts_font_fallbacks_add.webp" />
 <figcaption>
-<p><span class="caption-text">Adding font fallback</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Adding font fallback</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Click the dropdown arrow on the new element, then choose a font file using the
@@ -11510,7 +11585,7 @@ the property, then click <strong>Add Element</strong>:</p>
 <figure class="align-center" id="id16">
 <img alt="../../_images/using_fonts_font_fallbacks_load.webp" src="../../_images/using_fonts_font_fallbacks_load.webp" />
 <figcaption>
-<p><span class="caption-text">Loading font fallback</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Loading font fallback</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>It is possible to add fallback fonts while using the default project font. To do
@@ -11524,7 +11599,7 @@ for brevity reasons.</p>
 </div>
 </section>
 <section id="variable-fonts">
-<span id="doc-using-fonts-variable-fonts"></span><h3>Variable fonts<a class="headerlink" href="#variable-fonts" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-variable-fonts"></span><h3>Variable fonts<a class="headerlink" href="#variable-fonts" title="Link to this heading"></a></h3>
 <p>Redot has full support for <a class="reference external" href="https://variablefonts.io/">variable fonts</a>, which
 allow you to use a single font file to represent various font weights and styles
 (regular, bold, italic, …). This must be supported by the font file you're using.</p>
@@ -11534,13 +11609,13 @@ FontVariation resource:</p>
 <figure class="align-center" id="id17">
 <img alt="../../_images/using_fonts_font_variation_create.webp" src="../../_images/using_fonts_font_variation_create.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a FontVariation resource</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a FontVariation resource</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id18">
 <img alt="../../_images/using_fonts_font_variation_load.webp" src="../../_images/using_fonts_font_variation_load.webp" />
 <figcaption>
-<p><span class="caption-text">Loading a font file into the FontVariation resource</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Loading a font file into the FontVariation resource</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Scroll down to the FontVariation's <strong>Variation</strong> section, then click the
@@ -11548,7 +11623,7 @@ FontVariation resource:</p>
 <figure class="align-center" id="id19">
 <img alt="../../_images/using_fonts_font_variation_variable_font.webp" src="../../_images/using_fonts_font_variation_variable_font.webp" />
 <figcaption>
-<p><span class="caption-text">List of variation axes</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">List of variation axes</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>The set of axes you can adjust depends on the font loaded. Some variable fonts
@@ -11559,7 +11634,7 @@ others may support multiple axes of adjustment.</p>
 <figure class="align-center" id="id20">
 <img alt="../../_images/using_fonts_font_variation_variable_font_example.webp" src="../../_images/using_fonts_font_variation_variable_font_example.webp" />
 <figcaption>
-<p><span class="caption-text">Variable font example (Inter V)</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Variable font example (Inter V)</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -11568,10 +11643,6 @@ others may support multiple axes of adjustment.</p>
 some common conventions are usually followed by font designers.
 The <em>weight</em> axis is standardized in OpenType to work as follows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Axis value</p></th>
 <th class="head"><p>Effective font weight</p></th>
@@ -11616,12 +11687,12 @@ places:</p>
 <figure class="align-center" id="id21">
 <img alt="../../_images/using_fonts_font_variation_save_to_file.webp" src="../../_images/using_fonts_font_variation_save_to_file.webp" />
 <figcaption>
-<p><span class="caption-text">Saving FontVariation to an external resource file</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Saving FontVariation to an external resource file</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="faux-bold-and-italic">
-<h3>Faux bold and italic<a class="headerlink" href="#faux-bold-and-italic" title="Permalink to this headline">¶</a></h3>
+<h3>Faux bold and italic<a class="headerlink" href="#faux-bold-and-italic" title="Link to this heading"></a></h3>
 <p>When writing text in bold or italic, using font variants specifically designed
 for this looks better. Spacing between glyphs will be more consistent when using
 a bold font, and certain glyphs' shapes may change entirely in italic variants
@@ -11637,7 +11708,7 @@ bold and italic.</p>
 <figure class="align-center" id="id22">
 <img alt="Faux bold/italic (top), real bold/italic (bottom). Normal font used: Open Sans SemiBold" src="../../_images/using_fonts_faux_bold_italic_vs_real_bold_italic.webp" />
 <figcaption>
-<p><span class="caption-text">Faux bold/italic (top), real bold/italic (bottom). Normal font used: Open Sans SemiBold</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Faux bold/italic (top), real bold/italic (bottom). Normal font used: Open Sans SemiBold</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Faux bold and italic is automatically used in <a class="reference internal" href="../../classes/class_richtextlabel.html#class-richtextlabel"><span class="std std-ref">RichTextLabel</span></a>'s bold
@@ -11653,7 +11724,7 @@ character transform to a positive value will italicize the text. Recommended
 values are between <code class="docutils literal notranslate"><span class="pre">0.2</span></code> and <code class="docutils literal notranslate"><span class="pre">0.4</span></code> depending on the font.</p>
 </section>
 <section id="adjusting-font-spacing">
-<h3>Adjusting font spacing<a class="headerlink" href="#adjusting-font-spacing" title="Permalink to this headline">¶</a></h3>
+<h3>Adjusting font spacing<a class="headerlink" href="#adjusting-font-spacing" title="Link to this heading"></a></h3>
 <p>For stylistic purposes or for better readability, you may want to adjust how a
 font is presented in Redot.</p>
 <p>Create a FontVariation resource in a property where a Font resource is expected.
@@ -11678,7 +11749,7 @@ kind should be used sparingly, as fonts are generally not designed to be
 displayed with stretching.</p>
 </section>
 <section id="opentype-font-features">
-<span id="doc-using-fonts-opentype-font-features"></span><h3>OpenType font features<a class="headerlink" href="#opentype-font-features" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-opentype-font-features"></span><h3>OpenType font features<a class="headerlink" href="#opentype-font-features" title="Link to this heading"></a></h3>
 <p>Redot supports enabling OpenType font features, which are a standardized way to
 define alternate characters that can be toggled without having to swap font
 files entirely. Despite being named OpenType font features, these are also
@@ -11694,7 +11765,7 @@ Import dock then choose <strong>Advanced…</strong> at the bottom:</p>
 <figure class="align-center" id="id23">
 <img alt="../../_images/using_fonts_advanced_import_settings.webp" src="../../_images/using_fonts_advanced_import_settings.webp" />
 <figcaption>
-<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In the dialog that appears, look for the <strong>Metadata Overrides &gt; OpenType
@@ -11704,7 +11775,7 @@ Features</strong> section on the sidebar on the right, click the
 <figure class="align-center" id="id24">
 <img alt="../../_images/using_fonts_advanced_import_settings_opentype_features.webp" src="../../_images/using_fonts_advanced_import_settings_opentype_features.webp" />
 <figcaption>
-<p><span class="caption-text">OpenType feature overrides in Advanced Import Settings</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">OpenType feature overrides in Advanced Import Settings</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><strong>In a specific font usage (FontVariation)</strong></p>
@@ -11714,13 +11785,13 @@ within the FontVariation resource:</p>
 <figure class="align-center" id="id25">
 <img alt="../../_images/using_fonts_font_variation_create.webp" src="../../_images/using_fonts_font_variation_create.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a FontVariation resource</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a FontVariation resource</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id26">
 <img alt="../../_images/using_fonts_font_variation_load.webp" src="../../_images/using_fonts_font_variation_load.webp" />
 <figcaption>
-<p><span class="caption-text">Loading a font file into a FontVariation resource</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Loading a font file into a FontVariation resource</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Scroll down to the FontVariation's <strong>OpenType Features</strong> section, click the
@@ -11729,7 +11800,7 @@ and select the desired feature in the dropdown:</p>
 <figure class="align-center" id="id27">
 <img alt="../../_images/using_fonts_font_variation_opentype_features.webp" src="../../_images/using_fonts_font_variation_opentype_features.webp" />
 <figcaption>
-<p><span class="caption-text">Specifying OpenType features in a FontVariation resource</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Specifying OpenType features in a FontVariation resource</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>For example, here's the <a class="reference external" href="https://rsms.me/inter/">Inter</a> font without the
@@ -11738,7 +11809,7 @@ and select the desired feature in the dropdown:</p>
 <figure class="align-center" id="id28">
 <img alt="../../_images/using_fonts_font_variation_slashed_zero.webp" src="../../_images/using_fonts_font_variation_slashed_zero.webp" />
 <figcaption>
-<p><span class="caption-text">OpenType feature comparison (Inter)</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">OpenType feature comparison (Inter)</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can disable ligatures and/or kerning for a specific font by adding OpenType
@@ -11746,12 +11817,12 @@ features, then unchecking them in the inspector:</p>
 <figure class="align-center" id="id29">
 <img alt="../../_images/using_fonts_font_variation_disable_ligatures.webp" src="../../_images/using_fonts_font_variation_disable_ligatures.webp" />
 <figcaption>
-<p><span class="caption-text">Disabling ligatures and kerning for a font</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Disabling ligatures and kerning for a font</span><a class="headerlink" href="#id29" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="system-fonts">
-<span id="doc-using-fonts-system-fonts"></span><h3>System fonts<a class="headerlink" href="#system-fonts" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-system-fonts"></span><h3>System fonts<a class="headerlink" href="#system-fonts" title="Link to this heading"></a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Loading system fonts is only supported on Windows, macOS, Linux, Android and iOS.</p>
@@ -11779,26 +11850,19 @@ use the system font:</p>
 <figure class="align-center" id="id30">
 <img alt="../../_images/using_fonts_system_font_create.webp" src="../../_images/using_fonts_system_font_create.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a SystemFont resource</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a SystemFont resource</span><a class="headerlink" href="#id30" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id31">
 <img alt="../../_images/using_fonts_system_font_specify.webp" src="../../_images/using_fonts_system_font_specify.webp" />
 <figcaption>
-<p><span class="caption-text">Specifying a font name to use in a SystemFont resource</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Specifying a font name to use in a SystemFont resource</span><a class="headerlink" href="#id31" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>You can either specify one or more font names explicitly (such as <code class="docutils literal notranslate"><span class="pre">Arial</span></code>), or
 specify the name of a font <em>alias</em> that maps to a &quot;standard&quot; default font for
 the system:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 17%" />
-<col style="width: 16%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Font alias</p></th>
 <th class="head"><p>Windows</p></th>
@@ -11864,7 +11928,7 @@ See <a class="reference internal" href="../io/runtime_file_loading_and_saving.ht
 for details.</p>
 </section>
 <section id="font-prerendering">
-<span id="doc-using-fonts-font-prerendering"></span><h3>Font prerendering<a class="headerlink" href="#font-prerendering" title="Permalink to this headline">¶</a></h3>
+<span id="doc-using-fonts-font-prerendering"></span><h3>Font prerendering<a class="headerlink" href="#font-prerendering" title="Link to this heading"></a></h3>
 <p>When using traditional rasterized fonts, Redot caches glyphs on a per-font and
 per-size basis. This reduces stuttering, but it can still occur the first time a
 glyph is displayed when running the project. This can be especially noticeable
@@ -11891,7 +11955,7 @@ Import dock then choose <strong>Advanced…</strong> at the bottom:</p>
 <figure class="align-center" id="id32">
 <img alt="../../_images/using_fonts_advanced_import_settings.webp" src="../../_images/using_fonts_advanced_import_settings.webp" />
 <figcaption>
-<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Import dock</span><a class="headerlink" href="#id32" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Move to the <strong>Pre-render Configurations</strong> tab of the Advanced Import Settings dialog,
@@ -11899,7 +11963,7 @@ then add a configuration by clicking the &quot;plus&quot; symbol:</p>
 <figure class="align-center" id="id33">
 <img alt="Adding a new prerendering configuration in the Advanced Import Settings dialog" src="../../_images/using_fonts_advanced_import_settings_prerender_new_configuration.webp" />
 <figcaption>
-<p><span class="caption-text">Adding a new prerendering configuration in the Advanced Import Settings dialog</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Adding a new prerendering configuration in the Advanced Import Settings dialog</span><a class="headerlink" href="#id33" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After adding a configuration, make sure it is selected by clicking its name
@@ -11918,7 +11982,7 @@ then click <strong>Shape All Strings in the Translations and Add Glyphs</strong>
 <figure class="align-center" id="id34">
 <img alt="Enabling prerendering in the Advanced Import Settings dialog with the Glyphs from the Translations tab" src="../../_images/using_fonts_advanced_import_settings_prerender_translation.webp" />
 <figcaption>
-<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Translations</strong> tab</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Translations</strong> tab</span><a class="headerlink" href="#id34" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -11939,7 +12003,7 @@ dialog:</p>
 <figure class="align-center" id="id35">
 <img alt="Enabling prerendering in the Advanced Import Settings dialog, Glyphs from the Text tab" src="../../_images/using_fonts_advanced_import_settings_prerender_text.webp" />
 <figcaption>
-<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Text</strong> tab</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Text</strong> tab</span><a class="headerlink" href="#id35" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -11960,7 +12024,7 @@ Character Map</strong> sub-tab of the Advanced Import Settings dialog, then
 <figure class="align-center" id="id36">
 <img alt="Enabling prerendering in the Advanced Import Settings dialog, Glyphs from the Character Map tab" src="../../_images/using_fonts_advanced_import_settings_prerender_character_map.webp" />
 <figcaption>
-<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Character Map</strong> tab</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Enabling prerendering in the Advanced Import Settings dialog with the <strong>Glyphs from the Character Map</strong> tab</span><a class="headerlink" href="#id36" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>To ensure full prerendering, the character sets you need to enable depend on
@@ -11970,7 +12034,7 @@ covering many more languages, such as French, German and Spanish. For Russian,
 <strong>Cyrillic</strong> needs to be enabled, and so on.</p>
 </section>
 <section id="default-project-font-properties">
-<h3>Default project font properties<a class="headerlink" href="#default-project-font-properties" title="Permalink to this headline">¶</a></h3>
+<h3>Default project font properties<a class="headerlink" href="#default-project-font-properties" title="Link to this heading"></a></h3>
 <p>In the <strong>GUI &gt; Theme</strong> section of the advanced Project Settings, you can choose
 how the default font should be rendered:</p>
 <ul class="simple">

@@ -7,8 +7,11 @@
    :maxdepth: 1
    :name: toc-learn-features-2d
 
+   introduction_to_2d
    canvas_layers
    2d_transforms
+
+.. _doc_2d_rendering:
 
 Rendering
 ---------

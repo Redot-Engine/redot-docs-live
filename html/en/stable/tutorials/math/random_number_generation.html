@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Random number generation" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/math/random_number_generation.html" />
@@ -11,44 +13,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Random number generation &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/tabs.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/math/random_number_generation.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/math/random_number_generation.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/math/random_number_generation.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/tabs.js?v=3030b3cb"></script>
+      <script src="../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -65,12 +47,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -135,6 +121,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -190,17 +177,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -518,19 +515,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -685,6 +684,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -969,9 +981,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1087,6 +1111,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1552,7 +1583,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1562,8 +1593,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1740,7 +1777,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2269,6 +2306,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2314,7 +2352,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2479,9 +2517,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2497,9 +2552,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2508,6 +2564,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2539,12 +2596,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2581,7 +2639,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2626,6 +2701,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2987,7 +3063,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -11022,7 +11098,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Math</a></li>
       <li class="breadcrumb-item active">Random number generation</li>
 	</ul>
@@ -11082,7 +11158,7 @@
 
   
   <section id="random-number-generation">
-<span id="doc-random-number-generation"></span><h1>Random number generation<a class="headerlink" href="#random-number-generation" title="Permalink to this headline">¶</a></h1>
+<span id="doc-random-number-generation"></span><h1>Random number generation<a class="headerlink" href="#random-number-generation" title="Link to this heading"></a></h1>
 <p>Many games rely on randomness to implement core game mechanics. This page
 guides you through common types of randomness and how to implement them in
 Redot.</p>
@@ -11099,7 +11175,7 @@ typical random number generation.</p>
 of pseudorandom number generators.</p>
 </div>
 <section id="global-scope-versus-randomnumbergenerator-class">
-<h2>Global scope versus RandomNumberGenerator class<a class="headerlink" href="#global-scope-versus-randomnumbergenerator-class" title="Permalink to this headline">¶</a></h2>
+<h2>Global scope versus RandomNumberGenerator class<a class="headerlink" href="#global-scope-versus-randomnumbergenerator-class" title="Link to this heading"></a></h2>
 <p>Redot exposes two ways to generate random numbers: via <em>global scope</em> methods or
 using the <a class="reference internal" href="../../classes/class_randomnumbergenerator.html#class-randomnumbergenerator"><span class="std std-ref">RandomNumberGenerator</span></a> class.</p>
 <p>Global scope methods are easier to set up, but they don't offer as much control.</p>
@@ -11109,7 +11185,7 @@ multiple instances, each with their own seed and state.</p>
 the RandomNumberGenerator class.</p>
 </section>
 <section id="the-randomize-method">
-<h2>The randomize() method<a class="headerlink" href="#the-randomize-method" title="Permalink to this headline">¶</a></h2>
+<h2>The randomize() method<a class="headerlink" href="#the-randomize-method" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since Redot 4.0, the random seed is automatically set to a random value when
@@ -11146,6 +11222,7 @@ across runs:</p>
 </div><div aria-labelledby="tab-1-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Seed</span><span class="p">(</span><span class="m">12345</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// To use a string as a seed, you can hash it to a number.</span>
 <span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Seed</span><span class="p">(</span><span class="s">&quot;Hello world&quot;</span><span class="p">.</span><span class="n">Hash</span><span class="p">());</span>
 <span class="p">}</span>
 </pre></div>
@@ -11165,13 +11242,13 @@ the instance since it has its own seed:</p>
 </div></div>
 </section>
 <section id="getting-a-random-number">
-<h2>Getting a random number<a class="headerlink" href="#getting-a-random-number" title="Permalink to this headline">¶</a></h2>
+<h2>Getting a random number<a class="headerlink" href="#getting-a-random-number" title="Link to this heading"></a></h2>
 <p>Let's look at some of the most commonly used functions and methods to generate
 random numbers in Redot.</p>
 <p>The function <a class="reference internal" href="../../classes/class_%40globalscope.html#class-globalscope-method-randi"><span class="std std-ref">randi()</span></a> returns a random
-number between 0 and 2^32-1. Since the maximum value is huge, you most likely
-want to use the modulo operator (<code class="docutils literal notranslate"><span class="pre">%</span></code>) to bound the result between 0 and the
-denominator:</p>
+number between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">2^32</span> <span class="pre">-</span> <span class="pre">1</span></code>. Since the maximum value is huge, you most
+likely want to use the modulo operator (<code class="docutils literal notranslate"><span class="pre">%</span></code>) to bound the result between 0 and
+the denominator:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-3-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-3-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-3-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-3-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-3-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random integer between 0 and 49.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span>
@@ -11192,21 +11269,17 @@ denominator:</p>
 number between 0 and 1. This is useful to implement a
 <a class="reference internal" href="#doc-random-number-generation-weighted-random-probability"><span class="std std-ref">Weighted random probability</span></a> system, among
 other things.</p>
-<p><a class="reference internal" href="../../classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-randfn"><span class="std std-ref">randfn()</span></a> returns a random
+<p><a class="reference internal" href="../../classes/class_%40globalscope.html#class-globalscope-method-randfn"><span class="std std-ref">randfn()</span></a> returns a random
 floating-point number following a <a class="reference external" href="https://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a>. This means the returned
 value is more likely to be around the mean (0.0 by default),
 varying by the deviation (1.0 by default):</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-4-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-4-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-4-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-4-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-4-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-4-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random floating-point number from a normal distribution with a mean 0.0 and deviation 1.0.</span>
-<span class="k">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="n">random</span><span class="o">.</span><span class="n">randomize</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randfn</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">randfn</span><span class="p">())</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-4-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-4-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a normally distributed floating-point number between 0.0 and 1.0.</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="p">();</span>
-<span class="n">random</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">Randfn</span><span class="p">());</span>
+</div><div aria-labelledby="tab-4-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-4-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random floating-point number from a normal distribution with a mean of 0.0 and deviation of 1.0.</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randfn</span><span class="p">());</span>
 </pre></div>
 </div>
 </div></div>
@@ -11214,40 +11287,45 @@ varying by the deviation (1.0 by default):</p>
 <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code>, and returns a random floating-point number between <code class="docutils literal notranslate"><span class="pre">from</span></code>
 and <code class="docutils literal notranslate"><span class="pre">to</span></code>:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-5-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-5-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-5-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random floating-point number between -4 and 6.5.</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-5-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-5-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-5-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-5-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-5-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-5-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random floating-point number between -4 and 6.5.</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">randf_range</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="p">))</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-5-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-5-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random floating-point number between -4 and 6.5.</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandfRange</span><span class="p">(</span><span class="o">-</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">));</span>
+</pre></div>
+</div>
 </div></div>
-<p><a class="reference internal" href="../../classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-randi-range"><span class="std std-ref">RandomNumberGenerator.randi_range()</span></a> takes two arguments <code class="docutils literal notranslate"><span class="pre">from</span></code>
+<p><a class="reference internal" href="../../classes/class_%40globalscope.html#class-globalscope-method-randi-range"><span class="std std-ref">randi_range()</span></a> takes two arguments <code class="docutils literal notranslate"><span class="pre">from</span></code>
 and <code class="docutils literal notranslate"><span class="pre">to</span></code>, and returns a random integer between <code class="docutils literal notranslate"><span class="pre">from</span></code> and <code class="docutils literal notranslate"><span class="pre">to</span></code>:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-6-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-6-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-6-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-6-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-6-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-6-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random integer between -10 and 10.</span>
-<span class="k">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
-<span class="n">random</span><span class="o">.</span><span class="n">randomize</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randi_range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">randi_range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-6-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-6-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random integer number between -10 and 10.</span>
-<span class="n">random</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">RandiRange</span><span class="p">(</span><span class="o">-</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">));</span>
+</div><div aria-labelledby="tab-6-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-6-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random integer between -10 and 10.</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandiRange</span><span class="p">(</span><span class="o">-</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">));</span>
 </pre></div>
 </div>
 </div></div>
 </section>
 <section id="get-a-random-array-element">
-<h2>Get a random array element<a class="headerlink" href="#get-a-random-array-element" title="Permalink to this headline">¶</a></h2>
-<p>We can use random integer generation to get a random element from an array:</p>
+<h2>Get a random array element<a class="headerlink" href="#get-a-random-array-element" title="Link to this heading"></a></h2>
+<p>We can use random integer generation to get a random element from an array,
+or use the <a class="reference internal" href="../../classes/class_array.html#class-array-method-pick-random"><span class="std std-ref">Array.pick_random</span></a> method
+to do it for us:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-7-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-7-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-7-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-7-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-7-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-7-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">]</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
-
 <span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
 <span class="w">        </span><span class="c1"># Pick 100 fruits randomly.</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">get_fruit</span><span class="p">())</span>
 
+<span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">        </span><span class="c1"># Pick 100 fruits randomly, this time using the `Array.pick_random()`</span>
+<span class="w">        </span><span class="c1"># helper method. This has the same behavior as `get_fruit()`.</span>
+<span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">_fruits</span><span class="o">.</span><span class="n">pick_random</span><span class="p">())</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">get_fruit</span><span class="p">():</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">random_fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="nb">randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="o">.</span><span class="n">size</span><span class="p">()]</span>
@@ -11256,22 +11334,28 @@ and <code class="docutils literal notranslate"><span class="pre">to</span></code
 <span class="w">    </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">random_fruit</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-7-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
+</div><div aria-labelledby="tab-7-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Use Redot&#39;s Array type instead of a BCL type so we can use `PickRandom()` on it.</span>
+<span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
-
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Pick 100 fruits randomly.</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetFruit</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Pick 100 fruits randomly, this time using the `Array.PickRandom()`</span>
+<span class="w">        </span><span class="c1">// helper method. This has the same behavior as `GetFruit()`.</span>
+<span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">_fruits</span><span class="p">.</span><span class="n">PickRandom</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetFruit</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Size</span><span class="p">()];</span>
 <span class="w">    </span><span class="c1">// Returns &quot;apple&quot;, &quot;orange&quot;, &quot;pear&quot;, or &quot;banana&quot; every time the code runs.</span>
 <span class="w">    </span><span class="c1">// We may get the same fruit multiple times in a row.</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">randomFruit</span><span class="p">;</span>
@@ -11280,15 +11364,15 @@ and <code class="docutils literal notranslate"><span class="pre">to</span></code
 </div>
 </div></div>
 <p>To prevent the same fruit from being picked more than once in a row, we can add
-more logic to this method:</p>
+more logic to the above method. In this case, we can't use
+<a class="reference internal" href="../../classes/class_array.html#class-array-method-pick-random"><span class="std std-ref">Array.pick_random</span></a> since it lacks a way to
+prevent repetition:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-8-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-8-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-8-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-8-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-8-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-8-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">]</span>
 <span class="k">var</span><span class="w"> </span><span class="n">_last_fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
-
 <span class="w">    </span><span class="c1"># Pick 100 fruits randomly.</span>
 <span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">get_fruit</span><span class="p">())</span>
@@ -11297,7 +11381,7 @@ more logic to this method:</p>
 <span class="k">func</span><span class="w"> </span><span class="n">get_fruit</span><span class="p">():</span>
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">random_fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="nb">randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="o">.</span><span class="n">size</span><span class="p">()]</span>
 <span class="w">    </span><span class="k k-ControlFlow">while</span><span class="w"> </span><span class="n">random_fruit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_last_fruit</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># The last fruit was picked, try again until we get a different fruit.</span>
+<span class="w">        </span><span class="c1"># The last fruit was picked. Try again until we get a different fruit.</span>
 <span class="w">        </span><span class="n">random_fruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="nb">randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="o">.</span><span class="n">size</span><span class="p">()]</span>
 
 <span class="w">    </span><span class="c1"># Note: if the random element to pick is passed by reference,</span>
@@ -11315,8 +11399,6 @@ more logic to this method:</p>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
-
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Pick 100 fruits randomly.</span>
@@ -11329,7 +11411,7 @@ more logic to this method:</p>
 <span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
 <span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">randomFruit</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">_lastFruit</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// The last fruit was picked, try again until we get a different fruit.</span>
+<span class="w">        </span><span class="c1">// The last fruit was picked. Try again until we get a different fruit.</span>
 <span class="w">        </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -11347,7 +11429,7 @@ repetitive. Still, it doesn't prevent results from &quot;ping-ponging&quot; betw
 limited set of values. To prevent this, use the <a class="reference internal" href="#doc-random-number-generation-shuffle-bags"><span class="std std-ref">shuffle bag</span></a> pattern instead.</p>
 </section>
 <section id="get-a-random-dictionary-value">
-<h2>Get a random dictionary value<a class="headerlink" href="#get-a-random-dictionary-value" title="Permalink to this headline">¶</a></h2>
+<h2>Get a random dictionary value<a class="headerlink" href="#get-a-random-dictionary-value" title="Link to this heading"></a></h2>
 <p>We can apply similar logic from arrays to dictionaries as well:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-9-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-9-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button></div><div aria-labelledby="tab-9-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-9-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">metals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -11358,8 +11440,6 @@ limited set of values. To prevent this, use the <a class="reference internal" hr
 
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
-
 <span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">get_metal</span><span class="p">())</span>
 
@@ -11374,14 +11454,12 @@ limited set of values. To prevent this, use the <a class="reference internal" hr
 </div></div>
 </section>
 <section id="weighted-random-probability">
-<span id="doc-random-number-generation-weighted-random-probability"></span><h2>Weighted random probability<a class="headerlink" href="#weighted-random-probability" title="Permalink to this headline">¶</a></h2>
+<span id="doc-random-number-generation-weighted-random-probability"></span><h2>Weighted random probability<a class="headerlink" href="#weighted-random-probability" title="Link to this heading"></a></h2>
 <p>The <a class="reference internal" href="../../classes/class_%40globalscope.html#class-globalscope-method-randf"><span class="std std-ref">randf()</span></a> method returns a
 floating-point number between 0.0 and 1.0. We can use this to create a
 &quot;weighted&quot; probability where different outcomes have different likelihoods:</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-10-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-10-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-10-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-10-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-10-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-10-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
-
 <span class="w">    </span><span class="k k-ControlFlow">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">get_item_rarity</span><span class="p">())</span>
 
@@ -11402,8 +11480,6 @@ floating-point number between 0.0 and 1.0. We can use this to create a
 </div>
 </div><div aria-labelledby="tab-10-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-10-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
-
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetItemRarity</span><span class="p">());</span>
@@ -11421,7 +11497,7 @@ floating-point number between 0.0 and 1.0. We can use this to create a
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomFloat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.95f</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// 15% chance of being returned</span>
+<span class="w">        </span><span class="c1">// 15% chance of being returned.</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Uncommon&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">else</span>
@@ -11433,9 +11509,43 @@ floating-point number between 0.0 and 1.0. We can use this to create a
 </pre></div>
 </div>
 </div></div>
+<p>You can also get a weighted random <em>index</em> using the
+<a class="reference internal" href="../../classes/class_randomnumbergenerator.html#class-randomnumbergenerator-method-rand-weighted"><span class="std std-ref">rand_weighted()</span></a> method
+on a RandomNumberGenerator instance. This returns a random integer
+between 0 and the size of the array that is passed as a parameter. Each value in the
+array is a floating-point number that represents the <em>relative</em> likelihood that it
+will be returned as an index. A higher value means the value is more likely to be
+returned as an index, while a value of <code class="docutils literal notranslate"><span class="pre">0</span></code> means it will never be returned as an index.</p>
+<p>For example, if <code class="docutils literal notranslate"><span class="pre">[0.5,</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">2]</span></code> is passed as a parameter, then the method is twice
+as likely to return <code class="docutils literal notranslate"><span class="pre">3</span></code> (the index of the value <code class="docutils literal notranslate"><span class="pre">2</span></code>) and twice as unlikely to return
+<code class="docutils literal notranslate"><span class="pre">0</span></code> (the index of the value <code class="docutils literal notranslate"><span class="pre">0.5</span></code>) compared to the indices <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<p>Since the returned value matches the array's size, it can be used as an index to
+get a value from another array as follows:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-11-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-11-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-11-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-11-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prints a random element using the weighted index that is returned by `rand_weighted()`.</span>
+<span class="c1"># Here, &quot;apple&quot; will be returned twice as rarely as &quot;orange&quot; and &quot;pear&quot;.</span>
+<span class="c1"># &quot;banana&quot; is twice as common as &quot;orange&quot; and &quot;pear&quot;, and four times as common as &quot;apple&quot;.</span>
+<span class="k">var</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">]</span>
+<span class="k">var</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
+
+<span class="k">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">rand_weighted</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random element using the weighted index that is returned by `RandWeighted()`.</span>
+<span class="c1">// Here, &quot;apple&quot; will be returned twice as rarely as &quot;orange&quot; and &quot;pear&quot;.</span>
+<span class="c1">// &quot;banana&quot; is twice as common as &quot;orange&quot; and &quot;pear&quot;, and four times as common as &quot;apple&quot;.</span>
+<span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="kt">float</span><span class="p">[]</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">};</span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="p">();</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="n">random</span><span class="p">.</span><span class="n">RandWeighted</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]);</span>
+</pre></div>
+</div>
+</div></div>
 </section>
 <section id="better-randomness-using-shuffle-bags">
-<span id="doc-random-number-generation-shuffle-bags"></span><h2>&quot;Better&quot; randomness using shuffle bags<a class="headerlink" href="#better-randomness-using-shuffle-bags" title="Permalink to this headline">¶</a></h2>
+<span id="doc-random-number-generation-shuffle-bags"></span><h2>&quot;Better&quot; randomness using shuffle bags<a class="headerlink" href="#better-randomness-using-shuffle-bags" title="Link to this heading"></a></h2>
 <p>Taking the same example as above, we would like to pick fruits at random.
 However, relying on random number generation every time a fruit is selected can
 lead to a less <em>uniform</em> distribution. If the player is lucky (or unlucky), they
@@ -11449,7 +11559,6 @@ ends up empty. When that happens, you reinitialize it to its default value:</p>
 
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
 <span class="w">    </span><span class="n">_fruits_full</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="o">.</span><span class="n">duplicate</span><span class="p">()</span>
 <span class="w">    </span><span class="n">_fruits</span><span class="o">.</span><span class="n">shuffle</span><span class="p">()</span>
 
@@ -11476,7 +11585,7 @@ the array is now empty. When the array is empty, we reset it back to its default
 value, making it possible to have the same fruit again, but only once.</p>
 </section>
 <section id="random-noise">
-<h2>Random noise<a class="headerlink" href="#random-noise" title="Permalink to this headline">¶</a></h2>
+<h2>Random noise<a class="headerlink" href="#random-noise" title="Link to this heading"></a></h2>
 <p>The random number generation shown above can show its limits when you need a
 value that <em>slowly</em> changes depending on the input. The input can be a position,
 time, or anything else.</p>
@@ -11485,10 +11594,9 @@ especially popular in procedural generation to generate realistic-looking
 terrain. Redot provides <a class="reference internal" href="../../classes/class_fastnoiselite.html#class-fastnoiselite"><span class="std std-ref">FastNoiseLite</span></a> for this, which supports
 1D, 2D and 3D noise. Here's an example with 1D noise:</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-11-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-11-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-11-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-11-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">_noise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-12-R0RTY3JpcHQ=" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-12-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tab" tabindex="0">GDScript</button><button aria-controls="panel-12-QyM=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-12-QyM=" name="QyM=" role="tab" tabindex="-1">C#</button></div><div aria-labelledby="tab-12-R0RTY3JpcHQ=" class="sphinx-tabs-panel code-tab group-tab" id="panel-12-R0RTY3JpcHQ=" name="R0RTY3JpcHQ=" role="tabpanel" tabindex="0"><div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">var</span><span class="w"> </span><span class="n">_noise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="o">.</span><span class="n">new</span><span class="p">()</span>
 
 <span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
-<span class="w">    </span><span class="nb">randomize</span><span class="p">()</span>
 <span class="w">    </span><span class="c1"># Configure the FastNoiseLite instance.</span>
 <span class="w">    </span><span class="n">_noise</span><span class="o">.</span><span class="n">noise_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="o">.</span><span class="n">NoiseType</span><span class="o">.</span><span class="n">TYPE_SIMPLEX_SMOOTH</span>
 <span class="w">    </span><span class="n">_noise</span><span class="o">.</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">randi</span><span class="p">()</span>
@@ -11501,11 +11609,10 @@ terrain. Redot provides <a class="reference internal" href="../../classes/class_
 <span class="w">        </span><span class="nb">print</span><span class="p">(</span><span class="n">_noise</span><span class="o">.</span><span class="n">get_noise_1d</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-11-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="w"> </span><span class="n">_noise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="p">();</span>
+</div><div aria-labelledby="tab-12-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-12-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="w"> </span><span class="n">_noise</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="p">();</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Randomize</span><span class="p">();</span>
 <span class="w">    </span><span class="c1">// Configure the FastNoiseLite instance.</span>
 <span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">NoiseType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseTypeEnum</span><span class="p">.</span><span class="n">SimplexSmooth</span><span class="p">;</span>
 <span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">Seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">();</span>
@@ -11522,7 +11629,7 @@ terrain. Redot provides <a class="reference internal" href="../../classes/class_
 </div></div>
 </section>
 <section id="cryptographically-secure-pseudorandom-number-generation">
-<h2>Cryptographically secure pseudorandom number generation<a class="headerlink" href="#cryptographically-secure-pseudorandom-number-generation" title="Permalink to this headline">¶</a></h2>
+<h2>Cryptographically secure pseudorandom number generation<a class="headerlink" href="#cryptographically-secure-pseudorandom-number-generation" title="Link to this heading"></a></h2>
 <p>So far, the approaches mentioned above are <strong>not</strong> suitable for
 <em>cryptographically secure</em> pseudorandom number generation (CSPRNG). This is fine
 for games, but this is not sufficient for scenarios where encryption,

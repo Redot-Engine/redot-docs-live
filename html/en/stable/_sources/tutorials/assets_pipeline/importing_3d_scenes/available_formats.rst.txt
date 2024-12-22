@@ -156,7 +156,9 @@ the built-in Collada support may still work for simple scenes without animation.
 
 For complex scenes or scenes that contain animations, Redot provides a
 `Blender plugin <https://github.com/redot-engine/collada-exporter>`_
-that will correctly export COLLADA scenes for use in Redot.
+that will correctly export COLLADA scenes for use in Redot. This plugin is
+not maintained or supported in Redot 4.x, but may still work depending on your
+Redot and Blender versions.
 
 Importing OBJ files in Redot
 ----------------------------

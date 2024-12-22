@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="2D particle systems" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/2d/particle_systems_2d.html" />
@@ -11,44 +13,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>2D particle systems &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/2d/particle_systems_2d.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/2d/particle_systems_2d.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/2d/particle_systems_2d.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -65,12 +46,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -135,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -190,17 +176,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -518,19 +514,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -685,6 +683,19 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">2D</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -969,9 +980,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1087,6 +1110,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1552,7 +1582,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1562,8 +1592,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1740,7 +1776,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2269,6 +2305,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2314,7 +2351,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2479,9 +2516,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2497,9 +2551,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2508,6 +2563,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2539,12 +2595,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2581,7 +2638,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2626,6 +2700,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2987,7 +3062,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -11022,7 +11097,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">2D</a></li>
       <li class="breadcrumb-item active">2D particle systems</li>
 	</ul>
@@ -11084,9 +11159,9 @@
 
   
   <section id="d-particle-systems">
-<span id="doc-particle-systems-2d"></span><h1>2D particle systems<a class="headerlink" href="#d-particle-systems" title="Permalink to this headline">¶</a></h1>
+<span id="doc-particle-systems-2d"></span><h1>2D particle systems<a class="headerlink" href="#d-particle-systems" title="Link to this heading"></a></h1>
 <section id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading"></a></h2>
 <p>Particle systems are used to simulate complex physical effects,
 such as sparks, fire, magic particles, smoke, mist, etc.</p>
 <p>The idea is that a &quot;particle&quot; is emitted at a fixed interval and with a
@@ -11096,7 +11171,7 @@ organic look is the &quot;randomness&quot; associated with each parameter. In
 essence, creating a particle system means setting base physics
 parameters and then adding randomness to them.</p>
 <section id="particle-nodes">
-<h3>Particle nodes<a class="headerlink" href="#particle-nodes" title="Permalink to this headline">¶</a></h3>
+<h3>Particle nodes<a class="headerlink" href="#particle-nodes" title="Link to this heading"></a></h3>
 <p>Redot provides two different nodes for 2D particles, <a class="reference internal" href="../../classes/class_gpuparticles2d.html#class-gpuparticles2d"><span class="std std-ref">GPUParticles2D</span></a>
 and <a class="reference internal" href="../../classes/class_cpuparticles2d.html#class-cpuparticles2d"><span class="std std-ref">CPUParticles2D</span></a>. GPUParticles2D is more advanced and uses the
 GPU to process particle effects. CPUParticles2D is a CPU-driven option with
@@ -11116,7 +11191,7 @@ and that there is a warning icon next to your GPUParticles2D node in the scene d
 is because the node needs a ParticleProcessMaterial to function.</p>
 </section>
 <section id="particleprocessmaterial">
-<h3>ParticleProcessMaterial<a class="headerlink" href="#particleprocessmaterial" title="Permalink to this headline">¶</a></h3>
+<h3>ParticleProcessMaterial<a class="headerlink" href="#particleprocessmaterial" title="Link to this heading"></a></h3>
 <p>To add a process material to your particles node, go to <code class="docutils literal notranslate"><span class="pre">Process</span> <span class="pre">Material</span></code> in
 your inspector panel. Click on the box next to <code class="docutils literal notranslate"><span class="pre">Material</span></code>, and from the dropdown
 menu select <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">ParticleProcessMaterial</span></code>.</p>
@@ -11126,7 +11201,7 @@ white points downward.</p>
 <img alt="../../_images/particles1.png" src="../../_images/particles1.png" />
 </section>
 <section id="texture">
-<h3>Texture<a class="headerlink" href="#texture" title="Permalink to this headline">¶</a></h3>
+<h3>Texture<a class="headerlink" href="#texture" title="Link to this heading"></a></h3>
 <p>A particle system can use a single texture or an animation <em>flipbook</em>. A
 flipbook is a texture that contains several frames of animation that can be
 played back, or chosen at random during emission. This is equivalent to a
@@ -11134,7 +11209,7 @@ spritesheet for particles.</p>
 <p>The texture is set via the <strong>Texture</strong> property:</p>
 <img alt="../../_images/particles2.png" src="../../_images/particles2.png" />
 <section id="using-an-animation-flipbook">
-<span id="doc-particle-systems-2d-using-flipbook"></span><h4>Using an animation flipbook<a class="headerlink" href="#using-an-animation-flipbook" title="Permalink to this headline">¶</a></h4>
+<span id="doc-particle-systems-2d-using-flipbook"></span><h4>Using an animation flipbook<a class="headerlink" href="#using-an-animation-flipbook" title="Link to this heading"></a></h4>
 <p>Particle flipbooks are suited to reproduce complex effects such as smoke, fire,
 explosions. They can also be used to introduce random texture variation, by
 making every particle use a different texture. You can find existing particle
@@ -11142,17 +11217,18 @@ flipbook images online, or pre-render them using external tools such as <a class
 <figure class="align-center" id="id1">
 <img alt="Example of a particle system that uses a flipbook texture" src="../../_images/particles_flipbook_result.webp" />
 <figcaption>
-<p><span class="caption-text">Example of a particle system that uses a flipbook texture</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Example of a particle system that uses a flipbook texture</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Using an animation flipbook requires additional configuration compared to a
 single texture. For demonstration purposes, we'll use this texture with 5
 columns and 7 rows (right-click and choose <strong>Save as…</strong>):</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/particles_flipbook_example.webp"><img alt="Particle flipbook texture example" src="../../_images/particles_flipbook_example.webp" style="width: 240px;" /></a>
+<a class="reference internal image-reference" href="../../_images/particles_flipbook_example.webp"><img alt="Particle flipbook texture example" src="../../_images/particles_flipbook_example.webp" style="width: 240px;" />
+</a>
 <figcaption>
 <p><span class="caption-text">Credit: <a class="reference external" href="https://opengameart.org/content/alot-of-particles-indispersal-special-effect-alotofparticles30">JoesAlotofthings</a>
-(CC BY 4.0)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+(CC BY 4.0)</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>To use an animation flipbook, you must create a new CanvasItemMaterial in the
@@ -11160,7 +11236,7 @@ Material section of the GPUParticles2D (or CPUParticles2D) node:</p>
 <figure class="align-center" id="id3">
 <img alt="Creating a CanvasItemMaterial at the bottom of the particles node inspector" src="../../_images/particles_flipbook_create_canvasitemmaterial.webp" />
 <figcaption>
-<p><span class="caption-text">Creating a CanvasItemMaterial at the bottom of the particles node inspector</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Creating a CanvasItemMaterial at the bottom of the particles node inspector</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>In this CanvasItemMaterial, enable <strong>Particle Animation</strong> and set <strong>H Frames</strong> and <strong>V Frames</strong>
@@ -11168,7 +11244,7 @@ to the number of columns and rows present in your flipbook texture:</p>
 <figure class="align-center" id="id4">
 <img alt="Configuring the CanvasItemMaterial for the example flipbook texture" src="../../_images/particles_flipbook_configure_canvasitemmaterial.webp" />
 <figcaption>
-<p><span class="caption-text">Configuring the CanvasItemMaterial for the example flipbook texture</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Configuring the CanvasItemMaterial for the example flipbook texture</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Once this is done, the <a class="reference internal" href="#doc-particle-systems-2d-animation"><span class="std std-ref">Animation section</span></a>
@@ -11186,9 +11262,9 @@ this can be done using the <strong>Color &gt; Color to Alpha</strong> menu.</p>
 </section>
 </section>
 <section id="time-parameters">
-<h2>Time parameters<a class="headerlink" href="#time-parameters" title="Permalink to this headline">¶</a></h2>
+<h2>Time parameters<a class="headerlink" href="#time-parameters" title="Link to this heading"></a></h2>
 <section id="lifetime">
-<h3>Lifetime<a class="headerlink" href="#lifetime" title="Permalink to this headline">¶</a></h3>
+<h3>Lifetime<a class="headerlink" href="#lifetime" title="Link to this heading"></a></h3>
 <p>The time in seconds that every particle will stay alive. When lifetime
 ends, a new particle is created to replace it.</p>
 <p>Lifetime: 0.5</p>
@@ -11197,12 +11273,12 @@ ends, a new particle is created to replace it.</p>
 <img alt="../../_images/paranim15.gif" src="../../_images/paranim15.gif" />
 </section>
 <section id="one-shot">
-<h3>One Shot<a class="headerlink" href="#one-shot" title="Permalink to this headline">¶</a></h3>
+<h3>One Shot<a class="headerlink" href="#one-shot" title="Link to this heading"></a></h3>
 <p>When enabled, a GPUParticles2D node will emit all of its particles once
 and then never again.</p>
 </section>
 <section id="preprocess">
-<h3>Preprocess<a class="headerlink" href="#preprocess" title="Permalink to this headline">¶</a></h3>
+<h3>Preprocess<a class="headerlink" href="#preprocess" title="Link to this heading"></a></h3>
 <p>Particle systems begin with zero particles emitted, then start emitting.
 This can be an inconvenience when loading a scene and systems like
 a torch, mist, etc. begin emitting the moment you enter. Preprocess is
@@ -11210,13 +11286,13 @@ used to let the system process a given number of seconds before it is
 actually drawn the first time.</p>
 </section>
 <section id="speed-scale">
-<h3>Speed Scale<a class="headerlink" href="#speed-scale" title="Permalink to this headline">¶</a></h3>
+<h3>Speed Scale<a class="headerlink" href="#speed-scale" title="Link to this heading"></a></h3>
 <p>The speed scale has a default value of <code class="docutils literal notranslate"><span class="pre">1</span></code> and is used to adjust the
 speed of a particle system. Lowering the value will make the particles
 slower while increasing the value will make the particles much faster.</p>
 </section>
 <section id="explosiveness">
-<h3>Explosiveness<a class="headerlink" href="#explosiveness" title="Permalink to this headline">¶</a></h3>
+<h3>Explosiveness<a class="headerlink" href="#explosiveness" title="Link to this heading"></a></h3>
 <p>If lifetime is <code class="docutils literal notranslate"><span class="pre">1</span></code> and there are 10 particles, it means a particle
 will be emitted every 0.1 seconds. The explosiveness parameter changes
 this, and forces particles to be emitted all together. Ranges are:</p>
@@ -11229,7 +11305,7 @@ creating explosions or sudden bursts of particles:</p>
 <img alt="../../_images/paranim18.gif" src="../../_images/paranim18.gif" />
 </section>
 <section id="randomness">
-<h3>Randomness<a class="headerlink" href="#randomness" title="Permalink to this headline">¶</a></h3>
+<h3>Randomness<a class="headerlink" href="#randomness" title="Link to this heading"></a></h3>
 <p>All physics parameters can be randomized. Random values range from <code class="docutils literal notranslate"><span class="pre">0</span></code> to
 <code class="docutils literal notranslate"><span class="pre">1</span></code>. The formula to randomize a parameter is:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">initial_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param_value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">param_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">randomness</span>
@@ -11237,7 +11313,7 @@ creating explosions or sudden bursts of particles:</p>
 </div>
 </section>
 <section id="fixed-fps">
-<h3>Fixed FPS<a class="headerlink" href="#fixed-fps" title="Permalink to this headline">¶</a></h3>
+<h3>Fixed FPS<a class="headerlink" href="#fixed-fps" title="Link to this heading"></a></h3>
 <p>This setting can be used to set the particle system to render at a fixed
 FPS. For instance, changing the value to <code class="docutils literal notranslate"><span class="pre">2</span></code> will make the particles render
 at 2 frames per second. Note this does not slow down the particle system itself.</p>
@@ -11249,14 +11325,14 @@ As a workaround, disable physics interpolation for the particles node by setting
 </div>
 </section>
 <section id="fract-delta">
-<h3>Fract Delta<a class="headerlink" href="#fract-delta" title="Permalink to this headline">¶</a></h3>
+<h3>Fract Delta<a class="headerlink" href="#fract-delta" title="Link to this heading"></a></h3>
 <p>This can be used to turn Fract Delta on or off.</p>
 </section>
 </section>
 <section id="drawing-parameters">
-<h2>Drawing parameters<a class="headerlink" href="#drawing-parameters" title="Permalink to this headline">¶</a></h2>
+<h2>Drawing parameters<a class="headerlink" href="#drawing-parameters" title="Link to this heading"></a></h2>
 <section id="visibility-rect">
-<h3>Visibility Rect<a class="headerlink" href="#visibility-rect" title="Permalink to this headline">¶</a></h3>
+<h3>Visibility Rect<a class="headerlink" href="#visibility-rect" title="Link to this heading"></a></h3>
 <p>The visibility rectangle controls the visibility of the particles on screen. If this rectangle is outside of the viewport, the engine will not render the particles on screen.</p>
 <p>The rectangle's <code class="docutils literal notranslate"><span class="pre">W</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code> properties respectively control its Width and its Height.
 The <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> properties control the position of the upper-left
@@ -11265,7 +11341,7 @@ corner of the rectangle, relative to the particle emitter.</p>
 <p>You can control the emit duration with the <code class="docutils literal notranslate"><span class="pre">Generation</span> <span class="pre">Time</span> <span class="pre">(sec)</span></code> option. The maximum value is 25 seconds. If you need more time for your particles to move around, you can temporarily change the <code class="docutils literal notranslate"><span class="pre">preprocess</span></code> duration on the Particles2D node.</p>
 </section>
 <section id="local-coords">
-<h3>Local Coords<a class="headerlink" href="#local-coords" title="Permalink to this headline">¶</a></h3>
+<h3>Local Coords<a class="headerlink" href="#local-coords" title="Link to this heading"></a></h3>
 <p>By default this option is on, and it means that the space that particles
 are emitted to is relative to the node. If the node is moved, all
 particles are moved with it:</p>
@@ -11275,16 +11351,16 @@ node is moved, already emitted particles are not affected:</p>
 <img alt="../../_images/paranim21.gif" src="../../_images/paranim21.gif" />
 </section>
 <section id="draw-order">
-<h3>Draw Order<a class="headerlink" href="#draw-order" title="Permalink to this headline">¶</a></h3>
+<h3>Draw Order<a class="headerlink" href="#draw-order" title="Link to this heading"></a></h3>
 <p>This controls the order in which individual particles are drawn. <code class="docutils literal notranslate"><span class="pre">Index</span></code>
 means particles are drawn according to their emission order (default).
 <code class="docutils literal notranslate"><span class="pre">Lifetime</span></code> means they are drawn in order of remaining lifetime.</p>
 </section>
 </section>
 <section id="particleprocessmaterial-settings">
-<h2>ParticleProcessMaterial settings<a class="headerlink" href="#particleprocessmaterial-settings" title="Permalink to this headline">¶</a></h2>
+<h2>ParticleProcessMaterial settings<a class="headerlink" href="#particleprocessmaterial-settings" title="Link to this heading"></a></h2>
 <section id="direction">
-<h3>Direction<a class="headerlink" href="#direction" title="Permalink to this headline">¶</a></h3>
+<h3>Direction<a class="headerlink" href="#direction" title="Link to this heading"></a></h3>
 <p>This is the base direction at which particles emit. The default is
 <code class="docutils literal notranslate"><span class="pre">Vector3(1,</span> <span class="pre">0,</span> <span class="pre">0)</span></code> which makes particles emit to the right. However,
 with the default gravity settings, particles will go straight down.</p>
@@ -11295,7 +11371,7 @@ particles emit toward the right, then go down because of gravity.</p>
 <img alt="../../_images/direction2.png" src="../../_images/direction2.png" />
 </section>
 <section id="spread">
-<h3>Spread<a class="headerlink" href="#spread" title="Permalink to this headline">¶</a></h3>
+<h3>Spread<a class="headerlink" href="#spread" title="Link to this heading"></a></h3>
 <p>This parameter is the angle in degrees which will be randomly added in
 either direction to the base <code class="docutils literal notranslate"><span class="pre">Direction</span></code>. A spread of <code class="docutils literal notranslate"><span class="pre">180</span></code> will emit
 in all directions (+/- 180). For spread to do anything the &quot;Initial Velocity&quot;
@@ -11303,82 +11379,82 @@ parameter must be greater than 0.</p>
 <img alt="../../_images/paranim3.gif" src="../../_images/paranim3.gif" />
 </section>
 <section id="flatness">
-<h3>Flatness<a class="headerlink" href="#flatness" title="Permalink to this headline">¶</a></h3>
+<h3>Flatness<a class="headerlink" href="#flatness" title="Link to this heading"></a></h3>
 <p>This property is only useful for 3D particles.</p>
 </section>
 <section id="gravity">
-<h3>Gravity<a class="headerlink" href="#gravity" title="Permalink to this headline">¶</a></h3>
+<h3>Gravity<a class="headerlink" href="#gravity" title="Link to this heading"></a></h3>
 <p>The gravity applied to every particle.</p>
 <img alt="../../_images/paranim7.gif" src="../../_images/paranim7.gif" />
 </section>
 <section id="initial-velocity">
-<h3>Initial Velocity<a class="headerlink" href="#initial-velocity" title="Permalink to this headline">¶</a></h3>
+<h3>Initial Velocity<a class="headerlink" href="#initial-velocity" title="Link to this heading"></a></h3>
 <p>Initial velocity is the speed at which particles will be emitted (in
 pixels/sec). Speed might later be modified by gravity or other
 accelerations (as described further below).</p>
 <img alt="../../_images/paranim4.gif" src="../../_images/paranim4.gif" />
 </section>
 <section id="angular-velocity">
-<h3>Angular Velocity<a class="headerlink" href="#angular-velocity" title="Permalink to this headline">¶</a></h3>
+<h3>Angular Velocity<a class="headerlink" href="#angular-velocity" title="Link to this heading"></a></h3>
 <p>Angular velocity is the initial angular velocity applied to particles.</p>
 </section>
 <section id="spin-velocity">
-<h3>Spin Velocity<a class="headerlink" href="#spin-velocity" title="Permalink to this headline">¶</a></h3>
+<h3>Spin Velocity<a class="headerlink" href="#spin-velocity" title="Link to this heading"></a></h3>
 <p>Spin velocity is the speed at which particles turn around their center
 (in degrees/sec).</p>
 <img alt="../../_images/paranim5.gif" src="../../_images/paranim5.gif" />
 </section>
 <section id="orbit-velocity">
-<h3>Orbit Velocity<a class="headerlink" href="#orbit-velocity" title="Permalink to this headline">¶</a></h3>
+<h3>Orbit Velocity<a class="headerlink" href="#orbit-velocity" title="Link to this heading"></a></h3>
 <p>Orbit velocity is used to make particles turn around their center.</p>
 <img alt="../../_images/paranim6.gif" src="../../_images/paranim6.gif" />
 </section>
 <section id="linear-acceleration">
-<h3>Linear Acceleration<a class="headerlink" href="#linear-acceleration" title="Permalink to this headline">¶</a></h3>
+<h3>Linear Acceleration<a class="headerlink" href="#linear-acceleration" title="Link to this heading"></a></h3>
 <p>The linear acceleration applied to each particle.</p>
 </section>
 <section id="radial-acceleration">
-<h3>Radial Acceleration<a class="headerlink" href="#radial-acceleration" title="Permalink to this headline">¶</a></h3>
+<h3>Radial Acceleration<a class="headerlink" href="#radial-acceleration" title="Link to this heading"></a></h3>
 <p>If this acceleration is positive, particles are accelerated away from
 the center. If negative, they are absorbed towards it.</p>
 <img alt="../../_images/paranim8.gif" src="../../_images/paranim8.gif" />
 </section>
 <section id="tangential-acceleration">
-<h3>Tangential Acceleration<a class="headerlink" href="#tangential-acceleration" title="Permalink to this headline">¶</a></h3>
+<h3>Tangential Acceleration<a class="headerlink" href="#tangential-acceleration" title="Link to this heading"></a></h3>
 <p>This acceleration will use the tangent vector to the center. Combining
 with radial acceleration can do nice effects.</p>
 <img alt="../../_images/paranim9.gif" src="../../_images/paranim9.gif" />
 </section>
 <section id="damping">
-<h3>Damping<a class="headerlink" href="#damping" title="Permalink to this headline">¶</a></h3>
+<h3>Damping<a class="headerlink" href="#damping" title="Link to this heading"></a></h3>
 <p>Damping applies friction to the particles, forcing them to stop. It is
 especially useful for sparks or explosions, which usually begin with a
 high linear velocity and then stop as they fade.</p>
 <img alt="../../_images/paranim10.gif" src="../../_images/paranim10.gif" />
 </section>
 <section id="angle">
-<h3>Angle<a class="headerlink" href="#angle" title="Permalink to this headline">¶</a></h3>
+<h3>Angle<a class="headerlink" href="#angle" title="Link to this heading"></a></h3>
 <p>Determines the initial angle of the particle (in degrees). This parameter
 is mostly useful randomized.</p>
 <img alt="../../_images/paranim11.gif" src="../../_images/paranim11.gif" />
 </section>
 <section id="scale">
-<h3>Scale<a class="headerlink" href="#scale" title="Permalink to this headline">¶</a></h3>
+<h3>Scale<a class="headerlink" href="#scale" title="Link to this heading"></a></h3>
 <p>Determines the initial scale of the particles.</p>
 <img alt="../../_images/paranim12.gif" src="../../_images/paranim12.gif" />
 </section>
 <section id="color">
-<h3>Color<a class="headerlink" href="#color" title="Permalink to this headline">¶</a></h3>
+<h3>Color<a class="headerlink" href="#color" title="Link to this heading"></a></h3>
 <p>Used to change the color of the particles being emitted.</p>
 </section>
 <section id="hue-variation">
-<h3>Hue Variation<a class="headerlink" href="#hue-variation" title="Permalink to this headline">¶</a></h3>
+<h3>Hue Variation<a class="headerlink" href="#hue-variation" title="Link to this heading"></a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">Variation</span></code> value sets the initial hue variation applied to each
 particle. The <code class="docutils literal notranslate"><span class="pre">Variation</span> <span class="pre">Random</span></code> value controls the hue variation
 randomness ratio.</p>
 </section>
 <section id="animation">
-<span id="doc-particle-systems-2d-animation"></span><h3>Animation<a class="headerlink" href="#animation" title="Permalink to this headline">¶</a></h3>
+<span id="doc-particle-systems-2d-animation"></span><h3>Animation<a class="headerlink" href="#animation" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Particle flipbook animation is only effective if the CanvasItemMaterial used
@@ -11389,7 +11465,7 @@ on the GPUParticles2D or CPUParticles2D node has been
 <figure class="align-center" id="id5">
 <img alt="Setting up particle animation for playback during the particle's lifetime" src="../../_images/particles_flipbook_configure_animation_speed.webp" />
 <figcaption>
-<p><span class="caption-text">Setting up particle animation for playback during the particle's lifetime</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Setting up particle animation for playback during the particle's lifetime</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>By default, looping is disabled. If the particle is done playing before its
@@ -11414,7 +11490,7 @@ to 1 instead:</p>
 <figure class="align-center" id="id6">
 <img alt="Setting up particle animation for random offset on emission" src="../../_images/particles_flipbook_configure_animation_offset.webp" />
 <figcaption>
-<p><span class="caption-text">Setting up particle animation for random offset on emission</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Setting up particle animation for random offset on emission</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Note that the GPUParticles2D node's <strong>Fixed FPS</strong> also affects animation
@@ -11425,7 +11501,7 @@ the flipbook animation (see above for the formula).</p>
 </section>
 </section>
 <section id="emission-shapes">
-<h2>Emission Shapes<a class="headerlink" href="#emission-shapes" title="Permalink to this headline">¶</a></h2>
+<h2>Emission Shapes<a class="headerlink" href="#emission-shapes" title="Link to this heading"></a></h2>
 <p>ParticleProcessMaterials allow you to set an Emission Mask, which dictates
 the area and direction in which particles are emitted.
 These can be generated from textures in your project.</p>
@@ -11438,7 +11514,7 @@ A &quot;Particles&quot; menu should appear in the Toolbar:</p>
 <img alt="../../_images/emission_shapes3.png" src="../../_images/emission_shapes3.png" />
 <p>A dialog box with several settings will appear.</p>
 <section id="emission-mask">
-<h3>Emission Mask<a class="headerlink" href="#emission-mask" title="Permalink to this headline">¶</a></h3>
+<h3>Emission Mask<a class="headerlink" href="#emission-mask" title="Link to this heading"></a></h3>
 <p>Three types of emission masks can be generated from a texture:</p>
 <ul class="simple">
 <li><p>Solid Pixels: Particles will spawn from any area of the texture,
@@ -11458,7 +11534,7 @@ be set in order to utilize this.</p></li>
 <img alt="../../_images/emission_mask_directed_border.gif" src="../../_images/emission_mask_directed_border.gif" />
 </section>
 <section id="emission-colors">
-<h3>Emission Colors<a class="headerlink" href="#emission-colors" title="Permalink to this headline">¶</a></h3>
+<h3>Emission Colors<a class="headerlink" href="#emission-colors" title="Link to this heading"></a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Capture</span> <span class="pre">from</span> <span class="pre">Pixel</span></code> will cause the particles to inherit the color of the mask at their spawn points.</p>
 <p>Once you click &quot;OK&quot;, the mask will be generated and set to the ParticleProcessMaterial, under the <code class="docutils literal notranslate"><span class="pre">Emission</span> <span class="pre">Shape</span></code> section:</p>
 <img alt="../../_images/emission_shapes4.png" src="../../_images/emission_shapes4.png" />

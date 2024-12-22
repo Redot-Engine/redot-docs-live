@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Multiple resolutions" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/rendering/multiple_resolutions.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Multiple resolutions &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/clipboard.min.js"></script>
-        <script src="../../_static/copybutton.js"></script>
-        <script src="../../_static/js/custom.js?7"></script>
-    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/rendering/multiple_resolutions.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/rendering/multiple_resolutions.html" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/rendering/multiple_resolutions.html" />
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html">
-            <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Rendering</a></li>
       <li class="breadcrumb-item active">Multiple resolutions</li>
 	</ul>
@@ -11081,9 +11156,9 @@
 
   
   <section id="multiple-resolutions">
-<span id="doc-multiple-resolutions"></span><h1>Multiple resolutions<a class="headerlink" href="#multiple-resolutions" title="Permalink to this headline">¶</a></h1>
+<span id="doc-multiple-resolutions"></span><h1>Multiple resolutions<a class="headerlink" href="#multiple-resolutions" title="Link to this heading"></a></h1>
 <section id="the-problem-of-multiple-resolutions">
-<h2>The problem of multiple resolutions<a class="headerlink" href="#the-problem-of-multiple-resolutions" title="Permalink to this headline">¶</a></h2>
+<h2>The problem of multiple resolutions<a class="headerlink" href="#the-problem-of-multiple-resolutions" title="Link to this heading"></a></h2>
 <p>Developers often have trouble understanding how to best support multiple
 resolutions in their games. For desktop and console games, this is more or less
 straightforward, as most screen aspect ratios are 16:9 and resolutions
@@ -11107,7 +11182,7 @@ much, it is no longer possible to design UIs for every specific screen.
 Another method must be used.</p>
 </section>
 <section id="one-size-fits-all">
-<h2>One size fits all<a class="headerlink" href="#one-size-fits-all" title="Permalink to this headline">¶</a></h2>
+<h2>One size fits all<a class="headerlink" href="#one-size-fits-all" title="Link to this heading"></a></h2>
 <p>The most common approach is to use a single <em>base</em> resolution and
 then fit it to everything else. This resolution is how most players are expected
 to play the game (given their hardware). For mobile, Google has useful <a class="reference external" href="https://developer.android.com/about/dashboards">stats</a> online, and for desktop,
@@ -11123,7 +11198,7 @@ handle scaling for different sizes and aspect ratios.</p>
 </div>
 </section>
 <section id="base-size">
-<h2>Base size<a class="headerlink" href="#base-size" title="Permalink to this headline">¶</a></h2>
+<h2>Base size<a class="headerlink" href="#base-size" title="Link to this heading"></a></h2>
 <p>A base size for the window can be specified in the Project Settings under
 <strong>Display → Window</strong>.</p>
 <img alt="../../_images/screenres.webp" src="../../_images/screenres.webp" />
@@ -11168,7 +11243,7 @@ time this is done.</p>
 </div>
 </section>
 <section id="resizing">
-<h2>Resizing<a class="headerlink" href="#resizing" title="Permalink to this headline">¶</a></h2>
+<h2>Resizing<a class="headerlink" href="#resizing" title="Link to this heading"></a></h2>
 <p>There are several types of devices, with several types of screens, which
 in turn have different pixel density and resolutions. Handling all of
 them can be a lot of work, so Redot tries to make the developer's life a
@@ -11183,11 +11258,11 @@ code and guessing, so Redot provides a set of parameters in the
 project settings to handle multiple resolutions.</p>
 </section>
 <section id="stretch-settings">
-<h2>Stretch settings<a class="headerlink" href="#stretch-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Stretch settings<a class="headerlink" href="#stretch-settings" title="Link to this heading"></a></h2>
 <p>Stretch settings are located in the project settings and provide several options:</p>
 <img alt="../../_images/stretchsettings.webp" src="../../_images/stretchsettings.webp" />
 <section id="stretch-mode">
-<h3>Stretch Mode<a class="headerlink" href="#stretch-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Stretch Mode<a class="headerlink" href="#stretch-mode" title="Link to this heading"></a></h3>
 <p>The <strong>Stretch Mode</strong> setting defines how the base size is stretched to fit
 the resolution of the window or screen. The animations below use a &quot;base
 size&quot; of just 16×9 pixels to demonstrate the effect of different stretch
@@ -11224,7 +11299,7 @@ account).</p>
 and the <a class="reference internal" href="../../classes/class_window.html#enum-window-contentscalemode"><span class="std std-ref">ContentScaleMode</span></a> enum).</p>
 </section>
 <section id="stretch-aspect">
-<h3>Stretch Aspect<a class="headerlink" href="#stretch-aspect" title="Permalink to this headline">¶</a></h3>
+<h3>Stretch Aspect<a class="headerlink" href="#stretch-aspect" title="Link to this heading"></a></h3>
 <p>The second setting is the stretch aspect. Note that this only takes effect if
 <strong>Stretch Mode</strong> is set to something other than <strong>Disabled</strong>.</p>
 <p>In the animations below, you will notice gray and black areas. The black
@@ -11296,7 +11371,7 @@ remember to set <strong>Display &gt; Window &gt; Handheld &gt; Orientation</stro
 and the <a class="reference internal" href="../../classes/class_window.html#enum-window-contentscaleaspect"><span class="std std-ref">ContentScaleAspect</span></a> enum).</p>
 </section>
 <section id="stretch-scale">
-<span id="doc-multiple-resolutions-stretch-scale"></span><h3>Stretch Scale<a class="headerlink" href="#stretch-scale" title="Permalink to this headline">¶</a></h3>
+<span id="doc-multiple-resolutions-stretch-scale"></span><h3>Stretch Scale<a class="headerlink" href="#stretch-scale" title="Link to this heading"></a></h3>
 <p>The <strong>Scale</strong> setting allows you to add an extra scaling factor on top of
 what the <strong>Stretch</strong> options above already provide. The default value of <code class="docutils literal notranslate"><span class="pre">1.0</span></code>
 means that no additional scaling occurs.</p>
@@ -11315,7 +11390,7 @@ by <strong>Scale</strong>. This makes pixels look larger and reduces rendering r
 <a class="reference internal" href="../../classes/class_window.html#class-window-property-content-scale-factor"><span class="std std-ref">Window.content_scale_factor</span></a>).</p>
 </section>
 <section id="stretch-scale-mode">
-<span id="doc-multiple-resolutions-stretch-scale-mode"></span><h3>Stretch Scale Mode<a class="headerlink" href="#stretch-scale-mode" title="Permalink to this headline">¶</a></h3>
+<span id="doc-multiple-resolutions-stretch-scale-mode"></span><h3>Stretch Scale Mode<a class="headerlink" href="#stretch-scale-mode" title="Link to this heading"></a></h3>
 <p>Since Redot 4.2, the <strong>Stretch Scale Mode</strong> setting allows you to constrain the
 automatically determined scale factor (as well as the manually specified
 <strong>Stretch Scale</strong> setting) to integer values. By default, this setting is set to
@@ -11329,7 +11404,7 @@ with the stretch scale mode set to <code class="docutils literal notranslate"><s
 <figure class="align-center" id="id1">
 <img alt="Fractional scaling example (incorrect pixel art appearance)" src="../../_images/multiple_resolutions_pixel_art_fractional_scaling.webp" />
 <figcaption>
-<p><span class="caption-text">Checkerboard doesn't look &quot;even&quot;. Line widths in the logo and text varies wildly.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Checkerboard doesn't look &quot;even&quot;. Line widths in the logo and text varies wildly.</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>This pixel art is also displayed with the <code class="docutils literal notranslate"><span class="pre">viewport</span></code> stretch mode, but the
@@ -11337,7 +11412,7 @@ stretch scale mode is set to <code class="docutils literal notranslate"><span cl
 <figure class="align-center" id="id2">
 <img alt="Integer scaling example (correct pixel art appearance)" src="../../_images/multiple_resolutions_pixel_art_integer_scaling.webp" />
 <figcaption>
-<p><span class="caption-text">Checkerboard looks perfectly even. Line widths are consistent.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Checkerboard looks perfectly even. Line widths are consistent.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>For example, if your viewport base size is 640×360 and the window size is 1366×768:</p>
@@ -11375,11 +11450,11 @@ use a smaller scale factor than expected.</p>
 </section>
 </section>
 <section id="common-use-case-scenarios">
-<h2>Common use case scenarios<a class="headerlink" href="#common-use-case-scenarios" title="Permalink to this headline">¶</a></h2>
+<h2>Common use case scenarios<a class="headerlink" href="#common-use-case-scenarios" title="Link to this heading"></a></h2>
 <p>The following settings are recommended to support multiple resolutions and aspect
 ratios well.</p>
 <section id="desktop-game">
-<h3>Desktop game<a class="headerlink" href="#desktop-game" title="Permalink to this headline">¶</a></h3>
+<h3>Desktop game<a class="headerlink" href="#desktop-game" title="Link to this heading"></a></h3>
 <p><strong>Non-pixel art:</strong></p>
 <ul class="simple">
 <li><p>Set the base window width to <code class="docutils literal notranslate"><span class="pre">1920</span></code> and window height to <code class="docutils literal notranslate"><span class="pre">1080</span></code>. If you have a
@@ -11424,7 +11499,7 @@ stretch mode.</p>
 </div>
 </section>
 <section id="mobile-game-in-landscape-mode">
-<h3>Mobile game in landscape mode<a class="headerlink" href="#mobile-game-in-landscape-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Mobile game in landscape mode<a class="headerlink" href="#mobile-game-in-landscape-mode" title="Link to this heading"></a></h3>
 <p>Redot is configured to use landscape mode by default. This means you don't need
 to change the display orientation project setting.</p>
 <ul class="simple">
@@ -11453,7 +11528,7 @@ base window height to <code class="docutils literal notranslate"><span class="pr
 </div>
 </section>
 <section id="mobile-game-in-portrait-mode">
-<h3>Mobile game in portrait mode<a class="headerlink" href="#mobile-game-in-portrait-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Mobile game in portrait mode<a class="headerlink" href="#mobile-game-in-portrait-mode" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Set the base window width to <code class="docutils literal notranslate"><span class="pre">720</span></code> and window height to <code class="docutils literal notranslate"><span class="pre">1280</span></code>.</p></li>
 <li><p>Alternatively, if you're targeting high-end devices primarily, set the base
@@ -11481,7 +11556,7 @@ base window height to <code class="docutils literal notranslate"><span class="pr
 </div>
 </section>
 <section id="non-game-application">
-<h3>Non-game application<a class="headerlink" href="#non-game-application" title="Permalink to this headline">¶</a></h3>
+<h3>Non-game application<a class="headerlink" href="#non-game-application" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Set the base window width and height to the smallest window size that you intend to target.
 This is not required, but this ensures that you design your UI with small window sizes in mind.</p></li>
@@ -11502,7 +11577,7 @@ allow for the OS to use its low-DPI fallback.</p>
 </section>
 </section>
 <section id="hidpi-support">
-<h2>hiDPI support<a class="headerlink" href="#hidpi-support" title="Permalink to this headline">¶</a></h2>
+<h2>hiDPI support<a class="headerlink" href="#hidpi-support" title="Link to this heading"></a></h2>
 <p>By default, Redot projects are considered DPI-aware by the operating system.
 This is controlled by the <strong>Display &gt; Window &gt; Dpi &gt; Allow Hidpi</strong> project setting,
 which should be left enabled whenever possible. Disabling DPI awareness can break
@@ -11537,7 +11612,7 @@ Project Settings.</p>
 </div>
 </section>
 <section id="reducing-aliasing-on-downsampling">
-<span id="doc-multiple-resolutions-reducing-aliasing-on-downsampling"></span><h2>Reducing aliasing on downsampling<a class="headerlink" href="#reducing-aliasing-on-downsampling" title="Permalink to this headline">¶</a></h2>
+<span id="doc-multiple-resolutions-reducing-aliasing-on-downsampling"></span><h2>Reducing aliasing on downsampling<a class="headerlink" href="#reducing-aliasing-on-downsampling" title="Link to this heading"></a></h2>
 <p>If the game has a very high base resolution (e.g. 3840×2160), aliasing might
 appear when downsampling to something considerably lower like 1280×720.</p>
 <p>To resolve this, you can <a class="reference internal" href="../assets_pipeline/importing_images.html#doc-importing-images-mipmaps"><span class="std std-ref">enable mipmaps</span></a> on
@@ -11545,13 +11620,13 @@ all your 2D textures. However, enabling mipmaps will increase memory usage which
 can be an issue on low-end mobile devices.</p>
 </section>
 <section id="handling-aspect-ratios">
-<h2>Handling aspect ratios<a class="headerlink" href="#handling-aspect-ratios" title="Permalink to this headline">¶</a></h2>
+<h2>Handling aspect ratios<a class="headerlink" href="#handling-aspect-ratios" title="Link to this heading"></a></h2>
 <p>Once scaling for different resolutions is accounted for, make sure that
 your <em>user interface</em> also scales for different aspect ratios. This can be
 done using <a class="reference internal" href="../ui/size_and_anchors.html#doc-size-and-anchors"><span class="std std-ref">anchors</span></a> and/or <a class="reference internal" href="../ui/gui_containers.html#doc-gui-containers"><span class="std std-ref">containers</span></a>.</p>
 </section>
 <section id="field-of-view-scaling">
-<h2>Field of view scaling<a class="headerlink" href="#field-of-view-scaling" title="Permalink to this headline">¶</a></h2>
+<h2>Field of view scaling<a class="headerlink" href="#field-of-view-scaling" title="Link to this heading"></a></h2>
 <p>The 3D Camera node's <strong>Keep Aspect</strong> property defaults to the <strong>Keep Height</strong>
 scaling mode (also called <em>Hor+</em>). This is usually the best value for desktop
 games and mobile games in landscape mode, as widescreen displays will
@@ -11562,7 +11637,7 @@ smartphones with an aspect ratio taller than 16:9 (e.g. 19:9) will use a
 <em>taller</em> field of view, which is more logical here.</p>
 </section>
 <section id="scaling-2d-and-3d-elements-differently-using-viewports">
-<h2>Scaling 2D and 3D elements differently using Viewports<a class="headerlink" href="#scaling-2d-and-3d-elements-differently-using-viewports" title="Permalink to this headline">¶</a></h2>
+<h2>Scaling 2D and 3D elements differently using Viewports<a class="headerlink" href="#scaling-2d-and-3d-elements-differently-using-viewports" title="Link to this heading"></a></h2>
 <p>Using multiple Viewport nodes, you can have different scales for various
 elements. For instance, you can use this to render the 3D world at a low
 resolution while keeping 2D elements at the native resolution. This can improve

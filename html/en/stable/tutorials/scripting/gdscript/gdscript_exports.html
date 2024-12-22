@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="GDScript exported properties" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/scripting/gdscript/gdscript_exports.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>GDScript exported properties &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/scripting/gdscript/gdscript_exports.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Scripting</a></li>
           <li class="breadcrumb-item"><a href="index.html">GDScript</a></li>
       <li class="breadcrumb-item active">GDScript exported properties</li>
@@ -11082,7 +11157,7 @@
 
   
   <section id="gdscript-exported-properties">
-<span id="doc-gdscript-exports"></span><h1>GDScript exported properties<a class="headerlink" href="#gdscript-exported-properties" title="Permalink to this headline">¶</a></h1>
+<span id="doc-gdscript-exports"></span><h1>GDScript exported properties<a class="headerlink" href="#gdscript-exported-properties" title="Link to this heading"></a></h1>
 <p>In Redot, class members can be exported. This means their value gets saved along
 with the resource (such as the <a class="reference internal" href="../../../classes/class_packedscene.html#class-packedscene"><span class="std std-ref">scene</span></a>) they're
 attached to. They will also be available for editing in the property editor.
@@ -11105,7 +11180,7 @@ The syntax varies depending on the language. See <a class="reference internal" h
 for information on C# exports.</p>
 </div>
 <section id="basic-use">
-<h2>Basic use<a class="headerlink" href="#basic-use" title="Permalink to this headline">¶</a></h2>
+<h2>Basic use<a class="headerlink" href="#basic-use" title="Link to this heading"></a></h2>
 <p>If the exported value assigns a constant or constant expression,
 the type will be inferred and used in the editor.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
@@ -11122,7 +11197,7 @@ the type will be inferred and used in the editor.</p>
 </div>
 </section>
 <section id="grouping-exports">
-<h2>Grouping Exports<a class="headerlink" href="#grouping-exports" title="Permalink to this headline">¶</a></h2>
+<h2>Grouping exports<a class="headerlink" href="#grouping-exports" title="Link to this heading"></a></h2>
 <p>It is possible to group your exported properties inside the Inspector
 with the <a class="reference internal" href="../../../classes/class_%40gdscript.html#class-gdscript-annotation-export-group"><span class="std std-ref">&#64;export_group</span></a>
 annotation. Every exported property after this annotation will be added to
@@ -11159,7 +11234,7 @@ when creating projects for public use.</p>
 </div>
 </section>
 <section id="strings-as-paths">
-<h2>Strings as paths<a class="headerlink" href="#strings-as-paths" title="Permalink to this headline">¶</a></h2>
+<h2>Strings as paths<a class="headerlink" href="#strings-as-paths" title="Link to this heading"></a></h2>
 <p>String as a path to a file.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_file</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">f</span>
 </pre></div>
@@ -11189,7 +11264,7 @@ field for editing over multiple lines.</p>
 </div>
 </section>
 <section id="limiting-editor-input-ranges">
-<h2>Limiting editor input ranges<a class="headerlink" href="#limiting-editor-input-ranges" title="Permalink to this headline">¶</a></h2>
+<h2>Limiting editor input ranges<a class="headerlink" href="#limiting-editor-input-ranges" title="Link to this heading"></a></h2>
 <p>Allow integer values from 0 to 20.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">i</span>
 </pre></div>
@@ -11202,21 +11277,60 @@ field for editing over multiple lines.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">k</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span>
 </pre></div>
 </div>
-<p>The limits can be only for the slider if you add the hints &quot;or_greater&quot; and/or &quot;or_less&quot;.</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;or_greater&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;or_less&quot;</span><span class="p">)</span>
+<p>The limits can be made to affect only the slider if you add the hints <code class="docutils literal notranslate"><span class="pre">&quot;or_less&quot;</span></code>
+and/or <code class="docutils literal notranslate"><span class="pre">&quot;or_greater&quot;</span></code>. If either these hints are used, it will be possible for
+the user to enter any value or drag the value with the mouse when not using
+the slider, even if outside the specified range.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;or_less&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;or_greater&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">l</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">&quot;exp&quot;</span></code> hint can be used to make a value have an exponential slider
+instead of a linear slider. This means that when dragging the slider towards
+the right, changes will become progressively faster when dragging the mouse.
+This is useful to make editing values that can be either very small or very large
+easier, at the cost of being less intuitive.</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;exp&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">exponential</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span>
+</pre></div>
+</div>
+<p>For values that are meant to represent an easing factor, use
+<a class="reference internal" href="#doc-gdscript-exports-floats-with-easing-hint"><span class="std std-ref">Floats with easing hint</span></a> instead.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">&quot;hide_slider&quot;</span></code> hint can be used to hide the horizontal bar that
+appears below <code class="docutils literal notranslate"><span class="pre">float</span></code> properties, or the up/down arrows that appear besides
+<code class="docutils literal notranslate"><span class="pre">int</span></code> properties:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;hide_slider&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">no_slider</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span>
 </pre></div>
 </div>
 </section>
+<section id="adding-suffixes-and-handling-degrees-radians">
+<h2>Adding suffixes and handling degrees/radians<a class="headerlink" href="#adding-suffixes-and-handling-degrees-radians" title="Link to this heading"></a></h2>
+<p>A suffix can also be defined to make the value more self-explanatory in the
+inspector. For example, to define a value that is meant to be configured as
+&quot;meters&quot; (<code class="docutils literal notranslate"><span class="pre">m</span></code>) by the user:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;suffix:m&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">m</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">int</span>
+</pre></div>
+</div>
+<p>For angles that are stored in radians but displayed as degrees to the user, use
+the <cite>&quot;radians_as_degrees&quot;</cite> hint:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;radians_as_degrees&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">angle</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">float</span>
+</pre></div>
+</div>
+<p>This performs automatic conversion when the value is displayed or modified in
+the inspector and also displays a degree (<code class="docutils literal notranslate"><span class="pre">°</span></code>) suffix. This approach is used
+by Redot's own <cite>rotation</cite> properties throughout the editor.</p>
+<p>If the angle is stored in degrees instead, use the <cite>&quot;degrees&quot;</cite> hint to display
+the degree symbol while disabling the automatic degrees-to-radians conversion
+when the value is modified from the inspector.</p>
+</section>
 <section id="floats-with-easing-hint">
-<h2>Floats with easing hint<a class="headerlink" href="#floats-with-easing-hint" title="Permalink to this headline">¶</a></h2>
-<p>Display a visual representation of the 'ease()' function
+<span id="doc-gdscript-exports-floats-with-easing-hint"></span><h2>Floats with easing hint<a class="headerlink" href="#floats-with-easing-hint" title="Link to this heading"></a></h2>
+<p>Display a visual representation of the <code class="docutils literal notranslate"><span class="pre">ease()</span></code> function
 when editing.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_exp_easing</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">transition_speed</span>
 </pre></div>
 </div>
 </section>
 <section id="colors">
-<h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
+<h2>Colors<a class="headerlink" href="#colors" title="Link to this heading"></a></h2>
 <p>Regular color given as red-green-blue-alpha value.</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">col</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Color</span>
 </pre></div>
@@ -11227,7 +11341,7 @@ when editing.</p>
 </div>
 </section>
 <section id="nodes">
-<h2>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h2>
+<h2>Nodes<a class="headerlink" href="#nodes" title="Link to this heading"></a></h2>
 <p>Since Redot 4.0, nodes can be directly exported as properties in a script
 without having to use NodePaths:</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1"># Allows any node.</span>
@@ -11251,7 +11365,7 @@ annotation:</p>
 </div>
 </section>
 <section id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">resource</span><span class="p">:</span><span class="w"> </span><span class="n">Resource</span>
 </pre></div>
 </div>
@@ -11270,7 +11384,7 @@ editor, the exported properties are still editable. This can be used
 in conjunction with a <a class="reference internal" href="gdscript_basics.html#doc-gdscript-tool-mode"><span class="std std-ref">script in &quot;tool&quot; mode</span></a>.</p>
 </section>
 <section id="exporting-bit-flags">
-<h2>Exporting bit flags<a class="headerlink" href="#exporting-bit-flags" title="Permalink to this headline">¶</a></h2>
+<span id="doc-gdscript-exports-exporting-bit-flags"></span><h2>Exporting bit flags<a class="headerlink" href="#exporting-bit-flags" title="Link to this heading"></a></h2>
 <p>Integers used as bit flags can store multiple <code class="docutils literal notranslate"><span class="pre">true</span></code>/<code class="docutils literal notranslate"><span class="pre">false</span></code> (boolean)
 values in one property. By using the <code class="docutils literal notranslate"><span class="pre">&#64;export_flags</span></code> annotation, they
 can be set from the editor:</p>
@@ -11306,7 +11420,7 @@ combination of other flags:</p>
 If in doubt, use boolean variables instead.</p>
 </section>
 <section id="exporting-enums">
-<h2>Exporting enums<a class="headerlink" href="#exporting-enums" title="Permalink to this headline">¶</a></h2>
+<h2>Exporting enums<a class="headerlink" href="#exporting-enums" title="Link to this heading"></a></h2>
 <p>Properties can be exported with a type hint referencing an enum to limit their values
 to the values of the enumeration. The editor will create a widget in the Inspector, enumerating
 the following as &quot;Thing 1&quot;, &quot;Thing 2&quot;, &quot;Another Thing&quot;. The value will be stored as an integer.</p>
@@ -11336,7 +11450,7 @@ of the selected option (i.e. <code class="docutils literal notranslate"><span cl
 </div>
 </section>
 <section id="exporting-arrays">
-<h2>Exporting arrays<a class="headerlink" href="#exporting-arrays" title="Permalink to this headline">¶</a></h2>
+<h2>Exporting arrays<a class="headerlink" href="#exporting-arrays" title="Link to this heading"></a></h2>
 <p>Exported arrays can have initializers, but they must be constant expressions.</p>
 <p>If the exported array specifies a type which inherits from Resource, the array
 values can be set in the inspector by dragging and dropping multiple files
@@ -11369,7 +11483,7 @@ drag-and-dropping multiple files from the FileSystem dock.</p>
 </pre></div>
 </div>
 <p>Other export variants can also be used when exporting arrays:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="o">-</span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;radians&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">laser_angles</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">float</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="nd">@export_range</span><span class="p">(</span><span class="o">-</span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mi">360</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;degrees&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">laser_angles</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">float</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
 <span class="nd">@export_file</span><span class="p">(</span><span class="s2">&quot;*.json&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">skill_trees</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
 <span class="nd">@export_color_no_alpha</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">hair_colors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb nb-Type">PackedColorArray</span><span class="p">()</span>
 <span class="nd">@export_enum</span><span class="p">(</span><span class="s2">&quot;Espresso&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mocha&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Latte&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Capuccino&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">barista_suggestions</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Array</span><span class="p">[</span><span class="nb nb-Type">String</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span>
@@ -11377,7 +11491,7 @@ drag-and-dropping multiple files from the FileSystem dock.</p>
 </div>
 </section>
 <section id="export-storage">
-<h2><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code><a class="headerlink" href="#export-storage" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code><a class="headerlink" href="#export-storage" title="Link to this heading"></a></h2>
 <p>By default, exporting a property has two effects:</p>
 <ol class="arabic simple">
 <li><p>makes the property stored in the scene/resource file (<a class="reference internal" href="../../../classes/class_%40globalscope.html#class-globalscope-constant-property-usage-storage"><span class="std std-ref">PROPERTY_USAGE_STORAGE</span></a>);</p></li>
@@ -11395,8 +11509,29 @@ or <a class="reference internal" href="../../../classes/class_node.html#class-no
 </pre></div>
 </div>
 </section>
+<section id="export-custom">
+<h2><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code><a class="headerlink" href="#export-custom" title="Link to this heading"></a></h2>
+<p>If you need more control than what's exposed with the built-in <code class="docutils literal notranslate"><span class="pre">&#64;export</span></code>
+annotations, you can use <code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code> instead. This allows defining any
+property hint, hint string and usage flags, with a syntax similar to the one
+used by the editor for built-in nodes.</p>
+<p>For example, this exposes the <code class="docutils literal notranslate"><span class="pre">altitude</span></code> property with no range limits but a
+<code class="docutils literal notranslate"><span class="pre">m</span></code> (meter) suffix defined:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">@export_custom</span><span class="p">(</span><span class="n">PROPERTY_HINT_NONE</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;altitude:m&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">altitude</span><span class="p">:</span><span class="w"> </span><span class="nb nb-Type">Vector3</span>
+</pre></div>
+</div>
+<p>The above is normally not feasible with the standard <code class="docutils literal notranslate"><span class="pre">&#64;export_range</span></code> syntax,
+since it requires defining a range.</p>
+<p>See the <a class="reference internal" href="../../../classes/class_%40gdscript.html#class-gdscript-annotation-export-custom"><span class="std std-ref">class reference</span></a>
+for a list of parameters and their allowed values.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When using <code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code>, GDScript does not perform any validation on
+the syntax. Invalid syntax may have unexpected behavior in the inspector.</p>
+</div>
+</section>
 <section id="setting-exported-variables-from-a-tool-script">
-<h2>Setting exported variables from a tool script<a class="headerlink" href="#setting-exported-variables-from-a-tool-script" title="Permalink to this headline">¶</a></h2>
+<h2>Setting exported variables from a tool script<a class="headerlink" href="#setting-exported-variables-from-a-tool-script" title="Link to this heading"></a></h2>
 <p>When changing an exported variable's value from a script in
 <a class="reference internal" href="gdscript_basics.html#doc-gdscript-tool-mode"><span class="std std-ref">Tool mode</span></a>, the value in the inspector won't be updated
 automatically. To update it, call
@@ -11404,7 +11539,7 @@ automatically. To update it, call
 after setting the exported variable's value.</p>
 </section>
 <section id="advanced-exports">
-<h2>Advanced exports<a class="headerlink" href="#advanced-exports" title="Permalink to this headline">¶</a></h2>
+<h2>Advanced exports<a class="headerlink" href="#advanced-exports" title="Link to this heading"></a></h2>
 <p>Not every type of export can be provided on the level of the language itself to
 avoid unnecessary design complexity. The following describes some more or less
 common exporting features which can be implemented with a low-level API.</p>

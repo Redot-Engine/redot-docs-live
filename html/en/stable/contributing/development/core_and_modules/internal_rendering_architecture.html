@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Internal rendering architecture" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="contributing/development/core_and_modules/internal_rendering_architecture.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Internal rendering architecture &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/contributing/development/core_and_modules/internal_rendering_architecture.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Engine development</a></li>
           <li class="breadcrumb-item"><a href="index.html">Engine core and modules</a></li>
       <li class="breadcrumb-item active">Internal rendering architecture</li>
@@ -11082,7 +11157,7 @@
 
   
   <section id="internal-rendering-architecture">
-<span id="doc-internal-rendering-architecture"></span><h1>Internal rendering architecture<a class="headerlink" href="#internal-rendering-architecture" title="Permalink to this headline">¶</a></h1>
+<span id="doc-internal-rendering-architecture"></span><h1>Internal rendering architecture<a class="headerlink" href="#internal-rendering-architecture" title="Link to this heading"></a></h1>
 <p>This page is a high-level overview of Redot 4's internal renderer design.
 It does not apply to previous Redot versions.</p>
 <p>The goal of this page is to document design decisions taken to best suit
@@ -11103,9 +11178,9 @@ low-level APIs. Redot's renderers are built entirely on OpenGL and
 RenderingDevice, which is our abstraction over Vulkan/Direct3D 12.</p>
 </div>
 <section id="rendering-methods">
-<span id="doc-internal-rendering-architecture-methods"></span><h2>Rendering methods<a class="headerlink" href="#rendering-methods" title="Permalink to this headline">¶</a></h2>
+<span id="doc-internal-rendering-architecture-methods"></span><h2>Rendering methods<a class="headerlink" href="#rendering-methods" title="Link to this heading"></a></h2>
 <section id="forward">
-<h3>Forward+<a class="headerlink" href="#forward" title="Permalink to this headline">¶</a></h3>
+<h3>Forward+<a class="headerlink" href="#forward" title="Link to this heading"></a></h3>
 <p>This is a forward renderer that uses a <em>clustered</em> approach to lighting.</p>
 <p>Clustered lighting uses a compute shader to group lights into a 3D frustum
 aligned grid. Then, at render time, pixels can lookup what lights affect the
@@ -11115,7 +11190,7 @@ affect that pixel.</p>
 but is substantially less efficient on mobile.</p>
 </section>
 <section id="forward-mobile">
-<h3>Forward Mobile<a class="headerlink" href="#forward-mobile" title="Permalink to this headline">¶</a></h3>
+<h3>Forward Mobile<a class="headerlink" href="#forward-mobile" title="Link to this heading"></a></h3>
 <p>This is a forward renderer that uses a traditional single-pass approach to lighting.</p>
 <p>Intended for mobile platforms, but can also run on desktop platforms. This
 rendering method is optimized to perform well on mobile GPUs. Mobile GPUs have a
@@ -11162,7 +11237,7 @@ rendering features such as SDFGI and <a class="reference internal" href="../../.
 post-processing effects are also not available.</p>
 </section>
 <section id="compatibility">
-<span id="doc-internal-rendering-architecture-compatibility"></span><h3>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h3>
+<span id="doc-internal-rendering-architecture-compatibility"></span><h3>Compatibility<a class="headerlink" href="#compatibility" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is the only rendering method available when using the OpenGL driver.
@@ -11193,7 +11268,7 @@ rendering features (even less so compared to Forward Mobile). Most
 post-processing effects are not available.</p>
 </section>
 <section id="why-not-deferred-rendering">
-<h3>Why not deferred rendering?<a class="headerlink" href="#why-not-deferred-rendering" title="Permalink to this headline">¶</a></h3>
+<h3>Why not deferred rendering?<a class="headerlink" href="#why-not-deferred-rendering" title="Link to this heading"></a></h3>
 <p>Forward rendering generally provides a better tradeoff for performance versus
 flexibility, especially when a clustered approach to lighting is used. While
 deferred rendering can be faster in some cases, it's also less flexible and
@@ -11208,10 +11283,10 @@ could be used in situations where performance is favored over flexibility.</p>
 </section>
 </section>
 <section id="rendering-drivers">
-<h2>Rendering drivers<a class="headerlink" href="#rendering-drivers" title="Permalink to this headline">¶</a></h2>
+<h2>Rendering drivers<a class="headerlink" href="#rendering-drivers" title="Link to this heading"></a></h2>
 <p>Redot 4 supports the following graphics APIs:</p>
 <section id="vulkan">
-<h3>Vulkan<a class="headerlink" href="#vulkan" title="Permalink to this headline">¶</a></h3>
+<h3>Vulkan<a class="headerlink" href="#vulkan" title="Link to this heading"></a></h3>
 <p>This is the main driver in Redot 4, with most of the development focus going
 towards this driver.</p>
 <p>Vulkan 1.0 is required as a baseline, with optional Vulkan 1.1 and 1.2 features
@@ -11232,7 +11307,7 @@ Vulkan driver.</p>
 </ul>
 </section>
 <section id="direct3d-12">
-<h3>Direct3D 12<a class="headerlink" href="#direct3d-12" title="Permalink to this headline">¶</a></h3>
+<h3>Direct3D 12<a class="headerlink" href="#direct3d-12" title="Link to this heading"></a></h3>
 <p>Like Vulkan, the Direct3D 12 driver targets modern platforms only. It is
 designed to target both Windows and Xbox (whereas Vulkan can't be used directly on Xbox).</p>
 <p>Both the Forward+ and Mobile <a class="reference internal" href="#doc-internal-rendering-architecture-methods"><span class="std std-ref">Rendering methods</span></a> can be
@@ -11249,7 +11324,7 @@ See the <a class="reference external" href="https://github.com/redot-engine/redo
 for more information.</p>
 </section>
 <section id="metal">
-<h3>Metal<a class="headerlink" href="#metal" title="Permalink to this headline">¶</a></h3>
+<h3>Metal<a class="headerlink" href="#metal" title="Link to this heading"></a></h3>
 <p>Redot supports Metal rendering via <a class="reference external" href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a>,
 as macOS and iOS do not support Vulkan natively.
 This is done automatically when specifying the Vulkan driver in the Project Settings.</p>
@@ -11262,13 +11337,13 @@ backend via MoltenVK.</p>
 compatibility.</p>
 </section>
 <section id="opengl">
-<h3>OpenGL<a class="headerlink" href="#opengl" title="Permalink to this headline">¶</a></h3>
+<h3>OpenGL<a class="headerlink" href="#opengl" title="Link to this heading"></a></h3>
 <p>This driver uses OpenGL ES 3.0 and targets legacy and low-end devices that don't
 support Vulkan. OpenGL 3.3 Core Profile is used on desktop platforms to run this
 driver, as most graphics drivers on desktop don't support OpenGL ES.
 WebGL 2.0 is used for web exports.</p>
-<p>It is possible to use the use of OpenGL ES 3.0 directly on desktop platforms
-using the <code class="docutils literal notranslate"><span class="pre">--rendering-driver</span> <span class="pre">opengl3_es</span></code> command line argument, although this
+<p>It is possible to use OpenGL ES 3.0 directly on desktop platforms
+by passing the <code class="docutils literal notranslate"><span class="pre">--rendering-driver</span> <span class="pre">opengl3_es</span></code> command line argument, although this
 will only work on graphics drivers that feature native OpenGL ES support (such
 as Mesa).</p>
 <p>Only the <a class="reference internal" href="#doc-internal-rendering-architecture-compatibility"><span class="std std-ref">Compatibility</span></a> rendering
@@ -11279,7 +11354,7 @@ from the Vulkan renderer.</p>
 devices first and foremost.</p>
 </section>
 <section id="summary-of-rendering-drivers-methods">
-<h3>Summary of rendering drivers/methods<a class="headerlink" href="#summary-of-rendering-drivers-methods" title="Permalink to this headline">¶</a></h3>
+<h3>Summary of rendering drivers/methods<a class="headerlink" href="#summary-of-rendering-drivers-methods" title="Link to this heading"></a></h3>
 <p>The following rendering API + rendering method combinations are currently possible:</p>
 <ul class="simple">
 <li><p>Vulkan + Forward+</p></li>
@@ -11296,7 +11371,7 @@ pull request.</p>
 </section>
 </section>
 <section id="renderingdevice-abstraction">
-<h2>RenderingDevice abstraction<a class="headerlink" href="#renderingdevice-abstraction" title="Permalink to this headline">¶</a></h2>
+<h2>RenderingDevice abstraction<a class="headerlink" href="#renderingdevice-abstraction" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The OpenGL driver does not use the RenderingDevice abstraction.</p>
@@ -11318,13 +11393,13 @@ RenderingDevice presents a similar level of abstraction as Metal or WebGPU.</p>
 </ul>
 </section>
 <section id="core-rendering-classes-architecture">
-<h2>Core rendering classes architecture<a class="headerlink" href="#core-rendering-classes-architecture" title="Permalink to this headline">¶</a></h2>
+<h2>Core rendering classes architecture<a class="headerlink" href="#core-rendering-classes-architecture" title="Link to this heading"></a></h2>
 <p>This diagram represents the structure of rendering classes in Redot, including the RenderingDevice abstraction:</p>
 <img alt="../../../_images/rendering_architecture_diagram.webp" src="../../../_images/rendering_architecture_diagram.webp" />
 <p><a class="reference external" href="https://raw.githubusercontent.com/redot-engine/redot-docs/master/contributing/development/core_and_modules/img/rendering_architecture_diagram.webp">View at full size</a></p>
 </section>
 <section id="core-shaders">
-<span id="doc-internal-rendering-architecture-core-shaders"></span><h2>Core shaders<a class="headerlink" href="#core-shaders" title="Permalink to this headline">¶</a></h2>
+<span id="doc-internal-rendering-architecture-core-shaders"></span><h2>Core shaders<a class="headerlink" href="#core-shaders" title="Link to this heading"></a></h2>
 <p>While shaders in Redot projects are written using a
 <a class="reference internal" href="../../../tutorials/shaders/shader_reference/shading_language.html#doc-shading-language"><span class="std std-ref">custom language inspired by GLSL</span></a>, core shaders are
 written directly in GLSL.</p>
@@ -11388,7 +11463,7 @@ blog posts for more information.</p>
 </ul>
 </section>
 <section id="d-and-3d-rendering-separation">
-<h2>2D and 3D rendering separation<a class="headerlink" href="#d-and-3d-rendering-separation" title="Permalink to this headline">¶</a></h2>
+<h2>2D and 3D rendering separation<a class="headerlink" href="#d-and-3d-rendering-separation" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The following is only applicable in the Forward+ and Forward Mobile
@@ -11424,7 +11499,7 @@ release.</p>
 </ul>
 </section>
 <section id="d-rendering-techniques">
-<h2>2D rendering techniques<a class="headerlink" href="#d-rendering-techniques" title="Permalink to this headline">¶</a></h2>
+<h2>2D rendering techniques<a class="headerlink" href="#d-rendering-techniques" title="Link to this heading"></a></h2>
 <p>2D light rendering is performed in a single pass to allow for better performance
 with large amounts of lights.</p>
 <p>The Forward+ and Mobile rendering methods don't feature 2D batching yet, but
@@ -11446,15 +11521,15 @@ used to calculate particle collisions in 2D.</p>
 </ul>
 </section>
 <section id="id1">
-<h2>3D rendering techniques<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>3D rendering techniques<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <section id="batching-and-instancing">
-<h3>Batching and instancing<a class="headerlink" href="#batching-and-instancing" title="Permalink to this headline">¶</a></h3>
+<h3>Batching and instancing<a class="headerlink" href="#batching-and-instancing" title="Link to this heading"></a></h3>
 <p>In the Forward+ backend, Vulkan instancing is used to group rendering
 of identical objects for performance. This is not as fast as static mesh
 merging, but it still allows instances to be culled individually.</p>
 </section>
 <section id="light-decal-and-reflection-probe-rendering">
-<h3>Light, decal and reflection probe rendering<a class="headerlink" href="#light-decal-and-reflection-probe-rendering" title="Permalink to this headline">¶</a></h3>
+<h3>Light, decal and reflection probe rendering<a class="headerlink" href="#light-decal-and-reflection-probe-rendering" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Reflection probe and decal rendering are currently not available in the
@@ -11489,7 +11564,7 @@ planned in a future release.</p>
 Forward+ backend.</p>
 </section>
 <section id="shadow-mapping">
-<h3>Shadow mapping<a class="headerlink" href="#shadow-mapping" title="Permalink to this headline">¶</a></h3>
+<h3>Shadow mapping<a class="headerlink" href="#shadow-mapping" title="Link to this heading"></a></h3>
 <p>Both Forward+ and Forward Mobile methods use
 <abbr title="Percentage Closer Filtering">PCF</abbr> to filter shadow maps and create a
 soft penumbra. Instead of using a fixed PCF pattern, these methods use a vogel
@@ -11504,7 +11579,7 @@ basis to help soften under-sampling artifacts.</p>
 <p>The Compatibility backend doesn't support shadow mapping for any light types yet.</p>
 </section>
 <section id="temporal-antialiasing">
-<h3>Temporal antialiasing<a class="headerlink" href="#temporal-antialiasing" title="Permalink to this headline">¶</a></h3>
+<h3>Temporal antialiasing<a class="headerlink" href="#temporal-antialiasing" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only available in the Forward+ backend, not the Forward Mobile or
@@ -11533,7 +11608,7 @@ RenderingDevice abstraction as opposed to using AMD's reference code directly.</
 </ul>
 </section>
 <section id="global-illumination">
-<h3>Global illumination<a class="headerlink" href="#global-illumination" title="Permalink to this headline">¶</a></h3>
+<h3>Global illumination<a class="headerlink" href="#global-illumination" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>VoxelGI and SDFGI are only available in the Forward+ backend, not the
@@ -11582,7 +11657,7 @@ This would allow baking lightmaps while using the Compatibility backend.</p>
 </ul>
 </section>
 <section id="depth-of-field">
-<h3>Depth of field<a class="headerlink" href="#depth-of-field" title="Permalink to this headline">¶</a></h3>
+<h3>Depth of field<a class="headerlink" href="#depth-of-field" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only available in the Forward+ and Forward Mobile methods, not the
@@ -11610,7 +11685,7 @@ when temporal antialiasing is enabled.</p>
 </ul>
 </section>
 <section id="screen-space-effects-ssao-ssil-ssr-sss">
-<h3>Screen-space effects (SSAO, SSIL, SSR, SSS)<a class="headerlink" href="#screen-space-effects-ssao-ssil-ssr-sss" title="Permalink to this headline">¶</a></h3>
+<h3>Screen-space effects (SSAO, SSIL, SSR, SSS)<a class="headerlink" href="#screen-space-effects-ssao-ssil-ssr-sss" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only available in the Forward+ backend, not the Forward Mobile or
@@ -11656,7 +11731,7 @@ SSR is always performed at half resolution to improve performance.</p>
 </ul>
 </section>
 <section id="sky-rendering">
-<h3>Sky rendering<a class="headerlink" href="#sky-rendering" title="Permalink to this headline">¶</a></h3>
+<h3>Sky rendering<a class="headerlink" href="#sky-rendering" title="Link to this heading"></a></h3>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="../../../tutorials/shaders/shader_reference/sky_shader.html#doc-sky-shader"><span class="std std-ref">Sky shaders</span></a></p>
@@ -11679,7 +11754,7 @@ article.</p>
 <p><strong>Sky rendering GLSL shader:</strong></p>
 </section>
 <section id="volumetric-fog">
-<h3>Volumetric fog<a class="headerlink" href="#volumetric-fog" title="Permalink to this headline">¶</a></h3>
+<h3>Volumetric fog<a class="headerlink" href="#volumetric-fog" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only available in the Forward+ backend, not the Forward Mobile or
@@ -11712,7 +11787,7 @@ article.</p>
 </ul>
 </section>
 <section id="occlusion-culling">
-<h3>Occlusion culling<a class="headerlink" href="#occlusion-culling" title="Permalink to this headline">¶</a></h3>
+<h3>Occlusion culling<a class="headerlink" href="#occlusion-culling" title="Link to this heading"></a></h3>
 <p>While modern GPUs can handle drawing a lot of triangles, the number of draw
 calls in complex scenes can still be a bottleneck (even with Vulkan and Direct3D 12).</p>
 <p>Redot 4 supports occlusion culling to reduce overdraw (when the depth prepass
@@ -11749,7 +11824,7 @@ RendererSceneOcclusionCull.</p>
 </ul>
 </section>
 <section id="visibility-range-lod">
-<h3>Visibility range (LOD)<a class="headerlink" href="#visibility-range-lod" title="Permalink to this headline">¶</a></h3>
+<h3>Visibility range (LOD)<a class="headerlink" href="#visibility-range-lod" title="Link to this heading"></a></h3>
 <p>Redot supports manually authored hierarchical level of detail (HLOD), with
 distances specified by the user in the inspector.</p>
 <p>In RenderingSceneCull, the <code class="docutils literal notranslate"><span class="pre">_scene_cull()</span></code> and <code class="docutils literal notranslate"><span class="pre">_render_scene()</span></code> functions
@@ -11761,7 +11836,7 @@ same mesh with different LODs (to allow for split screen rendering to look corre
 </ul>
 </section>
 <section id="automatic-mesh-lod">
-<h3>Automatic mesh LOD<a class="headerlink" href="#automatic-mesh-lod" title="Permalink to this headline">¶</a></h3>
+<h3>Automatic mesh LOD<a class="headerlink" href="#automatic-mesh-lod" title="Link to this heading"></a></h3>
 <p>The ImporterMesh class is used for the 3D mesh import workflow in the editor.
 Its <code class="docutils literal notranslate"><span class="pre">generate_lods()</span></code> function handles generating using the
 <a class="reference external" href="https://meshoptimizer.org/">meshoptimizer</a> library.</p>

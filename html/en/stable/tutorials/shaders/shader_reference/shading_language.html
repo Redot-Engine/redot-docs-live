@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Shading language" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/shaders/shader_reference/shading_language.html" />
@@ -11,43 +13,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Shading language &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/shaders/shader_reference/shading_language.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/shaders/shader_reference/shading_language.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/shaders/shader_reference/shading_language.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../platform/web/index.html">Web</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../platform/web/javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../platform/web/javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Shaders</a></li>
           <li class="breadcrumb-item"><a href="index.html">Shading reference</a></li>
       <li class="breadcrumb-item active">Shading language</li>
@@ -11082,9 +11157,9 @@
 
   
   <section id="shading-language">
-<span id="doc-shading-language"></span><h1>Shading language<a class="headerlink" href="#shading-language" title="Permalink to this headline">¶</a></h1>
+<span id="doc-shading-language"></span><h1>Shading language<a class="headerlink" href="#shading-language" title="Link to this heading"></a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
 <p>Redot uses a shading language similar to GLSL ES 3.0. Most datatypes and
 functions are supported, and the few remaining ones will likely be added over
 time.</p>
@@ -11093,13 +11168,9 @@ Guide</span></a> is a resource that will help you
 transition from regular GLSL to Redot's shading language.</p>
 </section>
 <section id="data-types">
-<h2>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<h2>Data types<a class="headerlink" href="#data-types" title="Link to this heading"></a></h2>
 <p>Most GLSL ES 3.0 datatypes are supported:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Description</p></th>
@@ -11202,8 +11273,16 @@ Only supported in Forward+ and Mobile, not Compatibility.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Local variables are not initialized to a default value such as <code class="docutils literal notranslate"><span class="pre">0.0</span></code>. If
+you use a variable without assigning it first, it will contain whatever
+value was already present at that memory location, and unpredictable visual
+glitches will appear. However, uniforms and varyings are initialized to a
+default value.</p>
+</div>
 <section id="comments">
-<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<h3>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h3>
 <p>The shading language supports the same comment syntax as used in C# and C++:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="c1">// Single-line comment.</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// Another single-line comment.</span>
@@ -11235,7 +11314,7 @@ per the <a class="reference internal" href="../shaders_style_guide.html#doc-shad
 stripped by the inspector, so they won't appear in the tooltip.</p>
 </section>
 <section id="casting">
-<h3>Casting<a class="headerlink" href="#casting" title="Permalink to this headline">¶</a></h3>
+<h3>Casting<a class="headerlink" href="#casting" title="Link to this heading"></a></h3>
 <p>Just like GLSL ES 3.0, implicit casting between scalars and vectors of the same
 size but different type is not allowed. Casting of types of different size is
 also not allowed. Conversion must be done explicitly via constructors.</p>
@@ -11254,16 +11333,16 @@ unsigned:</p>
 </div>
 </section>
 <section id="members">
-<h3>Members<a class="headerlink" href="#members" title="Permalink to this headline">¶</a></h3>
+<h3>Members<a class="headerlink" href="#members" title="Link to this heading"></a></h3>
 <p>Individual scalar members of vector types are accessed via the &quot;x&quot;, &quot;y&quot;, &quot;z&quot; and
 &quot;w&quot; members. Alternatively, using &quot;r&quot;, &quot;g&quot;, &quot;b&quot; and &quot;a&quot; also works and is
 equivalent. Use whatever fits best for your needs.</p>
 <p>For matrices, use the <code class="docutils literal notranslate"><span class="pre">m[column][row]</span></code> indexing syntax to access each scalar,
-or <code class="docutils literal notranslate"><span class="pre">m[idx]</span></code> to access a vector by row index. For example, for accessing the y
-position of an object in a mat4 you use <code class="docutils literal notranslate"><span class="pre">m[3][1]</span></code>.</p>
+or <code class="docutils literal notranslate"><span class="pre">m[column]</span></code> to access a vector by column index. For example, for accessing the
+y-component of the translation from a mat4 transform matrix (4th column, 2nd line) you use <code class="docutils literal notranslate"><span class="pre">m[3][1]</span></code> or <code class="docutils literal notranslate"><span class="pre">m[3].y</span></code>.</p>
 </section>
 <section id="constructing">
-<h3>Constructing<a class="headerlink" href="#constructing" title="Permalink to this headline">¶</a></h3>
+<h3>Constructing<a class="headerlink" href="#constructing" title="Link to this heading"></a></h3>
 <p>Construction of vector types must always pass:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="c1">// The required amount of scalars</span>
 <span class="kt">vec4</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">);</span>
@@ -11275,7 +11354,7 @@ position of an object in a mat4 you use <code class="docutils literal notranslat
 </pre></div>
 </div>
 <p>Construction of matrix types requires vectors of the same dimension as the
-matrix. You can also build a diagonal matrix using <code class="docutils literal notranslate"><span class="pre">matx(float)</span></code> syntax.
+matrix, interpreted as columns. You can also build a diagonal matrix using <code class="docutils literal notranslate"><span class="pre">matx(float)</span></code> syntax.
 Accordingly, <code class="docutils literal notranslate"><span class="pre">mat4(1.0)</span></code> is an identity matrix.</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="kt">mat2</span><span class="w"> </span><span class="n">m2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat2</span><span class="p">(</span><span class="kt">vec2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec2</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">));</span>
 <span class="kt">mat3</span><span class="w"> </span><span class="n">m3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">mat3</span><span class="p">(</span><span class="kt">vec3</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="w"> </span><span class="kt">vec3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">));</span>
@@ -11295,7 +11374,7 @@ submatrix of the larger matrix is used.</p>
 </div>
 </section>
 <section id="swizzling">
-<h3>Swizzling<a class="headerlink" href="#swizzling" title="Permalink to this headline">¶</a></h3>
+<h3>Swizzling<a class="headerlink" href="#swizzling" title="Link to this heading"></a></h3>
 <p>It is possible to obtain any combination of components in any order, as long as
 the result is another vector type (or scalar). This is easier shown than
 explained:</p>
@@ -11313,7 +11392,7 @@ explained:</p>
 </div>
 </section>
 <section id="precision">
-<h3>Precision<a class="headerlink" href="#precision" title="Permalink to this headline">¶</a></h3>
+<h3>Precision<a class="headerlink" href="#precision" title="Link to this heading"></a></h3>
 <p>It is possible to add precision modifiers to datatypes; use them for uniforms,
 variables, arguments and varyings:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">lowp</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">);</span><span class="w"> </span><span class="c1">// low precision, usually 8 bits per component mapped to 0-1</span>
@@ -11333,10 +11412,10 @@ behavior and it is best to avoid specifying precision unless necessary.</p>
 </section>
 </section>
 <section id="arrays">
-<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<h2>Arrays<a class="headerlink" href="#arrays" title="Link to this heading"></a></h2>
 <p>Arrays are containers for multiple variables of a similar type.</p>
 <section id="local-arrays">
-<h3>Local arrays<a class="headerlink" href="#local-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Local arrays<a class="headerlink" href="#local-arrays" title="Link to this heading"></a></h3>
 <p>Local arrays are declared in functions. They can use all of the allowed
 datatypes, except samplers. The array declaration follows a C-style syntax:
 <code class="docutils literal notranslate"><span class="pre">[const]</span> <span class="pre">+</span> <span class="pre">[precision]</span> <span class="pre">+</span> <span class="pre">typename</span> <span class="pre">+</span> <span class="pre">identifier</span> <span class="pre">+</span> <span class="pre">[array</span> <span class="pre">size]</span></code>.</p>
@@ -11391,7 +11470,7 @@ this crash.</p>
 </div>
 </section>
 <section id="global-arrays">
-<h3>Global arrays<a class="headerlink" href="#global-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Global arrays<a class="headerlink" href="#global-arrays" title="Link to this heading"></a></h3>
 <p>You can declare arrays at global space like:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
 
@@ -11410,7 +11489,7 @@ declared the same as local arrays.</p>
 </section>
 </section>
 <section id="constants">
-<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<h2>Constants<a class="headerlink" href="#constants" title="Link to this heading"></a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">const</span></code> keyword before the variable declaration to make that variable
 immutable, which means that it cannot be modified. All basic types, except
 samplers can be declared as constants. Accessing and using a constant value is
@@ -11443,7 +11522,7 @@ global constants are shared between all shader stages, but they are not
 accessible outside of the shader.</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
 
-<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265358979323846</span><span class="p">;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">GOLDEN_RATIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.618033988749894</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Constants of the <code class="docutils literal notranslate"><span class="pre">float</span></code> type must be initialized using <code class="docutils literal notranslate"><span class="pre">.</span></code> notation after the
@@ -11462,7 +11541,7 @@ Alternatively, this can be done by using the <code class="docutils literal notra
 </div>
 </section>
 <section id="structs">
-<h2>Structs<a class="headerlink" href="#structs" title="Permalink to this headline">¶</a></h2>
+<h2>Structs<a class="headerlink" href="#structs" title="Link to this heading"></a></h2>
 <p>Structs are compound types which can be used for better abstraction of shader
 code. You can declare them at the global scope like:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="n">PointLight</span><span class="w"> </span><span class="p">{</span>
@@ -11521,15 +11600,10 @@ constant:</p>
 </div>
 </section>
 <section id="operators">
-<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<h2>Operators<a class="headerlink" href="#operators" title="Link to this heading"></a></h2>
 <p>Redot shading language supports the same set of operators as GLSL ES 3.0. Below
 is the list of them in precedence order:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 44%" />
-<col style="width: 33%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Precedence</p></td>
 <td><p>Class</p></td>
@@ -11587,7 +11661,7 @@ is the list of them in precedence order:</p>
 </table>
 </section>
 <section id="flow-control">
-<h2>Flow control<a class="headerlink" href="#flow-control" title="Permalink to this headline">¶</a></h2>
+<h2>Flow control<a class="headerlink" href="#flow-control" title="Link to this heading"></a></h2>
 <p>Redot Shading language supports the most common types of flow control:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="c1">// `if` and `else`.</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cond</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -11665,7 +11739,7 @@ larger the epsilon value should be.</p>
 information.</p>
 </section>
 <section id="discarding">
-<h2>Discarding<a class="headerlink" href="#discarding" title="Permalink to this headline">¶</a></h2>
+<h2>Discarding<a class="headerlink" href="#discarding" title="Link to this heading"></a></h2>
 <p>Fragment and light functions can use the <code class="docutils literal notranslate"><span class="pre">discard</span></code> keyword. If used, the
 fragment is discarded and nothing is written.</p>
 <p>Beware that <code class="docutils literal notranslate"><span class="pre">discard</span></code> has a performance cost when used, as it will prevent the
@@ -11675,7 +11749,7 @@ shader that uses <code class="docutils literal notranslate"><span class="pre">di
 render compared to not rendering any object in the first place.</p>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <p>It is possible to define functions in a Redot shader. They use the following
 syntax:</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">ret_type</span><span class="w"> </span><span class="n">func_name</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -11716,7 +11790,7 @@ arguments of different types.</p>
 </div>
 </section>
 <section id="varyings">
-<h2>Varyings<a class="headerlink" href="#varyings" title="Permalink to this headline">¶</a></h2>
+<h2>Varyings<a class="headerlink" href="#varyings" title="Link to this heading"></a></h2>
 <p>To send data from the vertex to the fragment (or light) processor function, <em>varyings</em> are
 used. They are set for every primitive vertex in the <em>vertex processor</em>, and the
 value is interpolated for every pixel in the <em>fragment processor</em>.</p>
@@ -11787,7 +11861,7 @@ value is interpolated for every pixel in the <em>fragment processor</em>.</p>
 <p>This limitation was introduced to prevent incorrect usage before initialization.</p>
 </section>
 <section id="interpolation-qualifiers">
-<h2>Interpolation qualifiers<a class="headerlink" href="#interpolation-qualifiers" title="Permalink to this headline">¶</a></h2>
+<h2>Interpolation qualifiers<a class="headerlink" href="#interpolation-qualifiers" title="Link to this heading"></a></h2>
 <p>Certain values are interpolated during the shading pipeline. You can modify how
 these interpolations are done by using <em>interpolation qualifiers</em>.</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
@@ -11805,10 +11879,6 @@ these interpolations are done by using <em>interpolation qualifiers</em>.</p>
 </div>
 <p>There are two possible interpolation qualifiers:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Qualifier</p></th>
 <th class="head"><p>Description</p></th>
@@ -11825,7 +11895,7 @@ these interpolations are done by using <em>interpolation qualifiers</em>.</p>
 </table>
 </section>
 <section id="uniforms">
-<h2>Uniforms<a class="headerlink" href="#uniforms" title="Permalink to this headline">¶</a></h2>
+<h2>Uniforms<a class="headerlink" href="#uniforms" title="Link to this heading"></a></h2>
 <p>Passing values to shaders is possible. These are global to the whole shader and
 are called <em>uniforms</em>. When a shader is later assigned to a material, the
 uniforms will appear as editable parameters in it. Uniforms can't be written
@@ -11849,6 +11919,20 @@ GDScript:</p>
 <p>The first argument to <code class="docutils literal notranslate"><span class="pre">set_shader_parameter</span></code> is the name of the uniform
 in the shader. It must match <em>exactly</em> to the name of the uniform in
 the shader or else it will not be recognized.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is a limit to the total size of shader uniforms that you can use
+in a single shader. On most desktop platforms, this limit is <code class="docutils literal notranslate"><span class="pre">65536</span></code>
+bytes, or 4096 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. On mobile platforms, the limit is
+typically <code class="docutils literal notranslate"><span class="pre">16384</span></code> bytes, or 1024 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. Vector uniforms
+smaller than a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>, such as <code class="docutils literal notranslate"><span class="pre">vec2</span></code> or <code class="docutils literal notranslate"><span class="pre">vec3</span></code>, are padded to
+the size of a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>. Scalar uniforms such as <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>
+are not padded, and <code class="docutils literal notranslate"><span class="pre">bool</span></code> is padded to the size of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>Arrays count as the total size of their contents. If you need a uniform
+array that is larger than this limit, consider packing the data into a
+texture instead, since the <em>contents</em> of a texture do not count towards
+this limit, only the size of the sampler uniform.</p>
 </div>
 <p>Any GLSL type except for <em>void</em> can be a uniform. Additionally, Redot provides
 optional shader hints to make the compiler understand for what the uniform is
@@ -11875,11 +11959,6 @@ shaders, so it's recommend to use it either way.</p>
 </div>
 <p>Full list of hints below:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 34%" />
-<col style="width: 52%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Type</p></th>
 <th class="head"><p>Hint</p></th>
@@ -11951,11 +12030,6 @@ with roughness increasing in areas that have high-frequency detail.</p></td>
 from GDScript to shaders, Redot converts the type automatically. Below is a
 table of the corresponding types:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 23%" />
-<col style="width: 56%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>GLSL type</p></th>
 <th class="head"><p>GDScript type</p></th>
@@ -12133,7 +12207,7 @@ undefined behavior.</p>
 </pre></div>
 </div>
 <section id="global-uniforms">
-<span id="doc-shading-language-global-uniforms"></span><h3>Global uniforms<a class="headerlink" href="#global-uniforms" title="Permalink to this headline">¶</a></h3>
+<span id="doc-shading-language-global-uniforms"></span><h3>Global uniforms<a class="headerlink" href="#global-uniforms" title="Link to this heading"></a></h3>
 <p>Sometimes, you want to modify a parameter in many different shaders at once.
 With a regular uniform, this takes a lot of work as all these shaders need to be
 tracked and the uniform needs to be set for each of them. Global uniforms allow
@@ -12151,7 +12225,7 @@ uniforms:</p>
 <figure class="align-center" id="id1">
 <img alt="Adding a global uniform in the Shader Globals tab of the Project Settings" src="../../../_images/shading_language_adding_global_uniforms.webp" />
 <figcaption>
-<p><span class="caption-text">Adding a global uniform in the Shader Globals tab of the Project Settings</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Adding a global uniform in the Shader Globals tab of the Project Settings</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>After creating a global uniform, you can use it in a shader as follows:</p>
@@ -12200,7 +12274,7 @@ them as global uniforms.</p>
 </div>
 </section>
 <section id="per-instance-uniforms">
-<span id="doc-shading-language-per-instance-uniforms"></span><h3>Per-instance uniforms<a class="headerlink" href="#per-instance-uniforms" title="Permalink to this headline">¶</a></h3>
+<span id="doc-shading-language-per-instance-uniforms"></span><h3>Per-instance uniforms<a class="headerlink" href="#per-instance-uniforms" title="Link to this heading"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Per-instance uniforms are only available in <code class="docutils literal notranslate"><span class="pre">spatial</span></code> (3D) shaders.</p>
@@ -12236,7 +12310,7 @@ the inspector:</p>
 <figure class="align-center" id="id2">
 <img alt="Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector" src="../../../_images/shading_language_per_instance_uniforms_inspector.webp" />
 <figcaption>
-<p><span class="caption-text">Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p><span class="caption-text">Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>Per-instance uniform values can also be set at run-time using
@@ -12265,7 +12339,7 @@ specifying the index (0-15) of the instance uniform by using the
 </section>
 </section>
 <section id="built-in-variables">
-<h2>Built-in variables<a class="headerlink" href="#built-in-variables" title="Permalink to this headline">¶</a></h2>
+<h2>Built-in variables<a class="headerlink" href="#built-in-variables" title="Link to this heading"></a></h2>
 <p>A large number of built-in variables are available, like <code class="docutils literal notranslate"><span class="pre">UV</span></code>, <code class="docutils literal notranslate"><span class="pre">COLOR</span></code> and <code class="docutils literal notranslate"><span class="pre">VERTEX</span></code>. What variables are available depends on the type of shader (<code class="docutils literal notranslate"><span class="pre">spatial</span></code>, <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> or <code class="docutils literal notranslate"><span class="pre">particle</span></code>) and the function used (<code class="docutils literal notranslate"><span class="pre">vertex</span></code>, <code class="docutils literal notranslate"><span class="pre">fragment</span></code> or <code class="docutils literal notranslate"><span class="pre">light</span></code>).
 For a list of the built-in variables that are available, please see the corresponding pages:</p>
 <ul class="simple">
@@ -12277,15 +12351,11 @@ For a list of the built-in variables that are available, please see the correspo
 </ul>
 </section>
 <section id="built-in-functions">
-<h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Built-in functions<a class="headerlink" href="#built-in-functions" title="Link to this heading"></a></h2>
 <p>A large number of built-in functions are supported, conforming to GLSL ES 3.0.
 When vec_type (float), vec_int_type, vec_uint_type, vec_bool_type nomenclature
 is used, it can be scalar or vector.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 47%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Function</p></th>
 <th class="head"><p>Description / Return value</p></th>

@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="HTML5 shell class reference" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="tutorials/platform/web/html5_shell_classref.html" />
@@ -11,48 +13,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>HTML5 shell class reference &mdash; Redot Engine (4.3) documentation in English</title>
 
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/custom.css?10" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/dev.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script src="../../../_static/js/custom.js?7"></script>
-    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
-  <link rel="alternate" hreflang="en" href="/en/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="de" href="/de/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="es" href="/es/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="fr" href="/fr/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="fi" href="/fi/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="it" href="/it/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="ja" href="/ja/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="ko" href="/ko/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="pl" href="/pl/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="pt-br" href="/pt_BR/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="ru" href="/ru/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="uk" href="/uk/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="zh-cn" href="/zh_CN/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="zh-tw" href="/zh_TW/stable/tutorials/platform/web/html5_shell_classref.html" />
-  <link rel="alternate" hreflang="x-default" href="/en/stable/tutorials/platform/web/html5_shell_classref.html" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7c5dd428" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/dev.css?v=b28a5b3c" />
 
-  <link rel="canonical" href="/en/stable/tutorials/platform/web/html5_shell_classref.html" />
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=a8addcb7"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/js/custom.js?v=c9073bdc"></script>
+    <script src="../../../_static/js/theme.js"></script><meta name="theme-color" content="#3d8fcc" />
   
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Custom HTML page for Web export" href="customizing_html5_shell.html" />
-    <link rel="prev" title="The JavaScriptBridge Singleton" href="javascript_bridge.html" />
+    <link rel="prev" title="The JavaScriptBridge singleton" href="javascript_bridge.html" />
 <meta name="doc_version" content="4.3" />
 <meta name="doc_is_latest" content="False" />
 <meta name="doc_pagename" content="tutorials/platform/web/html5_shell_classref" />
@@ -64,12 +45,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../../index.html">
-            <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/docs_logo.svg" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -134,6 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-languages-are-supported-in-redot">Which programming languages are supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-is-gdscript-and-why-should-i-use-it">What is GDScript and why should I use it?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-were-the-motivations-behind-creating-gdscript">What were the motivations behind creating GDScript?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#which-programming-language-is-fastest">Which programming language is fastest?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#what-3d-model-formats-does-redot-support">What 3D model formats does Redot support?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#will-insert-closed-sdk-such-as-fmod-gameworks-etc-be-supported-in-redot">Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Redot?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html#how-can-i-extend-redot">How can I extend Redot?</a></li>
@@ -189,17 +175,27 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/docs_changelog.html">Documentation changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-2">New pages since version 4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#about">About</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#contributing">Contributing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#gdextension">GDExtension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#rendering">Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#xr">XR</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-1">New pages since version 4.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#c">C#</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#development">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#migrating">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#i-o">I/O</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#platform-specific">Platform-specific</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/docs_changelog.html#new-pages-since-version-4-0">New pages since version 4.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id1">Development</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Migrating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id2">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#id3">Migrating</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../about/docs_changelog.html#physics">Physics</a></li>
 </ul>
 </li>
@@ -517,19 +513,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/default_key_mapping.html">Default editor shortcuts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General Editor Actions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvas-item-editor">2D / Canvas Item Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#general-editor-actions">General editor actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#bottom-panels">Bottom panels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-canvasitem-editor">2D / CanvasItem editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#d-spatial-editor">3D / Spatial editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#text-editor">Text editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#script-editor">Script editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#editor-output">Editor output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#debugger">Debugger</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File Dialog</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene Tree Dock</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation Track Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tile-map-editor">Tile Map Editor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">Tileset Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#file-dialog">File dialog</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#filesystem-dock">FileSystem dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#scene-tree-dock">Scene tree dock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#animation-track-editor">Animation track editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tilemap-editor">TileMap editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#tileset-editor">TileSet Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/default_key_mapping.html#project-manager">Project manager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/customizing_editor.html">Customizing the interface</a><ul>
@@ -684,6 +682,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../2d/index.html">2D</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../2d/introduction_to_2d.html">Introduction to 2D</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-workspace">2D workspace</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#main-toolbar">Main toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#coordinate-system">Coordinate system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#viewport-and-canvas-items">Viewport and Canvas items</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../2d/canvas_layers.html#canvaslayers">CanvasLayers</a></li>
@@ -968,9 +979,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/particles/index.html">Particle systems (3D)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#basic-usage">Basic usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/index.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/creating_a_3d_particle_system.html">Creating a 3D particle system</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/properties.html">3D Particle system properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html">Process material properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#particle-flags">Particle flags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#spawn">Spawn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#accelerations">Accelerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#display">Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#collision">Collision</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/process_material_properties.html#sub-emitter">Sub-emitter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/subemitters.html">Particle sub-emitters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/trails.html">3D Particle trails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/turbulence.html">Particle turbulence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/attractors.html">3D Particle attractors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/collision.html">3D Particle collisions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/particles/complex_shapes.html">Complex emission shapes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../3d/high_dynamic_range.html">High dynamic range lighting</a><ul>
@@ -1086,6 +1109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#exporting-the-meshlibrary">Exporting the MeshLibrary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap">Using GridMap</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../3d/using_gridmaps.html#using-gridmap-in-code">Using GridMap in code</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../3d/spring_arm.html">Third-person camera with spring arm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#what-is-a-spring-arm">What is a spring arm?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#spring-arm-with-a-camera">Spring arm with a camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../3d/spring_arm.html#setting-up-the-spring-arm-and-camera">Setting up the spring arm and camera</a></li>
 </ul>
 </li>
 </ul>
@@ -1551,7 +1581,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#setting-it-up-in-redot">Setting it up in Redot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#providing-launcher-icons">Providing launcher icons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#exporting-for-google-play-store">Exporting for Google Play Store</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-apk-size">Optimizing the APK size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#optimizing-the-file-size">Optimizing the file size</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_android.html#environment-variables">Environment variables</a></li>
 </ul>
 </li>
@@ -1561,8 +1591,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../export/exporting_for_web.html">Exporting for the Web</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-file-name">Export file name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#webgl-version">WebGL version</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#audio-playback">Audio playback</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#export-options">Export options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#thread-and-extension-support">Thread and extension support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#exporting-as-a-progressive-web-app-pwa">Exporting as a Progressive Web App (PWA)</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../export/exporting_for_web.html#limitations">Limitations</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#using-cookies-for-data-persistence">Using cookies for data persistence</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../export/exporting_for_web.html#background-processing">Background processing</a></li>
@@ -1739,7 +1775,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#what-is-it">What is it?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#how-does-it-work">How does it work?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#anatomy-of-an-inputevent">Anatomy of an InputEvent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#actions">Actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#input-actions">Input actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../inputs/inputevent.html#inputmap">InputMap</a></li>
 </ul>
 </li>
@@ -2268,6 +2304,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#vehiclebody-simulation-is-unstable-especially-at-high-speeds">VehicleBody simulation is unstable, especially at high speeds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#collision-results-in-bumps-when-an-object-moves-across-tiles">Collision results in bumps when an object moves across tiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-drops-when-an-object-touches-another-object">Framerate drops when an object touches another object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#framerate-suddenly-drops-to-a-very-low-value-beyond-a-certain-amount-of-physics-simulation">Framerate suddenly drops to a very low value beyond a certain amount of physics simulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../physics/troubleshooting_physics_issues.html#physics-simulation-is-unreliable-when-far-away-from-the-world-origin">Physics simulation is unreliable when far away from the world origin</a></li>
 </ul>
 </li>
@@ -2313,7 +2350,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Web</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="javascript_bridge.html">The JavaScriptBridge Singleton</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="javascript_bridge.html">The JavaScriptBridge singleton</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="javascript_bridge.html#interacting-with-javascript">Interacting with JavaScript</a></li>
 <li class="toctree-l4"><a class="reference internal" href="javascript_bridge.html#callbacks">Callbacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="javascript_bridge.html#can-i-use-my-favorite-library">Can I use my favorite library?</a></li>
@@ -2478,9 +2515,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html">GDScript reference</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#history">History</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#example-of-gdscript">Example of GDScript</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#language">Language</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#operators">Operators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#literals">Literals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#annotations">Annotations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#code-regions">Code regions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#line-continuation">Line continuation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#built-in-types">Built-in types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#data">Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#constants">Constants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#statements-and-control-flow">Statements and control flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#classes">Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#exports">Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#properties-setters-and-getters">Properties (setters and getters)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#tool-mode">Tool mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#memory-management">Memory management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#signals">Signals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_basics.html#assert-keyword">Assert keyword</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_advanced.html">GDScript: An introduction to dynamic languages</a><ul>
@@ -2496,9 +2550,10 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html">GDScript exported properties</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#basic-use">Basic use</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping Exports</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#grouping-exports">Grouping exports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#strings-as-paths">Strings as paths</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#limiting-editor-input-ranges">Limiting editor input ranges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#adding-suffixes-and-handling-degrees-radians">Adding suffixes and handling degrees/radians</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#floats-with-easing-hint">Floats with easing hint</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#colors">Colors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#nodes">Nodes</a></li>
@@ -2507,6 +2562,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-enums">Exporting enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#exporting-arrays">Exporting arrays</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-storage"><code class="docutils literal notranslate"><span class="pre">&#64;export_storage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#export-custom"><code class="docutils literal notranslate"><span class="pre">&#64;export_custom</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#setting-exported-variables-from-a-tool-script">Setting exported variables from a tool script</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_exports.html#advanced-exports">Advanced exports</a></li>
 </ul>
@@ -2538,12 +2594,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/warning_system.html">GDScript warning system</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html">GDScript format strings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#usage-in-gdscript">Usage in GDScript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-strings">Format strings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#multiple-placeholders">Multiple placeholders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-specifiers">Format specifiers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#padding">Padding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#escape-sequence">Escape sequence</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#format-method-examples">Format method examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-format-method">String format method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdscript/gdscript_format_string.html#string-concatenation">String concatenation</a></li>
 </ul>
 </li>
 </ul>
@@ -2580,7 +2637,24 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html">C# diagnostics</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/index.html#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0001.html">GD0001: Missing partial modifier on declaration of type that derives from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0002.html">GD0002: Missing partial modifier on declaration of type which contains nested classes that derive from RedotObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0003.html">GD0003: Found multiple classes with the same name in the same script file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0101.html">GD0101: The exported member is static</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0102.html">GD0102: The type of the exported member is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0103.html">GD0103: The exported member is read-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0104.html">GD0104: The exported property is write-only</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0105.html">GD0105: The exported property is an indexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0106.html">GD0106: The exported property is an explicit interface implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0107.html">GD0107: Types not derived from Node should not export Node members</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0201.html">GD0201: The name of the delegate must end with 'EventHandler'</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0202.html">GD0202: The parameter of the delegate signature of the signal is not supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0203.html">GD0203: The delegate signature of the signal must return void</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0301.html">GD0301: The generic type argument must be a Variant compatible type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0302.html">GD0302: The generic type parameter must be annotated with the '[MustBeVariant]' attribute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0303.html">GD0303: The parent symbol of a type argument that must be Variant compatible was not handled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0401.html">GD0401: The class must derive from Redot.GodotObject or a derived class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/c_sharp/diagnostics/GD0402.html">GD0402: The class must not be generic</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/c_sharp/index.html#redot-api-for-c">Redot API for C#</a><ul>
@@ -2625,6 +2699,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html">GDExtension documentation system</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html#documentation-styling">Documentation styling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../scripting/gdextension/gdextension_docs_system.html#publishing-documentation-online">Publishing documentation online</a></li>
 </ul>
 </li>
 </ul>
@@ -2986,7 +3061,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ui/index.html#ui-building-blocks">UI building blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/size_and_anchors.html">Size and anchors</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#centering-a-control">Centering a control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#layout-presets">Layout Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../ui/size_and_anchors.html#anchor-presets">Anchor Presets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../ui/gui_containers.html">Using Containers</a><ul>
@@ -11021,7 +11096,7 @@
 	</div>
 	<ul class="wy-breadcrumbs">
 		
-      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Platform-specific</a></li>
           <li class="breadcrumb-item"><a href="index.html">Web</a></li>
       <li class="breadcrumb-item active">HTML5 shell class reference</li>
@@ -11084,23 +11159,19 @@
 
   
   <section id="html5-shell-class-reference">
-<span id="doc-html5-shell-classref"></span><h1>HTML5 shell class reference<a class="headerlink" href="#html5-shell-class-reference" title="Permalink to this headline">¶</a></h1>
+<span id="doc-html5-shell-classref"></span><h1>HTML5 shell class reference<a class="headerlink" href="#html5-shell-class-reference" title="Link to this heading"></a></h1>
 <p>Projects exported for the Web expose the <a class="reference internal" href="#Engine" title="Engine"><code class="xref js js-class docutils literal notranslate"><span class="pre">Engine()</span></code></a> class to the JavaScript environment, that allows
 fine control over the engine's start-up process.</p>
 <p>This API is built in an asynchronous manner and requires basic understanding
 of <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Promises</a>.</p>
 <section id="engine">
-<h2>Engine<a class="headerlink" href="#engine" title="Permalink to this headline">¶</a></h2>
+<h2>Engine<a class="headerlink" href="#engine" title="Link to this heading"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">Engine</span></code> class provides methods for loading and starting exported projects on the Web. For default export
 settings, this is already part of the exported HTML page. To understand practical use of the <code class="docutils literal notranslate"><span class="pre">Engine</span></code> class,
 see <a class="reference internal" href="customizing_html5_shell.html#doc-customizing-html5-shell"><span class="std std-ref">Custom HTML page for Web export</span></a>.</p>
 <section id="static-methods">
-<h3>Static Methods<a class="headerlink" href="#static-methods" title="Permalink to this headline">¶</a></h3>
+<h3>Static Methods<a class="headerlink" href="#static-methods" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 91%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Promise</p></td>
 <td><p><a class="reference internal" href="#Engine.load" title="Engine.load"><code class="xref js js-attr docutils literal notranslate"><span class="pre">load</span></code></a> <strong>(</strong> string basePath <strong>)</strong></p></td>
@@ -11115,12 +11186,8 @@ see <a class="reference internal" href="customizing_html5_shell.html#doc-customi
 </table>
 </section>
 <section id="instance-methods">
-<h3>Instance Methods<a class="headerlink" href="#instance-methods" title="Permalink to this headline">¶</a></h3>
+<h3>Instance Methods<a class="headerlink" href="#instance-methods" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 93%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>Promise</p></td>
 <td><p><a class="reference internal" href="#Engine.prototype.init" title="Engine.prototype.init"><code class="xref js js-attr docutils literal notranslate"><span class="pre">init</span></code></a> <strong>(</strong> <em>[ string basePath ]</em> <strong>)</strong></p></td>
@@ -11144,10 +11211,10 @@ see <a class="reference internal" href="customizing_html5_shell.html#doc-customi
 </table>
 <dl class="js class">
 <dt class="sig sig-object js" id="Engine">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">Engine</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initConfig</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">Engine</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initConfig</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine" title="Link to this definition"></a></dt>
 <dd><p>Create a new Engine instance with the given configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>initConfig</strong> (<span><a class="reference internal" href="#EngineConfig" title="EngineConfig"><code class="xref js js-func docutils literal notranslate"><span class="pre">EngineConfig()</span></code></a></span>) -- The initial config for this instance.</p></li>
 </ul>
@@ -11156,18 +11223,18 @@ see <a class="reference internal" href="customizing_html5_shell.html#doc-customi
 <p><strong>Static Methods</strong></p>
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.load">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">load</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">basePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.load" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">load</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">basePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.load" title="Link to this definition"></a></dt>
 <dd><p>Load the engine from the specified base path.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>basePath</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) -- Base path of the engine to load.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A Promise that resolves once the engine is loaded.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Promise</p>
 </dd>
 </dl>
@@ -11175,25 +11242,25 @@ see <a class="reference internal" href="customizing_html5_shell.html#doc-customi
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.unload">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">unload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.unload" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">unload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.unload" title="Link to this definition"></a></dt>
 <dd><p>Unload the engine to free memory.</p>
 <p>This method will be called automatically depending on the configuration. See <a class="reference internal" href="#unloadAfterInit" title="unloadAfterInit"><code class="xref js js-attr docutils literal notranslate"><span class="pre">unloadAfterInit</span></code></a>.</p>
 </dd></dl>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.isWebGLAvailable">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isWebGLAvailable</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">majorVersion=1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.isWebGLAvailable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isWebGLAvailable</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">majorVersion=1</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.isWebGLAvailable" title="Link to this definition"></a></dt>
 <dd><p>Check whether WebGL is available. Optionally, specify a particular version of WebGL to check for.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>majorVersion</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) -- The major WebGL version to check for.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>If the given major version of WebGL is available.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
 </dd>
 </dl>
@@ -11202,19 +11269,19 @@ see <a class="reference internal" href="customizing_html5_shell.html#doc-customi
 <p><strong>Instance Methods</strong></p>
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.init">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">basePath</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.init" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">basePath</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.init" title="Link to this definition"></a></dt>
 <dd><p>Initialize the engine instance. Optionally, pass the base path to the engine to load it,
 if it hasn't been loaded yet. See <a class="reference internal" href="#Engine.load" title="Engine.load"><code class="xref js js-meth docutils literal notranslate"><span class="pre">Engine.load()</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>basePath</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) -- Base path of the engine to load.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A <code class="docutils literal notranslate"><span class="pre">Promise</span></code> that resolves once the engine is loaded and initialized.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Promise</p>
 </dd>
 </dl>
@@ -11222,12 +11289,12 @@ if it hasn't been loaded yet. See <a class="reference internal" href="#Engine.lo
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.preloadFile">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">preloadFile</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.preloadFile" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">preloadFile</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.preloadFile" title="Link to this definition"></a></dt>
 <dd><p>Load a file so it is available in the instance's file system once it runs. Must be called <strong>before</strong> starting the
 instance.</p>
 <p>If not provided, the <code class="docutils literal notranslate"><span class="pre">path</span></code> is derived from the URL of the loaded file.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string|ArrayBuffer()</span></code></span>) -- <p>The file to preload.</p>
 <p>If a <code class="docutils literal notranslate"><span class="pre">string</span></code> the file will be loaded from that path.</p>
@@ -11236,10 +11303,10 @@ instance.</p>
 <li><p><strong>path</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) -- Path by which the file will be accessible. Required, if <code class="docutils literal notranslate"><span class="pre">file</span></code> is not a string.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A Promise that resolves once the file is loaded.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Promise</p>
 </dd>
 </dl>
@@ -11247,22 +11314,22 @@ instance.</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.start">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">override</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.start" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">override</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.start" title="Link to this definition"></a></dt>
 <dd><p>Start the engine instance using the given override configuration (if any).
 <a class="reference internal" href="#Engine.prototype.startGame" title="Engine.prototype.startGame"><code class="xref js js-meth docutils literal notranslate"><span class="pre">startGame</span></code></a> can be used in typical cases instead.</p>
 <p>This will initialize the instance if it is not initialized. For manual initialization, see <a class="reference internal" href="#Engine.prototype.init" title="Engine.prototype.init"><code class="xref js js-meth docutils literal notranslate"><span class="pre">init</span></code></a>.
 The engine must be loaded beforehand.</p>
 <p>Fails if a canvas cannot be found on the page, or not specified in the configuration.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>override</strong> (<span><a class="reference internal" href="#EngineConfig" title="EngineConfig"><code class="xref js js-func docutils literal notranslate"><span class="pre">EngineConfig()</span></code></a></span>) -- An optional configuration override.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Promise that resolves once the engine started.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Promise</p>
 </dd>
 </dl>
@@ -11270,22 +11337,22 @@ The engine must be loaded beforehand.</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.startGame">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startGame</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">override</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.startGame" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startGame</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">override</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.startGame" title="Link to this definition"></a></dt>
 <dd><p>Start the game instance using the given configuration override (if any).</p>
 <p>This will initialize the instance if it is not initialized. For manual initialization, see <a class="reference internal" href="#Engine.prototype.init" title="Engine.prototype.init"><code class="xref js js-meth docutils literal notranslate"><span class="pre">init</span></code></a>.</p>
 <p>This will load the engine if it is not loaded, and preload the main pck.</p>
 <p>This method expects the initial config (or the override) to have both the <a class="reference internal" href="#executable" title="executable"><code class="xref js js-attr docutils literal notranslate"><span class="pre">executable</span></code></a> and <a class="reference internal" href="#mainPack" title="mainPack"><code class="xref js js-attr docutils literal notranslate"><span class="pre">mainPack</span></code></a>
 properties set (normally done by the editor during export).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>override</strong> (<span><a class="reference internal" href="#EngineConfig" title="EngineConfig"><code class="xref js js-func docutils literal notranslate"><span class="pre">EngineConfig()</span></code></a></span>) -- An optional configuration override.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Promise that resolves once the game started.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Promise</p>
 </dd>
 </dl>
@@ -11293,10 +11360,10 @@ properties set (normally done by the editor during export).</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.copyToFS">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">copyToFS</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.copyToFS" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">copyToFS</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.copyToFS" title="Link to this definition"></a></dt>
 <dd><p>Create a file at the specified <code class="docutils literal notranslate"><span class="pre">path</span></code> with the passed as <code class="docutils literal notranslate"><span class="pre">buffer</span></code> in the instance's file system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) -- The location where the file will be created.</p></li>
 <li><p><strong>buffer</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">ArrayBuffer()</span></code></span>) -- The content of the file.</p></li>
@@ -11307,7 +11374,7 @@ properties set (normally done by the editor during export).</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="Engine.prototype.requestQuit">
-<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">requestQuit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.requestQuit" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Engine</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">prototype</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">requestQuit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Engine.prototype.requestQuit" title="Link to this definition"></a></dt>
 <dd><p>Request that the current instance quit.</p>
 <p>This is akin the user pressing the close button in the window manager, and will
 have no effect if the engine has crashed, or is stuck in a loop.</p>
@@ -11318,16 +11385,12 @@ have no effect if the engine has crashed, or is stuck in a loop.</p>
 </section>
 </section>
 <section id="engine-configuration">
-<h2>Engine configuration<a class="headerlink" href="#engine-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Engine configuration<a class="headerlink" href="#engine-configuration" title="Link to this heading"></a></h2>
 <p>An object used to configure the Engine instance based on redot export options, and to override those in custom HTML
 templates if needed.</p>
 <section id="properties">
-<h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
+<h3>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 62%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p>type</p></td>
 <td><p>name</p></td>
@@ -11372,19 +11435,19 @@ templates if needed.</p>
 </table>
 <dl class="js attribute">
 <dt class="sig sig-object js" id="EngineConfig">
-<span class="sig-name descname"><span class="n"><span class="pre">EngineConfig</span></span></span><a class="headerlink" href="#EngineConfig" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">EngineConfig</span></span></span><a class="headerlink" href="#EngineConfig" title="Link to this definition"></a></dt>
 <dd><p>The Engine configuration object. This is just a typedef, create it like a regular object, e.g.:</p>
 <p><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">MyConfig</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">executable:</span> <span class="pre">'godot',</span> <span class="pre">unloadAfterInit:</span> <span class="pre">false</span> <span class="pre">}</span></code></p>
 <p><strong>Property Descriptions</strong></p>
 <dl class="js attribute">
 <dt class="sig sig-object js" id="unloadAfterInit">
-<span class="sig-name descname"><span class="n"><span class="pre">unloadAfterInit</span></span></span><a class="headerlink" href="#unloadAfterInit" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">unloadAfterInit</span></span></span><a class="headerlink" href="#unloadAfterInit" title="Link to this definition"></a></dt>
 <dd><p>Whether the unload the engine automatically after the instance is initialized.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>boolean</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p>
 </dd>
 </dl>
@@ -11392,14 +11455,14 @@ templates if needed.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="canvas">
-<span class="sig-name descname"><span class="n"><span class="pre">canvas</span></span></span><a class="headerlink" href="#canvas" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">canvas</span></span></span><a class="headerlink" href="#canvas" title="Link to this definition"></a></dt>
 <dd><p>The HTML DOM Canvas object to use.</p>
 <p>By default, the first canvas element in the document will be used is none is specified.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>HTMLCanvasElement</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 </dd>
 </dl>
@@ -11407,13 +11470,13 @@ templates if needed.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="executable">
-<span class="sig-name descname"><span class="n"><span class="pre">executable</span></span></span><a class="headerlink" href="#executable" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">executable</span></span></span><a class="headerlink" href="#executable" title="Link to this definition"></a></dt>
 <dd><p>The name of the WASM file without the extension. (Set by Redot Editor export process).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code></p>
 </dd>
 </dl>
@@ -11421,13 +11484,13 @@ templates if needed.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="mainPack">
-<span class="sig-name descname"><span class="n"><span class="pre">mainPack</span></span></span><a class="headerlink" href="#mainPack" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">mainPack</span></span></span><a class="headerlink" href="#mainPack" title="Link to this definition"></a></dt>
 <dd><p>An alternative name for the game pck to load. The executable name is used otherwise.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 </dd>
 </dl>
@@ -11435,15 +11498,15 @@ templates if needed.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="locale">
-<span class="sig-name descname"><span class="n"><span class="pre">locale</span></span></span><a class="headerlink" href="#locale" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">locale</span></span></span><a class="headerlink" href="#locale" title="Link to this definition"></a></dt>
 <dd><p>Specify a language code to select the proper localization for the game.</p>
 <p>The browser locale will be used if none is specified. See complete list of
 <a class="reference internal" href="../../i18n/locales.html#doc-locales"><span class="std std-ref">supported locales</span></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>string</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p>
 </dd>
 </dl>
@@ -11451,17 +11514,17 @@ templates if needed.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="canvasResizePolicy">
-<span class="sig-name descname"><span class="n"><span class="pre">canvasResizePolicy</span></span></span><a class="headerlink" href="#canvasResizePolicy" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">canvasResizePolicy</span></span></span><a class="headerlink" href="#canvasResizePolicy" title="Link to this definition"></a></dt>
 <dd><p>The canvas resize policy determines how the canvas should be resized by Redot.</p>
 <p><code class="docutils literal notranslate"><span class="pre">0</span></code> means Redot won't do any resizing. This is useful if you want to control the canvas size from
 javascript code in your template.</p>
 <p><code class="docutils literal notranslate"><span class="pre">1</span></code> means Redot will resize the canvas on start, and when changing window size via engine functions.</p>
 <p><code class="docutils literal notranslate"><span class="pre">2</span></code> means Redot will adapt the canvas size to match the whole browser window.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>number</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p>
 </dd>
 </dl>
@@ -11469,15 +11532,15 @@ javascript code in your template.</p>
 
 <dl class="js attribute">
 <dt class="sig sig-object js" id="args">
-<span class="sig-name descname"><span class="n"><span class="pre">args</span></span></span><a class="headerlink" href="#args" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">args</span></span></span><a class="headerlink" href="#args" title="Link to this definition"></a></dt>
 <dd><p>The arguments to be passed as command line arguments on startup.</p>
 <p>See <a class="reference internal" href="../../editor/command_line_tutorial.html#doc-command-line-tutorial"><span class="std std-ref">command line tutorial</span></a>.</p>
 <p><strong>Note</strong>: <a class="reference internal" href="#Engine.prototype.startGame" title="Engine.prototype.startGame"><code class="xref js js-meth docutils literal notranslate"><span class="pre">startGame</span></code></a> will always add the <code class="docutils literal notranslate"><span class="pre">--main-pack</span></code> argument.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Array.&lt;string&gt;</p>
 </dd>
-<dt class="field-even">Value</dt>
+<dt class="field-even">Value<span class="colon">:</span></dt>
 <dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p>
 </dd>
 </dl>
@@ -11485,11 +11548,11 @@ javascript code in your template.</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="onExecute">
-<span class="sig-name descname"><span class="n"><span class="pre">onExecute</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onExecute" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">onExecute</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onExecute" title="Link to this definition"></a></dt>
 <dd><p>A callback function for handling Redot's <code class="docutils literal notranslate"><span class="pre">OS.execute</span></code> calls.</p>
 <p>This is for example used in the Web Editor template to switch between Project Manager and editor, and for running the game.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) -- The path that Redot's wants executed.</p></li>
 <li><p><strong>args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Array.</span></code></span>) -- The arguments of the &quot;command&quot; to execute.</p></li>
@@ -11500,11 +11563,11 @@ javascript code in your template.</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="onExit">
-<span class="sig-name descname"><span class="n"><span class="pre">onExit</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onExit" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">onExit</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status_code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onExit" title="Link to this definition"></a></dt>
 <dd><p>A callback function for being notified when the Redot instance quits.</p>
 <p><strong>Note</strong>: This function will not be called if the engine crashes or become unresponsive.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>status_code</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) -- The status code returned by Redot on exit.</p></li>
 </ul>
@@ -11514,7 +11577,7 @@ javascript code in your template.</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="onProgress">
-<span class="sig-name descname"><span class="n"><span class="pre">onProgress</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onProgress" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">onProgress</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onProgress" title="Link to this definition"></a></dt>
 <dd><p>A callback function for displaying download progress.</p>
 <p>The function is called once per frame while downloading files, so the usage of <code class="docutils literal notranslate"><span class="pre">requestAnimationFrame()</span></code>
 is not necessary.</p>
@@ -11526,7 +11589,7 @@ Possible reasons include:</p>
 <li><p>Not all file downloads have started yet (usually on servers without multi-threading)</p></li>
 </ul>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>current</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) -- The current amount of downloaded bytes so far.</p></li>
 <li><p><strong>total</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) -- The total amount of bytes to be downloaded.</p></li>
@@ -11537,11 +11600,11 @@ Possible reasons include:</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="onPrint">
-<span class="sig-name descname"><span class="n"><span class="pre">onPrint</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">...var_args</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#onPrint" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">onPrint</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">...var_args</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#onPrint" title="Link to this definition"></a></dt>
 <dd><p>A callback function for handling the standard output stream. This method should usually only be used in debug pages.</p>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">console.log()</span></code> is used.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>var_args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">*()</span></code></span>) -- A variadic number of arguments to be printed.</p></li>
 </ul>
@@ -11551,11 +11614,11 @@ Possible reasons include:</p>
 
 <dl class="js function">
 <dt class="sig sig-object js" id="onPrintError">
-<span class="sig-name descname"><span class="n"><span class="pre">onPrintError</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">...var_args</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#onPrintError" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="n"><span class="pre">onPrintError</span></span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">...var_args</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#onPrintError" title="Link to this definition"></a></dt>
 <dd><p>A callback function for handling the standard error stream. This method should usually only be used in debug pages.</p>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">console.error()</span></code> is used.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Arguments</dt>
+<dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>var_args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">*()</span></code></span>) -- A variadic number of arguments to be printed as errors.</p></li>
 </ul>
@@ -11574,7 +11637,7 @@ Possible reasons include:</p>
 
 </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="javascript_bridge.html" class="btn btn-neutral float-left" title="The JavaScriptBridge Singleton" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="javascript_bridge.html" class="btn btn-neutral float-left" title="The JavaScriptBridge singleton" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="customizing_html5_shell.html" class="btn btn-neutral float-right" title="Custom HTML page for Web export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
