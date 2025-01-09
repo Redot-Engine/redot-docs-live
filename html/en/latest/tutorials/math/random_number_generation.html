@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Random number generation &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
@@ -525,7 +525,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -721,10 +727,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3306,6 +3310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3670,7 +3675,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11543,7 +11547,7 @@ across runs:</p>
 </div>
 </div><div aria-labelledby="tab-1-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Seed</span><span class="p">(</span><span class="m">12345</span><span class="p">);</span>
+<span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Seed</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">// To use a string as a seed, you can hash it to a number.</span>
 <span class="w">    </span><span class="n">GD</span><span class="p">.</span><span class="n">Seed</span><span class="p">(</span><span class="s">&quot;Hello world&quot;</span><span class="p">.</span><span class="n">Hash</span><span class="p">());</span>
 <span class="p">}</span>
@@ -11580,10 +11584,10 @@ the denominator:</p>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-3-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random integer between 0 and 49.</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">50</span><span class="p">);</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span>
 
 <span class="c1">// Prints a random integer between 10 and 60.</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">51</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">10</span><span class="p">);</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">51</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></div>
@@ -11601,7 +11605,7 @@ varying by the deviation (1.0 by default):</p>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-4-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-4-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random floating-point number from a normal distribution with a mean 0.0 and deviation 1.0.</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randfn</span><span class="p">(</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">1.0</span><span class="p">));</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Randfn</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">));</span>
 </pre></div>
 </div>
 </div></div>
@@ -11614,7 +11618,7 @@ and <code class="docutils literal notranslate"><span class="pre">to</span></code
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-5-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-5-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random floating-point number between -4 and 6.5.</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">6.5</span><span class="p">));</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">6.5</span><span class="p">));</span>
 </pre></div>
 </div>
 </div></div>
@@ -11626,7 +11630,7 @@ and <code class="docutils literal notranslate"><span class="pre">to</span></code
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-6-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-6-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random integer number between -10 and 10.</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">));</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">));</span>
 </pre></div>
 </div>
 </div></div>
@@ -11657,17 +11661,17 @@ to do it for us:</p>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-7-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Use Redot&#39;s Array type instead of a BCL type so we can use `PickRandom()` on it.</span>
-<span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
+<span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">];</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Pick 100 fruits randomly.</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetFruit</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Pick 100 fruits randomly, this time using the `Array.PickRandom()`</span>
 <span class="w">        </span><span class="c1">// helper method. This has the same behavior as `GetFruit()`.</span>
@@ -11716,12 +11720,12 @@ prevent repetition:</p>
 <span class="w">    </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">random_fruit</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-8-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-8-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
+</div><div aria-labelledby="tab-8-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-8-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">];</span>
 <span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">_lastFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Pick 100 fruits randomly.</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetFruit</span><span class="p">());</span>
@@ -11775,14 +11779,14 @@ limited set of values. To prevent this, use the <a class="reference internal" hr
 </div>
 </div><div aria-labelledby="tab-9-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-9-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">_metals</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;copper&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">}}},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;silver&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">150</span><span class="p">}}},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;gold&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">500</span><span class="p">}}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;copper&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">}}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;silver&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">}}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;gold&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{{</span><span class="s">&quot;quantity&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;price&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">}}},</span>
 <span class="p">};</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetMetal</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
@@ -11826,7 +11830,7 @@ floating-point number between 0.0 and 1.0. We can use this to create a
 </div>
 </div><div aria-labelledby="tab-10-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-10-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetItemRarity</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
@@ -11836,12 +11840,12 @@ floating-point number between 0.0 and 1.0. We can use this to create a
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">randomFloat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GD</span><span class="p">.</span><span class="n">Randf</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomFloat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.8f</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomFloat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.8f</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// 80% chance of being returned.</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Common&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomFloat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.95f</span><span class="p">)</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="nf">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomFloat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.95f</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// 15% chance of being returned.</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Uncommon&quot;</span><span class="p">;</span>
@@ -11881,8 +11885,8 @@ get a value from another array as follows:</p>
 </div><div aria-labelledby="tab-11-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Prints a random element using the weighted index that is returned by `RandWeighted()`.</span>
 <span class="c1">// Here, &quot;apple&quot; will be returned twice as rarely as &quot;orange&quot; and &quot;pear&quot;.</span>
 <span class="c1">// &quot;banana&quot; is twice as common as &quot;orange&quot; and &quot;pear&quot;, and four times as common as &quot;apple&quot;.</span>
-<span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
-<span class="kt">float</span><span class="p">[]</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">};</span>
+<span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">];</span>
+<span class="kt">float</span><span class="p">[]</span><span class="w"> </span><span class="n">probabilities</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5f</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span>
 
 <span class="kt">var</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RandomNumberGenerator</span><span class="p">();</span>
 <span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="n">random</span><span class="p">.</span><span class="n">RandWeighted</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)]);</span>
@@ -11927,7 +11931,7 @@ ends up empty. When that happens, you reinitialize it to its default value:</p>
 <span class="w">    </span><span class="k k-ControlFlow">return</span><span class="w"> </span><span class="n">random_fruit</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-12-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-12-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="w"> </span><span class="p">};</span>
+</div><div aria-labelledby="tab-12-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-12-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pear&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;banana&quot;</span><span class="p">];</span>
 <span class="c1">// A copy of the fruits array so we can restore the original value into `fruits`.</span>
 <span class="k">private</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">_fruitsFull</span><span class="p">;</span>
 
@@ -11936,7 +11940,7 @@ ends up empty. When that happens, you reinitialize it to its default value:</p>
 <span class="w">    </span><span class="n">_fruitsFull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Duplicate</span><span class="p">();</span>
 <span class="w">    </span><span class="n">_fruits</span><span class="p">.</span><span class="n">Shuffle</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GetFruit</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
@@ -11944,7 +11948,7 @@ ends up empty. When that happens, you reinitialize it to its default value:</p>
 
 <span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetFruit</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">_fruits</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">_fruits</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Fill the fruits array again and shuffle it.</span>
 <span class="w">        </span><span class="n">_fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruitsFull</span><span class="p">.</span><span class="n">Duplicate</span><span class="p">();</span>
@@ -11952,9 +11956,9 @@ ends up empty. When that happens, you reinitialize it to its default value:</p>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Get a random fruit, since we shuffled the array,</span>
-<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">randomFruit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 <span class="w">    </span><span class="c1">// and remove it from the `_fruits` array.</span>
-<span class="w">    </span><span class="n">_fruits</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">_fruits</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">// Returns &quot;apple&quot;, &quot;orange&quot;, &quot;pear&quot;, or &quot;banana&quot; every time the code runs, removing it from the array.</span>
 <span class="w">    </span><span class="c1">// When all fruit are removed, it refills the array.</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">randomFruit</span><span class="p">;</span>
@@ -11999,10 +12003,10 @@ terrain. Redot provides <a class="reference internal" href="../../classes/class_
 <span class="w">    </span><span class="c1">// Configure the FastNoiseLite instance.</span>
 <span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">NoiseType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FastNoiseLite</span><span class="p">.</span><span class="n">NoiseTypeEnum</span><span class="p">.</span><span class="n">SimplexSmooth</span><span class="p">;</span>
 <span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">Seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">GD</span><span class="p">.</span><span class="n">Randi</span><span class="p">();</span>
-<span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">FractalOctaves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">;</span>
-<span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">Frequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.0f</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">20.0f</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">FractalOctaves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_noise</span><span class="p">.</span><span class="n">Frequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0f</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">20.0f</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">_noise</span><span class="p">.</span><span class="n">GetNoise1D</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>

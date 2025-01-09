@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Character animation &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
@@ -525,7 +525,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/script_editor.html#features">Features</a></li>
@@ -721,10 +727,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3306,6 +3310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3670,7 +3675,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11625,11 +11629,11 @@ vector, add the following code.</p>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">direction</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">.</span><span class="n">Zero</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// ...</span>
-<span class="w">        </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">SpeedScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">;</span>
+<span class="w">        </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">SpeedScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">else</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">SpeedScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">SpeedScale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -11650,7 +11654,7 @@ at the end of <code class="docutils literal notranslate"><span class="pre">_phys
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Node3D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Pivot&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">6.0f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Velocity</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Z</span><span class="p">);</span>
+<span class="w">    </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">6.0f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Velocity</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Z</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -11796,16 +11800,16 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 
 <span class="w">    </span><span class="c1">// How fast the player moves in meters per second.</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Speed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">14</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Speed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// The downward acceleration when in the air, in meters per second squared.</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FallAcceleration</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">75</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FallAcceleration</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">75</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// Vertical impulse applied to the character upon jumping in meters per second.</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// Vertical impulse applied to the character upon bouncing over a mob in meters per second.</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BounceImpulse</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BounceImpulse</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">_targetVelocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Vector3</span><span class="p">.</span><span class="n">Zero</span><span class="p">;</span>
 
@@ -11817,21 +11821,21 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">        </span><span class="c1">// We check for each move input and update the direction accordingly.</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">IsActionPressed</span><span class="p">(</span><span class="s">&quot;move_right&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">IsActionPressed</span><span class="p">(</span><span class="s">&quot;move_left&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="m">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">X</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">IsActionPressed</span><span class="p">(</span><span class="s">&quot;move_back&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// Notice how we are working with the vector&#39;s X and Z axes.</span>
 <span class="w">            </span><span class="c1">// In 3D, the XZ plane is the ground plane.</span>
-<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">Z</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">Z</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Input</span><span class="p">.</span><span class="n">IsActionPressed</span><span class="p">(</span><span class="s">&quot;move_forward&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">Z</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="m">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">direction</span><span class="p">.</span><span class="n">Z</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">// Prevent diagonal movement being very fast.</span>
@@ -11839,11 +11843,11 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="n">direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">direction</span><span class="p">.</span><span class="n">Normalized</span><span class="p">();</span>
 <span class="w">            </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Node3D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Pivot&quot;</span><span class="p">).</span><span class="n">LookAt</span><span class="p">(</span><span class="n">Position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">direction</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="p">.</span><span class="n">Up</span><span class="p">);</span>
-<span class="w">            </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">PlaybackSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">;</span>
+<span class="w">            </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">PlaybackSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">else</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">PlaybackSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span>
+<span class="w">            </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">AnimationPlayer</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;AnimationPlayer&quot;</span><span class="p">).</span><span class="n">PlaybackSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">// Ground velocity</span>
@@ -11863,7 +11867,7 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="c1">// Iterate through all collisions that occurred this frame.</span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">GetSlideCollisionCount</span><span class="p">();</span><span class="w"> </span><span class="n">index</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">GetSlideCollisionCount</span><span class="p">();</span><span class="w"> </span><span class="n">index</span><span class="o">++</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// We get one of the collisions with the player.</span>
 <span class="w">            </span><span class="n">KinematicCollision3D</span><span class="w"> </span><span class="n">collision</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetSlideCollision</span><span class="p">(</span><span class="n">index</span><span class="p">);</span>
@@ -11872,7 +11876,7 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">GetCollider</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Mob</span><span class="w"> </span><span class="n">mob</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="c1">// We check that we are hitting it from above.</span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">Up</span><span class="p">.</span><span class="n">Dot</span><span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">GetNormal</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.1f</span><span class="p">)</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Vector3</span><span class="p">.</span><span class="n">Up</span><span class="p">.</span><span class="n">Dot</span><span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">GetNormal</span><span class="p">())</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.1f</span><span class="p">)</span>
 <span class="w">                </span><span class="p">{</span>
 <span class="w">                    </span><span class="c1">// If so, we squash it and bounce.</span>
 <span class="w">                    </span><span class="n">mob</span><span class="p">.</span><span class="n">Squash</span><span class="p">();</span>
@@ -11888,7 +11892,7 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">        </span><span class="n">MoveAndSlide</span><span class="p">();</span>
 
 <span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">pivot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Node3D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Pivot&quot;</span><span class="p">);</span>
-<span class="w">        </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">6.0f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Velocity</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Z</span><span class="p">);</span>
+<span class="w">        </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">6.0f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Velocity</span><span class="p">.</span><span class="n">Y</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">JumpImpulse</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Y</span><span class="p">,</span><span class="w"> </span><span class="n">pivot</span><span class="p">.</span><span class="n">Rotation</span><span class="p">.</span><span class="n">Z</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Die</span><span class="p">()</span>
@@ -11957,10 +11961,10 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 
 <span class="w">    </span><span class="c1">// Minimum speed of the mob in meters per second</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MinSpeed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MinSpeed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// Maximum speed of the mob in meters per second</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MaxSpeed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MaxSpeed</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
 
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_PhysicsProcess</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -11975,7 +11979,7 @@ to keep learning more. But for now, here are the complete <code class="docutils 
 <span class="w">        </span><span class="n">LookAtFromPosition</span><span class="p">(</span><span class="n">startPosition</span><span class="p">,</span><span class="w"> </span><span class="n">playerPosition</span><span class="p">,</span><span class="w"> </span><span class="n">Vector3</span><span class="p">.</span><span class="n">Up</span><span class="p">);</span>
 <span class="w">        </span><span class="c1">// Rotate this mob randomly within range of -45 and +45 degrees,</span>
 <span class="w">        </span><span class="c1">// so that it doesn&#39;t move directly towards the player.</span>
-<span class="w">        </span><span class="n">RotateY</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">4.0</span><span class="p">));</span>
+<span class="w">        </span><span class="n">RotateY</span><span class="p">((</span><span class="kt">float</span><span class="p">)</span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="o">-</span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="n">Mathf</span><span class="p">.</span><span class="n">Pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">4.0</span><span class="p">));</span>
 
 <span class="w">        </span><span class="c1">// We calculate a random speed (integer).</span>
 <span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">randomSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GD</span><span class="p">.</span><span class="n">RandRange</span><span class="p">(</span><span class="n">MinSpeed</span><span class="p">,</span><span class="w"> </span><span class="n">MaxSpeed</span><span class="p">);</span>

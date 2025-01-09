@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Using the theme editor &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11497,7 +11501,7 @@ themes.</p>
 hierarchy, then in the inspector go to the <code class="docutils literal notranslate"><span class="pre">theme</span></code> property. From there you can
 select <strong>New Theme</strong>.</p>
 <figure class="align-center">
-<img alt="../../_images/new_theme.png" src="../../_images/new_theme.png" />
+<img alt="../../_images/new_theme.webp" src="../../_images/new_theme.webp" />
 </figure>
 <p>This will create an empty theme and open up the theme editor. Keep in mind that
 resources created this way are bundled with the scene by default. Use the context
@@ -11507,13 +11511,13 @@ include the default, fallback font that you can edit only using the Inspector do
 Same applies to the contents of complex resource types, such as <a class="reference internal" href="../../classes/class_stylebox.html#class-stylebox"><span class="std std-ref">StyleBoxes</span></a>
 and icons — they open for editing in the Inspector.</p>
 <figure class="align-center">
-<img alt="../../_images/default_font.png" src="../../_images/default_font.png" />
+<img alt="../../_images/default_font.webp" src="../../_images/default_font.webp" />
 </figure>
 </section>
 <section id="theme-editor-overview">
 <h2>Theme editor overview<a class="headerlink" href="#theme-editor-overview" title="Link to this heading"></a></h2>
 <figure class="align-center">
-<img alt="../../_images/theme_editor.png" src="../../_images/theme_editor.png" />
+<img alt="../../_images/theme_editor.webp" src="../../_images/theme_editor.webp" />
 </figure>
 <p>The theme editor has two main parts. The main theme editor, located at the bottom of
 the Redot editor, aims to provide users with tools to quickly create, edit, and delete
@@ -11527,13 +11531,13 @@ useful for creating a new editor theme.</p>
 tab is visible out of the box and contains most of the frequently used controls in various
 states. Previews are interactive, so intermediate states (e.g. hover) can be previewed as well.</p>
 <figure class="align-center">
-<img alt="../../_images/default_preview.png" src="../../_images/default_preview.png" />
+<img alt="../../_images/default_preview.webp" src="../../_images/default_preview.webp" />
 </figure>
 <p>Additional tabs can be created from arbitrary scenes in your project. The scene
 must have a control node as its root to function as a preview. To add a new tab
 click the <strong>Add Preview</strong> button and select the saved scene from your file system.</p>
 <figure class="align-center">
-<img alt="../../_images/scene_preview.png" src="../../_images/scene_preview.png" />
+<img alt="../../_images/scene_preview.webp" src="../../_images/scene_preview.webp" />
 </figure>
 <p>If you make changes to the scene, they will not be reflected in the preview
 automatically. To update the preview click the reload button on the toolbar.</p>
@@ -11542,7 +11546,7 @@ picker tool from the toolbar and hover over the preview area to highlight contro
 nodes. Highlighted control nodes display their class name, or type variation if available.
 Clicking on the highlighted control opens it for editing on the right-hand side.</p>
 <figure class="align-center">
-<img alt="../../_images/theme_preview_picker.png" src="../../_images/theme_preview_picker.png" />
+<img alt="../../_images/theme_preview_picker.webp" src="../../_images/theme_preview_picker.webp" />
 </figure>
 </section>
 <section id="theme-types-and-items">
@@ -11555,7 +11559,7 @@ enabled, then for each built-in type its default theme values are displayed, gre
 out. If the option is disabled, only the items available in the edited theme itself
 are displayed.</p>
 <figure class="align-center">
-<img alt="../../_images/theme_type_editor.png" src="../../_images/theme_type_editor.png" />
+<img alt="../../_images/theme_type_editor.webp" src="../../_images/theme_type_editor.webp" />
 </figure>
 <p>Individual items from the default theme can be added to the current theme by
 clicking on the <strong>Override</strong> button next to the item. You can also override all
@@ -11567,7 +11571,7 @@ custom properties can be added to the list using the text field below it.</p>
 are resources. Resources have rudimentary controls available for them, but must be
 edited in the Inspector dock instead.</p>
 <figure class="align-center">
-<img alt="../../_images/theme_item_inspector.png" src="../../_images/theme_item_inspector.png" />
+<img alt="../../_images/theme_item_inspector.webp" src="../../_images/theme_item_inspector.webp" />
 </figure>
 <p>Styleboxes have a unique feature available, where you can pin an individual
 stylebox from the list. Pinned stylebox acts like the leader of the pack, and
@@ -11575,7 +11579,7 @@ all styleboxes of the same type are updated alongside it when you change its
 properties. This allows you to edit properties of several styleboxes at the
 same time.</p>
 <figure class="align-center">
-<img alt="../../_images/theme_pin_the_stylebox.png" src="../../_images/theme_pin_the_stylebox.png" />
+<img alt="../../_images/theme_pin_the_stylebox.webp" src="../../_images/theme_pin_the_stylebox.webp" />
 </figure>
 <p>While theme types can be picked from a preview, they can also be added manually.
 Clicking the plus button next to the type list opens the <strong>Add item Type</strong> menu.
@@ -11583,17 +11587,20 @@ In that menu you can either select a type from the list, or you can enter an
 arbitrary name to create a custom type. Text field also filters the list of control
 nodes.</p>
 <figure class="align-center">
-<img alt="../../_images/add_item_type.png" src="../../_images/add_item_type.png" />
+<img alt="../../_images/add_item_type.webp" src="../../_images/add_item_type.webp" />
 </figure>
 </section>
 </section>
 <section id="manage-and-import-items">
 <h2>Manage and import items<a class="headerlink" href="#manage-and-import-items" title="Link to this heading"></a></h2>
-<p>Clicking the <strong>Manage Items</strong> button brings up the <strong>Manage Theme Items</strong> dialog. In
-the <strong>Edit Items</strong> tab you can view and add theme types, as well as view and edit
+<p>Clicking the <strong>Manage Items</strong> button brings up the <strong>Manage Theme Items</strong> dialog.</p>
+<figure class="align-center">
+<img alt="../../_images/manage_items_button.webp" src="../../_images/manage_items_button.webp" />
+</figure>
+<p>In the <strong>Edit Items</strong> tab you can view and add theme types, as well as view and edit
 the theme items of the selected type.</p>
 <figure class="align-center">
-<img alt="../../_images/manage_items.png" src="../../_images/manage_items.png" />
+<img alt="../../_images/manage_items.webp" src="../../_images/manage_items.webp" />
 </figure>
 <p>You can create, rename and remove individual theme items here by clicking the
 corresponding <strong>Add X Item</strong> and specifying their name. You can also mass delete
@@ -11611,7 +11618,7 @@ include the data will copy all theme items as they are to your theme. Omitting t
 will create the items of the corresponding data type and name, but will leave them empty,
 creating a template of a theme in a way.</p>
 <figure class="align-center">
-<img alt="../../_images/import_items.png" src="../../_images/import_items.png" />
+<img alt="../../_images/import_items.webp" src="../../_images/import_items.webp" />
 </figure>
 </section>
 </section>

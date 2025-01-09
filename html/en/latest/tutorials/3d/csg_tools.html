@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Prototyping levels with CSG &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11497,7 +11501,7 @@ you may want to use <a class="reference external" href="https://github.com/func-
 or <a class="reference external" href="https://github.com/blackears/cyclopsLevelBuilder">Cyclops Level Builder</a>
 instead.</p>
 </div>
-<video autoplay="True" controls="True" loop="True" muted="True" preload="auto"><source src="../../_images/csg_tools.webm" type="video/webm">CSG being used to subtract a torus shape from a box</video><div class="admonition seealso">
+<div  class="align-left"><video autoplay="True" controls="True" loop="True" muted="True" preload="auto"><source src="../../_images/csg_tools.webm" type="video/webm">CSG being used to subtract a torus shape from a box</video></div><div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>You can check how to use CSG nodes to build various shapes (such as stairs or roads) using the
 <a class="reference external" href="https://github.com/redot-engine/redot-demo-projects/tree/master/3d/csg">Constructive Solid Geometry demo project</a>.</p>
@@ -11551,15 +11555,30 @@ CSGPolygon3D will extrude along the given path.</p>
 </section>
 <section id="custom-meshes">
 <h3>Custom meshes<a class="headerlink" href="#custom-meshes" title="Link to this heading"></a></h3>
-<p>Any mesh can be used for <a class="reference internal" href="../../classes/class_csgmesh3d.html#class-csgmesh3d"><span class="std std-ref">CSGMesh3D</span></a>; the mesh can be
-modeled in other software and imported into Redot. Multiple materials are
-supported. There are some restrictions for geometry:</p>
+<p>Custom meshes can be used for <a class="reference internal" href="../../classes/class_csgmesh3d.html#class-csgmesh3d"><span class="std std-ref">CSGMesh3D</span></a> as long as the
+mesh is <em>manifold</em>. The mesh can be modeled in other software and imported into
+Redot. Multiple materials are supported.</p>
+<p>For a mesh to be used as a CSG mesh, it is required to:</p>
 <ul class="simple">
-<li><p>it must be closed,</p></li>
-<li><p>it must not self-intersect,</p></li>
-<li><p>it must not contain internal faces,</p></li>
-<li><p>every edge must connect to only two other faces.</p></li>
+<li><p>be closed</p></li>
+<li><p>have each edge connect to only two faces</p></li>
+<li><p>have volume</p></li>
 </ul>
+<p>And it is recommended to avoid:</p>
+<ul class="simple">
+<li><p>negative volume</p></li>
+<li><p>self-intersection</p></li>
+<li><p>interior faces</p></li>
+</ul>
+<p>Redot uses the <a class="reference external" href="https://github.com/elalish/manifold">manifold</a> library to
+implement CSG meshes. The technical definition of &quot;manifold&quot; used by Redot is
+the following, adapted from that library's <a class="reference external" href="https://github.com/elalish/manifold/wiki/Manifold-Library#manifoldness-definition">definition of &quot;manifold&quot;</a>:</p>
+<blockquote>
+<div><p>Every edge of every triangle must contain the same two vertices (by index) as
+exactly one other triangle edge, and the start and end vertices must switch
+places between these two edges. The triangle vertices must appear in clockwise
+order when viewed from the outside of the Redot Engine manifold mesh.</p>
+</div></blockquote>
 <img alt="../../_images/csg_custom_mesh.png" src="../../_images/csg_custom_mesh.png" />
 </section>
 <section id="csgcombiner3d">

@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Standard Material 3D and ORM Material 3D &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11504,7 +11508,7 @@ the mesh. As an example, this can be used to put a transparent shield effect on 
 <h2>BaseMaterial 3D settings<a class="headerlink" href="#basematerial-3d-settings" title="Link to this heading"></a></h2>
 <p>StandardMaterial3D has many settings that determine the look of a material. All of these are
 under the BaseMaterial3D category</p>
-<img alt="../../_images/spatial_material1.png" src="../../_images/spatial_material1.png" />
+<img alt="../../_images/spatial_material1.webp" src="../../_images/spatial_material1.webp" />
 <p>ORM materials are almost exactly the same with one difference. Instead of separate settings
 and textures for occlusion, roughness, and metallic, there is a single ORM texture. The different
 color channels of that texture are used for each parameter. Programs such as Substance Painter
@@ -11770,7 +11774,7 @@ otherwise light it.</p>
 <h2>Vertex Color<a class="headerlink" href="#vertex-color" title="Link to this heading"></a></h2>
 <p>This setting allows choosing what is done by default to vertex colors that come
 from your 3D modeling application. By default, they are ignored.</p>
-<img alt="../../_images/spatial_material4.png" src="../../_images/spatial_material4.png" />
+<img alt="../../_images/spatial_material4.webp" src="../../_images/spatial_material4.webp" />
 <section id="use-as-albedo">
 <h3>Use as Albedo<a class="headerlink" href="#use-as-albedo" title="Link to this heading"></a></h3>
 <p>Choosing this option means vertex color is used as albedo color.</p>
@@ -12028,7 +12032,7 @@ face the camera's viewing plane.</p></li>
 <li><p><strong>Particle Billboard:</strong> Most suited for particle systems, because it allows
 specifying <a class="reference internal" href="particles/process_material_properties.html#doc-process-material-properties-animation"><span class="std std-ref">flipbook animation</span></a>.</p></li>
 </ul>
-<img alt="../../_images/spatial_material9.png" src="../../_images/spatial_material9.png" />
+<img alt="../../_images/spatial_material9.webp" src="../../_images/spatial_material9.webp" />
 <p>The <strong>Particles Anim</strong> section is only visible when the billboard mode is <strong>Particle Billboard</strong>.</p>
 </section>
 <section id="billboard-keep-scale">

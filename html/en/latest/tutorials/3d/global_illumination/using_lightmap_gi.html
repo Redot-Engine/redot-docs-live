@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Using Lightmap global illumination &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11724,6 +11728,10 @@ still real-time, as they would be without LightmapGI.</p>
 <p>This mode allows performing <em>subtle</em> changes to a light's color, energy and
 position while still looking fairly correct. For example, you can use this
 to create flickering static torches that have their indirect light baked.</p>
+<p>Depending on the value of <strong>Shadowmask Mode</strong>, it is possible to still get
+distant baked shadows for DirectionalLight3D. This allows shadows up close to be
+real-time and show dynamic objects, while allowing static objects in the
+distance to still cast shadows.</p>
 </section>
 <section id="static">
 <h3>Static<a class="headerlink" href="#static" title="Link to this heading"></a></h3>
@@ -11789,6 +11797,12 @@ This improves normal mapped materials' appearance for baked surfaces,
 especially with fully baked lights (since they also have direct light baked).
 The downside is that directional lightmaps are slightly more expensive to render.
 They also require more time to bake and result in larger file sizes.</p></li>
+<li><p><strong>Shadowmask Mode:</strong> If set to a mode other than <strong>None</strong>, the first DirectionalLight3D
+in the scene with the <strong>Dynamic</strong> global illumination mode will have its static shadows
+baked to a separate texture called a <em>shadowmask</em>. This can be used to allow distant
+static objects to cast shadows onto other static objects regardless of the distance
+from the camera. See the <a class="reference internal" href="#doc-using-lightmap-gi-shadowmask"><span class="std std-ref">section on shadowmasking</span></a>
+for further details.</p></li>
 <li><p><strong>Interior:</strong> If enabled, environment lighting will not be sourced. Use this
 for purely indoor scenes to avoid light leaks.</p></li>
 <li><p><strong>Use Texture for Bounces:</strong> If enabled, a texture with the lighting
@@ -11824,6 +11838,68 @@ scene's environment sky.</p></li>
 </ul>
 </section>
 </section>
+<section id="using-shadowmasking-for-distant-directional-shadows">
+<span id="doc-using-lightmap-gi-shadowmask"></span><h2>Using shadowmasking for distant directional shadows<a class="headerlink" href="#using-shadowmasking-for-distant-directional-shadows" title="Link to this heading"></a></h2>
+<p>When using a DirectionalLight3D, the maximum distance at which it can draw
+real-time shadows is limited by its <strong>Shadow Max Distance</strong> property. This can
+be an issue in large scenes, as distant objects won't appear to have any shadows
+from the DirectionalLight3D. While this can be resolved by using the <strong>Static</strong>
+global illumination mode on the DirectionalLight3D, this has several downsides:</p>
+<ul class="simple">
+<li><p>Since both direct and indirect light are baked, there is no way for dynamic
+objects to cast shadows onto static surfaces in a realistic manner. Redot skips
+shadow sampling entirely in this case to avoid &quot;double lighting&quot; artifacts.</p></li>
+<li><p>Static shadows up close lack in detail, as they only rely on the lightmap texture
+and not on real-time shadow cascades.</p></li>
+</ul>
+<p>We can avoid these downsides while still benefiting from distant shadows by
+using <em>shadowmasking</em>. While dynamic objects won't receive shadows from the
+shadowmask, it still greatly improves visuals since most scenes are primarily
+comprised of static objects.</p>
+<p>Since the lightmap texture alone doesn't contain shadow information, we can bake
+this shadow information to a separate texture called a <em>shadowmask</em>.</p>
+<p>Shadowmasking only affects the first DirectionalLight3D in the scene (determined
+by tree order) that has the <strong>Dynamic</strong> global illumination mode. It is not
+possible to use shadowmasking with the <strong>Static</strong> global illumination mode, as
+this mode skips shadow sampling on static objects entirely. This is because the
+Static global illumination mode bakes both direct and indirect light.</p>
+<p>Three shadowmasking modes are available:</p>
+<ul class="simple">
+<li><p><strong>None (default):</strong> Don't bake a shadowmask texture. Directional shadows will
+not be visible outside the range specified by the DirectionalLight3D's
+<strong>Shadow Max Distance</strong> property.</p></li>
+<li><p><strong>Replace:</strong> Bakes a shadowmask texture, and uses it to draw directional
+shadows when outside the range specified by the DirectionalLight3D's <strong>Shadow
+Max Distance</strong> property. Shadows within this range remain fully real-time.
+This option generally makes the most sense for most scenes, as it can deal
+well with static objects that exhibit subtle motion (e.g. foliage shadows).</p></li>
+<li><p><strong>Overlay:</strong> Bakes a shadowmask texture, and uses it to draw directional
+shadows regardless of the distance from the camera. Shadows within the range
+of the DirectionalLight3D's <strong>Shadow Max Distance</strong> property will be overlaid
+with real-time shadows. This can make the transition between real-time and
+baked shadows less jarring, at the cost of a &quot;smearing&quot; effect present on
+static object shadows depending on lightmap texel density. Also, this mode
+can't deal as well with static objects that exhibit subtle motion (such as
+foliage), as the baked shadows can't be animated over time. Still, for scenes
+where the camera moves quickly, this may be a better choice than <strong>Replace</strong>.</p></li>
+</ul>
+<p>Here's a visual comparison of the shadowmask modes with a scene where the
+<strong>Shadow Max Distance</strong> was set very low for comparison purposes. The blue boxes
+are dynamic objects, while the rest of the scene is a static object. There is
+only a single DirectionalLight3D in the scene with the Dynamic global
+illumination mode:</p>
+<figure class="align-center" id="id4">
+<img alt="Comparison between shadowmask modes" src="../../../_images/lightmap_gi_shadowmask.webp" />
+<figcaption>
+<p><span class="caption-text">Comparison between shadowmask modes</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to switch between the <strong>Replace</strong> and <strong>Overlay</strong> shadowmask
+modes without having to bake lightmaps again.</p>
+</div>
+</section>
 <section id="balancing-bake-times-with-quality">
 <h2>Balancing bake times with quality<a class="headerlink" href="#balancing-bake-times-with-quality" title="Link to this heading"></a></h2>
 <p>Since high-quality bakes can take very long (up to dozens of minutes for large
@@ -11842,10 +11918,10 @@ in the &quot;raw&quot; baked lightmap. Noise is especially visible in areas that
 difficult to reach by bounced light, such as indoor areas with small openings
 where the sunlight can enter. Noise can be reduced by increasing bake quality,
 but doing so will increase bake times significantly.</p>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id5">
 <img alt="Comparison between denoising disabled and enabled" src="../../../_images/lightmap_gi_denoiser_comparison.webp" />
 <figcaption>
-<p><span class="caption-text">Comparison between denoising disabled and enabled (with the default JNLM denoiser).</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-text">Comparison between denoising disabled and enabled (with the default JNLM denoiser).</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>To combat noise without increasing bake times too much, a denoiser can be used.
@@ -11861,10 +11937,10 @@ GPU using a compute shader, and is compatible with any GPU that can run Redot
 <p>JNLM's denoising can be adjusted using the <strong>Denoiser Strength</strong> property that
 is visible when <strong>Use Denoiser</strong> enabled. Higher values can be more effective at
 removing noise, at the cost of suppressing shadow detail for static shadows.</p>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id6">
 <img alt="Comparison between JNLM denoiser strength values" src="../../../_images/lightmap_gi_denoiser_jnlm_strength.webp" />
 <figcaption>
-<p><span class="caption-text">Comparison between JNLM denoiser strength values. Higher values can reduce detail.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-text">Comparison between JNLM denoiser strength values. Higher values can reduce detail.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -11906,11 +11982,11 @@ editor settings. This is done so that different team members working on the
 same project are assured to be using the same denoising method for
 consistent results.</p>
 </div>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="id7">
 <img alt="Comparison between JNLM and OIDN denoisers" src="../../../_images/lightmap_gi_denoiser_jnlm_vs_oidn.webp" />
 <figcaption>
 <p><span class="caption-text">Comparison between JNLM and OIDN denoisers.
-Notice how OIDN better preserves detail and reduces seams across different objects.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+Notice how OIDN better preserves detail and reduces seams across different objects.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>

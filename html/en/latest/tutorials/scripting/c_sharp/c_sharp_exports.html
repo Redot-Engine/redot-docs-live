@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>C# exported properties &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11489,7 +11493,7 @@ Exporting is done by using the <code class="docutils literal notranslate"><span 
 <span class="k">public</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ExportExample</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Node3D</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="na">[Export]</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -11534,7 +11538,7 @@ see <a class="reference internal" href="../gdscript/gdscript_exports.html#doc-gd
 </pre></div>
 </div>
 <p>Properties with a backing field use the default value of the backing field.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 
 <span class="na">[Export]</span>
 <span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NumberWithBackingField</span>
@@ -11555,11 +11559,11 @@ default value as <code class="docutils literal notranslate"><span class="pre">5<
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export]</span>
 <span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">NumberWithBackingField</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">get</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">3</span><span class="p">;</span>
-<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">3</span><span class="p">;</span>
+<span class="w">    </span><span class="k">get</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">    </span><span class="k">set</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
+<span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The analyzer doesn't understand this code and falls back to the default
@@ -11589,7 +11593,7 @@ attribute. Every exported property after this attribute will be added to the gro
 group or use <code class="docutils literal notranslate"><span class="pre">[ExportGroup(&quot;&quot;)]</span></code> to break out.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[ExportGroup(&quot;My Properties&quot;)]</span>
 <span class="na">[Export]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The second argument of the attribute can be used to only group properties with the specified prefix.</p>
@@ -11605,7 +11609,7 @@ group or use <code class="docutils literal notranslate"><span class="pre">[Expor
 list with the <code class="docutils literal notranslate"><span class="pre">[ExportCategory]</span></code> attribute.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[ExportCategory(&quot;Main Category&quot;)]</span>
 <span class="na">[Export]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Number</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="na">[Export]</span>
 <span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Text</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
 
@@ -11698,7 +11702,7 @@ function when editing.</p>
 <p>Display a unit hint suffix for exported variables. Works with numeric types,
 such as floats or vectors:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export(PropertyHint.None, &quot;suffix:m/s\u00b2&quot;)]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Gravity</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9.8f</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">Gravity</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.8f</span><span class="p">;</span>
 <span class="na">[Export(PropertyHint.None, &quot;suffix:m/s&quot;)]</span>
 <span class="k">public</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">Velocity</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
@@ -11780,10 +11784,10 @@ combine multiple flags using logical OR (<code class="docutils literal notransla
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Flags]</span>
 <span class="k">public</span><span class="w"> </span><span class="k">enum</span><span class="w"> </span><span class="n">SpellElements</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">Fire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Water</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="m">2</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Earth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="m">3</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Wind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="m">4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Fire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Water</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Earth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Wind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
 
 <span class="w">    </span><span class="n">FireAndWater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Fire</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Water</span><span class="p">,</span>
 <span class="p">}</span>
@@ -11796,7 +11800,7 @@ combine multiple flags using logical OR (<code class="docutils literal notransla
 values in one property. By using the <code class="docutils literal notranslate"><span class="pre">Flags</span></code> property hint, any of the given
 flags can be set from the editor.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export(PropertyHint.Flags, &quot;Fire,Water,Earth,Wind&quot;)]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellElements</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellElements</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>You must provide a string description for each flag. In this example, <code class="docutils literal notranslate"><span class="pre">Fire</span></code>
@@ -11805,14 +11809,14 @@ corresponds to value 8. Usually, constants should be defined accordingly (e.g.
 <code class="docutils literal notranslate"><span class="pre">private</span> <span class="pre">const</span> <span class="pre">int</span> <span class="pre">ElementWind</span> <span class="pre">=</span> <span class="pre">8</span></code> and so on).</p>
 <p>You can add explicit values using a colon:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export(PropertyHint.Flags, &quot;Self:4,Allies:8,Foes:16&quot;)]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellTargets</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellTargets</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Only power of 2 values are valid as bit flags options. The lowest allowed value
 is 1, as 0 means that nothing is selected. You can also add options that are a
 combination of other flags:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export(PropertyHint.Flags, &quot;Self:4,Allies:8,Self and Allies:12,Foes:16&quot;)]</span>
-<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellTargets</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span>
+<span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">SpellTargets</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Export annotations are also provided for the physics and render layers defined in the project settings.</p>
@@ -11838,7 +11842,7 @@ following as &quot;Thing 1&quot;, &quot;Thing 2&quot;, &quot;Another Thing&quot;
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Thing1</span><span class="p">,</span>
 <span class="w">    </span><span class="n">Thing2</span><span class="p">,</span>
-<span class="w">    </span><span class="n">AnotherThing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">AnotherThing</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="na">[Export]</span>
@@ -11890,12 +11894,12 @@ restrict the elements to the specified type.</p>
 </div>
 <p>The default value of Redot arrays is null. A different default can be specified:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export]</span>
-<span class="k">public</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">CharacterNames</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="s">&quot;Rebecca&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;Mary&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;Leah&quot;</span><span class="p">,</span>
-<span class="p">};</span>
+<span class="k">public</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">CharacterNames</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span>
+<span class="na">[</span>
+<span class="na">    &quot;Rebecca&quot;,</span>
+<span class="na">    &quot;Mary&quot;,</span>
+<span class="na">    &quot;Leah&quot;,</span>
+<span class="na">]</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Arrays with specified types which inherit from resource can be set by
@@ -11930,9 +11934,9 @@ resulting in runtime exceptions.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export]</span>
 <span class="k">public</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">CharacterLives</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Redot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="na">[&quot;Rebecca&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span>
-<span class="w">    </span><span class="na">[&quot;Mary&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">42</span><span class="p">,</span>
-<span class="w">    </span><span class="na">[&quot;Leah&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+<span class="w">    </span><span class="na">[&quot;Rebecca&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="na">[&quot;Mary&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">    </span><span class="na">[&quot;Leah&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -11949,11 +11953,11 @@ resulting in runtime exceptions.</p>
 </div>
 <p>The default value of C# arrays is null. A different default can be specified:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="na">[Export]</span>
-<span class="k">public</span><span class="w"> </span><span class="n">Vector3</span><span class="p">[]</span><span class="w"> </span><span class="n">Vectors</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">[]</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">Vector3</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span>
-<span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="nf">Vector3</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
-<span class="p">}</span>
+<span class="k">public</span><span class="w"> </span><span class="n">Vector3</span><span class="p">[]</span><span class="w"> </span><span class="n">Vectors</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span>
+<span class="na">[</span>
+<span class="na">    new Vector3(1, 2, 3),</span>
+<span class="na">    new Vector3(3, 2, 1),</span>
+<span class="na">]</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>

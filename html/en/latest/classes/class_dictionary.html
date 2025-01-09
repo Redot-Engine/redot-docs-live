@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Dictionary &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
@@ -525,7 +525,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/editor/script_editor.html#features">Features</a></li>
@@ -721,10 +727,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3306,6 +3310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../tutorials/xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3670,7 +3675,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11484,9 +11488,9 @@
 </div><div aria-labelledby="tab-0-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">myDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">();</span><span class="w"> </span><span class="c1">// Creates an empty dictionary.</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">pointsDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">75</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -11504,9 +11508,9 @@
 <span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MyColor</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="k">private</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="w"> </span><span class="n">_pointsDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">75</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}</span>
 <span class="p">};</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Ready</span><span class="p">()</span>
@@ -11526,7 +11530,7 @@
 </div>
 </div><div aria-labelledby="tab-2-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">myDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;First Array&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">}}</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;First Array&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -11539,11 +11543,11 @@
 </div>
 </div><div aria-labelledby="tab-3-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">pointsDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">75</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">}</span>
 <span class="p">};</span>
-<span class="n">pointsDict</span><span class="p">[</span><span class="s">&quot;Blue&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">150</span><span class="p">;</span><span class="w"> </span><span class="c1">// Add &quot;Blue&quot; as a key and assign 150 as its value.</span>
+<span class="n">pointsDict</span><span class="p">[</span><span class="s">&quot;Blue&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span><span class="w"> </span><span class="c1">// Add &quot;Blue&quot; as a key and assign 150 as its value.</span>
 </pre></div>
 </div>
 </div></div>
@@ -11563,9 +11567,9 @@
 </div><div aria-labelledby="tab-4-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-4-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is a valid dictionary.</span>
 <span class="c1">// To access the string &quot;Nested value&quot; below, use `((Godot.Collections.Dictionary)myDict[&quot;sub_dict&quot;])[&quot;sub_key&quot;]`.</span>
 <span class="kt">var</span><span class="w"> </span><span class="n">myDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;String Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="p">{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">}},</span>
-<span class="w">    </span><span class="p">{</span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;String Key&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Array</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello&quot;</span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="s">&quot;sub_dict&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;sub_key&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nested value&quot;</span><span class="p">}}}</span>
 <span class="p">};</span>
 </pre></div>
@@ -11578,7 +11582,7 @@
 <span class="w">    </span><span class="k">var</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">groceries</span><span class="p">[</span><span class="n">fruit</span><span class="p">]</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-5-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-5-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">groceries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">}};</span>
+</div><div aria-labelledby="tab-5-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-5-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">groceries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">}};</span>
 <span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="p">(</span><span class="n">fruit</span><span class="p">,</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">groceries</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// `fruit` is the key, `amount` is the value.</span>
@@ -11810,13 +11814,13 @@
 </div>
 </div><div aria-labelledby="tab-6-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-6-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">myDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Redot&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="m">210</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Redot&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">},</span>
 <span class="p">};</span>
 
 <span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">myDict</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s">&quot;Redot&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Prints True</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">myDict</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="m">210</span><span class="p">));</span><span class="w">     </span><span class="c1">// Prints True</span>
-<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">myDict</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="m">4</span><span class="p">));</span><span class="w">       </span><span class="c1">// Prints False</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">myDict</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="mi">210</span><span class="p">));</span><span class="w">     </span><span class="c1">// Prints True</span>
+<span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">myDict</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span><span class="w">       </span><span class="c1">// Prints False</span>
 </pre></div>
 </div>
 </div></div>
@@ -11843,8 +11847,8 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">dict1</span><span class="o">.</span><span class="n">hash</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dict2</span><span class="o">.</span><span class="n">hash</span><span class="p">())</span><span class="w"> </span><span class="c1"># Prints true</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-7-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dict1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}};</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">dict2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">}};</span>
+</div><div aria-labelledby="tab-7-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-7-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dict1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}};</span>
+<span class="kt">var</span><span class="w"> </span><span class="n">dict2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span><span class="p">{{</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}};</span>
 
 <span class="c1">// Godot.Collections.Dictionary has no Hash() method. Use GD.Hash() instead.</span>
 <span class="n">GD</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">GD</span><span class="p">.</span><span class="n">Hash</span><span class="p">(</span><span class="n">dict1</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GD</span><span class="p">.</span><span class="n">Hash</span><span class="p">(</span><span class="n">dict2</span><span class="p">));</span><span class="w"> </span><span class="c1">// Prints True</span>
@@ -11902,12 +11906,12 @@
 </div><div aria-labelledby="tab-8-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-8-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="na">[&quot;item&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sword&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="na">[&quot;quantity&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span>
+<span class="w">    </span><span class="na">[&quot;quantity&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <span class="p">};</span>
 
 <span class="kt">var</span><span class="w"> </span><span class="n">otherDict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Godot</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Dictionary</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="na">[&quot;quantity&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">15</span><span class="p">,</span>
+<span class="w">    </span><span class="na">[&quot;quantity&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
 <span class="w">    </span><span class="na">[&quot;color&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;silver&quot;</span><span class="p">,</span>
 <span class="p">};</span>
 

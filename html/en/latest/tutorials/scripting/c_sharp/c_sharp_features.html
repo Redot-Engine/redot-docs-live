@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>C# language features &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11486,7 +11490,7 @@ and how they are used together.</p>
 <span id="doc-c-sharp-features-type-conversion-and-casting"></span><h2>Type conversion and casting<a class="headerlink" href="#type-conversion-and-casting" title="Link to this heading"></a></h2>
 <p>C# is a statically typed language. Therefore, you can't do the following:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">mySprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">);</span>
-<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The method <code class="docutils literal notranslate"><span class="pre">GetNode()</span></code> returns a <code class="docutils literal notranslate"><span class="pre">Node</span></code> instance.
@@ -11496,7 +11500,7 @@ You must explicitly convert it to the desired derived type, <code class="docutil
 <p>Throws <code class="docutils literal notranslate"><span class="pre">InvalidCastException</span></code> if the returned node cannot be cast to Sprite2D.
 You would use it instead of the <code class="docutils literal notranslate"><span class="pre">as</span></code> operator if you are pretty sure it won't fail.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">mySprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Sprite2D</span><span class="p">)</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">);</span>
-<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Using the AS operator</strong></p>
@@ -11504,20 +11508,20 @@ You would use it instead of the <code class="docutils literal notranslate"><span
 and for that reason, it cannot be used with value types.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">mySprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Sprite2D</span><span class="p">;</span>
 <span class="c1">// Only call SetFrame() if mySprite is not null</span>
-<span class="n">mySprite</span><span class="o">?.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">mySprite</span><span class="o">?.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Using the generic methods</strong></p>
 <p>Generic methods are also provided to make this type conversion transparent.</p>
 <p><code class="docutils literal notranslate"><span class="pre">GetNode&lt;T&gt;()</span></code> casts the node before returning it. It will throw an <code class="docutils literal notranslate"><span class="pre">InvalidCastException</span></code> if the node cannot be cast to the desired type.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">mySprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Sprite2D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">);</span>
-<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">GetNodeOrNull&lt;T&gt;()</span></code> uses the <code class="docutils literal notranslate"><span class="pre">as</span></code> operator and will return <code class="docutils literal notranslate"><span class="pre">null</span></code> if the node cannot be cast to the desired type.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">mySprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNodeOrNull</span><span class="o">&lt;</span><span class="n">Sprite2D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">);</span>
 <span class="c1">// Only call SetFrame() if mySprite is not null</span>
-<span class="n">mySprite</span><span class="o">?.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="n">mySprite</span><span class="o">?.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </pre></div>
 </div>
 <p><strong>Type checking using the IS operator</strong></p>
@@ -11541,7 +11545,7 @@ if the <code class="docutils literal notranslate"><span class="pre">is</span></c
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">GetNode</span><span class="p">(</span><span class="s">&quot;MySprite&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">mySprite</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// The mySprite variable only exists inside this block, and it&#39;s never null.</span>
-<span class="w">    </span><span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mySprite</span><span class="p">.</span><span class="n">SetFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

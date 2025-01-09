@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Shading language &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11490,7 +11494,7 @@ Guide</span></a> is a resource that will help you
 transition from regular GLSL to Redot's shading language.</p>
 </section>
 <section id="data-types">
-<h2>Data types<a class="headerlink" href="#data-types" title="Link to this heading"></a></h2>
+<span id="doc-shading-language-data-types"></span><h2>Data types<a class="headerlink" href="#data-types" title="Link to this heading"></a></h2>
 <p>Most GLSL ES 3.0 datatypes are supported:</p>
 <table class="docutils align-default">
 <thead>
@@ -12262,10 +12266,11 @@ these interpolations are done by using <em>interpolation qualifiers</em>.</p>
 </section>
 <section id="uniforms">
 <h2>Uniforms<a class="headerlink" href="#uniforms" title="Link to this heading"></a></h2>
-<p>Passing values to shaders is possible. These are global to the whole shader and
-are called <em>uniforms</em>. When a shader is later assigned to a material, the
-uniforms will appear as editable parameters in it. Uniforms can't be written
-from within the shader. Any GLSL type except for <code class="docutils literal notranslate"><span class="pre">void</span></code> can be a uniform.</p>
+<p>Passing values to shaders is possible with <em>uniforms</em>, which are defined in the
+global scope of the shader, outside of functions. When a shader is later
+assigned to a material, the uniforms will appear as editable parameters in the
+material's inspector. Uniforms can't be written from within the shader. Any
+<a class="reference internal" href="#doc-shading-language-data-types"><span class="std std-ref">data type</span></a> except for <code class="docutils literal notranslate"><span class="pre">void</span></code> can be a uniform.</p>
 <div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
 
 <span class="k">uniform</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">some_value</span><span class="p">;</span>
@@ -12273,48 +12278,8 @@ from within the shader. Any GLSL type except for <code class="docutils literal n
 <span class="k">uniform</span><span class="w"> </span><span class="kt">vec3</span><span class="w"> </span><span class="n">colors</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
 </pre></div>
 </div>
-<p>You can set uniforms in the editor in the material. Or you can set them through
-GDScript:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">material</span><span class="o">.</span><span class="n">set_shader_parameter</span><span class="p">(</span><span class="s2">&quot;some_value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_value</span><span class="p">)</span>
-
-<span class="n">material</span><span class="o">.</span><span class="n">set_shader_parameter</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)])</span>
-</pre></div>
-</div>
-<p>You can access <code class="docutils literal notranslate"><span class="pre">int</span></code> values as a readable dropdown widget using the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">uniform</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">noise_type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="err">&quot;</span><span class="n">OpenSimplex2</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Cellular</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Perlin</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Value</span><span class="err">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">0</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Unlike <code class="docutils literal notranslate"><span class="pre">&#64;export_enum</span></code> in GDScript, the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform does not support
-the use of <code class="docutils literal notranslate"><span class="pre">String</span></code>s, it only supports <code class="docutils literal notranslate"><span class="pre">int</span></code>s.</p>
-</div>
-<p>You can assign explicit values to the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform using colon syntax similar to GDScript:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="k">uniform</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">character_speed</span><span class="o">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="err">&quot;</span><span class="n">Slow</span><span class="o">:</span><span class="mi">30</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Average</span><span class="o">:</span><span class="mi">60</span><span class="err">&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">&quot;</span><span class="n">Very</span><span class="w"> </span><span class="n">Fast</span><span class="o">:</span><span class="mi">200</span><span class="err">&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>The value will be stored as an integer, corresponding to the index of the selected option (i.e. 0, 1, or 2)
-or the value assigned by colon syntax (i.e. 30, 60, or 200).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The first argument to <code class="docutils literal notranslate"><span class="pre">set_shader_parameter</span></code> is the name of the uniform
-in the shader. It must match <em>exactly</em> to the name of the uniform in
-the shader or else it will not be recognized.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There is a limit to the total size of shader uniforms that you can use
-in a single shader. On most desktop platforms, this limit is <code class="docutils literal notranslate"><span class="pre">65536</span></code>
-bytes, or 4096 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. On mobile platforms, the limit is
-typically <code class="docutils literal notranslate"><span class="pre">16384</span></code> bytes, or 1024 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. Vector uniforms
-smaller than a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>, such as <code class="docutils literal notranslate"><span class="pre">vec2</span></code> or <code class="docutils literal notranslate"><span class="pre">vec3</span></code>, are padded to
-the size of a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>. Scalar uniforms such as <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>
-are not padded, and <code class="docutils literal notranslate"><span class="pre">bool</span></code> is padded to the size of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
-<p>Arrays count as the total size of their contents. If you need a uniform
-array that is larger than this limit, consider packing the data into a
-texture instead, since the <em>contents</em> of a texture do not count towards
-this limit, only the size of the sampler uniform.</p>
-</div>
+<p>You can set uniforms in the editor in the material's inspector. Alternately, you
+can set them <a class="reference internal" href="#doc-shading-language-setting-uniforms-from-code"><span class="std std-ref">from code</span></a>.</p>
 <section id="uniform-hints">
 <h3>Uniform hints<a class="headerlink" href="#uniform-hints" title="Link to this heading"></a></h3>
 <p>Redot provides optional uniform hints to make the compiler understand what the
@@ -12327,22 +12292,14 @@ uniform is used for, and how the editor should allow users to modify it.</p>
 <span class="k">uniform</span><span class="w"> </span><span class="kt">sampler2D</span><span class="w"> </span><span class="n">image</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="admonition-source-color admonition">
-<p class="admonition-title">Source Color</p>
-<p>Any texture which contains <em>sRGB color data</em> requires a <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint
-in order to be correctly sampled. This is because Redot renders in linear
-color space, but some textures contain sRGB color data. If this hint is not
-used, the texture will appear washed out.</p>
-<p>Albedo and color textures should typically have a <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint. Normal,
-roughness, metallic, and height textures typically do not need a <code class="docutils literal notranslate"><span class="pre">source_color</span></code>
-hint.</p>
-<p>Using <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint is required in the Forward+ and Mobile renderers,
-and in <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> shaders when <a class="reference internal" href="../../../classes/class_projectsettings.html#class-projectsettings-property-rendering-viewport-hdr-2d"><span class="std std-ref">HDR 2D</span></a>
-is enabled. The <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint is optional for the Compatibility renderer,
-and for <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> shaders if <code class="docutils literal notranslate"><span class="pre">HDR</span> <span class="pre">2D</span></code> is disabled. However, it is
-recommended to always use the <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint, because it works even
-if you change renderers or disable <code class="docutils literal notranslate"><span class="pre">HDR</span> <span class="pre">2D</span></code>.</p>
+<p>Uniforms can also be assigned default values:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
+
+<span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">some_vector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">some_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
+</pre></div>
 </div>
+<p>Note that when adding a default value and a hint, the default value goes after the hint.</p>
 <p>Full list of uniform hints below:</p>
 <table class="docutils align-default">
 <thead>
@@ -12416,6 +12373,205 @@ with roughness increasing in areas that have high-frequency detail.</p></td>
 </tr>
 </tbody>
 </table>
+<section id="using-hint-enum">
+<h4>Using <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code><a class="headerlink" href="#using-hint-enum" title="Link to this heading"></a></h4>
+<p>You can access <code class="docutils literal notranslate"><span class="pre">int</span></code> values as a readable dropdown widget using the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">noise_type</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="s2">&quot;OpenSimplex2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cellular&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Perlin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Value&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>You can assign explicit values to the <code class="docutils literal notranslate"><span class="pre">hint_enum</span></code> uniform using colon syntax similar to GDScript:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">uniform</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">character_speed</span><span class="p">:</span><span class="w"> </span><span class="n">hint_enum</span><span class="p">(</span><span class="s2">&quot;Slow:30&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Average:60&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Very Fast:200&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The value will be stored as an integer, corresponding to the index of the selected
+option (i.e. <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, or <code class="docutils literal notranslate"><span class="pre">2</span></code>) or the value assigned by colon syntax
+(i.e. <code class="docutils literal notranslate"><span class="pre">30</span></code>, <code class="docutils literal notranslate"><span class="pre">60</span></code>, or <code class="docutils literal notranslate"><span class="pre">200</span></code>). When setting the value with
+<code class="docutils literal notranslate"><span class="pre">set_shader_parameter()</span></code>, you must use the integer value, not the <code class="docutils literal notranslate"><span class="pre">String</span></code>
+name.</p>
+</section>
+<section id="using-source-color">
+<h4>Using <code class="docutils literal notranslate"><span class="pre">source_color</span></code><a class="headerlink" href="#using-source-color" title="Link to this heading"></a></h4>
+<p>Any texture which contains <em>sRGB color data</em> requires a <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint
+in order to be correctly sampled. This is because Redot renders in linear
+color space, but some textures contain sRGB color data. If this hint is not
+used, the texture will appear washed out.</p>
+<p>Albedo and color textures should typically have a <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint. Normal,
+roughness, metallic, and height textures typically do not need a <code class="docutils literal notranslate"><span class="pre">source_color</span></code>
+hint.</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint is required in the Forward+ and Mobile renderers,
+and in <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> shaders when <a class="reference internal" href="../../../classes/class_projectsettings.html#class-projectsettings-property-rendering-viewport-hdr-2d"><span class="std std-ref">HDR 2D</span></a>
+is enabled. The <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint is optional for the Compatibility renderer,
+and for <code class="docutils literal notranslate"><span class="pre">canvas_item</span></code> shaders if <code class="docutils literal notranslate"><span class="pre">HDR</span> <span class="pre">2D</span></code> is disabled. However, it is
+recommended to always use the <code class="docutils literal notranslate"><span class="pre">source_color</span></code> hint, because it works even
+if you change renderers or disable <code class="docutils literal notranslate"><span class="pre">HDR</span> <span class="pre">2D</span></code>.</p>
+</section>
+</section>
+<section id="uniform-groups">
+<h3>Uniform groups<a class="headerlink" href="#uniform-groups" title="Link to this heading"></a></h3>
+<p>To group multiple uniforms in a section in the inspector, you can use a
+<code class="docutils literal notranslate"><span class="pre">group_uniform</span></code> keyword like this:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="w"> </span><span class="n">MyGroup</span><span class="p">;</span>
+<span class="k">uniform</span><span class="w"> </span><span class="kt">sampler2D</span><span class="w"> </span><span class="n">test</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>You can close the group by using:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The syntax also supports subgroups (it's not mandatory to declare the base group before this):</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="w"> </span><span class="n">MyGroup</span><span class="p">.</span><span class="n">MySubgroup</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="global-uniforms">
+<span id="doc-shading-language-global-uniforms"></span><h3>Global uniforms<a class="headerlink" href="#global-uniforms" title="Link to this heading"></a></h3>
+<p>Sometimes, you want to modify a parameter in many different shaders at once.
+With a regular uniform, this takes a lot of work as all these shaders need to be
+tracked and the uniform needs to be set for each of them. Global uniforms allow
+you to create and update uniforms that will be available in all shaders, in
+every shader type (<code class="docutils literal notranslate"><span class="pre">canvas_item</span></code>, <code class="docutils literal notranslate"><span class="pre">spatial</span></code>, <code class="docutils literal notranslate"><span class="pre">particles</span></code>, <code class="docutils literal notranslate"><span class="pre">sky</span></code> and
+<code class="docutils literal notranslate"><span class="pre">fog</span></code>).</p>
+<p>Global uniforms are especially useful for environmental effects that affect many
+objects in a scene, like having foliage bend when the player is nearby, or having
+objects move with the wind.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Global uniforms</em> are not the same as <em>global scope</em> for an individual
+shader. While regular uniforms are defined outside of shader functions and are
+therefore the global scope of the shader, global uniforms are global to all
+shaders in the entire project (but within each shader, are also in the global
+scope).</p>
+</div>
+<p>To create a global uniform, open the <strong>Project Settings</strong> then go to the
+<strong>Shader Globals</strong> tab. Specify a name for the uniform (case-sensitive) and a
+type, then click <strong>Add</strong> in the top-right corner of the dialog. You can then
+edit the value assigned to the uniform by clicking the value in the list of
+uniforms:</p>
+<figure class="align-center" id="id1">
+<img alt="Adding a global uniform in the Shader Globals tab of the Project Settings" src="../../../_images/shading_language_adding_global_uniforms.webp" />
+<figcaption>
+<p><span class="caption-text">Adding a global uniform in the Shader Globals tab of the Project Settings</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After creating a global uniform, you can use it in a shader as follows:</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">canvas_item</span><span class="p">;</span>
+
+<span class="n">global</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_color</span><span class="p">.</span><span class="n">rgb</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that the global uniform <em>must</em> exist in the Project Settings at the time
+the shader is saved, or compilation will fail. While you can assign a default
+value using <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">uniform</span> <span class="pre">vec4</span> <span class="pre">my_color</span> <span class="pre">=</span> <span class="pre">...</span></code> in the shader code, it will
+be ignored as the global uniform must always be defined in the Project Settings
+anyway.</p>
+<p>To change the value of a global uniform at runtime, use the
+<a class="reference internal" href="../../../classes/class_renderingserver.html#class-renderingserver-method-global-shader-parameter-set"><span class="std std-ref">RenderingServer.global_shader_parameter_set</span></a>
+method in a script:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_set</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Assigning global uniform values can be done as many times as desired without
+impacting performance, as setting data doesn't require synchronization between
+the CPU and GPU.</p>
+<p>You can also add or remove global uniforms at runtime:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_add</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">GLOBAL_VAR_TYPE_COLOR</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
+<span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_remove</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Adding or removing global uniforms at runtime has a performance cost, although
+it's not as pronounced compared to getting global uniform values from a script
+(see the warning below).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>While you <em>can</em> query the value of a global uniform at runtime in a script
+using <code class="docutils literal notranslate"><span class="pre">RenderingServer.global_shader_parameter_get(&quot;uniform_name&quot;)</span></code>, this
+has a large performance penalty as the rendering thread needs to synchronize
+with the calling thread.</p>
+<p>Therefore, it's not recommended to read global shader uniform values
+continuously in a script. If you need to read values in a script after
+setting them, consider creating an <a class="reference internal" href="../../scripting/singletons_autoload.html#doc-singletons-autoload"><span class="std std-ref">autoload</span></a>
+where you store the values you need to query at the same time you're setting
+them as global uniforms.</p>
+</div>
+</section>
+<section id="per-instance-uniforms">
+<span id="doc-shading-language-per-instance-uniforms"></span><h3>Per-instance uniforms<a class="headerlink" href="#per-instance-uniforms" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Per-instance uniforms are only available in <code class="docutils literal notranslate"><span class="pre">spatial</span></code> (3D) shaders.</p>
+</div>
+<p>Sometimes, you want to modify a parameter on each node using the material. As an
+example, in a forest full of trees, when you want each tree to have a slightly
+different color that is editable by hand. Without per-instance uniforms, this
+requires creating a unique material for each tree (each with a slightly
+different hue). This makes material management more complex, and also has a
+performance overhead due to the scene requiring more unique material instances.
+Vertex colors could also be used here, but they'd require creating unique copies
+of the mesh for each different color, which also has a performance overhead.</p>
+<p>Per-instance uniforms are set on each GeometryInstance3D, rather than on each
+Material instance. Take this into account when working with meshes that have
+multiple materials assigned to them, or MultiMesh setups.</p>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
+
+<span class="c1">// Provide a hint to edit as a color. Optionally, a default value can be provided.</span>
+<span class="c1">// If no default value is provided, the type&#39;s default is used (e.g. opaque black for colors).</span>
+<span class="n">instance</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ALBEDO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_color</span><span class="p">.</span><span class="n">rgb</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>After saving the shader, you can change the per-instance uniform's value using
+the inspector:</p>
+<figure class="align-center" id="id2">
+<img alt="Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector" src="../../../_images/shading_language_per_instance_uniforms_inspector.webp" />
+<figcaption>
+<p><span class="caption-text">Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Per-instance uniform values can also be set at runtime using
+<a class="reference internal" href="../../../classes/class_geometryinstance3d.html#class-geometryinstance3d-method-set-instance-shader-parameter"><span class="std std-ref">set_instance_shader_parameter</span></a>
+method on a node that inherits from <a class="reference internal" href="../../../classes/class_geometryinstance3d.html#class-geometryinstance3d"><span class="std std-ref">GeometryInstance3D</span></a>:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="o">$</span><span class="n">MeshInstance3D</span><span class="o">.</span><span class="n">set_instance_shader_parameter</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>When using per-instance uniforms, there are some restrictions you should be aware of:</p>
+<ul class="simple">
+<li><p><strong>Per-instance uniforms do not support textures</strong>, only regular scalar and
+vector types. As a workaround, you can pass a texture array as a regular
+uniform, then pass the index of the texture to be drawn using a per-instance
+uniform.</p></li>
+<li><p>There is a practical maximum limit of 16 instance uniforms per shader.</p></li>
+<li><p>If your mesh uses multiple materials, the parameters for the first mesh
+material found will &quot;win&quot; over the subsequent ones, unless they have the same
+name, index <em>and</em> type. In this case, all parameters are affected correctly.</p></li>
+<li><p>If you run into the above situation, you can avoid clashes by manually
+specifying the index (0-15) of the instance uniform by using the
+<code class="docutils literal notranslate"><span class="pre">instance_index</span></code> hint:</p></li>
+</ul>
+<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">instance</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="p">,</span><span class="w"> </span><span class="n">instance_index</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-uniforms-from-code">
+<span id="doc-shading-language-setting-uniforms-from-code"></span><h3>Setting uniforms from code<a class="headerlink" href="#setting-uniforms-from-code" title="Link to this heading"></a></h3>
+<p>You can set uniforms from GDScript:</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">material</span><span class="o">.</span><span class="n">set_shader_parameter</span><span class="p">(</span><span class="s2">&quot;some_value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_value</span><span class="p">)</span>
+
+<span class="n">material</span><span class="o">.</span><span class="n">set_shader_parameter</span><span class="p">(</span><span class="s2">&quot;colors&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="nb nb-Type">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first argument to <code class="docutils literal notranslate"><span class="pre">set_shader_parameter</span></code> is the name of the uniform
+in the shader. It must match <em>exactly</em> to the name of the uniform in
+the shader or else it will not be recognized.</p>
+</div>
 <p>GDScript uses different variable types than GLSL does, so when passing variables
 from GDScript to shaders, Redot converts the type automatically. Below is a
 table of the corresponding types:</p>
@@ -12579,154 +12735,20 @@ undefined behavior.</p>
 <p class="admonition-title">Warning</p>
 <p>As with the last note, no error will be thrown if the typing does not match while setting a shader uniform, this unintuitively includes setting a (GDscript) 64 bit int/float into a Redot shader language int/float (32 bit). This may lead to unintentional consequences in cases where high precision is required.</p>
 </div>
-<p>Uniforms can also be assigned default values:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
-
-<span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">some_vector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">0.0</span><span class="p">);</span>
-<span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">some_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Note that when adding a default value and a hint, the default value goes after the hint.</p>
-<p>If you need to make multiple uniforms to be grouped in the specific category of an inspector, you can use a <cite>group_uniform</cite> keyword like:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="w"> </span><span class="n">MyGroup</span><span class="p">;</span>
-<span class="k">uniform</span><span class="w"> </span><span class="kt">sampler2D</span><span class="w"> </span><span class="n">test</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>You can close the group by using:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>The syntax also supports subgroups (it's not mandatory to declare the base group before this):</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">group_uniforms</span><span class="w"> </span><span class="n">MyGroup</span><span class="p">.</span><span class="n">MySubgroup</span><span class="p">;</span>
-</pre></div>
-</div>
 </section>
-<section id="global-uniforms">
-<span id="doc-shading-language-global-uniforms"></span><h3>Global uniforms<a class="headerlink" href="#global-uniforms" title="Link to this heading"></a></h3>
-<p>Sometimes, you want to modify a parameter in many different shaders at once.
-With a regular uniform, this takes a lot of work as all these shaders need to be
-tracked and the uniform needs to be set for each of them. Global uniforms allow
-you to create and update uniforms that will be available in all shaders, in
-every shader type (<code class="docutils literal notranslate"><span class="pre">canvas_item</span></code>, <code class="docutils literal notranslate"><span class="pre">spatial</span></code>, <code class="docutils literal notranslate"><span class="pre">particles</span></code>, <code class="docutils literal notranslate"><span class="pre">sky</span></code> and
-<code class="docutils literal notranslate"><span class="pre">fog</span></code>).</p>
-<p>Global uniforms are especially useful for environmental effects that affect many
-objects in a scene, like having foliage bend when the player is nearby, or having
-objects move with the wind.</p>
-<p>To create a global uniform, open the <strong>Project Settings</strong> then go to the
-<strong>Shader Globals</strong> tab. Specify a name for the uniform (case-sensitive) and a
-type, then click <strong>Add</strong> in the top-right corner of the dialog. You can then
-edit the value assigned to the uniform by clicking the value in the list of
-uniforms:</p>
-<figure class="align-center" id="id1">
-<img alt="Adding a global uniform in the Shader Globals tab of the Project Settings" src="../../../_images/shading_language_adding_global_uniforms.webp" />
-<figcaption>
-<p><span class="caption-text">Adding a global uniform in the Shader Globals tab of the Project Settings</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-<p>After creating a global uniform, you can use it in a shader as follows:</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">canvas_item</span><span class="p">;</span>
-
-<span class="n">global</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="p">;</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">COLOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_color</span><span class="p">.</span><span class="n">rgb</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>Note that the global uniform <em>must</em> exist in the Project Settings at the time
-the shader is saved, or compilation will fail. While you can assign a default
-value using <code class="docutils literal notranslate"><span class="pre">global</span> <span class="pre">uniform</span> <span class="pre">vec4</span> <span class="pre">my_color</span> <span class="pre">=</span> <span class="pre">...</span></code> in the shader code, it will
-be ignored as the global uniform must always be defined in the Project Settings
-anyway.</p>
-<p>To change the value of a global uniform at runtime, use the
-<a class="reference internal" href="../../../classes/class_renderingserver.html#class-renderingserver-method-global-shader-parameter-set"><span class="std std-ref">RenderingServer.global_shader_parameter_set</span></a>
-method in a script:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_set</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>Assigning global uniform values can be done as many times as desired without
-impacting performance, as setting data doesn't require synchronization between
-the CPU and GPU.</p>
-<p>You can also add or remove global uniforms at runtime:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_add</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">RenderingServer</span><span class="o">.</span><span class="n">GLOBAL_VAR_TYPE_COLOR</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
-<span class="n">RenderingServer</span><span class="o">.</span><span class="n">global_shader_parameter_remove</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Adding or removing global uniforms at runtime has a performance cost, although
-it's not as pronounced compared to getting global uniform values from a script
-(see the warning below).</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>While you <em>can</em> query the value of a global uniform at runtime in a script
-using <code class="docutils literal notranslate"><span class="pre">RenderingServer.global_shader_parameter_get(&quot;uniform_name&quot;)</span></code>, this
-has a large performance penalty as the rendering thread needs to synchronize
-with the calling thread.</p>
-<p>Therefore, it's not recommended to read global shader uniform values
-continuously in a script. If you need to read values in a script after
-setting them, consider creating an <a class="reference internal" href="../../scripting/singletons_autoload.html#doc-singletons-autoload"><span class="std std-ref">autoload</span></a>
-where you store the values you need to query at the same time you're setting
-them as global uniforms.</p>
-</div>
-</section>
-<section id="per-instance-uniforms">
-<span id="doc-shading-language-per-instance-uniforms"></span><h3>Per-instance uniforms<a class="headerlink" href="#per-instance-uniforms" title="Link to this heading"></a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Per-instance uniforms are only available in <code class="docutils literal notranslate"><span class="pre">spatial</span></code> (3D) shaders.</p>
-</div>
-<p>Sometimes, you want to modify a parameter on each node using the material. As an
-example, in a forest full of trees, when you want each tree to have a slightly
-different color that is editable by hand. Without per-instance uniforms, this
-requires creating a unique material for each tree (each with a slightly
-different hue). This makes material management more complex, and also has a
-performance overhead due to the scene requiring more unique material instances.
-Vertex colors could also be used here, but they'd require creating unique copies
-of the mesh for each different color, which also has a performance overhead.</p>
-<p>Per-instance uniforms are set on each GeometryInstance3D, rather than on each
-Material instance. Take this into account when working with meshes that have
-multiple materials assigned to them, or MultiMesh setups.</p>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">shader_type</span><span class="w"> </span><span class="n">spatial</span><span class="p">;</span>
-
-<span class="c1">// Provide a hint to edit as a color. Optionally, a default value can be provided.</span>
-<span class="c1">// If no default value is provided, the type&#39;s default is used (e.g. opaque black for colors).</span>
-<span class="n">instance</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">vec4</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">);</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="n">fragment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">ALBEDO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">my_color</span><span class="p">.</span><span class="n">rgb</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>After saving the shader, you can change the per-instance uniform's value using
-the inspector:</p>
-<figure class="align-center" id="id2">
-<img alt="Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector" src="../../../_images/shading_language_per_instance_uniforms_inspector.webp" />
-<figcaption>
-<p><span class="caption-text">Setting a per-instance uniform's value in the GeometryInstance3D section of the inspector</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
-</figcaption>
-</figure>
-<p>Per-instance uniform values can also be set at runtime using
-<a class="reference internal" href="../../../classes/class_geometryinstance3d.html#class-geometryinstance3d-method-set-instance-shader-parameter"><span class="std std-ref">set_instance_shader_parameter</span></a>
-method on a node that inherits from <a class="reference internal" href="../../../classes/class_geometryinstance3d.html#class-geometryinstance3d"><span class="std std-ref">GeometryInstance3D</span></a>:</p>
-<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="o">$</span><span class="n">MeshInstance3D</span><span class="o">.</span><span class="n">set_instance_shader_parameter</span><span class="p">(</span><span class="s2">&quot;my_color&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">Color</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>When using per-instance uniforms, there are some restrictions you should be aware of:</p>
-<ul class="simple">
-<li><p><strong>Per-instance uniforms do not support textures</strong>, only regular scalar and
-vector types. As a workaround, you can pass a texture array as a regular
-uniform, then pass the index of the texture to be drawn using a per-instance
-uniform.</p></li>
-<li><p>There is a practical maximum limit of 16 instance uniforms per shader.</p></li>
-<li><p>If your mesh uses multiple materials, the parameters for the first mesh
-material found will &quot;win&quot; over the subsequent ones, unless they have the same
-name, index <em>and</em> type. In this case, all parameters are affected correctly.</p></li>
-<li><p>If you run into the above situation, you can avoid clashes by manually
-specifying the index (0-15) of the instance uniform by using the
-<code class="docutils literal notranslate"><span class="pre">instance_index</span></code> hint:</p></li>
-</ul>
-<div class="highlight-glsl notranslate"><div class="highlight"><pre><span></span><span class="n">instance</span><span class="w"> </span><span class="k">uniform</span><span class="w"> </span><span class="kt">vec4</span><span class="w"> </span><span class="n">my_color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">source_color</span><span class="p">,</span><span class="w"> </span><span class="n">instance_index</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-</pre></div>
-</div>
+<section id="uniform-limits">
+<h3>Uniform limits<a class="headerlink" href="#uniform-limits" title="Link to this heading"></a></h3>
+<p>There is a limit to the total size of shader uniforms that you can use
+in a single shader. On most desktop platforms, this limit is <code class="docutils literal notranslate"><span class="pre">65536</span></code>
+bytes, or 4096 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. On mobile platforms, the limit is
+typically <code class="docutils literal notranslate"><span class="pre">16384</span></code> bytes, or 1024 <code class="docutils literal notranslate"><span class="pre">vec4</span></code> uniforms. Vector uniforms
+smaller than a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>, such as <code class="docutils literal notranslate"><span class="pre">vec2</span></code> or <code class="docutils literal notranslate"><span class="pre">vec3</span></code>, are padded to
+the size of a <code class="docutils literal notranslate"><span class="pre">vec4</span></code>. Scalar uniforms such as <code class="docutils literal notranslate"><span class="pre">int</span></code> or <code class="docutils literal notranslate"><span class="pre">float</span></code>
+are not padded, and <code class="docutils literal notranslate"><span class="pre">bool</span></code> is padded to the size of an <code class="docutils literal notranslate"><span class="pre">int</span></code>.</p>
+<p>Arrays count as the total size of their contents. If you need a uniform
+array that is larger than this limit, consider packing the data into a
+texture instead, since the <em>contents</em> of a texture do not count towards
+this limit, only the size of the sampler uniform.</p>
 </section>
 </section>
 <section id="built-in-variables">

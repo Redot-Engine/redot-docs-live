@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Internal rendering architecture &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tutorials/2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../tutorials/xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../tutorials/xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tutorials/xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11493,11 +11497,11 @@ ask in the <code class="docutils literal notranslate"><span class="pre">#renderi
 <p>If you have difficulty understanding concepts on this page, it is
 recommended to go through an OpenGL tutorial such as
 <a class="reference external" href="https://learnopengl.com/">LearnOpenGL</a>.</p>
-<p>Modern low-level APIs (Vulkan/Direct3D 12) require intermediate
+<p>Modern low-level APIs (Vulkan/Direct3D 12/Metal) require intermediate
 knowledge of higher-level APIs (OpenGL/Direct3D 11) to be used
 effectively. Thankfully, contributors rarely need to work directly with
 low-level APIs. Redot's renderers are built entirely on OpenGL and
-RenderingDevice, which is our abstraction over Vulkan/Direct3D 12.</p>
+RenderingDevice, which is our abstraction over Vulkan/Direct3D 12/Metal.</p>
 </div>
 <section id="rendering-methods">
 <span id="doc-internal-rendering-architecture-methods"></span><h2>Rendering methods<a class="headerlink" href="#rendering-methods" title="Link to this heading"></a></h2>
@@ -11564,7 +11568,7 @@ post-processing effects are also not available.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is the only rendering method available when using the OpenGL driver.
-This rendering method is not available when using Vulkan or Direct3D 12.</p>
+This rendering method is not available when using Vulkan, Direct3D 12, or Metal.</p>
 </div>
 <p>This is a traditional (non-clustered) forward renderer. Internally, it is called
 <strong>GL Compatibility</strong>. It's intended for old GPUs that don't have Vulkan support,
@@ -11648,16 +11652,19 @@ for more information.</p>
 </section>
 <section id="metal">
 <h3>Metal<a class="headerlink" href="#metal" title="Link to this heading"></a></h3>
-<p>Redot supports Metal rendering via <a class="reference external" href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a>,
-as macOS and iOS do not support Vulkan natively.
-This is done automatically when specifying the Vulkan driver in the Project Settings.</p>
-<p>MoltenVK makes driver maintenance easy at the cost of some performance overhead.
-Also, MoltenVK has several limitations that a native Metal driver implementation
-wouldn't have. Both the clustered and mobile
-<a class="reference internal" href="#doc-internal-rendering-architecture-methods"><span class="std std-ref">Rendering methods</span></a> can be used with a Metal
-backend via MoltenVK.</p>
-<p>A native Metal driver is planned in the future for better performance and
-compatibility.</p>
+<p>Redot provides a native Metal driver that works on all Apple Silicon hardware
+(macOS ARM). Compared to using the MoltenVK translation layer, this is
+significantly faster, particularly in CPU-bound scenarios.</p>
+<p>Both the Forward+ and Mobile <a class="reference internal" href="#doc-internal-rendering-architecture-methods"><span class="std std-ref">Rendering methods</span></a> can be
+used with Metal.</p>
+<p><a class="reference internal" href="#doc-internal-rendering-architecture-core-shaders"><span class="std std-ref">Core shaders</span></a> are shared with the
+Vulkan renderer. Shaders are transpiled from GLSL to <abbr title="Metal Shading Language">MSL</abbr>
+using SPIRV-Cross.</p>
+<p>Redot also supports Metal rendering via <a class="reference external" href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a>,
+which is used as a fallback when native Metal support is not available (e.g. on x86 macOS).</p>
+<p><strong>This driver is still experimental and only available in Redot 4.4 and later.</strong>
+See the <a class="reference external" href="https://github.com/redot-engine/redot-engine/pull/88199">pull request that introduced Metal support</a>
+for more information.</p>
 </section>
 <section id="opengl">
 <h3>OpenGL<a class="headerlink" href="#opengl" title="Link to this heading"></a></h3>
@@ -11680,13 +11687,13 @@ devices first and foremost.</p>
 <h3>Summary of rendering drivers/methods<a class="headerlink" href="#summary-of-rendering-drivers-methods" title="Link to this heading"></a></h3>
 <p>The following rendering API + rendering method combinations are currently possible:</p>
 <ul class="simple">
-<li><p>Vulkan + Forward+</p></li>
-<li><p>Vulkan + Mobile</p></li>
+<li><p>Vulkan + Forward+ (optionally through MoltenVK on macOS and iOS)</p></li>
+<li><p>Vulkan + Mobile (optionally through MoltenVK on macOS and iOS)</p></li>
 <li><p>Direct3D 12 + Forward+</p></li>
 <li><p>Direct3D 12 + Mobile</p></li>
-<li><p>Metal + Forward+ (via MoltenVK)</p></li>
-<li><p>Metal + Mobile (via MoltenVK)</p></li>
-<li><p>OpenGL + Compatibility</p></li>
+<li><p>Metal + Forward+</p></li>
+<li><p>Metal + Mobile</p></li>
+<li><p>OpenGL + Compatibility (optionally through ANGLE on Windows and macOS)</p></li>
 </ul>
 <p>Each combination has its own limitations and performance characteristics. Make
 sure to test your changes on all rendering methods if possible before opening a
@@ -11702,10 +11709,10 @@ pull request.</p>
 <p>To make the complexity of modern low-level graphics APIs more manageable,
 Redot uses its own abstraction called RenderingDevice.</p>
 <p>This means that when writing code for modern rendering methods, you don't
-actually use the Vulkan or Direct3D 12 APIs directly. While this is still
+actually use the Vulkan, Direct3D 12, or Metal APIs directly. While this is still
 lower-level than an API like OpenGL, this makes working on the renderer easier,
 as RenderingDevice will abstract many API-specific quirks for you. The
-RenderingDevice presents a similar level of abstraction as Metal or WebGPU.</p>
+RenderingDevice presents a similar level of abstraction as WebGPU.</p>
 <p><strong>Vulkan RenderingDevice implementation:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/master/drivers/vulkan/rendering_device_driver_vulkan.cpp">drivers/vulkan/rendering_device_driver_vulkan.cpp</a></p></li>
@@ -11713,6 +11720,10 @@ RenderingDevice presents a similar level of abstraction as Metal or WebGPU.</p>
 <p><strong>Direct3D 12 RenderingDevice implementation:</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/master/drivers/d3d12/rendering_device_driver_d3d12.cpp">drivers/d3d12/rendering_device_driver_d3d12.cpp</a></p></li>
+</ul>
+<p><strong>Metal RenderingDevice implementation:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/redot-engine/redot-engine/blob/master/drivers/metal/rendering_device_driver_metal.mm">drivers/metal/rendering_device_driver_metal.mm</a></p></li>
 </ul>
 </section>
 <section id="core-rendering-classes-architecture">
@@ -12107,7 +12118,8 @@ article.</p>
 <section id="occlusion-culling">
 <h3>Occlusion culling<a class="headerlink" href="#occlusion-culling" title="Link to this heading"></a></h3>
 <p>While modern GPUs can handle drawing a lot of triangles, the number of draw
-calls in complex scenes can still be a bottleneck (even with Vulkan and Direct3D 12).</p>
+calls in complex scenes can still be a bottleneck (even with Vulkan, Direct3D 12,
+and Metal).</p>
 <p>Redot 4 supports occlusion culling to reduce overdraw (when the depth prepass
 is disabled) and reduce vertex throughput.
 This is done by rasterizing a low-resolution buffer on the CPU using

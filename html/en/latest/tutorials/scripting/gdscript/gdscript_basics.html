@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>GDScript reference &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11666,7 +11670,7 @@ in case you want to take a look under the hood.</p>
 <td><p>Cast the value to a given type if possible.</p></td>
 </tr>
 <tr class="row-odd"><td><p>self</p></td>
-<td><p>Refers to current class instance.</p></td>
+<td><p>Refers to current class instance. See <a class="reference internal" href="#self">self</a>.</p></td>
 </tr>
 <tr class="row-even"><td><p>super</p></td>
 <td><p>Resolves the scope of the parent method. See <a class="reference internal" href="#inheritance">Inheritance</a>.</p></td>
@@ -12159,13 +12163,13 @@ description of an exported variable. Documentation comments must be placed
 directly <em>above</em> a documentable item (such as a member variable), or at the top
 of a file. Dedicated formatting options are also available. See
 <a class="reference internal" href="gdscript_documentation_comments.html#doc-gdscript-documentation-comments"><span class="std std-ref">GDScript documentation comments</span></a> for details.</p>
-<dl>
-<dt>::</dt><dd><p>## This comment will appear in the script documentation.
-var value</p>
-<p>## This comment will appear in the inspector tooltip, and in the documentation.
-&#64;export var exported_value</p>
-</dd>
-</dl>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="c1">## This comment will appear in the script documentation.</span>
+<span class="k">var</span><span class="w"> </span><span class="n">value</span>
+
+<span class="c1">## This comment will appear in the inspector tooltip, and in the documentation.</span>
+<span class="nd">@export</span><span class="w"> </span><span class="k">var</span><span class="w"> </span><span class="n">exported_value</span>
+</pre></div>
+</div>
 </section>
 <section id="code-regions">
 <h2>Code regions<a class="headerlink" href="#code-regions" title="Link to this heading"></a></h2>
@@ -12827,9 +12831,9 @@ or <code class="docutils literal notranslate"><span class="pre">0</span></code> 
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading"></a></h2>
 <p>Functions always belong to a <a class="reference internal" href="#classes">class</a>. The scope priority for
 variable look-up is: local → class member → global. The <code class="docutils literal notranslate"><span class="pre">self</span></code> variable is
-always available and is provided as an option for accessing class members, but
-is not always required (and should <em>not</em> be sent as the function's first
-argument, unlike Python).</p>
+always available and is provided as an option for accessing class members
+(see <a class="reference internal" href="#self">self</a>), but is not always required (and should <em>not</em> be sent as the
+function's first argument, unlike Python).</p>
 <div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">func</span><span class="w"> </span><span class="n">my_function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -13018,6 +13022,37 @@ expression. An assignment is not an expression and thus does not return any valu
 </div>
 <p>Identifiers, attributes, and subscripts are valid assignment targets. Other expressions cannot be on the left side of
 an assignment.</p>
+<section id="self">
+<h4>self<a class="headerlink" href="#self" title="Link to this heading"></a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">self</span></code> can be used to refer to the current instance and is often equivalent to
+directly referring to symbols available in the current script. However, <code class="docutils literal notranslate"><span class="pre">self</span></code>
+also allows you to access properties, methods, and other names that are defined
+dynamically (i.e. are expected to exist in subtypes of the current class, or are
+provided using <a class="reference internal" href="../../../classes/class_object.html#class-object-private-method-set"><span class="std std-ref">_set()</span></a> and/or
+<a class="reference internal" href="../../../classes/class_object.html#class-object-private-method-get"><span class="std std-ref">_get()</span></a>).</p>
+<div class="highlight-gdscript notranslate"><div class="highlight"><pre><span></span><span class="k">extends</span><span class="w"> </span><span class="n">Node</span>
+
+<span class="k">func</span><span class="w"> </span><span class="n">_ready</span><span class="p">():</span>
+<span class="w">    </span><span class="c1"># Compile time error, as `my_var` is not defined in the current class or its ancestors.</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="n">my_var</span><span class="p">)</span>
+<span class="w">    </span><span class="c1"># Checked at runtime, thus may work for dynamic properties or descendant classes.</span>
+<span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">my_var</span><span class="p">)</span>
+
+<span class="w">    </span><span class="c1"># Compile time error, as `my_func()` is not defined in the current class or its ancestors.</span>
+<span class="w">    </span><span class="n">my_func</span><span class="p">()</span>
+<span class="w">    </span><span class="c1"># Checked at runtime, thus may work for descendant classes.</span>
+<span class="w">    </span><span class="k">self</span><span class="o">.</span><span class="n">my_func</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware that accessing members of child classes in the base class is often
+considered a bad practice, because this blurs the area of responsibility of
+any given piece of code, making the overall relationship between parts of
+your game harder to reason about. Besides that, one can simply forget that
+the parent class had some expectations about it's descendants.</p>
+</div>
+</section>
 </section>
 <section id="if-else-elif">
 <h3>if/else/elif<a class="headerlink" href="#if-else-elif" title="Link to this heading"></a></h3>

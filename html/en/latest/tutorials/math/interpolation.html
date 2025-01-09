@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Interpolation &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
@@ -525,7 +525,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -721,10 +727,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3306,6 +3310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3670,7 +3675,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11512,11 +11516,11 @@ your horizons as a game developer.</p>
 <span class="w">    </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">A</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">lerp</span><span class="p">(</span><span class="o">$</span><span class="n">B</span><span class="o">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">;</span>
+</div><div aria-labelledby="tab-0-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_PhysicsProcess</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">_t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.4f</span><span class="p">;</span>
+<span class="w">    </span><span class="n">_t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.4f</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">Marker2D</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Marker2D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Marker2D</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Marker2D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
@@ -11546,7 +11550,7 @@ For this, the function <a class="reference internal" href="../../classes/class_t
 <span class="w">    </span><span class="o">$</span><span class="n">Monkey</span><span class="o">.</span><span class="n">transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Position1</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">interpolate_with</span><span class="p">(</span><span class="o">$</span><span class="n">Position2</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-1-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0f</span><span class="p">;</span>
+</div><div aria-labelledby="tab-1-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_PhysicsProcess</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="p">{</span>
@@ -11580,7 +11584,7 @@ closer. Here is an example of a circle following the mouse using interpolation s
 <span class="w">    </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">lerp</span><span class="p">(</span><span class="n">mouse_pos</span><span class="p">,</span><span class="w"> </span><span class="n">delta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FOLLOW_SPEED</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-2-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.0f</span><span class="p">;</span>
+</div><div aria-labelledby="tab-2-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-2-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0f</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_PhysicsProcess</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="p">{</span>
@@ -11615,14 +11619,14 @@ be used in <code class="docutils literal notranslate"><span class="pre">process(
 <span class="w">    </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">$</span><span class="n">Sprite2D</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">lerp</span><span class="p">(</span><span class="n">mouse_pos</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-3-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4.0f</span><span class="p">;</span>
+</div><div aria-labelledby="tab-3-QyM=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-3-QyM=" name="QyM=" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">private</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.0f</span><span class="p">;</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">_Process</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">delta</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Vector2</span><span class="w"> </span><span class="n">mousePos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetLocalMousePosition</span><span class="p">();</span>
 
 <span class="w">    </span><span class="n">Sprite2D</span><span class="w"> </span><span class="n">sprite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetNode</span><span class="o">&lt;</span><span class="n">Sprite2D</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;Sprite2D&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Mathf</span><span class="p">.</span><span class="n">Exp</span><span class="p">(</span><span class="o">-</span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">delta</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Mathf</span><span class="p">.</span><span class="n">Exp</span><span class="p">(</span><span class="o">-</span><span class="n">FollowSpeed</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">delta</span><span class="p">);</span>
 <span class="w">    </span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sprite</span><span class="p">.</span><span class="n">Position</span><span class="p">.</span><span class="n">Lerp</span><span class="p">(</span><span class="n">mousePos</span><span class="p">,</span><span class="w"> </span><span class="n">weight</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>

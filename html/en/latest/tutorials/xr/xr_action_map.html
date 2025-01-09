@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>The XR action map &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11481,34 +11485,47 @@
 <span id="doc-xr-action-map"></span><h1>The XR action map<a class="headerlink" href="#the-xr-action-map" title="Link to this heading"></a></h1>
 <p>Redot has an action map feature as part of the XR system.
 At this point in time this system is part of the OpenXR module.
-There are plans to encompass WebXR into this in the near future hence we call it the XR action map system in this document.
+There are plans to encompass WebXR into this in the near future hence we call it
+the XR action map system in this document.
 It implements the built-in action map system of OpenXR mostly exactly as it is offered.</p>
-<p>The XR action map system exposes input, positional data and output for XR controllers to your game/application.
-It does this by exposing named actions that can be tailored to your game/application and binding these to the actual inputs and outputs on your XR devices.</p>
-<p>As the XR action map is currently part of the OpenXR module, OpenXR needs to be enabled in your project settings to expose it:</p>
+<p>The XR action map system exposes input, positional data and output for XR controllers
+to your game/application.
+It does this by exposing named actions that can be tailored to your game/application
+and binding these to the actual inputs and outputs on your XR devices.</p>
+<p>As the XR action map is currently part of the OpenXR module, OpenXR needs to be enabled
+in your project settings to expose it:</p>
 <img alt="../../_images/openxr_settings.png" src="../../_images/openxr_settings.png" />
 <p>You will then find the XR Action Map interface in the bottom of the screen:</p>
 <img alt="../../_images/xr_action_map.webp" src="../../_images/xr_action_map.webp" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Redot's built-in input system has many things in common with the XR action map system.
-In fact our original idea was to add functionality to the existing input system and expose the data to the OpenXR action map system.
-We may revisit that idea at some point but as it turns out there were just too many problems to overcome.
+In fact our original idea was to add functionality to the existing input system and
+expose the data to the OpenXR action map system.
+We may revisit that idea at some point but as it turns out there were just too many
+problems to overcome.
 To name a few:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Redot's input system mainly centers around button inputs, XR adds triggers, axis, poses and haptics (output) into the mix.
-This would greatly complicate the input system with features that won't work for normal controllers or contrast with the current approach.
+<li><p>Redot's input system mainly centers around button inputs, XR adds triggers, axis,
+poses and haptics (output) into the mix.
+This would greatly complicate the input system with features that won't work for
+normal controllers or contrast with the current approach.
 It was felt this would lead to confusion for the majority of Redot users.</p></li>
-<li><p>Redot's input system works with raw input data that is parsed and triggers emitting actions.
+<li><p>Redot's input system works with raw input data that is parsed and triggers emitting
+actions.
 This input data is made available to the end user.
-OpenXR completely hides raw data and does all the parsing for us, we only get access to already parsed action data.
-This inconsistency is likely to lead to bugs when an unsuspecting user tries to use an XR device as a normal input device.</p></li>
-<li><p>Redot's input system allows changes to what inputs are bound to actions in runtime, OpenXR does not.</p></li>
+OpenXR completely hides raw data and does all the parsing for us, we only get
+access to already parsed action data.
+This inconsistency is likely to lead to bugs when an unsuspecting user tries to use
+an XR device as a normal input device.</p></li>
+<li><p>Redot's input system allows changes to what inputs are bound to actions in runtime,
+OpenXR does not.</p></li>
 <li><p>Redot's input system is based on device ids which are meaningless in OpenXR.</p></li>
 </ul>
 </div></blockquote>
-<p>This does mean that a game/application that mixes traditional inputs with XR controllers will have a separation.
+<p>This does mean that a game/application that mixes traditional inputs with XR
+controllers will have a separation.
 For most applications either one or the other is used and this is not seen as a problem.
 In the end, it's a limitation of the system.</p>
 </div>
@@ -11517,23 +11534,28 @@ In the end, it's a limitation of the system.</p>
 <p>Redot will automatically create a default action map if no action map file is found.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This default map was designed to help developers port their XR games/applications from Redot 3 to Redot 4.
-As a result this map essentially binds all known inputs on all controllers supported by default, to actions one on one.
+<p>This default map was designed to help developers port their XR games/applications from
+Redot 3 to Redot 4.
+As a result this map essentially binds all known inputs on all controllers supported by
+default, to actions one on one.
 This is not a good example of setting up an action map.
-It does allow a new developer to have a starting point when they want to become familiar with Redot XR.
+It does allow a new developer to have a starting point when they want to become
+familiar with Redot XR.
 It prevents having to design a proper action map for their game/application first.</p>
 </div>
 <p>For this walkthrough we're going to start with a blank action map.
 You can delete the &quot;Redot action set&quot; entry at the top by pressing the trash can icon.
 This will clear out all actions.
-You might also want to remove the controllers that you do not wish to setup, more on this later.</p>
+You might also want to remove the controllers that you do not wish to setup,
+more on this later.</p>
 </section>
 <section id="action-sets">
 <h2>Action sets<a class="headerlink" href="#action-sets" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before we dive in, you will see the term XR runtime used throughout this document.
-With XR runtime we mean the software that is controlling and interacting with the AR or VR headset.
+With XR runtime we mean the software that is controlling and interacting with
+the AR or VR headset.
 The XR runtime then exposes this to us through an API such as OpenXR.
 So:</p>
 <blockquote>
@@ -11547,7 +11569,8 @@ So:</p>
 </div>
 <p>The action map allows us to organize our actions in sets.
 Each set can be enabled or disabled on its own.</p>
-<p>The concept here is that you could have different sets that provide bindings in different scenarios.
+<p>The concept here is that you could have different sets that provide bindings
+in different scenarios.
 You could have:</p>
 <blockquote>
 <div><ul class="simple">
@@ -11556,8 +11579,10 @@ You could have:</p>
 <li><p>a <code class="docutils literal notranslate"><span class="pre">Menu</span></code> set for when a menu is open.</p></li>
 </ul>
 </div></blockquote>
-<p>Only the action set applicable to the current state of your game/application can then be enabled.</p>
-<p>This is especially important if you wish to bind the same input on a controller to a different action.
+<p>Only the action set applicable to the current state of your game/application
+can then be enabled.</p>
+<p>This is especially important if you wish to bind the same input on a controller
+to a different action.
 For instance:</p>
 <blockquote>
 <div><ul class="simple">
@@ -11568,10 +11593,13 @@ For instance:</p>
 </div></blockquote>
 <p>All are bound to the trigger on your controller.</p>
 <p>OpenXR will only bind an input or output to a single action.
-If the same input or output is bound to multiple actions the one in the active action set with the highest priority will be the one updated/used.
+If the same input or output is bound to multiple actions the one in the active action set
+with the highest priority will be the one updated/used.
 So in our above example it will thus be important that only one action set is active.</p>
-<p>For your first XR game/application we highly recommend starting with just a single action set and to not over-engineer things.</p>
-<p>For our walkthrough in this document we will thus create a single action set called <code class="docutils literal notranslate"><span class="pre">my_first_action_set</span></code>.
+<p>For your first XR game/application we highly recommend starting with just
+a single action set and to not over-engineer things.</p>
+<p>For our walkthrough in this document we will thus create a single action set
+called <code class="docutils literal notranslate"><span class="pre">my_first_action_set</span></code>.
 We do this by pressing the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">action</span> <span class="pre">set</span></code> button:</p>
 <img alt="../../_images/xr_my_first_action_set.webp" src="../../_images/xr_my_first_action_set.webp" />
 <p>The columns in our table are as follows:</p>
@@ -11591,61 +11619,78 @@ We do this by pressing the <code class="docutils literal notranslate"><span clas
 <tr class="row-even"><td><p>1</p></td>
 <td><p>my_first_action_set</p></td>
 <td><p>This is the internal name of the action set.
-OpenXR doesn't specify specific restrictions on this name other then size, however some XR runtimes will not like spaces or special characters.</p></td>
+OpenXR doesn't specify specific restrictions on this name other then size, however
+some XR runtimes will not like spaces or special characters.</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>My first action set</p></td>
 <td><p>This is a human-readable name for the action set.
-Some XR runtimes will display this name to the end user, for example in configuration dialogs.</p></td>
+Some XR runtimes will display this name to the end user, for example in
+configuration dialogs.</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>0</p></td>
 <td><p>This is the priority of the action set.
-If multiple active action sets have actions bound to the same controllers inputs or outputs, the action set with the highest priority value will determine the action that is updated.</p></td>
+If multiple active action sets have actions bound to the same controllers inputs or
+outputs, the action set with the highest priority value will determine the action
+that is updated.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="actions">
 <h2>Actions<a class="headerlink" href="#actions" title="Link to this heading"></a></h2>
-<p>In the XR action map, actions are the entities that your game/application will interact with.
-For instance, we can define an action <code class="docutils literal notranslate"><span class="pre">Shoot</span></code> and the input bound to that action will trigger the <code class="docutils literal notranslate"><span class="pre">button_pressed</span></code> signal on the relevant <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node in your scene with <code class="docutils literal notranslate"><span class="pre">Shoot</span></code> as the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter of the signal.</p>
+<p>In the XR action map, actions are the entities that your game/application will
+interact with.
+For instance, we can define an action <code class="docutils literal notranslate"><span class="pre">Shoot</span></code> and the input bound to that action will
+trigger the <code class="docutils literal notranslate"><span class="pre">button_pressed</span></code> signal on the relevant <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a>
+node in your scene with <code class="docutils literal notranslate"><span class="pre">Shoot</span></code> as the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter of the signal.</p>
 <p>You can also poll the current state of an action.
-<a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> for instance has an <code class="docutils literal notranslate"><span class="pre">is_button_pressed</span></code> method.</p>
-<p>Actions can be used for both input and output and each action has a type that defines its behavior.</p>
+<a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> for instance has
+an <code class="docutils literal notranslate"><span class="pre">is_button_pressed</span></code> method.</p>
+<p>Actions can be used for both input and output and each action has a type that defines
+its behavior.</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Bool</span></code> type is used for discrete input like buttons.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">Float</span></code> type is used for analogue input like triggers.</p></li>
 </ul>
 <p>These two are special as they are the only ones that are interchangeable.
 OpenXR will handle conversions between <code class="docutils literal notranslate"><span class="pre">Bool</span></code> and <code class="docutils literal notranslate"><span class="pre">Float</span></code> inputs and actions.
-You can get the value of a <code class="docutils literal notranslate"><span class="pre">Float</span></code> type action by calling the method <code class="docutils literal notranslate"><span class="pre">get_float</span></code> on your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node.
+You can get the value of a <code class="docutils literal notranslate"><span class="pre">Float</span></code> type action by calling the method <code class="docutils literal notranslate"><span class="pre">get_float</span></code> on
+your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node.
 It emits the <code class="docutils literal notranslate"><span class="pre">input_float_changed</span></code> signal when changed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Where analogue inputs are queried as buttons a threshold is applied.
 This threshold is currently managed exclusively by the XR runtime.
-There are plans to extend Redot to provide some level of control over these thresholds in the future.</p>
+There are plans to extend Redot to provide some level of control over these thresholds
+in the future.</p>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">Vector2</span></code> type defines the input as an axis input.
 Touchpads, thumbsticks and similar inputs are exposed as vectors.
-You can get the value of a <code class="docutils literal notranslate"><span class="pre">Vector2</span></code> type action by calling the method <code class="docutils literal notranslate"><span class="pre">get_vector2</span></code> on your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node.
+You can get the value of a <code class="docutils literal notranslate"><span class="pre">Vector2</span></code> type action by calling the method <code class="docutils literal notranslate"><span class="pre">get_vector2</span></code>
+on your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node.
 It emits the <code class="docutils literal notranslate"><span class="pre">input_vector2_changed</span></code> signal when changed.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Pose</span></code> type defines a spatially tracked input.
 Multiple &quot;pose&quot; inputs are available in OpenXR: <code class="docutils literal notranslate"><span class="pre">aim</span></code>, <code class="docutils literal notranslate"><span class="pre">grip</span></code> and <code class="docutils literal notranslate"><span class="pre">palm</span></code>.
-Your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node is automatically positioned based on the pose action assigned to <code class="docutils literal notranslate"><span class="pre">pose</span></code> property of this node.
+Your <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node is automatically positioned based
+on the pose action assigned to <code class="docutils literal notranslate"><span class="pre">pose</span></code> property of this node.
 More about poses later.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The OpenXR implementation in Redot also exposes a special pose called <code class="docutils literal notranslate"><span class="pre">Skeleton</span></code>.
 This is part of the hand tracking implementation.
-This pose is exposed through the <code class="docutils literal notranslate"><span class="pre">skeleton</span></code> action that is supported outside of the action map system.
+This pose is exposed through the <code class="docutils literal notranslate"><span class="pre">skeleton</span></code> action that is supported outside of the
+action map system.
 It is thus always present if hand tracking is supported.
 You don't need to bind actions to this pose to use it.</p>
 </div>
-<p>Finally, the only output type is <code class="docutils literal notranslate"><span class="pre">Haptic</span></code> and it allows us to set the intensity of haptic feedback, such as controller vibration.
-Controllers can have multiple haptic outputs and support for haptic vests is coming to OpenXR.</p>
-<p>So lets add an action for our aim pose, we do this by clicking on the <code class="docutils literal notranslate"><span class="pre">+</span></code> button for our action set:</p>
+<p>Finally, the only output type is <code class="docutils literal notranslate"><span class="pre">Haptic</span></code> and it allows us to set the intensity of
+haptic feedback, such as controller vibration.
+Controllers can have multiple haptic outputs and support for haptic vests is coming
+to OpenXR.</p>
+<p>So lets add an action for our aim pose, we do this by clicking on the <code class="docutils literal notranslate"><span class="pre">+</span></code> button for
+our action set:</p>
 <img alt="../../_images/xr_aim_pose.webp" src="../../_images/xr_aim_pose.webp" />
 <p>The columns in our table are as follows:</p>
 <table class="wrap-normal docutils align-default" style="width: 100%">
@@ -11664,12 +11709,14 @@ Controllers can have multiple haptic outputs and support for haptic vests is com
 <tr class="row-even"><td><p>1</p></td>
 <td><p>aim_pose</p></td>
 <td><p>This is the internal name of the action.
-OpenXR doesn't specify specific restrictions on this name other then size, however some XR runtimes will not like spaces or special characters.</p></td>
+OpenXR doesn't specify specific restrictions on this name other then size, however
+some XR runtimes will not like spaces or special characters.</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>Aim pose</p></td>
 <td><p>This is a human-readable name for the action.
-Some XR runtimes will display this name to the end user, for example in configuration dialogs.</p></td>
+Some XR runtimes will display this name to the end user, for example in
+configuration dialogs.</p></td>
 </tr>
 <tr class="row-even"><td><p>3</p></td>
 <td><p>Pose</p></td>
@@ -11677,26 +11724,32 @@ Some XR runtimes will display this name to the end user, for example in configur
 </tr>
 </tbody>
 </table>
-<p>OpenXR defines a number of bindable input poses that are commonly available for controllers.
+<p>OpenXR defines a number of bindable input poses that are commonly available
+for controllers.
 There are no rules for which poses are supported for different controllers.
 The poses OpenXR currently defines are:</p>
 <blockquote>
-<div><blockquote>
 <div><ul class="simple">
-<li><p>The aim pose on most controllers is positioned slightly in front of the controller and aims forward.
-This is a great pose to use for laser pointers or to align the muzzle of a weapon with.</p></li>
-<li><p>The grip pose on most controllers is positioned where the grip button is placed on the controller.
-The orientation of this pose differs between controllers and can differ for the same controller on different XR runtimes.</p></li>
-<li><p>The palm pose on most controllers is positioned in the center of the palm of the hand holding the controller.
+<li><p>The aim pose on most controllers is positioned slightly in front of the controller
+and aims forward.
+This is a great pose to use for laser pointers or to align the muzzle of a weapon
+with.</p></li>
+<li><p>The grip pose on most controllers is positioned where the grip button is placed on
+the controller.
+The orientation of this pose differs between controllers and can differ for the same
+controller on different XR runtimes.</p></li>
+<li><p>The palm pose on most controllers is positioned in the center of the palm of the hand
+holding the controller.
 This is a new pose that is not available on all XR runtimes.</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If hand tracking is used, there are currently big differences in implementations between the different XR runtimes.
-As a result the action map is currently not suitable for hand tracking. Work is being done on this so stay tuned.</p>
+<p>If hand tracking is used, there are currently big differences in implementations
+between the different XR runtimes.
+As a result the action map is currently not suitable for hand tracking. Work is being
+done on this so stay tuned.</p>
 </div>
-</div></blockquote>
 <p>Let's complete our list of actions for a very simple shooting game/application:</p>
 <img alt="../../_images/xr_all_actions.webp" src="../../_images/xr_all_actions.webp" />
 <p>The actions we have added are:</p>
@@ -11710,28 +11763,37 @@ As a result the action map is currently not suitable for hand tracking. Work is 
 </div></blockquote>
 <p>Now note that we don't distinguish between the left and right hand.
 This is something that is determined at the next stage.
-We've implemented the action system in such a way that you can bind the same action to both hands.
+We've implemented the action system in such a way that you can bind the same action
+to both hands.
 The appropriate <a class="reference internal" href="../../classes/class_xrcontroller3d.html#class-xrcontroller3d"><span class="std std-ref">XRController3D</span></a> node will emit the signal.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>For both grab and shoot we've used the <code class="docutils literal notranslate"><span class="pre">Bool</span></code> type.
-As mentioned before, OpenXR does automatic conversions from an analogue controls however not all XR Runtimes currently apply sensible thresholds.</p>
-<p>We recommend as a workaround to use the <code class="docutils literal notranslate"><span class="pre">Float</span></code> type when interacting with triggers and grip buttons and apply your own threshold.</p>
-<p>For buttons like A/B/X/Y and similar where there is no analogue option, the <code class="docutils literal notranslate"><span class="pre">Bool</span></code> type works fine.</p>
+As mentioned before, OpenXR does automatic conversions from an analogue controls
+however not all XR Runtimes currently apply sensible thresholds.</p>
+<p>We recommend as a workaround to use the <code class="docutils literal notranslate"><span class="pre">Float</span></code> type when interacting with triggers
+and grip buttons and apply your own threshold.</p>
+<p>For buttons like A/B/X/Y and similar where there is no analogue option, the <code class="docutils literal notranslate"><span class="pre">Bool</span></code>
+type works fine.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can bind the same action to multiple inputs for the same controller on the same profile.
+<p>You can bind the same action to multiple inputs for the same controller on the same
+profile.
 In this case the XR runtime will attempt to combine the inputs.</p>
 <ul class="simple">
 <li><p>For <code class="docutils literal notranslate"><span class="pre">Bool</span></code> inputs, this will perform an <code class="docutils literal notranslate"><span class="pre">OR</span></code> operation between the buttons.</p></li>
 <li><p>For <code class="docutils literal notranslate"><span class="pre">Float</span></code> inputs, this will take the highest value of the bound inputs.</p></li>
-<li><p>The behavior for <code class="docutils literal notranslate"><span class="pre">Pose</span></code> inputs is undefined, but the first bound input is likely to be used.</p></li>
+<li><p>The behavior for <code class="docutils literal notranslate"><span class="pre">Pose</span></code> inputs is undefined, but the first bound input is likely to
+be used.</p></li>
 </ul>
 <p>You shouldn't bind multiple actions of the same action set to the same controller input.
-If you do this, or if actions are bound from multiple action sets but they have overlapping priorities, the behavior is undefined.
-The XR runtime may simply not accept your action map, or it may take this on a first come first serve basis.</p>
-<p>We are still investigating the restrictions around binding multiple actions to the same output as this scenario makes sense.
+If you do this, or if actions are bound from multiple action sets but they have
+overlapping priorities, the behavior is undefined.
+The XR runtime may simply not accept your action map, or it may take this on a first
+come first serve basis.</p>
+<p>We are still investigating the restrictions around binding multiple actions to the same
+output as this scenario makes sense.
 The OpenXR specification seems to not allow this.</p>
 </div>
 <p>Now that we have our basic actions defined, it's time to hook them up.</p>
@@ -11746,45 +11808,64 @@ There are also provisions for devices such as treadmills, haptic vests and such 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>It is important to know that OpenXR has strict checking on supported devices.
-The core specification identifies a number of controllers and similar devices with their supported inputs and outputs.
+The core specification identifies a number of controllers and similar devices with
+their supported inputs and outputs.
 Every XR runtime must accept these interaction profiles even if they aren't applicable.</p>
-<p>New devices are added through extensions and XR runtimes must specify which ones they support.
-XR runtimes that do not support a device added through extensions will not accept these profiles.
-XR runtimes that do not support added input or output types will often crash if supplied.</p>
-<p>As such Redot keeps meta data of all available devices, their inputs and outputs and which extension adds support for them.
+<p>New devices are added through extensions and XR runtimes must specify which ones they
+support.
+XR runtimes that do not support a device added through extensions will not accept these
+profiles.
+XR runtimes that do not support added input or output types will often crash if
+supplied.</p>
+<p>As such Redot keeps meta data of all available devices, their inputs and outputs and
+which extension adds support for them.
 You can create interaction profiles for all devices you wish to support.
 Redot will filter out those not supported by the XR runtime the user is using.</p>
-<p>This does mean that in order to support new devices, you might need to update to a more recent version of Redot.</p>
+<p>This does mean that in order to support new devices, you might need to update to a more
+recent version of Redot.</p>
 </div>
-<p>It is however also important to note that the action map has been designed with this in mind.
-When new devices enter the market, or when your users use devices that you do not have access to, the action map system relies on the XR runtime.
-It is the XR runtime's job to choose the best fitting interaction profile that has been specified and adapt it for the controller the user is using.</p>
-<p>How the XR runtime does this is left to the implementation of the runtime and there are thus vast differences between the runtimes.
+<p>It is however also important to note that the action map has been designed
+with this in mind.
+When new devices enter the market, or when your users use devices that you
+do not have access to, the action map system relies on the XR runtime.
+It is the XR runtime's job to choose the best fitting interaction profile that has
+been specified and adapt it for the controller the user is using.</p>
+<p>How the XR runtime does this is left to the implementation of the runtime and there
+are thus vast differences between the runtimes.
 Some runtimes might even permit users to edit the bindings themselves.</p>
 <p>A common approach for a runtime is to look for a matching interaction profile first.
-If this is not found it will check the most common profiles such as that of the &quot;Touch controller&quot; and do a conversion.
+If this is not found it will check the most common profiles such as that of
+the &quot;Touch controller&quot; and do a conversion.
 If all else fails, it will check the generic <a class="reference internal" href="#doc-xr-action-map-simple"><span class="std std-ref">&quot;Simple controller&quot;</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There is an important conclusion to be made here:
-When a controller is found, and the action map is applied to it, the XR runtime is not limited to the exact configurations you set up in Redot's action map editor.
-While the runtime will generally choose a suitable mapping based on one of the bindings you set up in the action map, it can deviate from it.</p>
-<p>For example, when the Touch controller profile is used any of the following scenarios could be true:</p>
+When a controller is found, and the action map is applied to it, the XR runtime is not
+limited to the exact configurations you set up in Redot's action map editor.
+While the runtime will generally choose a suitable mapping based on one of the bindings
+you set up in the action map, it can deviate from it.</p>
+<p>For example, when the Touch controller profile is used any of the following scenarios
+could be true:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>we could be using a Quest 1 controller,</p></li>
 <li><p>we could be using a Quest 2 controller,</p></li>
-<li><p>we could be using a Quest Pro controller but no Quest Pro profile was given or the XR runtime being used does not support the Quest Pro controller,</p></li>
-<li><p>it could be a completely different controller for which no profile was given but the XR runtime is using the touch bindings as a base.</p></li>
+<li><p>we could be using a Quest Pro controller but no Quest Pro profile was given or the
+XR runtime being used does not support the Quest Pro controller,</p></li>
+<li><p>it could be a completely different controller for which no profile was given but
+the XR runtime is using the touch bindings as a base.</p></li>
 </ul>
 </div></blockquote>
-<p>Ergo, there currently is no way to know with certainty, which controller the user is actually using.</p>
+<p>Ergo, there currently is no way to know with certainty,
+which controller the user is actually using.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Finally, and this trips up a lot of people, the bindings aren't set in stone.
-It is fully allowed, and even expected, that an XR runtime allows a user to customise the bindings.</p>
-<p>At the moment none of the XR runtimes offer this functionality though SteamVR has an existing UI from OpenVRs action map system that is still accessible.
+It is fully allowed, and even expected, that an XR runtime allows a user
+to customise the bindings.</p>
+<p>At the moment none of the XR runtimes offer this functionality though SteamVR has
+an existing UI from OpenVRs action map system that is still accessible.
 This is actively being worked on however.</p>
 </div>
 </section>
@@ -11800,16 +11881,21 @@ We can use the <code class="docutils literal notranslate"><span class="pre">+</s
 <img alt="../../_images/xr_select_action.webp" src="../../_images/xr_select_action.webp" />
 <p>Let's finish our configuration:</p>
 <img alt="../../_images/xr_touch_completed.webp" src="../../_images/xr_touch_completed.webp" />
-<p>Each action is bound the given input or output for both controllers to indicate that we support the action on either controller.
+<p>Each action is bound the given input or output for both controllers to indicate that
+we support the action on either controller.
 The exception is the movement action which is bound only to the right hand controller.
-It is likely that we would want to use the left hand thumbstick for a different purpose, say a teleport function.</p>
-<p>In developing your game/application you have to account for the possibility that the user changes the binding and binds the movement to the left hand thumbstick.</p>
+It is likely that we would want to use the left hand thumbstick for a different purpose,
+say a teleport function.</p>
+<p>In developing your game/application you have to account for the possibility that
+the user changes the binding and binds the movement to the left hand thumbstick.</p>
 <p>Also note that our shoot and grab boolean actions are linked to inputs of type <code class="docutils literal notranslate"><span class="pre">Float</span></code>.
-As mentioned before OpenXR will do conversions between the two, but do read the warning given on that subject earlier in this document.</p>
+As mentioned before OpenXR will do conversions between the two, but do read the warning
+given on that subject earlier in this document.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some of the inputs seem to appear in our list multiple times.</p>
-<p>For instance we can find the <code class="docutils literal notranslate"><span class="pre">X</span></code> button twice, once as <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">click</span></code> and then as <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">touch</span></code>.
+<p>For instance we can find the <code class="docutils literal notranslate"><span class="pre">X</span></code> button twice, once as <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">click</span></code> and then
+as <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">touch</span></code>.
 This is due to the Touch controller having a capacitive sensor.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">touch</span></code> will be true if the user is merely touching the X button.</p></li>
@@ -11821,7 +11907,8 @@ This is due to the Touch controller having a capacitive sensor.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">Thumbstick</span></code> which gives a value for the direction the thumbstick is pushed to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Thumbstick</span> <span class="pre">click</span></code> which is true when the user is pressing down on the thumbstick.</p></li>
 </ul>
-<p>It is important to note that only a select number of XR controllers support touch sensors or have click features on thumbsticks.
+<p>It is important to note that only a select number of XR controllers support
+touch sensors or have click features on thumbsticks.
 Keep that in mind when designing your game/application.
 Make sure these are used for optional features of your game/application.</p>
 </div>
@@ -11831,21 +11918,181 @@ Make sure these are used for optional features of your game/application.</p>
 <p>The &quot;Simple controller&quot; is a generic controller that OpenXR offers as a fallback.
 We'll apply our mapping:</p>
 <img alt="../../_images/xr_simple_controller.webp" src="../../_images/xr_simple_controller.webp" />
-<p>As becomes painfully clear, the simple controller is often far too simple and falls short for anything but the simplest of VR games/applications.</p>
-<p>This is why many XR runtimes only use it as a last resort and will attempt to use bindings from one of the more popular systems as a fallback first.</p>
+<p>As becomes painfully clear, the simple controller is often far too simple
+and falls short for anything but the simplest of VR games/applications.</p>
+<p>This is why many XR runtimes only use it as a last resort and will attempt
+to use bindings from one of the more popular systems as a fallback first.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Due to the simple controller likely not covering the needs of your game, it is tempting to provide bindings for every controller supported by OpenXR.
+<p>Due to the simple controller likely not covering the needs of your game,
+it is tempting to provide bindings for every controller supported by OpenXR.
 The default action map seems to suggest this as a valid course of action.
-As mentioned before, the default action map was designed for ease of migration from Redot 3.</p>
-<p>It is the recommendation from the OpenXR Working Group that only bindings for controllers actually tested by the developer are setup.
+As mentioned before, the default action map was designed for ease of migration
+from Redot 3.</p>
+<p>It is the recommendation from the OpenXR Working Group that only bindings
+for controllers actually tested by the developer are setup.
 The XR runtimes are designed with this in mind.
-They can perform a better job of rebinding a provided binding than a developer can make educated guesses.
-Especially as the developer can't test if this leads to a comfortable experience for the end user.</p>
-<p>This is our advice as well: limit your action map to the interaction profiles for devices you have actually tested your game with.
+They can perform a better job of rebinding a provided binding than
+a developer can make educated guesses.
+Especially as the developer can't test if this leads to a comfortable experience
+for the end user.</p>
+<p>This is our advice as well: limit your action map to the interaction profiles
+for devices you have actually tested your game with.
 The Oculus Touch controller is widely used as a fallback controller by many runtimes.
-If you are able to test your game using a Meta Rift or Quest and add this profile there is a high probability your game will work with other headsets.</p>
+If you are able to test your game using a Meta Rift or Quest and add this profile
+there is a high probability your game will work with other headsets.</p>
 </div>
+</section>
+<section id="binding-modifiers">
+<h2>Binding Modifiers<a class="headerlink" href="#binding-modifiers" title="Link to this heading"></a></h2>
+<p>One of the main goals of the action map is to remove the need for the application
+to know the hardware used.
+However, sometimes the hardware has physical differences that require inputs to
+be altered in ways other than how they are bound to actions.
+This need ranges from setting thresholds, to altering the inputs available
+on a controller.</p>
+<p>Binding modifiers are not enabled by default and require enabling in
+the OpenXR project settings.
+Also there is no guarantee that these modifiers are supported by every runtime.
+You will need to consult the support for the runtimes you are targeting
+and decide whether to rely on the modifiers or implement some form of fallback mechanism.</p>
+<p>If you are targeting multiple runtimes that have support for the same controllers,
+you may need to create separate action maps for each runtime.
+You can control which action map Redot uses by using different export templates
+for each runtime and using a custom <a class="reference internal" href="../export/feature_tags.html#doc-feature-tags"><span class="std std-ref">feature tag</span></a>
+to set the action map.</p>
+<p>In Redot, binding modifiers are divided into two groups:
+modifiers that work on the interaction profile level,
+and modifiers that work on individual bindings.</p>
+<section id="binding-modifiers-on-an-interaction-profile">
+<h3>Binding modifiers on an interaction profile<a class="headerlink" href="#binding-modifiers-on-an-interaction-profile" title="Link to this heading"></a></h3>
+<p>Binding modifiers that are applied to the whole interaction profile can be accessed
+through the modifier button on the right side of the interaction profile editor.</p>
+<img alt="../../_images/openxr_ip_binding_modifier.webp" src="../../_images/openxr_ip_binding_modifier.webp" />
+<p>You can add a new modifier by pressing the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">binding</span> <span class="pre">modifier</span></code> button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As Redot doesn't know which controllers and runtimes support a modifier,
+there is no restriction to adding modifiers.
+Unsupported modifiers will be ignored.</p>
+</div>
+<section id="dpad-binding-modifier">
+<h4>Dpad Binding modifier<a class="headerlink" href="#dpad-binding-modifier" title="Link to this heading"></a></h4>
+<p>The dpad binding modifier adds new inputs to an interaction profile for each joystick
+and thumbpad input on this controller.
+It turns the input into a dpad with separate up, down, left and right inputs
+that are exposed as buttons:</p>
+<img alt="../../_images/openxr_thumbstick_dpad.webp" src="../../_images/openxr_thumbstick_dpad.webp" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inputs related to extensions are denoted with an asterix.</p>
+</div>
+<p>In order to use the dpad binding modifier you need to enable
+the dpad binding modifier extension in project settings:</p>
+<img alt="../../_images/openxr_project_settings_dpad_modifier.webp" src="../../_images/openxr_project_settings_dpad_modifier.webp" />
+<p>Enabling the extension is enough to make this functionality work using default settings.</p>
+<p>Adding the modifier is optional and allows you to fine tune the way
+the dpad functionality behaves.
+You can add the modifier multiple times to set different settings for different inputs.</p>
+<img alt="../../_images/openxr_dpad_modifier.webp" src="../../_images/openxr_dpad_modifier.webp" />
+<p>These settings are used as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Action</span> <span class="pre">Set</span></code> defines the action set to which these settings are applied.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Path</span></code> defines the original input that is mapped to the new dpad inputs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Threshold</span></code> specifies the threshold value that will enable a dpad action,
+e.g. a value of <code class="docutils literal notranslate"><span class="pre">0.6</span></code> means that if the distance from center goes above <code class="docutils literal notranslate"><span class="pre">0.6</span></code>
+the dpad action is pressed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Threshold</span> <span class="pre">Released</span></code> specifies the threshold value that will disable a dpad action,
+e.g. a value of <code class="docutils literal notranslate"><span class="pre">0.4</span></code> means that if the distance from center goes below <code class="docutils literal notranslate"><span class="pre">0.4</span></code>
+the dpad action is released.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Center</span> <span class="pre">Region</span></code> specifies the distance from center that enabled the center action,
+this is only supported for trackpads.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Wedge</span> <span class="pre">Angle</span></code> specifies the angle of each wedge.
+A value of <code class="docutils literal notranslate"><span class="pre">90</span> <span class="pre">degrees</span></code> or lower means that up, down, left and right each have
+a separate slice in which they are in the pressed state.
+A value above <code class="docutils literal notranslate"><span class="pre">90</span> <span class="pre">degrees</span></code> means that the slices overlap and that multiple
+actions can be in the pressed state.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Sticky</span></code>, when enabled means that an action stays in the pressed state until
+the thumbstick or trackpad moves into another wedge even if it has left the wedge
+for that action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">Haptic</span></code> lets us define a haptic output that is automatically activated
+when an action becomes pressed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Off</span> <span class="pre">Haptic</span></code> lets us define a haptic output that is automatically activated
+when a action is released.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="binding-modifiers-on-individual-bindings">
+<h3>Binding modifiers on individual bindings<a class="headerlink" href="#binding-modifiers-on-individual-bindings" title="Link to this heading"></a></h3>
+<p>Binding modifiers that are applied to individual bindings can be accessed through
+the binding modifier button next to action attached to an input:</p>
+<img alt="../../_images/openxr_action_binding_modifier.webp" src="../../_images/openxr_action_binding_modifier.webp" />
+<p>You can add a new modifier by pressing the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">binding</span> <span class="pre">modifier</span></code> button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As Redot doesn't know which inputs on each runtime support a modifier,
+there is no restriction to adding modifiers.
+If the modifier extension is unsupported, modifiers will be filtered out at runtime.
+Modifiers added to the wrong input may result in a runtime error.</p>
+<p>You should test your action map on the actual hardware and runtime to verify
+the proper setup.</p>
+</div>
+<section id="analog-threshold-modifier">
+<h4>Analog threshold modifier<a class="headerlink" href="#analog-threshold-modifier" title="Link to this heading"></a></h4>
+<p>The analog threshold modifier allows you to specify the thresholds used for any analog
+input, like the trigger, that has a boolean input. This controls when the input is in
+the pressed state.</p>
+<p>In order to use this modifier you must enable the analog threshold extension in
+the project settings:</p>
+<img alt="../../_images/openxr_project_settings_analog_threshold_modifier.webp" src="../../_images/openxr_project_settings_analog_threshold_modifier.webp" />
+<p>The analog threshold modifier has the following settings:</p>
+<img alt="../../_images/openxr_analog_threshold_modifier.webp" src="../../_images/openxr_analog_threshold_modifier.webp" />
+<p>These are defined as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">Threshold</span></code> specifies the threshold value that will enable the action,
+e.g. a value of <code class="docutils literal notranslate"><span class="pre">0.6</span></code> means that when the analog value gets above <code class="docutils literal notranslate"><span class="pre">0.6</span></code>
+the action is set to the pressed state.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Off</span> <span class="pre">Threshold</span></code> specifies the threshold value that will disable the action,
+e.g. a value of <code class="docutils literal notranslate"><span class="pre">0.4</span></code> means that when the analog value goes below <code class="docutils literal notranslate"><span class="pre">0.4</span></code>
+the action is set in to the released state.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">Haptic</span></code> lets us define a haptic output that is automatically activated
+when the input is pressed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Off</span> <span class="pre">Haptic</span></code> lets us define a haptic output that is automatically activated
+when the input is released.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="haptics-on-modifiers">
+<h3>Haptics on modifiers<a class="headerlink" href="#haptics-on-modifiers" title="Link to this heading"></a></h3>
+<p>Modifiers can support automatic haptic output that is triggered when thresholds
+are reached.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently both available modifiers support this feature however there is no rule future
+modifiers also have this capability.
+Only one type of haptic feedback is supported but in the future other options
+may become available.</p>
+</div>
+<section id="haptic-vibration">
+<h4>Haptic vibration<a class="headerlink" href="#haptic-vibration" title="Link to this heading"></a></h4>
+<p>The haptic vibration allows us to specify a simple haptic pulse:</p>
+<img alt="../../_images/openxr_haptic_vibration.webp" src="../../_images/openxr_haptic_vibration.webp" />
+<p>It has the following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Duration</span></code> is the duration of the pulse in nanoseconds. <code class="docutils literal notranslate"><span class="pre">-1</span></code> lets the runtime
+choose an optimal value for a short pulse suitable for the current hardware.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Frequency</span></code> is the frequency of the pulse in Hz. <code class="docutils literal notranslate"><span class="pre">0</span></code> lets the runtime choose
+an optimal frequency for a short pulse suitable for the current hardware.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Amplitude</span></code> is the amplitude of the pulse.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
 </section>
 </section>
 

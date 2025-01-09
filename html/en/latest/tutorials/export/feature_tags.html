@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Feature tags &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
@@ -525,7 +525,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../editor/script_editor.html#features">Features</a></li>
@@ -721,10 +727,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3306,6 +3310,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3670,7 +3675,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11657,7 +11661,7 @@ use <code class="docutils literal notranslate"><span class="pre">OS.has_feature(
 <h2>Custom features<a class="headerlink" href="#custom-features" title="Link to this heading"></a></h2>
 <p>It is possible to add custom features to a build; use the relevant
 field in the <em>export preset</em> used to generate it:</p>
-<img alt="../../_images/feature_tags1.png" src="../../_images/feature_tags1.png" />
+<img alt="../../_images/feature_tags1.webp" src="../../_images/feature_tags1.webp" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Custom feature tags are only used when running the exported project
@@ -11672,9 +11676,14 @@ running the project from the editor, even if the export preset marked as
 This allows you to better customize any configuration when doing a build.</p>
 <p>In the following example, a different icon is added for the demo build of the game (which was
 customized in a special export preset, which, in turn, includes only demo levels).</p>
-<img alt="../../_images/feature_tags2.png" src="../../_images/feature_tags2.png" />
-<p>After overriding, a new field is added for this specific configuration:</p>
-<img alt="../../_images/feature_tags3.png" src="../../_images/feature_tags3.png" />
+<figure class="align-default" id="id1">
+<img alt="The Project Settings panel" src="../../_images/feature_tags2.webp" />
+<figcaption>
+<p><span class="caption-text">The desired configuration is selected, which effectively copies its properties to the panel above (1). The &quot;demo_build&quot; feature tag is selected (2). The configuration is added to the project settings (3).</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>After overriding, a new field is added for this specific configuration.</p>
+<img alt="../../_images/feature_tags3.webp" src="../../_images/feature_tags3.webp" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When using the
@@ -11689,7 +11698,7 @@ and configurations.</p>
 <h2>Default overrides<a class="headerlink" href="#default-overrides" title="Link to this heading"></a></h2>
 <p>There are already a lot of settings that come with overrides by default; they can be found
 in many sections of the project settings.</p>
-<img alt="../../_images/feature_tags4.png" src="../../_images/feature_tags4.png" />
+<img alt="../../_images/feature_tags4.webp" src="../../_images/feature_tags4.webp" />
 </section>
 <section id="customizing-the-build">
 <h2>Customizing the build<a class="headerlink" href="#customizing-the-build" title="Link to this heading"></a></h2>

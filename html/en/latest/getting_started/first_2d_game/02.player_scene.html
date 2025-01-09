@@ -13,7 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Creating the player scene &mdash; Redot Engine (latest) documentation in English</title>
 
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=3f28b95a" />
@@ -523,7 +523,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/inspector_dock.html#overview-of-the-interface">Overview of the interface</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/project_settings.html">Project Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/project_settings.html">Project Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#changing-project-settings">Changing project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#reading-project-settings">Reading project settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#manually-editing-project-godot">Manually editing project.godot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/project_settings.html#advanced-project-settings">Advanced project settings</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/editor/script_editor.html">Script Editor</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/script_editor.html#introduction">Introduction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/editor/script_editor.html#features">Features</a></li>
@@ -719,10 +725,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-viewport">2D Viewport</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#node2d-and-control-node">Node2D and Control node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/2d/introduction_to_2d.html#d-in-2d">3D in 2D</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/2d/canvas_layers.html">Canvas layers</a><ul>
@@ -3304,6 +3308,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#profiles">Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#our-first-controller-binding">Our first controller binding</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#the-simple-controller">The simple controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/xr/xr_action_map.html#binding-modifiers">Binding Modifiers</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/xr/xr_room_scale.html">Room scale in XR</a><ul>
@@ -3668,7 +3673,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#where-to-start">Where to start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#video-tutorials">Video tutorials</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#text-tutorials">Text tutorials</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#devlogs">Devlogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../community/tutorials.html#resources">Resources</a></li>
 </ul>
 </li>
@@ -11488,7 +11492,8 @@ we've created other parts of the game.</p>
 <h2>Node structure<a class="headerlink" href="#node-structure" title="Link to this heading"></a></h2>
 <p>To begin, we need to choose a root node for the player object. As a general
 rule, a scene's root node should reflect the object's desired functionality -
-what the object <em>is</em>. Click the &quot;Other Node&quot; button and add an <a class="reference internal" href="../../classes/class_area2d.html#class-area2d"><span class="std std-ref">Area2D</span></a> node to the scene.</p>
+what the object <em>is</em>. In the upper-left corner, in the &quot;Scene&quot; tab, click the
+&quot;Other Node&quot; button and add an <a class="reference internal" href="../../classes/class_area2d.html#class-area2d"><span class="std std-ref">Area2D</span></a> node to the scene.</p>
 <img alt="../../_images/add_node.webp" src="../../_images/add_node.webp" />
 <p>When you add the <code class="docutils literal notranslate"><span class="pre">Area2D</span></code> node, Redot will display the following <strong>warning icon</strong>
 next to it in the scene tree:</p>
@@ -11496,7 +11501,7 @@ next to it in the scene tree:</p>
 <p>This warning tells us that the <code class="docutils literal notranslate"><span class="pre">Area2D</span></code> node requires a shape to detect collisions or overlaps.
 We can <strong>ignore the warning temporarily</strong> because we will first set up the player's visuals
 (using an animated sprite). Once the visuals are ready, we will add a collision shape as a child
-node. This will allow us to accurately size and position the shape based on the sprite’s appearance.</p>
+node. This will allow us to accurately size and position the shape based on the sprite's appearance.</p>
 <p>With <code class="docutils literal notranslate"><span class="pre">Area2D</span></code> we can detect objects that overlap or run into the player.
 Change the node's name to <code class="docutils literal notranslate"><span class="pre">Player</span></code> by double-clicking on it. Now that we've
 set the scene's root node, we can add additional nodes to give it more
@@ -11507,8 +11512,8 @@ the icon to the right of the lock. Its tooltip says &quot;Groups the selected no
 with its children. This causes the parent to be selected when any child
 node is clicked in 2D and 3D view.&quot;</p>
 <img alt="../../_images/lock_children.webp" src="../../_images/lock_children.webp" />
-<p>Save the scene. Click Scene -&gt; Save, or press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> on Windows/Linux
-or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> on macOS.</p>
+<p>Save the scene as <code class="docutils literal notranslate"><span class="pre">player.tscn</span></code>. Click <strong>Scene &gt; Save</strong>, or press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd>
+on Windows/Linux or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">S</kbd></kbd> on macOS.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For this project, we will be following the Redot naming conventions.</p>
@@ -11529,8 +11534,8 @@ the method names precisely when connecting signals.</p></li>
 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd> <kbd class="kbd docutils literal notranslate"></kbd>+<kbd class="kbd docutils literal notranslate"></kbd> <kbd class="kbd docutils literal notranslate">A</kbd></kbd> on macOS) a child node <a class="reference internal" href="../../classes/class_animatedsprite2d.html#class-animatedsprite2d"><span class="std std-ref">AnimatedSprite2D</span></a>. The <code class="docutils literal notranslate"><span class="pre">AnimatedSprite2D</span></code> will handle the
 appearance and animations for our player. Notice that there is a warning symbol
 next to the node. An <code class="docutils literal notranslate"><span class="pre">AnimatedSprite2D</span></code> requires a <a class="reference internal" href="../../classes/class_spriteframes.html#class-spriteframes"><span class="std std-ref">SpriteFrames</span></a> resource, which is a list of the animations it can
-display. To create one, find the <code class="docutils literal notranslate"><span class="pre">Sprite</span> <span class="pre">Frames</span></code> property under the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab in the Inspector and click
-&quot;[empty]&quot; -&gt; &quot;New SpriteFrames&quot;:</p>
+display. Make sure <code class="docutils literal notranslate"><span class="pre">AnimatedSprite2D</span></code> is selected and then find the <code class="docutils literal notranslate"><span class="pre">Sprite</span> <span class="pre">Frames</span></code> property under
+the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> section in the Inspector and click &quot;[empty]&quot; -&gt; &quot;New SpriteFrames&quot;:</p>
 <img alt="../../_images/new_spriteframes.webp" src="../../_images/new_spriteframes.webp" />
 <p>Click on the <code class="docutils literal notranslate"><span class="pre">SpriteFrames</span></code> you just created to open the &quot;SpriteFrames&quot; panel:</p>
 <img alt="../../_images/spriteframes_panel.webp" src="../../_images/spriteframes_panel.webp" />
